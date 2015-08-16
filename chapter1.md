@@ -1,9 +1,11 @@
-# First Chapter
+# Unity and MonoDevelop IDE
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+In this course we'll learn to create programs in the Unity Game Engine
+
+We'll use the MonoDevelop IDE
 
 
-{%ace edit=true, lang='javascript'%}
+{%ace edit=true, lang='c#'%}
 // This is a hello world program for javascript.
 
 
