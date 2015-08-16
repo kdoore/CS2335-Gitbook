@@ -2,18 +2,9 @@
 
 In this course we'll learn to create programs in the Unity Game Engine
 
-We'll use the MonoDevelop IDE
+We'll use the MonoDevelop IDE, you might also choose to do development for Unity in Microsoft visual studio
 
 
-{%ace edit=true, lang='c#'%}
-// This is a hello world program for javascript.
-
-
-var func(){
-  printf("Hello World!");
-  return 1;
-}
-{%endace%}
 
 
 
