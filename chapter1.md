@@ -3,6 +3,17 @@
 GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
 
 
+{%ace edit=true, lang='javascript'%}
+// This is a hello world program for javascript.
+
+
+var func(){
+  printf("Hello World!");
+  return 1;
+}
+{%endace%}
+
+
 
 <quiz name="Gitbook Quiz">
     <question multiple>
