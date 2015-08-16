@@ -1,4 +1,4 @@
-# Unity and MonoDevelop IDE
+# Unity Game Engine
 
 In this course we'll learn to create programs in the Unity Game Engine
 
