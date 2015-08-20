@@ -2,7 +2,7 @@
     "plugins": [
         "ace",
         "quiz",
-        "js-sequence-hand-diagram"
+        "js-sequence-diagram"
     ],
     "pluginsConfig": {}
 }
