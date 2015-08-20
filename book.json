@@ -1,7 +1,8 @@
 {
     "plugins": [
         "ace",
-        "quiz"
+        "quiz",
+        "js-sequence-hand-diagram"
     ],
     "pluginsConfig": {}
 }
