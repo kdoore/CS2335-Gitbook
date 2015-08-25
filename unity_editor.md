@@ -1,10 +1,13 @@
 Unity Editor
 ============
 
-Sample Code:
+Sample Code:  The code section below is a very basic
+script example that includes the Start() and 
+Update() 
 
 
-```using UnityEngine;
+```
+using UnityEngine;
 using System.Collections;
 public class Example: MonoBehaviour {
        //Use this for initialization
@@ -12,4 +15,5 @@ public class Example: MonoBehaviour {
        }
        //Update is called once per frame
        void Update () {
-} }```
+        } 
+}```
