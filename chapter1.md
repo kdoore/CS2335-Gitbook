@@ -25,13 +25,15 @@ Below is an example quiz:
     </question>
 </quiz>
 
-{%ace edit=true, lang='c_cpp'%}
-// This is a hello world program for C.
-#include <stdio.h>
+{%ace edit=false, lang='c_cpp'%}
+// This is a hello world program for C++.
+
+#include <iostream>
+using namespace std;
 
 int main(){
-  printf("Hello World!");
-  return 1;
+  cout << "Hello World";
+  return 0;  // return of 0 means success
 }
 {%endace%}
 
