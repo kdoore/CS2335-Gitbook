@@ -4,7 +4,7 @@
         "quiz",
         "js-sequence-diagram",
         "mermaid",
-        "js-sequence-hand"
+        "js-sequence-hand-diagram"
     ],
     "pluginsConfig": {}
 }
