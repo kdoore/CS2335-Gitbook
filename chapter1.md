@@ -26,7 +26,7 @@ Below is an example quiz:
 </quiz>
 
 
-``` sequence
+``` sequence-hand
 Title: Here is a title
 A->B: Normal line
 B-->C: Dashed line
