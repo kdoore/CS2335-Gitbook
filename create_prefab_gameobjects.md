@@ -1,7 +1,9 @@
-![](nXkq9arLMv.gif)
-The animation above shows how to create a cube game object.  Next the cube is dragged into the Project Assets Panel, this turns the cube game object into a PreFab Game Object.  
+##Create GameObjects and PreFabs
 
-We are then able to drag multiple cubePrefab objects into the scene.  We can add a redMaterial to one cubePrefab, then when we select Apply in the inspector panel for the prefab object, it applies this material to all prefab instances.  
+![](nXkq9arLMv.gif)
+The animation above shows how to create a cube GameObject.  Then the cube is dragged into the Project Assets Panel, this turns the cube GameObject into a PreFab GameObject.  
+
+Then, we can drag multiple cubePrefab objects into the scene.  We can add a redMaterial to one cubePrefab, then when we select Apply in the Inspector panel for the prefab object, it applies this material to all prefab instances.  
 
 We can individually modify a prefab by making adding a green material to one CubePrefab instance and then not applying that change to all of the other prefabs.
 
