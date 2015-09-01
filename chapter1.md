@@ -1,8 +1,11 @@
 # Unity Game Engine
 
 In this course we'll learn to create programs in the Unity Game Engine
+ 
 
-- We will use the opensource MonoDevelop IDE (integrated development environment). Another option is to use Microsoft Visual Studio for your development environment.
+- **[MonoDevelop](monodevelop.md):**  We will use the MonoDevelopment Integrated Development Environment (IDE). We will use MonoDevelop as an editor and debugger for writing our C# scripts that we want to use in Unity. MonoDevelop is free and open source (FOSS), and it's tightly integrated with Unity.  This will make it easy to make changes to our code, and to test our modifications within Unity.
+- 
+- **Visual Studio:**   Another option is to use the Microsoft Visual Studio Editor as your IDE.  It can also be integrated to work well with the Unity editor.
 
 Below is an example quiz:
 <quiz name="Quiz1">
