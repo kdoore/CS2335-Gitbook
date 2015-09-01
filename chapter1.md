@@ -24,34 +24,6 @@ Below is an example quiz:
     </question>
 </quiz>
 
-{%ace edit=false, lang='c_cpp'%}
-// This is a script to move a game object along the x axis
-
-using UnityEngine;
-using System.Collections;
-
-public class controller : MonoBehaviour {
-
-	public int myValue;
-	public Vector3 myVector;
-    
-	// Use this for initialization
-	void Start () {
-		myValue=5;
-		myVector = new Vector3(1,1,0);
-		transform.position=myVector;
-		Debug.Log ("MyValue= " + myValue);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	     myVector.x += .1f;
-	     transform.position=myVector;
-	     Debug.Log ("xPosition= " + myVector.x);
-	     
-	}
-}
-{%endace%}
 
 
 
