@@ -2,12 +2,12 @@
 
 In this course we'll learn to create programs in the Unity Game Engine
 
-We will use the opensource MonoDevelop IDE (integrated development environment). Another option is to use Microsoft Visual Studio for your development environment.
+- We will use the opensource MonoDevelop IDE (integrated development environment). Another option is to use Microsoft Visual Studio for your development environment.
 
 
 
 
-The GitBook format supports integration of interactive quizes to give you feedback on your understanding of concepts covered in this book. 
+
 
 Below is an example quiz:
 <quiz name="Quiz1">
@@ -26,45 +26,33 @@ Below is an example quiz:
 </quiz>
 
 {%ace edit=false, lang='c_cpp'%}
-// This is a hello world program for C++.
+// This is a script to move a game object along the x axis
 
-#include <iostream>
-using namespace std;
+using UnityEngine;
+using System.Collections;
 
-int main(){
-  cout << "Hello World";
-  return 0;  // return of 0 means success
+public class controller : MonoBehaviour {
+
+	public int myValue;
+	public Vector3 myVector;
+    
+	// Use this for initialization
+	void Start () {
+		myValue=5;
+		myVector = new Vector3(1,1,0);
+		transform.position=myVector;
+		Debug.Log ("MyValue= " + myValue);
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	     myVector.x += .1f;
+	     transform.position=myVector;
+	     Debug.Log ("xPosition= " + myVector.x);
+	     
+	}
 }
 {%endace%}
 
-``` sequence-hand
-Title: Here is a title
-A->B: Normal line
-B-->C: Dashed line
-C->>D: Open arrow
-D-->>A: Dashed open arrow
-```
-
-```mermaid
-graph LR
-    A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
-```
 
 
-```uml
-@startuml
-
-    Class Stage
-    Class Timeout {
-        +constructor:function(cfg)
-        +timeout:function(ctx)
-        +overdue:function(ctx)
-        +stage: Stage
-    }
-     Stage <|-- Timeout
-
-@enduml
-```
