@@ -24,7 +24,7 @@ Here is the code that we created to animate the objects in this project.
 using UnityEngine;
 using System.Collections;
 
-public class controller : MonoBehaviour {
+public class Controller : MonoBehaviour {
 
 	public int myValue;
 	public Vector3 myVector;
