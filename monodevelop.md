@@ -20,3 +20,12 @@ When we want to create a C# script to add or control behaviors of a game object,
         <answer>A type of illness that causes fatigue which results from too much time spent programming C# scripts for Unity game objects </answer>
     </question>
     </quiz>
+    
+##Create Script in Unity
+In the animation below, we create a C# script, name it "Controller", and then we double-click the script. This opens the script in MonoDevelop, where we can see that code for the Start() and Update() functions is already included in the file.  We see that we've created a ``class Controller`` that inherits from the ``MonoBehavior`` class.  When we create a public variable, then that variable shows up in the inspector panel in the Unity Editor, so we can easily modify that value.
+    
+![](createScript.gif)
+    
+##Attach Script to Camera Object
+In the animation below, we select the main camera in the Hierarchy panel, then in the inspector panel we select 'Add Component', then we select 'script'. This lets us select the script that we've already created.  When we push play, the script is executed and we see the ``Debug.Log()`` output in the console panel.  The Console provides a good way to get information about our program during it's execution.
+![](attachScript.gif)
