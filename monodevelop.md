@@ -5,6 +5,11 @@ MonoDevelop an Integrated Development Environment (IDE) that is installed as par
 To edit a script in MonoDevelop, first create a script component object inside Unity.  Make sure to name the file correctly when creating it in Unity because the script name is used to create the class name of the C# class that is created for each Unity script component.  
 
 ##MonoBehavior
+MonoBehavior is a C# class that is part of the Unity Engine.  Almost all of the C# classes that we create will inherit from the MonoBehavior class.  This inheritance relationship means that our script component objects can be attached to Unity GameObjects and their Start() and Update() methods will be executed when our GameObject is part of the currently active Unity Scene.  
+
+##Script Component Object
+When we want to create a C# script to add or control behaviors of a game object, there are many different ways that we can create a C# script. There are also several ways to have our script attached to a Unity GameObject so it can be instantiated and executed as part of our game's code execution.
+
 
 
 <quiz>
