@@ -16,12 +16,6 @@ Below is an example quiz, these will be integrated throughout the book to help r
         <answer correct>An application to debug Unity programs</answer>
         <explanation>MonoDevelop is an integrated development environment that supports editing and debugging programs for Unity.</explanation>
     </question>
-    <question>
-        <p>What is MonoBehavior?</p>
-        <answer correct>A base-class for custom-script component classes to add custom behaviors to Unity game objects</answer>
-        <answer>A C# interface for that provides Start() and Update() hooks for Unity game objects  </answer>
-        <answer>A type of illness that causes fatigue which results from too much time spent programming C# scripts for Unity game objects </answer>
-    </question>
 </quiz>
 
 
