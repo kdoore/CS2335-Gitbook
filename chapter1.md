@@ -4,7 +4,6 @@ In this course we'll learn to create programs in the Unity Game Engine
 
 - We will use the opensource MonoDevelop IDE (integrated development environment). Another option is to use Microsoft Visual Studio for your development environment.
 
-
 Below is an example quiz:
 <quiz name="Quiz1">
     <question multiple>
@@ -21,7 +20,6 @@ Below is an example quiz:
         <answer>A type of illness that causes fatigue which results from too much time spent programming C# scripts for Unity game objects </answer>
     </question>
 </quiz>
-
 
 {%ace edit=false, lang='c_cpp'%}
 // This is a script to move a game object along the x axis
