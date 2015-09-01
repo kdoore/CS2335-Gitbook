@@ -5,8 +5,8 @@ Unity Editor
 
 Most of the code that we write for this course will end up being attached to gameObjects within the Unity Editor.  
 
-Sample Code:  The code section below is a very basic
-C# script called Example.cs.  This creates a C# class ``Example`` which inherits from the ``MonoBehavior`` class.  When creating a C# script object, this shows the code that is automatically included in the file which includes the MonoBehavior Start() and 
+###Sample Code:  
+The code section below is a very basic C# script called *Example.cs*  This creates a C# ``class Example`` which inherits from the ``MonoBehavior`` class.  When creating a C# script object, the code below shows the code that is automatically included in the file when it's created, this includes the MonoBehavior Start() and 
 Update() functions. 
 
 
