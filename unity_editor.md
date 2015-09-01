@@ -1,7 +1,7 @@
 Unity Editor
 ============
 
-**[MonoDevelop](monodevelop.md):**  We will use the MonoDevelopment Integrated Development Environment (IDE). It's open source and free, and it's tightly integrated with Unity.  This will make it easy to make changes to our code, and to test our modifications within Unity.
+
 
 Most of the code that we write will end up being attached to gameObjects.  
 
