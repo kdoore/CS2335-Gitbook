@@ -7,4 +7,5 @@
 * [Create Prefab GameObjects](create_prefab_gameobjects.md)
 * [C# Language](c_language.md)
    * [Variables](variables.md)
+       * Enumerations
 
