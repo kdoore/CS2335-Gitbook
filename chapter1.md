@@ -5,18 +5,14 @@ In this course we'll learn to create programs in the Unity Game Engine
 - We will use the opensource MonoDevelop IDE (integrated development environment). Another option is to use Microsoft Visual Studio for your development environment.
 
 
-
-
-
-
 Below is an example quiz:
 <quiz name="Quiz1">
     <question multiple>
-        <p>What is gitbook used for?</p>
-        <answer correct>To read books</answer>
-        <answer>To book hotel named git</answer>
-        <answer correct>To write and publish beautiful books</answer>
-        <explanation>GitBook.com lets you write, publish and manage your books online as a service.</explanation>
+        <p>What is MonoDevelop?</p>
+        <answer correct>An application to edit programs for Unity</answer>
+        <answer>A game engine integrated with Unity</answer>
+        <answer correct>An application to debug Unity programs</answer>
+        <explanation>MonoDevelop is an integrated development environment that supports editing and debugging programs for Unity.</explanation>
     </question>
     <question>
         <p>Is this a quiz?</p>
