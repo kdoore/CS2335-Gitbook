@@ -6,6 +6,7 @@
 * [MonoDevelop](monodevelop.md)
 * [Create Prefab GameObjects](create_prefab_gameobjects.md)
 * [C# Language](c_language.md)
+   * [Enumerations](enumerations.md)
    * [Variables](variables.md)
        * [Enumerations](enumerations.md)
 * [Number Game](number_game.md)
