@@ -1,0 +1,2 @@
+#Number Game
+We've all played a number-guessing game, where one player thinks of a number in a range and the other player must guess the number in as few guesses as possible.
