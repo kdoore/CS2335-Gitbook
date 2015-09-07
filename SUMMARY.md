@@ -8,4 +8,5 @@
 * [C# Language](c_language.md)
    * [Variables](variables.md)
        * [Enumerations](enumerations.md)
+* Number Game
 
