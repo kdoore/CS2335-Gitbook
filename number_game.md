@@ -58,4 +58,7 @@ public class NumberGame : MonoBehaviour {
 ```
 
 ###Questions
+Can you extend this program so that you use User-Interface Text GameObjects to interact with the player?
+
+
 
