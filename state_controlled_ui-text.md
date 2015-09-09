@@ -13,7 +13,7 @@ For this project, let's attach the numberGame.cs script file to the canvas objec
 
 ###Code for UI-Text Integration
 
-In our numberGame.cs script, we need to add a new library so that we can access the UI library functions and we also need to create a Text variable that will be linked to the UI Text in the game scene so that it can modify the properties of the UI-Text gameObject.
+In our numberGame.cs script, we need to add a new library so that we can access the UI library functions and we also need to create a Text variable for each UI-Text object that will be linked to the UI Text in the game scene so that it can modify the properties of the UI-Text gameObject. We need to make sure our Text variables are declared as public instance variables so that they will show up in the script-component section of the inspector for the object that we've attached our script to.  
 
 ````java
 using UnityEngine;
@@ -29,7 +29,7 @@ public class NumberGame : MonoBehaviour {
 	//the rest of our NumberGame code
 	}
 ````
-     
+     Now, we can go back into Unity, select the canvas object, make sure we've attached our script to the canvas object, then we need to connect our TextUI elements with the public instance variables from our script component.  We can do this by either dragging the UI-Text object from the hierarchy panel to the script component, or we can select the text element in the script component, select the dot to the right of the text field and it will open a pop-up of all possible game-objects that we can select to connect to this script variable element.
 
 
 
