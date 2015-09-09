@@ -10,3 +10,12 @@ graph TD;
   D(Lose)-->E(End);
   C(Win)-->E(End);
 {% endmermaid %}
+
+
+``` sequence
+Title: Here is a title
+A(Start)->B: Normal line
+B-->C: Dashed line
+C->>D: Open arrow
+D-->>A: Dashed open arrow
+```
