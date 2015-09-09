@@ -29,6 +29,7 @@ public class NumberGame : MonoBehaviour {
 	//the rest of our NumberGame code
 	}
 ````
+
      Now, we can go back into Unity, select the canvas object, make sure we've attached our script to the canvas object, then we need to connect our TextUI elements with the public instance variables from our script component.  We can do this by either dragging the UI-Text object from the hierarchy panel to the script component, or we can select the text element in the script component, select the dot to the right of the text field and it will open a pop-up of all possible game-objects that we can select to connect to this script variable element.
 
 
