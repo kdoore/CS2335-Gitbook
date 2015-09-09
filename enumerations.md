@@ -24,3 +24,15 @@ void update(){
     ```
 
 }
+
+Here is a flow-chart showing how we might use these gameStates to control the game logic
+
+```mermaid
+graph LR;
+  A(Start)-->B(Game);
+  B(Game)-->C(Win);
+  B(Game)-->D(Lose);
+  D(Lose)-->E(End);
+  C(Win)-->E(End);
+
+```
