@@ -9,7 +9,7 @@ graph LR;
   B(Game)-->D(Lose);
   D(Lose)-->E(End);
   C(Win)-->E(End);
-  E(End) -->A(Start);
+
 ```
 
 
