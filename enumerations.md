@@ -21,6 +21,5 @@ void update(){
     if(activeState==gameStates.start){
         Debug.Log( activeState.ToString() );  //this allows us to print out the labeled name, otherwise we'd see the integer value of the state: 0;
     }
-    ```
-
-}
+   }
+```
