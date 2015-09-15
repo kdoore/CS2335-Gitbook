@@ -8,7 +8,7 @@ The **enum** keyword is used to declare an enumeration, a distinct type that con
 
 Enumerations are useful when designing state-based programs because we can define meaningful states and we can use those names in our program to in our control statements to test and query the  the active state.
 
-```java
+```cpp
 private enum gameStates {start, game, win, lose, end};
 private gameStates activeState;  //variable to hold active state
 
@@ -24,15 +24,3 @@ void update(){
     ```
 
 }
-
-Here is a flow-chart showing how we might use these gameStates to control the game logic
-
-```mermaid
-graph LR;
-  A(Start)-->B(Game);
-  B(Game)-->C(Win);
-  B(Game)-->D(Lose);
-  D(Lose)-->E(End);
-  C(Win)-->E(End);
-
-```
