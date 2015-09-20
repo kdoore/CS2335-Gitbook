@@ -8,7 +8,7 @@
 * [C# Language](c_language.md)
    * [Variables](variables.md)
    * [Enumerations](enumerations.md)
-   * Encapsulation
+   * [Encapsulation](encapsulation.md)
        * C# Properties
 * [Number Game](number_game.md)
 * [State Controlled UI-Text](state_controlled_ui-text.md)
