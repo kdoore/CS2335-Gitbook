@@ -2,6 +2,8 @@ Zombie Class
 
 In chapter 6, section 4, the author discusses Class Constructors. He creates a Zombie class.  In the code below, we have expanded his example to show how to use Properties in C# to provide access to private instance fields.  
 
+Zombie.cs
+```
 using UnityEngine;
 using System.Collections;
 
@@ -45,6 +47,33 @@ public class Zombie  {
 	{
 		return "Zombie: " + Name + " brains eaten: " + brainsEaten;
 	}
-
+```
 	
 }
+
+###Example.cs
+```
+using UnityEngine;
+using System.Collections;
+
+public class Example : MonoBehaviour {
+
+	private Zombie[] zombies = new Zombie[3];   //create an array 
+
+	// Use this for initialization
+	void Start () {
+			string[] names= new string[]{"Stubbs", "Rob", "White"};
+			for(int i=0; i< names.Length; i++){
+				zombies[i]= new Zombie(names[i], Random.Range (10,15));
+				Debug.Log (zombies[i].ToString ());
+			}
+		Debug.Log ("first guy " + zombies[0].Name);
+		zombies[0].Name= "Charles";
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}
+```
