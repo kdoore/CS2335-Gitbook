@@ -14,4 +14,4 @@
 * [Number Game](number_game.md)
 * [State Controlled UI-Text](state_controlled_ui-text.md)
 * [Zombie Objects](zombie_objects.md)
-* [Glossary](glossary.md)
+* [Glossary](glossary)
