@@ -112,3 +112,15 @@ public class StateController : MonoBehaviour {
 	}
 }
 ```
+
+### Animations 
+1. How to Create Text-UI Game Objects and Attach Script to Canvas Object
+2. How to Connect Text-UI Game Object to Script Text Element
+
+
+![](GU6iOIPXxo.gif)
+
+![](jfawLfwFA0.gif)
+
+
+
