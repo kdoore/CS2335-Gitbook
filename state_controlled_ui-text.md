@@ -26,12 +26,89 @@ public class NumberGame : MonoBehaviour {
 	public Text numberText;  //guessed number
 	public Text instructionText;  //input instructions
 	
-	//the rest of our NumberGame code
 	}
+	
 ````
 
 Now, we can go back into Unity, select the canvas object, make sure we've attached our script to the canvas object, then we need to connect our TextUI elements with the public instance variables from our script component. We can do this by either dragging the UI-Text object from the hierarchy panel to the script component, or we can select the text element in the script component, select the dot to the right of the text field and it will open a pop-up of all possible game-objects that we can select to connect to this script variable element.
 
+###Connecting C# Text elements to Unity UI-Text.
+In the NumberGame.cs file, we need to write code to modify the UI text elements.  We've declared the public Text elements as class instance variables.  Now in the code we want to modify the Text.
 
+We can initialize the text elements in Start()
+```
+void Start(){
+    gameText.text="Want to play a game? Y or N \n" ;
+````
 
+###StateController.cs 
 
+Here is the code for the StateController project that we discussed in class. 
+
+It is important to realized that in the if-statement blocks, where we are checking to see if any valid input keys have been entered, these statement blocks are true only for 1-brief instant of time, so we can't put any code in these statement blocks that we expect to see displayed on the screen. We use these statement blocks to change the activeState, not for trying to display any text since the keypress event is an instantaneous trigger.
+ 
+
+```
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class StateController : MonoBehaviour {
+	public Text stateText;
+	public Text instructText; //put instruction
+	private enum gameStates{ initialize, start, game, win, lose,end};
+	gameStates activeState;
+	// Use this for initialization
+	void Start () {
+	      stateText.text="Hello";  //initialize text
+	      activeState=gameStates.initialize;  //initialize active state
+	      Debug.Log ("gameStates.start " +  activeState);
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+		switch(activeState){
+		case gameStates.initialize: {
+			stateText.text=activeState.ToString();
+			instructText.text="Press G to begin game or Q to quit";
+			if(Input.GetKeyDown(KeyCode.G)){
+				activeState=gameStates.start;
+			} 
+			else if( Input.GetKeyDown (KeyCode.Q)){
+				activeState=gameStates.end;
+			}
+			break;
+		}
+		case gameStates.start: {
+			stateText.text=activeState.ToString();
+			instructText.text="Pick a number, press Enter when ready,";
+			if(Input.GetKeyDown(KeyCode.Return)){
+				activeState=gameStates.game;  //change state
+			} 
+			break;
+		}
+		case gameStates.game: {
+			stateText.text=activeState.ToString();
+			instructText.text="Welcome to the game, press W to win";
+			if(Input.GetKeyDown(KeyCode.W)){
+				activeState=gameStates.win;  //change state
+			} 
+			break;
+		}
+		case gameStates.win: {
+			stateText.text=activeState.ToString();
+			instructText.text="You won";
+			break;
+		}
+		default:
+		{
+			Debug.Log("default case");
+			break;
+		}
+	}	//end switch
+	
+	
+	}
+}
+```
