@@ -2,7 +2,7 @@ Zombie Class
 
 In chapter 6, section 4, the author discusses Class Constructors. He creates a Zombie class.  In the code below, we have expanded his example to show how to use Properties in C# to provide access to private instance fields.  
 
-In this code example, we want to explore Encapsulation, Properties, Access Modifiers, Static Fields, how to spawn new gameObjects from C# scripts. In addition we want to introduce the C# Array syntax as well as the syntax to override methods.
+In this code example, we want to explore C# Encapsulation, Properties, Access Modifiers, Static Fields. In addition we want to introduce the C# Array syntax as well as the syntax to override methods. We'll also look at how to instantiate game objects in a C# script.
 
 Zombie.cs
 ```
