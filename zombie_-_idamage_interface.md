@@ -29,7 +29,7 @@ interface IDamage  {
 using UnityEngine;
 using System.Collections;
 
-public class Zombie :  IDamage, IEnumerator{
+public class Zombie :  IDamage {
 	//class level property
 	public static int NumberOfZombies = 0;
 
