@@ -16,5 +16,5 @@
 * [Zombie Objects](zombie_objects.md)
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
 * [Glossary](GLOSSARY.md)
-* Zombie: IEnumerable, IEnumerator
+* [Zombie: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
 
