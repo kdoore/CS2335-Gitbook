@@ -73,4 +73,27 @@ public class Zombies: IEnumerable, IEnumerator {
 	
 }
 ```
-###Implementation Example:
+###Implementation Example:  
+Create a Example1 class that can be attached to a gameObject like the main camera.  This declares and initializes an instance: zombies of our Zombies collection.  Then we use ``foreach`` to step through each element in the collection
+
+```
+using UnityEngine;
+using System.Collections;
+
+public class Example1 : MonoBehaviour {
+	
+	//private Zombies zombies ;   our collection class
+	
+	public Zombies zombies;
+	
+	// Use this for initialization
+	void Start () {
+		zombies=new Zombies();  //initialize collection by calling constructor
+		//use foreach to step through the collection - using IEnumerable, IEnumerator Interfaces
+		foreach(Zombie z in zombies){
+			print("Zombies name:  " + z.Name + "  HitPoints " + z.HitPoints);
+		}
+	}
+	
+}
+```
