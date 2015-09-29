@@ -25,3 +25,47 @@ Methods:  MoveNext()   //advance the inumerator to the next element in the colle
 
           Reset()   //set the enumerator to the first element in the collection
             ```
+###Zombies
+In the code below, we define a new collection class:  Zombies, and we implement the IEnumerator and IEnumeration interfaces for this class.
+
+
+public class Zombies: IEnumerable, IEnumerator {
+	
+	private Zombie[] zombieArray;  //we're using an array to store our collection of zombie objects
+
+	//
+	private int position = -1;
+	
+	//constructor
+	public Zombies(){  
+		//initialize our array with zombie objects
+		zombieArray = new Zombie[3];
+		zombieArray[0]=new Zombie("Stubbs", Random.Range (10,15));
+		zombieArray[1]=new Zombie("Rob", Random.Range (10,15));
+		zombieArray[2]=new Zombie("White", Random.Range (10,15));
+	}
+	
+	//IEnumerable  //method that returns the enumerator
+	public IEnumerator GetEnumerator(){
+			return (IEnumerator)this;
+	}
+	
+	//IEnumerator  //move the enumerator to the next element
+	public bool MoveNext(){
+			position ++;
+			return (position < zombieArray.Length);
+	}
+	
+	//IEnumerator  //reset the enumerator to the first element
+	public void Reset(){
+		position =0;
+	}
+	
+	//IEnumerator  //Property that provides access to the current enumerated object
+	public object Current{
+		get{  return zombieArray[position];  
+		}
+	}
+	
+	
+}
