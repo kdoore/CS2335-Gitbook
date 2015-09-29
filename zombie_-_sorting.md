@@ -4,7 +4,7 @@ What does it mean to *sort* a list of zombies?  The process of sorting means tha
 
 In the code below, we implement the generic interface:  IComparable < T >, where we're specifying that the Type of object comparison we want to implement is for *Type: Zombie*.  Below implement this interface for our Zombie class, this will allow comparison of pairs of Zombie object instances. IComparable < Zombie >
 
-###IComparable < T >
+###IComparable < T >: C# Interface that supports Sorting Objects of Type: T
 
 MSDN Reference [IComparable < T >](https://msdn.microsoft.com/en-us/library/4d7sx9hd.aspx)
 
