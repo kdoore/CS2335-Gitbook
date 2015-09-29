@@ -17,4 +17,5 @@
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
 * [Zombies Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
 * [Glossary](GLOSSARY.md)
+* Zombie - Sorting
 
