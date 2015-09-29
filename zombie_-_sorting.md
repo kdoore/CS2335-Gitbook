@@ -29,5 +29,27 @@ CompareTo() Method Implementation for the Zombie Class: We have decided to order
 Having Defined the CompareTo() method and the IComparible Interface, now we can store Zombie objects in a generic List < T > and we can use the Sort() method for the List, and it will sort our Zombies according to which has the highest value for BrainsEaten.  The code below shows how we would use this new Sort functionality;
 
 ```
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;  //required for generic list
 
+public class Example : MonoBehaviour {
+	
+	//Define our Generic List of Zombies
+	public List<Zombie> zombieList;
+	
+	// Use this for initialization
+	void Start () {
+	    //initialize our list with Zombie Objects add each one to our zombieList
+		zombieList=new List<Zombie>();
+		zombieList.Add(new Zombie("Stubbs", Random.Range (10,15),Random.Range (5,15)));
+		zombieList.Add(new Zombie("Rob", Random.Range (10,15),Random.Range (5,15)));
+		zombieList.Add(new Zombie("White", Random.Range (10,15),Random.Range (5,15)));
+		zombieList.Sort();    //Use the Sort() method for the List, it knows how to sort our zombies: 
+		
+		foreach(Zombie z in zombieList){  //List implements IEnumerable
+			print("name:  " + z.Name + "  brainsEaten " + z.BrainsEaten);
+		}
+	}
+}
 ```
