@@ -16,6 +16,6 @@
 * [Zombie Objects](zombie_objects.md)
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
 * [Zombies Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
-* Zombie - Sorting
+* [Zombie - Sorting](zombie_-_sorting.md)
 * [Glossary](GLOSSARY.md)
 
