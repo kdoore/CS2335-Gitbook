@@ -12,13 +12,16 @@ If our Zombies collection can be accessable by users of our class using the fore
 
 MSDN Reference:  [IEnumerable](https://msdn.microsoft.com/en-us/library/system.collections.ienumerable.aspx)
 
-``Methods:   GetEnumerator()  //returns an Enumerator that iterates through a collection``
+```java
+Methods:   GetEnumerator()  //returns an Enumerator that iterates through a collection
+```
 
 MSDN Reference:  [IEnumerator](https://msdn.microsoft.com/en-us/library/system.collections.ienumerator.aspx)
 
-``Properties:  Current  // this gets the current element in the collection``
+```java
+Properties:  Current  // this gets the current element in the collection
 
-``Methods:  MoveNext()   //advance the inumerator to the next element in the collection
+Methods:  MoveNext()   //advance the inumerator to the next element in the collection
 
-            Reset()   //set the enumerator to the first element in the collection
-            ``
+          Reset()   //set the enumerator to the first element in the collection
+            ```
