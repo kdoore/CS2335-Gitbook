@@ -6,4 +6,28 @@ In the code below, we implement the generic interface:  IComparable < T >, where
 
 ###IComparable < T >
 
+MSDN Reference [IComparable < T >](https://msdn.microsoft.com/en-us/library/4d7sx9hd.aspx)
 
+```
+Method:  CompareTo(T)   // Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.
+```
+[Table Below from the MSDN Reference](https://msdn.microsoft.com/en-us/library/4d7sx9hd.aspx)
+![](Screenshot 2015-09-29 13.05.48.png)
+
+
+CompareTo() Method Implementation for the Zombie Class: We have decided to order our zombies according to the value of the number of BrainsEaten.
+```
+//IComparable Method
+	public int CompareTo(Zombie other){
+		if(other == null){
+			return 1;
+		}
+		return this.BrainsEaten-other.BrainsEaten;
+	}
+```
+
+Having Defined the CompareTo() method and the IComparible Interface, now we can store Zombie objects in a generic List < T > and we can use the Sort() method for the List, and it will sort our Zombies according to which has the highest value for BrainsEaten.  The code below shows how we would use this new Sort functionality;
+
+```
+
+```
