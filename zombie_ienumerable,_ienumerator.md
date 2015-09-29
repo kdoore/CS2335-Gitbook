@@ -32,7 +32,7 @@ Methods:  MoveNext()   //advance the inumerator to the next element in the colle
 ###Zombies Class - A collection
 In the code below, we define a custom collection class:  Zombies, and we implement the IEnumerator and IEnumeration interfaces for this class.
 
-
+```
 public class Zombies: IEnumerable, IEnumerator {
 	
 	private Zombie[] zombieArray;  //we're using an array to store our collection of zombie objects
@@ -71,5 +71,6 @@ public class Zombies: IEnumerable, IEnumerator {
 		}
 	}
 	
-	
 }
+```
+###Implementation Example:
