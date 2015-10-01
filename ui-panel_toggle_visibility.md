@@ -34,5 +34,11 @@ Below is the new code that we've added to MenuScript.cs.
 		btnPanel.alpha=0;
 	}
 	```
+### Connect MenuScript.btnPanel with Scene btnPanel
+
 Now we need to establish the connection between our MenuScript public variable: btnPanel and the Unity scene where we want to implement this behavior.  Since the MenuScript script is attached to the Canvas object, that is the gameObject where we need to add this connection.  The animation below shows that we need to populate the MenuScript.btnPanel variable box with the gameObject: btnPanel in our unity scene.
+
+![](btnPanel.gif)
+
+### 
 
