@@ -19,4 +19,5 @@
 * [Zombie - Sorting](zombie_-_sorting.md)
 * [UI-Buttons for Level Control](ui-buttons_for_level_control.md)
 * [Glossary](GLOSSARY.md)
+* UI-Panel: Toggle Visibility
 
