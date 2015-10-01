@@ -43,3 +43,4 @@ Now we need to establish the connection between our MenuScript public variable: 
 ###Call hidePanel() from Button onClick()
 Now we need to create a button that's not in the btnPanel, this button will control the visibility of the btnPanel.  It will call the MenuScritp.hidePanel() method when it's onClick() event is triggered.
 
+![](hidePanel.gif)
