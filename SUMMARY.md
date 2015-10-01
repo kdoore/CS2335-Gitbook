@@ -17,6 +17,6 @@
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
 * [Zombies Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
 * [Zombie - Sorting](zombie_-_sorting.md)
-* [Glossary](GLOSSARY.md)
 * UI-Buttons for Level Control
+* [Glossary](GLOSSARY.md)
 
