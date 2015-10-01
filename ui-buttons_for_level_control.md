@@ -29,3 +29,5 @@ The animation below the code shows how to implement this. First the MenuScript i
 ![](UI_buttons.gif)
 	
 The animation below the code shows how to implement this. First the MenuScript is added to the Canvas object, then the button's onClick() method is set by adding the Canvas object to the onClick script source.  Then the dropdown allows selection of the loadScene() method.  Finally we set the int input value so that it matches the index of the level we want loaded when the user clicks the button.  
+
+###Buttons to control UI Panels.
