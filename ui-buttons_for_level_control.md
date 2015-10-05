@@ -32,4 +32,6 @@ The animation below the code shows how to implement this. First the MenuScript i
 
 ###Add Scenes to Project Build Settings
 
+![](buildSettings.gif)
+
 
