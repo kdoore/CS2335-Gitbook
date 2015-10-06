@@ -2,4 +2,4 @@
 
 Todo:  Add more content
 
-[Wikipedia link](https://en.wikipedia.org/wiki/Encapsulation_computer_programming)  
+[Wikipedia link](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
