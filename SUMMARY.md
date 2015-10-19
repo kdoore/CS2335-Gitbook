@@ -18,7 +18,7 @@
 * [Zombies Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
 * [Zombie - Sorting](zombie_-_sorting.md)
 * [UI-Buttons for Level Control](ui-buttons_for_level_control.md)
+* Project 2
 * [UI-Panel: Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Glossary](GLOSSARY.md)
-* Project 2
 
