@@ -2,8 +2,7 @@
 
 Here's the link to the updated starter code.
 
-I have created examples of most features you'll want to include in your project.  I've added a few more features that we'll discuss in class.  In the project, we create UI panels to act as containers for other UI elements.  Then, by adding a component to the panel, we can control the visibility from our scripts.  To a UI-Panel, add a component: Layout -> Canvas: Group. Then we modify the alpha and interactibility, and also toggle the 
-
+I have created examples of most features you'll want to include in your project.  I've added a few more features that we'll discuss in class.  In the project, we create UI panels to act as containers for other UI elements.  The animated images below show how to add various UI elements as required for this project.
 
 [Updated Starter Code (Oct 22): Unity Project Zip File](https://utdallas.box.com/s/8txw4flobwetq4fe4zb92itnp2figpce)
 
@@ -32,4 +31,10 @@ In this project you'll add images for background images and button images.  To u
 Once you've converted your image from a Texture to a Sprite, then you can use it as a sprite for such things as a UI button.  First you'll create a UI-Button Oject, then you'll select the image-file as the source image for your button.  See animation below.  You may want to clear the text from the Button's Text field.
 
 ![](imageButton.gif)
+
+###Panels to Control Visibility and Interactivity
+
+In the project, we create UI panels to act as containers for other UI elements.  Then, by adding a component to the panel, we can control the visibility from our scripts.  To a UI-Panel, add a component: Layout -> Canvas: Group. Then we use code to modify the alpha,interactable, and blocks raycasts to control visibility and interactivity
+.
+![](panelVIsibility.gif)
 
