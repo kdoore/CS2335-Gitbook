@@ -11,16 +11,6 @@ The image below shows the behavior of the starter project.  This includes button
 ![](8S4CitwjlI.gif)
 
 
-Some Free - Public Domain 2-D Game Assets: 
-
-[Daniel Cook's Planet Cute](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
-
-[Glitch Garden](http://www.glitchthegame.com/public-domain-game-art/)
-
-[Free Fantasy Maps](http://freefantasymaps.org/free-fantasy-maps/)
-
-Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
-
 ###2D Image: Texture to Sprite
 
 In this project you'll add images for background images and button images.  To use images in 2D mode in Unity, first create a Textures folder and then drag your images into that folder.  To use an image, select the image in the Textures folder, then in the inspector select: Texture Type = Sprite ( 2D and UI) and then 'apply'.  Now you can use this for any 2D sprite in your project.
@@ -37,4 +27,14 @@ Once you've converted your image from a Texture to a Sprite, then you can use it
 In the project, we create UI panels to act as containers for other UI elements.  Then, by adding a component to the panel, we can control the visibility from our scripts.  To a UI-Panel, add a component: Layout -> Canvas: Group. Then we use code to modify the alpha,interactable, and blocks raycasts to control visibility and interactivity
 .
 ![](panelVIsibility.gif)
+
+Some Free - Public Domain 2-D Game Assets: 
+
+[Daniel Cook's Planet Cute](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
+
+[Glitch Garden](http://www.glitchthegame.com/public-domain-game-art/)
+
+[Free Fantasy Maps](http://freefantasymaps.org/free-fantasy-maps/)
+
+Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
 
