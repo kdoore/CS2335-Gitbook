@@ -19,6 +19,6 @@
 * [Zombie - Sorting](zombie_-_sorting.md)
 * [UI-Buttons for Level Control](ui-buttons_for_level_control.md)
 * [UI-Panel: Toggle Visibility](ui-panel_toggle_visibility.md)
-* [Project 2](project_2.md)
+* [Project 2 - Text Adventure](project_2.md)
 * [Glossary](GLOSSARY.md)
 
