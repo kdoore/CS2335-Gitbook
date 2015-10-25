@@ -25,14 +25,6 @@ Once you've converted your image from a Texture to a Sprite, then you can use it
 ![](imageButton.gif)
 
 
-###Panels to Control Visibility and Interactivity
-
-In the project, we create UI panels to act as containers for other UI elements.  Then, by adding a component to the panel, we can control the visibility from our scripts.  To a UI-Panel, add a component: Layout -> Canvas: Group. Then we use code to modify the alpha,interactable, and blocks raycasts to control visibility and interactivity
-
-
-![](panelVIsibility.gif)
-
-
 Some Free - Public Domain 2-D Game Assets: 
 
 [Daniel Cook's Planet Cute](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
