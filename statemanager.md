@@ -9,6 +9,7 @@ We want to insure that this class is only created once, otherwise everytime it i
 Unity proivdes a special method that we can use to insure the GameManager and attached script component: StateManager are not destroyed when execution jumps to a new scene: ``DontDestroyOnLoad(gameObject)``
 
 ###Panel-Canvas Group: Modify Attributes on Button Click
+In the code below, we add a clickEvent Listener, so if the StartButton is clicked, this showStoryPanel() method will be called.  In the showStoryPanel(), we want to hide the canvas group: cg that 
 
 ```java
 //find StartButton GameObject - add clickEvent Listener
