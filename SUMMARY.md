@@ -21,4 +21,5 @@
 * [UI-Panel: Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Project 2 - Source Code](project_2_-_source_code.md)
 * [Glossary](GLOSSARY.md)
+* StateManager
 
