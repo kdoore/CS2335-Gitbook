@@ -7,3 +7,4 @@ We want to insure that this class is only created once, otherwise everytime it i
 
 ###Object Persistence 
 Unity proivdes a special method that we can use to insure the GameManager and attached script component: StateManager are not destroyed when execution jumps to a new scene: ``DontDestroyOnLoad(gameObject)``
+
