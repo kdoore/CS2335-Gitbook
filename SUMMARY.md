@@ -22,4 +22,5 @@
 * [Project 2 - Source Code](project_2_-_source_code.md)
 * [StateManager](statemanager.md)
 * [Glossary](GLOSSARY.md)
+* Inventory
 
