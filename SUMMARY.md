@@ -20,7 +20,7 @@
 * [UI-Buttons for Level Control](ui-buttons_for_level_control.md)
 * [UI-Panel: Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Project 2 - Source Code](project_2_-_source_code.md)
+* [Inventory](inventory.md)
 * [StateManager](statemanager.md)
 * [Glossary](GLOSSARY.md)
-* [Inventory](inventory.md)
 
