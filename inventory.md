@@ -7,8 +7,9 @@ Sprites are from [LostGarden](LostGarden.com): Daniel Cook.[Small World Graphics
 [Zip File with Sprite Assets:](https://utdallas.box.com/s/f8q6fgq67v7r097zr49tk0lzrxrewj63)
 
 
-Player Move Code:  Attached to the Girl Sprite:
+###Player Move Code:  Attached to the Girl Sprite:
 
+```
 using UnityEngine;
 using System.Collections;
 
@@ -32,3 +33,4 @@ public class PlayerMove : MonoBehaviour {
     rigidBody2D.velocity = newVelocity;
   }
 }
+```
