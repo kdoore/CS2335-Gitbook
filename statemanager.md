@@ -8,3 +8,22 @@ We want to insure that this class is only created once, otherwise everytime it i
 ###Object Persistence 
 Unity proivdes a special method that we can use to insure the GameManager and attached script component: StateManager are not destroyed when execution jumps to a new scene: ``DontDestroyOnLoad(gameObject)``
 
+###Panel - Canvas Group - Modify Attributes on Button Click
+```java
+    /// <summary>
+	///Called from main panel button
+	///hides and inactivates the main panel 
+	///then shows and activates  StoryPanel1
+	/// </summary>
+	public void showStoryPanel1(){
+		Debug.Log ("StartButton was clicked");
+		//hide mainPanel
+		cg.alpha=0;  //set the mainPanel to be invisible
+		cg.interactable=false;  //turn off interactivity for the invisible mainPanel
+		cg.blocksRaycasts=false;
+		//show storyPanel1
+		cg1.alpha=1;
+		cg1.interactable=true;
+		cg1.blocksRaycasts=true;
+	}
+	```
