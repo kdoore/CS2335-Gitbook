@@ -6,6 +6,11 @@ Sprites are from [LostGarden](LostGarden.com): Daniel Cook.[Small World Graphics
 
 [Zip File with Sprite Assets:](https://utdallas.box.com/s/f8q6fgq67v7r097zr49tk0lzrxrewj63)
 
+For the inventory, we're going to create a player that can interact with other gameObjects, as a means to interact with items in their inventory.  
+
+The Unity Reference and Manual provide documentation for how to create game-like behaviors as interactions between GameObjects.
+
+We'll start by dragging an image to the Hierarchy Panel to create a 2D-sprite GameObject: *Girl-player* in a new scene.  Then we need to attach a RigidBody2D component to our Girl-player.  The [Unity Manual](http://docs.unity3d.com/ScriptReference/Rigidbody2D.html) explains that we need to add a RigidBody2D component so that we can use the Unity Physics Engine to move our Girl-player in the scene.  We'll change the player's RigidBody.velocity each frame in response to the user key-presses.
 
 ###Player Move Code:  Attached to the Girl Sprite:
 
