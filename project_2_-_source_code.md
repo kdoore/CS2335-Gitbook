@@ -2,6 +2,7 @@
 
 ###Learning Goals:
 - Learn how to access current scene GameObjects and Components within custom class scripts
+- Learn how to use Singleton Programming Pattern to create persistent GameObjects and Script Objects.
 - 
 
 
