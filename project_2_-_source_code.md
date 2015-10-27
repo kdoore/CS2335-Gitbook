@@ -1,15 +1,8 @@
 # Project 2 - Source Code
+ 
+ See [StateManager](statemanager.md) for more details about the starter code
 
-###Learning Goals:
-- Learn how to access current and interact with scene GameObjects and Components within custom class scripts.
-- Learn how to use Singleton Programming Pattern to create persistent GameObjects and Script Objects.
-- Learn how to define and use Interfaces like: *IStateBase* to create object references like: `StateManager: activeState` for objects that from classes that implement the interface.
-- Learn how to define object references and to pass object references as class Constructor parameters to allow class objects to interact via public methods and public properties. 
-- Learn how to instantiate objects by calling the class constructor method.
-- Learn how to use image files as Unity 2D sprites and UI elements.
-- Learn how to create UI-Buttons from images, and to use those button to toggle visibility of UI-Panels.
-
-Here's the link to the updated starter code.
+Here's the link to the updated starter project.
 
 [Updated Starter Code (Oct 22): Unity Project Zip File](https://utdallas.box.com/s/8txw4flobwetq4fe4zb92itnp2figpce)
 
