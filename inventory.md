@@ -1,4 +1,4 @@
-# Player Inventory
+# Inventory
 
 Inventory Code: Unity 5x Cookbook by Matt Smith PacktPub.  
 
