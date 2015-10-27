@@ -37,5 +37,6 @@ public class StateManager : MonoBehaviour {
 ```
 
 ###Object Persistence 
-Unity proivdes a special method that we can use to insure the GameManager and attached script component: StateManager are not destroyed when execution jumps to a new scene: ``DontDestroyOnLoad(gameObject)``.  Since this StateManager will not be destroyed, then any objects that have an active object reference within the StateManager object will also not be destroyed.  We can use this to keep a reference to an Inventory object, so then the inventory will also have persistence throughout the life of the application,  We may also want to keep track of which states / scenes that we've visited, by maintaining a list of the object references for states which have 
+Unity proivdes a special method that we can use to insure the GameManager and attached script component: StateManager are not destroyed when execution jumps to a new scene: ``DontDestroyOnLoad(gameObject)``.  Since this StateManager will not be destroyed, then any objects that have an active object reference within the StateManager object will also not be destroyed.  We can use this to keep a reference to an Inventory object, so then the inventory will also have persistence throughout the life of the application,  We may also want to keep track of which states / scenes that we've visited, by maintaining a list of the object references for states which have been instantiated.  We'd need to prevent creation of a new state instance each time we return to a scene.  
+
 
