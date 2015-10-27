@@ -1,5 +1,10 @@
 # Project 2 - Source Code
 
+###Learning Goals:
+- Learn how to access current scene GameObjects and Components within custom class scripts
+- 
+
+
 Here's the link to the updated starter code.
 
 [Updated Starter Code (Oct 22): Unity Project Zip File](https://utdallas.box.com/s/8txw4flobwetq4fe4zb92itnp2figpce)
