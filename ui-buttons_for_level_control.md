@@ -1,4 +1,4 @@
-#UI Buttons for Level Control
+#UI Buttons To Change Scene
 
 In Unity, we can use Scenes to implement game levels, we can write C# scripts to write a versatile controller method that can be used on any button to change the game scene.  
 
