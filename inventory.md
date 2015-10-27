@@ -11,7 +11,7 @@ For the inventory, we're going to create a player that can interact with other g
 
 The [Unity Script Reference Manual](http://docs.unity3d.com/ScriptReference/) provides documentation for how to create game-like behaviors as interactions between GameObjects.
 
-Canvas Mode:  Screen-Space Overlay
+Canvas Mode:  Screen-Space Camera
 Since we are using sprites to create a game in this scene, we'll need to change our camera settings to allow us to also use UI-objects that will be on a Canvas GameObject.
 
 
