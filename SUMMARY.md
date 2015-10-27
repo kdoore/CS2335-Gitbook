@@ -23,4 +23,5 @@
 * [StateManager](statemanager.md)
 * [Inventory](inventory.md)
 * [Glossary](GLOSSARY.md)
+* Finding GameObjects in Custom Scripts
 
