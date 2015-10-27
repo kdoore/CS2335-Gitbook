@@ -1,2 +1,2 @@
-# Finding GameObjects in Custom Scripts
+# Find GameObjects for use in Custom Scripts
 
