@@ -16,7 +16,7 @@ Once we have added the CanvasGroup component to our Panel-UI element, then we ca
 ###Scene Load-Event - calls Start()
 We need to initialize the value of our `panelHidden` variable and the alpha value within the Start() method.  This way the variables will be re-initialized each time we enter this particular Scene. When a Scene is first loaded, this is when the Start method for every active game object is executed.  
 
-### Toggle Attributes: Interactive and BlocksRaycase 
+### Toggle Properties: Interactive and BlocksRaycase 
 
 ###hidePanel Method
 
