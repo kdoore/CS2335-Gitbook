@@ -1,13 +1,10 @@
 # StateManager - Singleton Design Pattern
 
 ###Learning Goals:
-- Learn how to access current and interact with scene GameObjects and Components within custom class scripts.
 - Learn how to use Singleton Programming Pattern to create persistent GameObjects and Script Objects.
 - Learn how to define and use Interfaces like: *IStateBase* to create object references like: `StateManager: activeState` for objects that from classes that implement the interface.
 - Learn how to define object references and to pass object references as class Constructor parameters to allow class objects to interact via public methods and public properties. 
 - Learn how to instantiate objects by calling the class constructor method.
-- Learn how to use image files as Unity 2D sprites and UI elements.
-- Learn how to create UI-Buttons from images, and to use those button to toggle visibility of UI-Panels.
 
 
 In Project 2, we have created the StateManager class to manage which state our application is in.  The StateManager inherits from MonoBehavior, so this class can be attached to an empty gameObject as a script component: *GameManager*, and Unity will execute the Start(), Update(), and other Unity event hook functions for the StateManager object instance, which, in-turn will execute StateUpdate() for the currently *activeState*.  
