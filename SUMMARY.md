@@ -17,7 +17,7 @@
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
 * [Zombies Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
 * [Zombie - Sorting](zombie_-_sorting.md)
-* [UI-Buttons for Level Control](ui-buttons_for_level_control.md)
+* [UI-Buttons To Change Scene](ui-buttons_for_level_control.md)
 * [UI-Panel: Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Project 2 - Source Code](project_2_-_source_code.md)
 * [StateManager - Singleton Design Pattern](statemanager.md)
