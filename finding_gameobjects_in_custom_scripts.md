@@ -36,8 +36,11 @@ It seems that finding button gameObjects and Button components causes the most t
 		  //no Button GameObject with <Button>component is active
 		
 		}
-	
-	public void StateUpdate(){  //this is executed each update() because it's called from StateManager on the activeState
+		
+	//StateUpdate is executed each update() 
+	//it's called from StateManager on the activeState
+	public void StateUpdate(){  
+	    
 	    if(!initialized){  //if it returns false, if it returns true, don't run it again
 	        initializeObjectRefs();  //returns false when it fails
 	        if(sb){  //start button has been initialized
