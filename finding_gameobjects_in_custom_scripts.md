@@ -15,7 +15,7 @@ See the code below:
 
 ```java
 //State1.cs
-
+    
     private bool initialized=false;
 	private bool sb=false;
 
@@ -45,7 +45,7 @@ See the code below:
 	    
 	    if(!initialized){  //if it returns false, if it returns true, don't run it again
 	        initializeObjectRefs();  //returns false when it fails
-	        if(sb){  //start button has been initialized
+	        if(sb){  //start button has been initialized (add more tests in here if you have more buttons, all flags need to be true:  if(sb && sb2 && sb3)
 	           initialized=true;
 	        }
 	    }	
