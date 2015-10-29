@@ -48,7 +48,7 @@ See the code below:
 		mainPanel=GameObject.Find ("MainPanel1");
 		Debug.Log ("Found Main Panel in initialize Refs");
 		
-		//Find buttons and button components: 
+		//Find buttons and button components - this seems to cause problems in some scenes
 		if((startButton == null)  && GameObject.Find("BackToStart") != null){ 
 			startButton=GameObject.Find("BackToStart");
 			Debug.Log ("found startButton")	;
@@ -75,7 +75,6 @@ See the code below:
 	}
 	
 	```
-	
 	
 ###Crashing Unity
 For the code above, you need to make sure that you're not calling initializeObjectRefs(); more than a couple times, otherwise, the constant attempts to find gameObjects will crash your system.  Make sure to look at your logic that determines if initializeObjectRefs() gets called.  The ordering of your test cases matters! You want to first test the condition that is not checking for GameObject.Find(""), so in the starter code below, notice that the first thing to check is whether the flag value: initialized==false is the first condition we test, this is critical because we test this condition every single update() frame, if this test case evaluates to false, then we don't test the second condition at all.  If we were testing GameObject.Find(), first, then we'd look through every GameObject every update() loop, that could crash our system.    Either use individual flags like above if you have more than 1 game object that is giving you problems with null reference errors.  The code below doesn't insure that any object besides the MainPanel has been found.
