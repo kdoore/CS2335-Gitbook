@@ -35,5 +35,3 @@ The animation below the code shows how to implement this. First the MenuScript i
 ![](buildSettings.gif)
 
 
-
-
