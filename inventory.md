@@ -25,7 +25,6 @@ We need to define sorting layers for our sprites, this will allow us to define l
 ###RigidBody2D
 In the PlayerMove code below, we write code to allow the user to move the player using various input methods, we're using the UnityEngine Input default mappings so we want to provide access to move the player along the horizontal and vertical axis.  We need to use a RigidBody2D  component because it allows us to use UnityEngine physics engine to create realistic character movement.    
 
-
 ###Player Move Code:  Attached to the Girl Sprite:
 
 ```
