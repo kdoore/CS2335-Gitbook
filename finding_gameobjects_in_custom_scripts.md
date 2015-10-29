@@ -17,14 +17,14 @@ It seems that finding button gameObjects and Button components causes the most t
     private bool initialized=false;
 	private bool sb=false;
 
- [RuntimeInitializeOnLoadMethod] are invoked after scene has been loaded
+ [RuntimeInitializeOnLoadMethod] //are invoked after scene has been loaded
 	void initializeObjectRefs(){ 
 	    //find the MainPanel Canvas Group: doesn't seem to cause problems
 		mainPanel=GameObject.Find ("MainPanel1");
 		Debug.Log ("Found Main Panel in initialize Refs");
 		
 		//Find buttons and button components: 
-		if(GameObject.Find("BackToStart") != null && startButton == null){ ////&& (GameObject.Find("BackToStart").GetComponent<Button>() == null)){
+		if(GameObject.Find("BackToStart") != null && (startButton == null)){ 
 			startButton=GameObject.Find("BackToStart");
 			Debug.Log ("found startButton")	;
 			startBtnComponent=startButton.GetComponent<Button>();
