@@ -9,7 +9,9 @@
 Since we are creating references ( connections ) to GameObjects in our scenes from within our *State* classes, it seems that there can be some problems if the scene intialization does not occur before the new state object is initialized and begins executing methods that are called from the StateManager.  It's important to think about exactly what is causing these problems and how to fix them.  So, we have 2 independent entities:  a game scene that has GameObjects, an instance of our activeState state object.  The StateManager is responsible for managing the communication between our *state object*, and since it is attached to the GameManager GameObject, it is also able to execute Unity events like Awake, Update,  
 
 
-It seems that finding button gameObjects and Button components causes the most trouble.  I think that by wrapping the initialization of these references in an if statement where you check to verify the gameButton has been found will resolve the problem.  See the code below:
+It seems that finding Button GameObjects and Button Components causes the most trouble when initializing GameObject references.  I think that by wrapping the initialization of these references in an if statement where you check to verify the GameObject Button has been found will resolve the problem. The first part of the if() test is to make sure this code is only exectued one time since we don't want to keep wasting processing resources. By testing whether the startButton reference has been initialized, or is still null...as the first test, then once the inner initialization code has been executed once, this test will fail, so we no longer even look to see if we can find the "BackToStart" game object, as that is the resource intensive test case. 
+
+See the code below:
 
 ```java
 //State1.cs
@@ -24,7 +26,7 @@ It seems that finding button gameObjects and Button components causes the most t
 		Debug.Log ("Found Main Panel in initialize Refs");
 		
 		//Find buttons and button components: 
-		if(GameObject.Find("BackToStart") != null && (startButton == null)){ 
+		if((startButton == null)  && GameObject.Find("BackToStart") != null){ 
 			startButton=GameObject.Find("BackToStart");
 			Debug.Log ("found startButton")	;
 			startBtnComponent=startButton.GetComponent<Button>();
