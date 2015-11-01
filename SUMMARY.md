@@ -23,6 +23,6 @@
 * [StateManager - Singleton Design Pattern](statemanager.md)
 * [Finding GameObjects in Custom Scripts](finding_gameobjects_in_custom_scripts.md)
 * [Inventory](inventory.md)
-* [Glossary](GLOSSARY.md)
 * Player GameObject
+* [Glossary](GLOSSARY.md)
 
