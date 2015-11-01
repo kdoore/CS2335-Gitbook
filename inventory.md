@@ -10,4 +10,3 @@ Sprites are from [LostGarden](LostGarden.com): Daniel Cook.[Small World Graphics
 For the inventory, we're going to create a player that can interact with other gameObjects, as a means to interact with items in their inventory.  
 
 The [Unity Script Reference Manual](http://docs.unity3d.com/ScriptReference/) provides documentation for how to create game-like behaviors as interactions between GameObjects.
-
