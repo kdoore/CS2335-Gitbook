@@ -21,7 +21,6 @@
 * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Project 2 - Source Code](project_2_-_source_code.md)
 * [StateManager - Singleton Design Pattern](statemanager.md)
-* [Finding GameObjects](finding_gameobjects_in_custom_scripts.md)
 * [Inventory](inventory.md)
 * [Player GameObject](player_gameobject.md)
 * [Glossary](GLOSSARY.md)
