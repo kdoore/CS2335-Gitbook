@@ -83,7 +83,7 @@ if(initialized==false && GameObject.Find ("MainPanel")!=null){
 		}
 ```
 ###Text Input
-How to script an input Box
+How to script an input Box:  This code is in one of the State.cs files where we are trying to capture the input from an InputText GameObject on the corresponding Scene.
 
 ```
 	   
