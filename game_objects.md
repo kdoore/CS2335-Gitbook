@@ -1,2 +1,5 @@
 # Game Objects
 
+###StateManager ObjectReferences
+When each ``state`` object is initialized, it's constructor takes an object reference to the singleton instance of the StateManager object and assigns that value to a local variable: `manager`, we've created to hold that address. Later, we pass that address along to the next state object when it is time to change states by calling the constructor for the next state.  The SwitchState process is quite interesting because the ``SwitchState()`` method belongs to the StateManager object, but the code is from within the current state, but the function requires the current state to call the function by calling the constructor method for the next state.  This code really illustrates the fact that methods are used by objects to communicate, they act to allow messages to be sent between objects. 
+The UnityEngine provides methods that allow easy message communication between objects, some of these methods are FindGameObject(), AttachListener(), OnTriggerEnter2D(), etc.
