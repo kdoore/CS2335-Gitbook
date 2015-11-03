@@ -85,5 +85,6 @@ if(initialized==false && GameObject.Find ("MainPanel")!=null){
 			initialized=true;
 		}
 ```
+#Text Input
 
 
