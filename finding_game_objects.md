@@ -92,6 +92,16 @@ How to script an input Box
 	   var se=new InputField.SubmitEvent();   //dynamic variable type //let unity figure out the datatype
 	   se.AddListener(ProcessInput);
 	   inputFieldCo.onEndEdit=se;
-```		
+```	
+
+this sets up a call to this created function, the input is a string :
+```
+    public void ProcessInput(string arg0){
+        Debug.Log (arg0);
+        manager.playerName=arg0;
+    }
+    ```
+
+In the stateManager class I created a string playerName that is getting updated in the ProcessInput function 
 
 
