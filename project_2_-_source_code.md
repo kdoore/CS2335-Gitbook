@@ -27,7 +27,9 @@ The image below shows the behavior of the starter project.  This includes button
 
 Text Input:
 
-```How to script an input Box
+
+```java
+///How to script an input Box
 	   inputFieldGo = GameObject.Find("PlayerName");
 	   inputFieldCo = inputFieldGo.GetComponent<InputField>();
 	   var se=new InputField.SubmitEvent();   //dynamic variable type //let unity figure out the datatype
