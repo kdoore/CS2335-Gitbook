@@ -38,25 +38,31 @@ See the code below:
 //State1.cs
     
     private bool initialized=false;
-	private bool sb=false;
+	private bool sb=false, mp=false;  //object ref flags
 
 	void initializeObjectRefs(){ 
 	    //find the MainPanel Canvas Group: doesn't seem to cause problems
-		mainPanel=GameObject.Find ("MainPanel1");
-		Debug.Log ("Found Main Panel in initialize Refs");
+		if(mainpanel==null && GameObject.Find ("MainPanel1") !=null){
+		    mainPanel=GameObject.Find ("MainPanel1");
+		    Debug.Log ("Found Main Panel in initialize Refs");
+		    mp=true;  //flag indicates mainpanel object reference has been initialized
+		    }
 		
 		//Find buttons and button components - this seems to cause problems in some scenes
-		if((startButton == null)  && GameObject.Find("BackToStart") != null){ 
+		if((startButton == null) && GameObject.Find("BackToStart") != null){ 
 			startButton=GameObject.Find("BackToStart");
 			Debug.Log ("found startButton")	;
 			startBtnComponent=startButton.GetComponent<Button>();
 			Debug.Log ("found start button component");
 			startBtnComponent.onClick.AddListener(GoToStartScene);
 			Debug.Log ("start button added listener:  ");
-			sb=true;
+			sb=true;//flag indicates startButton obj ref has been initialized
 		  }  
 		  //no Button GameObject with <Button>component is active
 		
+		 if(sb && mp){  //start button has been initialized (add more tests in here if you have more buttons, all flags need to be true:  if(sb && sb2 && sb3)
+	           initialized=true;
+	        }
 		}
 		
 	//StateUpdate is executed each update() 
@@ -65,23 +71,23 @@ See the code below:
 	    
 	    if(!initialized){  //if it returns false, if it returns true, don't run it again
 	        initializeObjectRefs();  //returns false when it fails
-	        if(sb){  //start button has been initialized (add more tests in here if you have more buttons, all flags need to be true:  if(sb && sb2 && sb3)
-	           initialized=true;
-	        }
+	       
 	    }	
 	}
-	
-```
+```	
 
 ###Crashing Unity
-For the code above, you need to make sure that you're not calling initializeObjectRefs(); more than a couple times, otherwise, the constant attempts to find gameObjects will crash your system.  Make sure to look at your logic that determines if initializeObjectRefs() gets called.  The ordering of your test cases matters! You want to first test the condition that is not checking for GameObject.Find(""), so in the starter code below, notice that the first thing to check is whether the flag value: initialized==false is the first condition we test, this is critical because we test this condition every single update() frame, if this test case evaluates to false, then we don't test the second condition at all.  If we were testing GameObject.Find(), first, then we'd look through every GameObject every update() loop, that could crash our system.    Either use individual flags like above if you have more than 1 game object that is giving you problems with null reference errors.  The code below doesn't insure that any object besides the MainPanel has been found.
+For the code above, you need to make sure that you're not calling initializeObjectRefs(); more than a couple times, otherwise, the constant attempts to find gameObjects will crash your system.  Make sure to look at your logic that determines if initializeObjectRefs() gets called.  The ordering of your test cases matters! You want to first test the condition that is not checking for GameObject.Find(""), so in the starter code above, notice that the first thing to check is whether the gameObject reference: mainpanel==null  If we were testing GameObject.Find("MainPanel"), first, then we'd look through every GameObject every update() loop, that could crash our system.    Using individual flags for each gameOjbect: sb and mp, insure that each GameObject is initialized, otherwise we'll keep calling InitializeObjectRefs() until all flags have been set to true.  It may be that you only have to wrap one gameObject in this protective wrapper, in that case you're only checking 1 flag in order to set initialized=true;
+
+	``` 
+	//inside initializeObjectRefs, check for each flag to be true
+	    if(sb ){  //start button has been initialized
+	           initialized=true;
+	        }
+		
+	```
 	
-```
-if(initialized==false && GameObject.Find ("MainPanel")!=null){
-			initializeObjectRefs();
-			initialized=true;
-		}
-```
+
 ###Text Input
 How to script an input Box:  This code is in one of the State.cs files where we are trying to capture the input from an InputText GameObject on the corresponding Scene.
 
