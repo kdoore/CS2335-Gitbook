@@ -11,6 +11,7 @@ Since we are using sprites to create a game in this scene, we'll need to change 
 ###Custom Sorting Layers
 
 We need to define sorting layers for our sprites, this will allow us to define layers that vary in Z depth. First we need to select the layer dropdown tab from the top of the inspector panel and then we choose to add new layers.  We select to add new sorting layers, we create a Background and a Foreground sorting layer.  The ordering of the layers in this list defines the ordering of layers in our scene. Then for each GameObject that we assign with *Sorting Layer Background* those objects will be behind the GameObjects that have been assigned to the Foreground Layer.  We can define additional layers, and we can change the layer ordering dynamically using C# scripts.  (We don't do that in this project)
+In addition, the Z transform value for an object can also determine visibility.  The Main Camera has a transform position vector of (0,0,-10) by default.  This means that to move objects closer to the camera, can give them a Z transform value that is between 0 and -10.
 
 
 ###RigidBody2D
