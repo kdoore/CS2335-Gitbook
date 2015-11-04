@@ -28,6 +28,8 @@ In the PlayerMove code below, we write code to allow the user to move the player
 
 ###Player Move Code:  Attached to the Girl Sprite:
 
+PlayerMove.cs
+
 ```
 using UnityEngine;
 using System.Collections;
@@ -52,4 +54,65 @@ public class PlayerMove : MonoBehaviour {
     rigidBody2D.velocity = newVelocity;
   }
 }
+```
+
+###Player Controller Script
+
+Player.cs
+
+```
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+public class Player : MonoBehaviour {
+
+	
+	private bool carryingStar=false;
+	private bool initialized=false;
+	public int starScore=0;
+	public int numStars;
+    private StateManager manager;
+	
+	
+	void Start(){
+	    //  UpdateStarText();
+	     
+	}
+
+    void OnTriggerEnter2D(Collider2D hit){
+        if(hit.CompareTag("Star")){
+                carryingStar=true;
+                numStars++;
+                manager.numStars++;
+                Debug.Log ("on trigger " + numStars);
+                UpdateStarText();
+                Destroy(hit.gameObject);
+        
+        }
+    }
+    public void initializeObjectRef(){
+		if(manager ==null && GameObject.Find ("GameManager") !=null){
+		manager=GameObject.Find ("GameManager").GetComponent<StateManager>();
+		Debug.Log ("manager numStars " + manager.numStars);
+		initialized=true;
+		}
+    }
+    
+    public void Update(){
+    	if(!initialized){
+    	 	initializeObjectRef();
+    	}
+    }
+  
+    private void UpdateStarText(){
+            string starMessage= "no stars ;-(";
+            
+            if(carryingStar){
+			starMessage = "Carrying " + manager.numStars + " stars ;-)";
+            }
+           // starText.text= starMessage;
+    }
+}
+
 ```
