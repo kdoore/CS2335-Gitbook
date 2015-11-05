@@ -23,7 +23,7 @@
 * [StateManager - Singleton Design Pattern](statemanager.md)
 * [Finding Game Objects](finding_game_objects.md)
 * [Game Objects](game_objects.md)
-* Game Scene
+* [Game Scene](game_scene.md)
 * [Inventory](inventory.md)
 * [Player GameObject](player_gameobject.md)
 * [Glossary](GLOSSARY.md)
