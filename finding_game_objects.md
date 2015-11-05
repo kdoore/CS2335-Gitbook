@@ -107,6 +107,6 @@ this sets up a call to this created function, the input is a string :
     }
     ```
 
-In the stateManager class I created a string playerName that is getting updated in the ProcessInput function 
+
 
 
