@@ -118,3 +118,65 @@ public class Player : MonoBehaviour {
 
 ```
 [Link to LostGarden SpaceGame Zipfile](https://utdallas.box.com/LostGardenSprites)
+
+
+###Move Script - For Bug Movement
+```
+using UnityEngine;
+
+/// <summary>
+/// Simply moves the current game object
+/// </summary>
+public class MoveScript : MonoBehaviour
+{
+	// 1 - Designer variables
+	
+	
+	//private Rigidbody2D rigidbody2D;
+	/// <summary>
+	/// Moving direction
+	/// </summary>
+	public float speed;
+
+	public Vector2 direction;
+	public Vector2 position;
+	
+	private Vector2 movement;
+	private Rigidbody2D  rb2D;
+	private Vector3 LowerLeft;
+	private float curX;
+	
+	void Start(){
+		speed=20f ;
+		
+		direction = new Vector2(-1, 0);
+		rb2D=this.GetComponent<Rigidbody2D>();
+		LowerLeft=Camera.main.ScreenToWorldPoint(new Vector3(0,0,0));
+		
+		Debug.Log("lowerLeft.x " + LowerLeft.x);
+		
+		Debug.Log ("camera viewPort width " + Camera.main.ViewportToWorldPoint(new Vector3(0,0,0)).x);
+	}
+	
+	
+	void FixedUpdate()
+	{
+		curX= transform.localPosition.x;  //read only property
+		
+		if(curX < LowerLeft.x){
+		     speed *= -1;
+		}
+		movement = new Vector2(
+				speed * direction.x,
+				speed * direction.y
+				);
+		
+	   //if we have hit the wall direction = direction * -1;		
+	
+		// Apply movement to the rigidbody
+		
+		rb2D.velocity = movement;
+	}
+}
+```
+
