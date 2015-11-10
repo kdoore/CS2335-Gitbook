@@ -134,9 +134,12 @@ public class MoveScript : MonoBehaviour
 	private Rigidbody2D  rb2D;
 	private Vector3 LowerLeft;
 	private float curX;
+	private float spriteDirection;
 	
 	void Start(){  //initialize values in Start to override inspector default values
 		speed=20f ;
+		spriteDirection= transform.localScale.x;  //what is the initial value of scale.x which controls size and orientation of sprite
+		
 		direction = new Vector2(-1, 0);
 		rb2D=this.GetComponent<Rigidbody2D>();
 		LowerLeft=Camera.main.ScreenToWorldPoint(new Vector3(0,0,0));
@@ -149,19 +152,21 @@ public class MoveScript : MonoBehaviour
 	void FixedUpdate()
 	{
 	    // check current x position of object
-		curX= transform.localPosition.x;  //read only property
+		curX= transform.localPosition.x;  //what is current x position?
+		
+		//if we have hit the left screen edge change direction of speed
 		if(curX < LowerLeft.x){
 		     speed *= -1;
-		}   //add code here to test for collision with right screen edge
+		}   
+		
+		//add code here to test for collision with right screen edge
 		
 		//can we add code to flip the image sprite direction?
-		movement = new Vector2(
+		
+		movement = new Vector2( 
 				speed * direction.x,
 				speed * direction.y
 				);
-		
-	   //if we have hit the wall direction = direction * -1;		
-	
 		// Apply movement to the rigidbody
 		
 		rb2D.velocity = movement;
