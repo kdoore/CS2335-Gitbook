@@ -36,7 +36,7 @@ using UnityEngine;
 using System.Collections;
 
 public class PlayerMove : MonoBehaviour {
-  public float speed = 10;
+  public float speed = 10;   //initialzation should be moved to Start()
   private Rigidbody2D rigidBody2D;
 
   void Awake(){
@@ -70,13 +70,13 @@ public class Player : MonoBehaviour {
     
     private bool carryingStar=false;
 	private bool initialized=false;
-	public int starScore=0;
+	public int starScore=0;  //initialize from manager data?
 	public int numStars;
     private StateManager manager;
 	
 	
 	void Start(){
-	    //  UpdateStarText();
+	    
 	     
 	}
 
