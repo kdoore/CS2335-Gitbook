@@ -20,7 +20,7 @@ In the PlayerMove code below, we write code to allow the user to move the player
 
 [Unity RigidBody Documentation](http://docs.unity3d.com/Manual/class-Rigidbody.html)
  Rigidbodies enable your GameObjects to act under the control of physics. The Rigidbody can receive forces and torque to make your objects move in a realistic way.
-[Rigidbody 2D](http://docs.unity3d.com/Manual/class-Rigidbody2D.html), the difference that in 2D, objects can only move in the XY plane and can only rotate on an axis perpendicular to that plane.
+[Rigidbody 2D](http://docs.unity3d.com/Manual/class-Rigidbody2D.html), the difference that in 2D, objects can only move in the XY plane and can only rotate on an axis perpendicular to that plane.  Remember to set gravity to 0 if you don't want it to impact your objects.
 
 ###Colliders
 
@@ -140,6 +140,7 @@ public class MoveScript : MonoBehaviour
 		direction = new Vector2(-1, 0);
 		rb2D=this.GetComponent<Rigidbody2D>();
 		LowerLeft=Camera.main.ScreenToWorldPoint(new Vector3(0,0,0));
+		UpperRight=Camera.main.ScreenToWorldPoint (new Vector3(Screen.width, Screen.height, 0));
 		
 		Debug.Log("lowerLeft.x " + LowerLeft.x);
 		Debug.Log ("UpperRight.x" );  //add code to test for collision with right screen edge.
@@ -151,7 +152,9 @@ public class MoveScript : MonoBehaviour
 		curX= transform.localPosition.x;  //read only property
 		if(curX < LowerLeft.x){
 		     speed *= -1;
-		}
+		}   //add code here to test for collision with right screen edge
+		
+		//can we add code to flip the image sprite direction?
 		movement = new Vector2(
 				speed * direction.x,
 				speed * direction.y
@@ -165,4 +168,58 @@ public class MoveScript : MonoBehaviour
 	}
 }
 ```
+###GameState.cs
+We need to have a C# State class associated with each scene in our adventure. For this scene, we'll dyamically modify the StarText in the gameScene to show how many stars the player is carrying. This state implements IStateBase, so it has to have definitions for StateUpdate() and ShowIt().  This is also where we'll create code to control levels for the game and to provide button logic to leave the scene. 
 
+```
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+
+public class GameState : IStateBase {
+
+	private  StateManager manager;
+	
+	private Text starText;
+	
+	private bool initialized=false;
+	
+	public GameState( StateManager managerReference){
+		this.manager = managerReference;
+		
+		Debug.Log ("constructor for gameState");
+	}
+	
+	void initializeObjectRefs(){ 
+		if(starText ==null && GameObject.Find("starText") !=null){
+			starText=GameObject.Find("starText").GetComponent<Text>();
+			Debug.Log ("found star text");
+			initialized=true;
+		}
+	}
+	
+	public void StateUpdate(){
+		if(!initialized){  //if it returns false, if it returns true, don't run it again
+			initializeObjectRefs();  //returns false when it fails
+		}	
+	}
+	
+	public void ShowIt(){
+		if(initialized){
+			UpdateStarText();
+		}
+	}
+	
+	public void UpdateStarText(){
+		if(manager.numStars > 0){
+			starText.text="Carrying " + manager.numStars + " stars";
+		}
+		else{
+			starText.text="Not carrying stars";
+		}
+	}
+	
+}
+
+```
