@@ -59,7 +59,7 @@ public class PlayerMove : MonoBehaviour {
 
 ###Player Controller Script
 
-Player.cs
+Player.cs - This is the starter version of the Player script, modifications will be made to include: testing to see if a "Bug" was the collision trigger.
 
 ```
 using UnityEngine;
@@ -67,9 +67,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
-
-	
-	private bool carryingStar=false;
+    
+    private bool carryingStar=false;
 	private bool initialized=false;
 	public int starScore=0;
 	public int numStars;
@@ -89,8 +88,7 @@ public class Player : MonoBehaviour {
                 Debug.Log ("on trigger " + numStars);
                 UpdateStarText();
                 Destroy(hit.gameObject);
-        
-        }
+        }  // add code to test for other collision triggers
     }
     public void initializeObjectRef(){
 		if(manager ==null && GameObject.Find ("GameManager") !=null){
@@ -129,33 +127,23 @@ using UnityEngine;
 /// </summary>
 public class MoveScript : MonoBehaviour
 {
-	// 1 - Designer variables
-	
-	
-	//private Rigidbody2D rigidbody2D;
-	/// <summary>
-	/// Moving direction
-	/// </summary>
 	public float speed;
 
-	public Vector2 direction;
-	public Vector2 position;
-	
+	private Vector2 direction;
+	private Vector2 position;
 	private Vector2 movement;
 	private Rigidbody2D  rb2D;
 	private Vector3 LowerLeft;
 	private float curX;
 	
-	void Start(){
+	void Start(){  //initialize values in Start to override inspector default values
 		speed=20f ;
-		
 		direction = new Vector2(-1, 0);
 		rb2D=this.GetComponent<Rigidbody2D>();
 		LowerLeft=Camera.main.ScreenToWorldPoint(new Vector3(0,0,0));
 		
 		Debug.Log("lowerLeft.x " + LowerLeft.x);
-		
-		Debug.Log ("camera viewPort width " + Camera.main.ViewportToWorldPoint(new Vector3(0,0,0)).x);
+		Debug.Log ("UpperRight.x" );  //add code to test for collision with right screen edge.
 	}
 	
 	
