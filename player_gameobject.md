@@ -128,8 +128,7 @@ using UnityEngine;
 public class MoveScript : MonoBehaviour
 {
 	public float speed;
-
-	private Vector2 direction;
+    private Vector2 direction;
 	private Vector2 position;
 	private Vector2 movement;
 	private Rigidbody2D  rb2D;
@@ -146,11 +145,10 @@ public class MoveScript : MonoBehaviour
 		Debug.Log ("UpperRight.x" );  //add code to test for collision with right screen edge.
 	}
 	
-	
 	void FixedUpdate()
 	{
+	    // check current x position of object
 		curX= transform.localPosition.x;  //read only property
-		
 		if(curX < LowerLeft.x){
 		     speed *= -1;
 		}
