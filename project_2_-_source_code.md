@@ -34,4 +34,6 @@ The image below shows the behavior of the starter project.  This includes button
  
  [Free Fantasy Maps](http://freefantasymaps.org/free-fantasy-maps/)
  
+ [Open Game Art](http://opengameart.org/)
+ 
  Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
