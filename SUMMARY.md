@@ -24,7 +24,7 @@
 * [Finding Game Objects](finding_game_objects.md)
 * [Game Objects](game_objects.md)
 * [Game Scene](game_scene.md)
-* [Inventory](inventory.md)
 * [Player GameObject](player_gameobject.md)
+* [Inventory](inventory.md)
 * [Glossary](GLOSSARY.md)
 
