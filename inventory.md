@@ -28,6 +28,5 @@ We will use C# dictionaries and we'll want to define some additional classes lik
         
 ```
 
-###
+We can imagine that for most inventory items we can define a name, maybe a corresponding image, possibly a type, where there may be different types of inventory items, we can imagine needing to distinguish between items that can have different types of values: discrete, boolean, continuously valued etc.  
 
-We can imagine that for most inventory items we can define a name, a corresponding image, possibly a type, where there may be different types of inventory items, we can imagine needing to distinguish between items that can have different types of values: discrete, boolean, continuously valued etc.   
