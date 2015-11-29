@@ -6,7 +6,8 @@
         "mermaid",
         "js-sequence-hand-diagram",
         "plantuml",
-        "headers"
+        "headers",
+        "anchors"
     ],
     "pluginsConfig": {}
 }
