@@ -30,3 +30,106 @@ We will use C# dictionaries and we'll want to define some additional classes lik
 
 We can imagine that for most inventory items we can define a name, maybe a corresponding image, possibly a type, where there may be different types of inventory items, we can imagine needing to distinguish between items that can have different types of values: discrete, boolean, continuously valued etc.  
 
+### PickUp Objects and PickUpType
+```
+public class PickUp : MonoBehaviour {
+
+	public enum PickUpType { Star, Key, Heart, Snowflake }
+
+	public PickUpType type;
+	public int value;
+}
+```
+Then in GameData, we can create a Dictionary of PickUp keys and values as the player collects PickUps in the game.  We'll use this Dictionary to let us know what items to display in the player PickUp Inventory:
+
+```
+public Dictionary<PickUp.PickUpType, int> pickUpItems = new Dictionary<PickUp.PickUpType, int>();
+
+```
+
+When a collision happens with the Player, if it's a PickUp type of object, we'll call GameData.Add
+ 
+ 
+ In Player.cs
+```
+void OnTriggerEnter2D(Collider2D hit){
+        if(hit.CompareTag("PickUp")){
+                PickUp item = hit.GetComponent<PickUp>();
+			    gameData.Add(item);  //add item to GameData pickup dictionary
+                Debug.Log ("on trigger pickup "  + item.type );
+                Destroy(hit.gameObject);
+        }
+    ```
+    
+    
+    In GameData.cs
+    
+    ```
+
+	public void Add(PickUp pickup){
+		PickUp.PickUpType type = pickup.type;
+		int oldTotal = 0;
+		if(pickUpItems.TryGetValue(type, out oldTotal))  //key exists, get current value
+			pickUpItems[type] = oldTotal + 1 ;  //use key as index, increment total number of this item by 1
+		else
+			pickUpItems.Add (type, 1);  // add 1 per collision to dictionary
+		SpaceGirlScore += pickup.value;  //increment score by points per item
+		if(displayInventory){  //only call this method when in a scene that has an Inventory Display Game Object
+			inventoryDisplay.OnChangeInventory(pickUpItems, SpaceGirlScore);  //Update Inventory Display
+			Debug.Log ("call OnChangeInventory score" + SpaceGirlScore);
+		}
+		UpdateSpaceGirlData();  //see if this is now highScore to reset PlayerPrefs
+	}
+```
+
+Finally this is Displayed in InventoryDisplay:  OnChangeInventory()
+
+```
+
+	//called from GameData when some new data has been added
+	public void OnChangeInventory(Dictionary<PickUp.PickUpType, int> inventory ,int  totalScore){
+	      Debug.Log ("on change inventory");
+	      /// for each item in the inventory dictionary
+	      foreach(var item in inventory){
+	      int itemTotal=item.Value;
+	      updateUI(itemTotal, item.Key); 
+	      ScoreTxt.text = totalScore.ToString ();
+	      }  
+	}
+	//Update UI 
+	void updateUI(int val, PickUp.PickUpType type){
+	switch(type){  //check type and display associated UI element
+	    case PickUp.PickUpType.Key: 
+	    	if(val > 0){  //dynamically activate KeySlot Panel
+	    	  KeySlot.SetActive (true);
+		      KeyTxt.text=val.ToString ();
+	    	}
+	    	break;
+	    
+		case PickUp.PickUpType.Star: 
+			if(val > 0){
+				StarTxt.text=val.ToString ();
+				StarCG.alpha=1; // Set alpha of StarSlot -CanvasGroup  text value
+			}
+			break;
+			
+		case PickUp.PickUpType.Snowflake: 
+			if(val > 0){
+				SnowflakeTxt.text=val.ToString ();
+				SnowflakeCG.alpha=1;  //show Snowflake Slot 
+			}
+			break;
+			
+		case PickUp.PickUpType.Heart: 
+			if(val > 0){
+				HeartTxt.text=val.ToString ();
+				HeartCG.alpha=1;  //show HeartSlot + text value
+			}
+			break;
+		
+		}  //end switch
+		
+	}  //end function UpdateUI
+	
+	```
+	
