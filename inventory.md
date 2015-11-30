@@ -62,9 +62,9 @@ void OnTriggerEnter2D(Collider2D hit){
     ```
     
     
-    In GameData.cs
+In GameData.cs
     
-    ```
+```
 
 	public void Add(PickUp pickup){
 		PickUp.PickUpType type = pickup.type;
@@ -83,6 +83,7 @@ void OnTriggerEnter2D(Collider2D hit){
 ```
 
 Finally this is Displayed in InventoryDisplay:  OnChangeInventory()
+
 
 ```
 
