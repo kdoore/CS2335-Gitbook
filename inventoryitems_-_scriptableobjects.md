@@ -1,0 +1,2 @@
+# InventoryItems - ScriptableObjects
+
