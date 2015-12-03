@@ -20,4 +20,4 @@ The player Inventory dictionary contains InventoryItems, these get added when so
 
 There's a new player inventory manager script that's used to control adding items to the player's inventory within the store scene.
 
-
+If you want to display multiple items such as text, background image, etc to be associated with an inventory item, then put the slot into a panel and within that panel or gameObject you can have multiple UI elements visible.  Any gameObject can only have 1 visible element at a time, so if it's a spriteRenderer component that's displaying your inventoryItem in some type of slot gameObject, you'll want to put that slot within a larger container to allow display of additional UI elements.
