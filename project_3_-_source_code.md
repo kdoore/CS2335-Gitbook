@@ -3,12 +3,14 @@
 Here is a link to the zip file for the Space Girl Game.  This includes the Pickup Classes and the GameData - Inventory Dictionary.  Also, there is an InventoryDisplay class that is used in the game scene to display pickup total points scored in the game.
 
 
-[Link to Project3 Zip file](https://utdallas.box.com/Project3Inventory)
+old:  [Link to Project3 Zip file](https://utdallas.box.com/Project3Inventory)
 
 
 
-[Link to Project3 December 2 Code](https://utdallas.box.com/Project3Dec2)
+old:  [Link to Project3 December 2 Code](https://utdallas.box.com/Project3Dec2)
 
+
+**Most Current StarterCode version: December 3**
 
 [Final Link to Project 3 Starter Code:  From December 3](https://utdallas.box.com/Project3inventoryStore)
 
