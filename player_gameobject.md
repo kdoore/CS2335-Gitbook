@@ -234,6 +234,7 @@ If we want to constrain the player, to keep her on the screen, we can create a g
 
 Then we need to add logic so we test for collision with the leftBorder, if the collision happens, we can set xspeed to 0, we'll allow this to be reset to the default xspeed once they hit the input key to move right, in that case xMove will have a positive valeu.  Then We also need a bool state variable moveLeft that we set to true when the collision occurs.  When we add both a left and a right border, then when the player uses the correct input to move away from the wall, we want to reset the state varaible so we only allow right input to reset the speed if they are not currently hitting the rightBorder. 
 
+![](Screenshot 2015-12-08 08.54.49.png)
 
 ```
 using UnityEngine;
@@ -291,4 +292,3 @@ public class PlayerMove : MonoBehaviour {
 }
 ```
 
-![](Screenshot 2015-12-08 08.54.49.png)
