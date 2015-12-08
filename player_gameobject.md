@@ -232,7 +232,7 @@ public class GameState : IStateBase {
 
 If we want to constrain the player, to keep her on the screen, we can create a game object:  leftBorder that is an empty game object that has a 2D box collider component added, with IsTrigger set to true.  Then we need to add a custom tag "leftBorder" so we can verify this is the object the player colides with.  We can modify the movePlayer.cs script so that there is a separate xspeed and a yxpeed values.  I've also changed the variable names of the newVelocity components to newXSpeed in order to better distinguish between the default xSpeed and the input modified speed: newXSpeed.
 
-Then we need to add logic so we test for collision with the leftBorder, if the collision happens, we can set xspeed to 0, we'll allow this to be reset to the default xspeed once they hit the input key to move right, in that case xMove will have a positive valeu.  Then We also need a bool state variable moveLeft that we set to true when the collision occurs.  When we add both a left and a right border, then when the player uses the correct input to move away from the wall, we want to reset the state varaible so we only allow right input to reset the speed if they are not currently hitting the rightBorder. 
+Then we need to add logic so we test for collision with the leftBorder, if the collision happens, we can set xspeed to 0, we'll allow this to be reset to the default xspeed once they hit the input key to move right, in that case xMove will have a positive value.  Then We also need a bool state variable hitLeft that we set to true when the collision occurs.  When we add both a left and a right border, then when the player uses the correct input to move away from the wall, we want to reset the state hitLeft variable to false to allow movement in either direction. 
 
 ![](Screenshot 2015-12-08 08.54.49.png)
 
@@ -245,26 +245,26 @@ public class PlayerMove : MonoBehaviour {
 
    public float xspeed, yspeed;
    private Rigidbody2D rb2D;
-   private bool moveLeft, moveRight;
+   private bool hitLeft, hitRight;
    
    void Awake(){
    	    rb2D = GetComponent<Rigidbody2D>();
 		xspeed= 15.0f;  //initialize
 		yspeed= 15.0f;
-		moveLeft=false;
-		moveRight=false;
+		hitLeft=false;
+		hitRight=false;
    }
 
   void FixedUpdate(){
          
        float xMove = Input.GetAxis("Horizontal");
-       if(xMove >0 && !moveRight){
+       if(xMove >0 && !hitRight){
 			xspeed=15.0f;
-			moveLeft=false;  //reset 
+			hitLeft=false;  //reset 
        }
-       else if(xMove<0 && !moveLeft){
+       else if(xMove<0 && !hitLeft){
 			xspeed=15.0f;
-			moveRight=false;
+			hitRight=false;
        }
        float yMove = Input.GetAxis ("Vertical");
        
@@ -280,12 +280,12 @@ public class PlayerMove : MonoBehaviour {
 		if(hit.CompareTag ("leftBorder")){
 		    Debug.Log("collision with leftBorder");
 			xspeed=0; 
-			moveLeft=true;
+			hitLeft=true;
 		}
 		if(hit.CompareTag ("rightBorder")){
 			Debug.Log("collision with rightBorder");
 			xspeed=0; 
-			moveRight=true;
+			hitRight=true;
 		}
 	
 	}
