@@ -232,7 +232,7 @@ public class GameState : IStateBase {
 
 If we want to constrain the player, to keep her on the screen, we can create a game object:  leftBorder that is an empty game object that has a 2D box collider component added, with IsTrigger set to true.  Then we need to add a custom tag "leftBorder" so we can verify this is the object the player colides with.  We can modify the movePlayer.cs script so that there is a separate xspeed and a yxpeed values.  I've also changed the variable names of the newVelocity components to newXSpeed in order to better distinguish between the default xSpeed and the input modified speed: newXSpeed.
 
-Then we need to add logic so we test for collision with the leftBorder, if the collision happens, we can set xspeed to 0.  Then We also need a bool state variable moveLeft that we set to true when the collision occurs.  
+Then we need to add logic so we test for collision with the leftBorder, if the collision happens, we can set xspeed to 0.  Then We also need a bool state variable moveLeft that we set to true when the collision occurs.  When we add both a left and a right border, then when the player uses the correct input to move away from the wall, we want to reset the state varaible so we can allow 
 
 
 ```
