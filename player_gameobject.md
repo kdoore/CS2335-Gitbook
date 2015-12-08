@@ -75,9 +75,8 @@ public class Player : MonoBehaviour {
     private StateManager manager;
 	
 	
-	void Start(){
+	void Start(){  //initialize object refs within a scene in Start()
 	    	manager=GameObject.Find ("GameManager").GetComponent<StateManager>();
-	     
 	}
 
     void OnTriggerEnter2D(Collider2D hit){
