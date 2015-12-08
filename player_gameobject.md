@@ -228,3 +228,67 @@ public class GameState : IStateBase {
 }
 
 ```
+###Constrain Player Movement using Box Collider 
+
+If we want to constrain the player, to keep her on the screen, we can create a game object:  leftBorder that is an empty game object that has a 2D box collider component added, with IsTrigger set to true.  Then we need to add a custom tag "leftBorder" so we can verify this is the object the player colides with.  We can modify the movePlayer.cs script so that there is a separate xspeed and a yxpeed values.  I've also changed the variable names of the newVelocity components to newXSpeed in order to better distinguish between the default xSpeed and the input modified speed: newXSpeed.
+
+Then we need to add logic so we test for collision with the leftBorder, if the collision happens, we can set xspeed to 0.  Then We also need a bool state variable moveLeft that we set to true when the collision occurs.  
+
+
+```
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+public class PlayerMove : MonoBehaviour {
+
+   public float xspeed, yspeed;
+   private Rigidbody2D rb2D;
+   private bool moveLeft, moveRight;
+   
+   void Awake(){
+   	    rb2D = GetComponent<Rigidbody2D>();
+		xspeed= 15.0f;  //initialize
+		yspeed= 15.0f;
+		moveLeft=false;
+		moveRight=false;
+   }
+
+  void FixedUpdate(){
+         
+       float xMove = Input.GetAxis("Horizontal");
+       if(xMove >0 && !moveRight){
+			xspeed=15.0f;
+			moveLeft=false;  //reset 
+       }
+       else if(xMove<0 && !moveLeft){
+			xspeed=15.0f;
+			moveRight=false;
+       }
+       float yMove = Input.GetAxis ("Vertical");
+       
+       float newXSpeed= xMove * xspeed;
+       float newYSpeed =yMove * yspeed;
+       
+       Vector2 newVelocity = new Vector2(newXSpeed, newYSpeed);
+       
+		rb2D.velocity = newVelocity;
+       }
+       
+	void OnTriggerEnter2D(Collider2D hit){
+		if(hit.CompareTag ("leftBorder")){
+		    Debug.Log("collision with leftBorder");
+			xspeed=0; 
+			moveLeft=true;
+		}
+		if(hit.CompareTag ("rightBorder")){
+			Debug.Log("collision with rightBorder");
+			xspeed=0; 
+			moveRight=true;
+		}
+	
+	}
+}
+```
+
+![](Screenshot 2015-12-08 08.54.49.png)
