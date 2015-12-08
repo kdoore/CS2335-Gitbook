@@ -76,7 +76,7 @@ public class Player : MonoBehaviour {
 	
 	
 	void Start(){
-	    
+	    	manager=GameObject.Find ("GameManager").GetComponent<StateManager>();
 	     
 	}
 
@@ -90,18 +90,10 @@ public class Player : MonoBehaviour {
                 Destroy(hit.gameObject);
         }  // add code to test for other collision triggers
     }
-    public void initializeObjectRef(){
-		if(manager ==null && GameObject.Find ("GameManager") !=null){
-		manager=GameObject.Find ("GameManager").GetComponent<StateManager>();
-		Debug.Log ("manager numStars " + manager.numStars);
-		initialized=true;
-		}
-    }
+   
     
     public void Update(){
-    	if(!initialized){
-    	 	initializeObjectRef();
-    	}
+    
     }
   
     private void UpdateStarText(){
