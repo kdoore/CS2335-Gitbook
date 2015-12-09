@@ -11,7 +11,7 @@ The Key is used as a indexer to allow storage of a value that is associated with
 
 Foreach Loop.  In order to iterate through all items in a dictionary, we can use a foreach loop.  Since each inventory item is a key/value pair which is a complex dataType, we can use var as the variable type that will hold a 
 
-```
+```java
         Dictionary<string, int> inventory = new Dictionary<string, int>();
          inventory.Add("frogs", 2);
          inventory.Add("puppies", 3);
