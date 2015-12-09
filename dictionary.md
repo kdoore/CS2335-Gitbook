@@ -15,6 +15,11 @@ Foreach Loop.  In order to iterate through all items in a dictionary, we can use
         Dictionary<string, int> inventory = new Dictionary<string, int>();
          inventory.Add("frogs", 2);
          inventory.Add("puppies", 3);
+         inventory.Add("frogs", 3); //this will generate an error since the frog key already exists
+         
+         //to update a value
+         inventory["frogs"] = 3;   //bracket notation
+         int numCows = inventory["cows"];  //this will generate an error since the key doesn't exist
 
          foreach(var item in inventory){  //use var variable type
 	      	int itemTotal=item.Value;
