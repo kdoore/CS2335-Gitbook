@@ -1,4 +1,5 @@
-# Game Inventory
+# Game Inventory - Dictionary
+
 
 Inventory Code is based on: Unity 5x Cookbook by Matt Smith PacktPub.  
 
