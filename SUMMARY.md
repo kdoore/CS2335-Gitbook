@@ -26,7 +26,7 @@
 * [Game Scene](game_scene.md)
 * [Player GameObject](player_gameobject.md)
 * [Project 3 - Source Code](project_3_-_source_code.md)
-* [Inventory](inventory.md)
+* [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Glossary](GLOSSARY.md)
 
