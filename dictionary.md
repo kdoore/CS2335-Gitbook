@@ -9,7 +9,8 @@ The Key is used as a indexer to allow storage of a value that is associated with
 
 
 
-Foreach Loop.  In order to iterate through all items in a dictionary, we can use a foreach loop.  Since each inventory item is a key/value pair which is a complex dataType, we can use var as the variable type that will hold a 
+###Foreach Loop
+In order to iterate through all items in a dictionary, we can use a foreach loop which is a range-based for loop as opposed to a count-based for-loop.  Since each inventory item is a key/value pair which is a complex dataType, we can use var as the variable type that will temporarily hold each item so we can manipulate the item.  There are many Dictionary methods to let us interact and modif Dictionary elements.  Before we can work with the Dictionary, we always want to check to see if the key, associated with our current item, 
 
 ```java
         Dictionary<string, int> inventory = new Dictionary<string, int>();
