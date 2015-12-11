@@ -19,8 +19,12 @@ There are many Dictionary methods to let us interact and modify Dictionary eleme
          inventory.Add("puppies", 3);
          inventory.Add("frogs", 3); //this will generate an error since the frog key already exists
          
-         //to update a value
+         //correct approach - check for key
+         if(! inventory.ContainsKey("frogs")){
+              //to update a value
          inventory["frogs"] = 3;   //bracket notation
+         }
+         
          int numCows = inventory["cows"];  //this will generate an error since the key doesn't exist
 
          foreach(var item in inventory){  //use var variable type
