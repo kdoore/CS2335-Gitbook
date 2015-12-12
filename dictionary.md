@@ -1,6 +1,6 @@
 # Dictionary
 
-[MSDN Reference](https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx)
+[MSDN Reference](https://msdn.microsoft.com/en-us/library/xfhwa508.aspx)
 
 A Dictionary represents a collection of Key / Value pairs.
 
