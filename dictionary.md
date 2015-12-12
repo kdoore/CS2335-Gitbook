@@ -20,9 +20,12 @@ There are many Dictionary methods to let us interact and modify Dictionary eleme
          inventory.Add("frogs", 3); //this will generate an error since the frog key already exists
          
          //correct approach - check for key
-         if(! inventory.ContainsKey("frogs")){
+         if(inventory.ContainsKey("frogs")){  //if key exists, then update value
               //to update a value
-         inventory["frogs"] = 3;   //bracket notation
+            inventory["frogs"] = 3;   //bracket notation
+         }
+         else{
+            inventory.Add("frogs", 1);  //create a new dictionary element that is key/value pair
          }
          
          int numCows = inventory["cows"];  //this will generate an error since the key doesn't exist
