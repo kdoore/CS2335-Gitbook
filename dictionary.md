@@ -4,22 +4,21 @@
 
 A Dictionary represents a collection of Key / Value pairs.
 
-The Key is used as a indexer to allow storage of a value that is associated with a unique Key.  Keys must be unique, there cannot be duplicate Keys in a dictionary, so we must use care when adding elements to a dictionary object to ensure that the item's key does not already exist in the dictionary.  There are several methods that can be used to test for the presence of a specific key, these helper functions prevent runtime errors in our programs.
+The Key is used as a indexer to allow storage of a value that is associated with a unique Key.  Keys must be unique, there cannot be duplicate Keys in a dictionary, so we must use care when adding new elements to a dictionary object to ensure that the item's key does not already exist in the dictionary.  There are several methods that can be used to test for the presence of a specific key, these helper functions prevent runtime errors in our programs.
 
-
-###foreach Loop
-In order to iterate through all items in a dictionary, we can use a foreach loop which is a range-based for loop as opposed to a count-based for-loop.  Since each inventory item is a key/value pair which is a complex dataType, we can use var as the variable type that will temporarily hold each item so we can manipulate the item. We can also use the KeyValuePair struct data-type if we declare the <T> type of each dictionary element. 
-
-###Dictionary.ContainsKey( )
-There are many Dictionary methods to let us interact and modify Dictionary elements.  Before we can work with the Dictionary, for inserts or any other modification, we should always to check to see if the key, associated with our current item. Otherwise, we'll get a run-time error based on the existence in the dictionary.
-
+###Dictionary.Add()
 ```java
         Dictionary<string, int> inventory = new Dictionary<string, int>();
          inventory.Add("frogs", 2);
          inventory.Add("puppies", 3);
          inventory.Add("frogs", 3); //this will generate an error since the frog key already exists
+         ```
          
-         //correct approach - check for key
+###Dictionary.ContainsKey( )
+There are many Dictionary methods to let us interact and modify Dictionary elements.  Before we can work with the Dictionary, for inserts or any other modification, we should always to check to see if the key, associated with our current item. Otherwise, we'll get a run-time error based on the existence in the dictionary. Similarly, if we want to update the value of a dictionary item, we must first check that the key exists. 
+
+```java
+        //correct approach - check for key before using Add() method
          if(inventory.ContainsKey("frogs")){  //if key exists, then update value
               //to update a value
             inventory["frogs"] = 3;   //bracket notation
@@ -29,6 +28,12 @@ There are many Dictionary methods to let us interact and modify Dictionary eleme
          }
          
          int numCows = inventory["cows"];  //this will generate an error since the key doesn't exist
+         
+         
+         ```
+         ###foreach Loop
+In order to iterate through all items in a dictionary, we can use a foreach loop which is a range-based for-loop as opposed to a count-based for-loop.  Since each inventory item is a key/value pair which is a complex dataType, we can use ``var`` as the variable type that will temporarily hold each item so we can manipulate the item. We can also use the KeyValuePair struct data-type if we declare the <T> type of each dictionary element. 
+```
 
          foreach(var item in inventory){  //use var variable type
 	      	int itemTotal=item.Value;
