@@ -1,8 +1,9 @@
 # Inheritance
+ [MSDN C# Inheritance Reference](https://msdn.microsoft.com/en-us/library/ms173149.aspx)
 
-[MSDN C# Inheritance Reference](https://msdn.microsoft.com/en-us/library/ms173149.aspx)
+"Inheritance enables you to create new classes that reuse, extend, and modify the behavior that is defined in other classes. The class whose members are inherited is called the base class, and the class that inherits those members is called the derived class. A derived class can have only one direct base class. However, inheritance is transitive. If ClassC is derived from ClassB, and ClassB is derived from ClassA, ClassC inherits the members declared in ClassB and ClassA." 
 
-In C#, a child class can inherit from a parent / base class.  The syntax uses a colon :  in the class definition to indicate a class, ``MyChildClass`` is inheriting from a ``ParentClass``.  In C#, the same syntax is used to indicate that a class is implementing an Interface.  The convention is that all interface names should begin with the letter `I`.  A child class can only inherit from a single base class.  A C# class can implement any number of interfaces. 
+In C#, a derived (child) class can inherit from a base (parent) class.  The C# syntax uses a colon :  in the class definition to indicate a class, ``class MyChildClass: Parent`` where ``MyChildClass`` inherits from a ``ParentClass``.  In C#, the same colon syntax, ``:`` is used to indicate that a class is implementing an Interface.  The convention is that all interface names should begin with the letter `I`.  A child class can only inherit from a single base class.  A C# class can implement any number of interfaces and these are a comma separated list, interface example syntax: ``class MyClass: IEnumerable, IEnumerator``. 
 
 ``class MyChildClass: ParentClass {  // class definition code  } ``  
 
