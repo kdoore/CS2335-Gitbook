@@ -4,6 +4,7 @@
 * [Unity Game Engine](chapter1.md)
 * [Unity Editor](unity_editor.md)
 * [MonoDevelop](monodevelop.md)
+* MonoBehaviour
 * [Create Prefab GameObjects](create_prefab_gameobjects.md)
 * [C# Language](c_language.md)
    * [Variables](variables.md)
@@ -30,5 +31,4 @@
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Glossary](GLOSSARY.md)
-* MonoBehaviour
 
