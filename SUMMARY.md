@@ -13,7 +13,7 @@
        * [C# Properties](c_properties.md)
        * [Access Modifiers](access_modifiers.md)
    * [Dictionary](dictionary.md)
-   * Inheritance
+   * [Inheritance](inheritance.md)
 * [Number Game](number_game.md)
 * [State Controlled UI-Text](state_controlled_ui-text.md)
 * [Zombie Objects](zombie_objects.md)
