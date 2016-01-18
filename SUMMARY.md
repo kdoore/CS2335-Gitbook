@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Unity Game Engine](chapter1.md)
 * [Unity Editor](unity_editor.md)
+* Unity Engine - Event Functions
 * [MonoDevelop](monodevelop.md)
 * [MonoBehaviour](monobehaviour.md)
 * [Create Prefab GameObjects](create_prefab_gameobjects.md)
@@ -32,5 +33,4 @@
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Glossary](GLOSSARY.md)
-* Unity Engine - Event Functions
 
