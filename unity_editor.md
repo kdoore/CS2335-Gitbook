@@ -1,8 +1,6 @@
 Unity Editor
 ============
 
-
-
 Most of the code that we write for this course will end up being attached to gameObjects within the Unity Editor.  
 
 ###Sample Code:  
