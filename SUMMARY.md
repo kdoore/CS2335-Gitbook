@@ -2,10 +2,10 @@
 
 * [Introduction](README.md)
 * [C# Language](c_language.md)
+   * [Variables](variables.md)
    * [Encapsulation](encapsulation.md)
        * [C# Properties](c_properties.md)
        * [Access Modifiers](access_modifiers.md)
-   * [Variables](variables.md)
    * [Enumerations](enumerations.md)
    * [Dictionary](dictionary.md)
    * [Inheritance](inheritance.md)
