@@ -15,7 +15,6 @@ public class myClass : BaseClass{
 When we want to create a C# script to add or control behaviors of a game object, there are many different ways that we can create a C# script. There are also several ways to have our script attached to a Unity GameObject so it can be instantiated and executed as part of our game's code execution.
 
 
-
 <quiz>
  <question>
         <p>What is MonoBehavior?</p>
