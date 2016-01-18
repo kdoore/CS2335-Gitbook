@@ -12,7 +12,11 @@ We will write the program so that the computer makes the minimum number of guess
 
 For an initial range of 64, the computer will make no more than 7 guesses since 2 to the 6th power is 64. 
 
-We walked through the logical design of the project code in class by first creating a logic flow diagram.  Then we implemented code in C# in monoDevelop and we attached the code to the main-camera in the default scene.  
+We walked through the logical design of the project code in class by first creating a logic flow diagram, a simplified version is shown below.  
+
+![](Cs2335 - 2.png)
+
+Based on the flow diagram, we implemented code in C# in monoDevelop and we attached the code to the main-camera in the default scene.  
 
 ```
 using System.Collections;
