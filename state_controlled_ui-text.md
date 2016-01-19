@@ -60,7 +60,7 @@ using System.Collections;
 
 public class StateController : MonoBehaviour {
 
-	private enum gameStates{ initialize, start, game, win, lose,end };
+	private enum gameStates{ initialize, start, game, win, lose, end };
 	gameStates activeState;
 	
 	public Text stateText;
