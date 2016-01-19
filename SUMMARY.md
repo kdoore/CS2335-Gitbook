@@ -14,6 +14,7 @@
 * [MonoDevelop](monodevelop.md)
 * [MonoBehaviour](monobehaviour.md)
 * [Number Game](number_game.md)
+* [UI GameObjects](ui_gameobjects.md)
 * [Create Prefab GameObjects](create_prefab_gameobjects.md)
 * [State Controlled UI-Text](state_controlled_ui-text.md)
 * [Zombie Objects](zombie_objects.md)
@@ -32,5 +33,4 @@
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Glossary](GLOSSARY.md)
-* [UI GameObjects](ui_gameobjects.md)
 
