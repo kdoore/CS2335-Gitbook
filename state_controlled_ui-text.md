@@ -1,6 +1,6 @@
 #State-Controlled UI GameObjects
 
-For the Number game, we want to create a graphical version of the game where the prompts are displayed on the game screen.  We will work in 2D mode, and we need to use a UI game object to display  the text.  This will involve a few steps in order to allow our game script file to modify the UI-Text elements during the game. We'll create a simple example of UI-Text script called StateController.cs, once we understand how to create UI-Text and control it with code for this simplified example, we can integrate these changes into the NumberGame.cs C# script.  [See Screenshot Animations Below](https://kdoore.gitbooks.io/cs-2335/content/state_controlled_ui-text.html#animations)
+For the Number game, we want to create a graphical version of the game where the prompts are displayed on the game screen.  We will work in 2D mode, and we need to use a UI game object to display  the text.  This will involve a few steps in order to allow our game script file to modify the UI-Text elements during the game. We'll create a simple example of UI-Text script called StateController.cs, once we understand how to create UI-Text and control it with code for this simplified example, we can integrate these changes into the NumberGame.cs C# script.  [See Screenshot Animation 1 Below](https://kdoore.gitbooks.io/cs-2335/content/state_controlled_ui-text.html#animations)
 
     -  GameObject -> Add a UI -> Text gameObject to the scene
     -  This creates a Canvas gameObject in the Hierarchy Panel
@@ -34,7 +34,8 @@ public class NumberGame : MonoBehaviour {
 	
 ````
 
-Now, we can go back into Unity, select the canvas object, make sure we've attached our script to the canvas object, then we need to connect our TextUI elements with the public instance variables from our script component. We can do this by either dragging the UI-Text object from the hierarchy panel to the script component, or we can select the text element in the script component, select the dot to the right of the text field and it will open a pop-up of all possible game-objects that we can select to connect to this script variable element.
+Next, go back into Unity, select the Canvas object in the Hierarchy Panel, (make sure we've attached our script to the Canvas GameObject), then we need to connect our TextUI elements with the public instance variables from our script component. We can do this by either dragging the UI-Text object from the hierarchy panel to the script component text-box, or we can select the text element in the script component, select the dot to the right of the text field and it will open a pop-up of all possible game-objects that we can select to connect to this script variable element.   [See Screenshot Animation 2 Below](https://kdoore.gitbooks.io/cs-2335/content/state_controlled_ui-text.html#animations)
+
 
 ###Connecting C# Text elements to Unity UI-Text.
 In the NumberGame.cs file, we need to write code to modify the UI text elements.  We've declared the public Text elements as class instance variables.  Now in the code we want to modify the Text.
@@ -49,7 +50,7 @@ void Start(){
 
 Here is the code for the StateController project that we discussed in class. 
 
-It is important to realized that in the if-statement blocks, where we are checking to see if any valid input keys have been entered, these statement blocks are true only for 1-brief instant of time, so we can't put any code in these statement blocks that we expect to see displayed on the screen. We use these statement blocks to change the activeState, not for trying to display any text since the keypress event is an instantaneous trigger.
+It is important to realized that in the if-statement blocks, where we are checking to see if any valid input keys have been entered, these statement blocks are true only for 1-brief instant of time, so we can't put any code in these statement blocks that we expect to see displayed on the screen. We use these statement blocks to change the activeState, not to display any text since the keypress event is an instantaneous trigger.
  
 
 ```
@@ -58,10 +59,14 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class StateController : MonoBehaviour {
-	public Text stateText;
-	public Text instructText; //put instruction
-	private enum gameStates{ initialize, start, game, win, lose,end};
+
+	private enum gameStates{ initialize, start, game, win, lose,end };
 	gameStates activeState;
+	
+	public Text stateText;
+	public Text instructText; //put instruction text here
+	
+	
 	// Use this for initialization
 	void Start () {
 	      stateText.text="Hello";  //initialize text
