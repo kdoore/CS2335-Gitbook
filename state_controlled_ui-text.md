@@ -74,7 +74,6 @@ public class StateController : MonoBehaviour {
 	public Text stateText;    // UI text to display current gameState
 	public Text instructText; //put instruction text here
 	
-	
 	// Use this for initialization
 	void Start () {
 	      stateText.text="Hello";  //initialize text
@@ -140,4 +139,5 @@ public class StateController : MonoBehaviour {
 ![](jfawLfwFA0.gif)
 
 
-
+###Questions
+1.  How can we 
