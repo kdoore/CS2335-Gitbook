@@ -49,6 +49,10 @@ void Start(){
 
 In C#, we can use Enumeration-Types to create custom data-types which function as named constants.  We use the C# keyword enum to declare our custom data-type, then we must initialize the values using a comma separated list of values.  
 We'll define an enum to provide a set of gameStates to control our game's execution logic.
+```java
+    enum gameStates{ initialize, start, game, win, lose, end };
+	gameStates activeState = gameStates.start;  //create and initialize a variable using our custom Enumeration-type
+```
 
 ###StateController.cs 
 
@@ -64,10 +68,10 @@ using System.Collections;
 
 public class StateController : MonoBehaviour {
 
-	private enum gameStates{ initialize, start, game, win, lose, end };
+	enum gameStates{ initialize, start, game, win, lose, end };
 	gameStates activeState;
 	
-	public Text stateText;
+	public Text stateText;    // UI text to display current gameState
 	public Text instructText; //put instruction text here
 	
 	
