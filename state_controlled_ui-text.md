@@ -45,6 +45,10 @@ We can initialize the text elements in Start()
 void Start(){
     gameText.text="Want to play a game? Y or N \n" ;
 ````
+###Enumeration: GameStates
+
+In C#, we can use Enumeration-Types to create custom data-types which function as named constants.  We use the C# keyword enum to declare our custom data-type, then we must initialize the values using a comma separated list of values.  
+We'll define an enum to provide a set of gameStates to control our game's execution logic.
 
 ###StateController.cs 
 
