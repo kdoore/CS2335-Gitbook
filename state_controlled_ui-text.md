@@ -11,13 +11,13 @@ For the Number game, we want to create a graphical version of the game where the
     -  Connect script text and UI-text elements
 
 ###Canvas
-When we add a UI Text element to our scene, it also creates a Canvas and an Event Object in the scene.  We won't use the Event object in this project, but we will use the canvas object.  The canvas object is the container for any UI-Text objects in our scene, and our Text object's transform object is defined relative to the canvas since the Text is a child of canvas in the hierarchy panel. 
+When we add a UI Text element to our scene, it also creates a *Canvas GameObject* and an *EventSystem GameObject* in the scene.  We won't use the EventSystem object in this project, but we will use the Canvas object.  The Canvas object is the container for any UI-Text objects in our scene, and our Text object's transform object is defined relative to the canvas since the Text is a child of Canvas in the Hierarchy panel. 
 
 For this project, let's attach the stateController.cs script file to the canvas object (instead of the text or main camera game objects) since we'll be controlling several Text-UI objects which are all contained in the canvas game object from the script, this isn't necessary but it is logical that we'll want to attach scripts to objects we're controlling.
 
 ###Code for UI-Text Integration
 
-In our stateController.cs script, we need to add a new library so that we can access the UI library functions and we also need to create a Text variable for each UI-Text object that will be linked to the UI Text in the game scene so that it can modify the properties of the UI-Text gameObject. We need to make sure our Text variables are declared as public instance variables so that they will show up in the script-component section of the inspector for the object that we've attached our script to.  
+In our stateController.cs script, we need to add a new UnityEngine code library so that we can access the UI library functions. We also need to create a script Text variable for each UI-Text GameObject that will be linked to the UI Text in the game scene so that it can modify the properties of the UI-Text GameObject. We need to make sure our Text variables are declared as public instance variables so that they will show up in the script-component section of the inspector panel for the object that we've attached our script to.  
 
 ````java
 using UnityEngine;
