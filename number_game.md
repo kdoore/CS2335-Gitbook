@@ -16,7 +16,8 @@ We walked through the logical design of the project code in class by first creat
 
 ![](Cs2335 - 2.png)
 
-Based on the flow diagram, we implemented code in C# in monoDevelop and we attached the code to the main-camera in the default scene.  
+Based on the flow diagram, we  can implemented a basic C# class: NumberGame in monoDevelop and then attach the code to the main-camera in the default scene to create a console version of the game.  
+
 
 
 ```
@@ -67,13 +68,16 @@ public class NumberGame : MonoBehaviour {
 	}
 }
 ```
+###Console Panel Settings:
+In the Unity Console Panel, make sure to select settings: Collapse, Clear on Play, and Error Pause
+
+![](Screenshot 2016-01-18 19.19.26.png)
 
 ###Questions
-Can you extend this program so that:
-- Use User-Interface Text GameObjects for player interaction?
-- Implement a counter variable to insure the computer doesn't always win the game.
-- Check for `plus-one` type errors: does our method insure that the endpoints of the range can be selected as valid selections?  
-- Is integer division negatively impacting our program?  If our range of numbers is 1 to 4, and we select number 4, what is the progression of values for: min, max, guess, and input
+Can you extend this program:
+- Use User-Interface Text GameObjects for player prompts?
+- Implement count and maxCount variables to insure the computer doesn't always win the game.
+- Check for `plus-one` type errors: does our method insure that the endpoints of the range can be selected as valid selections?  Is integer division adversely impacting our program?  If our range of numbers is 1 to 4, and we select number 4, what is the progression of values for: min, max, guess, and input
     
 | Min | Max | Guess | Input |
 | -- | -- |
