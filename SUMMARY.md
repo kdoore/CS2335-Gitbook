@@ -32,5 +32,5 @@
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Glossary](GLOSSARY.md)
-* UI GameObjects
+* [UI GameObjects](ui_gameobjects.md)
 
