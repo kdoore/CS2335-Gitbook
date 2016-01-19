@@ -140,4 +140,4 @@ public class StateController : MonoBehaviour {
 
 
 ###Questions
-1.  How can we 
+1.  How can we add a counter to limit the number of computer attempts so that the player can also win the game?
