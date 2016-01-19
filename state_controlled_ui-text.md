@@ -1,9 +1,10 @@
 #State-Controlled UI GameObjects
 
-For the Number game, we want to create a graphical version of the game where the prompts are displayed on the game screen.  We will work in 2D mode, and we need to use a UI game object to display  the text.  This will involve a few steps in order to allow our game script file to modify the UI-Text elements during the game. We'll create a simple example of UI-Text script called StateController.cs, once we understand how to create UI-Text and control it with code for this simplified example, we can integrate these changes into the NumberGame.cs C# script.  See Animations below:
+For the Number game, we want to create a graphical version of the game where the prompts are displayed on the game screen.  We will work in 2D mode, and we need to use a UI game object to display  the text.  This will involve a few steps in order to allow our game script file to modify the UI-Text elements during the game. We'll create a simple example of UI-Text script called StateController.cs, once we understand how to create UI-Text and control it with code for this simplified example, we can integrate these changes into the NumberGame.cs C# script.
 
-    -  Add a UI -> Text gameObject to the scene
+    -  GameObject -> Add a UI -> Text gameObject to the scene
     -  This creates a Canvas gameObject in the Hierarchy Panel
+    -  This creates an EventSystem in the Hierarchy Panel
     -  Set the color, position, fontSize of the Text in the inspector, make sure to scale the text area so the text is visible on the screen
     -  Set the initial value of the text in the inspector
     -  Write Code in the StateController.cs file to programatically control the gameObject text
