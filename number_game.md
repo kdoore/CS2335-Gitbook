@@ -7,7 +7,9 @@ For the first iteration of this game, we'll design the game to run in the consol
 ###Binary Search
 We will write the program so that the computer makes the minimum number of guesses.  First, it is important to note that when selecting a number that falls within a specific range of numbers, we are talking about integer numbers and we are considering that they have their natural ordering: `we are searching a sorted list of values`.  At each step, the computer makes a guess that splits the number range in half, by picking the value at the midpoint of the range. This guessed value corresponds to the  (max + min) / 2.  If the guessed, midpoint value does not match the player's selected number, then we ask the player whether their number is higher or lower than the current guessed value. Then we need to reset the endpoints of the search range so that the endpoints match this new, smaller range. If the user's number is higher than the computer's guess, then we need to set the new minimum of the new range to the current guessed value `min = guess`.  So, at each step in binary search, the number of possible values is divided in half, therefore, the maximum number of tries that the computer must make is   log - base 2 of the initial range plus one: $$log_2(n)+1$$.  
 
-    `"Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky…" — [Donald Knuth](https://en.wikipedia.org/wiki/Binary_search_algorithm#Number_guessing_game)`
+```
+    "Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky…" — [Donald Knuth](https://en.wikipedia.org/wiki/Binary_search_algorithm#Number_guessing_game)
+```
 
 
 For an initial range of 64, the computer will make no more than 7 guesses since 2 to the 6th power is 64. 
