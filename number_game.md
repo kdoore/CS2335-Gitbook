@@ -21,55 +21,64 @@ We walked through the logical design of the project code in class by first creat
 
 Based on the flow diagram, we  can implemented a basic C# class: NumberGame in monoDevelop and then attach the code to the main-camera in the default scene to create a console version of the game.  
 
+Code Updated: Jan 19, 2016
 
-
-```
+```java
 using UnityEngine;
 using System.Collections;
 
-public class NumberGame : MonoBehaviour {
-		int min, max, guess;
-		
+public class NumberGame1 : MonoBehaviour {
+
+	public int min, max, guess;
+
 	// Use this for initialization
 	void Start () {
-		StartGame();
-		}
+		min = 0;
+		max = 64;
+		guess = (min + max) / 2;
+		Debug.Log("Do you want to play a Game, if so enter Y, else enter N");
 	
+	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.UpArrow)){  //guess is too low
-			min=guess;
-			NextGuess();
+		if (Input.GetKeyDown (KeyCode.Y)) {
+			Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
+
+		} 
+		if (Input.GetKeyDown (KeyCode.N)) {
+			Debug.Log("No game today");
 		}
-		else if(Input.GetKeyDown(KeyCode.DownArrow)){  //guess is to high
-			max=guess;
-			NextGuess();
+		if (Input.GetKeyDown(KeyCode.Return)){
+			Debug.Log("Is your number " + guess + " If it matches, press C");
+			Debug.Log("Is your number higher, the press up arrow" );
+			Debug.Log("Is your number lower, the press down arrow" );
 		}
-		else if(Input.GetKeyDown(KeyCode.Return)){ //computer wins!
-			print("I won, I'm brilliant");
-			StartGame();  //restart game
+
+		if (Input.GetKeyDown (KeyCode.UpArrow)) {
+			min = guess;
+			NextGuess ();
 		}
-			 
-	}
-	
-	void StartGame(){  //initialization of values and game prompts
-		min=0;
-		max=100;
-		guess=(min+max)/2;  ///initial guess - binary search algorithm
-		print("Do you want to play a game?");
-		print("Think of a number between " + min + " and " + max);
-		print("Is the number higher or lower than " + guess + " ?");
-		print("'up-arrow' for higher, 'down-arrow' for lower, 'enter' for equal");
-	}
-	
-	//Calculate next guess and generate next game prompts
+		if (Input.GetKeyDown (KeyCode.DownArrow)) {
+			max = guess;
+			NextGuess ();
+		}
+		if (Input.GetKeyDown (KeyCode.C)) {  //correct value
+			Debug.Log("The computer wins");
+		}
+
+	}  //end Update
+
 	void NextGuess(){
-		guess=(min+max)/2;
-		print("Is the number higher or lower than " + guess + " ?");
-		print("'up-arrow' for higher, 'down-arrow' for lower, 'enter' for equal");
+		guess = (min + max) / 2;
+		Debug.Log("Is your number " + guess + " If it matches, press C");
+		Debug.Log("Is your number higher, the press up arrow" );
+		Debug.Log("Is your number lower, the press down arrow" );
 	}
-}
+
+
+}  // end of class
+
 ```
 ###Console Panel Settings:
 In the Unity Console Panel, make sure to select settings: Collapse, Clear on Play, and Error Pause
