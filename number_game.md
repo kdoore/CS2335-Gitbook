@@ -81,9 +81,9 @@ public class NumberGame1 : MonoBehaviour {
 
 ```
 ###Console Panel Settings:
-In the Unity Console Panel, make sure to select settings: Collapse, Clear on Play, and Error Pause
+In the Unity Console Panel, make sure to select tab settings: Collapse, Clear on Play.
 
-![](Screenshot 2016-01-18 19.19.26.png)
+![](Screenshot 2016-01-19 14.40.28.png)
 
 ###Questions
 Can you extend this program:
