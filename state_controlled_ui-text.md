@@ -78,7 +78,7 @@ public enum GameState { Initialize, Start, GamePlay, Win, Lose, End}
 
 public class NumberGame1 : MonoBehaviour {
 
-	public Text promptText;   //for controlling UI-Text GameObject, Text Component
+	public Text gameText;   //for controlling UI-Text GameObject, Text Component
 
 	public GameState activeState;  //create a variable of GameState-type
 	public int min, max, guess; 
@@ -90,7 +90,7 @@ public class NumberGame1 : MonoBehaviour {
 		guess = (min + max) / 2;
 		activeState = GameState.Initialize;
 		Debug.Log("Do you want to play a Game, if so enter Y, else enter N");
-		promptText.text = "Play?";  //test to see if UI-text is working
+		gameText.text = "Play?";  //test to see if UI-text is working
 	}
 	
 	// Update is called once per frame
