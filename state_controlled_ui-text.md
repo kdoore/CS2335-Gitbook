@@ -100,17 +100,11 @@ public class NumberGame1 : MonoBehaviour {
 			
 			if (Input.GetKeyDown (KeyCode.Y)) {
 				Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
-
-				Debug.Log ("Changing: ActiveState " + activeState);
 				activeState = GameState.Start;
-				Debug.Log ("Changed:  ActiveState " + activeState);
 			} 
 			if (Input.GetKeyDown (KeyCode.N)) {
 				Debug.Log ("No game today");
-
-				Debug.Log ("Changing: ActiveState " + activeState);
 				activeState = GameState.End;
-				Debug.Log ("Changed:  ActiveState " + activeState);
 			}
 
 		}
@@ -121,10 +115,7 @@ public class NumberGame1 : MonoBehaviour {
 				Debug.Log ("Is your number " + guess + " If it matches, press Return");
 				Debug.Log ("Is your number higher, the press up arrow");
 				Debug.Log ("Is your number lower, the press down arrow");
-
-				Debug.Log ("Changing: ActiveState " + activeState);
-				activeState = GameState.GamePlay;
-				Debug.Log ("Changed:  ActiveState " + activeState);
+                activeState = GameState.GamePlay;
 			}
 		}
 
@@ -132,20 +123,16 @@ public class NumberGame1 : MonoBehaviour {
 			
 			if (Input.GetKeyDown (KeyCode.UpArrow)) {
 				min = guess;
-				Debug.Log ("NoChange: ActiveState " + activeState);
 				NextGuess ();  //inside self loop
 			}
 			if (Input.GetKeyDown (KeyCode.DownArrow)) {
 				max = guess;
-				Debug.Log ("NoChange: ActiveState " + activeState);
 				NextGuess ();  //inside self loop
 			}
-			if (Input.GetKeyDown (KeyCode.Return)) {  //correct value
+			if (Input.GetKeyDown (KeyCode.Return)) {      //correct value
 				Debug.Log ("The computer wins");
-
-				Debug.Log ("Changing: ActiveState " + activeState);
-				activeState = GameState.Win;
-				Debug.Log ("Changed:  ActiveState " + activeState);
+                activeState = GameState.Win;
+			
 			}
 		}
 		 //need win and lose state logic and need logic to restart the game and reinitialize values
