@@ -2,13 +2,16 @@
 
 For the Number game, we want to create a graphical version of the game where the prompts are displayed on the game screen.  We will work in 2D mode, and we need to use a UI game object to display  the text.  This will involve a few steps in order to allow our game script file to modify the UI-Text elements during the game. We'll create a simple example of UI-Text script called StateController.cs, once we understand how to create UI-Text and control it with code for this simplified example, we can integrate these changes into the NumberGame.cs C# script.  [See Screenshot Animation 1 Below](https://kdoore.gitbooks.io/cs-2335/content/state_controlled_ui-text.html#animations)
 
-    -  GameObject -> Add a UI -> Text gameObject to the scene
+-  GameObject -> Add a UI -> Text gameObject to the scene
     -  This creates a Canvas gameObject in the Hierarchy Panel
     -  This creates an EventSystem in the Hierarchy Panel
+    -  Double-click the text element to find it within the scene.
+    - Give it a unique name in the inspector
     -  Set the color, position, fontSize of the Text in the inspector, make sure to scale the text area so the text is visible on the screen
-    -  Set the initial value of the text in the inspector
-    -  Write Code in the StateController.cs file to programatically control the gameObject text
-    -  Connect script text and UI-text elements
+    -  Set the initial text value of the text component in the inspector
+    -  In NumberGame.cs, add a library reference: using UnityEngine.UI at the top of your code
+    -  Write code in the NumberGame.cs file to declare a public Text variable, initialize and modify in the script file.
+    -  Connect script-component public text-variable and UI-text elements in the inspector on the gameObject that has the numberGame.cs script component attached.
 
 ###Canvas and Event System 
 When we add a UI Text element to our scene, it also creates a *Canvas GameObject* and an *EventSystem GameObject* in the scene.  We won't use the EventSystem object in this phase of the project, but it's important to realize this is required for any user-interaction with UI elements, when copying UI elements between scenes, always make sure the new scene has an EventSystem GameObject in the Hierarchy - this is a difficult error to debug.  The Canvas object is the container for any UI-Text objects in our scene, and our Text object's transform object is defined relative to the canvas since the Text is a child of Canvas in the Hierarchy panel. Adding additional UI elements to the scene does cause additional Canvas or EventSystem gameObjects to be added to the scene. 
