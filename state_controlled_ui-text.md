@@ -53,10 +53,14 @@ void Start(){
 In C#, we can use Enumeration-Types to create custom data-types which function as named constants.  We use the C# keyword enum to declare our custom data-type, then we must initialize the values using a comma separated list of values.  
 We'll define an enum to provide a set of gameStates to control our game's execution logic.
 ```java
-    enum gameStates{ initialize, start, game, win, lose, end };
-	gameStates activeState = gameStates.start;  //create and initialize a variable using our custom Enumeration-type
+    public enum GameState { Initialize, Start, GamePlay, Win, Lose, End}
+	public gameStates activeState;  //create a variable using our custom Enumeration-type
+	
+	//initialize in Start() 
+	activeState = GameState.Initialize;  //dot notation allows access of enum values
 ```
 
+![](Screenshot 2016-01-21 14.01.51.png)
 ###NumberGame.cs 
 
 Here is the code for the State-controlled version of the NumberGame project. 
@@ -66,70 +70,99 @@ It is important to realize that in the if-statement blocks, where we are checkin
 
 ```
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI;  //added for UI gameObjects and UI components
 using System.Collections;
 
-public class StateController : MonoBehaviour {
+//globally accessable enum which is a custom data-type
+public enum GameState { Initialize, Start, GamePlay, Win, Lose, End}
 
-	enum gameStates{ initialize, start, game, win, lose, end };
-	gameStates activeState;
-	
-	public Text stateText;    // UI text to display current gameState
-	public Text instructText; //put instruction text here
-	
+public class NumberGame1 : MonoBehaviour {
+
+	public Text promptText;   //for controlling UI-Text GameObject, Text Component
+
+	public GameState activeState;  //create a variable of GameState-type
+	public int min, max, guess; 
+
 	// Use this for initialization
 	void Start () {
-	      stateText.text="Hello";  //initialize text
-	      activeState=gameStates.initialize;  //initialize active state
-	      Debug.Log ("gameStates.start " +  activeState);
+		min = 0;
+		max = 64;
+		guess = (min + max) / 2;
+		activeState = GameState.Initialize;
+		Debug.Log("Do you want to play a Game, if so enter Y, else enter N");
+		promptText.text = "Play?";  //test to see if UI-text is working
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
-		switch(activeState){
-		case gameStates.initialize: {
-			stateText.text=activeState.ToString();
-			instructText.text="Press G to begin game or Q to quit";
-			if(Input.GetKeyDown(KeyCode.G)){
-				activeState=gameStates.start;
+
+		if (activeState == GameState.Initialize) {
+			
+			if (Input.GetKeyDown (KeyCode.Y)) {
+				Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
+
+				Debug.Log ("Changing: ActiveState " + activeState);
+				activeState = GameState.Start;
+				Debug.Log ("Changed:  ActiveState " + activeState);
 			} 
-			else if( Input.GetKeyDown (KeyCode.Q)){
-				activeState=gameStates.end;
+			if (Input.GetKeyDown (KeyCode.N)) {
+				Debug.Log ("No game today");
+
+				Debug.Log ("Changing: ActiveState " + activeState);
+				activeState = GameState.End;
+				Debug.Log ("Changed:  ActiveState " + activeState);
 			}
-			break;
+
 		}
-		case gameStates.start: {
-			stateText.text=activeState.ToString();
-			instructText.text="Pick a number, press Enter when ready,";
-			if(Input.GetKeyDown(KeyCode.Return)){
-				activeState=gameStates.game;  //change state
-			} 
-			break;
+
+		else if (activeState == GameState.Start) {
+			
+			if (Input.GetKeyDown (KeyCode.Return)) {
+				Debug.Log ("Is your number " + guess + " If it matches, press Return");
+				Debug.Log ("Is your number higher, the press up arrow");
+				Debug.Log ("Is your number lower, the press down arrow");
+
+				Debug.Log ("Changing: ActiveState " + activeState);
+				activeState = GameState.GamePlay;
+				Debug.Log ("Changed:  ActiveState " + activeState);
+			}
 		}
-		case gameStates.game: {
-			stateText.text=activeState.ToString();
-			instructText.text="Welcome to the game, press W to win";
-			if(Input.GetKeyDown(KeyCode.W)){
-				activeState=gameStates.win;  //change state
-			} 
-			break;
+
+		else if (activeState == GameState.GamePlay) {
+			
+			if (Input.GetKeyDown (KeyCode.UpArrow)) {
+				min = guess;
+				Debug.Log ("NoChange: ActiveState " + activeState);
+				NextGuess ();  //inside self loop
+			}
+			if (Input.GetKeyDown (KeyCode.DownArrow)) {
+				max = guess;
+				Debug.Log ("NoChange: ActiveState " + activeState);
+				NextGuess ();  //inside self loop
+			}
+			if (Input.GetKeyDown (KeyCode.Return)) {  //correct value
+				Debug.Log ("The computer wins");
+
+				Debug.Log ("Changing: ActiveState " + activeState);
+				activeState = GameState.Win;
+				Debug.Log ("Changed:  ActiveState " + activeState);
+			}
 		}
-		case gameStates.win: {
-			stateText.text=activeState.ToString();
-			instructText.text="You won";
-			break;
-		}
-		default:
-		{
-			Debug.Log("default case");
-			break;
-		}
-	}	//end switch
-	
-	
+		 //need win and lose state logic and need logic to restart the game and reinitialize values
+		 
+	}  //end Update
+
+	void NextGuess(){
+		guess = (min + max) / 2;
+		Debug.Log("Is your number " + guess + " If it matches, press Enter");
+		Debug.Log("Is your number higher, the press up arrow" );
+		Debug.Log("Is your number lower, the press down arrow" );
 	}
-}
+
+
+}  // end of class
+
+
 ```
 
 ### Animations 
