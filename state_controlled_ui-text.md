@@ -57,11 +57,11 @@ We'll define an enum to provide a set of gameStates to control our game's execut
 	gameStates activeState = gameStates.start;  //create and initialize a variable using our custom Enumeration-type
 ```
 
-###StateController.cs 
+###NumberGame.cs 
 
-Here is the code for the StateController project that we discussed in class. 
+Here is the code for the State-controlled version of the NumberGame project. 
 
-It is important to realized that in the if-statement blocks, where we are checking to see if any valid input keys have been entered, these statement blocks are true only for 1-brief instant of time, so we can't put any code in these statement blocks that we expect to see displayed on the screen. We use these statement blocks to change the activeState, not to display any text since the keypress event is an instantaneous trigger.
+It is important to realize that in the if-statement blocks, where we are checking to see if any valid input keys have been entered, these if-statement blocks are executed only for 1-brief instant of time, so we should not put code in these statement blocks that we expect to see displayed on the screen. We use these statement blocks to change the activeState, not to display any text since the keypress event is an instantaneous trigger.  
  
 
 ```
