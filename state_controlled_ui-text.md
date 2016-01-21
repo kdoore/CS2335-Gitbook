@@ -50,8 +50,8 @@ void Start(){
 ````
 ###Enumeration: GameStates
 
-In C#, we can use Enumeration-Types to create custom data-types which function as named constants.  We use the C# keyword enum to declare our custom data-type, then we must initialize the values using a comma separated list of values.  
-We'll define an enum to provide a set of gameStates to control our game's execution logic.
+In C#, we can use Enumeration-Types to create custom data-types which function as named constants.  We use the C# keyword enum to declare our custom data-type, then we must initialize the values using a comma separated list of values.  We'll define an enum to provide a set of gameStates to control our game's execution logic.  We can declare the enum outside any class code, it should be public, then it will be accessible in any code files in our project. If we make the activeState publicly accessible, the we can see the activeState value change while our game is executing, the enum values show up as a drop-down list, as shown in the image below.
+
 ```java
     public enum GameState { Initialize, Start, GamePlay, Win, Lose, End}
 	public gameStates activeState;  //create a variable using our custom Enumeration-type
