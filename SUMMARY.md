@@ -18,7 +18,7 @@
 * [Number Game: State-Controlled](state_controlled_number_game.md)
 * [Number Game: UI-Text](state_controlled_ui-text.md)
 * [Finite State Machine](finite_state_machine.md)
-* [NumberGame: Event-Driven ](event-driven_numbergame.md)
+* [NumberGame: Event-Driven](event-driven_numbergame.md)
 * [UI GameObjects](ui_gameobjects.md)
 * [Create Prefab GameObjects](create_prefab_gameobjects.md)
 * [Zombie Objects](zombie_objects.md)
@@ -37,4 +37,5 @@
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Glossary](GLOSSARY.md)
+* Diagrams
 
