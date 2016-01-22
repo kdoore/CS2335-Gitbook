@@ -1,7 +1,9 @@
 # State Controlled Number Game
 
 ###Game States:
-In the previous section, we created our first version of our number game, however, we ran into some problems when we tried to use the same keyboard input value, like 'enter' for 2 different sections of the game logic.  In our flow-chart, 
+In the previous section, we created our first version of our number game, however, we ran into some problems when we tried to use the same keyboard input value, like 'enter' for 2 different sections of the game logic. 
+
+![](numberGameFSM.png)
 
 ###Enumeration: GameStates
 
