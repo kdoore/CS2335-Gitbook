@@ -17,6 +17,8 @@ For an initial range of 64, the computer will make no more than 7 guesses since 
 
 We walked through the logical design of the project code in class by first creating a logic flow diagram, a simplified version is shown below.  In the diagram below we have identified the section of logic that must be repeated for each round of the game, that code will need to be executed using the Unity Update() function.
 
+###Flow-Chart: Game Logic
+
 ![](Cs2335 - 2.png)
 
 Based on the flow diagram, we  can implemented a basic C# class: NumberGame in monoDevelop and then attach the code to the main-camera in the default scene to create a console version of the game.  
