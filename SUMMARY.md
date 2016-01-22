@@ -17,7 +17,7 @@
 * [Number Game](number_game.md)
 * [Flow-Chart](flow-chart.md)
 * [State Controlled UI-Text](state_controlled_ui-text.md)
-   * [Finite State Machine](finite_state_machine.md)
+* [Finite State Machine](finite_state_machine.md)
 * [Event-Driven NumberGame](event-driven_numbergame.md)
 * [UI GameObjects](ui_gameobjects.md)
 * [Create Prefab GameObjects](create_prefab_gameobjects.md)
