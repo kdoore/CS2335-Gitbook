@@ -37,6 +37,6 @@
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Diagrams](diagrams.md)
-   * Flow-Chart Example
+   * [Flow-Chart Example](flow-chart_example.md)
 * [Glossary](GLOSSARY.md)
 
