@@ -1,6 +1,6 @@
 #Number Game: UI GameObjects
 
-For the Number game, we want to create a graphical version of the game where the prompts are displayed on the game screen.  We will work in 2D mode, and we need to use a UI game object to display  the text.  This will involve a few steps in order to allow our game script file to modify the UI-Text elements during the game. We'll modify NumberGame.cs to integrate the UI GameObjects.  [See Screenshot Animation 1 Below](https://kdoore.gitbooks.io/cs-2335/content/state_controlled_ui-text.html#animations)
+For the Number game, we want to create a graphical version of the game where the prompts are displayed on the game screen.  We will work in 2D mode, and we need to use a UI game object to display  the text.  This will involve a few steps in order to allow our game script file to modify the UI-Text elements during the game. We'll modify NumberGame.cs to integrate the UI GameObjects, the section below lists the steps we need to complete.  [See Screenshot Animation 1 Below](https://kdoore.gitbooks.io/cs-2335/content/state_controlled_ui-text.html#animations)
 
 -  GameObject -> Add a UI -> Text gameObject to the scene
     -  This creates a Canvas gameObject in the Hierarchy Panel
