@@ -62,6 +62,3 @@ In the animation below, we have 2 UI-Text GameObjects: StateText and GameText. W
 
 ![](jfawLfwFA0.gif)
 
-
-###Questions
-1.  How can we add a counter to limit the number of computer attempts so that the player can also win the game?
