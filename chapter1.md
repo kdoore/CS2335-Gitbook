@@ -6,8 +6,6 @@ In this course we'll learn to create programs in the [Unity Game Engine](https:/
 
 - **Visual Studio:**   Another option is to use the Microsoft Visual Studio Editor as your IDE.  It can also be integrated to work well with the Unity editor.
 
-###Unity Event Functions
-When writing code to create behaviors in Unity, it's important that we understand the software architecture for implementing custom code in the Unity Game Engine.
 
 Unity 
 Below is an example quiz, these will be integrated throughout the book to help reinforce your understanding of course concepts:
