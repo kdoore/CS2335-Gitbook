@@ -1,2 +1,3 @@
-![](numberGameFSM.png)# Finite State Machine
+# Finite State Machine
 
+![](numberGameFSM.png)
