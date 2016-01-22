@@ -19,7 +19,7 @@ We walked through the logical design of the project code in class by first creat
 
 ###Flow-Chart: Game Logic
 
-![](Cs2335 - 2.png)
+![](flowChart.png)
 
 Based on the flow diagram, we  can implemented a basic C# class: NumberGame in monoDevelop and then attach the code to the main-camera in the default scene to create a console version of the game.  
 
