@@ -88,7 +88,7 @@ In the Unity Console Panel, make sure to select tab settings: Collapse, Clear on
 ###Questions
 Can you extend this program:
 - Use User-Interface Text GameObjects for player prompts?
-- Implement count and maxCount variables to insure the computer doesn't always win the game.
+- How can we add a counter to limit the number of computer attempts so that the player can also win the game?
 - Check for `plus-one` type errors: does our method insure that the endpoints of the range can be selected as valid selections?  Is integer division adversely impacting our program?  If our range of numbers is 1 to 4, and we select number 4, what is the progression of values for: min, max, guess, and input
     
 | Min | Max | Guess | Input |
@@ -99,7 +99,4 @@ Can you extend this program:
 | 3 | 4 | ( 3 + 4 ) / 2 = 3 | Higher |
 
 As demonstrated above, the computer will never be able to select the value **4** as the correct guessed value.  How can we fix this?
-
-
-
 
