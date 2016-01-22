@@ -1,2 +1,2 @@
-# Finite State Machine
+![](numberGameFSM.png)# Finite State Machine
 
