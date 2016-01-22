@@ -25,6 +25,7 @@
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
 * [Zombies Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
 * [Zombie - Sorting](zombie_-_sorting.md)
+* State Controlled Number Game
 * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
 * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Project 2 - Source Code](project_2_-_source_code.md)
@@ -37,5 +38,4 @@
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Glossary](GLOSSARY.md)
-* State Controlled Number Game
 
