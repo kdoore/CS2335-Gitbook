@@ -36,7 +36,7 @@
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Diagrams](diagrams.md)
-   * [Flow-Chart Example](flow-chart_example.md)
+   * [Flow-Chart](flow-chart_example.md)
    * [Finite State Machine](finite_state_machine.md)
 * [Glossary](GLOSSARY.md)
 
