@@ -36,6 +36,6 @@
 * [Project 3 - Source Code](project_3_-_source_code.md)
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
-* [Glossary](GLOSSARY.md)
 * [Diagrams](diagrams.md)
+* [Glossary](GLOSSARY.md)
 
