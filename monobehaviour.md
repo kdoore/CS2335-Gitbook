@@ -4,9 +4,9 @@
 MonoBehaviour is a C# class that is part of the Unity Engine.  Almost all of the C# classes that we create will inherit from the MonoBehavior class.  This inheritance relationship means that our script component objects can be attached to Unity GameObjects and their Start() and Update() methods will be executed when our GameObject is part of the currently active Unity Scene. 
 
 ## C\# Inheritance
-The Syntax for indicating that a class inherits from a base class in C# is shown below, the colon : is used to indicate both inheritance from a base class and it also indicates that our custom class will be implementing an interface.  We'll discuss interfaces later in the course.  For now it's important to note that in C#, a class can only inherit from a single base class.  
+The Syntax for indicating that a class inherits from a base class in C# is shown below, the colon : is used to indicate both inheritance from a base class and it also indicates that our custom class will be implementing an interface.  We'll discuss interfaces later in the course.  For now it's important to note that in C#, a class can only inherit from a single base class, but a class can implement multiple interfaces.  
 ```
-public class myClass : BaseClass{
+public class myClass : BaseClass, ISomeInterface, ISomeOtherInterface{  //single level of inheritance, unlimited interface implementation, a comma separated list.
     
 }
 ```
