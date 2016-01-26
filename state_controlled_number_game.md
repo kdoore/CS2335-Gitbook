@@ -123,7 +123,7 @@ In our code above, within the if, else-if blocks of code, we are always checking
 ```
 	void Update () {
 		switch (activeState) {
-		case(GameState.Initialize): 
+		case GameState.Initialize: 
 			if (Input.GetKeyDown (KeyCode.Y)) {
 				Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
 				activeState = GameState.Start;
@@ -134,7 +134,7 @@ In our code above, within the if, else-if blocks of code, we are always checking
 			}
 			break;
 
-		case(GameState.Start): 
+		case GameState.Start: 
 			if (Input.GetKeyDown (KeyCode.Return)) {
 				Debug.Log ("Is your number " + guess + " If it matches, press Return");
 				Debug.Log ("Is your number higher, then press up arrow");
@@ -143,7 +143,7 @@ In our code above, within the if, else-if blocks of code, we are always checking
 			}
 			break;
 
-		case(GameState.GamePlay):
+		case GameState.GamePlay:
 			if (Input.GetKeyDown (KeyCode.UpArrow)) {
 				min = guess;
 				NextGuess ();  //inside self loop
