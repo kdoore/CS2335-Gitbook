@@ -52,4 +52,5 @@ else{
      
 ```
 
-The code above can be changed to use a switch structure because the test for each if-else condition is always testing against a single variable: testValue, and the comparision value is always a constant value, rather than an expression which must first be evaluated.  A switch statement can always be transformed into an if, if-else statement but the reverse is not always true, not every if, else-if statement can be converted to an equivlent switch statement.
+The code above can be changed to use a switch structure because the test for each if-else condition is always testing against a single variable: testValue, and the comparison value is always a constant value, rather than an expression which must first be evaluated.  A switch statement can always be transformed into an if, if-else statement but the reverse is not always true, not every if, else-if statement can be converted to an equivalent switch statement.
+
