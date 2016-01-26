@@ -6,7 +6,7 @@ In the previous section, we created our first version of our number game, howeve
 ###Finite State Machine
 
 The diagram below is a Finite State Machine (FSM). An FSM is a mathematical or computational model of a dynamic system or process where the state of the system can be described as being in only one discrete state, out of a possible fixed set of states, at any one time. 
-A FSM diagram, as shown below, consists of a set of circles, or nodes, which correspond to the allowable states of the system.  The arcs or arrows correspond to events that cause the system to transform, so that the system's active state is  
+A FSM diagram, as shown below, consists of a set of circles, or nodes, which correspond to the allowable states of the system.  The arrows, or arcs,  correspond to events that cause the system to transform to be in a different state.  When implementing An FSM we need to have a variable that can keep track of the current active state, and we need a well defined set of states, along with the transition rules that specify which events can occur in each state and what is the next state of the system if that event occurs.  The diagram below is an FSM diagram, it contains this specification of information: states, events, state-event-state transitions.  We can also use a table to represent the same information.   The initialize and end states have a special double-circle symbol indicating that they are special states: we start in the initialize state, once in the end state, there are no events that can transition the system into any other states.  We can use the FSM to design the code implementation for our state-controlled game.
 
 ![](numberGameFSM.png)
 
