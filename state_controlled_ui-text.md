@@ -44,10 +44,11 @@ Next, go back into Unity, select the Canvas object in the Hierarchy Panel, (make
 In the NumberGame.cs file, we need to write code to modify the UI text elements.  We've declared the public Text elements as class instance variables.  Now in the code we want to modify the Text.
 
 We can initialize the text elements in Start()
+
 ```
-void Start(){
+void Start(){  //initialize text values
     gameText.text="Want to play a game?" ;
-    numberText.text="";
+    numberText.text="";  //set text to empty string when not in use
     instructionText="Enter Y to play or N to quit";
 ````
 
