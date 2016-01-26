@@ -46,7 +46,9 @@ In the NumberGame.cs file, we need to write code to modify the UI text elements.
 We can initialize the text elements in Start()
 ```
 void Start(){
-    gameText.text="Want to play a game? Y or N \n" ;
+    gameText.text="Want to play a game?" ;
+    numberText.text="";
+    instructionText="Enter Y to play or N to quit";
 ````
 
 
