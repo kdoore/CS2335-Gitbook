@@ -1,7 +1,7 @@
 # State Controlled Number Game
 
 ###Game States:
-In the previous section, we created our first version of our number game, however, we ran into some problems when we tried to use the same keyboard input value, like 'enter' for 2 different sections of the game logic. 
+In the previous section, we created our first version of our number game, however, we ran into some problems when we tried to use the same keyboard input value, like 'enter' for 2 different sections of the game logic. In order to eliminate this problem, we will introduce a set of discrete game States.  We will use game states to add a higher level structure to our project.  Execution of our program will be controlled by a discrete or finite set of states, where our game can only be in one state at any one time. We will structure based on these game states, for each section of our game's execution code, before any code can be executed, the game state must be checked, and the only code that can be executed is code that is associated with the game's current active state.  We'll use a finite state machine to model our game's event logic, then we'll use C# enums to define our states, then we will use switch-case statement to structure our code to implement our state-based system.
 
 ![](numberGameFSM.png)
 
