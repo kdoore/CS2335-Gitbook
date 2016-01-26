@@ -33,7 +33,7 @@ In C#, we must add break statements to insure that the code does not fall throug
 
 In the code section above, we can see a match with case 2 label does not have any individual case statements to be executed, instead, the execution will progress to the statements inside case 3 since there is no break statement in case 2 to cause execution to jump out of the entire switch statement.  This structure of having several case labels grouped together that correspond to one set of statements to be executed (the case 3 statements), is very useful when checking character input, where case 'a': and case 'A' both correspond to a single block of code to be executed. 
 
-The code above is equivilant to the following if, else-if structure:
+The switch statement code above is equivalent to the following if, else-if structure:
 
 ```java
 if( testValue == 1){
