@@ -26,4 +26,4 @@ switch (testValue)
 } // end of switch
 ```
 
-In C#, we must add break statements to insure that the code does not fall through all statements to hit the end of the switch statement.  We should always add a default: case for debugging, the default case will execute if none of the other case sections have matched the switch test value then execution will fall through to the default case, we should include 
+In C#, we must add break statements to insure that the code does not fall through all statements to hit the end of the switch statement.  We should always add a default: case for debugging, the default case will execute if none of the other case sections have matched the switch test value then execution will fall through to the default case, we should include debugging output so we're aware that the switch - testValue didn't match any of the case label values.
