@@ -81,7 +81,7 @@ public class NumberGame1 : MonoBehaviour {
 			}
 		}
 
-		else if (activeState == GameState.GamePlay) {
+		else if (activeState == GameState.GamePlay) {  
 			
 			if (Input.GetKeyDown (KeyCode.UpArrow)) {
 				min = guess;
@@ -97,7 +97,8 @@ public class NumberGame1 : MonoBehaviour {
 			
 			}
 		}
-		 //need win and lose state logic and need logic to restart the game and reinitialize values
+		 //we need to win and lose and end state logic 
+		 //and we need logic to restart the game and reinitialize values
 		 
 	}  //end Update
 
