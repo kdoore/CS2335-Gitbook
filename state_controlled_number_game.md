@@ -108,3 +108,7 @@ public class NumberGame1 : MonoBehaviour {
 
 
 ```
+
+###Switch-Case Statement
+
+In our code above, within the if, else-if 
