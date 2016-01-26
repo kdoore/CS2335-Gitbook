@@ -118,4 +118,53 @@ public class NumberGame1 : MonoBehaviour {
 
 ###Switch-Case Statement
 
-In our code above, within the if, else-if blocks of code, we are always checking the value of one variable: `activeState.  Since we have used enums for our 
+In our code above, within the if, else-if blocks of code, we are always checking the value of one variable: `activeState`.  Since we have used enums to define allowable values for our GameStates, then we'll use the enums as the case-labels that we are testing for a match against the switch-condition: `activeState`.  The code below shows how we would implement the code for the first 2 possible game-states: Initialize and Start.  The example code also shows that we'll want to include a default: case so that we can get Debug output if that code executes.
+
+```
+	void Update () {
+		switch (activeState) {
+		case(GameState.Initialize): 
+			if (Input.GetKeyDown (KeyCode.Y)) {
+				Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
+				activeState = GameState.Start;
+			} 
+			if (Input.GetKeyDown (KeyCode.N)) {
+				Debug.Log ("No game today");
+				activeState = GameState.End;
+			}
+			break;
+
+		case(GameState.Start): 
+			if (Input.GetKeyDown (KeyCode.Return)) {
+				Debug.Log ("Is your number " + guess + " If it matches, press Return");
+				Debug.Log ("Is your number higher, then press up arrow");
+				Debug.Log ("Is your number lower, then press down arrow");
+				activeState = GameState.GamePlay;
+			}
+			break;
+
+		case(GameState.GamePlay):
+			if (Input.GetKeyDown (KeyCode.UpArrow)) {
+				min = guess;
+				NextGuess ();  //inside self loop
+			}
+			if (Input.GetKeyDown (KeyCode.DownArrow)) {
+				max = guess;
+				NextGuess ();  //inside self loop
+			}
+			if (Input.GetKeyDown (KeyCode.Return)) {      //correct value
+				Debug.Log ("The computer wins");
+				activeState = GameState.Win;
+			}
+			break;
+
+		default:
+			Debug.Log ("No match on activeState");
+			break;
+		}//end of switch statement
+
+		//need win and lose state logic and need logic to restart the game and reinitialize values
+	
+	}  //end Update
+
+```
