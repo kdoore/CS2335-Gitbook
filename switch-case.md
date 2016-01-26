@@ -9,7 +9,7 @@ Details:  In many languages, the values that can be used for the test condition 
 One benefit of switch statements, when compared to nested if, else-if blocks, is that switch statements have a clear logical structure which is easy to understand and to extend by adding new case sections.
 
 Example:
-```
+```java
 int testValue = 1;
 switch (testValue)
 {
@@ -19,6 +19,9 @@ switch (testValue)
     case 2: 
     case 3:  
         Debug.Log("Case 2 and 3");
+        break;
+    case 4:
+        Debug.Log("Case 4");
         break;
     default:
        Debug.Log("Default case");
@@ -30,3 +33,22 @@ In C#, we must add break statements to insure that the code does not fall throug
 
 In the code section above, we can see a match with case 2 label does not have any individual case statements to be executed, instead, the execution will progress to the statements inside case 3 since there is no break statement in case 2 to cause execution to jump out of the entire switch statement.  This structure of having several case labels grouped together that correspond to one set of statements to be executed (the case 3 statements), is very useful when checking character input, where case 'a': and case 'A' both correspond to a single block of code to be executed. 
 
+The code above is equivilant to the following if, else-if structure:
+
+```java
+if( testValue == 1){
+     Debug.Log("Case 1");
+}
+else if( testVal == 2 || testVal == 3){
+    Debug.Log("Case 2 and 3");
+}
+else if(testVal ==4){
+    Debug.Log("Case 4");
+}
+else{
+    Debug.Log("Default case");
+}
+     
+```
+
+The code above can be changed to use a switch structure because the test for each if-else condition is always testing against a single variable: testValue, and the comparision value is always a constant value, rather than an expression which must first be evaluated.
