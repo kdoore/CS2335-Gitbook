@@ -12,6 +12,9 @@ For the Number game, we want to create a graphical version of the game where the
     -  In NumberGame.cs, add a library reference: using UnityEngine.UI at the top of your code
     -  Write code in the NumberGame.cs file to declare a public Text variable, initialize and modify in the script file.
     -  Connect script-component public text-variable and UI-text elements in the inspector on the gameObject that has the numberGame.cs script component attached.
+    
+###Unity Tutorials on the UI Components
+[Unity UI Tutorials Link](https://unity3d.com/learn/tutorials/topics/user-interface-ui)
 
 ###Canvas and Event System 
 When we add a UI Text element to our scene, it also creates a *Canvas GameObject* and an *EventSystem GameObject* in the scene.  We won't use the EventSystem object in this phase of the project, but it's important to realize this is required for any user-interaction with UI elements, when copying UI elements between scenes, always make sure the new scene has an EventSystem GameObject in the Hierarchy - this is a difficult error to debug.  The Canvas object is the container for any UI-Text objects in our scene, and our Text object's transform object is defined relative to the canvas since the Text is a child of Canvas in the Hierarchy panel. Adding additional UI elements to the scene does cause additional Canvas or EventSystem gameObjects to be added to the scene. 
