@@ -118,4 +118,4 @@ public class NumberGame1 : MonoBehaviour {
 
 ###Switch-Case Statement
 
-In our code above, within the if, else-if 
+In our code above, within the if, else-if blocks of code, we are always checking the value of one variable: `activeState.  Since we have used enums for our 
