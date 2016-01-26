@@ -27,3 +27,6 @@ switch (testValue)
 ```
 
 In C#, we must add break statements to insure that the code does not fall through all statements to hit the end of the switch statement.  We should always add a default: case for debugging, the default case will execute if none of the other case sections have matched the switch test value then execution will fall through to the default case, we should include debugging output so we're aware that the switch - testValue didn't match any of the case label values.
+
+In the code section above, we can see a match with case 2 label does not have any individual case statements to be executed, instead, the execution will progress to the statements inside case 3 since there is no break statement in case 2 to cause execution to jump out of the entire switch statement.  This structure of having several case labels grouped together that correspond to one set of statements to be executed (the case 3 statements), is very useful when checking character input, where case 'a': and case 'A' both correspond to a single block of code to be executed. 
+
