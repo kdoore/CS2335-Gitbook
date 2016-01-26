@@ -6,7 +6,7 @@ The switch statement is a control structure that is similar to using a set of if
 
 Details:  In many languages, the values that can be used for the test condition must be integral values such as int, char, or enum.  C# also allows the use of strings for case-label values.  The test condition is compared against the case-label values that each have a constant value.  
 
-One benefit of switch statements, when compared to nested if, else-if blocks, is that switch statements have a clear logical structure that is easy to understand and to extend by adding new case sections.
+One benefit of switch statements, when compared to nested if, else-if blocks, is that switch statements have a clear logical structure which is easy to understand and to extend by adding new case sections.
 
 Example:
 ```
