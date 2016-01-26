@@ -102,7 +102,8 @@ public class NumberGame1 : MonoBehaviour {
 		 
 	}  //end Update
 
-	void NextGuess(){
+    //this method calculates the next guess and prompts the user to input keys to indicate match, lower, higher  
+	void NextGuess(){ 
 		guess = (min + max) / 2;
 		Debug.Log("Is your number " + guess + " If it matches, press Enter");
 		Debug.Log("Is your number higher, the press up arrow" );
