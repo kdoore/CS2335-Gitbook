@@ -61,4 +61,11 @@ public void StartGame(){
 	}
 
 ```
+In Unity, we need to add a UI-Button GameObject to the scene.  We'll want to set custom values for highlight and normal colors so we can verify the button responds to mouse interaction when we hover over it during game-play mode.
+
+Then we need to add our custom function as a OnClick( ) event handler for the button.  The image below shows that we have clicked the `+` symbol below OnClick, that has opened a selector to identify the GameObject that has an attached script component with our custom function.  Since our script component: NumberGame1.cs is on the MainCamera, then we select that object.  This gives us a drop-down selector to select the script, and from there we can select our custom function.  It's important to make sure we've declared the custom function as public, otherwise it won't show up in the inspector drop-down list.  Once we select the correct function, our button should execute this fuction when clicked.  
+
+![](Screenshot 2016-01-27 13.37.34.png)
+
+###Hide Button after Use
 
