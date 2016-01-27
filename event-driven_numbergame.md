@@ -68,4 +68,23 @@ Then we need to add our custom function as a OnClick( ) event handler for the bu
 ![](Screenshot 2016-01-27 13.37.34.png)
 
 ###Hide Button after Use
+In order to hide the button after we've used it, we need to have a reference to the button in our code.  To do that, we need to create a public variable that is type: GameObject, then we'll connect that in the inspector to the Button gameObject in our scene: 
 
+```
+public GameObject startButton;
+```
+Connect the Script Variable: StartButton with the scene: GameObject by dragging the StartButton to the placeHolder space on the NumberGame script component that is attatched to the MainCamera GameObject.
+
+![](Screenshot 2016-01-27 13.45.18.png)
+
+Then in our code: Once the button has been clicked, and we've executed our StartGame tasks, then we can set the StartButton variable to inactive: 
+
+```
+public void StartGame(){
+		activeState = GameState.Start;
+		Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
+		promptText.text = string.Format ("Think of a number between {0} and {1} \n press Enter when ready", min, max);
+		startButton.SetActive (false);  //This in activates the button.
+	}
+	
+```	
