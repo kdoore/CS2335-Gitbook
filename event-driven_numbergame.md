@@ -10,6 +10,16 @@ Unity provides an event system for the Unity User-Interface (UI) components. Gam
 ###Custom Function
 In order to add custom behavior to a UI-Button, first we need to write some code that we'd like to have executed when the button has been clicked.  For our number game project, we can add a start game button that the user will click to indicate that they want to play the game.  Currently, we prompt the user when they are in the Initialize GameState to enter 'Y' if they went to play, or to enter 'N' to quit.  So, we have the following logic in our code, where we are listening for 'Y' when the activeState = GameState.Initialize:
 ```
+	 void Start () {
+        min = 0;
+        max = 64;
+        guess = (min + max) / 2;
+        activeState = GameState.Initialize;
+        Debug.Log("Do you want to play a Game, if so enter Y, else enter N");
+        gameText.text = "Do you want to play a Game, if so enter Y, else enter N?";  //ui text prompt
+    }
+	
+	void Update(){
 	if (activeState == GameState.Initialize) {
 			
 			if (Input.GetKeyDown (KeyCode.Y)) {
@@ -22,4 +32,32 @@ In order to add custom behavior to a UI-Button, first we need to write some code
 			}
 
 		}
+		
+		///other code
+	} //end Update()
+
+```
+
+So, we need to refactor our program and move code out of the Update function.  We also need to change the prompt in the Start function so the user knows to press the button to start the game.
+
+```
+gameText.text = "Do you want to play a Game, if so press the Start Game button, else enter N?"; 
+
+
+//remove this code from update since we're no longer testing for input of 'Y' during gameState.Initialize
+
+if (Input.GetKeyDown (KeyCode.Y)) {
+				Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
+				activeState = GameState.Start;
+			} 
+
+```
+We move the inner code into a new public function: StartGame()
+```
+public void StartGame(){
+		activeState = GameState.Start;
+		Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
+		promptText.text = string.Format ("Think of a number between {0} and {1} \n press Enter when ready", min, max);
+	}
+
 ```
