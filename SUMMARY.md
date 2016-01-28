@@ -8,7 +8,6 @@
    * [Encapsulation](encapsulation.md)
        * [C# Properties](c_properties.md)
        * [Access Modifiers](access_modifiers.md)
-   * [Properties](properties.md)
    * [Polymorphism](polymorphism.md)
    * [Interface](interface.md)
 * [Dictionary](dictionary.md)
