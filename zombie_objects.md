@@ -1,4 +1,4 @@
-#Zombie Objects
+#Zombie Custom Objects
 
 In chapter 6, section 4, the author discusses Class Constructors. He creates a Zombie class.  In the code below, we have expanded his example to show how to use Properties in C# to provide access to private instance fields.  
 
