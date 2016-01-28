@@ -5,7 +5,7 @@ In chapter 6, section 4, the author discusses Class Constructors. He creates a Z
 In this code example, we want to explore C# Encapsulation, Properties, Access Modifiers, Static Fields. In addition we want to introduce the C# Array syntax as well as the syntax to override methods. We'll also look at how to instantiate game objects in a C# script.
 
 ###Zombie Custom Class
-First we'll create a custom class that does not inherit from MonoBehaviour and see how we can use these types of classes in our projects.  
+First we'll create a custom class that does not inherit from MonoBehaviour and see how we can use these types of classes in our projects.   Since the class does not inherit from MonoBehaviour, we removed the ``Start()``, ``Update()`` code and the ``:MonoBehaviour`` base class specification. If you compile this code and try to add it to any GameObject in your scene, you will get an error.  The only custom scripts that can be added to a GameObject 
 
 Zombie.cs
 ```
