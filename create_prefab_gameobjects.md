@@ -18,7 +18,7 @@ Next, in order to create a compound object, we create an empty GameObject. We na
 
 ###Create Controller Script Component
 
-Here is the code that we created to animate the objects in this project.
+Here is the code that we created to animate the objects in this project. We are attaching this script to a gameObject within our scene and it will modify the position during each Update( ) execution, this allows us to customize movement of gameObjects based on logic within our custom code. 
 
 {%ace edit=false, lang='c_cpp'%}
 // This is a script to move a game object along the x axis
