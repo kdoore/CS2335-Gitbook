@@ -10,3 +10,18 @@ Properties are public fields that function to provide a public interface for con
 
 In the example below, we have a private variable: name.  A public Property: Name is used for accessing the private variable, through accessor methods: get and set.  
 
+```java
+//private field variable
+private string name;
+
+//public property provides access to modify private field: name.
+public string Name{  //property
+		get{
+			return name;
+		}
+		set{
+			name = value;
+		}
+	}
+	
+	```
