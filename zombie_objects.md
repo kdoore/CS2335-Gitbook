@@ -88,7 +88,7 @@ using System.Collections;
 
 public class Example : MonoBehaviour {
 
-	private Zombie[] zombies = new Zombie[3];   //create an array 
+	private Zombie[] zombies = new Zombie[3];   //create an array
 
 	// Use this for initialization
 	void Start () {
