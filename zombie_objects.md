@@ -18,12 +18,25 @@ public class Zombie  {
 	public static int NumberOfZombies = 0;
 
 	//instance variables
-	public int brainsEaten;
-	public int hitPoints;
-	private GameObject ZombieMesh; 
+	public int brainsEaten;  //should be private with an associated Property
 	
-	//fields
+	private int hitPoints;
 	private string name;
+	private GameObject ZombieMesh; 
+	private GameObject ZombiePrefab;
+
+	#region Properties
+    public float HitPoints{       //myZombie.HitPoints = 4;
+		set{
+			hitPoints = (int)value;
+
+			  ///event has happened to change this value
+			/// call function to update something somewhere else 
+		}
+		get{
+			return hitPoints;
+		}
+	}
 	
 	public string Name{  //property
 		get{
@@ -33,8 +46,10 @@ public class Zombie  {
 			name = value;
 		}
 	}
-	//property
+	//property auto-initialize - not recommended for this course
 	public int Friends{  get; set; }
+	
+	#endregion
 	
 	// constructor
 	public Zombie( string n, int hp){
@@ -46,6 +61,14 @@ public class Zombie  {
 		Vector3 pos = new Vector3(Random.Range (-10,10),0,Random.Range (-10,10));
 		ZombieMesh.transform.position= pos;
 		
+		//instantiate a prefab via code: 
+		//the prefab: named "BlueZombie" must be in the Resources folder within the assets folder
+		
+		ZombiePrefab = GameObject.Instantiate (Resources.Load ("BlueZombie")) as GameObject;
+
+		// here we initialize directly while calling the Vector3 constructor directly
+		ZombiePrefab.transform.position = new Vector3 (Random.Range (-5, 5), 0, Random.Range (-5, 5));;
+
 	}
 	
 	//
