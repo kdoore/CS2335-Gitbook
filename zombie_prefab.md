@@ -1,4 +1,4 @@
 # Zombie Prefab
 
-In our Zombie project we want to instantiate 
+In our Zombie project we want to create more interesting or customized gameObject than we can create using the Primitive
 
