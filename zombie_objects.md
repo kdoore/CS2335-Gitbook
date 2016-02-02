@@ -10,7 +10,7 @@ First we'll create a custom class that does not inherit from MonoBehaviour and s
 Below we create the custom Zombie Class that we'll use to dynamically spawn a gameObject within our scene.  In order to have our Zombie class used in a scene, we'll need to create an instance of a Zombie within a custom class that inherits from MonoBehaviour. We'll create the Example.cs class for that purpose, and we'll attach it to the main camera within our game scene.
 
 ###Properties
-
+C# Language provides Properties as a feature to support encapsulation, Properties 
 
 Zombie.cs
 ```
