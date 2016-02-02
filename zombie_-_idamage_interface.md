@@ -79,6 +79,7 @@ public class Zombie :  IDamage {
 		}
 	} 
 	#endregion 
+	
 	// constructor
 	public Zombie( string n, int hp){
 		NumberOfZombies=1;
@@ -88,7 +89,6 @@ public class Zombie :  IDamage {
 		ZombieMesh = GameObject.CreatePrimitive(PrimitiveType.Capsule);
 		Vector3 pos = new Vector3(Random.Range (-10,10),0,Random.Range (-10,10));
 		ZombieMesh.transform.position= pos;
-		
 	}
 	
 	
