@@ -101,9 +101,5 @@ public class Example : MonoBehaviour {
 		zombies[0].Name= "Charles";
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
 ```
