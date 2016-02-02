@@ -28,12 +28,10 @@ using System.Collections;
 
 public class Controller : MonoBehaviour {
 
-	public int myValue;
 	public Vector3 myVector;
     
 	// Use this for initialization
 	void Start () {
-		myValue=5;
 		myVector = new Vector3(1,1,0);
 		transform.position=myVector;
 		Debug.Log ("MyValue= " + myValue);
