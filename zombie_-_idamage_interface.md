@@ -14,10 +14,8 @@ using System.Collections;
 
 //define IDamage interface 
 interface IDamage  {
-	 // property declaration
-	 int HitPoints {  get; set; }
+	 //method declaration these methods must be defined in any class that implements the IDamage interface
 	 
-	 //method signatures
 	 void TakeDamage(int damage);
 	 void HealDamage(int damage);
 }
