@@ -10,7 +10,7 @@
 * [Number Game: UI-Text](state_controlled_ui-text.md)
 * [NumberGame: Event-Driven](event-driven_numbergame.md)
 * [Create Prefab GameObjects](create_prefab_gameobjects.md)
-   * Zombie Prefab
+* Zombie Prefab
 * [Zombie Objects](zombie_objects.md)
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
 * [Zombies Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
