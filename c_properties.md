@@ -25,3 +25,5 @@ public string Name{  //property
 	}
 	
 	```
+	
+###Properties Hide Class Implementation Details
