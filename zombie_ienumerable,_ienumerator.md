@@ -39,13 +39,14 @@ If we realize that we're likely to have other classes that represent similar obj
 
 @startuml
 
-    class Dummy {
-    -field1
-    #field2
-    ~method1()
-    +method2()
-    }
-
+Class Stage
+Class Timeout {
+    +constructor:function(cfg)
+    +timeout:function(ctx)
+    +overdue:function(ctx)
+    +stage: Stage
+}
+Stage <|-- Timeout
 @enduml
 
 ###Non-Player-Character: Base-Class
