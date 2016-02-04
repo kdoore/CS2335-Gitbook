@@ -1,4 +1,4 @@
-#Zombies Collection: 
+#NPC Collection: 
 ##IEnumerable, IEnumerator Interfaces
 
 ###Enumeration:  *Let me count the ways*
