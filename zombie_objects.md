@@ -62,6 +62,9 @@ public class Zombie  {
 		name = n;
 		hitPoints= hp;
 		Friends=0;
+		
+		///the code below will create a visable object in a scene that is associated with our custom class
+		
 		ZombieMesh = GameObject.CreatePrimitive(PrimitiveType.Capsule);
 		Vector3 pos = new Vector3(Random.Range (-10,10),0,Random.Range (-10,10));
 		ZombieMesh.transform.position= pos;
