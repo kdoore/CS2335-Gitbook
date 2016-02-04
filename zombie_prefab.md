@@ -17,11 +17,16 @@ The animation below shows how to create a new material asset, then this material
         
 In our project, we've created a custom C# script: Zombie class.  Within the class definition, if we define a gameObject variable like: somePrefab, we can then associate it with a prefab gameObject we have created within our Unity project.  Once we have a prefab within our Resources folder, we can use the GameObject.Instantiate() function to spawn an object using our custom prefab GameObject.  A simple example of this code is shown below:
         
-```
+``` 
+        //within our custom zombie class
+        
         private GameObject SomePrefab;  // our name class prefab instance field variable
         
         //inside class constructor or other class method:
-        
-		SomePrefab = GameObject.Instantiate (Resources.Load ("Zombie")) as GameObject;  //prefab must be named: Zombie and located inside Resources folder within Assets folder
-		SomePrefab.transform.position= new Vector3 (Random.Range (-5, 5), 0, Random.Range (-5, 5));
+        public Zombie(){
+		
+		    SomePrefab = GameObject.Instantiate (Resources.Load ("Zombie")) as GameObject;  //prefab must be named: Zombie and located inside Resources folder within Assets folder
+		    SomePrefab.transform.position= new Vector3 (Random.Range (-5, 5), 0, Random.Range (-5, 5));  //set 3D transform postion
+		
+		}//end Zombie constructor
 ```
