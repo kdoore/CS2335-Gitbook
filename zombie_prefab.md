@@ -19,5 +19,5 @@ The animation below shows how to create a new material asset, then this material
         
         //inside class constructor or other class method:
         
-		SomePrefab = GameObject.Instantiate (Resources.Load ("Zombie")) as GameObject;
+		SomePrefab = GameObject.Instantiate (Resources.Load ("Zombie")) as GameObject;  //prefab must be named: Zombie and located inside Resources folder within Assets folder
 		SomePrefab.transform.position= new Vector3 (Random.Range (-5, 5), 0, Random.Range (-5, 5));
