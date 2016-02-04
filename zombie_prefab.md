@@ -14,3 +14,7 @@ The animation below shows how to create a new material asset, then this material
 ![](prefabAnimation.gif)
 
 ###Instantiate Prefab In Custom Class:
+        private GameObject SomePrefab;  // our name class prefab instance field variable
+        
+		SomePrefab = GameObject.Instantiate (Resources.Load ("Zombie")) as GameObject;
+		SomePrefab.transform.position= new Vector3 (Random.Range (-5, 5), 0, Random.Range (-5, 5));
