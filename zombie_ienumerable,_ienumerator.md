@@ -33,6 +33,68 @@ Methods:  MoveNext()   //advance the inumerator to the next element in the colle
 
           Reset()   //set the enumerator to the first element in the collection
             ```
+            
+###Zombie's Base-Class: NPC
+If we realize that we're likely to have other classes that represent similar objects to Zombies, it would then make sense for use to define a Base-Class for all similar types of objects.  We can consider that zombies might be part of a larger classification of non-player-characters (NPC) that we'd have in a game, we can imagine we'll have other NPC types in our program.  It will be helpful to be able to group these similar objects in a collection, and if we make all similar classes inherit from the same base-class this will make it easy to manage a group of these similar objects.  
+
+###Non-Player-Character: Base-Class
+Since we've already created a Zombie class, it will be relatively easy to determine the required class: instance-variables and class methods that we'd need for a base-class that would be a parent-class for Zombies and other NPCs.  We can actually remove code from the zombie class and place that code directly in the NPCharacter base class, then all similar child-classes will inherit the same base-class instance-fields and methods.  The code below defines the NPCharacter Class:
+
+```java
+
+using UnityEngine;
+using System.Collections;
+
+public class NPCharacter {
+
+	protected int hitPoints;
+	protected float healthPoints;
+	protected string name;
+	protected GameObject prefab;
+
+	#region properties
+
+	public string Name{  //property
+		set {
+			name = value;
+		}
+		get{
+			return name;
+		}
+	}
+
+	public int HitPoints{       //myZombie.HitPoints = 4;
+		set{
+			hitPoints = value;
+			}
+		get{
+			return hitPoints;
+		}
+	}
+	#endregion
+
+	public NPCharacter( ){    ////we must define a default constructor 
+		hitPoints=0;
+		healthPoints = 0;
+		name = "No Name";
+		Debug.Log ("Default Constructor for NPC is called");
+	}
+	public NPCharacter(string n, int hp){    ////other constructor
+		hitPoints=hp;
+		healthPoints = 0;
+		name = n;
+		Debug.Log ("Constructor for NPC is called");
+	}
+		
+	public override string ToString ()
+	{
+		return string.Format ("NPC Name: {0}, HitPoints {1}", name, hitPoints);
+	}
+}
+
+
+```
+
 ###Zombies Class - A collection
 In the code below, we define a custom collection class:  Zombies, and we implement the IEnumerator and IEnumeration interfaces for this class.
 
