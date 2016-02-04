@@ -15,8 +15,8 @@ We want to create our own collection class where we can have a collection of cus
 ###Encapsulation / Information Hiding
 A class that implements IEnumerator and IEnumerable can enforce encapsulation / information-hiding because access can be provided to all collection elements without specifying the data-structure used within the class to hold the collection objects. 
 
-###Zombies Collection
-If our Zombies collection can be accessible by users of our class using the ``foreach`` method, then we can say that our collection is *Enumerable*, this means that we have implemented an *Enumerator*.  Since we are going to implement these interfaces, then we need to look at the interface specification so we understand what code we are required to implement to fulfill the interface contract.
+###NPCharacter Collection
+If our NPCharacter collection can be accessible by users of our class using the ``foreach`` method, then we can say that our collection is *Enumerable*, this means that we have implemented an *Enumerator*.  Since we are going to implement these interfaces, then we need to look at the interface specification so we understand what code we are required to implement to fulfill the interface contract.
 
 ###MSDN Reference:  [IEnumerable](https://msdn.microsoft.com/en-us/library/system.collections.ienumerable.aspx)
 
@@ -36,7 +36,6 @@ Methods:  MoveNext()   //advance the inumerator to the next element in the colle
             
 ###Zombie's Base-Class: NPC
 If we realize that we're likely to have other classes that represent similar objects to Zombies, it would then make sense for use to define a Base-Class for all similar types of objects.  We can consider that zombies might be part of a larger classification of non-player-characters (NPC) that we'd have in a game, we can imagine we'll have other NPC types in our program.  It will be helpful to be able to group these similar objects in a collection, and if we make all similar classes inherit from the same base-class this will make it easy to manage a group of these similar objects.  
-
 
 
 ###Non-Player-Character: Base-Class
@@ -97,8 +96,8 @@ public class NPCharacter {
 
 ```
 
-###Zombies Class - A collection
-In the code below, we define a custom collection class:  Zombies, and we implement the IEnumerator and IEnumeration interfaces for this class.
+###NPCollection Class - A collection
+In the code below, we define a custom collection class:  NPCollection, and we implement the IEnumerator and IEnumeration interfaces for this class.
 
 ```
 public class Zombies: IEnumerable, IEnumerator {
