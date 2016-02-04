@@ -9,7 +9,7 @@ Instead, we will create Prefabs based on either a composite of primitive shapes,
 To create a more complex prefab, we can start with a basic shape primitive like a capsule and then create additional components like a head, arms, legs...where these new gameObjects are made child objects of one parent gameObject.
 
 ###Animation: Create Material and Complex PreFab
-The animation below shows how to create a new material asset, then this material is placed on a capsule, the capsule is duplicated and scaled to form a head.  Then the head is set as a child of the main capsule in the hierarchy, and finally this compound object is dragged into the Resources folder that we created.  Once in this specially named folder, we can access this prefab by it's name to dynamically span within our custom code.
+The animation below shows how to create a new material asset, then this material is placed on a capsule, the capsule is duplicated and scaled to form a head.  Then the head is set as a child of the main capsule in the hierarchy, and finally this compound object is dragged into the Resources folder that we created.  Once in this specially named folder, we can access this prefab by it's name to dynamically spawn within our custom code.
 
 ![](prefabAnimation.gif)
 
