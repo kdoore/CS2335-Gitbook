@@ -13,6 +13,7 @@
 * [Zombie Objects](zombie_objects.md)
 * [Zombie Prefab](zombie_prefab.md)
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
+* Non-Player Character: Base-Class
 * [Zombies Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
 * [Zombie - Sorting](zombie_-_sorting.md)
 * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
@@ -41,5 +42,4 @@
    * [Switch-Case](switch-case.md)
    * [Dictionary](dictionary.md)
 * [Glossary](GLOSSARY.md)
-* Non-Player Character: Base-Class
 
