@@ -42,5 +42,5 @@
    * [Switch-Case](switch-case.md)
    * [Dictionary](dictionary.md)
 * [Glossary](GLOSSARY.md)
-* Branching Narrative - Structure
+* [Branching Narrative - Structure](branching_narrative_-_structure.md)
 
