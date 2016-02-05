@@ -70,3 +70,5 @@ Notice that we have changed the access modifier for each of the class-instance/f
 The diagram below shows the Unified Modeling Language model for the classes for this stage of our project.  UML class diagrams provide a visual overview of the relationships between classes, interfaces, and the features: variables and methods for each of these classes.  
 
 ![](NPCharacterUML.png)
+
+
