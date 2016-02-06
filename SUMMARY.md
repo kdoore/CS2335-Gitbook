@@ -43,5 +43,5 @@
    * [Dictionary](dictionary.md)
 * [Glossary](GLOSSARY.md)
 * [Branching Narrative - Structure](branching_narrative_-_structure.md)
-* References
+* [References](references.md)
 
