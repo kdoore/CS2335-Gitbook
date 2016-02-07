@@ -18,11 +18,11 @@ Chris Crawford, In his book: Interactive Storytelling:
 >The most direct counterpart to interactive fiction in oral and written literature is seen in the riddle....
 >By presenting a metaphorical system that the listener or reader must inhabit and figure out in order to fully experience, and in order to answer correctly, the riddle offers its way of thinking and engages its audience ence as no other work of literature does. Interactive fiction is related to the riddle because the interactor, in facing a puzzle-based interactive fiction, is in a situation similar to that of the riddlee.
 
-###Resources
+###Interactive Fiction Resources
 
 [The beginner's guide to Interactive Fiction](http://www.gameszoo.org/rezork/docs/beginner.txt)
 
-Brass Lantern Is a Good Resource for Learning about Interactive Fiction.
+[Brass Lantern](http://brasslantern.org/beginners/) is a rich resource for Learning about Interactive Fiction.
 
 [The Room as a Metaphor in Interactive Fiction](http://brasslantern.org/writers/iftheory/roomasmetaphor.html) In this article, Nathan Jerpe suggests that although Rooms have been traditionally used in interactive fiction as a metaphor to provide logical structure of the game-world, he suggests that chapters or scenes can also be useful metaphors; these may provide a more temporal dimension to the IF narrative / logical structure.
 
