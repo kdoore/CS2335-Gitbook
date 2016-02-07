@@ -35,8 +35,9 @@ An early and popluar Interactive Fiction series is the *Zork series*.  Chris Bor
  
  Zork Instruction Manual[](http://www.thezorklibrary.com/zork1/zork1.pdf)
 
+###References
 
-Crawford, Chris (2012-12-12). Chris Crawford on Interactive Storytelling (2nd Edition) (p. 161). Pearson Education. Kindle Edition. 
+Crawford, Chris (2012-12-12). _Chris Crawford on Interactive Storytelling_ (2nd Edition) (p. 161). Pearson Education. Kindle Edition. 
 
-Nick Montfort. Twisty Little Passages: An Approach to Interactive Fiction (Kindle Locations 140-142). Kindle Edition. 
+Nick Montfort. _Twisty Little Passages: An Approach to Interactive Fiction_ (Kindle Locations 140-142). Kindle Edition. 
 
