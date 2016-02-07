@@ -24,6 +24,8 @@ Chris Crawford, In his book: Interactive Storytelling:
 
 Brass Lantern
 
+[The Room as a Metaphor in Interactive Fiction](http://brasslantern.org/writers/iftheory/roomasmetaphor.html) In this article, Nathan Jerpe suggests that although Rooms have been traditionally used in interactive fiction to provide the logical structure of the game-world, It is also good to thin
+
 
 Crawford, Chris (2012-12-12). Chris Crawford on Interactive Storytelling (2nd Edition) (p. 161). Pearson Education. Kindle Edition. 
 
