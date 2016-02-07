@@ -15,13 +15,13 @@ Chris Crawford, In his book: Interactive Storytelling:
 
 ###Interactive Fiction
 
->The most direct counterpart to interactive fiction in oral and written literature is seen in the riddle....
->By presenting a metaphorical system that the listener or reader must inhabit and figure out in order to fully experience, and in order to answer correctly, the riddle offers its way of thinking and engages its audience ence as no other work of literature does. Interactive fiction is related to the riddle because the interactor, in facing a puzzle-based interactive fiction, is in a situation similar to that of the riddlee.
+>"The most direct counterpart to interactive fiction in oral and written literature is seen in the riddle....
+>By presenting a metaphorical system that the listener or reader must inhabit and figure out in order to fully experience, and in order to answer correctly, the riddle offers its way of thinking and engages its audience ence as no other work of literature does. Interactive fiction is related to the riddle because the interactor, in facing a puzzle-based interactive fiction, is in a situation similar to that of the riddlee." [Nick Montfort]
 
 
 
 
 Crawford, Chris (2012-12-12). Chris Crawford on Interactive Storytelling (2nd Edition) (p. 161). Pearson Education. Kindle Edition. 
 
-Nick Montfort. Twisty Little Passages: An Approach to Interactive Fiction (Kindle Locations 140-142). Kindle Edition. 
+[Nick Montfort. Twisty Little Passages: An Approach to Interactive Fiction (Kindle Locations 140-142). Kindle Edition.] 
 
