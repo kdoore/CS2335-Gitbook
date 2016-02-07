@@ -20,11 +20,14 @@ Chris Crawford, In his book: Interactive Storytelling:
 
 ###Interactive Fiction Resources
 
-[The beginner's guide to Interactive Fiction](http://www.gameszoo.org/rezork/docs/beginner.txt)
+[GameZoo.Org, The beginner's guide to Interactive Fiction](http://www.gameszoo.org/rezork/docs/beginner.txt)
 
 [Brass Lantern](http://brasslantern.org/beginners/) is a rich resource for Learning about Interactive Fiction.
 
 [The Room as a Metaphor in Interactive Fiction](http://brasslantern.org/writers/iftheory/roomasmetaphor.html) In this article, Nathan Jerpe suggests that although Rooms have been traditionally used in interactive fiction as a metaphor to provide logical structure of the game-world, he suggests that chapters or scenes can also be useful metaphors; these may provide a more temporal dimension to the IF narrative / logical structure.
+
+Zork Player Maps
+Luke Plunket provides a
 
 
 Crawford, Chris (2012-12-12). Chris Crawford on Interactive Storytelling (2nd Edition) (p. 161). Pearson Education. Kindle Edition. 
