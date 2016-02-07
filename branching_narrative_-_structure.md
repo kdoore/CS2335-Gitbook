@@ -26,6 +26,11 @@ Chris Crawford, In his book: Interactive Storytelling:
 
 [The Room as a Metaphor in Interactive Fiction](http://brasslantern.org/writers/iftheory/roomasmetaphor.html) In this article, Nathan Jerpe suggests that although Rooms have been traditionally used in interactive fiction as a metaphor to provide logical structure of the game-world, he suggests that chapters or scenes can also be useful metaphors; these may provide a more temporal dimension to the IF narrative / logical structure.
 
+###Zork
+Zork is a series of Interactive Fiction, developed in the 80's.  
+
+[Play Zork 1, Online HTML version.](http://textadventures.co.uk/games/view/5zyoqrsugeopel3ffhz_vq/zork)
+
 [Zork Player-Constructed Maps](http://kotaku.com/5843715/the-delightful-home-made-maps-of-the-zork-series/)
  Luke Plunket provides a nice selection of player-constructed maps of the Zork series.  While some of these maps have a logical design that is similar to a finite-state machine, other maps show the player's imaginary visual interpretation of traditional maps.  
  
