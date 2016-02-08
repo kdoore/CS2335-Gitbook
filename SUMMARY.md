@@ -16,6 +16,7 @@
 * [Non-Player Character: Base-Class](non-player_character_base-class.md)
 * [NPC Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
 * [Zombie - Sorting](zombie_-_sorting.md)
+* [Branching Narrative - Structure](branching_narrative_-_structure.md)
 * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
 * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Project 2 - Source Code](project_2_-_source_code.md)
@@ -42,6 +43,5 @@
    * [Flow-Chart](flow-chart_example.md)
    * [Finite State Machine](finite_state_machine.md)
 * [Glossary](GLOSSARY.md)
-* [Branching Narrative - Structure](branching_narrative_-_structure.md)
 * [References](references.md)
 
