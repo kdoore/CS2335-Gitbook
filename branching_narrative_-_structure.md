@@ -20,7 +20,7 @@ Chris Crawford, In his book: Interactive Storytelling:
 
 ###Interactive Fiction Resources
 
-[GameZoo.Org, The beginner's guide to Interactive Fiction](http://www.gameszoo.org/rezork/docs/beginner.txt)
+[The beginner's guide to Interactive Fiction, GameZoo.org](http://www.gameszoo.org/rezork/docs/beginner.txt)
 
 [Brass Lantern](http://brasslantern.org/beginners/) is a rich resource for Learning about Interactive Fiction.
 
