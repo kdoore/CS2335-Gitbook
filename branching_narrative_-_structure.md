@@ -1,6 +1,11 @@
 # Branching Narrative
 A major project in this course will be the design and construction of a branching narrative game.  There are a wide variety of media that we can consider as having the structure of a branching narrative game, such as Interactive Fiction, Create Your Own Adventure, Visual Novel, Game Book, and others.
 
+###Interactive Fiction: Designed Experience
+>If you're going to have a complicated story you must work to a map;
+otherwise you'll never make a map of it afterwards.
+{ J. R. R. Tolkien (1892-1973)
+
 ###Storytelling as Modeling:
 Chris Crawford, In his book: Interactive Storytelling:
 
