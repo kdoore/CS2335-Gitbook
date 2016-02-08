@@ -24,6 +24,8 @@ Chris Crawford, In his book: Interactive Storytelling:
 
 [Brass Lantern](http://brasslantern.org/beginners/) is a rich resource for Learning about Interactive Fiction.
 
+Craft of Adventure -
+
 [The Room as a Metaphor in Interactive Fiction](http://brasslantern.org/writers/iftheory/roomasmetaphor.html) In this article, Nathan Jerpe suggests that although Rooms have been traditionally used in interactive fiction as a metaphor to provide logical structure of the game-world, he suggests that chapters or scenes can also be useful metaphors; these may provide a more temporal dimension to the IF narrative / logical structure.
 
 [Creating Adventure Games On Your Computer](http://www.atariarchives.org/adventure/)
