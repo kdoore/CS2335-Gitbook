@@ -100,45 +100,70 @@ public class NPCharacter {
 In the code below, we define a custom collection class:  NPCollection, and we implement the IEnumerator and IEnumeration interfaces for this class.
 
 ```
-public class Zombies: IEnumerable, IEnumerator {
-	
-	private Zombie[] zombieArray;  //we're using an array to store our collection of zombie objects
 
-	//
-	private int position = -1;
-	
-	//constructor
-	public Zombies(){  
-		//initialize our array with zombie objects
-		zombieArray = new Zombie[3];
-		zombieArray[0]=new Zombie("Stubbs", Random.Range (10,15));
-		zombieArray[1]=new Zombie("Rob", Random.Range (10,15));
-		zombieArray[2]=new Zombie("White", Random.Range (10,15));
-	}
-	
-	//IEnumerable  //method that returns the enumerator
-	public IEnumerator GetEnumerator(){
-			return (IEnumerator)this;
-	}
-	
-	//IEnumerator  //move the enumerator to the next element
-	public bool MoveNext(){
-			position ++;
-			return (position < zombieArray.Length);
-	}
-	
-	//IEnumerator  //reset the enumerator to the first element
-	public void Reset(){
-		position =0;
-	}
-	
-	//IEnumerator  //Property that provides access to the current enumerated object
-	public object Current{
-		get{  return zombieArray[position];  
+public class NPCollection : IEnumerable, IEnumerator  {  // foreach
+
+	private NPCharacter[] characters; //dataStructure to hold collection elements
+
+	private int position = -1;  //used for IEnumerator to keep track of the current instance
+ 	
+	public NPCollection(){  //constructor 
+
+		characters = new NPCharacter[3];
+
+		//polymorphism: 
+		//1. we can store child-class objects in an array
+		// of the base-class type
+		// 2. data-type will be determined at run-time to determine which
+		// methods are executed: base or child class
+		characters[0] = new Zombie("NPC_Rob", Random.Range(10,15));
+		characters[1] = new Zombie("NPC_Stubbs", Random.Range(10,15));
+		characters[2] = new Zombie("NPC_White", Random.Range(10,15));
+
+		//other NPC child-class objects can be in our collection
+		/////character[0] = new Kitten((names[i], Random.Range(10,15));
+
+		Debug.Log ("NPC " + characters[0].ToString ());
+	}  //end of constructor
+		
+	///nuts and bolts are in IEnumerator
+
+	///IEnumerator Property, this refers to the current selected
+	/// collection object
+
+	public object Current{  //property
+		get{
+			return characters [position];
 		}
 	}
-	
+	/// <summary>
+	/// Reset this the collection position index.
+	/// </summary>
+	public void Reset(){
+		position = -1;
+	}
+
+	/// <summary>
+	/// Moves the next.
+	/// </summary>
+	/// <returns><c>true</c>, position is still a valid index for the collection, <c>false</c> otherwise.</returns>
+	public bool MoveNext(){
+		position++;
+		return position < characters.Length;
+	}
+
+	/// <summary>
+	/// This is for IEnumerable Interface
+	/// Gets the enumerator.
+	/// </summary>
+	/// <returns>The enumerator.</returns>
+	public IEnumerator GetEnumerator(){
+		return (IEnumerator)this;
+	}
+
 }
+
+
 ```
 ###Implementation Example:  
 Create a Example1 class that can be attached to a gameObject like the main camera.  This declares and initializes an instance: zombies of our Zombies collection.  Then we use ``foreach`` to step through each element in the collection
