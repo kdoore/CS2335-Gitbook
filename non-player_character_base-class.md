@@ -13,14 +13,16 @@ Since we've already created a Zombie class, it will be relatively easy to determ
 using UnityEngine;
 using System.Collections;
 
-public class NPCharacter {
+public class NPCharacter: IDamage { //implement IDamage
 
-	protected int hitPoints;
+    //Class Fields or Instance Variables
+	
+	private int hitPoints;
 	protected float healthPoints;
 	protected string name;
 	protected GameObject prefab;
 
-	#region properties
+    //Properties
 
 	public string Name{  //property
 		set {
@@ -34,16 +36,19 @@ public class NPCharacter {
 	public int HitPoints{       //myZombie.HitPoints = 4;
 		set{
 			hitPoints = value;
+			healthPoints -= value;
+			Debug.Log ("NPC modify HitPoints " + hitPoints);
 			}
 		get{
 			return hitPoints;
 		}
 	}
-	#endregion
-
+	
+    ///Constructors
+    
 	public NPCharacter( ){    ////we must define a default constructor 
 		hitPoints=0;
-		healthPoints = 0;
+		healthPoints = 30;
 		name = "No Name";
 		Debug.Log ("Default Constructor for NPC is called");
 	}
@@ -53,11 +58,25 @@ public class NPCharacter {
 		name = n;
 		Debug.Log ("Constructor for NPC is called");
 	}
-	
-	public virtual void doSomething(){  
-		Debug.Log("NPC do something");
+
+    //This method will be overridden 
+	public virtual void doSomething(){
+		Debug.Log ("Do Something in the BaseClass");
 	}
-		
+
+//IDamage Interface Methods
+	public void TakeDamage(int damage){
+		HitPoints -= damage;
+		Debug.Log ("taking damage " + HitPoints);
+	}
+
+	public void HealDamage(int damage){
+		//hitPoints += damage;
+	}
+	/// <summary>
+	/// /inherited from Object, must use override 
+	/// </summary>
+	/// <returns>A <see cref="System.String"/> that represents the current <see cref="NPCharacter"/>.</returns>
 	public override string ToString ()
 	{
 		return string.Format ("NPC Name: {0}, HitPoints {1}", name, hitPoints);
@@ -65,9 +84,75 @@ public class NPCharacter {
 }
 
 ```
-
 ###Protected Access Modifier:
 Notice that we have changed the access modifier for each of the class-instance/field variables.  When these were part of the Zombie class, we had them as private to enforce encapsulation and restrict access and modification of these variables.  However, using the private access modifier also restricts access to these variables even for child-classes.  It might make sense that we need access to these variables within a child class so the `protected` access modifier is designed specifically for this purpose. 
+
+###Modified Zombie as a Child Class of NPCharacter
+```
+using UnityEngine;
+using System.Collections;
+
+
+public class Zombie: NPCharacter{
+
+	public static int NumberOfZombies = 0;
+	private int brainsEaten;
+
+	//BrainsEaten should only be associated with the Zombie class, not the Base class
+	public int BrainsEaten{
+		get{
+			return brainsEaten;
+		}
+		set{  ///properties give opportunity to modify other values and call methods
+			brainsEaten = value;
+			healthPoints += (value * 0.5f);  //zombie health increases
+			Debug.Log("HealthPoints after eatingBrains " + healthPoints);
+		}
+	}
+
+	public Zombie(){
+		Debug.Log ("Default Constructor for Zombie is called");
+	}
+
+	/// <summary>
+	/// Initializes a new instance of the <see cref="Zombie"/> class.
+	/// </summary>
+	/// <param name="n">N.</param>
+	/// <param name="hp">Hp.</param>
+	public Zombie( string n, int hp): base(){ // explicitly call default base-class constructor
+		
+		NumberOfZombies++;  //class level variable
+		name = n;
+		HitPoints = hp;
+	
+		prefab = GameObject.Instantiate (Resources.Load ("Zombie")) as GameObject;
+		prefab.transform.position= new Vector3 (Random.Range (-5, 5), 0, Random.Range (-5, 5));
+
+		Debug.Log ("Constructor for Zombies is called");
+	}
+
+	public void EatBrains(int numBrains){
+		BrainsEaten += numBrains;
+		Debug.Log ("This is a zombie specific method");
+	}
+
+	public override void doSomething(){
+		Debug.Log ("Method doSomething: Override in the Zombie Child Class");
+	}
+		
+	/// <summary>
+	/// Returns a <see cref="System.String"/> that represents the current <see cref="Zombie"/>.
+	/// </summary>
+	/// <returns>A <see cref="System.String"/> that represents the current <see cref="Zombie"/>.</returns>
+	public override string ToString ()
+	{
+		return string.Format ("Zombie Name: {0}, HitPoints {1}", name, HitPoints);
+	}
+
+}
+```
+
+
 
 ###UML Diagram
 
