@@ -1,7 +1,5 @@
 # Unity - Serialization Problems with Polymorphic Types
 
-
-
 Polymorphism is one of the three main pillars of object-oriented programming, unfortunately, Unity does not provide great support for using polymorphic data-types in conjunction with Serialization.  There are several good articles and blogs  that discuss the details of the issues:
 
 - [Serialization of Polymorphic Data-Types](https://feedback.unity3d.com/suggestions/serialization-of-polymorphic-dat)
