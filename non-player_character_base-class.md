@@ -77,7 +77,7 @@ The diagram below shows the Unified Modeling Language model for the classes for 
 
 ###Serialization Problems in Unity when Using Polymorphic Types
 
-Polymoprhism is one of the three main pillars of object-oriented programming, unfortunately, Unity does not provide great support for using polymorphic types in conjunction with Serialization.  There are several good articles and blogs  that discuss the details of the issues:
+Polymorphism is one of the three main pillars of object-oriented programming, unfortunately, Unity does not provide great support for using polymorphic data-types in conjunction with Serialization.  There are several good articles and blogs  that discuss the details of the issues:
 
 - [Serialization of Polymorphic Data-Types](https://feedback.unity3d.com/suggestions/serialization-of-polymorphic-dat)
 - [Advanced Unity Serialization](http://www.codingjargames.com/blog/2012/11/30/advanced-unity-serialization/)
