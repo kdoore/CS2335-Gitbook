@@ -32,7 +32,6 @@ Properties:  Current  // this gets the current element in the collection
 Methods:  MoveNext()   //advance the inumerator to the next element in the collection
 
           Reset()   //set the enumerator to the first element in the collection
-            ```
             
 ```
 
