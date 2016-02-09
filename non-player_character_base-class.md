@@ -59,7 +59,7 @@ public class NPCharacter: IDamage { //implement IDamage
 		Debug.Log ("Constructor for NPC is called");
 	}
 
-    //This method will be overridden 
+    //This method will be overridden in Zombie but not in Kitten 
 	public virtual void doSomething(){
 		Debug.Log ("Do Something in the BaseClass");
 	}
@@ -73,10 +73,7 @@ public class NPCharacter: IDamage { //implement IDamage
 	public void HealDamage(int damage){
 		//hitPoints += damage;
 	}
-	/// <summary>
-	/// /inherited from Object, must use override 
-	/// </summary>
-	/// <returns>A <see cref="System.String"/> that represents the current <see cref="NPCharacter"/>.</returns>
+
 	public override string ToString ()
 	{
 		return string.Format ("NPC Name: {0}, HitPoints {1}", name, hitPoints);
@@ -114,11 +111,7 @@ public class Zombie: NPCharacter{
 		Debug.Log ("Default Constructor for Zombie is called");
 	}
 
-	/// <summary>
-	/// Initializes a new instance of the <see cref="Zombie"/> class.
-	/// </summary>
-	/// <param name="n">N.</param>
-	/// <param name="hp">Hp.</param>
+
 	public Zombie( string n, int hp): base(){ // explicitly call default base-class constructor
 		
 		NumberOfZombies++;  //class level variable
@@ -140,10 +133,7 @@ public class Zombie: NPCharacter{
 		Debug.Log ("Method doSomething: Override in the Zombie Child Class");
 	}
 		
-	/// <summary>
-	/// Returns a <see cref="System.String"/> that represents the current <see cref="Zombie"/>.
-	/// </summary>
-	/// <returns>A <see cref="System.String"/> that represents the current <see cref="Zombie"/>.</returns>
+
 	public override string ToString ()
 	{
 		return string.Format ("Zombie Name: {0}, HitPoints {1}", name, HitPoints);
