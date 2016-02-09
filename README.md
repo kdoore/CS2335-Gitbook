@@ -19,7 +19,7 @@ For a comparison between programming languages: Java and C#, see this [MSDN refe
 
 [Unity3D Game Engine](https://unity3d.com/)
 
-[Unity Documentation and Tutorials](http://unity3d.com/learn)
+[Learn Unity:](http://unity3d.com/learn)
 
 - [Unity Documentation](http://docs.unity3d.com/Manual/index.html)
 - [Unity Tutorials](http://unity3d.com/learn/tutorials)
