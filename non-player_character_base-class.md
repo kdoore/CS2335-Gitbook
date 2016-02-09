@@ -13,12 +13,12 @@ Since we've already created a Zombie class, it will be relatively easy to determ
 using UnityEngine;
 using System.Collections;
 
-public class NPCharacter: IDamage { //implement IDamage
+public class NPCharacter: IDamage { //implement IDamage in the base class
 
     //Class Fields or Instance Variables
 	
-	private int hitPoints;
-	protected float healthPoints;
+	private int hitPoints;  //use Property in child classes to modify hitPoints
+	private float healthPoints;
 	protected string name;
 	protected GameObject prefab;
 
@@ -33,7 +33,7 @@ public class NPCharacter: IDamage { //implement IDamage
 		}
 	}
 
-	public int HitPoints{       //myZombie.HitPoints = 4;
+	public int HitPoints{       //we can use properties to do additional tasks when this modify event was triggered somewhere else in the game
 		set{
 			hitPoints = value;
 			healthPoints -= value;
@@ -59,7 +59,7 @@ public class NPCharacter: IDamage { //implement IDamage
 		Debug.Log ("Constructor for NPC is called");
 	}
 
-    //This method will be overridden in Zombie but not in Kitten 
+    //This method will be overridden in Zombie but not in Kitten child class
 	public virtual void doSomething(){
 		Debug.Log ("Do Something in the BaseClass");
 	}
@@ -111,7 +111,6 @@ public class Zombie: NPCharacter{
 		Debug.Log ("Default Constructor for Zombie is called");
 	}
 
-
 	public Zombie( string n, int hp): base(){ // explicitly call default base-class constructor
 		
 		NumberOfZombies++;  //class level variable
@@ -142,7 +141,50 @@ public class Zombie: NPCharacter{
 }
 ```
 
+###Kitten Child Class
+The code below shows how easy it is to create additional child-classes once we've defined the NPCharacter base class.  We'll need to look at what happens if we don't implement the doSomething() method that is defined as virtual in the base class.  
 
+```
+using UnityEngine;
+using System.Collections;
+
+public class Kitten : NPCharacter {
+
+	public static int NumberOfKittens = 0;
+
+	private int milkCartons;
+
+	//BrainsEaten should only be associated with the Zombie class, not the Base class
+	public int MilkCartons{
+		get{
+			return milkCartons;
+		}
+		set{  ///properties give opportunity to modify other values and call methods
+			milkCartons = value;
+			healthPoints += (value * 0.5f);  //zombie health increases
+			Debug.Log("HealthPoints after milkCartons " + healthPoints);
+		}
+	}
+
+	public Kitten(){
+		healthPoints = 20;
+		name = "Kitty";
+		HitPoints = 5;
+		NumberOfKittens++; 
+		Debug.Log ("Default Constructor for Kitten is called");
+	}
+
+	public void DrinkMilk(int milk){
+		milkCartons += milk;
+		Debug.Log ("This is a Kitten specific method");
+	}
+
+	public override string ToString ()
+	{
+		return string.Format ("Kitten Name: {0}, HitPoints {1}", name, HitPoints);
+	}
+}
+```
 
 ###UML Diagram
 
