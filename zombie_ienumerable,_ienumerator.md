@@ -100,7 +100,9 @@ public class NPCollection : IEnumerable, IEnumerator   {  // foreach
 ###Implementation Example:  
 Create a Example1 class that can be attached to a gameObject like the main camera.  This code creates an instance of our NPCollection,  then we can use ``foreach`` to step through each element in the collection since we have implemented IEnumerable and IEnumerator in the NPCollection class.  This supports encapsulation because we don't need to know what type of dataStructure is used to hold our collection's elements.  
 
-Polymorphism allows us to execute np.doSomething( ) which is defined as a virtual method in NPCharacter, and then we defined doSomething() in the Zombie class to explicitly over-ride the base-class method. 
+Polymorphism allows us to execute np.doSomething( ) which is defined as a virtual method in NPCharacter, and then we defined doSomething() in the Zombie class to explicitly over-ride the base-class method. doSomething is not defined in the Kitten class, so in that case, the base-class method is executed.
+
+In order to execute code that is specific to our derived-classes: Zombie or Kitten, we must first do a test at run-time to determine the data-type of the current element: npc as we iterate using the foreach loop.  There are a few different ways to determine the 'type' of an object, here we are trying to test if the instance is a derived class instance: Zombie or Kitten, some methods to determine an object's type would not allow us to make this distinction.  One method is to try to typecase the object to the derived-class type ``Zombie z = npc as Zombie;  //try to cast as a zombie  ``, if this type-case is successful, then z will refer to an object of type Zombie an we can use z as a reference to our object so we can call Zombie methods.  We use a similar approach with Kitten.   
 
 ```
 using UnityEngine;
