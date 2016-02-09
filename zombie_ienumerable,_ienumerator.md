@@ -92,8 +92,6 @@ public class NPCollection : IEnumerable, IEnumerator   {  // foreach
 	public IEnumerator GetEnumerator(){
 		return (IEnumerator)this;
 	}
-
-
 }
 
 ```
