@@ -53,6 +53,10 @@ public class NPCharacter {
 		name = n;
 		Debug.Log ("Constructor for NPC is called");
 	}
+	
+	public virtual void doSomething(){  
+		Debug.Log("NPC do something");
+	}
 		
 	public override string ToString ()
 	{
