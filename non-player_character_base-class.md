@@ -67,7 +67,7 @@ public class NPCharacter {
 ```
 
 ###Protected Access Modifier:
-Notice that we have changed the access modifier for each of the class-instance/field variables.  When these were part of the Zombie class, we had them as private to enforce encapsulation and restrict access and modification of these variables.  However, using the private access modifier also restricts access to these variables even for child-classes.  It will make sense that we need access to these variables within a child class so the `protected` access modifier is designed specifically for this purpose. 
+Notice that we have changed the access modifier for each of the class-instance/field variables.  When these were part of the Zombie class, we had them as private to enforce encapsulation and restrict access and modification of these variables.  However, using the private access modifier also restricts access to these variables even for child-classes.  It might make sense that we need access to these variables within a child class so the `protected` access modifier is designed specifically for this purpose. 
 
 ###UML Diagram
 
