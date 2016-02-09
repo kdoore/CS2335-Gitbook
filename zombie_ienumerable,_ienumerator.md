@@ -101,68 +101,61 @@ In the code below, we define a custom collection class:  NPCollection, and we im
 
 ```
 
-public class NPCollection : IEnumerable, IEnumerator  {  // foreach
+using UnityEngine;
+using System.Collections;
 
-	private NPCharacter[] characters; //dataStructure to hold collection elements
+
+public class NPCollection : IEnumerable, IEnumerator   {  // foreach
+
+    private NPCharacter[] characters; //dataStructure to hold collection elements
 
 	private int position = -1;  //used for IEnumerator to keep track of the current instance
  	
 	public NPCollection(){  //constructor 
 
-		characters = new NPCharacter[3];
+		characters = new NPCharacter[3]; ///base class array
 
 		//polymorphism: 
 		//1. we can store child-class objects in an array
 		// of the base-class type
 		// 2. data-type will be determined at run-time to determine which
 		// methods are executed: base or child class
+		
 		characters[0] = new Zombie("NPC_Rob", Random.Range(10,15));
-		characters[1] = new Zombie("NPC_Stubbs", Random.Range(10,15));
+		characters[1] = new Kitten();
 		characters[2] = new Zombie("NPC_White", Random.Range(10,15));
-
-		//other NPC child-class objects can be in our collection
-		/////character[0] = new Kitten((names[i], Random.Range(10,15));
-
-		Debug.Log ("NPC " + characters[0].ToString ());
+        
 	}  //end of constructor
 		
 	///nuts and bolts are in IEnumerator
-
-	///IEnumerator Property, this refers to the current selected
-	/// collection object
-
-	public object Current{  //property
+	
+	//this is like the for loop equivalent of: characters[i]
+	public object Current{
 		get{
 			return characters [position];
 		}
 	}
-	/// <summary>
-	/// Reset this the collection position index.
-	/// </summary>
+    
+    //this is like the for loop equivalent of initialization (int i=0)
+	
 	public void Reset(){
 		position = -1;
 	}
-
-	/// <summary>
-	/// Moves the next.
-	/// </summary>
-	/// <returns><c>true</c>, position is still a valid index for the collection, <c>false</c> otherwise.</returns>
+    
+    //this is like the for loop equivalent: ( i< characters.Length; i++)
 	public bool MoveNext(){
 		position++;
 		return position < characters.Length;
 	}
-
-	/// <summary>
-	/// This is for IEnumerable Interface
-	/// Gets the enumerator.
-	/// </summary>
-	/// <returns>The enumerator.</returns>
+    
+    //This is required for IEnumerable, we need to provide access to the IEnumerator
+    
 	public IEnumerator GetEnumerator(){
 		return (IEnumerator)this;
 	}
 
-}
 
+}
 
 ```
 ###Implementation Example:  
@@ -175,35 +168,37 @@ using UnityEngine;
 using System.Collections;
 
 public class Example : MonoBehaviour {
-	/// <summary>
-	/// declare instance of collection
-	/// </summary>
-	private NPCollection myCollection;
-
-	// Use this for initialization
-	void Start () {
+	
+	public NPCollection myCollection;
 		
+		// Use this for initialization
+		void Start () {
 		myCollection = new NPCollection ();
 
-		//use foreach to iterate through the collection, no need to know the 
-		//datastructure used to store the collection elements
+		foreach (NPCharacter npc in myCollection) {    //use foreach with collection  
+			Debug.Log (npc.ToString ());   ///polymorphism determines overriding
 
-		foreach (NPCharacter np in myCollection) {
-			Debug.Log(np.ToString ());  //ToString( ) is defined as override in both np and zombie 
-			np.doSomething ();  //which version of doSomething( ) will be executed?
-			
-			//np.TakeDamage ();  //can't call TakeDamage on NPCharacter
-			
-			Zombie z=new Zombie();
-			if (np.GetType () == z.GetType()) {     //test to see if the run-time type is a Zombie
-				Zombie tempZ = np as Zombie;   		//Type cast np to a Zombie object
-				tempZ.TakeDamage (5);			//TakeDamage  can only apply to a Zombie object
+			npc.doSomething();    ///polymorphism determines method overriding 
+
+			//here we can check to see if our current npc element is a zombie or kitten
+
+			Zombie z = npc as Zombie;  //try to cast as a zombie
+			if(z != null){   //if successful at casting as a zombie
+				Debug.Log("Only a Zombie can eat brains");
+				z.EatBrains(5);//this only applies to zombie objects
 			}
+
+			Kitten k = npc as Kitten;
+			if (k != null) {  //if successful at casting as a kitten
+				Debug.Log ("Only a Kitten can drink milk");
+					k.DrinkMilk (3);
+            }
 		}
-
+			
 		Debug.Log ("Number of Zombies" + Zombie.NumberOfZombies);
+		Debug.Log ("Number of Kittens" + Kitten.NumberOfKittens);
 	}
-
 }
+
 
 ```
