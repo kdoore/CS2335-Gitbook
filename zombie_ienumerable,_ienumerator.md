@@ -166,26 +166,40 @@ public class NPCollection : IEnumerable, IEnumerator  {  // foreach
 
 ```
 ###Implementation Example:  
-Create a Example1 class that can be attached to a gameObject like the main camera.  This declares and initializes an instance: zombies of our Zombies collection.  Then we use ``foreach`` to step through each element in the collection
+Create a Example1 class that can be attached to a gameObject like the main camera.  This code creates an instance of our NPCollection,  then we can use ``foreach`` to step through each element in the collection since we have implemented IEnumerable and IEnumerator in the NPCollection class.  This supports encapsulation because we don't need to know what type of dataStructure is used to hold our collection's elements.
 
 ```
 using UnityEngine;
 using System.Collections;
 
-public class Example1 : MonoBehaviour {
-	
-	//private Zombies zombies ;   our collection class
-	
-	public Zombies zombies;
-	
+public class Example : MonoBehaviour {
+	/// <summary>
+	/// declare instance of collection
+	/// </summary>
+	private NPCollection myCollection;
+
 	// Use this for initialization
 	void Start () {
-		zombies=new Zombies();  //initialize collection by calling constructor
-		//use foreach to step through the collection - using IEnumerable, IEnumerator Interfaces
-		foreach(Zombie z in zombies){
-			print("Zombies name:  " + z.Name + "  HitPoints " + z.HitPoints);
+		
+		myCollection = new NPCollection ();
+
+		//use foreach to iterate through the collection, no need to know the 
+		//datastructure used to store the collection elements
+
+		foreach (NPCharacter np in myCollection) {
+			Debug.Log(np.ToString ());
+			np.doSomething ();
+			//np.TakeDamage ();  //can't call TakeDamage on NPCharacter
+			Zombie z=new Zombie();
+			if (np.GetType () == z.GetType()) {     //test to see if the run-time type is a Zombie
+				Zombie tempZ = np as Zombie;   		//Type cast np to a Zombie object
+				tempZ.TakeDamage (5);			//TakeDamage is not defined in NPCharacter so we can only apply to a Zombie object
+			}
 		}
+
+		Debug.Log ("Number of Zombies" + Zombie.NumberOfZombies);
 	}
-	
+
 }
+
 ```
