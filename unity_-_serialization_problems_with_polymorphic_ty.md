@@ -6,7 +6,8 @@ Polymorphism is one of the three main pillars of object-oriented programming, un
 - [Advanced Unity Serialization](http://www.codingjargames.com/blog/2012/11/30/advanced-unity-serialization/)
 - [Unity Serialization](http://blogs.unity3d.com/2014/06/24/serialization-in-unity/) 
 
-The code snippet below gives an example of the situation:
+The code snippet below gives an example of the situation. When serialized, the base-class type is actually serialized, not the derived-type, if using a base-class reference.
+
 ```
 [Serializable] class Base { public int myInt; }
 [Serializable] class Derived : Base { public string myString; }
