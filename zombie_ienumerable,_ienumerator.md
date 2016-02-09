@@ -189,13 +189,15 @@ public class Example : MonoBehaviour {
 		//datastructure used to store the collection elements
 
 		foreach (NPCharacter np in myCollection) {
-			Debug.Log(np.ToString ());
-			np.doSomething ();
+			Debug.Log(np.ToString ());  //ToString( ) is defined as override in both np and zombie 
+			np.doSomething ();  //which version of doSomething( ) will be executed?
+			
 			//np.TakeDamage ();  //can't call TakeDamage on NPCharacter
+			
 			Zombie z=new Zombie();
 			if (np.GetType () == z.GetType()) {     //test to see if the run-time type is a Zombie
 				Zombie tempZ = np as Zombie;   		//Type cast np to a Zombie object
-				tempZ.TakeDamage (5);			//TakeDamage is not defined in NPCharacter so we can only apply to a Zombie object
+				tempZ.TakeDamage (5);			//TakeDamage  can only apply to a Zombie object
 			}
 		}
 
