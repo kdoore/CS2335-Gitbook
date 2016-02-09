@@ -79,8 +79,9 @@ The diagram below shows the Unified Modeling Language model for the classes for 
 
 Polymoprhism is one of the three main pillars of object-oriented programming, unfortunately, Unity does not provide great support for using polymorphic types in conjunction with Serialization.  There are several good articles and blogs  that discuss the details of the issues:
 
-- [SERIALIZATION OF POLYMORPHIC DATA TYPES](https://feedback.unity3d.com/suggestions/serialization-of-polymorphic-dat)
+- [Serialization of Polymorphic Data-Types](https://feedback.unity3d.com/suggestions/serialization-of-polymorphic-dat)
 - [Advanced Unity Serialization](http://www.codingjargames.com/blog/2012/11/30/advanced-unity-serialization/)
+- [Unity Serialization](http://blogs.unity3d.com/2014/06/24/serialization-in-unity/) 
 
 The code snippet below gives an example of the situation:
 ```
@@ -92,3 +93,4 @@ class MyBehaviour : MonoBehaviour
    public Base  _myBase = new Derived(); // Error... This will NOT work, only myInt will be saved.
 }
 ```
+
