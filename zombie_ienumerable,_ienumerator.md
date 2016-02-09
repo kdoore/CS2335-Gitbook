@@ -35,6 +35,27 @@ Methods:  MoveNext()   //advance the inumerator to the next element in the colle
             
 ```
 
+We can examine the structure of a traditional for-loop, then we can map these IEnumerator concepts to the for-loop to understand how they are used to provide us with foreach statement functionality:
+
+```
+int[] someArray = {1,5,10};
+		for (int i = 0; i < someArray.Length; i++) {
+			someArray [i] = 5; //over-write the value
+		}
+```
+In the code above:
+    1. we have a count variable: i    // we'll need to create a count variable in our code
+    2. We initialize this each time this for-loop is first executed
+    3. someArray[i] is the `current` element we can access inside the loop
+    4. i++, test: i< someArray.Length, these control iteration through elements and termination condition for the iteration.
+    
+To use the foreach loop with our collection, we need to implement IEnumerator methods, this is what is implemented in our NPCollection.cs code below:
+    1. we need a count variable: int position = -1
+    2. Reset()  reinitializes position:  position = -1
+    3. Current is the object in the collection[ position ] at the current position
+    4. MoveNext() , we increment position++, return position < collection.Length
+
+
 ###NPCollection Class - A collection
 In the code below, we define a custom collection class:  NPCollection, and we implement the IEnumerator and IEnumeration interfaces for this class, so in Example.cs, we can interate through our collection without knowing the type of dataStructure: array, list, dictionary, that is used to hold our collection elements since we'll be able to use forEach directly with our collection.
 
