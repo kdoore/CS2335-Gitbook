@@ -15,6 +15,7 @@
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
 * [Non-Player Character: Base-Class](non-player_character_base-class.md)
 * [NPC Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
+* [Unity - Serialization Problems with Polymorphic Types](unity_-_serialization_problems_with_polymorphic_ty.md)
 * [Zombie - Sorting](zombie_-_sorting.md)
 * [Branching Narrative - Structure](branching_narrative_-_structure.md)
 * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
@@ -44,5 +45,4 @@
    * [Finite State Machine](finite_state_machine.md)
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
-* [Unity - Serialization Problems with Polymorphic Types](unity_-_serialization_problems_with_polymorphic_ty.md)
 
