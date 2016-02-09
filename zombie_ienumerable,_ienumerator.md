@@ -166,7 +166,9 @@ public class NPCollection : IEnumerable, IEnumerator  {  // foreach
 
 ```
 ###Implementation Example:  
-Create a Example1 class that can be attached to a gameObject like the main camera.  This code creates an instance of our NPCollection,  then we can use ``foreach`` to step through each element in the collection since we have implemented IEnumerable and IEnumerator in the NPCollection class.  This supports encapsulation because we don't need to know what type of dataStructure is used to hold our collection's elements.
+Create a Example1 class that can be attached to a gameObject like the main camera.  This code creates an instance of our NPCollection,  then we can use ``foreach`` to step through each element in the collection since we have implemented IEnumerable and IEnumerator in the NPCollection class.  This supports encapsulation because we don't need to know what type of dataStructure is used to hold our collection's elements.  
+
+Polymorphism allows us to execute np.doSomething( ) which is defined as a virtual method in NPCharacter, and then we defined doSomething() in the Zombie class to explicitly over-ride the base-class method. 
 
 ```
 using UnityEngine;
