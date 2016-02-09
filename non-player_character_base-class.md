@@ -75,4 +75,20 @@ The diagram below shows the Unified Modeling Language model for the classes for 
 
 ![](NPCharacterUML.png)
 
+###Serialization Problems in Unity when Using Polymorphic Types
 
+Polymoprhism is one of the three main pillars of object-oriented programming, unfortunately, Unity does not provide great support for using polymorphic types in conjunction with Serialization.  There are several good articles and blogs  that discuss the details of the issues:
+
+- [SERIALIZATION OF POLYMORPHIC DATA TYPES](https://feedback.unity3d.com/suggestions/serialization-of-polymorphic-dat)
+- [Advanced Unity Serialization](http://www.codingjargames.com/blog/2012/11/30/advanced-unity-serialization/)
+
+The code snippet below gives an example of the situation:
+```
+[Serializable] class Base { public int myInt; }
+[Serializable] class Derived : Base { public string myString; }
+ 
+class MyBehaviour : MonoBehaviour
+{
+   public Base  _myBase = new Derived(); // Error... This will NOT work, only myInt will be saved.
+}
+```
