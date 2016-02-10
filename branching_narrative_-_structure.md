@@ -53,6 +53,9 @@ An early and popluar Interactive Fiction series is the *Zork series*.  Chris Bor
 
 >ZORK was created at the MIT Laboratory for Computer Science, by Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling.  It was inspired by the ADVENTURE game of Crowther and Woods, and the long tradition of fantasy and science fiction adventure.  ZORK was originally written in MDL (alias MUDDLE).  The current version was translated from MDL into Inform by Ethan Dicks <erd@infinet.com>."
 
+###Zork Resources
+[Online Game,  Maps, Walkthroughs](http://www.ironrealms.com/zork-i-maps)
+
 ###References
 
 Crawford, Chris (2012-12-12). _Chris Crawford on Interactive Storytelling_ (2nd Edition) (p. 161). Pearson Education. Kindle Edition. 
