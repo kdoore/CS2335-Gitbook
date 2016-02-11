@@ -41,5 +41,8 @@ using System.Collections.Generic;  //we need to add this additional directive
     Car tempCar = myCarList[0];    //access a car object and assign to a temp reference
  ```   
  
+ ### Dictcionary < TKey >< TValue >
+ 
+ A dictionary 
     
            
