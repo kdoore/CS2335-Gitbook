@@ -26,3 +26,5 @@ For a comparison between programming languages: Java and C#, see this [MSDN refe
 - [Unity Scripting Tutorials](https://unity3d.com/learn/tutorials/topics/scripting)
 
 [Unity Community Wiki: Tutorials](http://wiki.unity3d.com/index.php/Tutorials)
+
+[Unity Community Wiki: Programming, C# Tutorial](http://wiki.unity3d.com/index.php/CSharp_Unity_Tutorial)
