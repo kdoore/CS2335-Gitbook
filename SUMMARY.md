@@ -45,5 +45,5 @@
    * [Finite State Machine](finite_state_machine.md)
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
-* C# Data Structures and Collections
+* [C# Data Structures and Collections](c_data_structures_and_collections.md)
 
