@@ -28,3 +28,6 @@ For a comparison between programming languages: Java and C#, see this [MSDN refe
 [Unity Community Wiki: Tutorials](http://wiki.unity3d.com/index.php/Tutorials)
 
 [Unity Community Wiki: Programming, C# Tutorial](http://wiki.unity3d.com/index.php/CSharp_Unity_Tutorial)
+
+###Unity 2D Game Design Tutorials:
+[Parallax in a 2D Game](http://pixelnest.io/tutorials/2d-game-unity/)
