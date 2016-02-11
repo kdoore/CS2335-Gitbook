@@ -31,7 +31,7 @@ To resolve this issue of _Type-Safety_, C# introduced Generics, and the Generic 
 
 ``List < T > myGenericList = new List< T >();``  //T is a Generic Type Placeholder
 
-### Generic List < T >
+###Generic List < T >
 
 ```
 using System.Collections.Generic;  //we need to add this additional directive
@@ -42,7 +42,7 @@ using System.Collections.Generic;  //we need to add this additional directive
     Car tempCar = myCarList[0];    //access a car object and assign to a temp reference
  ```   
  
- ### [Dictionary < TKey >< TValue >](https://kdoore.gitbooks.io/cs-2335/content/dictionary.html#dictionary)
+ ###[Dictionary < TKey >< TValue >](https://kdoore.gitbooks.io/cs-2335/content/dictionary.html#dictionary)
  
  A dictionary 
     
