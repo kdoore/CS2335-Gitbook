@@ -21,7 +21,7 @@ There are many Dictionary methods to let us interact and modify Dictionary eleme
         //correct approach - check for key before using Add() method
          if(inventory.ContainsKey("frogs")){  //if key exists, then update value
               //to update a value
-            inventory["frogs"] = 3;   //bracket notation
+            inventory["frogs"] = 3;   //bracket notation gives access to the value element
          }
          else{
             inventory.Add("frogs", 1);  //create a new dictionary element that is key/value pair
