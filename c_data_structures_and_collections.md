@@ -19,7 +19,7 @@ When ArrayLists were designed as an improvement over Arrays, they were designed 
          Car myTempCar = (Car) myCarList[i];  //type-cast required.
          
 ```
-One problem with ArrayLists is that they aren't **Type-Safe**, we can't be guaranteed that the object-references in the ArrayList actually refer to a specific Type of object, this means ArrayLists are not **Type-Safe**.  
+One problem with ArrayLists is that they aren't **Type-Safe**, we can't be guaranteed that the object-references in the ArrayList actually refer to a specific Type of object. 
 
 To resolve this issue, C# introduced Generics, and the Generic Collection Classes.  These collections are similar to Arrays in that we must specify the data-type of object-references that can be stored in the collection.  All Generic Collection classes use the syntax <T> or something similar, where T is a placeholder that indicates we must specify the type of object-references that can be stored in the collection.
 
