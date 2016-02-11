@@ -26,10 +26,8 @@ Here is an example of ArrayList:
          Car myTempCar = (Car) myCarList[i];  //type-cast required.
 ```
 
-
-
 ###C# Generics
-To resolve this issue, C# introduced Generics, and the Generic Collection Classes.  These collections are similar to Arrays in that we must specify the data-type of object-references that can be stored in the collection.  All Generic Collection classes use the syntax <T> or something similar, where T is a placeholder that indicates we must specify the Type of objects *(object-references)* that can be stored in the collection.
+To resolve this issue of _Type-Safety_, C# introduced Generics, and the Generic Collection Classes.  These collections are similar to Arrays in that we must specify the data-type of object-references that can be stored in the collection.  All Generic Collection classes use the syntax <T> or something similar, where T is a placeholder that indicates we must specify the Type of objects *(object-references)* that can be stored in the collection.
 
 ``List < T > myGenericList = new List< T >();``  //T is a Generic Type Placeholder
 
