@@ -21,5 +21,17 @@ When ArrayLists were designed as an improvement over Arrays, they were designed 
 ```
 So the Problem with ArrayLists is that they aren't **Type-Safe**, we can't be guaranteed that the object-references in the ArrayList actually refer to a specific Type.  
 
-To resolve this issue, C# introduced Generic Collection Classes.  These collections are similar to Arrays in that we must specify the data-type of object-references that can be stored in the collection.  All Generic Collection classes use the syntax <T> or something similar, where T is a placeholder that indicates we must specify the type of object-references that can be stored in the collection.
+To resolve this issue, C# introduced Generics, and the Generic Collection Classes.  These collections are similar to Arrays in that we must specify the data-type of object-references that can be stored in the collection.  All Generic Collection classes use the syntax <T> or something similar, where T is a placeholder that indicates we must specify the type of object-references that can be stored in the collection.
+
+`List < T > myGenericList = new List< T >();  //T is a Generic Type Placeholder
+
+```
+    using System.Collections.Generic;  //we need to add this additional directive
+    
+    List<Car> myCarList = new List<Car>();   Declare and initialize a List to hold Car object references.
+    
+    myCarList.add( new Car());  //add a car obj. reference
+    Car tempCar = myCarList[0];    //access a car object and assign to a temp reference
+    
+    
            
