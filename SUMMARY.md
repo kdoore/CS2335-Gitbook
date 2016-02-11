@@ -45,4 +45,5 @@
    * [Finite State Machine](finite_state_machine.md)
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
+* Data Structures: Arrays, Lists, Dictionaries
 
