@@ -9,7 +9,7 @@ Arrays have a fixed size, so if we declare an Array to hold 100 elements, if our
 
 ###ArrayList
 ArrayLists were designed as an improvement over Arrays, ArrayLists were designed to hold references to `Object`.  `Object` is a special Type, all classes are child classes of the `Object` class.  So, since ArrayList is designed to hold `Object` - type references, this would seem to be ideal.  The ArrayList size can be changed dynamically, as the program is executing, we can add or remove elements from an ArrayList at anytime using a variety of ArrayList methods such as: Add( Object o).
-However, one problem with ArrayLists is that they aren't **Type-Safe**, we can't be guaranteed that the object-references in the ArrayList actually refer to a specific Type of object. In order to use an element from an ArrayList, we must do a Type-cast conversion to insure the element is compatible with the object-type that we are expecting. 
+However, one problem with ArrayLists is that they aren't **Type-Safe**, we can't be guaranteed that the object-references in the ArrayList actually refer to a specific Type of object. In order to use an element from an ArrayList, we must do a Type-cast conversion to insure the element is compatible with the object-type that we are expecting. So this adds an additional step that must be done whenever we try to use an element we have stored in an ArrayList.  In addition, no error will occur when adding any-type of object to an ArrayList, so we can't be sure someone on our programming team didn't accidently add an incorrect object Type to our ArrayList.  For this reason, ArrayList is not considered _Type-safe_.
 
 Here is an example of ArrayList:
 
