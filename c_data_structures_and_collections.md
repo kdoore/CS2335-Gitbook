@@ -32,7 +32,10 @@ To resolve this issue of _Type-Safety_, C# introduced Generics, and the Generic 
 ``List < T > myGenericList = new List< T >();``  //T is a Generic Type Placeholder
 
 ###Generic List < T >
+[MSDN Reference: List< T >](https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx)
 
+In order to use Generic Collections like List< T >, we must include a directive: _using System.Collections.Generic;_ at the top of our file. In order to use a Generic Type, we simply specify the data-type of the element that we will use in the collection as seen below.  The actual items `stored` in the collection are object references which hold the memory address of an associated object.
+List Example: 
 ```
 using System.Collections.Generic;  //we need to add this additional directive
     
@@ -41,6 +44,7 @@ using System.Collections.Generic;  //we need to add this additional directive
     myCarList.add( new Car());  //add a car obj. reference
     Car tempCar = myCarList[0];    //access a car object and assign to a temp reference
  ```   
+ Lists 
  
  ###[Dictionary < TKey >< TValue >](https://kdoore.gitbooks.io/cs-2335/content/dictionary.html#dictionary)
  
