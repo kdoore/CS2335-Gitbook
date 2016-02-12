@@ -17,8 +17,8 @@
  
  [Open Game Art](http://opengameart.org/)
  
-[ Open Game Art Bundle](http://open.commonly.cc/)
+ [Open Game Art Bundle](http://open.commonly.cc/)
 
-[WidgetWorx - SpriteLib](http://www.widgetworx.com/spritelib/)
+ [WidgetWorx - SpriteLib](http://www.widgetworx.com/spritelib/)
  
  Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
