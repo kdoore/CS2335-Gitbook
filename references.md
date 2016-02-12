@@ -21,7 +21,9 @@
 
  [WidgetWorx - SpriteLib](http://www.widgetworx.com/spritelib/)
  
-[ Random Game-World Generator](http://donjon.bin.sh/)
+[Random Game-World Generator](http://donjon.bin.sh/)
+
+[Fantasy Map Tutorial and Resources](http://calthyechild.deviantart.com/art/Fantasy-Map-TutorialxResources-258559867)
  
  Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
  
