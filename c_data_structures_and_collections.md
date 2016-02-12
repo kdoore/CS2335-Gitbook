@@ -48,6 +48,6 @@ using System.Collections.Generic;  //we need to add this additional directive
  
  ###[Dictionary < TKey >< TValue >](https://kdoore.gitbooks.io/cs-2335/content/dictionary.html#dictionary)
  
- A dictionary 
+ A Dictionary is a Type-Safe data-structure designed to hold data that 
     
            
