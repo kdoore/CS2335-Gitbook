@@ -24,6 +24,10 @@
 [Random Game-World Generator](http://donjon.bin.sh/)
 
 [Fantasy Map Tutorial and Resources](http://calthyechild.deviantart.com/art/Fantasy-Map-TutorialxResources-258559867)
+
+[GameArt 2D](http://www.gameart2d.com/freebies.html)
+
+Kenny
  
  Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
  
