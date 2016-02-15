@@ -48,6 +48,6 @@ using System.Collections.Generic;  //we need to add this additional directive
  
  ###[Dictionary < TKey >< TValue >](https://kdoore.gitbooks.io/cs-2335/content/dictionary.html#dictionary)
  
- A Dictionary is a Type-Safe data-structure designed to hold data that has an association between a lookup-key and a value we'd like to store using that key.  This is different than a list because a list simply stores data in an ordered arrangement.  Dictionaries use a hash-algorithm to 
+ A Dictionary is a Type-Safe data-structure designed to hold data that has an association between a lookup-key and a value we'd like to store using that key.  This is different than a list because a list simply stores data in an ordered arrangement.  Dictionaries use a hash-algorithm which makes searching for the key an efficient process compared to search implemented for a List or Array.  
     
            
