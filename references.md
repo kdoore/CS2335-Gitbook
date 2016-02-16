@@ -27,7 +27,6 @@
 
 [GameArt 2D](http://www.gameart2d.com/freebies.html)
 
-Kenny
  
  Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
  
