@@ -20,7 +20,7 @@
 * [Branching Narrative - Structure](branching_narrative_-_structure.md)
 * [C# Data Structures and Collections](c_data_structures_and_collections.md)
 * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
-* Screen-Space Canvas
+* [Screen-Space Canvas](screen-space_canvas.md)
 * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Project 2 - Source Code](project_2_-_source_code.md)
 * [StateManager - Singleton Design Pattern](statemanager.md)
