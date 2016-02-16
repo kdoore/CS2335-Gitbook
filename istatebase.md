@@ -1,7 +1,9 @@
 # IStateBase
-IStateBase is a custom interface that we will have all StateX classes implement.  This guarantees that all States will implement all Properties and Methods defined in this interface.
+IStateBase is a custom interface that we will have all StateX classes implement.  This guarantees that all States will implement all Properties and Methods defined in this interface. 
 
-In StateManager, we will use an IStateBase object reference to keep track of the current active state instance.  
+StateManager,  will use an IStateBase object reference to keep track of the current active state instance.  StateManager will execute the methods  defined the interface IStateBase for the currently activeState.  StateManager delegates responsibility to the current activeState using these methods.
+
+IStateBase 
 
 ```
 // in StateManager
