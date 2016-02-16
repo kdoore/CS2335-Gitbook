@@ -11,7 +11,7 @@ We will create a new Unity 2D project and create 3 different scenes: Start, Scen
 5. Attach the canvas object: menuScript to the button onClick() handler.
 6. Select the LoadScene(int level) function to be executed for the onClick() method
 7. Put the correct Scene index value into the parameter box for the LoadScene method: Ie: for the start button, the index value should be 0.
-
+8. We can execute this logic completely from code, see last section for details. 
 
 ###MenuScript LoadScene() Method
 Below is the code for our loadScene() method that will be attached to each button's onClick event handler.  
