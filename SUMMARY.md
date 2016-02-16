@@ -24,6 +24,7 @@
 * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Project 2 - Source Code](project_2_-_source_code.md)
 * [StateManager - Singleton Design Pattern](statemanager.md)
+* [IStateBase](istatebase.md)
 * [Finding Game Objects](finding_game_objects.md)
 * [Game Objects](game_objects.md)
 * [Game Scene](game_scene.md)
@@ -47,5 +48,4 @@
    * [Finite State Machine](finite_state_machine.md)
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
-* [IStateBase](istatebase.md)
 
