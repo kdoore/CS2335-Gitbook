@@ -12,7 +12,7 @@ The image below shows the behavior of the starter project.  This includes button
  
  ###2D Image: Texture to Sprite
  
- In this project you'll add images for background images and button images.  To use images in 2D mode in Unity, first create a Textures folder and then drag your images into that folder.  To use an image, select the image in the Textures folder, then in the inspector select: Texture Type = Sprite ( 2D and UI) and then 'apply'.  Now you can use this for any 2D sprite in your project.
+ In this project you'll add images for background images and button images.  To use images in 2D mode in Unity, first create a Textures folder and then drag your images into that folder.  To use an image, select the image in the Textures folder, then in the inspector select: Texture Type = Sprite ( 2D and UI) and then 'apply'.  Now you can use this for any 2D sprite in your project, or you can use the image as a UI-Image.
  
  ![](imageTexture.gif)
  
