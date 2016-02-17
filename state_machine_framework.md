@@ -1,2 +1,2 @@
-# State Machine Framework
+![](StateMachine.png)# State Machine Framework
 
