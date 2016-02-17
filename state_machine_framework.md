@@ -31,6 +31,9 @@ void StateUpdate(){
 
 ```
 
+###Unity Start( ) Event
+
+
 ![](StateMachine.png)
 
 
