@@ -48,5 +48,5 @@
    * [Finite State Machine](finite_state_machine.md)
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
-* State Machine Framework
+* [State Machine Framework](state_machine_framework.md)
 
