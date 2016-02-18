@@ -25,6 +25,14 @@ Below is the new code that we've added to MenuScript.cs.
     public CanvasGroup btnPanelCG;
 	public bool panelHidden;
 	
+	// Use this for initialization of object references
+	void Start () {
+		panelHidden=true;
+		btnPanelCG.alpha=0;
+		btnPanelCG.interactable=false;
+		btnPanelCG.blocksRaycast=false;
+	}
+	
 	public void hidePanel(){  //toggles visiblity
 		if(panelHidden==true){  // if it's currently hidden
 			btnPanelCG.alpha=1;   //set visible
@@ -42,13 +50,7 @@ Below is the new code that we've added to MenuScript.cs.
 			panelHidden=true;  //change the state
 		}
 	}
-	// Use this for initialization
-	void Start () {
-		panelHidden=true;
-		btnPanelCG.alpha=0;
-		btnPanelCG.interactable=false;
-		btnPanelCG.blocksRaycast=false;
-	}
+	
 	```
 ### Connect MenuScript.btnPanel with Scene btnPanel
 
