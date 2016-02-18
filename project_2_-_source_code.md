@@ -5,11 +5,7 @@
 Here's the link to the updated starter project.
 [Starter_Code_Feb16_2016](https://utdallas.box.com/Project2StarterCodeFeb16)
 
-The image below shows the behavior of the starter project.  This includes buttons to hide panels, buttons to show panels, and buttons to change scenes.  Also, there's some player data that gets updated each time you change scenes and this is displayed when clicking on the image button in the lower left. When clicked, this panel's visibility is toggled on and off.
 
- ![](8S4CitwjlI.gif)
- 
- 
  ###2D Image: Texture to Sprite
  
  In this project you'll add images for background images and button images.  To use images in 2D mode in Unity, first create a Textures folder and then drag your images into that folder.  To use an image, select the image in the Textures folder, then in the inspector select: Texture Type = Sprite ( 2D and UI) and then 'apply'.  You may also want to set these values: FilterMode: Point, Format: Truecolor.  Now you can use this for any 2D sprite in your project, or you can use the image as a UI-Image.  
