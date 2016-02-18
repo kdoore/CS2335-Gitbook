@@ -17,8 +17,6 @@ Here's the link to the updated starter project.
  
  ![](Screenshot 2016-02-17 19.03.33.png)
  
- ![](imageTexture.gif)
- 
  ###Sprite to Button Image
  
  Once you've converted your image from a Texture to a Sprite, then you can use it as a sprite for such things as a UI button.  First you'll create a UI-Button Oject, then you'll select the image-file as the source image for your button.  See animation below.  You may want to clear the text from the Button's Text field.
