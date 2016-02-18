@@ -76,24 +76,20 @@ public class BeginState : IStateBase {
 
 	}
 
-
 	// Update is called once per frame
 	public void StateUpdate () {
-
+        //add code as needed
 	}
-
 
 	public void StateGUI(){
-
+        ///add GUI code as needed
 	}
-
 	public void InitializeObjectRefs (){
 		endBtn = GameObject.Find ("EndButton").GetComponent<Button> ();
 		endBtn.onClick.AddListener (LoadEndScene);///
 
 		Debug.Log ("Add Debug Info");
 	}
-
 
 	public void LoadEndScene(){  
 		Debug.Log ("Add Debug Info");
