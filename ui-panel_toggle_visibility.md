@@ -63,4 +63,17 @@ Now we need to create a button that's not in the btnPanel, this button will cont
 
 ![](hidePanel.gif)
 
+Rather than use the inspector to make connections between our code and the scene gameObjects, we can also create these connections directly in our code using 
+
+```
+Private Button sceneBtn;
+sceneBtn = GameObject.Find("ButtonInScene").GetComponent<Button>();
+sceneBtn.onClick.addListener(myFunction);
+
+void myFunction(){
+    //doSomething();
+}
+
+``
+
 
