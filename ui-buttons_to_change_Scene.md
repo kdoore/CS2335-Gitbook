@@ -2,11 +2,11 @@
 
 In Unity, we can use Scenes to implement game levels, we can write C# scripts to write a versatile controller method that can be used on any button to change the game scene.  
 
-We will create a new Unity 2D project and create 3 different scenes: Start, Scene1, End.  Then we also need to create 3 buttons that will allow the user to jump between the scenes. Here are the steps we'll need to do. 
+We will create a new Unity-2D project and create 3 different scenes: Start, Scene1, End.  Then we also need to create 3 buttons that will allow the user to jump between the scenes. Here are the steps we'll need to do. 
 
 1. Add 3-Buttons to each Scene
 2. Add all scenes to the edit => Build Settings  => Scenes
-3. Write a MenuScript Script to define a LoadScene(int level) custom method 
+3. Write a custom Script: menuScript, to define a LoadScene(int level) custom method 
 4. Attach the MenuScript to an object in the scene - we'll attach it to the Canvas since it's acting on Canvas elements
 5. Attach the canvas object: menuScript to the button onClick() handler.
 6. Select the LoadScene(int level) function to be executed for the onClick() method
@@ -14,7 +14,7 @@ We will create a new Unity 2D project and create 3 different scenes: Start, Scen
 8. We can execute this logic completely from code, see last section for details. 
 
 ###MenuScript LoadScene() Method
-Below is the code for our loadScene() method that will be attached to each button's onClick event handler.  
+Below is the code for our loadScene() method that will be attached to each button's onClick event handler. There is also an overloaded version of Application.LoadLevel("SceneName"), where the input parameter is the string version of the Scene name; 
 
 ```
 	public void loadScene (int level){
