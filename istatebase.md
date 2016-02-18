@@ -87,7 +87,6 @@ public class BeginState : IStateBase {
 	public void InitializeObjectRefs (){
 		endBtn = GameObject.Find ("EndButton").GetComponent<Button> ();
 		endBtn.onClick.AddListener (LoadEndScene);///
-
 		Debug.Log ("Add Debug Info");
 	}
 
