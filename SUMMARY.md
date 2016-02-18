@@ -48,6 +48,7 @@
    * [Flow-Chart](flow-chart_example.md)
    * [Finite State Machine](finite_state_machine.md)
    * [State Machine Framework](state_machine_framework_diagram.md)
+   * UML Class Diagram
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
 
