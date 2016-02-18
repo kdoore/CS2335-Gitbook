@@ -38,7 +38,8 @@ void StateUpdate(){
 ![](StateMachine.png)
 
 ###StateManager.cs Code
-public class StateManager : MonoBehaviour {
+```
+   public class StateManager : MonoBehaviour {
 
 	public static StateManager instanceRef;
 	private IStateBase activeState; //interface as object reference for classes that implement the interface
@@ -88,6 +89,8 @@ public class StateManager : MonoBehaviour {
 		}
 	}
 }
+
+```
 
 
 
