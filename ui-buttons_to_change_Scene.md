@@ -14,7 +14,7 @@ We will create a new Unity-2D project and create 3 different scenes: Start, Scen
 8. We can execute this logic completely from code, see last section for details. 
 
 ###MenuScript LoadScene() Method
-Below is the code for our loadScene() method that will be attached to each button's onClick event handler. There is also an overloaded version of Application.LoadLevel("SceneName"), where the input parameter is the string version of the Scene name; 
+Below is the code for our loadScene() method that will be attached to each button's onClick event handler. There is also an overloaded version of Application.LoadLevel("SceneName"), where the input parameter is the string version of the scene name; 
 
 ```
 	public void loadScene (int level){
@@ -27,8 +27,6 @@ Below is the code for our loadScene() method that will be attached to each butto
 The animation below the code shows how to implement this. First the MenuScript is added to the Canvas object, then the button's onClick() method is set by adding the Canvas object to the onClick script source.  Then the dropdown allows selection of the loadScene() method.  Finally we set the int input value so that it matches the index of the level we want loaded when the user clicks the button.  
 
 ![](UI_buttons.gif)
-	
-The animation below the code shows how to implement this. First the MenuScript is added to the Canvas object, then the button's onClick() method is set by adding the Canvas object to the onClick script source.  Then the dropdown allows selection of the loadScene() method.  Finally we set the int input value so that it matches the index of the level we want loaded when the user clicks the button. 
 
 ###Add Scenes to Project Build Settings
 
