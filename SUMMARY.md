@@ -47,6 +47,7 @@
 * [Diagrams](diagrams.md)
    * [Flow-Chart](flow-chart_example.md)
    * [Finite State Machine](finite_state_machine.md)
+   * State Machine Framework 
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
 
