@@ -37,5 +37,57 @@ void StateUpdate(){
 
 ![](StateMachine.png)
 
+###StateManager.cs Code
+public class StateManager : MonoBehaviour {
+
+	public static StateManager instanceRef;
+	private IStateBase activeState; //interface as object reference for classes that implement the interface
+
+	public GameState curState;
+
+	private Button endBtn, startBtn;
+
+	//add comments
+	void Awake(){
+		if (instanceRef == null) {
+			instanceRef = this;
+			DontDestroyOnLoad (gameObject);  //the gameObject this is attached to 
+		} else {   //
+			DestroyImmediate(gameObject);   
+			Debug.Log ("Destroy GameObject");
+		}
+
+	}
+	// Use this for initialization
+	void Start () {
+		activeState = new BeginState (this);
+		curState = GameState.Begin;
+		activeState.InitializeObjectRefs ();
+	}
+
+	// Update is called once per frame
+	void Update () {
+		if (activeState != null) {
+			activeState.StateUpdate ();
+		}
+	}
+
+	//add comments
+	public void SwitchState(IStateBase newState){
+		activeState = newState;
+		curState = newState.State;
+		Debug.Log ("Add Debug Info");
+	}
+
+
+	//add comments
+	void OnLevelWasLoaded(int levelName) {
+		if (levelName == (int)curState) {
+			Debug.Log ("Add Debug Info");
+			activeState.InitializeObjectRefs ();
+		}
+	}
+}
+
 
 
