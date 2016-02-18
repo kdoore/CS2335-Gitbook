@@ -17,7 +17,7 @@ The image below shows the behavior of the starter project.  This includes button
  ![](Screenshot 2016-02-17 18.19.38.png)
  
  ###Sorting Layers
- If we have a scene that contains images that are not UI-Images, then our canvas may be obscured by this 2D-Sprite. While the order of objects in the hierarchy should determine the layer ordering, where objects higher in the hierarchy are considered as bottom layers, and objects lower in the hierarchy are considered as nearer to the camera, this does not always work when using Sprite gameObjects in conjunction with the UI-Canvas elements.  To control ordering of these layers, we need to define _ Sorting-Layers_ and we need to 
+ If we have a scene that contains images that are not UI-Images, then our canvas may be obscured by this 2D-Sprite. While the order of objects in the hierarchy should determine the layer ordering, where objects higher in the hierarchy are considered as bottom layers, and objects lower in the hierarchy are considered as nearer to the camera, this does not always work when using Sprite gameObjects in conjunction with the UI-Canvas elements.  To control ordering of these layers, we need to define _ Sorting-Layers_ and we need to assign each of our GameObjects to a sorting-layer.
  
  ![](imageTexture.gif)
  
