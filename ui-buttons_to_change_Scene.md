@@ -13,6 +13,10 @@ We will create a new Unity-2D project and create 3 different scenes: Start, Scen
 7. Put the correct Scene index value into the parameter box for the LoadScene method: Ie: for the start button, the index value should be 0.
 8. We can execute this logic completely from code, see last section for details. 
 
+###Add Scenes to Project Build Settings
+
+![](buildSettings.gif)
+
 ###MenuScript LoadScene() Method
 Below is the code for our loadScene() method that will be attached to each button's onClick event handler. There is also an overloaded version of Application.LoadLevel("SceneName"), where the input parameter is the string version of the scene name; 
 
@@ -27,10 +31,6 @@ Below is the code for our loadScene() method that will be attached to each butto
 The animation below the code shows how to implement this. First the MenuScript is added to the Canvas object, then the button's onClick() method is set by adding the Canvas object to the onClick script source.  Then the dropdown allows selection of the loadScene() method.  Finally we set the int input value so that it matches the index of the level we want loaded when the user clicks the button.  
 
 ![](UI_buttons.gif)
-
-###Add Scenes to Project Build Settings
-
-![](buildSettings.gif)
 
 ###Control UI Elements via Code
 Although we can create public instance variables for the MenuScript class to attach the loadScene(int level) method to the Button onClick handler using the inspector, we can actually do this in code. This is a better way to implement the logic because we can put all of the code for a scene's logic in a single custom script, this will make it easier to extend our project and to debug issues.  The code below shows how we can create an object reference to a the Button Component of a Button GameObject, which is where we want to attach the Method that we want executed when the button is clicked.  Here we have created a method:  LoadBeginState(), this will switch to the Scene named: "Begin".  
