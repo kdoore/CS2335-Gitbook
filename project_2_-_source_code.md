@@ -12,9 +12,12 @@ The image below shows the behavior of the starter project.  This includes button
  
  ###2D Image: Texture to Sprite
  
- In this project you'll add images for background images and button images.  To use images in 2D mode in Unity, first create a Textures folder and then drag your images into that folder.  To use an image, select the image in the Textures folder, then in the inspector select: Texture Type = Sprite ( 2D and UI) and then 'apply'.  You may also want to set these values:FilterMode: Point, Format: TruecolorNow you can use this for any 2D sprite in your project, or you can use the image as a UI-Image.  
+ In this project you'll add images for background images and button images.  To use images in 2D mode in Unity, first create a Textures folder and then drag your images into that folder.  To use an image, select the image in the Textures folder, then in the inspector select: Texture Type = Sprite ( 2D and UI) and then 'apply'.  You may also want to set these values: FilterMode: Point, Format: Truecolor.  Now you can use this for any 2D sprite in your project, or you can use the image as a UI-Image.  
  
  ![](Screenshot 2016-02-17 18.19.38.png)
+ 
+ ###Sorting Layers
+ If we have a scene that contains images that are not UI-Images, then our canvas may be obscured by this 2D-Sprite. While the order of objects in the hierarchy should determine the layer ordering, where objects higher in the hierarchy are considered as bottom layers, and objects lower in the hierarchy are considered as nearer to the camera, this does not always work when using Sprite gameObjects in conjunction with the UI-Canvas elements.  To control ordering of these layers, we need to define _ Sorting-Layers_ and we need to 
  
  ![](imageTexture.gif)
  
