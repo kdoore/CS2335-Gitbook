@@ -142,7 +142,7 @@ public class Zombie: NPCharacter{
 ```
 
 ###Kitten Child Class
-The code below shows how easy it is to create additional child-classes once we've defined the NPCharacter base class.  We'll need to look at what happens if we don't implement the doSomething() method that is defined as virtual in the base class.  
+The code below shows how easy it is to create additional child-classes once we've defined the NPCharacter base class.  We'll need to look at what happens if we don't implement the doSomething() method that is defined as virtual in the base class.  If we look at Example.cs, we'll see that there is no requirement for a child-class to implement a method which has been defined as virtual in the base-class.  If no child class method is defined, then during run-time, if a base-class object reference actually refers to a child-class object: ie NPCharacter npc = new Kitten(), then when npc.doSomething() is executed, the base-class method is executed.
 
 ```
 using UnityEngine;
