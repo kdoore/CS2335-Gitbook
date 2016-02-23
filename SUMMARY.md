@@ -44,7 +44,7 @@
    * [Interface](interface.md)
    * [Switch-Case](switch-case.md)
    * [Dictionary](dictionary.md)
-   * Foreach
+   * [Foreach](foreach.md)
 * [Diagrams](diagrams.md)
    * [Flow-Chart](flow-chart_example.md)
    * [Finite State Machine](finite_state_machine.md)
