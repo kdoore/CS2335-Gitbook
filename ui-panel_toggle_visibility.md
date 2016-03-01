@@ -64,21 +64,8 @@ Below is the new code that we've added to MenuScript.cs.
 	```
 
 ###Call HideCG() from Button onClick()
-Now we need to create a button that's not in the btnPanel, this button will control the visibility of the btnPanel.  It will call the MenuScritp.hidePanel() method when it's onClick() event is triggered.
+Now we need to create a button that's in the StartPanel, this button will control the visibility of the StartPanel and MapPanel.  It will call the LoadMapPanel() method when it's onClick() event is triggered.
 
 
-
-Rather than use the inspector to make connections between our code and the scene gameObjects, we can also create these connections directly in our code using 
-
-```
-Private Button sceneBtn;
-sceneBtn = GameObject.Find("ButtonInScene").GetComponent<Button>();
-sceneBtn.onClick.addListener(myFunction);
-
-void myFunction(){
-    //doSomething();
-}
-
-``
 
 
