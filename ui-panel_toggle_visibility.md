@@ -19,7 +19,7 @@ We need to initialize the value of our `panelHidden` variable and the alpha valu
 
 ### Toggle Properties: Interactive and BlocksRaycase 
 
-###hidePanel Method
+###HideCG, ShowCG Methods
 
 Below is the new code that we've added to MenuScript.cs.  
 ```
