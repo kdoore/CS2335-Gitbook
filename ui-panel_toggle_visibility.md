@@ -19,11 +19,11 @@ Once we have added the CanvasGroup component to our Panel-UI element, then we ca
 ###Scene Load-Event - calls Start()
 We need to initialize the value of our object references within the InitializeObjectRefs() method.  This way the object references will be re-initialized each time we enter this particular Scene. 
 
-### Toggle Properties: Interactive and BlocksRaycase 
+### Toggle Properties: Alpha, Interactive and BlocksRaycast 
 
 ###HideCG, ShowCG Methods
 
-Below is the new code that we've added to MenuScript.cs.  
+Below is the new code that we've added to  our class.  
 ```
    private CanvasGroup mapCG, startCG;
 	
