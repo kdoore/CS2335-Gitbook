@@ -14,10 +14,10 @@ The UI Panel can not be directly modified as a component in our C# scripts.  In 
 
 ![](MapPanel.gif)
 
-Once we have added the CanvasGroup component to our Panel-UI element, then we can need to write a function that will toggle the panel's alpha value.  We can add this functionality to any C# script file.  
+Once we have added the CanvasGroup component to our Panel-UI element, then we can need to write a function that will toggle the panel's alpha value, interactibility,and blocksRaycast properties.  We can add this functionality to any C# script file.  
 
 ###Scene Load-Event - calls Start()
-We need to initialize the value of our objectvariable and the alpha value within the InitializeObjectRefs() method.  This way the variables will be re-initialized each time we enter this particular Scene. 
+We need to initialize the value of our object references within the InitializeObjectRefs() method.  This way the variables will be re-initialized each time we enter this particular Scene. 
 
 ### Toggle Properties: Interactive and BlocksRaycase 
 
