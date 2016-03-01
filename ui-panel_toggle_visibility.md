@@ -21,32 +21,36 @@ We need to initialize the value of our object references within the InitializeOb
 
 ### Toggle Properties: Alpha, Interactive and BlocksRaycast 
 
-###HideCG, ShowCG Methods
-
 Below is the new code that we've added to  our class.  
+
 ```
+   private Button mapBtn;
    private CanvasGroup mapCG, startCG;
 	
 	public void InitializeObjectRefs (){
-	
+	    ///Map Button is used to hide StartPanel and show  MapPanel
 		mapBtn = GameObject.Find ("MapButton").GetComponent<Button> ();
-		mapBtn.onClick.AddListener (LoadMapPanel);
+		mapBtn.onClick.AddListener (LoadMapPanel);  //method called when mapBtn is clicked
 
-         
-		startCG = GameObject.Find ("StartPanel").GetComponent<CanvasGroup> ();
-		
+     //canas group components on Panel gameObjects
+        startCG = GameObject.Find ("StartPanel").GetComponent<CanvasGroup> ();
 		mapCG = GameObject.Find ("MapPanel").GetComponent<CanvasGroup> ();
 
-		ShowCG (startCG);
-		HideCG (mapCG);
+		ShowPanel (startCG);
+		HidePanel (mapCG);
 
 		
 	}
+	
+```
+	
+###HidePanel, ShowPanel Methods
+```
 
     //function called when mapBtn is clicked - shows mapCG, hides startCG
     private void LoadMapPanel(){
-        ShowCG(mapCG);
-        HideCG(startCG);
+        ShowPanel(mapCG);
+        HidePanel(startCG);
     }
 	
 	private void ShowCG( CanvasGroup cg){
@@ -61,7 +65,7 @@ Below is the new code that we've added to  our class.
 		cg.interactable = false;
 	}
 	
-	```
+```
 
 ###Call HideCG() from Button onClick()
 Now we need to create a button that's in the StartPanel, this button will control the visibility of the StartPanel and MapPanel.  It will call the LoadMapPanel() method when it's onClick() event is triggered.
