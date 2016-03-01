@@ -12,10 +12,12 @@ If we add a UI-Panel gameObject to our canvas.  We can use it as a container in 
 
 The UI Panel can not be directly modified as a component in our C# scripts.  In order to use the panel to control visibility of itself and it's child elements, we need to add a ``Component -> Layout -> CanvasGroup`` to the Panel gameObject.   Here's a link to the Unity Documentation on [CanvasGroup](http://docs.unity3d.com/Manual/class-CanvasGroup.html)
 
+![](MapPanel.gif)
+
 Once we have added the CanvasGroup component to our Panel-UI element, then we can need to write a function that will toggle the panel's alpha value.  We can add this functionality to any C# script file.  
 
 ###Scene Load-Event - calls Start()
-We need to initialize the value of our `panelHidden` variable and the alpha value within the Start() method.  This way the variables will be re-initialized each time we enter this particular Scene. When a Scene is first loaded, this is when the Start method for every active game object is executed.  
+We need to initialize the value of our objectvariable and the alpha value within the InitializeObjectRefs() method.  This way the variables will be re-initialized each time we enter this particular Scene. 
 
 ### Toggle Properties: Interactive and BlocksRaycase 
 
