@@ -43,6 +43,10 @@ Below is the new code that we've added to MenuScript.cs.
 		
 	}
 
+    private void LoadMapPanel(){
+        ShowCG(mapCG);
+        HideCG(startCG);
+    }
 	
 	private void ShowCG( CanvasGroup cg){
 		cg.alpha = 1;
