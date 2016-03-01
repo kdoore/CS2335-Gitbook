@@ -32,13 +32,13 @@ Below is the new code that we've added to  our class.
 		mapBtn = GameObject.Find ("MapButton").GetComponent<Button> ();
 		mapBtn.onClick.AddListener (LoadMapPanel);  //method called when mapBtn is clicked
 
-     //canas group components on Panel gameObjects
+     //CanasGroup components on Panel gameObjects
         startCG = GameObject.Find ("StartPanel").GetComponent<CanvasGroup> ();
 		mapCG = GameObject.Find ("MapPanel").GetComponent<CanvasGroup> ();
 
+    //initializes panel configuration when scene loaded
 		ShowPanel (startCG);
 		HidePanel (mapCG);
-
 		
 	}
 	
@@ -46,13 +46,6 @@ Below is the new code that we've added to  our class.
 	
 ###HidePanel, ShowPanel Methods
 ```
-
-    //function called when mapBtn is clicked - shows mapCG, hides startCG
-    private void LoadMapPanel(){
-        ShowPanel(mapCG);
-        HidePanel(startCG);
-    }
-	
 	//Modifies CanvasGroup component properties to make visible
 	private void ShowCG( CanvasGroup cg){
 		cg.alpha = 1;
@@ -75,7 +68,7 @@ Now we need to create a button that's in the StartPanel, this button will contro
 
 ```
   public void InitializeObjectRefs (){
-            // in initialize object refs
+     // 
     mapBtn = GameObject.Find ("MapButton").GetComponent<Button> ();
 	mapBtn.onClick.AddListener (LoadMapPanel);
 	}
