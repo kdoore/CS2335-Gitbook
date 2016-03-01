@@ -67,5 +67,18 @@ Below is the new code that we've added to MenuScript.cs.
 Now we need to create a button that's in the StartPanel, this button will control the visibility of the StartPanel and MapPanel.  It will call the LoadMapPanel() method when it's onClick() event is triggered.
 
 
+```
+  public void InitializeObjectRefs (){
+            // in initialize object refs
+    mapBtn = GameObject.Find ("MapButton").GetComponent<Button> ();
+	mapBtn.onClick.AddListener (LoadMapPanel);
+	}
+		
+		//function called when mapBtn is clicked - shows mapCG, hides startCG
+    private void LoadMapPanel(){
+        ShowCG(mapCG);
+        HideCG(startCG);
+    }
 
+```
 
