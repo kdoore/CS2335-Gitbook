@@ -53,12 +53,14 @@ Below is the new code that we've added to  our class.
         HidePanel(startCG);
     }
 	
+	//Modifies CanvasGroup component properties to make visible
 	private void ShowCG( CanvasGroup cg){
 		cg.alpha = 1;
 		cg.blocksRaycasts = true;
 		cg.interactable = true;
 	}
 
+    //Modifies CanvasGroup component properties to hide
 	private void HideCG( CanvasGroup cg){
 		cg.alpha = 0;
 		cg.blocksRaycasts = false;
