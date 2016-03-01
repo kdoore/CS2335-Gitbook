@@ -43,6 +43,7 @@ Below is the new code that we've added to MenuScript.cs.
 		
 	}
 
+    //function called when mapBtn is clicked - shows mapCG, hides startCG
     private void LoadMapPanel(){
         ShowCG(mapCG);
         HideCG(startCG);
