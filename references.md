@@ -36,5 +36,5 @@ http://www.villeseppanen.com
 My game art portfolio. 2D, 3D and UI graphics.
 Art by Osmic
 
-![](zombie_icons.png)
+![](zombie_icons.png
 
