@@ -36,4 +36,4 @@ http://www.villeseppanen.com
 My game art portfolio. 2D, 3D and UI graphics.
 Art by Osmic
 
-[Zombie Textures](https://utdallas.box.com/zombieTextures)
+[Zombie Textures Download](https://utdallas.box.com/zombieTextures)
