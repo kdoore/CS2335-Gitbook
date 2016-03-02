@@ -37,4 +37,3 @@ My game art portfolio. 2D, 3D and UI graphics.
 Art by Osmic
 
 ![](zombie_icons.png
-
