@@ -28,7 +28,7 @@
 [GameArt 2D](http://www.gameart2d.com/freebies.html)
 
  
- Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
+Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
  
 Zombie Game Items: 
 From:Project: http://opengameart.org/users/osmic
