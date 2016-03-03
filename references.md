@@ -31,7 +31,7 @@
 Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
  
 Zombie Game Items: 
-From:Project: http://opengameart.org/users/osmic
+From: http://opengameart.org/users/osmic
 http://www.villeseppanen.com
 My game art portfolio. 2D, 3D and UI graphics.
 Art by Osmic
