@@ -92,19 +92,26 @@ How to script an input Box:  This code is in one of the State.cs files where we 
 
 ```
 	   
-	   private inputFieldGo = GameObject.Find("PlayerName");
-	   private inputFieldCo = inputFieldGo.GetComponent<InputField>();
-	   var se=new InputField.SubmitEvent();   //dynamic variable type //let unity figure out the datatype
-	   se.AddListener(ProcessInput);
-	   inputFieldCo.onEndEdit=se;
+	  // State.cs instance variable
+      private InputField playerName;
+      
+      
+      public void InitializeObjectRefs (){
+        playerName = GameObject.Find ("PlayerName").GetComponent<InputField> ();
+		var se=new InputField.SubmitEvent();   //dynamic variable type //let unity figure out the datatype
+		se.AddListener(ProcessInput);
+		playerName.onEndEdit=se;
+      }
 ```	
 
-this sets up a call to this created function, the input is a string :
+
+this sets up a call to this created function, the input is a string :  This assumes that in ``StateManager`` we have declared a string public field or property: ``public String playerName``
 ```
     public void ProcessInput(string arg0){
-        Debug.Log (arg0);
-        manager.playerName=arg0;
-    }
+		Debug.Log (arg0);
+		managerRef.playerName=arg0;
+		Debug.Log ("Player Name " + managerRef.playerName);
+	}
     ```
 
 
