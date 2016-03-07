@@ -42,3 +42,53 @@ public class InventoryItemManager : MonoBehaviour {
 	}
 }
 ```
+
+###Conversation Scriptable Objects:
+
+Class ConversationEntry
+```
+using UnityEngine;
+using System.Collections;
+
+[System.Serializable]  //attribute
+public class ConversationEntry  {
+
+	public string SpeakingCharacterName;
+	public string ConversationText;
+	public Sprite DisplayImg;
+}
+```
+
+
+
+Class Conversation
+```
+using UnityEngine;
+using System.Collections;
+
+public class Conversation : ScriptableObject {
+
+	public ConversationEntry[] ConversationLines;
+}
+```
+
+Editor Code: ConversationManager
+```
+using UnityEngine;
+using UnityEditor;
+
+public class ConversationManager : MonoBehaviour {
+
+	[MenuItem("Assets/Create/Conversation")]
+	public static void CreateAsset(){
+
+		Conversation conversationManager = ScriptableObject.CreateInstance<Conversation> ();
+
+		AssetDatabase.CreateAsset (conversationManager, "Assets/newConversationManager.asset");
+		AssetDatabase.SaveAssets ();
+
+		EditorUtility.FocusProjectWindow ();
+		Selection.activeObject = conversationManager;
+	}
+}
+```
