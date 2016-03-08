@@ -113,3 +113,9 @@ void Start () {
 		mySprite.sprite = myConversation.ConversationLines [0].DisplayImg;
 	}
 ```
+
+Here is a view of the Conversation instance attached to StateManager in the beginScene
+
+![](Screenshot 2016-03-08 08.04.03.png)
+
+![](Screenshot 2016-03-08 08.05.27.png)
