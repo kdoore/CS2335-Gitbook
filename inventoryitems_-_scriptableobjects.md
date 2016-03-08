@@ -93,14 +93,16 @@ public class ConversationManager : MonoBehaviour {
 }
 ```
 ###Create a Conversation Asset
-To create an instance of a Conversation asset, we right click in the project panel, or right click on the assets folder and select: create -> Conversation, where our custom asset: Conversation, now shows up as an option at the bottom of the menu.  When we click on 
+To create an instance of a Conversation asset, we right click in the project panel, or right click on the assets folder and select: create -> Conversation, where our custom asset: Conversation, now shows up as an option at the bottom of the menu.  After clicking on Conversation, we now have a new item in our Assets panel, we should give it a unique name so we can reference it in our code.  I've named mine `ManagerConversation`.
 
 ![](Screenshot 2016-03-08 14.18.18.png)
-If we create an instance of a Conversation in StateManager, then we can dynamically display conversation data elements.
+
+![](Screenshot 2016-03-08 14.35.40.png)
+
 
 ###StateManager Conversation Object Instance
 
-Since the StateManager script-component object exists in every scene, for our first attempt at working with a conversation asset, we can add an object-reference to a Conversation object in StateManager.  If we set it as public, then we can drag the Conversation asset to the 
+Since the StateManager script-component object exists in every scene, for our first attempt at working with a conversation asset, we can add an object-reference to a Conversation object in StateManager.  If we create an instance of a Conversation object in StateManager script: ``public Conversation myConversation``, then we can dynamically display conversation data elements, in any scene of our game.  In the inspector, we can drag the newly created ManagerConversation asset to the the myConversation selection box.  Now we have access to get or set these conversation elements. 
 
 ```
 // in StateManager
@@ -125,3 +127,4 @@ Here is a view of the Conversation instance attached to StateManager in the begi
 ![](Screenshot 2016-03-08 08.04.03.png)
 
 ![](Screenshot 2016-03-08 08.05.27.png)
+
