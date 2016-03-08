@@ -92,9 +92,15 @@ public class ConversationManager : MonoBehaviour {
 	}
 }
 ```
+###Create a Conversation Asset
+To create an instance of a Conversation asset, we right click in the project panel, or right click on the assets folder and select: create -> Conversation, where our custom asset: Conversation, now shows up as an option at the bottom of the menu.  When we click on 
 
-If we create an instance of a Conversation in StateManager, then we can dynamically display conversation.  Here we're just going to display the first element from the Start( ) function.
+![](Screenshot 2016-03-08 14.18.18.png)
+If we create an instance of a Conversation in StateManager, then we can dynamically display conversation data elements.
 
+###StateManager Conversation Object Instance
+
+Since the StateManager script-component object exists in every scene, for our first attempt at working with a conversation asset, we can add an object-reference to a Conversation object in StateManager.  If we set it as public, then we can drag the Conversation asset to the 
 
 ```
 // in StateManager
