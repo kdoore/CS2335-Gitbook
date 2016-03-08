@@ -92,3 +92,24 @@ public class ConversationManager : MonoBehaviour {
 	}
 }
 ```
+
+If we create an instance of a Conversation in StateManager, then we can dynamically display conversation.  Here we're just going to display the first element from the Start( ) function.
+
+
+```
+// in StateManager
+	public Conversation myConversation;  
+
+    //public SpriteRenderer convSprite; // to use a regular image
+
+    public Image mySprite;   // to use a UI sprite
+
+void Start () {
+		activeState = new BeginState (this);
+		curState = GameState.Begin;
+		activeState.InitializeObjectRefs ();
+		convText.text = myConversation.ConversationLines[0].ConversationText;
+		//convSprite.sprite = myConversation.ConversationLines [0].DisplayImg;
+		mySprite.sprite = myConversation.ConversationLines [0].DisplayImg;
+	}
+```
