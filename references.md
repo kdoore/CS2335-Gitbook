@@ -44,6 +44,8 @@ Art by Osmic
 
 [Zombie Textures Download Link](https://utdallas.box.com/zombieTextures) 
 
-Player Sprite Sheeet: Link to download and Tutorial: https://www.youtube.com/watch?v=TU6wflRqT5Q
+**Unity Animator Tutorial**
+Player Sprite Sheeet: 
+Link to download and Tutorial: https://www.youtube.com/watch?v=TU6wflRqT5Q
 
 ![](Player.png)
