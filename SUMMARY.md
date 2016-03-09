@@ -52,5 +52,5 @@
    * [UML Class Diagram](uml_class_diagram.md)
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
-* Animation Controller
+* [Animation Controller](animation_controller.md)
 
