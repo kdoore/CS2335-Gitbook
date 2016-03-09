@@ -27,6 +27,9 @@
 
 [GameArt 2D](http://www.gameart2d.com/freebies.html)
 
+[Jessee Freeman](http://jessefreeman.com/game-art-packs/)
+
+[Windows Platformer Game Starter Kit](http://platformstarterkit.azurewebsites.net/)
  
 Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
  
@@ -40,3 +43,7 @@ My game art portfolio. 2D, 3D and UI graphics.
 Art by Osmic
 
 [Zombie Textures Download Link](https://utdallas.box.com/zombieTextures) 
+
+Player Sprite Sheeet: Link to download and Tutorial: https://www.youtube.com/watch?v=TU6wflRqT5Q
+
+![](Player.png)
