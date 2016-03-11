@@ -4,6 +4,14 @@ The code chunks below are used to retrieve and display data from a Conversation 
 ###State Code For Conversation Elements
 BeginState.cs has 3 gameObjects used to display the content in a conversation element and 2 buttons to allow browsing through the conversation., To load a Conversation scriptableObject, which must be located in the Resources folder within Assets.  In this code below, we're loading The instance of the Conversation:"Conversation2".
 ```
+//BeginState.cs
+//other code is not shown
+
+private Button convBtn, convBackBtn;
+private Image cImage;
+private Text cText, cName;
+private Conversation conv2;
+
 public void InitializeObjectRefs (){
 /// load conversation asset
 		/// 
@@ -31,16 +39,12 @@ public void InitializeObjectRefs (){
 		}
 
 	}
-	/// <summary>
-	/// Gets the conversation entry.
-	/// </summary>
+	
 	public void getNextConversation(){
 		Debug.Log ("Next conversation entry" + convIndex);
 		convIndex = Utilities.GetConversationEntry (conv2, cName, cText, cImage, convIndex);
 	}
-	/// <summary>
-	/// Gets the previous conversation.
-	/// </summary>
+	
 	public void getPrevConversation(){
 		Debug.Log ("Prev conversation entry" + convIndex);
 		convIndex = Utilities.GetConversationEntry (conv2, cName, cText, cImage, convIndex-2);
