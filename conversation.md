@@ -1,21 +1,8 @@
 # Conversation
-
-```
-public void NextConversationEntry(){
-		Debug.Log ("Next conversation entry" + convIndex);
-		convIndex++;
-		if (managerRef.myConversation.ConversationLines.Length > convIndex) {
-			cText.text = managerRef.myConversation.ConversationLines[convIndex].ConversationText;
-			cImage.sprite = managerRef.myConversation.ConversationLines[convIndex].DisplayImg;
-		} else {
-			convIndex = managerRef.myConversation.ConversationLines.Length - 1;
-		}
-	}
-
-```
+The code chunks below are used to retrieve and display data from a Conversation scriptableobject: 
 
 ###State Code For Conversation Elements
-BeginState, load a Conversation scriptableObject that is located in the Resources folder within Assets.
+BeginState.cs has 3 gameObjects used to display the content in a conversation element and 2 buttons to allow browsing through the conversation., To load a Conversation scriptableObject, which must be located in the Resources folder within Assets.  In this code below, we're loading The instance of the Conversation:"Conversation2".
 ```
 /// load conversation asset
 		/// 
@@ -61,6 +48,7 @@ BeginState, load a Conversation scriptableObject that is located in the Resource
 ```
 
 ###Utilities Static Functions:
+This utilities class has a static method that takes as input a Conversation object along with the object references for the UI elements that need to be populated with data.  The this code also includes utility methods to show and hide UI-panels.  The benefit to having these functions on the Utilities class is that they can be accessed from any script in our project. 
 ```
 
 using UnityEngine;
@@ -84,29 +72,28 @@ public static class Utilities
 		cg.interactable = false;
 	}
 
-	public static int GetConversationEntry (Conversation _conversation, Text _name, Text _text, Image _image, int _index)
+	public static int GetConversationEntry (Conversation conversation, Text name, Text text, Image image, int index)
 	{
 		// how long is our array?
-		int numEntries = _conversation.ConversationLines.Length;
+		int numEntries = conversation.ConversationLines.Length;
 
-		_index++;  
+		index++;  
 
 		//check ranges, constrain to  _index >= 0 && _index <= numEntries-1
 
-		_index = (_index < 0) ? 0 : _index; 
-		_index = (_index >= numEntries) ? numEntries - 1 : _index; 
+		index = (index < 0) ? 0 : index; 
+		index = (index >= numEntries) ? numEntries - 1 : index; 
 
 		//set objectRefs to values
-		_name.text = _conversation.ConversationLines [_index].SpeakingCharacterName;
-		_text.text = _conversation.ConversationLines [_index].ConversationText;
-		_image.sprite = _conversation.ConversationLines [_index].DisplayImg;
+		name.text = conversation.ConversationLines [index].SpeakingCharacterName;
+		text.text = conversation.ConversationLines [index].ConversationText;
+		image.sprite = conversation.ConversationLines [index].DisplayImg;
 
-		Debug.Log ("Next conversation entry" + _index + " name: " + _name.text);
+		Debug.Log ("Next conversation entry" + index + " name: " + name.text);
 
-		return _index;
+		return index;
 	}
 }
-
 
 ```
 
