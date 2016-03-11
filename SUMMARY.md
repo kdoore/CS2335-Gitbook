@@ -28,6 +28,7 @@
 * [IStateBase](istatebase.md)
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
+* [Conversation](conversation.md)
 * [Finding Game Objects](finding_game_objects.md)
 * [Game Objects](game_objects.md)
 * [Game Scene](game_scene.md)
@@ -53,5 +54,4 @@
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
 * [Animation Controller](animation_controller.md)
-* [Conversation](conversation.md)
 
