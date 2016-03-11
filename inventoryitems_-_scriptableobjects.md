@@ -1,6 +1,6 @@
 # InventoryItems - ScriptableObjects
 
-Creating ScriptableObjects allows for us to create complex data-type that can be saved by the Unity Engine separate from any gameObject and scene.  This will allow us to create InventoryItems that we can use across a variety of scenes and that we can import into other projects as assets.  Each instance of an InventoryItem that we create is stored as a separate project asset.  
+Creating ScriptableObjects allows for us to create complex data-type that can be saved by the Unity Engine separate from any gameObject and scene.  For example will allow us to create InventoryItems that we can use across a variety of scenes, each instance of an InventoryItem that we create is stored as a separate project asset.  
 
 ```
 using UnityEngine;
