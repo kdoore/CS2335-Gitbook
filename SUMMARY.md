@@ -28,7 +28,6 @@
 * [IStateBase](istatebase.md)
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
-* [Conversation](conversation.md)
 * [Finding Game Objects](finding_game_objects.md)
 * [Game Objects](game_objects.md)
 * [Game Scene](game_scene.md)
@@ -53,5 +52,6 @@
    * [UML Class Diagram](uml_class_diagram.md)
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
+* [Conversation](conversation.md)
 * [Animation Controller](animation_controller.md)
 
