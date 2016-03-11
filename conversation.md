@@ -1,5 +1,5 @@
 # Conversation
-The code chunks below are used to retrieve and display data from a Conversation scriptableobject: 
+The code chunks below are used to retrieve and display data from a Conversation scriptableobject: Conversation2.  In these examples, the scriptableObject is never attached to any scene GameObject, it's just used as a data resource, pulled directly from the project assets.
 
 ###State Code For Conversation Elements
 BeginState.cs has 3 gameObjects used to display the content in a conversation element and 2 buttons to allow browsing through the conversation., To load a Conversation scriptableObject, which must be located in the Resources folder within Assets.  In this code below, we're loading The instance of the Conversation:"Conversation2".
