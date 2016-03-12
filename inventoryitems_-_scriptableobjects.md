@@ -17,7 +17,7 @@ public class InventoryItem : ScriptableObject
 	public int Defense;
 }
 ```
-The following class allows us to create InventoryItems in as an Asset. Scriptable Objects can be saved independently of any particular gameObject.  This code must be placed in a folder named Editor within the Assets/Scripts/ folder.  
+The following class allows us to create InventoryItems in as an Asset. Scriptable Objects can be saved independently of any particular gameObject.  This code must be placed in a folder named Editor within the Assets/Scripts/ folder. The code below is an editor script, it allows us to add functionality to the Unity Editor, this allows us to create and manipulate  
 
 ```
 using UnityEngine;
