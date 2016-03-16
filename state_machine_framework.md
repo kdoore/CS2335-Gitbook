@@ -97,7 +97,8 @@ void StateUpdate(){
 
 
 ###State Machine Framework UML Sequence Diagram
-The sequence diagram below shows the asynchronous nature of the relationship between Unity Scenes and our custom states,  The State Manager provides a conduit for synchronization communication of event messages between Unity Scenes and our custom states.  
+The sequence diagram below shows the asynchronous nature of the relationship between Unity Scenes and our custom states,  The StateManager provides a conduit for synchronization communication of event messages between Unity Scenes and our custom states.  
+The StateManager receives notification from the Unity engine when a new scene has been loaded, it uses this event ``OnLevelWasLoaded(int levelNumber)`` to send the activeState message, by exectuing the ``activeState.InitializeObjectRefs( )``, so the current activeState can now initialize all object references to gameObjects in the corresponding scene.
 
 ![](stateMachineFramework.png)
 
