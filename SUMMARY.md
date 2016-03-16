@@ -22,9 +22,9 @@
 * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
 * [Screen-Space Canvas](screen-space_canvas.md)
 * [State Machine Framework](state_machine_framework.md)
+* [StateManager - Singleton Design Pattern](statemanager.md)
 * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Project 2 - Source Code](project_2_-_source_code.md)
-* [StateManager - Singleton Design Pattern](statemanager.md)
 * [IStateBase](istatebase.md)
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
@@ -52,6 +52,6 @@
    * [UML Class Diagram](uml_class_diagram.md)
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
-* [Conversation](conversation.md)
 * [Animation Controller](animation_controller.md)
+* [Conversation](conversation.md)
 
