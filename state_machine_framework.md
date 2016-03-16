@@ -96,3 +96,8 @@ void StateUpdate(){
 ![](StateMachineW_Scenes.png)
 
 
+###State Machine Framework UML Sequence Diagram
+The sequence diagram below shows the asynchronous nature of the relationship between Unity Scenes and our custom states,  The State Manager provides a conduit for synchronization communication of event messages between Unity Scenes and our custom states.  
+
+![](stateMachineFramework.png)
+
