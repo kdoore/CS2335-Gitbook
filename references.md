@@ -5,6 +5,9 @@
 3. [Miles, Rob. C# Programming Yellow Book ](http://www.robmiles.com/c-yellow-book/) Exellent C# Book, Free online / download pdf-version.
 4. Norton, Terry. [Learning C# by Developing Games with Unity 3D Beginner's Guide, Terry Norton](http://www.amazon.com/Learning-Developing-Games-Unity-Beginners-ebook/dp/B00FFUL9LY).  PacktPub eBook Version
 
+Delegates Tutorials: 
+[Juan Gomez on UnityDojo](http://unitydojo.blogspot.com/2015/03/how-to-use-delegates-in-unity-like-boss.html)
+
 
 
  ###Public Domain 2-D Game Assets: 
@@ -12,7 +15,10 @@
  [Daniel Cook's Planet Cute](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
  
  [Glitch Garden](http://www.glitchthegame.com/public-domain-game-art/)
- 
+   *   [Assets](https://github.com/ThirdPartyNinjas/GlitchAssets)
+   *  [Inhabitants](https://github.com/ThirdPartyNinjas/GlitchAssets-Inhabitants)
+
+
  [Free Fantasy Maps](http://freefantasymaps.org/free-fantasy-maps/)
  
  [Open Game Art](http://opengameart.org/)
