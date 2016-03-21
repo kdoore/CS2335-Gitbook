@@ -34,7 +34,6 @@
 * [Game Objects](game_objects.md)
 * [Game Scene](game_scene.md)
 * [Player GameObject](player_gameobject.md)
-* [Project 3 - Source Code](project_3_-_source_code.md)
 * [C# Language](c_language.md)
    * [Variables](variables.md)
    * [Encapsulation](encapsulation.md)
