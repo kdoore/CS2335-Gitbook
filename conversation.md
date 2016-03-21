@@ -1,6 +1,6 @@
 # Conversation
 This code shows how to utilize
- our [Conversation ScriptableObject Custom Asset](https://kdoore.gitbooks.io/cs-2335/content/inventoryitems_-_scriptableobjects.html#conversation-scriptable-objects)
+ our [Conversation ScriptableObject Custom Asset](https://kdoore.gitbooks.io/cs-2335/content/inventoryitems_-_scriptableobjects.html#conversation-scriptable-objects) from the previous section.
 The code chunks below are used to retrieve and display data from a Conversation ScriptableObject: Conversation2.  In these examples, the ScriptableObject is never attached to any scene GameObject, it's just used as a data resource, pulled directly from the project assets.
 
 ###Resources Folder
