@@ -3,10 +3,10 @@
 ### 2D Sprite as Player 
 To create a player character, we'll start by dragging an image, that's had it's import texture-type set to *Sprite(2D - UI)* to the Hierarchy Panel to create a 2D-sprite GameObject: *Girl-player* in a new scene.  
 
-![](girl1.png)
+Game Sprites:
 
-
-
+![](girl1.png)![](healthheart.png)
+![](star.png)
 
 Then we need to attach a RigidBody2D component to our Girl-player.  The [Unity Manual](http://docs.unity3d.com/ScriptReference/Rigidbody2D.html) explains that we need to add a RigidBody2D component so that we can use the Unity Physics Engine to move our Girl-player in the scene.  We'll update the player's RigidBody.velocity each frame in response to the user key-presses. In addition, the Rigidbody component allows us to sense when our player collides with other game objects.
 
@@ -29,7 +29,7 @@ In the PlayerMove code below, we write code to allow the user to move the player
 
 ###Colliders
 
-[Collider interactions](http://docs.unity3d.com/Manual/CollidersOverview.html)  Colliders interact with each other differently depending on how their Rigidbody components are configured. The three important configurations are the Static Collider (ie, no Rigidbody is attached at all), the Rigidbody Collider and the Kinematic Rigidbody Collider.  Collider Components define the shape of an object for the purposes of physical collisions. A collider, which is invisible, need not be the exact same shape as the object’s mesh and in fact, a rough approximation is often more efficient and indistinguishable in gameplay. A GameObject that has a Collider but no RigidBody component will act like an immovable object that other objects can run into.
+[Collider interactions](http://docs.unity3d.com/Manual/CollidersOverview.html)  Colliders interact with each other differently depending on how their Rigidbody components are configured. The three important configurations are the Static Collider (ie, no Rigidbody is attached at all), the Rigidbody Collider and the Kinematic Rigidbody Collider.  Collider Components define the shape of an object for the purposes of physical collisions. A collider, which is invisible, need not be the exact same shape as the object’s mesh and in fact, a rough approximation is often more efficient and indistinguishable in gameplay. A GameObject that has a Collider but no RigidBody component will act like an immovable object that other objects can run into.  When isTrigger is selected, then the collider does not show collision behavior, instead, an event is generated that can be used to execute related actions or behaviors.
    
 
 ###Player Move Code:  Attached to the Girl Sprite:
@@ -226,7 +226,7 @@ public class GameState : IStateBase {
 ```
 ###Constrain Player Movement using Box Collider 
 
-If we want to constrain the player, to keep her on the screen, we can create a game object:  leftBorder that is an empty game object that has a 2D box collider component added, with IsTrigger set to true.  Then we need to add a custom tag "leftBorder" so we can verify this is the object the player colides with.  We can modify the movePlayer.cs script so that there is a separate xspeed and a yxpeed values.  I've also changed the variable names of the newVelocity components to newXSpeed in order to better distinguish between the default xSpeed and the input modified speed: newXSpeed.
+If we want to constrain the player, to keep her on the screen, we can create a game object:  leftBorder that is an empty game object that has a 2D box collider component added.  Then we need to add a custom tag "leftBorder" so we can verify this is the object the player colides with.  We can modify the movePlayer.cs script so that there is a separate xspeed and a yspeed values.  I've also changed the variable names of the newVelocity components to newXSpeed in order to better distinguish between the default xSpeed and the input modified speed: newXSpeed.
 
 Then we need to add logic so we test for collision with the leftBorder, if the collision happens, we can set xspeed to 0, we'll allow this to be reset to the default xspeed once they hit the input key to move right, in that case xMove will have a positive value.  Then We also need a bool state variable hitLeft that we set to true when the collision occurs, then when the player uses the correct input to move away from the wall, we want to reset the state hitLeft variable to false to allow movement in either direction. 
 
@@ -272,7 +272,7 @@ public class PlayerMove : MonoBehaviour {
 		rb2D.velocity = newVelocity;
        }
        
-	void OnTriggerEnter2D(Collider2D hit){
+	void OnColliderEnter2D(Collider2D hit){
 		if(hit.CompareTag ("leftBorder")){
 		    Debug.Log("collision with leftBorder");
 			xspeed=0; 
