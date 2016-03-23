@@ -10,7 +10,7 @@ To create an animation, we can select a series of sprites and drag them into the
 2. Animation controller
 3. Animator component
 
-
+###Animation Component
 
 ###Unity 2D Animation Tutorials:
 
