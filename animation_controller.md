@@ -11,8 +11,8 @@ To create an animation, we can select a series of sprites and drag them into the
 ###Animation Clip
 In 2D mode, we can create animation clips using sprites.  We can use a series of sprites, where each sprite is in a slightly different position, so that when we show these sprites in a sequential loop, we see animated behavior.  Or, we can use a single sprite, and use the Animation editor to modify some feature of the sprite over time using the dope-sheet or curves editor.
 
-
 ###Animation Component
+In order to integrate an animation with a gameObject, we need a 2D gameObject that has a Sprite Renderer, then we can add an Animation Component from the miscelaneous tab
 
 ###Unity 2D Animation Tutorials:
 
