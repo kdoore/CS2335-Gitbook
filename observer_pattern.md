@@ -1,4 +1,4 @@
-# Observer Pattern
+#Event Publishing Patterns
 The Observer Pattern is a programming pattern that reflects common game-design situations, as discussed in the book: [Game Programming Patterns.](http://gameprogrammingpatterns.com/observer.html)  The situation is that we have an event that occurs within one component, the Subject, and we have other components, Observers, that want to be notified when this event has occurred.  Often the Observer Pattern is implemented using Interfaces, however, since Unity uses C# and .Net framework, then we can use C# delegates and events to create a simpler Observer Pattern implementation.
 
 ###Subject:
