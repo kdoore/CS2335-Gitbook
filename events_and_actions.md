@@ -1,4 +1,12 @@
 # Events and Actions
 
-We have seen that State Machines provide a simple framework to model complex system such as games and simulations, because the a complex system can be represented using a set of states, events, and transitions. When viewing a system through a State-Machine lens: 'an event is something that happens which affects the system.' [Wikipedia](https://en.wikipedia.org/wiki/UML_state_machine#Events)
+We have seen that State-machines provide a simple framework to model complex-dynamic systems such as games and simulations, because many dynamic systems can be represented using a set of states, events, and transitions. 
+
+###Events
+When viewing a dynamic system through a State-machine lens: "an event is something that happens which affects the system." [Wikipedia](https://en.wikipedia.org/wiki/UML_state_machine#Events)
+
+###Actions
+A state machine responds to events by performing actions.
+
+For example: changing a variable, performing I/O, invoking a function, generating another event instance, or changing to another state. Any parameter values associated with the current event are available to all actions directly caused by that event. [Wikipedia](https://en.wikipedia.org/wiki/UML_state_machine#Actions_and_transitions)
 
