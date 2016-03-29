@@ -3,7 +3,7 @@
 ### 2D Sprite as Player 
 To create a player character, we need to create a gameObject =>  2D Sprite. Then, we can set the sprite-Renderer component to refer to an image that we've added to our project assets folder.  To import an image as a 2D sprite, you select the image in the assets panel and set the component: texture-type set to *Sprite(2D - UI). 
 
-Game Sprites:
+Below are some example open-source game sprites that you can download to use in your proejct, these sprites are from: :
 
 ![](girl1.png)![](healthheart.png)
 ![](star.png)
