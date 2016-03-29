@@ -107,6 +107,9 @@ public class PlayerControllerSimple : MonoBehaviour {
 	}  // end class
 
 ```
+###Constrain Player Movement using Box Collider 
+
+If we want to constrain the player, to keep her on the screen, we can create an empty game object and attach a collider2D component to that gameObject.  We can use this to create a floor in our scene, this will allow us to have a non-zero value for gravity on our player's Rigidbody2D component.  We can also create a leftBorder as an empty gameObject, again, add a  BoxCollider2D component.  If we don't set this gameObject to be a trigger, then it will act as a physical barrier to our playerGame object so it can't leave the camera view area.
 
 
 ```
@@ -192,8 +195,5 @@ public class MiniGameState : IStateBase{
 }
 
 ```
-###Constrain Player Movement using Box Collider 
-
-If we want to constrain the player, to keep her on the screen, we can create a game object:  leftBorder that is an empty game object that has a 2D box collider component added.  Then we can to add a custom tag "leftBorder" so we can verify this is the object the player colides with.  
 
 
