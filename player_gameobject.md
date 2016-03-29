@@ -111,7 +111,7 @@ public class PlayerControllerSimple : MonoBehaviour {
 
 If we want to constrain the player, to keep her on the screen, we can create an empty game object and attach a collider2D component to that gameObject.  We can use this to create a floor in our scene, this will allow us to have a non-zero value for gravity on our player's Rigidbody2D component.  We can also create a leftBorder as an empty gameObject, again, add a  BoxCollider2D component.  If we don't set this gameObject to be a trigger, then it will act as a physical barrier to our playerGame object so it can't leave the camera view area.
 
-###MiniGameState
+###MiniGameState - Polling to observe events
 ```
 ###MiniGameState.cs
 We need to have a C# State class associated with each scene in our adventure. For this scene, we'll dyamically modify the StarText in the gameScene to show how many stars the player is carrying. This state implements IStateBase, so it has to have definitions for StateUpdate() and ShowIt().  This is also where we'll create code to control levels for the game and to provide button logic to leave the scene. 
