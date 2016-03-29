@@ -149,7 +149,8 @@ public class MiniGameState : IStateBase{
 
 	// StateUpdate is called once per frame
 	public void StateUpdate () {
-		///we can use polling to determine when TotalScore changes
+		
+        ///we can use polling to determine when TotalScore changes
 		/// then update ScoreText in the UI
         
 		float curScore = gameData.TotalScore;
@@ -163,35 +164,15 @@ public class MiniGameState : IStateBase{
     public void StateGUI(){ }
 
 	public void InitializeObjectRefs (){
-		
-		crystalSpawner = GameObject.Find ("CrystalSpawner").GetComponent<CrystalSpawner> ();
-		if (crystalSpawner != null) {
-			crystalSpawner.onSpawn += IncreaseCount;  // add method with delegate-type
-		}
 		gameData = GameObject.Find("GameManager").GetComponent<GameData>();
-		//gameData.onDataUpdate += UpdateScoreText ;  // call this method when data is updated
-
-		label = GameObject.Find ("CrystalLabel").GetComponent<Text> ();
+	    label = GameObject.Find ("CrystalLabel").GetComponent<Text> ();
 		score = GameObject.Find ("TotalScore").GetComponent<Text> ();
 	}
 
 	void UpdateScoreText(){
-		score.text = string.Format ("Total Score: {0}", gameData.TotalScore);
-		 
+		score.text = string.Format ("Total Score: {0}", gameData.TotalScore);	 
 	}
-	void OnDestroy () {
-		// We unsubscribe to avoid memory leaks
-		Debug.Log("Destroyed MiniGameState");
-		gameData.onDataUpdate -= UpdateScoreText;
-		crystalSpawner.onSpawn -= IncreaseCount;
-	}
-
-	// Called automatically when a new coin is spawned
-	public void IncreaseCount() {
-		// Turn the string into a int, add and reconvert to string
-		int prevCount = int.Parse(label.text) + 1 ;
-		label.text = prevCount.ToString();
-	}
+	
 }
 
 ```
