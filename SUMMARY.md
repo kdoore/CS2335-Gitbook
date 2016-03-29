@@ -54,5 +54,5 @@
    * [UML Class Diagram](uml_class_diagram.md)
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
-* Events and Actions
+* [Events and Actions](events_and_actions.md)
 
