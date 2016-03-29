@@ -32,6 +32,7 @@
 * [Player GameObject](player_gameobject.md)
 * [Animation Controller](animation_controller.md)
 * [Events and Actions](events_and_actions.md)
+* Observer Pattern
 * [Delegates](delegates.md)
 * [Custom Event Messaging](custom_event_messaging.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
@@ -56,5 +57,4 @@
    * [UML Class Diagram](uml_class_diagram.md)
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
-* Observer Pattern
 
