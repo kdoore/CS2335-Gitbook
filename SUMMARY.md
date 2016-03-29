@@ -34,6 +34,7 @@
 * [Game Objects](game_objects.md)
 * [Game Scene](game_scene.md)
 * [Player GameObject](player_gameobject.md)
+* [Events and Actions](events_and_actions.md)
 * [Custom Event Messaging](custom_event_messaging.md)
 * [C# Language](c_language.md)
    * [Variables](variables.md)
@@ -54,5 +55,4 @@
    * [UML Class Diagram](uml_class_diagram.md)
 * [Glossary](GLOSSARY.md)
 * [References](references.md)
-* [Events and Actions](events_and_actions.md)
 
