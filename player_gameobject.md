@@ -3,12 +3,13 @@
 ### 2D Sprite as Player 
 To create a player character, we need to create a gameObject =>  2D Sprite. Then, we can set the sprite-Renderer component to refer to an image that we've added to our project assets folder.  To import an image as a 2D sprite, you select the image in the assets panel and set the component: texture-type set to *Sprite(2D - UI). 
 
-Below are some example open-source game sprites that you can download to use in your proejct, these sprites are from: :
+Below are some example open-source game sprites that you can download to use in your proejct, these sprites are from:  [Daniel Cook's Planet Cute](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
 
 ![](girl1.png)![](healthheart.png)
 ![](star.png)
 
-Then we need to attach a RigidBody2D component to our Girl-player.  The [Unity Manual](http://docs.unity3d.com/ScriptReference/Rigidbody2D.html) explains that we need to add a RigidBody2D component so that we can use the Unity Physics Engine to move our Girl-player in the scene.  We'll update the player's RigidBody.velocity each frame in response to the user key-presses. In addition, the Rigidbody component allows us to sense when our player collides with other game objects.
+###Moving GameObjects: RigidBody2D 
+Then we need to attach a RigidBody2D component to our Girl-player gameObject.  The [Unity Manual](http://docs.unity3d.com/ScriptReference/Rigidbody2D.html) explains that we need to add a RigidBody2D component so that we can use the Unity Physics Engine to move our Girl-player in the scene.  We can update the player's RigidBody.velocity or add a force to the RigidBody2D each frame in response to the user key-presses, to cause the gameObject to move in a realistic way. 
 
 ###Canvas Mode:  Screen-Space Camera
 Since we are using sprites to create a game in this scene, we'll need to change our camera settings to allow us to also use UI-objects that will be on a Canvas GameObject. Add a UI-Text GameObject to the scene.  If you double click on your text, you'll see that the scaling for the canvas does not match the scaling for the sprites we've used to create the scene.
@@ -17,7 +18,6 @@ Since we are using sprites to create a game in this scene, we'll need to change 
 
 We need to define sorting layers for our sprites, this will allow us to define layers that vary in Z depth. First we need to select the layer dropdown tab from the top of the inspector panel and then we choose to add new layers.  We select to add new sorting layers, we create a Background and a Foreground sorting layer.  The ordering of the layers in this list defines the ordering of layers in our scene. Then for each GameObject that we assign with *Sorting Layer Background* those objects will be behind the GameObjects that have been assigned to the Foreground Layer.  We can define additional layers, and we can change the layer ordering dynamically using C# scripts.  (We don't do that in this project)
 In addition, the Z transform value for an object can also determine visibility.  The Main Camera has a transform position vector of (0,0,-10) by default.  This means that to move objects closer to the camera, can give them a Z transform value that is between 0 and -10. 
-
 
 ###RigidBody2D
 
