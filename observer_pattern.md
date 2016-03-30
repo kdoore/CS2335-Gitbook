@@ -28,13 +28,13 @@ The subject is the object instance that will publish notification that an event 
 An observer is an object instance that has actions to perform once an event has occurred on the subject object, it has subscribed, or registered, to be notified when the event occurs so it can perform it's actions.  
 
 ###MVC Pattern
-The observer pattern is similar to the Model-View-Controller pattern, where the model is an abstract representation of the data for the system. The view  represents the interface-view that is rendered and displayed for the user.  The view should be automatically notified when there are changes in the data-model, so it can update the user's view of the system.  
+The observer pattern is similar to the Model-View-Controller pattern, where the model is an abstract representation of the data for the system. The view  represents the interface-view that is rendered and displayed for the user. The controller is a component that manages input and communicates with the data-model based on user-event interaction. The view component should be automatically notified when there are changes in the data-model, so it can update the user's view of the system.  
 
 ###Publish / Subscribe System
-We can consider these design patterns as simplified versions of a publish / subscribe system.  Typically in a Publish / Subscribe system, we would build some type of message manager class which would function 
+We can consider these design patterns as simplified versions of a publish / subscribe system.  Typically in a Publish / Subscribe system is implemented using an architecture with some type of message-manager class which functions to manage published events and distributes notifications to the subscribing components.
 
 ###Loose Coupling
-These patterns provide a way to reduce dependencies between objects within a system.  The publisher / subject does not need any details about which objects have subscribed for notification of events.  This means that design changes to the system will be less likely to 
+These patterns provide a way to reduce dependencies between objects within a system.  The publisher / subject does not need implementation details about which objects have subscribed for notification of events.  This means that design changes to the system will be less likely to cause errors. Interfaces provide one means of implementing loose coupling between components because it insures that functionality is implemented across all classes that implement an interface, so no details of a classes implementation are required when executing interface methods. Delegates also provide a method of implementing loose coupling because delegates allow passing functions between objects as a means of communicating. 
 
 
 
