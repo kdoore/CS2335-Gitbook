@@ -1,5 +1,8 @@
-#Event Publishing Patterns
-There are several similar approaches to designing a system where we can have our custom objects communicate when events occur. The 
+#Event Publishing Design Patterns
+There are several similar approaches to designing a system where we can have our custom objects communicate with each other when events occur. Many Unity UI GameObject Components provide this type of event messaging functionality, but we want to understand these programming patterns so we can create this functionality with our own objects.
+
+###UI-Buttons
+In Unity, we have worked with UI Buttons, where we create a reference to a UI-Button component via our custom script, then we add our custom class method as a listener to the button component's onClick event, using code similar to that below.
 
 ###Observer Pattern
 The Observer Pattern is an OOP programming pattern that reflects common game-design situations, as discussed in the book: [Game Programming Patterns.](http://gameprogrammingpatterns.com/observer.html)  The situation is that we have an event that occurs within one component, the Subject, and we have other components, Observers, that want to be notified when this event has occurred.  Often the Observer Pattern is implemented using Interfaces, however, since Unity uses C# and .Net framework, then we can use C# delegates and events to create a simpler Observer Pattern implementation.
