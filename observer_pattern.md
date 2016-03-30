@@ -22,10 +22,12 @@ void GameStartActions(){
 The Observer Pattern is an OOP programming pattern that reflects common game-design situations, as discussed in: [Game Programming Patterns.](http://gameprogrammingpatterns.com/observer.html)  We have an event that occurs within one object component, the Subject, and we have other components, Observers, that want to be notified when this event has occurred.  Often the Observer Pattern is implemented using Interfaces, however, since Unity uses C# and .Net framework, then we can use C# delegates and events to create a our Observer Pattern implementation.
 
 ###Subject:
-The subject is the object instance that will publish notification that an event has occurred, he will maintain a list of other objects that have requested to be notified of the event.
+The subject is the object instance that will publish notification that an event has occurred, he will maintain a list of other objects that have requested to be notified of the event.  This can represent a "one - to - many" relationship, where there is one subject that notifies many observer objects.
 
 ###Observer
-The observer is an object instance that 
+An observer is an object instance that has actions to perform once an event has occurred on the subject object, it has subscribed, or registered, to be notified when the event occurs so it can perform it's actions.  
+
+
 
 ###MVC Pattern
 The observer pattern is similar to the Model-View-Controller pattern, where the model is an abstract representation of the data for the system, the view  represents the interface-view that is rendered for the user.  The view should be automatically notified when there are changes in the data-model, so it can update the user's view of the system.  
