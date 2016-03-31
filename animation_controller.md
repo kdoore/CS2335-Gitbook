@@ -3,7 +3,8 @@ The Unity Animation controller is a visual programming language implementation o
 
 
 ###Create an Animation from a series of sprites
-To create an animation, we can select a series of sprites and drag them into the scene window.  We are then prompted to save this animation.  This immediately creates several components: 
+To create an animation, we can select a series of sprites and drag them into the scene window.  We are then prompted to save this animation.  This immediately creates several components:
+
 * Animation clip
 * Animation controller
 * Animator component
