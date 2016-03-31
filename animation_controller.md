@@ -25,7 +25,7 @@ The Animation Controller, Mechanim, is a visual interface for creating a state m
 In order to integrate an animation with a gameObject, we need a 2D gameObject that has a Sprite Renderer, then we can add an Animation Component from the miscellaneous tab
 
 ###Animation Controller Script
-Finally, for any gameObject where we want to control the animate outside of the Animation Controller, such as user-input, then we'll need a custom C# script that can manage the logic to determine what input events have occurred and whether the input should impact the animation controller state.  Our custom script will send input signals to the Animation Controller State Machine, where the animation controller state machine will consider the current animator state, the input signals, and the defined transition conditions to determine whether to switch to a new animation clip.  
+To control a animation associated with a gameObject, outside of the Animation Controller, such as user-input, then we'll need a custom C# script that can manage the logic to determine what input events have occurred and whether the input should impact the animation controller state.  Our custom script will send input signals to the Animation Controller State Machine, where the animation controller state machine will consider the current animator state, the input signals, and the defined transition conditions to determine whether to switch to a new animation clip.  
 
 ###Unity 2D Animation Tutorials:
 
