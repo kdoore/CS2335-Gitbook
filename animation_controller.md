@@ -1,5 +1,5 @@
 # Animation Controller
-The Unity Animation controller is a visual programming language implementation of a state machine to control coordination of animations which can be attached to gameObjects.
+The Unity Animation controller is a visual programming language implementation of a state machine to control coordination of animations which can be attached to gameObjects. [Unity Animation Beginner Tutorial](https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/animate-anything)
 
 
 ###Create an Animation from a series of sprites
@@ -19,7 +19,7 @@ In addition, in order to integrate animations with our Unity program, we will pr
 In 2D mode, we can create animation clips using sprites.  We can use a series of sprites, where each sprite is in a slightly different position, so that when we show these sprites in a sequential loop, we see animated behavior.  Or, we can use a single sprite, and use the Animation editor to modify some feature of the sprite over time using the dope-sheet or curves editor.
 
 ###Animation Controller
-
+The Animation Controller, Mechanim, is a visual interface for creating a state machine to control animations in Unity.  It has the ability to utilize input parameters as event signals, these input parameters provide the connection between the Mechanim state-machine and custom C# scripts.  There are many online tutorial examples that show how to use Mechanim as a state-machine to control game-logic, instead of animations.  The animation controller has a set of nodes that correspond to states, it is easy to add arc - transitions between nodes. Each transition can be configured to use any number of conditions to determine when a transition is exectued to change the sytem's current state.  
 
 ###Animation Component
 In order to integrate an animation with a gameObject, we need a 2D gameObject that has a Sprite Renderer, then we can add an Animation Component from the miscellaneous tab
