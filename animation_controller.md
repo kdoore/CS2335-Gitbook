@@ -33,13 +33,12 @@ Below is a simple example class: PlayerController.cs which checks for left-right
 using UnityEngine;
 using System.Collections;
 
-public enum CatState
+public enum CatState  // input parameter signals to send to Animator controller
 {
 	idle = 0,
 	walk = 1,
 	dead = 2
 }
-
 
 public class PlayerController : MonoBehaviour
 {
