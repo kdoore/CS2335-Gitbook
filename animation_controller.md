@@ -29,6 +29,82 @@ To control a animation associated with a gameObject, outside of the Animation Co
 
 Below is a simple example class: PlayerController.cs which checks for left-right arrow keyboard input, or the fire1 key which maps to the control key on a MAC.  In Fixed-Update, the code checks for input, then uses if-else statement blocks to determine what value to send to the Animator component that is attached to the gameObject.
 
+```
+using UnityEngine;
+using System.Collections;
+
+public enum CatState
+{
+	idle = 0,
+	walk = 1,
+	dead = 2
+}
+
+
+public class PlayerController : MonoBehaviour
+{
+	private Animator animator;
+	private Transform myTransform;
+	private Rigidbody2D myRBody2D;
+	public float forceX;
+	private bool facingRight;
+
+	void Awake ()
+	{
+		animator = GetComponent<Animator> ();
+		myTransform = GetComponent<Transform> ();
+		myRBody2D = GetComponent<Rigidbody2D> ();
+	}
+
+	void Start ()
+	{
+		animator.SetInteger ("CatState", (int)CatState.idle);
+		facingRight = true;
+		forceX = 50f;
+	}
+
+	void FixedUpdate ()
+	{
+        float inputX = Input.GetAxis ("Horizontal");
+		bool isDead = Input.GetButton ("Fire1");
+		bool isWalking = Mathf.Abs (inputX) > 0;  // is there horizontal input 
+
+		if (isWalking) {
+        
+            //send signal: 1 to animator component: 
+			animator.SetInteger ("CatState", (int)CatState.walk);
+
+			if (inputX > 0 && !facingRight) {
+				flip (); // flip right
+			}
+			if (inputX < 0 && facingRight) {
+				flip (); // flip left
+			}
+			myRBody2D.velocity = new Vector2 (0, 0);  // reset velocity to 0
+			myRBody2D.AddForce (new Vector2 (forceX * inputX, 0));  ///move with force
+
+		} else { // not walking - reset to idle
+            //send signal: 0 to animator component: 
+			animator.SetInteger ("CatState", (int)CatState.idle);
+		}
+		if (isDead) { // fire1 key 
+			animator.SetInteger ("CatState", (int)CatState.dead);
+		}
+	} // end FixedUpdate
+
+//flip the animation left or right facing using Scale.x
+	void flip ()
+	{
+		facingRight = !facingRight;
+		Vector3 theScale = myTransform.localScale;
+		theScale.x *= -1;
+		myTransform.localScale = theScale;
+	}
+	
+}  // end class
+
+
+```
 
 
 ###Unity 2D Animation Tutorials:
