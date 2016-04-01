@@ -1,10 +1,10 @@
 # Conversation
-This code shows how to utilize
+This code below shows how to utilize
  our [Conversation ScriptableObject Custom Asset](https://kdoore.gitbooks.io/cs-2335/content/inventoryitems_-_scriptableobjects.html#conversation-scriptable-objects) from the previous section.
 The code chunks below are used to retrieve and display data from a Conversation ScriptableObject: Conversation2.  In these examples, the ScriptableObject is never attached to any scene GameObject, it's just used as a data resource, pulled directly from the project assets.
 
 ###Resources Folder
-To load a Conversation scriptableObject, which must be located in the Resources folder within Assets, so you will need to create a Resources folder and move the desired scriptableObjects into that folder if they are going to be accessed via code and not attached to a gameOjbect within a scene.  The code below can also be utilized for Conversation objects that are attached to gameObjects, but this is a more flexible approach. 
+To load a Conversation scriptableObject, which must be located in the Resources folder within Assets, you will need to create a Resources folder and move the desired scriptableObjects into that folder if they are going to be accessed via code and not attached to a gameOjbect via the inspector within a scene.  The code below can also be utilized for Conversation objects that are attached to gameObjects, but this is a more flexible approach. 
 
 ###State Code For Conversation Elements
 BeginState.cs has 3 gameObjects used to display the content in a conversation element and 2 buttons to allow browsing through the conversation., To load a Conversation scriptableObject, which must be located in the Resources folder within Assets.  In this code below, we're loading The instance of the Conversation:"Conversation2".
