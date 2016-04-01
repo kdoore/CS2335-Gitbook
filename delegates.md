@@ -6,7 +6,7 @@ Delegates are useful in Unity because delegates allow creation of custom event h
 "A delegate is a type that holds a reference to a method. A delegate is declared with a signature that shows the return type and parameters for the methods it references, and can hold references only to methods that match its signature. A delegate is thus equivalent to a type-safe function pointer or a callback. A delegate declaration is sufficient to define a delegate class."
 
 Details: 
-* 1. A delegate declaration defines a special type of a reference, which means it can hold a memory address.
+* A delegate declaration defines a special type of a reference, which means it can hold a memory address of a method.
 
 * A delegate declaration specifies the signature of a function / method
   * return type
@@ -17,9 +17,9 @@ Details:
  ``` public delegate void SomeEventHandler (  );   //delegate declaration```
  
 
-*  A delegate instance is declared using the name of the delegate type     
+*  A delegate instance is declared using the name of the delegate-type     
 
-``` public SomeEventHandler handleEvent 
+``` public SomeEventHandler handleEvent; ```
 
 
 
