@@ -10,3 +10,7 @@ A state machine responds to events by performing actions.
 
 For example: changing a variable, performing I/O, invoking a function, generating another event instance, or changing to another state. Any parameter values associated with the current event are available to all actions directly caused by that event. [Wikipedia](https://en.wikipedia.org/wiki/UML_state_machine#Actions_and_transitions)
 
+###Event Notification
+
+###Event Handlers
+
