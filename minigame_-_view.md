@@ -1,4 +1,5 @@
 # MiniGame - View
+The MiniGame.cs custom script is acting as the UI View for displaying Player and Spawn Data, so it has defined EventHandlers and needs to Register the event handlers when the Scene has loaded.  First it needs a reference to the gameObjects - scriptComponents that will be sending event notifications:  The CrystalSpawner and the GameData script components which are attached to gameObjects. 
 
 ```
 using UnityEngine;
