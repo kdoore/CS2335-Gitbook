@@ -98,3 +98,5 @@ public class CrystalSpawner : MonoBehaviour {
 }
 
 ```
+
+###MiniGame.cs - The UI View
