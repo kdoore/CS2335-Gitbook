@@ -30,6 +30,7 @@
 * [Game Scene](game_scene.md)
 * [Player GameObject](player_gameobject.md)
 * [PickUp Items](pickup_items.md)
+* [Game-Data Model](game-data_model.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Spawn Prefab GameObjects](spawn_prefab_gameobjects.md)
 * [Conversation](conversation.md)
@@ -59,5 +60,4 @@
 * [Glossary](GLOSSARY.md)
 * [Unity - Serialization Problems with Polymorphic Types](unity_-_serialization_problems_with_polymorphic_ty.md)
 * [References](references.md)
-* [Game-Data Model](game-data_model.md)
 
