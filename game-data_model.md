@@ -1,5 +1,6 @@
 # Game-Data Model
 Below is the start of a custom class that we'll use to manage game data throughout the entire game.  It will use the singleton pattern and it'll be attached to the GameManager, so it will exist through the life of our application.
+We have defined an Event Handler and an Event to notify other gameObjects when the PlayerData has been updated
 
 ```
 using UnityEngine;
@@ -97,4 +98,19 @@ public class GameData : MonoBehaviour {
 	}
 
 } // end class: GameData - this class functions as our Data-Model
+```
+
+###PlayerDataEventArgs
+```
+using UnityEngine;
+using System.Collections;
+using System;
+
+[Serializable]
+public class PlayerDataEventArgs : EventArgs {
+	public int totalScore;
+	public int health;
+	public int lives;
+}
+
 ```
