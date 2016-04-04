@@ -1,6 +1,6 @@
 # PickUp Items
 Throughout our game we will want to have game items for the player to interact with.  Often these are considered Pick-up items.  So, we'll want to create a base-class that represents this Pick-up type and create child classes to extend for specialized pick-up items.  Some of our pick-up objects will need the ability to generate events that can notify other objects when the pick-up item has died.  Therefore, we'll create a Delegate: OnDiedHandler which specifies the signature of any eventHandler that wants to register for notification when the died event occurs and the OnDied notifications are invoked.
-
+```
 using UnityEngine;
 using System.Collections;
 using System;
@@ -41,9 +41,9 @@ public class PickUp : MonoBehaviour {
 		DestroyMe ();  // then destroy the gameObject
 	}
 }  //end class 
-
+```
 ###Crystal Controller: Child Class of PickUp
-
+```
 using UnityEngine;
 using System.Collections;
 
@@ -65,5 +65,5 @@ public class CrystalController : PickUp {
  		Invoke ("Died", Random.Range(minLifeTime, maxLifeTime));  //
 	}
 }
-
+```
 
