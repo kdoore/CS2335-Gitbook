@@ -29,7 +29,6 @@
 * [Game Objects](game_objects.md)
 * [Game Scene](game_scene.md)
 * [Player GameObject](player_gameobject.md)
-* [Spawning Prefab GameObjects](spawning_prefab_gameobjects.md)
 * [Animation Controller](animation_controller.md)
 * [Events and Actions](events_and_actions.md)
 * [Event Publishing Patterns](observer_pattern.md)
@@ -58,4 +57,5 @@
 * [Glossary](GLOSSARY.md)
 * [Unity - Serialization Problems with Polymorphic Types](unity_-_serialization_problems_with_polymorphic_ty.md)
 * [References](references.md)
+* PickUp Items
 
