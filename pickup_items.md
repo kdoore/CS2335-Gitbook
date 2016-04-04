@@ -40,11 +40,30 @@ public class PickUp : MonoBehaviour {
 		}
 		DestroyMe ();  // then destroy the gameObject
 	}
+}  //end class 
 
+###Crystal Controller: Child Class of PickUp
 
+using UnityEngine;
+using System.Collections;
+
+public class CrystalController : PickUp {
+
+	// Life variables
+	private float minLifeTime;
+	private float maxLifeTime;
+
+	//new public delegate void onDiedHandler( PickUp thisPickup);
+	//new public event onDiedHandler onDied; 
+
+	// Called automatically thanks to MonoBehaviour
+	void Start () {
+		// Automatic destroy after random time by calling base class died method
+		minLifeTime = 100.0f;
+		maxLifeTime = 400.0f;
+		type = PickupType.crystal;
+ 		Invoke ("Died", Random.Range(minLifeTime, maxLifeTime));  //
+	}
 }
-
-###Crystal Child Class
-
 
 
