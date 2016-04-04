@@ -29,7 +29,9 @@ public class CrystalController : PickUp {
 
 ###CrystalSpawner - Manage the Spawning
 We need to create a custom scritp that can spawn our game objects: 
-This script needs to be attached to an empty gameObject in our scene.  
+This script needs to be attached to an empty gameObject in our scene. 
+In addition, the CrystalSpawn class has also defined an EventHandler: OnSpawn() and an associated Event: OnSpawn
+
 ```
 using UnityEngine;
 using System.Collections;
