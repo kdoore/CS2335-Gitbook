@@ -100,3 +100,6 @@ public class CrystalSpawner : MonoBehaviour {
 ```
 
 ###MiniGame.cs - The UI View
+Since we've been using our State.cs classes for implementing the logic for the game UI, for now we can say that the MiniGame.cs class, which Implements IStateBase and which represents the current activeState for our State-Machine Framework.  Later we can create a Prefab to represent our Player heads-up display for presenting player game stat information.
+
+Inside the UI-View, we want to receive notification of spawn events and we want to receive notification of data events so we can display these on the screen.
