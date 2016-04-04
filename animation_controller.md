@@ -105,6 +105,8 @@ public class PlayerController : MonoBehaviour
 
 ```
 
+###Project Code for MiniGame with Melting Crystal and Events
+[Example Unity Project: Events and Animation Controller](https://utdallas.box.com/Unity-Animator-and-CustomEvent)
 
 ###Unity 2D Animation Tutorials:
 
