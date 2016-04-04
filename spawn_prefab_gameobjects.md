@@ -77,7 +77,10 @@ public class CrystalSpawner : MonoBehaviour {
 			onSpawn();
 	}
 
-	// Function that will be called automatically when the crystal dies
+	// EventHandler Function that will be called automatically when the crystal dies
+    // This allows it to spawn a new prefab instance, and then 
+    // we need to remember to unregister
+    
 	public void OnPickUpDied (PickUp thisPickUp){
 
 		// We unsubscribe to avoid memory leaks, we need to use the
