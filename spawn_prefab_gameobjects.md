@@ -88,7 +88,7 @@ public class CrystalSpawner : MonoBehaviour {
 		//as a listener to the onDied event on this crystal
 		thisPickUp.onDied -= OnPickUpDied;
 
-		// Spawn a new crystal
+		// Spawn a new crystal 
 		Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime+3));
 	}
 		
