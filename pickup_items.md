@@ -26,6 +26,7 @@ public class PickUp : MonoBehaviour {
 		Debug.Log ("Item Destroy Me");
 		Destroy(gameObject);
 	}
+    
 	////since we want to use within animation, Unity won't let it be 
 	/// declared as a virtual method, this is a Unity bug. 
 	/// <summary>
@@ -42,5 +43,8 @@ public class PickUp : MonoBehaviour {
 
 
 }
+
+###Crystal Child Class
+
 
 
