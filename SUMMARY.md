@@ -29,7 +29,7 @@
 * [Game Objects](game_objects.md)
 * [Game Scene](game_scene.md)
 * [Player GameObject](player_gameobject.md)
-* PickUp Items
+* [PickUp Items](pickup_items.md)
 * [Animation Controller](animation_controller.md)
 * [Events and Actions](events_and_actions.md)
 * [Event Publishing Patterns](observer_pattern.md)
