@@ -27,6 +27,68 @@ public class CrystalController : PickUp {
 }
 ```
 
-###
-Spaen
+###CrystalSpawner - Manage the Spawning
+We need to create a custom scritp that can spawn our game objects: 
 
+```
+using UnityEngine;
+using System.Collections;
+
+public class CrystalSpawner : MonoBehaviour {
+
+	// The prefab we will spawn
+	public PickUp prefab;
+	// The number of prefabs we will have at all time
+	private int prefabsCount;
+	private int pauseTime;
+
+	// Delegates to notify the UI
+	public delegate void OnSpawn();
+	public event OnSpawn onSpawn;
+
+	// Create the first crystals so there is always
+	// the same amount on the screen
+	void Start () {
+		prefabsCount = 2;
+		pauseTime = 1;
+		for (int i = 0; i < prefabsCount; i++){
+			Invoke("SpawnPrefab", Random.Range(pauseTime+1, pauseTime+5)); 
+		}
+	}
+
+	// Helper function to spawn prefabs and subscribe
+	public void SpawnPrefab (){
+
+		//select position to spawn based on spawner position
+		Vector3 pos = transform.position;
+		pos.x = Random.Range(-6.0f, 6.0f);
+		pos.y = Random.Range (-4.8f, -4.2f);
+
+		// Spawn the crystal
+		PickUp newPickup = (PickUp)Instantiate(prefab,pos,transform.rotation);
+
+		// Subscribe so the other class handles notification automatically
+		///the spawn object has it's OnPickUpDied function added to the list of subscribers
+
+		newPickup.onDied += OnPickUpDied; //when this crystal dies, please notify this spawn class
+
+		// Notify if any UI is listening that we just had a spawn event
+		if (onSpawn != null)  
+			onSpawn();
+	}
+
+	// Function that will be called automatically when the crystal dies
+	public void OnPickUpDied (PickUp thisPickUp){
+
+		// We unsubscribe to avoid memory leaks, we need to use the
+		//object reference passed into this method in order to unregister
+		//as a listener to the onDied event on this crystal
+		thisPickUp.onDied -= OnPickUpDied;
+
+		// Spawn a new crystal
+		Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime+3));
+	}
+		
+}
+
+```
