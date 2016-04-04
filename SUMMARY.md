@@ -31,6 +31,7 @@
 * [Player GameObject](player_gameobject.md)
 * [PickUp Items](pickup_items.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
+* [Spawn Prefab GameObjects](spawn_prefab_gameobjects.md)
 * [Conversation](conversation.md)
 * [Animation Controller](animation_controller.md)
 * [Events and Actions](events_and_actions.md)
@@ -58,5 +59,4 @@
 * [Glossary](GLOSSARY.md)
 * [Unity - Serialization Problems with Polymorphic Types](unity_-_serialization_problems_with_polymorphic_ty.md)
 * [References](references.md)
-* [Spawn Prefab GameObjects](spawn_prefab_gameobjects.md)
 
