@@ -33,7 +33,7 @@
 * [Game-Data Model](game-data_model.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Spawn Prefab GameObjects](spawn_prefab_gameobjects.md)
-* MiniGame - View
+* [MiniGame - View](minigame_-_view.md)
 * [Conversation](conversation.md)
 * [Animation Controller](animation_controller.md)
 * [Events and Actions](events_and_actions.md)
