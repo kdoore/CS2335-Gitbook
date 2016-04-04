@@ -31,6 +31,7 @@ public class CrystalController : PickUp {
 We need to create a custom scritp that can spawn our game objects: 
 This script needs to be attached to an empty gameObject in our scene. 
 In addition, the CrystalSpawn class has also defined an EventHandler: OnSpawn() and an associated Event: OnSpawn
+This will allow any gameObject in the scene to register for, and receive notifications every time that we spawn a new prefab.
 
 ```
 using UnityEngine;
