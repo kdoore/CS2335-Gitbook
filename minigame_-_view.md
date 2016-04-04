@@ -98,8 +98,6 @@ public class MiniGameState : IStateBase{
 		OnDestroy ();
 	}
 
-
-
-}
+}  //end MiniGame.cs
 
 ```
