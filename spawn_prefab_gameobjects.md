@@ -29,15 +29,15 @@ public class CrystalController : PickUp {
 
 ###CrystalSpawner - Manage the Spawning
 We need to create a custom scritp that can spawn our game objects: 
-
+This script needs to be attached to an empty gameObject in our scene.  
 ```
 using UnityEngine;
 using System.Collections;
 
 public class CrystalSpawner : MonoBehaviour {
 
-	// The prefab we will spawn
-	public PickUp prefab;
+  // The prefab that we're going to spawn 
+	public PickUp prefab;  //use baseclass type
 	// The number of prefabs we will have at all time
 	private int prefabsCount;
 	private int pauseTime;
