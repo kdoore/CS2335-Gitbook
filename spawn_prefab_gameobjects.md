@@ -16,9 +16,8 @@ public class CrystalController : PickUp {
 	//new public delegate void onDiedHandler( PickUp thisPickup);
 	//new public event onDiedHandler onDied; 
 
-	// Called automatically thanks to MonoBehaviour
 	void Start () {
-		// Automatic destroy after random time by calling base class died method
+		// Self-destruct after random time by calling base class died method
 		minLifeTime = 100.0f;
 		maxLifeTime = 400.0f;
 		type = PickupType.crystal;
@@ -30,7 +29,7 @@ public class CrystalController : PickUp {
 ###CrystalSpawner - Manage the Spawning
 We need to create a custom scritp that can spawn our game objects: 
 This script needs to be attached to an empty gameObject in our scene. 
-In addition, the CrystalSpawn class has also defined an EventHandler: OnSpawn() and an associated Event: OnSpawn
+In addition, the CrystalSpawn class has also defined an EventHandler: OnSpawn() and an associated Event for notification: OnSpawn
 This will allow any gameObject in the scene to register for, and receive notifications every time that we spawn a new prefab.
 
 ```
@@ -41,7 +40,7 @@ public class CrystalSpawner : MonoBehaviour {
 
   // The prefab that we're going to spawn 
 	public PickUp prefab;  //use baseclass type
-	// The number of prefabs we will have at all time
+	
 	private int prefabsCount;
 	private int pauseTime;
 
@@ -49,8 +48,7 @@ public class CrystalSpawner : MonoBehaviour {
 	public delegate void OnSpawn();
 	public event OnSpawn onSpawn;
 
-	// Create the first crystals so there is always
-	// the same amount on the screen
+	// Explicitly Create the first crystals in unity start
 	void Start () {
 		prefabsCount = 2;
 		pauseTime = 1;
@@ -59,15 +57,16 @@ public class CrystalSpawner : MonoBehaviour {
 		}
 	}
 
-	// Helper function to spawn prefabs and subscribe
-	public void SpawnPrefab (){
+	// Helper function to spawn prefabs and to register as a subscriber
+    // to the crystal OnDied event notification
+	public void SpawnPrefab (){ //this is the actual SpawnEvent
 
 		//select position to spawn based on spawner position
 		Vector3 pos = transform.position;
-		pos.x = Random.Range(-6.0f, 6.0f);
+		pos.x = Random.Range(-6.0f, 6.0f);  //figure these range values based on scene geometry - move temp prefab to min, max positions
 		pos.y = Random.Range (-4.8f, -4.2f);
 
-		// Spawn the crystal
+		// Spawn the Pickup and assign to a temp object reference
 		PickUp newPickup = (PickUp)Instantiate(prefab,pos,transform.rotation);
 
 		// Subscribe so the other class handles notification automatically
@@ -76,11 +75,12 @@ public class CrystalSpawner : MonoBehaviour {
 		newPickup.onDied += OnPickUpDied; //when this crystal dies, please notify this spawn class
 
 		// Notify if any UI is listening that we just had a spawn event
-		if (onSpawn != null)  
+		if (onSpawn != null)    //spawn event notification
 			onSpawn();
 	}
 
-	// EventHandler Function that will be called automatically when the crystal dies
+	
+    // OnPickUpDied is an EventHandler Function that will be called automatically when the pickup object instance dies
     // This allows it to spawn a new prefab instance, and then 
     // we need to remember to unregister
     
