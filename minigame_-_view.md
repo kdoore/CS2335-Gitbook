@@ -1,6 +1,13 @@
 # MiniGame - View
 The MiniGame.cs custom script is acting as the UI View for displaying Player and Spawn Data, so it has defined EventHandlers and needs to Register the event handlers when the Scene has loaded.  First it needs a reference to the gameObjects - scriptComponents that will be sending event notifications:  The CrystalSpawner and the GameData script components which are attached to gameObjects. 
 
+
+###MiniGame.cs - The UI View
+Since we've been using our State.cs classes for implementing the logic for the game UI, for now we can say that the MiniGame.cs class, which Implements IStateBase and  represents the current activeState for our State-Machine Framework.  Later we can create a Prefab to represent our Player heads-up display for presenting player game stat information, that will be the view.
+
+Inside the UI-View, we want to receive notification of spawn events and we want to receive notification of data events so we can display these on the screen. So we need to write EventHandler methods - MiniGame.cs is a subscriber to Events: CrystalSpawner.OnSpawn, GameData.
+OnPlayerDataUpdated
+
 ```
 using UnityEngine;
 using UnityEngine.UI;
@@ -54,11 +61,13 @@ public class MiniGameState : IStateBase{
 	public void InitializeObjectRefs (){
 		
 		crystalSpawner = GameObject.Find ("CrystalSpawner").GetComponent<CrystalSpawner> ();
-		if (crystalSpawner != null) {
-			crystalSpawner.onSpawn += IncreaseCount;  // add method with delegate-type
-		}
-		gameData = GameObject.Find("GameManager").GetComponent<GameData>();
-		gameData.onPlayerDataUpdate += UpdatePlayerData ;  // register as as an eventHandler for the gameData.onPlayerUpdateEvent notification
+        
+		crystalSpawner.onSpawn += IncreaseCount;  // register as eventHandler for CrystalSpawner.onSpawn event notification
+		
+		
+        gameData = GameObject.Find("GameManager").GetComponent<GameData>();
+		
+        gameData.onPlayerDataUpdate += UpdatePlayerData ;  // register as as an eventHandler for the gameData.onPlayerDataUpdate Event notification
 		label = GameObject.Find ("CrystalLabel").GetComponent<Text> ();
 		score = GameObject.Find ("TotalScore").GetComponent<Text> ();
  	}
