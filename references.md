@@ -64,3 +64,5 @@ Link to download and Tutorial: https://www.youtube.com/watch?v=TU6wflRqT5Q
 ###Class Projects Code:
 
 MiniGame with Animator, Spawing and Events- [Example Unity Project: Events and Animation Controller](https://utdallas.box.com/Unity-Animator-and-CustomEvent)
+
+MiniGame with Level Manager, PlayerStats - [Code Zip File](https://utdallas.box.com/levelManagerStarter)
