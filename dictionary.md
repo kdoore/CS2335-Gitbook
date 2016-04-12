@@ -31,7 +31,7 @@ There are many Dictionary methods to let us interact and modify Dictionary eleme
          
          
          ```
-         ###foreach Loop
+ ###foreach Loop
 In order to iterate through all items in a dictionary, we can use a foreach loop which is a range-based for-loop as opposed to a count-based for-loop.  Since each inventory item is a key/value pair which is a complex dataType, we can use ``var`` as the variable type that will temporarily hold each item so we can manipulate the item. We can also use the KeyValuePair struct data-type if we declare the <T> type of each dictionary element. 
 ```
 
