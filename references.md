@@ -5,12 +5,13 @@
 3. [Miles, Rob. C# Programming Yellow Book ](http://www.robmiles.com/c-yellow-book/) Exellent C# Book, Free online / download pdf-version.
 4. Norton, Terry. [Learning C# by Developing Games with Unity 3D Beginner's Guide, Terry Norton](http://www.amazon.com/Learning-Developing-Games-Unity-Beginners-ebook/dp/B00FFUL9LY).  PacktPub eBook Version
 
+###Recommended Tutorials
 Delegates Tutorials: 
 [Juan Gomez on UnityDojo](http://unitydojo.blogspot.com/2015/03/how-to-use-delegates-in-unity-like-boss.html)
 
 Import data from [CSV File](http://bravenewmethod.com/2014/09/13/lightweight-csv-reader-for-unity/) Tutorial:
 
-[Pixelnest 2D Game Tutorial: ](http://pixelnest.io/tutorials/2d-game-unity/table-of-contents/)
+[Pixelnest 2D Game Tutorial: ](http://pixelnest.io/tutorials/2d-game-unity/table-of-contents/)Scrolling-Shooter,Parallax, Scrolling Background, Shooting Projectiles, etc.
 
 
 
@@ -66,3 +67,7 @@ Link to download and Tutorial: https://www.youtube.com/watch?v=TU6wflRqT5Q
 MiniGame with Animator, Spawing and Events- [Example Unity Project: Events and Animation Controller](https://utdallas.box.com/Unity-Animator-and-CustomEvent)
 
 MiniGame with Level Manager, PlayerStats - [Code Zip File](https://utdallas.box.com/levelManagerStarter)
+
+[Simple Animation - Animation Sampler](https://utdallas.box.com/v/AnimationSampler)
+
+[MiniGame with Inventory Items - Store, PlayerItem-Pickup-UI panel](https://utdallas.box.com/v/MiniGameWithInventory)
