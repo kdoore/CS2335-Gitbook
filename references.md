@@ -71,4 +71,4 @@ MiniGame with Level Manager, PlayerStats - [Code Zip File](https://utdallas.box.
 
 [Simple Animation - Animation Sampler](https://utdallas.box.com/v/AnimationSampler)
 
-[MiniGame with Inventory Items - Store, PlayerItem-Pickup-UI panel](https://utdallas.box.com/v/MiniGameWithInventory)
+MiniGame With Inventory Updated Link 4-17-16: [https://utdallas.box.com/miniGameInventory](https://utdallas.box.com/miniGameInventory)
