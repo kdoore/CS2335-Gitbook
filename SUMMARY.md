@@ -41,6 +41,7 @@
 * [Delegates](delegates.md)
 * [Custom Event Messaging](custom_event_messaging.md)
 * [Inventory Dictionary](inventory.md)
+* Inventory Store - Scriptable Objects
 * [C# Language](c_language.md)
    * [Variables](variables.md)
    * [Encapsulation](encapsulation.md)
@@ -61,5 +62,4 @@
 * [Glossary](GLOSSARY.md)
 * [Unity - Serialization Problems with Polymorphic Types](unity_-_serialization_problems_with_polymorphic_ty.md)
 * [References](references.md)
-* Inventory Store - Scriptable Objects
 
