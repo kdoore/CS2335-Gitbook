@@ -73,3 +73,6 @@ MiniGame with Level Manager, PlayerStats - [Code Zip File](https://utdallas.box.
 
 MiniGame With Inventory Updated Link 4-17-16: 
 https://utdallas.app.box.com/miniGameInventory
+
+Dialog Example with ScriptableObject
+https://utdallas.box.com/dialogScriptableObject
