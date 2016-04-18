@@ -41,7 +41,7 @@
 * [Delegates](delegates.md)
 * [Custom Event Messaging](custom_event_messaging.md)
 * [Inventory Dictionary](inventory.md)
-* Inventory Store - Scriptable Objects
+* [Inventory Store - Scriptable Objects](inventory_store_-_scriptable_objects.md)
 * [C# Language](c_language.md)
    * [Variables](variables.md)
    * [Encapsulation](encapsulation.md)
