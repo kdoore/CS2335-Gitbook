@@ -1,0 +1,2 @@
+# Inventory Store - Scriptable Objects
+
