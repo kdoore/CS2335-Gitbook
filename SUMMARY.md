@@ -54,7 +54,7 @@
    * [Switch-Case](switch-case.md)
    * [Dictionary](dictionary.md)
    * [Foreach](foreach.md)
-   * Static Classes
+   * [Static Classes](static_classes.md)
 * [Diagrams](diagrams.md)
    * [Flow-Chart](flow-chart_example.md)
    * [Finite State Machine](finite_state_machine.md)
