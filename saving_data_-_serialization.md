@@ -6,4 +6,6 @@ MSDN Reference Example: [Binary Serialization](https://msdn.microsoft.com/en-us/
 
 "Why would you want to use serialization? The two most important reasons are to persist the state of an object to a storage medium so an exact copy can be re-created at a later stage, and to send the object by value from one application domain to another. "   
 
-In Unity, objects that are marked with the Serialized Attribute, are automatically persisted by the Unity serialization process, however there will be cases when we want more control over serialization of game data.
+In Unity, objects that are marked with the Serialized Attribute, or fields marked with SerializeField Attribute, are persisted by the Unity serialization process, however there will be cases when we want more control over serialization of game data.
+
+[Unity SerializeField Reference](http://docs.unity3d.com/ScriptReference/SerializeField.html)
