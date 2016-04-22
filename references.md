@@ -85,3 +85,5 @@ https://utdallas.box.com/DialogScriptObject
 
 
 Class Demo Project: [ MiniGame with Binary Serialization](https://utdallas.box.com/v/MiniGameWithBinarySerializatio)
+
+[Simple Animation Game with Custom Events Demo](https://utdallas.box.com/v/SimplAnimationWithCustomEvents)
