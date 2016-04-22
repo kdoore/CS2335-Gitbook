@@ -17,3 +17,5 @@ In Unity, objects that are marked with the Serialized Attribute, or fields marke
 [Tutorial on Saving - Loading Game Data - TutsPlus](http://gamedevelopment.tutsplus.com/tutorials/how-to-save-and-load-your-players-progress-in-unity--cms-20934)
 
 [Tutorial on Saving - Loading Game Data - SitePoint](http://www.sitepoint.com/saving-and-loading-player-game-data-in-unity/)
+
+Class Demo Project: [ MiniGame with Binary Serialization](https://utdallas.box.com/v/MiniGameWithBinarySerializatio)
