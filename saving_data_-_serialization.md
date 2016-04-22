@@ -10,6 +10,8 @@ Script Serialization in Unity - [Reference Manual](http://docs.unity3d.com/Manua
 
 In Unity, objects that are marked with the Serialized Attribute, or fields marked with SerializeField Attribute, are persisted by the Unity serialization process.  This serialization allows for saving of data between the unity editor system, where objects are created using C# or UnityScript, for design-time use, and the Unity game-engine for game-play mode, which uses C++ S However there may be cases when we want more customized control over serialization of game data.
 
+[Unity Blog on Serialization In Unity](http://blogs.unity3d.com/2014/06/24/serialization-in-unity/)
+
 [Unity SerializeField Reference](http://docs.unity3d.com/ScriptReference/SerializeField.html)
 
 [Tutorial on Saving - Loading Game Data - TutsPlus](http://gamedevelopment.tutsplus.com/tutorials/how-to-save-and-load-your-players-progress-in-unity--cms-20934)
