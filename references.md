@@ -84,3 +84,4 @@ Dialog Example with ScriptableObject
 https://utdallas.box.com/DialogScriptObject
 
 
+Class Demo Project: [ MiniGame with Binary Serialization](https://utdallas.box.com/v/MiniGameWithBinarySerializatio)
