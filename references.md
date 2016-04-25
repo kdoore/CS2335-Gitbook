@@ -83,7 +83,9 @@ https://utdallas.app.box.com/miniGameInventory
 Dialog Example with ScriptableObject
 https://utdallas.box.com/DialogScriptObject
 
-###Simplified Project with MiniGame and Dictionary-Backed Inventory -  [Project Link](https://utdallas.box.com/v/SimplifiedInventory)
+###Simplified Project with MiniGame and Dictionary-Backed Inventory -  [Project Link](https://utdallas.box.com/v/SimplifiedInventory) version1
+
+###Simple Inventory version2 - [Project Link](https://utdallas.box.com/v/simpleInventory)
 
 Class Demo Project: [ MiniGame with Binary Serialization](https://utdallas.box.com/v/MiniGameWithBinarySerializatio)
 
