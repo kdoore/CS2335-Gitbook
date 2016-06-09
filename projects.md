@@ -1,6 +1,6 @@
 # Projects
 
-Project 1:  Text Adventure with StateManager Framework
+**Project 1:  Text Adventure with StateManager Framework**
 
 * Assignment Document: [](https://utdallas.box.com/v/Project1-Assignment)
 
@@ -10,7 +10,7 @@ Project 1:  Text Adventure with StateManager Framework
 
 
 
-Project 2:  MiniGame
+**Project 2:  MiniGame**
 
 * Assignment Document: 
 
