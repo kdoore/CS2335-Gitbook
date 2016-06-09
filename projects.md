@@ -6,7 +6,7 @@
 
 * Starter Code: [zipfile:  code](https://utdallas.box.com/v/Project1-StarterCode)
 
-* Self-Assessment:
+* Self-Assessment: [doc](https://utdallas.box.com/v/selfAssessment)
 
 
 
