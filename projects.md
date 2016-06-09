@@ -2,9 +2,9 @@
 
 **Project 1:  Text Adventure with StateManager Framework**
 
-* Assignment Document: [](https://utdallas.box.com/v/Project1-Assignment)
+* Assignment Document: [pdf](https://utdallas.box.com/v/Project1-Assignment)
 
-* Starter Code: [](https://utdallas.box.com/v/Project1-StarterCode)
+* Starter Code: [zipfile:  code](https://utdallas.box.com/v/Project1-StarterCode)
 
 * Self-Assessment:
 
