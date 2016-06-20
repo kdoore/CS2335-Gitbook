@@ -12,10 +12,10 @@
 
 **Project 2:  MiniGame**
 
-* Assignment Document: 
+* Assignment Document: [doc](https://utdallas.box.com/v/assignment-document)
 
-* Starter Code: 
+* Starter Code: [zipfile: code](https://utdallas.box.com/v/miniGame-StarterCode)
 
-* Self-Assessment: 
+* Self-Assessment:[doc](https://utdallas.box.com/v/selfAssessment-Project2) 
 
 
