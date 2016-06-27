@@ -6,6 +6,17 @@
 4. Norton, Terry. [Learning C# by Developing Games with Unity 3D Beginner's Guide, Terry Norton](http://www.amazon.com/Learning-Developing-Games-Unity-Beginners-ebook/dp/B00FFUL9LY).  PacktPub eBook Version
 
 ###Recommended Tutorials
+
+[Unity - Animation with Sprite Sheet - Tutorial](Sprite Sheet Animation Tutorial )
+
+**Unity Animator Tutorial**
+Player Sprite Sheeet: 
+Link to download and Tutorial: https://www.youtube.com/watch?v=TU6wflRqT5Q
+
+![](Player.png)
+
+
+
 Delegates Tutorials: 
 [Juan Gomez on UnityDojo](http://unitydojo.blogspot.com/2015/03/how-to-use-delegates-in-unity-like-boss.html)
 
@@ -63,13 +74,6 @@ Art by Osmic
 
 [Zombie Textures Download Link](https://utdallas.box.com/zombieTextures) 
 
-**Unity Animator Tutorial**
-Player Sprite Sheeet: 
-Link to download and Tutorial: https://www.youtube.com/watch?v=TU6wflRqT5Q
-
-![](Player.png)
-
-[Animation Sprite Sheet - Tutorial](Sprite Sheet Animation Tutorial )
 
 ###Class Projects Code:
 
