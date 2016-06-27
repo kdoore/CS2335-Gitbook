@@ -69,6 +69,8 @@ Link to download and Tutorial: https://www.youtube.com/watch?v=TU6wflRqT5Q
 
 ![](Player.png)
 
+[Animation Sprite Sheet - Tutorial](Sprite Sheet Animation Tutorial )
+
 ###Class Projects Code:
 
 MiniGame with Animator, Spawing and Events- [Example Unity Project: Events and Animation Controller](https://utdallas.box.com/Unity-Animator-and-CustomEvent)
