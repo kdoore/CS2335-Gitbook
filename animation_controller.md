@@ -112,6 +112,8 @@ public class PlayerController : MonoBehaviour
 
 [Introduction to Unity Animation: RayWenderlich.com ](https://www.raywenderlich.com/116652/introduction-unity-animation-system)
 
+[Sprite Sheet Animation Tutorial ](http://michaelcummings.net/mathoms/creating-2d-animated-sprites-using-unity-4.3)
+
 [Introduction to Unity 2D](https://www.raywenderlich.com/115688/introduction-unity-2d)
 
  John Stejskal, [IndieGameBuzz 3-Part tutorial](http://indiegamebuzz.com/create-2d-sprite-based-animation-states-in-unity3d/)
