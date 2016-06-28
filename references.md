@@ -7,7 +7,8 @@
 
 ###Recommended Tutorials
 
-[Unity - Animation with Sprite Sheet - Tutorial](Sprite Sheet Animation Tutorial )
+[Sprite Sheet Animation Tutorial ](http://michaelcummings.net/mathoms/creating-2d-animated-sprites-using-unity-4.3)
+
 
 **Unity Animator Tutorial**
 Player Sprite Sheeet: 
