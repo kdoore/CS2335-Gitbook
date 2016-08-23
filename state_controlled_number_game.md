@@ -14,7 +14,7 @@ A FSM diagram, as shown below, consists of a set of circles, or nodes, which cor
 
 In C#, we can use Enumeration-Types to create custom data-types which function as named constants.  We use the C# keyword enum to declare our custom data-type, then we must initialize the values using a comma separated list of values.  We'll define an enum to provide a set of gameStates to control our game's execution logic.  We can declare the enum outside any class code, it should be public, then it will be accessible in any code files in our project. If we make the activeState publicly accessible, then the enum values show up as a drop-down list, as shown in the image below. In addition, we can see the activeState value change while our game is executing.
 
-```java
+```C#
     public enum GameState { Initialize, Start, GamePlay, Win, Lose, End}
 	public gameStates activeState;  //create a variable using our custom Enumeration-type
 	
@@ -30,7 +30,7 @@ Here is the code for the State-controlled version of the NumberGame project.
 It is important to realize that in the if-statement blocks, where we are checking to see if any valid input keys have been entered, these if-statement blocks are executed only for 1-brief instant of time, so we should not put code in these statement blocks that we expect to see displayed on the screen. We use these statement blocks to change the activeState, not to display any text since the keypress event is an instantaneous trigger.  
  
 
-```
+```C#
 using UnityEngine;
 using UnityEngine.UI;  //added for UI gameObjects and UI components
 using System.Collections;
@@ -120,7 +120,7 @@ public class NumberGame1 : MonoBehaviour {
 
 In our code above, within the if, else-if blocks of code, we are always checking the value of one variable: `activeState`.  Since we have used enums to define allowable values for our GameStates, then we'll use the enums as the case-labels that we are testing for a match against the switch-condition: `activeState`.  The code below shows how we would implement the code for the first 2 possible game-states: Initialize and Start.  The example code also shows that we'll want to include a default: case so that we can get Debug output if that code executes.
 
-```
+```C#
 	void Update () {
 		switch (activeState) {
 		case GameState.Initialize: 
