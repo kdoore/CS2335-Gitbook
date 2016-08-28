@@ -34,7 +34,7 @@ The flow-chart symbols can guide us in creating our code.
 
 Below is a first pass at code for our console based game.
 
-```java
+```C#
 //Code Updated: Jan 19, 2016
 
 using UnityEngine;
