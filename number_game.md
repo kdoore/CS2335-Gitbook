@@ -103,6 +103,8 @@ Can you extend this program:
 - Use User-Interface Text GameObjects for player prompts?
 - How can we add a counter to limit the number of computer attempts so that the player can also win the game?
 - Check for `plus-one` type errors: does our method insure that the endpoints of the range can be selected as valid selections?  Is integer division adversely impacting our program?  If our range of numbers is 1 to 4, and we select number 4, what is the progression of values for: min, max, guess, and input
+
+Example Program Values - Integer Truncation Problem
     
 | Min | Max | Guess | Input |
 | -- | -- |
