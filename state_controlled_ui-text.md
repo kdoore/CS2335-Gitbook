@@ -25,7 +25,7 @@ For this project, let's attach the NumberGame.cs script file to the canvas objec
 
 In our NumberGame.cs script, we need to add a new UnityEngine code library so that we can access the UI library functions. We also need to create a script Text variable for each UI-Text GameObject that will be linked to the UI Text in the game scene so that it can modify the properties of the UI-Text GameObject. We need to make sure our Text variables are declared as public instance variables so that they will show up in the script-component section of the inspector panel for the object that we've attached our script to.  
 
-````java
+```C#
 using UnityEngine;
 using UnityEngine.UI;  //make sure to add Unity UI library
 using System.Collections;
@@ -38,7 +38,7 @@ public class NumberGame : MonoBehaviour {
 	
 	}
 	
-````
+```
 
 Next, go back into Unity, select the Canvas object in the Hierarchy Panel, (make sure we've attached our script to the Canvas GameObject), then we need to connect our TextUI elements with the public instance variables from our script component. We can do this by either dragging the UI-Text object from the hierarchy panel to the script component text-box, or we can select the text element in the script component, select the dot to the right of the text field and it will open a pop-up of all possible game-objects that we can select to connect to this script variable element.   [See Screenshot Animation 2 Below](https://kdoore.gitbooks.io/cs-2335/content/state_controlled_ui-text.html#animations)
 
@@ -48,7 +48,7 @@ In the NumberGame.cs file, we need to write code to modify the UI text elements.
 
 We can initialize the text elements in Start()
 
-```
+```C#
 void Start(){  //initialize text values
     gameText.text="Want to play a game?" ;
     numberText.text="";  //set text to empty string when not in use
