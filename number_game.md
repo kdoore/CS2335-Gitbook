@@ -27,9 +27,12 @@ We walked through the logical design of the project in class by first creating a
 Based on the flow diagram, we  can implemented a basic C# class: NumberGame in monoDevelop and then attach the code to an empty gameObject in the default scene to create a console version of the game.  
 
 The flow-chart symbols can guide us in creating our code.  
-* Rectangle:  we will be doing some initialization or  computation of variables.
-* Diamond: we need to check (input) or compare values to determine branching logic, use: if, else, etc.
+* Rectangle: initialization or computation with variables.
+* Diamond: check (input) or compare values to determine branching logic, use: if, else, etc.
 * Parallelogram:  Program output
+* Ellipse: start or end
+
+Below is a first pass at code for our console based game.
 
 ```java
 //Code Updated: Jan 19, 2016
