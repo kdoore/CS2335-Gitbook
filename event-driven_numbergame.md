@@ -9,7 +9,7 @@ Unity provides an event system for the Unity User-Interface (UI) components. Gam
 
 ###Custom Function
 In order to add custom behavior to a UI-Button, first we need to write some code that we'd like to have executed when the button has been clicked.  For our number game project, we can add a start game button that the user will click to indicate that they want to play the game.  Currently, we prompt the user when they are in the Initialize GameState to enter 'Y' if they went to play, or to enter 'N' to quit.  So, we have the following logic in our code, where we are listening for 'Y' when the activeState = GameState.Initialize:
-```
+```C#
 	 void Start () {
         min = 0;
         max = 64;
@@ -40,7 +40,7 @@ In order to add custom behavior to a UI-Button, first we need to write some code
 
 So, we need to refactor our program and move code out of the Update function.  We also need to change the prompt in the Start function so the user knows to press the button to start the game.
 
-```
+```C#
 gameText.text = "Do you want to play a Game, if so press the Start Game button, else enter N?"; 
 
 
@@ -79,7 +79,7 @@ Connect the Script Variable: StartButton with the scene: GameObject by dragging 
 
 Then in our code: Once the button has been clicked, and we've executed our StartGame tasks, then we can set the StartButton variable to inactive: 
 
-```
+```C#
 public void StartGame(){
 		activeState = GameState.Start;
 		Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
