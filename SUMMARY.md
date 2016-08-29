@@ -16,6 +16,8 @@
 * [Non-Player Character: Base-Class](non-player_character_base-class.md)
 * [NPC Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
 * [Zombie - Sorting](zombie_-_sorting.md)
+
+<!--
 * [C# Data Structures and Collections](c_data_structures_and_collections.md)
 * [Branching Narrative - Structure](branching_narrative_-_structure.md)
 * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
@@ -42,6 +44,7 @@
 * [Custom Event Messaging](custom_event_messaging.md)
 * [Inventory Dictionary](inventory.md)
 * [Inventory Store - Scriptable Objects](inventory_store_-_scriptable_objects.md)
+-->
 * [C# Language](c_language.md)
    * [Variables](variables.md)
    * [Encapsulation](encapsulation.md)
