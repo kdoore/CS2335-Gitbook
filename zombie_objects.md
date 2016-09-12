@@ -1,4 +1,12 @@
 #Zombie Custom Objects
+
+Code Example from: 
+
+* Learning C# Programming with Unity 3D
+* By: Alex Okita
+* Chapter 6, Section 4.
+
+(Book available through McDermott Library as an eBook);
  
 
 In this code example, we want to explore C# Encapsulation, Properties, Access Modifiers, Static Fields. In addition we want to introduce the C# Array syntax as well as the syntax to override methods. We'll also look at how to instantiate game objects in a C# script.
