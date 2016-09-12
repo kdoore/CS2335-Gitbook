@@ -12,7 +12,7 @@ Below we create the custom Zombie Class that we'll use to dynamically spawn a ga
 C# Language provides Properties as a feature to support encapsulation, Properties 
 
 Zombie.cs
-```
+```Csharp
 using UnityEngine;
 using System.Collections;
 
@@ -83,9 +83,8 @@ public class Zombie  {
 	{
 		return "Zombie: " + Name + " brains eaten: " + brainsEaten;
 	}
-```
-	
 }
+```
 
 ###Example.cs
 In the Example.cs file, we declare an array named zombies of Zombie objects, then in the Start method we initialize the Zombie objects and we output their Names in the console using Debug.Log().
