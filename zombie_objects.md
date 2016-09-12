@@ -1,6 +1,5 @@
 #Zombie Custom Objects
-
-In chapter 6, section 4, the author discusses Class Constructors. He creates a Zombie class.  In the code below, we have expanded his example to show how to use Properties in C# to provide access to private instance fields.  
+ 
 
 In this code example, we want to explore C# Encapsulation, Properties, Access Modifiers, Static Fields. In addition we want to introduce the C# Array syntax as well as the syntax to override methods. We'll also look at how to instantiate game objects in a C# script.
 
@@ -63,7 +62,7 @@ public class Zombie  {
 		hitPoints= hp;
 		Friends=0;
 		
-		///the code below will create a visable object in a scene that is associated with our custom class
+		///the code below will create a visible object in a scene that is associated with our custom class
 		
 		ZombieMesh = GameObject.CreatePrimitive(PrimitiveType.Capsule);
 		Vector3 pos = new Vector3(Random.Range (-10,10),0,Random.Range (-10,10));
