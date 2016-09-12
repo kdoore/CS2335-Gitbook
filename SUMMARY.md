@@ -11,7 +11,7 @@
 * [NumberGame: Event-Driven](event-driven_numbergame.md)
 * [Create Prefab GameObjects](create_prefab_gameobjects.md)
 
-<!--
+
 * [Zombie Objects](zombie_objects.md)
 * [Zombie Prefab](zombie_prefab.md)
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
@@ -21,6 +21,7 @@
 * [Unity - Serialization Problems with Polymorphic Types](unity_-_serialization_problems_with_polymorphic_ty.md)
 
 * [C# Data Structures and Collections](c_data_structures_and_collections.md)
+<!--
 * [Branching Narrative - Structure](branching_narrative_-_structure.md)
 * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
 * [Screen-Space Canvas](screen-space_canvas.md)
