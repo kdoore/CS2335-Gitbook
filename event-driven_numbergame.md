@@ -64,6 +64,21 @@ public void StartGame(){
 In Unity, we need to add a UI-Button GameObject to the scene.  We'll want to set custom values for highlight and normal colors so we can verify the button responds to mouse interaction when we hover over it during game-play mode.
 
 Then we need to add our custom function as a OnClick( ) event handler for the button. 
+To do this, we need to connect our object reference in our code to the gameObject's component in the scene.  We do this in code in the Start() function
+
+```C#
+using UnityEngine.UI;
+
+///declare our reference variable
+private Button startButton;
+
+void Start()
+    {
+    
+    startButton = GameObject.Find("StartButton").GetComponent<Button>();
+    
+    }
+```
 
 It's important to make sure we've declared the custom function, StartGame, as public, so it can be executed by Unity. Once we select the correct function, our button should execute this fuction when clicked.  
 
