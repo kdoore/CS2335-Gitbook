@@ -76,6 +76,7 @@ private Button startButton;
 
 void Start()
     {
+    ///other code
     
     startButton = GameObject.Find("StartButton").GetComponent<Button>();
     startButton.onClick.AddListener(StartGame);
