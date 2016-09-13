@@ -63,19 +63,25 @@ public void StartGame(){
 ```
 In Unity, we need to add a UI-Button GameObject to the scene.  We'll want to set custom values for highlight and normal colors so we can verify the button responds to mouse interaction when we hover over it during game-play mode.
 
-Then we need to add our custom function as a OnClick( ) event handler for the button.  The image below shows that we have clicked the `+` symbol below OnClick, that has opened a selector to identify the GameObject that has an attached script component with our custom function.  Since our script component: NumberGame1.cs is on the MainCamera, then we select that object.  This gives us a drop-down selector to select the script, and from there we can select our custom function.  It's important to make sure we've declared the custom function as public, otherwise it won't show up in the inspector drop-down list.  Once we select the correct function, our button should execute this fuction when clicked.  
+Then we need to add our custom function as a OnClick( ) event handler for the button. 
 
-![](Screenshot 2016-01-27 13.37.34.png)
+It's important to make sure we've declared the custom function, StartGame, as public, so it can be executed by Unity. Once we select the correct function, our button should execute this fuction when clicked.  
+
 
 ###Hide Button after Use
-In order to hide the button after we've used it, we need to have a reference to the button in our code.  To do that, we need to create a public variable that is type: GameObject, then we'll connect that in the inspector to the Button gameObject in our scene: 
+In order to hide the button after we've used it, we need to have a reference to the button in our code. To do that we 
 
-```
-public GameObject startButton;
+```C#
+public Button startButton;
+
+void Start(){
+startButton = GameObject.Find("StartButton").GetComponent<Button>();
+startButton.onClick.AddListener(StartGame);
+
+}
 ```
 Connect the Script Variable: StartButton with the scene: GameObject by dragging the StartButton to the placeHolder space on the NumberGame script component that is attatched to the MainCamera GameObject.
 
-![](Screenshot 2016-01-27 13.45.18.png)
 
 Then in our code: Once the button has been clicked, and we've executed our StartGame tasks, then we can set the StartButton variable to inactive: 
 
