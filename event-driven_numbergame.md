@@ -86,9 +86,6 @@ It's important to make sure we've declared the custom function, StartGame, as pu
 
 
 ###Hide Button after Use
-In order to hide the button after we've used it, we need to have a reference to the button in our code. 
-
-
 
 Then in our code: Once the button has been clicked, and we've executed our StartGame tasks, then we can set the StartButton variable to inactive by finding the gameObject that is connected to the Button component we have been working with: 
 
