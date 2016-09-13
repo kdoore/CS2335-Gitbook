@@ -69,14 +69,16 @@ To do this, we need to connect our object reference in our code to the gameObjec
 ```C#
 using UnityEngine.UI;
 
-///declare our reference variable
+
+///declare our variable at top of class file
 private Button startButton;
+
 
 void Start()
     {
     
     startButton = GameObject.Find("StartButton").GetComponent<Button>();
-    
+    startButton.onClick.AddListener(StartGame);
     }
 ```
 
@@ -84,28 +86,19 @@ It's important to make sure we've declared the custom function, StartGame, as pu
 
 
 ###Hide Button after Use
-In order to hide the button after we've used it, we need to have a reference to the button in our code. To do that we 
-
-```C#
-public Button startButton;
-
-void Start(){
-startButton = GameObject.Find("StartButton").GetComponent<Button>();
-startButton.onClick.AddListener(StartGame);
-
-}
-```
-Connect the Script Variable: StartButton with the scene: GameObject by dragging the StartButton to the placeHolder space on the NumberGame script component that is attatched to the MainCamera GameObject.
+In order to hide the button after we've used it, we need to have a reference to the button in our code. 
 
 
-Then in our code: Once the button has been clicked, and we've executed our StartGame tasks, then we can set the StartButton variable to inactive: 
+
+Then in our code: Once the button has been clicked, and we've executed our StartGame tasks, then we can set the StartButton variable to inactive by finding the gameObject that is connected to the Button component we have been working with: 
 
 ```C#
 public void StartGame(){
 		activeState = GameState.Start;
 		Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
 		promptText.text = string.Format ("Think of a number between {0} and {1} \n press Enter when ready", min, max);
-		startButton.SetActive (false);  //This in activates the button.
+		
+        startButton.gameObject.SetActive (false);  //This in activates the button.
 	}
 	
 ```	
