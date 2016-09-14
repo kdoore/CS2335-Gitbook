@@ -77,16 +77,28 @@ In the animations and descriptions above, we have used the inspector to make a c
 Declare a reference variable that matches the component type that we want to modify in our code.  The variable should be declared as an instance variable for the class: 
 
 ```cSharp
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;  //make sure to add at the top of the code file when using UI components
+
+public class NumberGame : MonoBehaviour
+{
 ///class instance variables
-Text promptText;
+private Text promptText;    
+
+///other class code
+} // end of class
 ```
 
 * 
 In Start( ), we need to find the gameObject and access the Text component.
  
 ```CSharp
+void Start(){
+/// other code
  promptText = GameObject.Find ("PromptText").GetComponent<Text> ();
-		
+	
+    }  //end Start
  ```
  
 * 
