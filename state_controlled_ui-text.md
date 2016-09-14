@@ -56,7 +56,7 @@ void Start(){  //initialize text values
     instructionText="Enter Y to play or N to quit";
 ````
 
-### Animations - Connect to 
+### Animations - Connect Code and GameObject/Components using the Inspector 
 1. How to Create Text-UI Game Objects and Attach Script to Canvas Object
 2. How to Connect Text-UI Game Object to Script Text Element
 
