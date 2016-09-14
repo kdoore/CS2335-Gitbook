@@ -26,7 +26,7 @@ For this project, let's attach the NumberGame.cs script file to the canvas objec
 
 In our NumberGame.cs script, we need to add a new UnityEngine code library so that we can access the UI library functions. We also need to create a script Text variable for each UI-Text GameObject that will be linked to the UI Text in the game scene so that it can modify the properties of the UI-Text GameObject. We need to make sure our Text variables are declared as public instance variables so that they will show up in the script-component section of the inspector panel for the object that we've attached our script to.  
 
-```C#
+```Csharp
 using UnityEngine;
 using UnityEngine.UI;  //make sure to add Unity UI library
 using System.Collections;
@@ -49,13 +49,12 @@ In the NumberGame.cs file, we need to write code to modify the UI text elements.
 
 We can initialize the text elements in Start()
 
-```C#
+```Csharp
 void Start(){  //initialize text values
     gameText.text="Want to play a game?" ;
     numberText.text="";  //set text to empty string when not in use
     instructionText="Enter Y to play or N to quit";
 ````
-
 
 ### Animations 
 1. How to Create Text-UI Game Objects and Attach Script to Canvas Object
