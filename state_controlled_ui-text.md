@@ -44,7 +44,7 @@ public class NumberGame : MonoBehaviour {
 Next, go back into Unity, select the Canvas object in the Hierarchy Panel, (make sure we've attached our script to the Canvas GameObject), then we need to connect our TextUI elements with the public instance variables from our script component. We can do this by either dragging the UI-Text object from the hierarchy panel to the script component text-box, or we can select the text element in the script component, select the dot to the right of the text field and it will open a pop-up of all possible game-objects that we can select to connect to this script variable element.   [See Screenshot Animation 2 Below](https://kdoore.gitbooks.io/cs-2335/content/state_controlled_ui-text.html#animations)
 
 
-###Connecting C# Text elements to Unity UI-Text.
+###Connecting C# Text reference variables to Unity UI-Text components.
 In the NumberGame.cs file, we need to write code to modify the UI text elements.  We've declared the public Text elements as class instance variables.  Now in the code we want to modify the Text.
 
 We can initialize the text elements in Start()
@@ -56,7 +56,7 @@ void Start(){  //initialize text values
     instructionText="Enter Y to play or N to quit";
 ````
 
-### Animations 
+### Animations - Connect to 
 1. How to Create Text-UI Game Objects and Attach Script to Canvas Object
 2. How to Connect Text-UI Game Object to Script Text Element
 
