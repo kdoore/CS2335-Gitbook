@@ -53,8 +53,8 @@ if (Input.GetKeyDown (KeyCode.Y)) {
 
 ```
 We move the inner code into a new public function: StartGame()
-```
-public void StartGame(){
+```C#
+public void StartGame(){    //this must be a public function
 		activeState = GameState.Start;
 		Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
 		promptText.text = string.Format ("Think of a number between {0} and {1} \n press Enter when ready", min, max);
