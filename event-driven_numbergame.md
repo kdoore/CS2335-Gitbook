@@ -69,10 +69,8 @@ To do this, we need to connect our object reference in our code to the gameObjec
 ```C#
 using UnityEngine.UI;
 
-
 ///declare our variable at top of class file
 private Button startButton;
-
 
 void Start()
     {
