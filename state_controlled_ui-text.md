@@ -104,3 +104,5 @@ string promptString = string.Format ("Think of a number between {0} and {1}", mi
 
 promptText.text = promptString;		
 ```
+
+Throughout our program, we'll modify the value of promptText.text, so we provide correct output to the player.
