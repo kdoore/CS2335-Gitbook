@@ -68,3 +68,39 @@ In the animation below, we have 2 UI-Text GameObjects: StateText and GameText. W
 
 ![](jfawLfwFA0.gif)
 
+###Connect to GameObjects and Components using code.
+
+In the animations and descriptions above, we have used the inspector to make a connection between our gameObject components and our code references.  While this might seem like the easiest approach, we are actually better of to do the connection within the Start() function of our code file:  We need to do the following things:
+
+
+* 
+Declare a reference variable that matches the component type that we want to modify in our code.  The variable should be declared as an instance variable for the class: 
+
+```cSharp
+///class instance variables
+Text promptText;
+```
+
+* 
+In Start( ), we need to find the gameObject and access the Text component.
+ 
+```CSharp
+ promptText = GameObject.Find ("PromptText").GetComponent<Text> ();
+		
+ ```
+ 
+* 
+Then we need to initialize the text field of the Text component, and we'll modify this value throughout the rest of the game code
+
+```C#
+promptText.text = "Do you want to play a game";
+ ```
+ 
+* 
+If we need to include numbers as part of our output, we can use the string.Format( ) function as below.
+
+```C#
+string promptString = string.Format ("Think of a number between {0} and {1}", min, max); 
+
+promptText.text = promptString;		
+```
