@@ -96,7 +96,7 @@ public void StartGame(){
 		Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
 		promptText.text = string.Format ("Think of a number between {0} and {1} \n press Enter when ready", min, max);
 		
-        startButton.gameObject.SetActive (false);  //This in activates the gameObject that the button component is attached to.
+        startButton.gameObject.SetActive (false);  //This in-activates the gameObject that the button component is attached to.
 	}
 	
 ```	
