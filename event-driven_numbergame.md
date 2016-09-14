@@ -77,7 +77,7 @@ void Start()
     ///other code
     
     startButton = GameObject.Find("StartButton").GetComponent<Button>();
-    startButton.onClick.AddListener(StartGame);
+    startButton.onClick.AddListener(StartGame);  //StartGame is our custom function that we want executed when the startButton is clicked
     }
 ```
 
