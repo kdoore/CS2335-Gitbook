@@ -68,7 +68,7 @@ In the animation below, we have 2 UI-Text GameObjects: StateText and GameText. W
 
 ![](jfawLfwFA0.gif)
 
-###Connect to GameObjects and Components using code.
+###Connect to GameObjects/ Components using code.
 
 In the animations and descriptions above, we have used the inspector to make a connection between our gameObject components and our code references.  While this might seem like the easiest approach, we are actually better of to do the connection within the Start() function of our code file:  We need to do the following things:
 
