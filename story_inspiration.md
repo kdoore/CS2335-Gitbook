@@ -1,2 +1,38 @@
 # Story Inspiration
 
+The main project in this course is the development of an Interactive Adventure Game.  A requirement for the interactive adventure game is that the player must be able to make choices about how they progress through the story world.
+
+Step 1 for creating an adventure game is to begin crafting an interesting story and story world.  Below are some links that may provide some inspiration.  
+
+###Interactive Fiction
+Brass Lantern
+IF Archive
+[How To Make an Adventure Game](http://www.godpatterns.com/2010/08/how-to-make-adventure-game.html)
+
+[Adventure Game Design Patterns](http://www.godpatterns.com/2006/04/adventure-game-design-patterns.html)
+
+[Simulation verses Representation](http://www.ludology.org/articles/sim1/simulation101.html)
+
+###Story
+[Puzzle Dependency Charts](http://www.gamasutra.com/view/news/189266/The_technique_LucasArts_used_to_design_its_classic_adventure_games.php)
+
+[Puzzle Dependency Charts](http://grumpygamer.com/puzzle_dependency_charts) - Ron Gilbert 
+
+###Plot Generators
+[SeventhSanctum.com
+](http://www.seventhsanctum.com/index.php)
+
+[FutureisFiction.com](http://futureisfiction.com/plotpoints/index.cgi)
+
+[Springhole.Net](http://www.springhole.net/writing_roleplaying_randomators/index.html)
+
+[Story Generators
+](http://chaoticshiny.com/about.php)
+
+
+
+
+###Opposite Proverbs
+
+###Game Design Document
+[Maniac Mansion](http://grumpygamer.com/maniac_mansion_design_doc)
