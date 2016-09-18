@@ -65,5 +65,5 @@
 * [Glossary](GLOSSARY.md)
 * [References and Resources](references.md)
 * [Programming Projects](projects.md)
-* Story Inspiration
+* [Story Inspiration](story_inspiration.md)
 
