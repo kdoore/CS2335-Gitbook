@@ -34,15 +34,9 @@ Step 1 for creating an adventure game is to begin crafting an interesting story 
 
 [Springhole.Net](http://www.springhole.net/writing_roleplaying_randomators/index.html)
 
-[Story Generators
-](http://chaoticshiny.com/about.php)
+[Story Generators - Chaotic Shiny](http://chaoticshiny.com/about.php)
 
 
 ###Game Design Document
 [Maniac Mansion](http://grumpygamer.com/maniac_mansion_design_doc)
 
-
-
-
-
-###Opposite Proverbs
