@@ -5,18 +5,26 @@ The main project in this course is the development of an Interactive Adventure G
 Step 1 for creating an adventure game is to begin crafting an interesting story and story world.  Below are some links that may provide some inspiration.  
 
 ###Interactive Fiction
-Brass Lantern
-IF Archive
+[Brass Lantern](http://www.brasslantern.org/)
+
+[IF Archive](http://www.ifarchive.org/)
+
+[Emily Short's Interactive StoryTelling](https://emshort.wordpress.com/2009/08/23/idea-to-implementation/)
+
+[Patterns in Choice Games](https://heterogenoustasks.wordpress.com/2015/01/26/standard-patterns-in-choice-based-games/)
+
 [How To Make an Adventure Game](http://www.godpatterns.com/2010/08/how-to-make-adventure-game.html)
 
 [Adventure Game Design Patterns](http://www.godpatterns.com/2006/04/adventure-game-design-patterns.html)
 
 [Simulation verses Representation](http://www.ludology.org/articles/sim1/simulation101.html)
 
-###Story
-[Puzzle Dependency Charts](http://www.gamasutra.com/view/news/189266/The_technique_LucasArts_used_to_design_its_classic_adventure_games.php)
+[COYA Analysis and Interactive Visualization](http://samizdat.cc/cyoa/)
 
-[Puzzle Dependency Charts](http://grumpygamer.com/puzzle_dependency_charts) - Ron Gilbert 
+###Story
+[Puzzle Dependency Charts - Frank Cifaldi](http://www.gamasutra.com/view/news/189266/The_technique_LucasArts_used_to_design_its_classic_adventure_games.php)
+
+[Puzzle Dependency Charts - Ron Gilbert ](http://grumpygamer.com/puzzle_dependency_charts) 
 
 ###Plot Generators
 [SeventhSanctum.com
@@ -30,9 +38,11 @@ IF Archive
 ](http://chaoticshiny.com/about.php)
 
 
+###Game Design Document
+[Maniac Mansion](http://grumpygamer.com/maniac_mansion_design_doc)
+
+
+
 
 
 ###Opposite Proverbs
-
-###Game Design Document
-[Maniac Mansion](http://grumpygamer.com/maniac_mansion_design_doc)
