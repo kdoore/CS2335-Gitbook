@@ -10,8 +10,6 @@
 * [Number Game: UI-Text](state_controlled_ui-text.md)
 * [NumberGame: Event-Driven](event-driven_numbergame.md)
 * [Create Prefab GameObjects](create_prefab_gameobjects.md)
-
-
 * [Zombie Objects](zombie_objects.md)
 * [Zombie Prefab](zombie_prefab.md)
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
@@ -19,9 +17,7 @@
 * [NPC Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
 * [Zombie - Sorting](zombie_-_sorting.md)
 * [Unity - Serialization Problems with Polymorphic Types](unity_-_serialization_problems_with_polymorphic_ty.md)
-
 * [C# Data Structures and Collections](c_data_structures_and_collections.md)
-<!--
 * [Branching Narrative - Structure](branching_narrative_-_structure.md)
 * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
 * [Screen-Space Canvas](screen-space_canvas.md)
@@ -48,9 +44,6 @@
 * [Inventory Dictionary](inventory.md)
 * [Inventory Store - Scriptable Objects](inventory_store_-_scriptable_objects.md)
 * [Saving Data - Serialization](saving_data_-_serialization.md)
-
-
--->
 * [C# Language](c_language.md)
    * [Variables](variables.md)
    * [Encapsulation](encapsulation.md)
@@ -70,8 +63,7 @@
    * [State Machine Framework](state_machine_framework_diagram.md)
    * [UML Class Diagram](uml_class_diagram.md)
 * [Glossary](GLOSSARY.md)
-
 * [References and Resources](references.md)
-
 * [Programming Projects](projects.md)
+* Story Inspiration
 
