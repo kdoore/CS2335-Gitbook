@@ -21,6 +21,8 @@ Step 1 for creating an adventure game is to begin crafting an interesting story 
 
 [COYA Analysis and Interactive Visualization](http://samizdat.cc/cyoa/)
 
+[Inform Designer's Manual](http://ifarchive.giga.or.at/indexes/if-archiveXinfocomXcompilersXinform6Xmanuals.html)
+
 ###Story
 [Puzzle Dependency Charts - Frank Cifaldi](http://www.gamasutra.com/view/news/189266/The_technique_LucasArts_used_to_design_its_classic_adventure_games.php)
 
