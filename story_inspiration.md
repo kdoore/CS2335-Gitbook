@@ -42,3 +42,5 @@ Step 1 for creating an adventure game is to begin crafting an interesting story 
 ###Game Design Document
 [Maniac Mansion](http://grumpygamer.com/maniac_mansion_design_doc)
 
+###Storys and Technology
+[Primer Stories - 500 Courses of the Sun, Mary Mann](http://primerstories.com/4/unchange)
