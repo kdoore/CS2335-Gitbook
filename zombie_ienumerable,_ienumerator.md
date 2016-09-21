@@ -3,7 +3,7 @@
 
 ###Enumeration:  *Let me count the ways*
 
-[*Enumeration*](https://en.wikipedia.org/wiki/Enumeration) is commonly used in mathematics, computer science, and other fields: it refers to a listing of elements in a collection.  Depending on the context, this can have a variety of subtle distinctions, are there duplicate elements, are the elements ordered by some value?  In this current context:  C# Enumeration, we want to define interfaces for our custom collections so that we can step through the collection and examine each element, in some ordered way. 
+[*Enumeration*](https://en.wikipedia.org/wiki/Enumeration) is commonly used in mathematics, computer science, and other fields: it refers to selecting items in a collection.  Depending on the context, this can have a variety of subtle distinctions, are there duplicate elements, are the elements ordered by some value?  In this current context:  C# Enumeration, we want to define interfaces for our custom collections so that we can step through the collection and examine each element, in some ordered way. 
 
 ###C# IEnumerable and IEnumerator Interfaaces 
 
