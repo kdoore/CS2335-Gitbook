@@ -14,7 +14,7 @@
 * [Zombie Prefab](zombie_prefab.md)
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
 * [Non-Player Character: Base-Class](non-player_character_base-class.md)
-* [NPC Collection: IEnumerable, IEnumerator](zombie_ienumerable,_ienumerator.md)
+* [IEnumerable, IEnumerator for Collections](zombie_ienumerable,_ienumerator.md)
 * [Zombie - Sorting](zombie_-_sorting.md)
 * [Unity - Serialization Problems with Polymorphic Types](unity_-_serialization_problems_with_polymorphic_ty.md)
 * [C# Data Structures and Collections](c_data_structures_and_collections.md)
