@@ -1,5 +1,5 @@
-#NPC Collection: 
-##IEnumerable, IEnumerator Interfaces
+# IEnumerable, IEnumerator Interfaces for Collections
+
 
 ###Enumeration:  *Let me count the ways*
 
