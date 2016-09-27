@@ -5,6 +5,9 @@ The main project in this course is the development of an Interactive Adventure G
 Step 1 for creating an adventure game is to begin crafting an interesting story and story world.  Below are some links that may provide some inspiration.  
 
 ###Interactive Fiction
+
+[Types of Interactive Fiction](https://ifcomp.org/about/if)
+
 [Brass Lantern](http://www.brasslantern.org/)
 
 [IF Archive](http://www.ifarchive.org/)
@@ -22,6 +25,8 @@ Step 1 for creating an adventure game is to begin crafting an interesting story 
 [COYA Analysis and Interactive Visualization](http://samizdat.cc/cyoa/)
 
 [Inform Designer's Manual](http://ifarchive.giga.or.at/indexes/if-archiveXinfocomXcompilersXinform6Xmanuals.html)
+
+[Multiple Choice Games - Choice of Games](https://www.choiceofgames.com/about-us/why-multiple-choice-games/)
 
 ###Story
 [Puzzle Dependency Charts - Frank Cifaldi](http://www.gamasutra.com/view/news/189266/The_technique_LucasArts_used_to_design_its_classic_adventure_games.php)
