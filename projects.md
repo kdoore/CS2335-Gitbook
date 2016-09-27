@@ -3,18 +3,14 @@
 
 
 **Project 1:  Number Game with UI-Text and Buttons**
-* Assignment Document:
-* Starter Code:
-* Self-Assessment: doc
 
 
-<!--**Project 2:  Text Adventure with StateManager Framework** 
 
-* Assignment Document: [pdf](https://utdallas.box.com/v/Project1-Assignment)
+**Project 2:  Text Adventure with StateManager Framework** 
 
-* Starter Code: [zipfile:  code](https://utdallas.box.com/v/Project1-StarterCode)
+* Assignment Document: [pdf](https://utdallas.box.com/v/Assignment2-description)
 
-* Self-Assessment: [doc](https://utdallas.box.com/v/selfAssessment) -->
+* Starter Code: [zipfile:  code](https://utdallas.box.com/v/Project2-starterCodeF16)
 
 
 <!--
