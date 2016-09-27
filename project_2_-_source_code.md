@@ -3,7 +3,7 @@
  See [StateManager](statemanager.md) for more details about the starter code
 
 Here's the link to the updated starter project.
-[Starter_Code_Feb16_2016](https://utdallas.box.com/Project2StarterCodeFeb16)
+[Starter_Code_Sept27_2016](https://utdallas.box.com/v/Project2-starterCodeF16)
 
 
  ###2D Image: Texture to Sprite
