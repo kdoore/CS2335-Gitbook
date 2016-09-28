@@ -44,9 +44,7 @@ void StateUpdate(){
 	public static StateManager instanceRef;
 	private IStateBase activeState; //interface as object reference for classes that implement the interface
 
-	public GameState curState;
-
-	private Button endBtn, startBtn;
+	public GameScene curScene;
 
 	//add comments
 	void Awake(){
@@ -62,11 +60,12 @@ void StateUpdate(){
 	// Use this for initialization
 	void Start () {
 		activeState = new BeginState (this);
-		curState = GameState.Begin;
+		curScene = GameState.Begin;
 		activeState.InitializeObjectRefs ();
 	}
 
 	// Update is called once per frame
+    //removed from starter code - Fall_16
 	void Update () {
 		if (activeState != null) {
 			activeState.StateUpdate ();
@@ -76,17 +75,22 @@ void StateUpdate(){
 	//add comments
 	public void SwitchState(IStateBase newState){
 		activeState = newState;
-		curState = newState.State;
+		curScene = newState.Scene;
 		Debug.Log ("Add Debug Info");
 	}
 
 
 	//add comments
-	void OnLevelWasLoaded(int levelName) {
-		if (levelName == (int)curState) {
+	void OnLevelWasLoaded(int levelNum) {
+		if (levelNum == (int)curScene) {
 			Debug.Log ("Add Debug Info");
 			activeState.InitializeObjectRefs ();
 		}
+        else{
+        //Give some good debug info here 
+        //If this is executed, it's because there's a problem with State - Scene matchup
+        Debug.Log("Big Trouble");
+        }
 	}
 }
 
