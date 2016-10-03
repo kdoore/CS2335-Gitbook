@@ -3,5 +3,12 @@
 [MSDN C# Programming Guide](https://msdn.microsoft.com/en-us/library/ms173121.aspx)
 
 Access modifiers control access to class instance variables and class methods. 
-The default access for class instance variables (fields) and methods in C# is private, if none is specified as part of a declaration / definition then the access is private.  
+The default access for class instance variables (fields) and methods in C# is private, if none is specified as part of a declaration / definition then the access is private.  Protected access modifier allows child classes to access a base-class variable as if it were public, but outside the base and child classes, the variable access is restricted as if access were specifiec as private.
 
+C# Access modifiers:
+```C#
+private //default
+public 
+protected // can be used in a base class 
+
+```
