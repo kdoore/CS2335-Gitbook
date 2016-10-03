@@ -2,7 +2,7 @@
 
 Polymorphism is one of the three major fundamental concepts in Object-Oriented Programming.  The other 2 major OOP concepts are Inheritance and Encapsulation.  Polymorphism is closely-related to inheritance.  
 
-Polymophism has 2 main conceptual components which are detailed in the MSDN reference sections below.  Polymorphism is a run-time concept that controls whether a child-class method is executed, rather than the base-class method of the same name.  In C#, it is necessary to declare a the base-class method as *virtual* if we intend to allow it to be *overridden* by the child class method, when a base-class reference, refers to a child-class object instance.
+Polymophism has 2 main conceptual components which are detailed in the MSDN reference sections below.  Polymorphism is a run-time concept that controls whether a child-class method is executed, rather than the base-class method of the same name.  In C#, it is necessary to declare a the base-class method as *virtual* if we intend to allow it to be *overridden* by the child class method, when a base-class reference, refers to a child-class object instance.  If no override method is specified in a child class, then the base-class method is executed.
 
 ###[Polymorphism: MSDN Reference](https://msdn.microsoft.com/en-us/library/ms173152.aspx)
 
