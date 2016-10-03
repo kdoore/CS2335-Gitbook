@@ -197,4 +197,4 @@ The diagram below shows the Unified Modeling Language model for the classes for 
 
 ###UML Diagram - Example 2: Interface, Inheritance Class Relationships
 
-![](Screenshot 2016-10-03 13.48.08.png)
+![](Screenshot 2016-10-03 16.43.25.png)
