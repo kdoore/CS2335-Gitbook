@@ -7,8 +7,8 @@ The default access for class instance variables (fields) and methods in C# is pr
 
 C# Access modifiers:
 ```C#
-private //default
-public 
-protected // can be used in a base class 
+private //default - variable can only be used within the class definition
+public // allows use outside the class definition
+protected // can be used in a base class to allow access in child class. Outside base and child classes, the variable is private
 
 ```
