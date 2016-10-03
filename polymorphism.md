@@ -16,6 +16,24 @@ Base classes may define and implement virtual methods, and derived classes can o
 ###Virtual Methods - Base Class
 When a base class method is marked as *virtual*, then this method can be overridden in the child class to allow the child class to provide custom implementation that is more specialized for a child class.  Then, if the method is marked as *override* in the child class, then the child class method is executed at run-time if the object instance is of the child class type.  If the method isn't overridden in the child class, then the base class method is executed.  [Example Code: NPC, Zombie](https://kdoore.gitbooks.io/cs-2335/content/non-player_character_base-class.html) 
 
+```C#
+///NPC Base-Class
+public virtual void doSomething(){
+  Debug.Log("NPC Base Class DoSomething");
+}
+```
+
 
 ###Override Methods - Child Class
-When a child class wants a method to have a specialized implementaiton, 
+When a child class wants a method to have a specialized implementation, then the child version of a method will be executed if the child method is declared as *override*.
+
+```C#
+///Zombie Child-class (extends NPC)
+public override void doSomething(){
+  Debug.Log("Zombie Child Class DoSomething");
+}
+
+///Other Class:
+NPC myNPC = new Zombie();
+myNPC.doSomething();   // console output:  "Zombie Child Class DoSomething" 
+```
