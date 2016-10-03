@@ -194,3 +194,6 @@ public class Kitten : NPCharacter {
 The diagram below shows the Unified Modeling Language model for the classes for this stage of our project.  UML class diagrams provide a visual overview of the relationships between classes, interfaces, and the features: variables and methods for each of these classes.  
 
 ![](Screenshot 2016-02-22 20.22.57.png)
+
+###UML Diagram - Example 2 Class Relationships
+![](Screenshot 2016-10-03 13.22.32.png)
