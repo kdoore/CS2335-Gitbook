@@ -195,5 +195,5 @@ The diagram below shows the Unified Modeling Language model for the classes for 
 
 ![](Screenshot 2016-02-22 20.22.57.png)
 
-###UML Diagram - Example 2, Class Relationships
+###UML Diagram - Example 2: Interface, Inheritance Class Relationships
 ![](Screenshot 2016-10-03 13.48.08.png)
