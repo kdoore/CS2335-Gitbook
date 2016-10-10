@@ -85,6 +85,3 @@ For the code above, you need to make sure that you're not calling initializeObje
 	        }
 		
 	```
-	
-
-
