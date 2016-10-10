@@ -68,4 +68,5 @@
 * [Fall 16 - Projects and Assignments](fall_16_-_projects_and_assignments.md)
 * [Story Inspiration](story_inspiration.md)
 * [Blog](blog.md)
+* Text Input
 
