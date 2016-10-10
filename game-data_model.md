@@ -32,10 +32,14 @@ public class GameData : MonoBehaviour {
 		get{ return  totalScore; }
 		}
 
-	void Awake(){
+	void Awake(){  //create singleton
 		if (instanceRef == null) {
 			instanceRef = this;
-		} 
+		    DontDestroyOnLoad (gameObject);  //the gameObject this is attached to 
+		} else {   //
+			DestroyImmediate (gameObject);   
+			Debug.Log ("Destroy GameObject");
+		}
 
 		// Set HighScore
 		if (PlayerPrefs.HasKey ("HighScore")) {
