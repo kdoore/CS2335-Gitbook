@@ -28,6 +28,7 @@
 * [IStateBase](istatebase.md)
 * [Finding Game Objects](finding_game_objects.md)
 * [Game Objects](game_objects.md)
+* [Text Input](text_input.md)
 * [Game Scene](game_scene.md)
 * [Player GameObject](player_gameobject.md)
 * [PickUp Items](pickup_items.md)
@@ -68,5 +69,4 @@
 * [Fall 16 - Projects and Assignments](fall_16_-_projects_and_assignments.md)
 * [Story Inspiration](story_inspiration.md)
 * [Blog](blog.md)
-* [Text Input](text_input.md)
 
