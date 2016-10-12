@@ -106,10 +106,10 @@ To create an instance of a Conversation asset, we right click in the project pan
 
 ###StateManager Conversation Object Instance
 
-Since the StateManager script-component object exists in every scene, for our first attempt at working with a conversation asset, we can add an object-reference to a Conversation object in StateManager.  If we create an instance of a Conversation object in StateManager script: ``public Conversation myConversation``, then we can dynamically display conversation data elements, in any scene of our game.  In the inspector, we can drag the newly created ManagerConversation asset to the the myConversation selection box.  Now we have access to get or set these conversation elements. 
+Since the StateManager script-component object exists in every scene, for our first attempt at working with a conversation asset, we can add an object-reference to a Conversation object in StateManager.  If we create an instance of a Conversation object in StateManager script: ``public Conversation myConversation``, then we can dynamically display conversation data elements, in any scene of our game.  In the inspector, we can drag the newly created ManagerConversation asset to the the myConversation selection box.  Now we have access to get or set these conversation elements. We will need to put this code in a different script, one that isn't a singleton, but is instead associated with a single scene.
 
 ```
-// in StateManager
+// in Some script that will go on a gameObject  
 	public Conversation myConversation;  
 
     //public SpriteRenderer convSprite; // to use a regular image
@@ -117,16 +117,13 @@ Since the StateManager script-component object exists in every scene, for our fi
     public Image mySprite;   // to use a UI sprite
 
 void Start () {
-		activeState = new BeginState (this);
-		curState = GameState.Begin;
-		activeState.InitializeObjectRefs ();
-		convText.text = myConversation.ConversationLines[0].ConversationText;
+			convText.text = myConversation.ConversationLines[0].ConversationText;
 		//convSprite.sprite = myConversation.ConversationLines [0].DisplayImg;
 		mySprite.sprite = myConversation.ConversationLines [0].DisplayImg;
 	}
 ```
 
-Here is a view of the Conversation instance attached to StateManager in the beginScene
+Here is a view of the Conversation instance attached to a gameObject in the beginScene
 
 ![](Screenshot 2016-03-08 08.04.03.png)
 
