@@ -46,7 +46,6 @@
 * [Inventory Store - Scriptable Objects](inventory_store_-_scriptable_objects.md)
 * [Saving Data - Serialization](saving_data_-_serialization.md)
 * [C# Language](c_language.md)
-   * List< T >
    * [Variables](variables.md)
    * [Encapsulation](encapsulation.md)
        * [C# Properties](c_properties.md)
@@ -56,6 +55,7 @@
    * [Polymorphism](polymorphism.md)
    * [Interface](interface.md)
    * [Switch-Case](switch-case.md)
+   * List< T >
    * [Dictionary](dictionary.md)
        * List< T >
    * [Foreach](foreach.md)
