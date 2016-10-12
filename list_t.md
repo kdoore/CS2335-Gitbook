@@ -11,14 +11,14 @@ using System.Collections.Generic;
 List<string> textList;
 
 Start(){
-textList = new List<string>();
-textList.Add("Hello, Do you want to go on an adventure?");
-textList.Add("First, you'll need to get some supplies");
-textList.Add("I hope you have some money, How much do you have?");
+  textList = new List<string>();
+  textList.Add("Hello, Do you want to go on an adventure?");
+  textList.Add("First, you'll need to get some supplies");
+  textList.Add("I hope you have some money, How much do you have?");
 
-foreach( string s in textList){
-  Debug.Log(s);
-}
+   foreach( string s in textList){
+    Debug.Log(s);
+ }
 }
 
 ```
