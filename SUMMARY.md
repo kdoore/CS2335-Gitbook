@@ -56,6 +56,7 @@
    * [Interface](interface.md)
    * [Switch-Case](switch-case.md)
    * [Dictionary](dictionary.md)
+       * List< T >
    * [Foreach](foreach.md)
    * [Static Classes](static_classes.md)
 * [Diagrams](diagrams.md)
