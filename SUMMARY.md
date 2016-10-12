@@ -55,7 +55,7 @@
    * [Polymorphism](polymorphism.md)
    * [Interface](interface.md)
    * [Switch-Case](switch-case.md)
-   * List< T >
+   * [List< T >](list_t.md)
    * [Dictionary](dictionary.md)
    * [Foreach](foreach.md)
    * [Static Classes](static_classes.md)
