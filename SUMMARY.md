@@ -70,5 +70,5 @@
 * [Fall 16 - Projects and Assignments](fall_16_-_projects_and_assignments.md)
 * [Story Inspiration](story_inspiration.md)
 * [Blog](blog.md)
-* Conversation Panel - List<T>
+* [Conversation Panel - List<T>](conversation_panel_-_listt.md)
 
