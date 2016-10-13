@@ -12,11 +12,11 @@ using UnityEngine.UI;
 
 public class BeginSceneDialogManager : MonoBehaviour
 {
-    Button titleBtn, nextBtn;
+    Button titleBtn, nextBtn;  //nextBtn will show next dialog
 	CanvasGroup cg1;
 	List<string> dialogList;
-	Text titleTxt;
-	int currentDialog;
+	Text titleTxt; // text area to show dialog
+	int currentDialog;  //keep track of current dialog text
 
 }
 
