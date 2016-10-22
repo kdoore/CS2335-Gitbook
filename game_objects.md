@@ -4,6 +4,8 @@ The UnityEngine provides methods that allow easy message communication between G
 
 Now that we are starting to work with GameObjects that aren't UI elements, we need to understand how we can define custom sorting layers to control rendering layer ordering and also how to define custom tags to help easily identify gameObjects within a game scene.
 
+[2D Sprites Editing Tutorial](https://www.youtube.com/watch?v=tp9PRN2TMy0)
+
 ###Layers:
 
 
