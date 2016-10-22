@@ -1,6 +1,9 @@
 # Animation Controller
 The Unity Animation controller is a visual programming language implementation of a state machine to control coordination of animations which can be attached to gameObjects. [Unity Animation Beginner Tutorial](https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/animate-anything)
 
+Animation Tutorials: 
+[2D Animation in Unity - Raywenderlich](http://www.raywenderlich.com/66345/unity-2d-tutorial-animations)
+
 
 ###Create an Animation from a series of sprites
 To create an animation, we can select a series of sprites and drag them into the scene window.  We are then prompted to save this animation.  This immediately creates several components:
