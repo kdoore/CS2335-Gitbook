@@ -5,7 +5,7 @@
 * [Starter Code: Zip File](https://utdallas.box.com/v/Project2-starterCodeF16)
 * [Project 2 - Assignment Description](https://utdallas.box.com/v/Assignment2-description)
 
-##Class Code 
+##In-Class Code 
 
 **October 24** - 2D Physics - collider, rigidbody, pickup, gameData, playerController
 This unity package can be imported into a new or existing project, make sure to make a backup of your project before importing, since this may conflict with your project assets.
