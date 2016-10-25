@@ -6,8 +6,6 @@
 * [Project 2 - Assignment Description](https://utdallas.box.com/v/Assignment2-description)
 
 
-
-
 ##Assignments:
 ###Assignment 1: 
 Watch Videos:
@@ -34,4 +32,8 @@ Watch Videos:
 
 3.     Instantiate: https://unity3d.com/learn/tutorials/topics/scripting/instantiate?playlist=17117
 
+##Class Code 
 
+October 24 - 2D Physics - collider, rigidbody, pickup, gameData, playerController
+This unity package can be imported into a new or existing project, make sure to make a backup of your project before importing, since this may conflict with your project assets.
+      [Unity Code - Import as custom package](https://utdallas.box.com/v/Oct24Code)
