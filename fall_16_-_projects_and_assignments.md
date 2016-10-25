@@ -33,14 +33,17 @@ Watch Videos:
 3.     Instantiate: https://unity3d.com/learn/tutorials/topics/scripting/instantiate?playlist=17117
 
 ###Assignment 4:
+ 1.     Interfaces: https://unity3d.com/learn/tutorials/topics/scripting/interfaces?playlist=17117
 
+ 2.     Lists and Dictionaries: https://unity3d.com/learn/tutorials/modules/intermediate/scripting/lists-and-dictionaries?playlist=17117
+
+ 3.     Instantiate: https://unity3d.com/learn/tutorials/topics/scripting/instantiate?playlist=17117
 
 ###Assignment 5:
 
 1. 2D Physics Overview:   https://unity3d.com/learn/tutorials/topics/2d-game-creation/2d-physics-overview?playlist=17120
 
 2. RigidBody2D:   https://unity3d.com/learn/tutorials/topics/2d-game-creation/rigidbody-2d?playlist=17120
-
 
 3. Collider2D   https://unity3d.com/learn/tutorials/topics/2d-game-creation/collider-2d?playlist=17093
 
