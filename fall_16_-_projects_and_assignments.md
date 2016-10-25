@@ -32,6 +32,22 @@ Watch Videos:
 
 3.     Instantiate: https://unity3d.com/learn/tutorials/topics/scripting/instantiate?playlist=17117
 
+###Assignment 4:
+
+
+###Assignment 5:
+
+1. 2D Physics Overview:   https://unity3d.com/learn/tutorials/topics/2d-game-creation/2d-physics-overview?playlist=17120
+
+2. RigidBody2D:   https://unity3d.com/learn/tutorials/topics/2d-game-creation/rigidbody-2d?playlist=17120
+
+
+3. Collider2D   https://unity3d.com/learn/tutorials/topics/2d-game-creation/collider-2d?playlist=17093
+
+
+###Assignment 6:
+
+
 ##Class Code 
 
 October 24 - 2D Physics - collider, rigidbody, pickup, gameData, playerController
