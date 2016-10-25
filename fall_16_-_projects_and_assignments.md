@@ -37,3 +37,6 @@ Watch Videos:
 October 24 - 2D Physics - collider, rigidbody, pickup, gameData, playerController
 This unity package can be imported into a new or existing project, make sure to make a backup of your project before importing, since this may conflict with your project assets.
       [Unity Code - Import as custom package](https://utdallas.box.com/v/Oct24Code)
+  
+  October 24 - Unity Project
+      [Unity Project - Open as project](https://utdallas.box.com/v/Oct24-UnityProject)
