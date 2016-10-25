@@ -5,6 +5,17 @@
 * [Starter Code: Zip File](https://utdallas.box.com/v/Project2-starterCodeF16)
 * [Project 2 - Assignment Description](https://utdallas.box.com/v/Assignment2-description)
 
+##Class Code 
+
+**October 24** - 2D Physics - collider, rigidbody, pickup, gameData, playerController
+This unity package can be imported into a new or existing project, make sure to make a backup of your project before importing, since this may conflict with your project assets.
+
+October 24 - Unity Package
+  * [Unity Code - Import as custom package](https://utdallas.box.com/v/Oct24Code)
+      
+October 24 - Unity Project   
+   * [Unity Project - Open as project](https://utdallas.box.com/v/Oct24-UnityProject)
+
 
 ##Assignments:
 ###Assignment 1: 
@@ -47,16 +58,3 @@ Watch Videos:
 
 3. Collider2D   https://unity3d.com/learn/tutorials/topics/2d-game-creation/collider-2d?playlist=17093
 
-
-###Assignment 6:
-
-
-##Class Code 
-
-October 24 - 2D Physics - collider, rigidbody, pickup, gameData, playerController
-This unity package can be imported into a new or existing project, make sure to make a backup of your project before importing, since this may conflict with your project assets.
-     [Unity Code - Import as custom package](https://utdallas.box.com/v/Oct24Code)
-      
-  
-  October 24 - Unity Project   
-     [Unity Project - Open as project](https://utdallas.box.com/v/Oct24-UnityProject)
