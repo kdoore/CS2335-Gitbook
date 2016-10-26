@@ -16,6 +16,9 @@ October 24 - Unity Package
 October 24 - Unity Project   
    * [Unity Project - Open as project](https://utdallas.box.com/v/Oct24-UnityProject)
 
+October 26
+   [Animation - MiniGame](https://utdallas.box.com/s/yjedpwswflpo35apqpl7yj11eggxl1br)
+
 
 ##Assignments:
 ###Assignment 1: 
