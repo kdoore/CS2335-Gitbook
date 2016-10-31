@@ -22,7 +22,7 @@ October 24 - Unity Project
 October 26
   * [Animation - MiniGame](https://utdallas.box.com/s/yjedpwswflpo35apqpl7yj11eggxl1br)
    
-October 31 - Dialog Package  
+October 31 - Dialog Package  - Dialog Panel Prefab and Conversation Scriptable Object.  Can be added to a Panel in any scene - use public Conversation field to match correct conversation for the scene.  Add a DialogOpenButton to toggle visibility.  Utility class has static method that populates the conversation UI fields each time nextButton is clicked.
   * [Dialog Package - Import as a custom package Asset](https://utdallas.box.com/v/dialogPackage)
 
 
