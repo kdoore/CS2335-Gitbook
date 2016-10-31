@@ -6,18 +6,19 @@ The code chunks below are used to retrieve and display data from a Conversation 
 ###Resources Folder
 To load a Conversation scriptableObject, which must be located in the Resources folder within Assets, you will need to create a Resources folder and move the desired scriptableObjects into that folder if they are going to be accessed via code and not attached to a gameOjbect via the inspector within a scene.  The code below can also be utilized for Conversation objects that are attached to gameObjects, but controlling via code  is a more flexible approach. 
 
-###State Code For Conversation Elements
-BeginState.cs has 3 gameObjects used to display the content in a conversation element and 2 buttons to allow browsing through the conversation., To load a Conversation scriptableObject, which must be located in the Resources folder within Assets.  In this code below, we're loading The instance of the Conversation:"Conversation2".
+###Code For Using Conversation Elements
+Create a custom script: DialogManager that has 3 gameObjects used to display the content in a conversation element and 2 buttons to allow browsing through the conversation., To load a Conversation scriptableObject, which must be located in the Resources folder within Assets.  In this code below, we're loading The instance of the Conversation:"Conversation2".
 ```
-//BeginState.cs
+//DialogManager.cs
 //other code is not shown
 
 private Button convBtn, convBackBtn;
 private Image cImage;
 private Text cText, cName;
-private Conversation conv2;
+private int convIndex;
+public Conversation conv2;  //or add in inspector
 
-public void InitializeObjectRefs (){
+public void Start (){
 /// load conversation asset
 		/// 
 		conv2=Resources.Load("Conversation2", typeof(Conversation)) as Conversation;
@@ -27,6 +28,7 @@ public void InitializeObjectRefs (){
 			Debug.Log ("Conversation Asset Loaded, first line of text: ");
 			Debug.Log (conv2.ConversationLines [0].ConversationText);
 		}
+        convIndex=0;
 
 		cText = GameObject.Find ("ConversationText").GetComponent<Text> ();
 		cName = GameObject.Find ("ConversationName").GetComponent<Text> ();
@@ -87,12 +89,12 @@ public static class Utilities
 		// how long is our array?
 		int numEntries = conversation.ConversationLines.Length;
 
-		index++;  
+		index++;  ///increment to move to next element
 
 		//check ranges, constrain to  _index >= 0 && _index <= numEntries-1
-
-		index = (index < 0) ? 0 : index; 
+        index = (index < 0) ? 0 : index; //ternary operator ?
 		index = (index >= numEntries) ? numEntries - 1 : index; 
+
 
 		//set objectRefs to values
 		name.text = conversation.ConversationLines [index].SpeakingCharacterName;
