@@ -83,5 +83,5 @@ Watch Videos:
 
 1.  Event Manager System: https://unity3d.com/learn/tutorials/topics/scripting/events-creating-simple-messaging-system?playlist=17117
 
-2. https://unity3d.com/learn/tutorials/topics/audio/sound-effects-scripting?playlist=17117
+2. Audio and Sound Effects: https://unity3d.com/learn/tutorials/topics/audio/sound-effects-scripting?playlist=17117
  
