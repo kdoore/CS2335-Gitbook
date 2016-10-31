@@ -64,3 +64,16 @@ Watch Videos:
 
 3. Collider2D   https://unity3d.com/learn/tutorials/topics/2d-game-creation/collider-2d?playlist=17093
 
+###Assignment 6:
+1. Character-Controller and 2D Animation:https://unity3d.com/learn/tutorials/topics/2d-game-creation/2d-character-controllers
+
+2. Sorting Layers: https://unity3d.com/learn/tutorials/topics/2d-game-creation/sorting-layers?playlist=17093
+
+###Assignment 7:
+1.  Invoke:  https://unity3d.com/learn/tutorials/topics/scripting/invoke?playlist=17117
+
+2.  Delegates: https://unity3d.com/learn/tutorials/topics/scripting/delegates?playlist=17117
+
+3.  Events: https://unity3d.com/learn/tutorials/topics/scripting/events?playlist=17117
+
+###Assignment 8:
