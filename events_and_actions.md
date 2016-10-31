@@ -13,7 +13,14 @@ For example: changing a variable, performing I/O, invoking a function, generatin
 ###Event-Driven Programming
 Steven Ferg has written an excellent paper, [Event-Driven Programming Introduction, Tutorial, History](http://eventdrivenpgm.sourceforge.net/), which discusses the complexities of programming to create event-driven systems. 
 
-###Event Notification
+###Event Notification 
+Some gameObjects know that they need to be notified when another gameObject does something.  If both objects are in the same scene throughout the scene execution lifetime, then we can create an object reference to the gameObject that wants to be notified of an event, and we can create a method in that gameObject's custom script, that we can call from the object where the event occurs:
+
+
+
+GameObject someSubscribeObject = GameObject.Find("SomeObject").GetComponent<CustomScript>();
+
+someSubscribeObject.NotifyMe();
 
 ###Event Handlers
 
