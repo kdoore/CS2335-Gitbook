@@ -65,9 +65,11 @@ Watch Videos:
 3. Collider2D   https://unity3d.com/learn/tutorials/topics/2d-game-creation/collider-2d?playlist=17093
 
 ###Assignment 6:
-1. Character-Controller and 2D Animation:https://unity3d.com/learn/tutorials/topics/2d-game-creation/2d-character-controllers
+1. Scriptable Objects: https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/scriptable-objects?playlist=17117
 
-2. Sorting Layers: https://unity3d.com/learn/tutorials/topics/2d-game-creation/sorting-layers?playlist=17093
+2.  Character-Controller and 2D Animation:https://unity3d.com/learn/tutorials/topics/2d-game-creation/2d-character-controllers
+
+3. Sorting Layers: https://unity3d.com/learn/tutorials/topics/2d-game-creation/sorting-layers?playlist=17093
 
 ###Assignment 7:
 1.  Invoke:  https://unity3d.com/learn/tutorials/topics/scripting/invoke?playlist=17117
@@ -76,4 +78,10 @@ Watch Videos:
 
 3.  Events: https://unity3d.com/learn/tutorials/topics/scripting/events?playlist=17117
 
+
 ###Assignment 8:
+
+1.  Event Manager System: https://unity3d.com/learn/tutorials/topics/scripting/events-creating-simple-messaging-system?playlist=17117
+
+2. https://unity3d.com/learn/tutorials/topics/audio/sound-effects-scripting?playlist=17117
+ 
