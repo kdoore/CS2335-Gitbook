@@ -35,7 +35,9 @@ Watch Videos:
 
 3. Enumeration: https://unity3d.com/learn/tutorials/topics/scripting/enumerations?playlist=17117
 
-###Assignment 2: 
+###Assignment 2: (Clicker Registration)
+
+###Assignment 3: 
 Watch Videos: 
 
 1.     Classes: https://unity3d.com/learn/tutorials/topics/scripting/classes?playlist=17117
@@ -44,7 +46,7 @@ Watch Videos:
 
 3.     Statics: https://unity3d.com/learn/tutorials/topics/scripting/statics?playlist=17117
 
-###Assignment 3: 
+###Assignment 4: 
 Watch Videos:
 1.     Interfaces: https://unity3d.com/learn/tutorials/topics/scripting/interfaces?playlist=17117
 
@@ -52,12 +54,6 @@ Watch Videos:
 
 3.     Instantiate: https://unity3d.com/learn/tutorials/topics/scripting/instantiate?playlist=17117
 
-###Assignment 4:
- 1.     Interfaces: https://unity3d.com/learn/tutorials/topics/scripting/interfaces?playlist=17117
-
- 2.     Lists and Dictionaries: https://unity3d.com/learn/tutorials/modules/intermediate/scripting/lists-and-dictionaries?playlist=17117
-
- 3.     Instantiate: https://unity3d.com/learn/tutorials/topics/scripting/instantiate?playlist=17117
 
 ###Assignment 5:
 
