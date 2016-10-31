@@ -20,7 +20,10 @@ October 24 - Unity Project
    * [Unity Project - Open as project](https://utdallas.box.com/v/Oct24-UnityProject)
 
 October 26
-   [Animation - MiniGame](https://utdallas.box.com/s/yjedpwswflpo35apqpl7yj11eggxl1br)
+  * [Animation - MiniGame](https://utdallas.box.com/s/yjedpwswflpo35apqpl7yj11eggxl1br)
+   
+October 31 - Dialog Package  
+  * [Dialog Package - Import as a custom package Asset](https://utdallas.box.com/v/dialogPackage)
 
 
 ##Assignments:
