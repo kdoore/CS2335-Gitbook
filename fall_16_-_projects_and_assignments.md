@@ -13,16 +13,16 @@
 **October 24** - 2D Physics - collider, rigidbody, pickup, gameData, playerController
 This unity package can be imported into a new or existing project, make sure to make a backup of your project before importing, since this may conflict with your project assets.
 
-October 24 - Unity Package
+**October 24** - Unity Package
   * [Unity Code - Import as custom package](https://utdallas.box.com/v/Oct24Code)
       
-October 24 - Unity Project   
+**October 24** - Unity Project   
    * [Unity Project - Open as project](https://utdallas.box.com/v/Oct24-UnityProject)
 
-October 26
+**October 26**
   * [Animation - MiniGame](https://utdallas.box.com/s/yjedpwswflpo35apqpl7yj11eggxl1br)
    
-October 31 - Dialog Package  - Dialog Panel Prefab and Conversation Scriptable Object.  Can be added to a Panel in any scene - use public Conversation field to match correct conversation for the scene.  Add a DialogOpenButton to toggle visibility.  Utility class has static method that populates the conversation UI fields each time nextButton is clicked.
+**October 31** - Dialog Package  - Dialog Panel Prefab and Conversation Scriptable Object.  Can be added to a Panel in any scene - use public Conversation field to match correct conversation for the scene.  Add a DialogOpenButton to toggle visibility.  Utility class has static method that populates the conversation UI fields each time nextButton is clicked.
   * [Dialog Package - Import as a custom package Asset](https://utdallas.box.com/v/dialogPackage)
 
 
