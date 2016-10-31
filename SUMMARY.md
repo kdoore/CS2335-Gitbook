@@ -60,6 +60,7 @@
    * [Dictionary](dictionary.md)
    * [Foreach](foreach.md)
    * [Static Classes](static_classes.md)
+   * Ternary Operator: ?
 * [Diagrams](diagrams.md)
    * [Flow-Chart](flow-chart_example.md)
    * [Finite State Machine](finite_state_machine.md)
