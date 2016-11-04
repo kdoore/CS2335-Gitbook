@@ -32,6 +32,8 @@ To control a animation associated with a gameObject, outside of the Animation Co
 
 Below is a simple example class: PlayerController.cs which checks for left-right arrow keyboard input, or the fire1 key which maps to the control key on a MAC.  In Fixed-Update, the code checks for input, then uses if-else statement blocks to determine what value to send to the Animator component that is attached to the gameObject.
 
+[Link to Free - 2D GameArt - Cat Sprite Assets](http://www.gameart2d.com/freebies.html)
+
 ```
 using UnityEngine;
 using System.Collections;
@@ -108,8 +110,6 @@ public class PlayerController : MonoBehaviour
 
 ```
 
-###Project Code for MiniGame with Melting Crystal and Events
-[Example Unity Project: Events and Animation Controller](https://utdallas.box.com/Unity-Animator-and-CustomEvent)
 
 ###Unity 2D Animation Tutorials:
 
@@ -122,4 +122,6 @@ public class PlayerController : MonoBehaviour
  John Stejskal, [IndieGameBuzz 3-Part tutorial](http://indiegamebuzz.com/create-2d-sprite-based-animation-states-in-unity3d/)
  
 [rm2kdev:](https://www.youtube.com/watch?v=TU6wflRqT5Q) Unity Animator Tutorial  with Player Sprite Sheet
+
+2D Character Animation Sprites - [2D GameArt](http://www.gameart2d.com/freebies.html)
 
