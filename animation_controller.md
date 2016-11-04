@@ -30,7 +30,7 @@ In order to integrate an animation with a gameObject, we need a 2D gameObject th
 ###Animation Controller Script
 To control a animation associated with a gameObject, outside of the Animation Controller, such as user-input, then we'll need a custom C# script that can manage the logic to determine what input events have occurred and whether the input should impact the animation controller state.  Our custom script will send input signals to the Animation Controller State Machine, where the animation controller state machine will consider the current animator state, the input signals, and the defined transition conditions to determine whether to switch to a new animation clip. 
 
-Below is a simple example class: PlayerController.cs which checks for left-right arrow keyboard input, or the fire1 key which maps to the control key on a MAC.  In Fixed-Update, the code checks for input, then uses if-else statement blocks to determine what value to send to the Animator component that is attached to the gameObject.
+Below is a simple example class: PlayerController.cs which checks for left-right arrow keyboard input, or the fire1 key which maps to the control key on a MAC.  In Fixed-Update, the code checks for input, then uses if-else statement blocks to determine what value to send to the Animator component that is attached to the gameObject. Below is the link to a set of free sprites including the cat sprites used in the starter code example animations.
 
 [Link to Free - 2D GameArt - Cat Sprite Assets](http://www.gameart2d.com/freebies.html)
 
