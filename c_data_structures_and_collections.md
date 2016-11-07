@@ -62,7 +62,9 @@ using System.Collections.Generic;  //we need to add this additional directive
  We can also use the C# Dictionary function:  TryGetValue( )
  to both test to see whether a key is in the dictionary, and it will return the value in the variable declared with the variable modifier ```out```
   
-  MSDN Reference: [TryGetValue](https://msdn.microsoft.com/en-us/library/bb347013(v=vs.110).aspx)
+ ### MSDN Reference: [TryGetValue( )](https://msdn.microsoft.com/en-us/library/bb347013.aspx)
+  
+   
  
   ```
  ///using System.Collection.Generic;  
