@@ -57,6 +57,10 @@ using System.Collections.Generic;  //we need to add this additional directive
 		if(myDictionary.ContainsKey("Zombie")){
 			int numZombies = myDictionary["Zombie"];
 		}
+        
+        //we'll get an error if we try to add another item with the same key
+        
+        myDictionary.Add("Zombie", 2); ///ERROR
  
  ```
  We can also use the C# Dictionary function:  TryGetValue( )
