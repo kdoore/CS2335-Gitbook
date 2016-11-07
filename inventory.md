@@ -33,9 +33,9 @@ We can imagine that for most inventory items we can define a name, maybe a corre
 
 ### PickUp Objects and PickUpType
 ```
-public class PickUp : MonoBehaviour {
+public enum PickUpType { Star, Key, Heart, Snowflake }
 
-	public enum PickUpType { Star, Key, Heart, Snowflake }
+public class PickUp : MonoBehaviour {
 
 	public PickUpType type;
 	public int value;
@@ -44,7 +44,7 @@ public class PickUp : MonoBehaviour {
 Then in GameData, we can create a Dictionary of PickUp keys and values as the player collects PickUps in the game.  We'll use this Dictionary to let us know what items to display in the player PickUp Inventory:
 
 ```
-public Dictionary<PickUp.PickUpType, int> pickUpItems = new Dictionary<PickUp.PickUpType, int>();
+public Dictionary<PickUp.PickUpType, int> pickUpItems = new Dictionary<PickUpType, int>();
 
 ```
 
@@ -68,7 +68,7 @@ In GameData.cs
 ```
 
 	public void Add(PickUp pickup){
-		PickUp.PickUpType type = pickup.type;
+		PickUpType type = pickup.type;
 		int oldTotal = 0;
 		if(pickUpItems.TryGetValue(type, out oldTotal))  //key exists, get current value
 			pickUpItems[type] = oldTotal + 1 ;  //use key as index, increment total number of this item by 1
@@ -89,7 +89,7 @@ Finally this is Displayed in InventoryDisplay:  OnChangeInventory()
 ```
 
 	//called from GameData when some new data has been added
-	public void OnChangeInventory(Dictionary<PickUp.PickUpType, int> inventory ,int  totalScore){
+	public void OnChangeInventory(Dictionary< PickUpType, int> inventory ,int  totalScore){
 	      Debug.Log ("on change inventory");
 	      /// for each item in the inventory dictionary
 	      foreach(var item in inventory){
@@ -99,30 +99,30 @@ Finally this is Displayed in InventoryDisplay:  OnChangeInventory()
 	      }  
 	}
 	//Update UI 
-	void updateUI(int val, PickUp.PickUpType type){
+	void updateUI(int val,  PickUpType type){
 	switch(type){  //check type and display associated UI element
-	    case PickUp.PickUpType.Key: 
+	    case  PickUpType.Key: 
 	    	if(val > 0){  //dynamically activate KeySlot Panel
 	    	  KeySlot.SetActive (true);
 		      KeyTxt.text=val.ToString ();
 	    	}
 	    	break;
 	    
-		case PickUp.PickUpType.Star: 
+		case  PickUpType.Star: 
 			if(val > 0){
 				StarTxt.text=val.ToString ();
 				StarCG.alpha=1; // Set alpha of StarSlot -CanvasGroup  text value
 			}
 			break;
 			
-		case PickUp.PickUpType.Snowflake: 
+		case  PickUpType.Snowflake: 
 			if(val > 0){
 				SnowflakeTxt.text=val.ToString ();
 				SnowflakeCG.alpha=1;  //show Snowflake Slot 
 			}
 			break;
 			
-		case PickUp.PickUpType.Heart: 
+		case  PickUpType.Heart: 
 			if(val > 0){
 				HeartTxt.text=val.ToString ();
 				HeartCG.alpha=1;  //show HeartSlot + text value
