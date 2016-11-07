@@ -44,7 +44,7 @@ public class PickUp : MonoBehaviour {
 Then in GameData, we can create a Dictionary of PickUp keys and values as the player collects PickUps in the game.  We'll use this Dictionary to let us know what items to display in the player PickUp Inventory:
 
 ```
-public Dictionary<PickUp.PickUpType, int> pickUpItems = new Dictionary<PickUpType, int>();
+public Dictionary<PickUpType, int> pickUpItems = new Dictionary<PickUpType, int>();
 
 ```
 
