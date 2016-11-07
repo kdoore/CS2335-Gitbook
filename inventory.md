@@ -92,8 +92,9 @@ Finally this is Displayed in InventoryDisplay:  OnChangeInventory()
 	public void OnChangeInventory(Dictionary< PickUpType, int> inventory ,int  totalScore){
 	      Debug.Log ("on change inventory");
 	      /// for each item in the inventory dictionary
+          
 	      foreach(var item in inventory){
-	      int itemTotal=item.Value;
+	             int itemTotal=item.Value;
 	      updateUI(itemTotal, item.Key); 
 	      ScoreTxt.text = totalScore.ToString ();
 	      }  
