@@ -31,6 +31,33 @@ There are many Dictionary methods to let us interact and modify Dictionary eleme
          
          
          ```
+  ###TryGetValue( TKey key, out  val)       
+   We can also use the C# Dictionary function:  TryGetValue( )
+ to both test to see whether a key is in the dictionary, and it will return the value in the variable declared with the variable modifier ```out```
+  
+MSDN Reference: [TryGetValue(TKey key, out  val )](https://msdn.microsoft.com/en-us/library/bb347013.aspx)
+   
+ 
+  ```
+ ///using System.Collection.Generic;  
+ 
+       Dictionary< string, int> myDictionary = new Dictionary<string, int>();
+		myDictionary.Add("Zombie", 1);
+        
+        //get value from dictionary
+        
+        int numZombies = 0;
+		if(myDictionary.TryGetValue("Zombie", out numZombies)){
+			Debug.Log(" NumZombies " + numZombies);
+		}
+        else{
+           Debug.Log("No zombies found");
+        }
+ 
+ ```
+           
+         
+         
  ###foreach Loop
 In order to iterate through all items in a dictionary, we can use a foreach loop which is a range-based for-loop as opposed to a count-based for-loop.  Since each inventory item is a key/value pair which is a complex dataType, we can use ``var`` as the variable type that will temporarily hold each item so we can manipulate the item. We can also use the KeyValuePair struct data-type if we declare the <T> type of each dictionary element. 
 ```
