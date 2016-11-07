@@ -69,6 +69,9 @@ using System.Collections.Generic;  //we need to add this additional directive
  
        Dictionary< string, int> myDictionary = new Dictionary<string, int>();
 		myDictionary.Add("Zombie", 1);
+        
+        //get value from dictionary
+        
         int numZombies = 0;
 		if(myDictionary.TryGetValue("Zombie", out numZombies)){
 			Debug.Log(" NumZombies " + numZombies);
