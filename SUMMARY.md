@@ -44,6 +44,7 @@
 * [Event Publishing Patterns](observer_pattern.md)
 * [Delegates](delegates.md)
 * [Custom Event Messaging](custom_event_messaging.md)
+* [Level Manager](level_manager.md)
 * [Inventory Store - Scriptable Objects](inventory_store_-_scriptable_objects.md)
 * [Saving Data - Serialization](saving_data_-_serialization.md)
 * [C# Language](c_language.md)
@@ -72,5 +73,4 @@
 * [Fall 16 - Projects and Assignments](fall_16_-_projects_and_assignments.md)
 * [Story Inspiration](story_inspiration.md)
 * [Blog](blog.md)
-* [Level Manager](level_manager.md)
 
