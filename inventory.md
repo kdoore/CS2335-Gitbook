@@ -66,6 +66,11 @@ void OnTriggerEnter2D(Collider2D hit){
 In GameData.cs
     
 ```
+    //declare inventory dictionary as class variable
+    public Dictionary<PickupType, int> inventory;
+
+// more code
+
 
 	public void Add(PickUp pickup){
 		PickUpType type = pickup.type;
