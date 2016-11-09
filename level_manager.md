@@ -42,5 +42,12 @@ void Start ()
 
 ```
 
+###Finite State Machine Logic - nextLevel( )
+
+The nextLevel() function provides the FSM logic for the Level management.
+
+```C#
 
 
+
+```
