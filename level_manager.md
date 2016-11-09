@@ -42,6 +42,33 @@ void Start ()
 
 ```
 
+###OnPlayerDataUpdate Event - CheckLevelEnd Subscriber
+The GameData event: OnPlayerDataUpdate event is the trigger that provides notification to the LevelManager whenever the GameData Add( PickUp ) function is executed in response to a OnTriggerEnter2D event.  We've created a custom function that gets registered for notification of the event"  
+
+```C#
+void CheckLevelEnd (object sender, PlayerDataEventArgs e)
+	{
+		int levelScore = e.levelScore;
+
+		Debug.Log ("Check if level is over" + levelScore);
+		////change the total score display
+
+		if (levelScore > 10) { ///level has changed
+			///reset level value display
+			gameData.LevelScore = 0;   //reset level score
+
+			nextLevel ();
+		}
+	}
+
+
+
+```
+
+
+
+
+
 ###Finite State Machine Logic - nextLevel( )
 
 The nextLevel() function provides the FSM logic for the Level management.
