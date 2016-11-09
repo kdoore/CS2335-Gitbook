@@ -18,7 +18,29 @@ public enum LevelState
 
 }
 
+/// inside LevelManager Class
+
+public LevelState curLevel;  //declare a LevelState variable to store the active state
+
 ```
 
-We can
+We can use the Start state to allow for a Splash screen and start-button event to trigger the start of the miniGame, or we can start the game-play use the LevelManager Class's Start( ) method to trigger the begin of gameplay.  The transtion between levels is managed by the NextLevel() function which is triggered when the PlayerDataUpdate event from GameData is broadcast;
+
+```C#
+/// Inside LevelManager.cs class script
+void Start ()
+	{
+
+		curLevel = LevelState.Start;  ///initialize curLevel
+		crystalSpawner = GameObject.Find ("CrystalSpawner").GetComponent<CrystalSpawner> ();
+
+		gameData = GameData.instanceRef;  //Register CheckLevelEnd function to be notified when GameData broadcasts: onPlayerDataUpdate
+		gameData.onPlayerDataUpdate += CheckLevelEnd;  //registering to be notified
+
+		nextLevel ();  //starts the game -
+	}
+
+```
+
+
 
