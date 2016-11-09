@@ -4,3 +4,21 @@ Within the MiniGame, we'd like to have several levels of play. Level is an abstr
 
 In this course, we are focused on the functional and structural design of the layer-change event logic.  The dynamic logic can be structured using a finite state machine, since the level logic is event driven and since the game-system can only be in a single state at any time.   One question we might ask is how can we integrate feedback to enhance player learning using an FSM system model?  
 
+For a mini-game that uses one scene to implement a series of game-levels, we can use a lightweight Finite State Machine - where we define an enum: LevelState to define a set of states that the mini-game system can be in.  We'll put this code in the LevelManager.cs script fild.
+
+```C#
+public enum LevelState
+{
+	Start,
+	Level1,
+	Level2,
+	Level3,
+	Win,
+	End
+
+}
+
+```
+
+We can
+
