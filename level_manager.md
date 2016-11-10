@@ -119,4 +119,23 @@ The screenshot below shows a series of background gameObjects, these are Canvas 
 
 #Utility Class - Static Methods to toggle visibility
 
-The Utility class, that we've discussed in previous sections 
+The Utility class, that we've discussed in previous sections, will provide a convenient way to toggle canvas group components.
+```C#
+//LevelManager.cs
+
+void Start(){
+
+// other initialization code
+
+startpanel = GameObject.Find ("StartImage").GetComponent<CanvasGroup> ();
+		bg1 = GameObject.Find ("Background1").GetComponent<CanvasGroup> ();
+		bg2 = GameObject.Find ("Background2").GetComponent<CanvasGroup> ();
+		bg3 = GameObject.Find ("Background3").GetComponent<CanvasGroup> ();
+
+		Utility.ShowPanel (startpanel);
+		Utility.HidePanel (bg1);
+		Utility.HidePanel (bg2);
+        
+  } // end LevelManager.Start()
+  
+  ```
