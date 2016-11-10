@@ -107,3 +107,7 @@ void nextLevel ()
 	} // end function
 
 ```
+
+#Level-Change Behaviors
+The nextLevel() method provides the FSM structure to manage state-change logic, so now we just need to decide what to change in the game-scene when this level-change event occurs.
+One simple change to implement is toggling visibility of different background sprites.  An easy way to implement this is to make sure the background images are UI canvas images, this will allow us to toggle the CanvasGroup component's alpha and interactivity properties.  
