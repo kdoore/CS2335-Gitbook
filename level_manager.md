@@ -117,3 +117,6 @@ The screenshot below shows a series of background gameObjects, these are Canvas 
 
 ![](Screenshot 2016-11-10 16.16.02.png)
 
+#Utility Class - Static Methods to toggle visibility
+
+The Utility class, that we've discussed in previous sections 
