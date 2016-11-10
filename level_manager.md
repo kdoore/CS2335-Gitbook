@@ -1,3 +1,4 @@
+
 # Level Manager
 
 Within the MiniGame, we'd like to have several levels of play. Level is an abstract concept, in this gameing context, what do we mean by several levels of play?  We'd like to break the game-experience into meaningful chunks, this will let the player know they have attempted to complete a task, and the game should provide some feedback to indicate their level of success in this challange.
@@ -111,3 +112,4 @@ void nextLevel ()
 #Level-Change Behaviors
 The nextLevel() method provides the FSM structure to manage state-change logic, so now we just need to decide what to change in the game-scene when this level-change event occurs.
 One simple change to implement is toggling visibility of different background sprites.  An easy way to implement this is to make sure the background images are UI canvas images, this will allow us to toggle the CanvasGroup component's alpha and interactivity properties.  
+
