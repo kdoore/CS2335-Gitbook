@@ -24,6 +24,7 @@
 * [StateManager - Singleton Design Pattern](statemanager.md)
 * [State Machine Framework](state_machine_framework.md)
 * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
+* [Utility - Static Class](utility_-_static_class.md)
 * [Project 2 - Source Code](project_2_-_source_code.md)
 * [IStateBase](istatebase.md)
 * [Finding Game Objects](finding_game_objects.md)
@@ -73,5 +74,4 @@
 * [Fall 16 - Projects and Assignments](fall_16_-_projects_and_assignments.md)
 * [Story Inspiration](story_inspiration.md)
 * [Blog](blog.md)
-* [Utility - Static Class](utility_-_static_class.md)
 
