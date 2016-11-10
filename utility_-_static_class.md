@@ -33,26 +33,5 @@ public static class Utility
 		cg.interactable = false;
 	}
 
-	public static int GetConversationEntry (Conversation conversation, Text name, Text text, Image image, int index)
-	{
-		// how long is our array?
-		int numEntries = conversation.ConversationLines.Length;
-
-		index++;  ///increment to move to next element
-
-		//check ranges, constrain to  _index >= 0 && _index <= numEntries-1
-        index = (index < 0) ? 0 : index; //ternary operator ?
-		index = (index >= numEntries) ? numEntries - 1 : index; 
-
-
-		//set objectRefs to values
-		name.text = conversation.ConversationLines [index].SpeakingCharacterName;
-		text.text = conversation.ConversationLines [index].ConversationText;
-		image.sprite = conversation.ConversationLines [index].DisplayImg;
-
-		Debug.Log ("Next conversation entry" + index + " name: " + name.text);
-
-		return index;
-	}
 }
 ```
