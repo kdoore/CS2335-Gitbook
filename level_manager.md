@@ -24,7 +24,7 @@ public LevelState curLevel;  //declare a LevelState variable to store the active
 
 ```
 
-We can use the Start state to allow for a Splash screen and start-button event to trigger the start of the miniGame, or we can start the game-play use the LevelManager Class's Start( ) method to trigger the begin of gameplay.  The transtion between levels is managed by the NextLevel() function which is triggered when the PlayerDataUpdate event from GameData is broadcast;
+We can use the Start state to allow for a Splash screen and start-button event to trigger the start of the miniGame, or we can start the game-play use the LevelManager Class's Start( ) method.  The transtion between levels is managed by the NextLevel() function which is triggered when the PlayerDataUpdate event is broadcast from the GameData component object;
 
 ```C#
 /// Inside LevelManager.cs class script
