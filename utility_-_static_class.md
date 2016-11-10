@@ -5,8 +5,9 @@ We can create a static class: Utility, that has static methods we can call from 
 Notice, the class is marked as static and each method is also marked as public static.  This means we can use the method in another class with the following syntax:
 
 ```C#
-
-Utility.showPanel( someCanvasGroup );
+//toggle canvas-group visibility
+CanvasGroup someCG = GameObject.Find("SomePanel").GetComponent<CanvasGroup>();
+Utility.showPanel( someCG );
 
 ```
 
