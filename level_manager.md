@@ -43,7 +43,7 @@ void Start ()
 ```
 
 ###OnPlayerDataUpdate Event - CheckLevelEnd is Registered as an Event Subscriber
-The GameData event: OnPlayerDataUpdate event is the trigger that provides notification to the LevelManager whenever the GameData Add( PickUp ) function is executed in response to a OnTriggerEnter2D event.  We've created a custom function that gets registered for notification of the event"  
+The GameData event: OnPlayerDataUpdate event is the trigger that provides notification to the LevelManager whenever the GameData Add( PickUp ) function is executed in response to a OnTriggerEnter2D event.  We've created a custom function that gets registered for notification of the event, and the CheckLevelEnd method matches the   
 
 ```C#
 void CheckLevelEnd (object sender, PlayerDataEventArgs e)
