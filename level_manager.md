@@ -61,15 +61,7 @@ void CheckLevelEnd (object sender, PlayerDataEventArgs e)
 			nextLevel ();
 		}
 	}
-
-
-
 ```
-
-
-
-
-
 ###Finite State Machine Logic - nextLevel( )
 
 The nextLevel() function provides the FSM logic for the Level management.
@@ -139,3 +131,5 @@ startpanel = GameObject.Find ("StartImage").GetComponent<CanvasGroup> ();
   } // end LevelManager.Start()
   
   ```
+  
+  
