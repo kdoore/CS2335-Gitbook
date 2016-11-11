@@ -119,7 +119,7 @@ The screen-shot below shows a series of background gameObjects, these are Canvas
 
 #Utility Class - Static Methods to toggle visibility
 
-The Utility class, that we've discussed in previous sections, will provide a convenient way to toggle canvas group components.
+The [Utility class](https://kdoore.gitbooks.io/cs-2335/content/utility_-_static_class.html#utility---static-class), that we've discussed in previous sections, will provide a convenient way to toggle canvas group components.
 ```C#
 //LevelManager.cs
 
