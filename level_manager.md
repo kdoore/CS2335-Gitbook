@@ -16,9 +16,7 @@ public enum LevelState
 	Level3,
 	Win,
 	End
-
 }
-
 /// inside LevelManager Class
 
 public LevelState curLevel;  //declare a LevelState variable to store the active state
