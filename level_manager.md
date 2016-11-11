@@ -29,8 +29,7 @@ We can use the Start state to allow for a Splash screen and start-button event t
 /// Inside LevelManager.cs class script
 void Start ()
 	{
-
-		curLevel = LevelState.Start;  ///initialize curLevel
+         curLevel = LevelState.Start;  ///initialize curLevel
 		crystalSpawner = GameObject.Find ("CrystalSpawner").GetComponent<CrystalSpawner> ();
 
 		gameData = GameData.instanceRef;  //Register CheckLevelEnd function to be notified when GameData broadcasts: onPlayerDataUpdate
