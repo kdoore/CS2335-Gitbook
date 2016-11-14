@@ -46,7 +46,7 @@
 * [Event Publishing Patterns](observer_pattern.md)
 * [Delegates](delegates.md)
 * [Custom Event Messaging](custom_event_messaging.md)
-* [Inventory Store - Scriptable Objects](inventory_store_-_scriptable_objects.md)
+* [Inventory Display](inventory_store_-_scriptable_objects.md)
 * [Saving Data - Serialization](saving_data_-_serialization.md)
 * [C# Language](c_language.md)
    * [Variables](variables.md)
