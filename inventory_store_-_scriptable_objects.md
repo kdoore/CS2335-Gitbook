@@ -18,7 +18,7 @@ public class InventoryDisplay : MonoBehaviour
 {
 
 	public List<GameObject> prefabs;
-	public List<InventoryItem> items;
+    
 	// Use this for initialization
 	void Start ()
 	{
@@ -26,6 +26,7 @@ public class InventoryDisplay : MonoBehaviour
 		for (int i = 0; i < prefabs.Count; i++) {
 			prefabs [i].SetActive (false);
 		}
+        // register function as subscriber for onPlayerDataEvent
 		GameData.instanceRef.onPlayerDataUpdate += updateInventoryDisplay;
 	}
 
@@ -34,15 +35,14 @@ public class InventoryDisplay : MonoBehaviour
 		Dictionary<PickupType, int> inventory = GameData.instanceRef.inventory;
 
 		foreach (var item in inventory) {
-			int itemTotal = item.Value;
-			UpdateUI (itemTotal, item.Key); 
-			Debug.Log ("itemTotal " + itemTotal);
+			UpdateUI ( item.Key, item.Value); 
+			Debug.Log ("item Count " + item.Value);
 		}
 	}
 
-	void UpdateUI (int val, PickupType item)
+	void UpdateUI ( PickupType item, int val)
 	{
-		Text temp;
+		Text temp;  //UI text reference
 		switch (item) {
 
 		case PickupType.crystal:
