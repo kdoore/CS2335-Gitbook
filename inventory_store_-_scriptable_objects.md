@@ -2,6 +2,13 @@
 
 In this section, we create a set of gameObject panels that we can use to show the inventory of items that the player has collected during the game.
 
+The image below shows the panels are contained within a larger-panel, and that parent panel has a Layout-Component: Horizontal Layout Group
+
+
+![](Screenshot 2016-11-14 16.12.18.png)
+
+The parent panel has several child panels, each of which contain a UI-image and UI-text.  The Horizontal Layout Group 
+
 
 ![](Screenshot 2016-11-14 14.05.17.png)
 
