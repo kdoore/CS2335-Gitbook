@@ -66,29 +66,44 @@ void OnTriggerEnter2D(Collider2D hit){
 In GameData.cs
     
 ```
-    //declare inventory dictionary as class variable
-    public Dictionary<PickupType, int> inventory;
+   ////Called in Player controller when the player collides with a pickup	
+	public void Add (PickUp item)
+	{   
+		totalScore += item.value;  // update totalScore by the value of this current item
+		levelScore += item.value;  //update the private variable - this does not generate an event
+		checkResetHighScore ();  //should we update PlayerPrefs, is this the alltime high score?
 
-// more code
-
-
-	public void Add(PickUp pickup){
-		PickUpType type = pickup.type;
-		int oldTotal = 0;
-		if(pickUpItems.TryGetValue(type, out oldTotal))  //key exists, get current value
-			pickUpItems[type] = oldTotal + 1 ;  //use key as index, increment total number of this item by 1
-		else
-			pickUpItems.Add (type, 1);  // add 1 per collision to dictionary
-		SpaceGirlScore += pickup.value;  //increment score by points per item
-		if(displayInventory){  //only call this method when in a scene that has an Inventory Display Game Object
-			inventoryDisplay.OnChangeInventory(pickUpItems, SpaceGirlScore);  //Update Inventory Display
-			Debug.Log ("call OnChangeInventory score" + SpaceGirlScore);
+		int count = 0;
+		if (inventory.TryGetValue (item.type, out count)) {
+			count += 1;  //increment value
+			inventory [item.type] = count; //update dictionary value
+		} else {
+			inventory.Add (item.type, 1);
 		}
-		UpdateSpaceGirlData();  //see if this is now highScore to reset PlayerPrefs
+
+		Debug.Log ("Game Data Add " + item.type);
+
+
+		///PlayerDataEventArgs is the data object to send as part
+		/// of the onPlayerDataEvent event notification
+		/// Create an instance of PlayerDataEventArgs, have it's data elements
+		/// populated using method: GetPlayerDataEventArgs, pass in the object reference.
+
+		PlayerDataEventArgs updatedPlayerData = new PlayerDataEventArgs ();
+		GetPlayerDataEventArgs (updatedPlayerData);  //creating instance
+
+		//PlayerDataEvent has already happened, now we need to send notification
+		//check to see if there are any registered eventHandlers
+		if (onPlayerDataUpdate != null) {
+			//data update event notification is involked
+			// all registered eventHandlers get notification and updatedPlayerData
+			onPlayerDataUpdate (this, updatedPlayerData); 	
+		}
 	}
+        
 ```
 
-Finally this is Displayed in InventoryDisplay:  OnChangeInventory()
+Finally these inventory items are Displayed using logic in the scrip component:  InventoryDisplay:  OnChangeInventory()
 
 
 ```
