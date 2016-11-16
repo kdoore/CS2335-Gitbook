@@ -16,8 +16,6 @@ Steven Ferg has written an excellent paper, [Event-Driven Programming Introducti
 ###Event Notification 
 Some gameObjects know that they need to be notified when another gameObject does something.  If both objects are in the same scene throughout the scene execution lifetime, then we can create an object reference to the gameObject that wants to be notified of an event, and we can create a method in that gameObject's custom script, that we can call from the object where the event occurs:
 
-
-
 GameObject someSubscribeObject = GameObject.Find("SomeObject").GetComponent<CustomScript>();
 
 someSubscribeObject.NotifyMe();
