@@ -76,24 +76,3 @@ Art by Osmic
 [Zombie Textures Download Link](https://utdallas.box.com/zombieTextures) 
 
 
-###Class Projects Code:
-
-MiniGame with Animator, Spawing and Events- [Example Unity Project: Events and Animation Controller](https://utdallas.box.com/Unity-Animator-and-CustomEvent)
-
-MiniGame with Level Manager, PlayerStats - [Code Zip File](https://utdallas.box.com/levelManagerStarter)
-
-[Simple Animation - Animation Sampler](https://utdallas.box.com/v/AnimationSampler)
-
-MiniGame With Inventory Updated Link 4-17-16: 
-https://utdallas.app.box.com/miniGameInventory
-
-Dialog Example with ScriptableObject
-https://utdallas.box.com/DialogScriptObject
-
-###Simplified Project with MiniGame and Dictionary-Backed Inventory -  [Project Link](https://utdallas.box.com/v/SimplifiedInventory) version1
-
-###Simple Inventory version2 - [Project Link](https://utdallas.box.com/v/simpleInventory)
-
-Class Demo Project: [ MiniGame with Binary Serialization](https://utdallas.box.com/v/MiniGameWithBinarySerializatio)
-
-[Simple Animation Game with Custom Events Demo](https://utdallas.box.com/v/SimplAnimationWithCustomEvents)
