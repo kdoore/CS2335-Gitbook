@@ -8,6 +8,9 @@
 ###Project 3 - MiniGame
 * Starter Code: [Zip File](https://utdallas.box.com/v/project3-StarterCode-F16)
 
+###Project 4 - Inventory Examples
+* [Starter Code: Zip File](https://utdallas.box.com/v/Project4ExampleInventory)
+
 ##In-Class Code 
 
 **October 24** - 2D Physics - collider, rigidbody, pickup, gameData, playerController
