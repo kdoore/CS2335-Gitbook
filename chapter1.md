@@ -9,7 +9,7 @@ In this course we'll learn to create programs in the [Unity Game Engine](https:/
 
 Unity 
 Below is an example quiz, these will be integrated throughout the book to help reinforce your understanding of course concepts:
-<quiz name="Quiz1">
+<quiz name="MonoDevelop">
     <question multiple>
         <p>What is MonoDevelop?</p>
         <answer correct>An application to edit programs for Unity</answer>
