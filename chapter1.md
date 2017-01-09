@@ -16,7 +16,7 @@ Another option is to use the Microsoft Visual Studio Editor as your IDE.  It can
 
 Below is an example quiz, these will be integrated throughout the book to help reinforce your understanding of course concepts:
 
-<quiz name="MonoDevelop">
+<quiz name="Quiz 1">
     <question multiple>
         <p>What is MonoDevelop?</p>
         <answer correct>An application to edit programs for Unity</answer>
