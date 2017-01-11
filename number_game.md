@@ -4,7 +4,7 @@ We've all played a number-guessing game, where one player thinks of a number wit
 
 ### Console Game
 
-For the first iteration of this game, we'll design the game to run in the console, where we have text prompts to accept user input. The computer makes guesses and the user selects either the up-arrow or the down-arrow to indicate the number is higher or lower than the current guess.  If the computer selects/guesses the correct answer, then the user hits the return/enter key, and the game starts over.
+For the first iteration of this game, we'll design the game to run in the console, where we have text prompts to accept user input. The player selects a single value within the given range of numbers and the computer tries to guess the player's secret number, and the user selects either the up-arrow or the down-arrow to indicate the number is higher or lower than the current guess.  If the computer selects/guesses the correct answer, then the user hits the return/enter key, and the game starts over.
 
 ### Binary Search
 
@@ -14,7 +14,7 @@ We will write the program so that the computer makes the minimum number of guess
 
 At each step, the computer makes a guess that splits the number range in half by picking the value at the midpoint of the range. This guessed value corresponds to the  \(max + min\) / 2.  If the guessed, midpoint value does not match the player's selected number, then the computer asks the player whether their number is higher or lower than the current guessed value. Then we need to reset the endpoints of the search range so that the endpoints match this new, smaller range. If the user's number is higher than the computer's guess, then we need to set the new minimum of the new range to the current guessed value `min = guess`.  So, at each step in binary search, the number of possible values is divided in half, therefore, the maximum number of tries that the computer must make is   log  of the initial range plus one: $$log_2(n)+1$$.
 
-> "Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky…"   
+> "Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky…"  
 >     [Donald Knuth](https://en.wikipedia.org/wiki/Binary_search_algorithm#Number_guessing_game)
 
 For an initial range of 0 to 64, the computer will make no more than 7 guesses since 2 to the 6th power is 64.
