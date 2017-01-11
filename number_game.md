@@ -4,7 +4,7 @@ We've all played a number-guessing game, where one player thinks of a number wit
 
 ### Console Game
 
-For the first iteration of this game, we'll design the game to run in the console, where we have text prompts to accept user input. The player selects a single value within the given range of numbers and the computer tries to guess the player's secret number, and the user selects either the up-arrow or the down-arrow to indicate the number is higher or lower than the current guess.  If the computer selects/guesses the correct answer, then the user hits the return/enter key, and the game starts over.
+For the first iteration of this game, we'll design the game to run in the console, where we have text prompts to accept user input. The player selects a single value within the given range of numbers and the computer tries to guess the player's secret number. The game-play mechanics are that the user selects/enters either the up-arrow or the down-arrow to indicate the number is higher or lower than the current guess.  If the computer selects/guesses the correct answer, then the user hits the return/enter key, and the game starts over.  To be an interesting game, the player should have an opportunity to win the game.
 
 ### Binary Search
 
