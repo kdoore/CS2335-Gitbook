@@ -12,19 +12,27 @@ A FSM diagram, as shown below, consists of a set of circles, or nodes, which cor
 
 ![](numberGameFSM.png)
 
+
+###Flow-Chart and Finite State Machine
+The images below
+![](/assets/Cs2335 - 2.png)
+
+###Finite State Machine:
+![](/assets/Cs2335 - 5.png)
+
 ###Enumeration: GameStates
 
-In C#, we can use Enumeration-Types to create custom data-types which function as named constants.  We use the C# keyword `enum` to declare our custom data-type, then we must initialize the values using a comma separated list of values.  We'll define an enum to provide a set of gameStates to control our game's execution logic.  We can declare the enum outside any class code, it should be `public`, then it will be accessible in any code files in our project. If we make the activeState publicly accessible, then the enum values show up as a drop-down list, as shown in the image below. In addition, we can see the activeState value change while our game is executing.
+In C#, we can use Enumeration-Types to create custom data-types which function as named constants. We use the C# keyword `enum` to declare our custom data-type, then we must initialize the values using a comma separated list of values. We'll define an enum to provide a set of gameStates to control our game's execution logic. We can declare the enum outside any class code, it should be `public`, then it will be accessible in any code files in our project. If we make the activeState publicly accessible, then the enum values show up as a drop-down list, as shown in the image below. In addition, we can see the activeState value change while our game is executing.
 
 ```C#
-    public enum GameState { Initialize, Start, GamePlay, Win, Lose, End}
-	public gameStates activeState;  //create a variable using our custom Enumeration-type
-	
-	//initialize in Start() 
-	activeState = GameState.Initialize;  //dot notation allows access of enum values
+public enum GameState { Initialize, Start, GamePlay, Win, Lose, End}
+public gameStates activeState; //create a variable using our custom Enumeration-type
+//initialize in Start()
+activeState = GameState.Initialize; //dot notation allows access of enum values
 ```
 
 ![](Screenshot 2016-01-21 14.01.51.png)
+
 ###NumberGame.cs 
 
 Here is the code for the State-controlled version of the NumberGame project. 
