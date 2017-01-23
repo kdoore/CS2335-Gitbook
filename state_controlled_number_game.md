@@ -25,7 +25,7 @@ If activeState is Initialize, Event N causes transition so activeState becomes E
 ![](/assets/Cs2335 - 4.png)
 
 ###Finite State Machine:
-The diagram below shows the FSM, with states colored to match the FSM and Flow-chart logic
+The diagram below shows the FSM, with states colored to match the FSM and Flow-chart logic.  This may clarify the relationship between the 2 diagrams and how this impacts our code structure.
  
 ![](/assets/Cs2335 - 5.png)
 
@@ -135,9 +135,12 @@ public class NumberGame1 : MonoBehaviour {
 
 ```
 
-###Switch-Case Statement
+###Switch-Case Statement - For FSM Structure
 
-In our code above, within the if, else-if blocks of code, we are always checking the value of one variable: `activeState`.  Since we have used enums to define allowable values for our GameStates, then we'll use the enums as the case-labels that we are testing for a match against the switch-condition: `activeState`.  The code below shows how we would implement the code for the first 2 possible game-states: Initialize and Start.  The example code also shows that we'll want to include a default: case so that we can get Debug output if that code executes.
+In our code above, at the outer-layer of logic that corresponds to the FSM structure, we are always checking the value of one variable: `activeState`.  Since we have used enums to define allowable values for our GameStates, then we'll use the enums as the case-labels that we are testing for a match against the switch-condition: `activeState`.  The code below shows how we would implement the code for the first 2 possible game-states: Initialize and Start.  The example code also shows that we'll want to include a default: case so that we can get Debug output if that code executes.
+
+###Switch-Case - 
+The Switch-Case control structure works well for implementing Finite State Machine logic because the logic 
 
 ```C#
 	void Update () {
