@@ -184,13 +184,13 @@ See specific details on the [C# Switch-Case Statement on MSDN.
 			}
 			break;
 			
-	case GameState.Lose:
-		//logic for lose state
-	break;	
+		case GameState.Lose:
+			//logic for lose state
+		break;	
 	
-	case GameState.End:
-		// logic for end
-	break;		
+		case GameState.End:
+			// logic for end
+		break;		
 
 		default:
 			Debug.Log ("No match on activeState");
