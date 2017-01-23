@@ -13,11 +13,18 @@ A FSM diagram, as shown below, consists of a set of circles, or nodes, which cor
 ![](numberGameFSM.png)
 
 
-###Flow-Chart and Finite State Machine
-The images below
-![](/assets/Cs2335 - 2.png)
+###Flow-Chart Logic and Finite State Machine - Event Dynamics Combined
+The diagrams below show how we can integrate the Finite State Machine (FSM) structure with our Flow-Chart logic.  The FSM provides a higher-layer of structural abstraction to our logic.  We can see that each time we have an input diamond in our flow-chart, we're checking to see if specific events have happened. From the Initialize state, we're checking to see if the user inputs either a Y or an N, we can ignore all other input, because when the system is in the Initialize state, those are the only events that can cause the system to transition to a different state: 
+
+If activeState is Initialize, Event Y causes transition so activeState becomes Start
+
+If activeState is Initialize, Event N causes transition so activeState becomes End
+
+![](/assets/Cs2335 - 4.png)
 
 ###Finite State Machine:
+The diagram below shows the FSM, with states colored to match the FSM and Flow-chart logic
+ 
 ![](/assets/Cs2335 - 5.png)
 
 ###Enumeration: GameStates
