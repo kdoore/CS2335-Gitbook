@@ -140,7 +140,12 @@ public class NumberGame1 : MonoBehaviour {
 In our code above, at the outer-layer of logic that corresponds to the FSM structure, we are always checking the value of one variable: `activeState`.  Since we have used enums to define allowable values for our GameStates, then we'll use the enums as the case-labels that we are testing for a match against the switch-condition: `activeState`.  The code below shows how we would implement the code for the first 2 possible game-states: Initialize and Start.  The example code also shows that we'll want to include a default: case so that we can get Debug output if that code executes.
 
 ###Switch-Case - 
-The Switch-Case control structure works well for implementing Finite State Machine logic because the logic 
+The Switch-Case control structure works well for implementing Finite State Machine logic because the logic is always testing 1 value: activeState, depending on the current value, which will match one of the cases, then the matching case statements are executed.  
+
+See specific details on the [C# Switch-Case Statement on MSDN.
+](https://msdn.microsoft.com/en-us/library/06tc147t.aspx "Switch-Case")
+
+
 
 ```C#
 	void Update () {
