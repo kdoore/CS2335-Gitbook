@@ -189,7 +189,6 @@ See specific details on the [C# Switch-Case Statement on MSDN.
 			break;
 		}//end of switch statement
 
-		//need win and lose state logic and need logic to restart the game and reinitialize values
 	
 	}  //end Update
 
