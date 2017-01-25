@@ -128,7 +128,7 @@ If we need to include numbers as part of our output, we can use the string.Forma
 ```C#
 string s = string.Format ("Think of a number between {0} and {1}", min, max); 
 
-promptText.text = s;    //update UI Text Component
+instructionText.text = s;    //update UI Text Component
 Debug.Log(s);		 //output to Console
 ```
 
