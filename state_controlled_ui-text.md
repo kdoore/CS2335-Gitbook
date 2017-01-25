@@ -91,7 +91,7 @@ using UnityEngine.UI;  //make sure to add at the top of the code file when using
 public class NumberGame : MonoBehaviour
 {
 ///class instance variables
-private Text promptText;    
+private Text promptText, instructionText;    
 
 ///other class code
 } // end of class
@@ -104,7 +104,11 @@ In Start( ), we need to find the gameObject and access the Text component.
  
 ```CSharp
 void Start(){
-/// other code
+
+ /// initialize Text object variable so it has an active reference to the gameObject Text component
+ 
+ instructionText = GameObject.Find("InstructionText").GetComponent<Text>();
+ 
  promptText = GameObject.Find ("PromptText").GetComponent<Text> ();
 	
     }  //end Start
@@ -115,16 +119,17 @@ void Start(){
 Then we need to initialize the text field of the Text component, and we'll modify this value throughout the rest of the game code
 
 ```C#
-promptText.text = "Do you want to play a game";
+instructionText.text = "Do you want to play a game";
  ```
  
 * 
 If we need to include numbers as part of our output, we can use the string.Format( ) function as below.
 
 ```C#
-string promptString = string.Format ("Think of a number between {0} and {1}", min, max); 
+string s = string.Format ("Think of a number between {0} and {1}", min, max); 
 
-promptText.text = promptString;		
+promptText.text = s;    //update UI Text Component
+Debug.Log(s);		 //output to Console
 ```
 
-Throughout our program, we'll modify the value of promptText.text, so we provide correct output to the player.
+Throughout our program, we'll modify the values of instructionText and promptText.text, so we provide correct output to the player.
