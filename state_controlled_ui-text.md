@@ -50,11 +50,15 @@ In the NumberGame.cs file, we need to write code to modify the UI text elements.
 We can initialize the text elements in Start()
 
 ```Csharp
+
 void Start(){  //initialize text values
     gameText.text="Want to play a game?" ;
     numberText.text="";  //set text to empty string when not in use
     instructionText="Enter Y to play or N to quit";
-````
+    
+    
+```
+
 
 ### Animations - Connect Code and GameObject/Components using the Inspector 
 1. How to Create Text-UI Game Objects and Attach Script to Canvas Object
@@ -63,10 +67,12 @@ void Start(){  //initialize text values
 
 ![](GU6iOIPXxo.gif)
 
-
 In the animation below, we have 2 UI-Text GameObjects: StateText and GameText. We want to link them with 2 class instance-variables, stateText and instructText, that are contained in a C# class file: StateController.cs.  This script component for this C# class is attached to the Canvas GameObject, so we first need to select the Canvas object in the Hierarchy, then we find the variables in script-component in the inspector.  Then we can either drag the UI-Text GameObjects, or we can select the tiny circle tool immediatly to the right of the text variable name which will open a new panel with all GameObjects that match the same type in our scene.
 
+
 ![](jfawLfwFA0.gif)
+
+
 
 ###Connect to GameObjects/ Components using code.
 
@@ -75,6 +81,7 @@ In the animations and descriptions above, we have used the inspector to make a c
 
 * 
 Declare a reference variable that matches the component type that we want to modify in our code.  The variable should be declared as an instance variable for the class: 
+
 
 ```cSharp
 using UnityEngine;
@@ -88,9 +95,11 @@ private Text promptText;
 
 ///other class code
 } // end of class
+
 ```
 
-* 
+
+
 In Start( ), we need to find the gameObject and access the Text component.
  
 ```CSharp
@@ -100,7 +109,8 @@ void Start(){
 	
     }  //end Start
  ```
- 
+
+  
 * 
 Then we need to initialize the text field of the Text component, and we'll modify this value throughout the rest of the game code
 
