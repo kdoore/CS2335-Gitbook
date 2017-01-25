@@ -10,7 +10,7 @@
 * [Screen-Space Canvas](screen-space_canvas.md)
 * [Number Game: UI-Text](state_controlled_ui-text.md)
 * [NumberGame: Event-Driven](event-driven_numbergame.md)
-* [Screen-Space Canvas](screen-space_canvas.md)
+
 * [Zombie Objects](zombie_objects.md)
 * [Zombie Prefab](zombie_prefab.md)
 * [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
@@ -74,4 +74,6 @@
 ---
 
 * [Story Inspiration --&gt;](story_inspiration.md)
+
+
 
