@@ -11,7 +11,7 @@ Unity provides an event system for the Unity User-Interface (UI) components. Gam
 In order to add custom behavior to a UI-Button, first we need to write some code that we'd like to have executed when the button has been clicked.  For our number game project, we can add a start game button that the user will click to indicate that they want to play the game.  Currently, we prompt the user when they are in the Initialize GameState to enter 'Y' if they went to play, or to enter 'N' to quit.  So, we have the following logic in our code, where we are listening for 'Y' when the activeState = GameState.Initialize:
 ```C#
 	 void Start () {
-        min = 0;
+        min = 0;  //initialize values
         max = 64;
         guess = (min + max) / 2;
         activeState = GameState.Initialize;
@@ -20,18 +20,33 @@ In order to add custom behavior to a UI-Button, first we need to write some code
     }
 	
 	void Update(){
-	if (activeState == GameState.Initialize) {
+	switch(activeState) {
 			
+	case GameState.Initialize:
+	
+	///this Initialize code will be moved into a function to be executed when the button onClick event happens
+	 
 			if (Input.GetKeyDown (KeyCode.Y)) {
 				Debug.Log ("Think of a number between " + min + " and " + max + " press Enter when ready");
 				activeState = GameState.Start;
 			} 
+	//this code won't be used when we implement the start button
+	
 			if (Input.GetKeyDown (KeyCode.N)) {
 				Debug.Log ("No game today");
 				activeState = GameState.End;
 			}
 
-		}
+		break;
+		
+		case GameState.Start:
+		     //code here
+		break;
+		
+		
+		case GameState.GamePlay:
+		    //code here
+		break;
 		
 		///other code
 	} //end Update()
