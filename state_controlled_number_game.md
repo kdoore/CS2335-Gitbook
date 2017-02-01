@@ -48,8 +48,10 @@ Here is the code for the State-controlled version of the NumberGame project.
 
 It is important to realize that in the if-statement blocks, where we are checking to see if any valid input keys have been entered, these if-statement blocks are executed only for 1-brief instant of time, so we should not put code in these statement blocks that we expect to see displayed on the screen. We use these statement blocks to change the activeState, not to display any text since the keypress event is an instantaneous trigger.  
  
+ 
 
 ```C#
+
 using UnityEngine;
 using UnityEngine.UI;  //added for UI gameObjects and UI components
 using System.Collections;
@@ -57,7 +59,7 @@ using System.Collections;
 //globally accessable enum which is a custom data-type
 public enum GameState { Initialize, Start, GamePlay, Win, Lose, End}
 
-public class NumberGame1 : MonoBehaviour {
+public class NumberGame : MonoBehaviour {
 
 	public Text gameText;   //for controlling UI-Text GameObject, Text Component
 
