@@ -51,7 +51,7 @@ public class MenuScript : MonoBehaviour {
 	void Start () {
 		BeginButton = GameObject.Find ("Begin").GetComponent<Button> ();  //here we cache the reference
 		BeginButton.onClick.AddListener( LoadBeginState );  //Add a Listener to the Button's onClick() Event
-														// SwitchBegin
+
 	}
 
 	// our custom method, this is called when "Begin" Button, Button Component onClick() executes
