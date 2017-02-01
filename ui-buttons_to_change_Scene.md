@@ -20,7 +20,9 @@ We will create a new Unity-2D project and create 3 different scenes: Start, Scen
 ###MenuScript LoadScene() Method
 Below is the code for our loadScene() method that will be attached to each button's onClick event handler. There is also an overloaded version of Application.LoadLevel("SceneName"), where the input parameter is the string version of the scene name; 
 
-```
+
+```java
+
 	public void loadScene (int level){
 		Application.LoadLevel(level);
 		Debug.Log ("change scene to " + level);
@@ -37,7 +39,8 @@ Although we can create public instance variables for the MenuScript class to att
 
 We can add a listener to the onClick event, we'll learn more about passing functions to the AddListener Method, but essentially, we are using the method name: LoadBeginState, as an argument to AddListener( ), this registers our LoadBeginState as a Listener to this button's onClick event.
 
-```
+```java
+
 using UnityEngine;
 using UnityEngine.UI;
 
