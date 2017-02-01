@@ -66,12 +66,23 @@ public class NumberGame1 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
+		activeState = GameState.Initialize;
+		Debug.Log("Do you want to play a Game, if so enter Y, else enter N");
+		gameText = GameObject.Find("GameText").GetComponent<Text>();
+		gameText.text = "Play?";  //test to see if UI-text is working
+		void InitializeVariables
+	}
+	
+	//create function to initialize values
+	//can be used to restart the game
+	
+	void InitializeVariables(){
+		
 		min = 0;
 		max = 64;
 		guess = (min + max) / 2;
-		activeState = GameState.Initialize;
-		Debug.Log("Do you want to play a Game, if so enter Y, else enter N");
-		gameText.text = "Play?";  //test to see if UI-text is working
+		
 	}
 	
 	// Update is called once per frame
@@ -199,5 +210,6 @@ See specific details on the [C# Switch-Case Statement on MSDN.
 
 	
 	}  //end Update
+
 
 ```
