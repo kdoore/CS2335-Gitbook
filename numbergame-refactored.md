@@ -22,7 +22,8 @@ public enum GameState
 public class NumberGame : MonoBehaviour
 {
 	///DONT INITIALIZE Variables here HERE
-	private int min, max, count, maxCount;
+	private int min, max;
+	private int count, maxCount;  //use for count logic so player can win the game
 	public int guess;
 	public GameState activeState;
 
