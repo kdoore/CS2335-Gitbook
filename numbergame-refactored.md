@@ -31,7 +31,8 @@ public class NumberGame : MonoBehaviour
 	private Text guessText;
 	private Button startButton;
 
-	// Use Start for initialization of variables
+	/// Use Unity Start function for initialization of object reference variables 
+	///Object References for Unity Components are matched to game scene gameObject components
 	void Start ()
 	{
 		// find all gameObjects and components - one time - in Start
