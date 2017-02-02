@@ -72,6 +72,8 @@ public class NumberGame : MonoBehaviour
 		startButton.gameObject.SetActive (true);
 	}
 
+///This method is executed when the StartButton is clicked
+///It is added as a Listener to the button's OnClick event
 	public void ButtonStartGame ()
 	{
 		Debug.Log ("Button was clicked");
