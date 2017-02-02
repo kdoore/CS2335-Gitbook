@@ -59,6 +59,7 @@ public class NumberGame : MonoBehaviour
 
 	/// <summary>
 	/// called at the start of each new game
+	/// initializes game variables, sets startButton to active
 	/// </summary>
 	void InitializeGameVariables ()
 	{
