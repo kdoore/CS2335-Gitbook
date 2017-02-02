@@ -93,7 +93,7 @@ public class NumberGame : MonoBehaviour
 
 	}
 	
-	// Update is called once per frame
+	// Unity Update( ) is called once per frame
 	void Update ()
 	{
 		switch (activeState) {
@@ -143,10 +143,11 @@ public class NumberGame : MonoBehaviour
 			break;
 		}//end of the switch statement
 				 
-	}
-	//End of update
+	}//End of update
+	
+	
 	/// <summary>
-	/// Called to start game, 
+	/// Called once at the beginning of Gameplay, 
 	/// then Called repeatedly in Gameplay when up or down arrow is selected
 	/// </summary>
 	private void NextGuess ()
