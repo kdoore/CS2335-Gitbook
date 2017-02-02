@@ -2,6 +2,8 @@
 
 Below is a refactored version of NumberGame.cs where functions have been created to simplify code logic.
 
+In the code below, there are 3 UI  Text components and a UI Button that have been integrated into the game.  Integration of the StartButton has required modification of the Switch Case logic for the case: GameState.Initialize.  When we use a button, then we no longer need logic in Update( ) to listen for keyboard input as possible events to change state.  Instead, logic has been put in the ButtonStartGame( ) function which gets executed when the button is clicked.  
+
 
 ```java
 
