@@ -17,27 +17,11 @@ We will create a new Unity-2D project and create 3 different scenes: Start, Scen
 
 ![](buildSettings.gif)
 
-###MenuScript LoadScene() Method
-Below is the code for our loadScene() method that will be attached to each button's onClick event handler. There is also an overloaded version of Application.LoadLevel("SceneName"), where the input parameter is the string version of the scene name; 
-
-
-```java
-
-	public void loadScene (int level){
-		Application.LoadLevel(level);
-		Debug.Log ("change scene to " + level);
-	}
-	
-```
-
-The animation below the code shows how to implement this. First the MenuScript is added to the Canvas object, then the button's onClick() method is set by adding the Canvas object to the onClick script source.  Then the dropdown allows selection of the loadScene() method.  Finally we set the int input value so that it matches the index of the level we want loaded when the user clicks the button.  
-
-![](UI_buttons.gif)
 
 ###Control UI Elements via Code
-Although we can create public instance variables for the MenuScript class to attach the loadScene(int level) method to the Button onClick handler using the inspector, we can implement all of this logic directly via code. This is a better way to implement the logic because we can put all of the code for a scene's logic in a single custom script, this will make it easier to extend our project and to debug issues.  The code below shows how we can create an object reference to a the <Button> Component of a Button GameObject, which is where we want to attach the Method that we want executed when the button is clicked.  Here we have created a method:  LoadBeginState(), this will switch to the Scene named: "Begin".  
+Although there are methods that allow us to use the inspector to determine which method gets executed when a Button is clicked, it is preferable to implement this logic within a custom script.  This is a better way to implement the logic because we can put all of the code for a scene's Button logic in a single custom script, this will make it easier to extend our project and to debug issues.  The code below shows how we can create an object reference to a the <Button> Component of a Button GameObject, which is where we want to attach the Method that we want executed when the button is clicked.  Here we have created a method:  LoadBeginState(), this will switch to the Scene named: "Begin".  
 
-We can add a listener to the onClick event, we'll learn more about passing functions to the AddListener Method, but essentially, we are using the method name: LoadBeginState, as an argument to AddListener( ), this registers our LoadBeginState as a Listener to this button's onClick event.
+We must create a custom method that we want to have executed by the Button component's onClick event, we'll learn more about passing functions to the AddListener Method, but essentially, we are using the method name: LoadBeginState, as an argument to AddListener( ), this registers our LoadBeginState as a Listener to this button's onClick event.
 
 ```java
 
@@ -55,7 +39,7 @@ public class MenuScript : MonoBehaviour {
 	}
 
 	// our custom method, this is called when "Begin" Button, Button Component onClick() executes
-	void LoadBeginState(){
+	public void LoadBeginState(){
 		Application.LoadLevel ("Begin");  //load the Scene named "Begin"
 	}
 }
