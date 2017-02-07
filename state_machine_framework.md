@@ -34,8 +34,8 @@ void StateUpdate(){
 
 ##State Machine Framework - Overview Diagram
 
+![](/assets/Cs2335 - 8.png)
 
-![](StateMachine.png)
 
 ###StateManager.cs Code
 ```
