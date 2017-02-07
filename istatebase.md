@@ -3,7 +3,7 @@ IStateBase is a custom interface that we will have all StateX classes implement.
 
 StateManager,  will use an IStateBase object reference to keep track of the current active state instance.  StateManager will execute the methods  defined the interface IStateBase for the currently activeState.  StateManager delegates responsibility to the current activeState using these methods.
 
-IStateBase
+## IStateBase - Why do we need it?
 
  Here is how we'll use IStateBase, we'll  use it to refer to the currently active state, and this reference will be created and used in the StateManager instance as a way to keep track of the current state.  With this reference to the activeState the StateManager can activate methods (execute functions) on the activeState, even though the states will be changing throughout the course of the game, across different scenes.  This is how we remember where the player is during the game's execution.  We could create a list to keep track of all of the states that the player has visited - we'd want to push some token which represents a state onto an ordered list - then these can be accessed as necessary from other objects.
 
