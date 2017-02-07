@@ -59,7 +59,7 @@ void StateUpdate(){
 	}
 	// Use this for initialization
 	void Start () {
-		activeState = new BeginState (this);
+		activeState = new BeginState ();
 		curScene = GameState.Begin;
 		activeState.InitializeObjectRefs ();
 	}
