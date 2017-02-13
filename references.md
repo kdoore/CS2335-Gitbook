@@ -78,5 +78,5 @@ Art by Osmic
 #Course Starter Code - Spring 17
 
 ###Project 2 - Text Adventure - Framework
-[Box.com Zip File](https://utdallas.box.com/v/CS2335Project2StarterCodeS17)
+[Box.com Zip File - Project2](https://utdallas.box.com/v/CS2335Project2StarterCodeS17)
 
