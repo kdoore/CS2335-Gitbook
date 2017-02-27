@@ -9,15 +9,23 @@
 * [Number Game: State-Controlled](state_controlled_number_game.md)
 * [Screen-Space Canvas](screen-space_canvas.md)
 * [Number Game: UI-Text](state_controlled_ui-text.md)
+
 * [NumberGame: Event-Driven](event-driven_numbergame.md)
 * [NumberGame - Refactored](numbergame-refactored.md)
-* [Zombie Objects](zombie_objects.md)
-* [Zombie Prefab](zombie_prefab.md)
-* [Zombie - IDamage Interface](zombie_-_idamage_interface.md)
-* [Non-Player Character: Base-Class](non-player_character_base-class.md)
-* [IEnumerable, IEnumerator for Collections](zombie_ienumerable,_ienumerator.md)
-* [Zombie - Sorting](zombie_-_sorting.md)
-* [Unity - Serialization Problems with Polymorphic Types](unity_-_serialization_problems_with_polymorphic_ty.md)
+<!--* [Zombie Objects](zombie_objects.md)-->
+
+<!--* [Zombie Prefab](zombie_prefab.md)-->
+
+<!--* [Zombie - IDamage Interface](zombie_-_idamage_interface.md)-->
+
+<!--* [Non-Player Character: Base-Class](non-player_character_base-class.md)-->
+
+<!--* [IEnumerable, IEnumerator for Collections](zombie_ienumerable,_ienumerator.md)-->
+
+<!--* [Zombie - Sorting](zombie_-_sorting.md)-->
+
+<!--* [Unity - Serialization Problems with Polymorphic Types](unity_-_serialization_problems_with_polymorphic_ty.md) -->
+
 * [C\# Data Structures and Collections](c_data_structures_and_collections.md)
 * [Branching Narrative - Structure](branching_narrative_-_structure.md)
 * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
@@ -71,7 +79,5 @@
 * [Glossary](GLOSSARY.md)
 * [References and Resources](references.md)
 
----
-
-* [Story Inspiration --&gt;](story_inspiration.md)
+<!-- * [Story Inspiration ](story_inspiration.md) -->
 
