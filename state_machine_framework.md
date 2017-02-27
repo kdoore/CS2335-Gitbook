@@ -20,7 +20,6 @@ We will use the StateManager instance to delegate control of the Scene's logic t
 
 ###StateManager.cs Code
 
-
 ```java
 
 using UnityEngine;
