@@ -18,8 +18,10 @@ When we create object references, we're creating a variable that stores a memory
     private Button endBtn;  //Button component reference variable
 
     mainPanel=GameObject.Find ("MainPanel1");  //assign address of gameObject to referenceVariable so we can interact with it throughout the state class code
+    
     // initialize object reference to EndButton, Button component
     endBtn = GameObject.Find("EndButton").GetComponent<Button>();
+    //set our custom method: LoadEndScene so it's executed when the EndButton is clicked
     endBtn.onClick.AddListener (LoadEndScene);
     
    ```
