@@ -13,10 +13,11 @@ When we create object references, we're creating a variable that stores a memory
 int someInteger;   //primitive type variable stores integer in variable's memory space
     someInteger=5;  //assign a value
 
-    public  GameObject mainPanel; // declaring a variable for objects of GameObject type.
+    private  GameObject mainPanel; // declaring a variable for objects of GameObject type.
+    private Button endBtn;  //Button component reference variable
 
     mainPanel=GameObject.Find ("MainPanel1");  //assign address of gameObject to referenceVariable so we can interact with it throughout the state class code
-
+endBtn = GameObject.Find("EndButton").GetComponent<Button>();
    ```
 ###StateManager ObjectReferences
 The SwitchState process is quite interesting because the `SwitchState()` method belongs to the StateManager object, but the code is executed from within the current state, but the function requires the current state to call the function by calling the constructor method for the next state.  This code really illustrates the fact that methods are used by objects to communicate, they act to allow messages to be sent between objects. 
