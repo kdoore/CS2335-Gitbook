@@ -9,41 +9,47 @@ StateManager,  will use an IStateBase object reference to keep track of the curr
  
  ###Here's how we use it!
 
-```
-// in StateManager
+```java
+// in StateManager.cs
 
 IStateBase activeState;  //
 
 void Start(){
-    activeState = new BeginState( this );  //reference to first activeState
+    activeState = new BeginState( );  //reference to first activeState
+    curState = activeState.Scene;
 }
 
 ```
 
-```
+```java
 using UnityEngine;
 using System.Collections;
 
+///
+///  
 /// <summary>
-/// IStateBase
-/// Interface for all StateX.cs classes
+/// I state base.  
+/// Interface for all StateX.cs classes  
 /// </summary>
-public interface IStateBase{
-		
-	gameState State // Inteface Property
-	{
+public interface IStateBase
+{
+
+	/// <summary>
+	/// Gets the scene number - enum
+	/// </summary>
+	/// <value>The scene.</value>
+	GameScene Scene { // Inteface Property
 		get;
-	}    
+	}
 
 	//all interface methods are public by default!
 
-	void StateUpdate (); //executed by StateManager in Update(), executed once per frame
-
-	void StateGUI (); // can execute any onGUI() code
-
-	void InitializeObjectRefs ();  //cache object References once Scene is loaded
+	/// Similar to Unity Start()  
+	/// exectued once, after scene is loaded - called from StateManager
+	/// Used to initialize object references - can be used to cache object references
+	/// </summary>
+	void InitializeObjectRefs ();
 }
-
 
 ```
 
