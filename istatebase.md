@@ -60,54 +60,63 @@ Each custom State class that implements IStateBase must implement the State Prop
 ###Scene Logic and Event
 Each State class definition contains code to control the scene's logic and event management.  Below is the starter code for the BeginState class, this contains code that finds the EndScene Button GameObject, then creates an objectReference to the Button component.  Then we define a function that we add as a Listener to the Button Component's onClick event.  Finally, we must write the logic we want executed in our custom function which will cause the scene to change and which also instantiates the new State and make this connection with the StateManager because we're calling the StateManager SwitchState method at the same time that we're calling the constructor for the new State.
 
-```
-using UnityEngine;
+```java
+
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class BeginState : IStateBase {
+public class BeginState : IStateBase
+{
+	/// <summary>
+	/// The scene.
+	/// </summary>
+	private GameScene scene;
 
-	// Use this for initialization
-	StateManager managerRef;
-
-	private GameState state;
-
-	//add commenets
-	public GameState State{
-		get{ return state; }
+	/// <summary>
+	/// Gets the scene number - enum
+	/// </summary>
+	/// <value>The scene.</value>
+	public GameScene Scene {
+		get{ return scene; }
 	}
 
 	//GameScene objectRefs
 	private Button endBtn;
 
-	//constructor  // add comments
-	public BeginState( StateManager manager  ){
-		managerRef = manager;  //// establish connection with StateManager
-		state = GameState.Begin;
-
+	/// <summary>
+	/// Initializes a new instance of the <see cref="BeginState"/> class.
+	/// </summary>
+	/// <param name="manager">Manager.</param>
+	public BeginState ()
+	{
+		scene = GameScene.Begin;
 	}
 
-	// Update is called once per frame
-	public void StateUpdate () {
-        //add code as needed
-	}
-
-	public void StateGUI(){
-        ///add GUI code as needed
-	}
-	public void InitializeObjectRefs (){
+	/// <summary>
+	/// Similar to Unity Start() 
+	/// exectued once, after scene is loaded - called from StateManager
+	/// Used to initialize object references - can be used to cache object references
+	/// </summary>
+	public void InitializeObjectRefs ()
+	{
 		endBtn = GameObject.Find ("EndButton").GetComponent<Button> ();
-		endBtn.onClick.AddListener (LoadEndScene);///
+		endBtn.onClick.AddListener (LoadEndScene);
 		Debug.Log ("Add Debug Info");
 	}
 
-	public void LoadEndScene(){  
+	/// <summary>
+	/// Event handler - called when endBtn is clicked
+	/// Loads the end scene.
+	/// </summary>
+	public void LoadEndScene ()
+	{  
 		Debug.Log ("Add Debug Info");
-		Application.LoadLevel ("EndScene");
-		managerRef.SwitchState (new EndState(managerRef));
-
+		SceneManager.LoadScene ("EndScene");  //actual scene name
+		StateManager.instanceRef.SwitchState (new EndState ());  //create new state, pass to StateManager
 	}
 }
+
 
 ```
 
