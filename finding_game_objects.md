@@ -20,6 +20,8 @@ When we create object references, we're creating a variable that stores a memory
     mainPanel=GameObject.Find ("MainPanel1");  //assign address of gameObject to referenceVariable so we can interact with it throughout the state class code
     // initialize object reference to EndButton, Button component
     endBtn = GameObject.Find("EndButton").GetComponent<Button>();
+    endBtn.onClick.AddListener (LoadEndScene);
+    
    ```
 ###StateManager ObjectReferences
 The SwitchState process is quite interesting because the `SwitchState()` method belongs to the StateManager object, but the code is executed from within the current state, but the function requires the current state to call the function by calling the constructor method for the next state.  This code really illustrates the fact that methods are used by objects to communicate, they act to allow messages to be sent between objects. 
