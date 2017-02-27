@@ -4,6 +4,7 @@ We created a static class: [Utility](https://kdoore.gitbooks.io/cs-2335/content/
 
 Notice, the class is marked as static and each method is also marked as public static.  This means we can use the method in another class with the following syntax:
 
+###Example of using Utility Static Method: showPanel( )
 
 ```C#
 //toggle canvas-group visibility
@@ -12,6 +13,7 @@ Utility.showPanel( someCG );
 
 ```
 
+###Utility.cs Class
 ```C#
 
 using UnityEngine;
