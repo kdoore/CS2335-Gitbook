@@ -5,61 +5,66 @@ In order to add a simple text panel that can allow for clicking through a list o
 In the game scene, we'll need a UI-Panel, a UI-Text element, and a UI-Button.  Then we'll create a script that can be attached to a gameObject like the canvas, in the scene.  Below are code snippets to create this functionality.
 
 ```C#
-using UnityEngine;
+//updated spring 17
+
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class BeginSceneDialogManager : MonoBehaviour
+public class DialogManager : MonoBehaviour
 {
-    Button titleBtn, nextBtn;  //nextBtn will show next dialog
-	CanvasGroup cg1;
+
 	List<string> dialogList;
-	Text titleTxt; // text area to show dialog
-	int currentDialog;  //keep track of current dialog text
 
-}
+	CanvasGroup titleCG, dialogCG;
+	Button titleBtn, nextBtn;
+	Text dialogTxt;
+	int dialogCounter;
 
-void Start ()
+	// Use this for initialization
+	void Start ()
 	{
-		currentDialog = 0;
-		cg1 = GameObject.Find ("ButtonPanel").GetComponent<CanvasGroup> ();
-		Utility.hideCG (cg1);
-		titleBtn = GameObject.Find ("TitleButton").GetComponent<Button> ();
-		titleBtn.onClick.AddListener (ShowBtnPanel);
-
-		nextBtn = GameObject.Find ("NextButton").GetComponent<Button> ();
-		nextBtn.onClick.AddListener (ShowNextDialog);
+		dialogCounter = 0;
 
 		dialogList = new List<string> ();
-		PopulateDialogList ();
-		titleTxt = GameObject.Find ("TitleText").GetComponent<Text> ();
-		titleTxt.text = dialogList [currentDialog];
+		dialogList.Add ("Hello");
+		dialogList.Add ("What's new");
+		dialogList.Add ("Not Much");
+		dialogList.Add ("Good bye");
 
+		titleCG = GameObject.Find ("TitlePanel").GetComponent<CanvasGroup> ();
+		dialogCG = GameObject.Find ("DialogPanel").GetComponent<CanvasGroup> ();
+
+		Utility.ShowCG (titleCG);
+		Utility.HideCG (dialogCG);
+
+		titleBtn = GameObject.Find ("TitleButton").GetComponent<Button> ();
+		nextBtn = GameObject.Find ("NextButton").GetComponent<Button> ();
+		titleBtn.onClick.AddListener (OpenDialogPanel);
+		nextBtn.onClick.AddListener (ShowNextDialog);
+
+
+		dialogTxt = GameObject.Find ("DialogText").GetComponent<Text> ();
+		dialogTxt.text = dialogList [dialogCounter];
+		dialogCounter++;
 	}
 
-	void ShowNextDialog ()
+	public void OpenDialogPanel ()
 	{
-		currentDialog++;
-		Debug.Log ("Just incremented counter " + currentDialog);
-		if (currentDialog < dialogList.Count) {
-			titleTxt.text = dialogList [currentDialog];
+		Utility.HideCG (titleCG);
+		Utility.ShowCG (dialogCG);
+	}
+
+	public void ShowNextDialog ()
+	{
+		
+		if (dialogCounter < dialogList.Count) {
+			dialogTxt.text = dialogList [dialogCounter];
 		}
-
+		dialogCounter++;
 	}
 
-	void PopulateDialogList ()
-	{
-		dialogList.Add ("Welcome to the adventure");
-		dialogList.Add ("Do you have any money? ");
-		dialogList.Add ("I'm also happy to trade");
-	}
-    
-    public void ShowBtnPanel ()
-	{
-		CanvasGroup cgTitlePanel = GameObject.Find ("TitlePanel").GetComponent<CanvasGroup> ();
-		Utility.showCG (cg1);
-		Utility.hideCG (cgTitlePanel);
-	}
 
+}
 ```
