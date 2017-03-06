@@ -22,7 +22,7 @@
 * [Finding Game Objects](finding_game_objects.md)
 * [Text Input](text_input.md)
 * [C\# Data Structures and Collections](c_data_structures_and_collections.md)
-* [Dialog Panel](conversation_panel_-_listt.md)
+* [Dialog Panel - Manager](conversation_panel_-_listt.md)
 * [Game Objects](game_objects.md)
 * [Game Scene](game_scene.md)
 * [Player GameObject](player_gameobject.md)
