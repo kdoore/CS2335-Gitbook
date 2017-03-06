@@ -4,18 +4,19 @@ In order to add a simple text panel that can allow for clicking through a list o
 
 In the game scene, we'll need a UI-Panel, a UI-Text element, and a UI-Button.  Then we'll create a script that can be attached to a gameObject like the canvas, in the scene.  Below are code snippets to create this functionality.
 
-Required GameObjects for this code to work:
+###Required GameObjects for this code to work:
 
 UI-Panels - with canvasGroup component:  TitlePanel, DialogPanel
 
 Within the Panel Game-objects, the following gameObjects as children:
 
-- TitlePanel:
-	- TitleButton
+- **TitlePanel: _UI-Panel_ **
+	- TitleButton  _UI-Button_
 	
-- DialogPanel:
-	- NextButton
-	- DialogText
+- ** DialogPanel: _UI-Panel_ **
+	- NextButton  _UI-Button_
+	- DialogText  _UI-Text_
+
 Also, you need to have our custom [Utility Class](https://kdoore.gitbooks.io/cs-2335/content/utility_-_static_class.html#utility---static-class) included in your project assets, so you can use the static methods: 
 
 ```java
