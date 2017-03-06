@@ -16,7 +16,15 @@ Within the Panel Game-objects, the following gameObjects as children:
 - DialogPanel:
 	- NextButton
 	- DialogText
-Also, you need to have the custom Utility Class included in your project assets.	
+Also, you need to have our custom [Utility Class](https://kdoore.gitbooks.io/cs-2335/content/utility_-_static_class.html#utility---static-class) included in your project assets, so you can use the static methods: 
+
+```java
+
+public static void ShowCG( CanvasGroup cg)
+public static void HideCG( CanvasGroup cg)
+```
+
+
 
 ```C#
 //updated spring 17
