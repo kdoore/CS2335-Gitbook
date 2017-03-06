@@ -4,6 +4,20 @@ In order to add a simple text panel that can allow for clicking through a list o
 
 In the game scene, we'll need a UI-Panel, a UI-Text element, and a UI-Button.  Then we'll create a script that can be attached to a gameObject like the canvas, in the scene.  Below are code snippets to create this functionality.
 
+Required GameObjects for this code to work:
+
+UI-Panels - with canvasGroup component:  TitlePanel, DialogPanel
+
+Within the Panel Game-objects, the following gameObjects as children:
+
+- TitlePanel:
+	- TitleButton
+	
+- DialogPanel:
+	- NextButton
+	- DialogText
+Also, you need to have the custom Utility Class included in your project assets.	
+
 ```C#
 //updated spring 17
 
