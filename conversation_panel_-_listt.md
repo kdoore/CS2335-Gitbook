@@ -24,7 +24,7 @@ public static void ShowCG( CanvasGroup cg)
 public static void HideCG( CanvasGroup cg)
 ```
 
-
+###DialogManager Code
 
 ```C#
 //updated spring 17
