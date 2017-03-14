@@ -9,7 +9,7 @@ Notice, the class is marked as static and each method is also marked as public s
 ```C#
 //toggle canvas-group visibility
 CanvasGroup someCG = GameObject.Find("SomePanel").GetComponent<CanvasGroup>();
-Utility.showPanel( someCG );
+Utility.ShowCG( someCG );
 
 ```
 
@@ -23,14 +23,14 @@ using System.Collections;
 public static class Utility
 {
 
-	public static void ShowPanel (CanvasGroup cg)
+	public static void ShowCG (CanvasGroup cg)
 	{
 		cg.alpha = 1;
 		cg.blocksRaycasts = true;
 		cg.interactable = true;
 	}
 
-	public static void HidePanel (CanvasGroup cg)
+	public static void HideCG (CanvasGroup cg)
 	{
 		cg.alpha = 0;
 		cg.blocksRaycasts = false;
