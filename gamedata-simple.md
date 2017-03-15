@@ -9,6 +9,7 @@ This script will be attached to the GameManager in the BeginScene and will be pe
 To use the singleton reference in another class use the following syntax, for example, when calling the Add method from the PlayerController script:
 
 // in PlayerController.cs
+
 GameData.instanceRef.Add( );
 
 
