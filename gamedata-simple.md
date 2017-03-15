@@ -2,6 +2,17 @@
 
 In the game we'll need an object that is persisted throughout the gameplay session so that we can keep track of score, lives, health, etc.  
 
+Below is a simple class definition for GameData, we'll add more to this as we progress.
+
+This script will be attached to the GameManager in the BeginScene and will be persisted throughout the game since it uses the singleton design pattern.
+
+To use the singleton reference in another class use the following syntax, for example, when calling the Add method from the PlayerController script:
+
+// in PlayerController.cs
+GameData.instanceRef.Add( );
+
+
+###GameData Class Definition
 
 ```java
 
