@@ -34,7 +34,6 @@ public class GameData : MonoBehaviour
 	public static GameData instanceRef;  //singleton reference variable
 	private int health;
 	private int lives;
-	private Text score;
 	private int totalScore;
 
 	public int TotalScore {  //read only
