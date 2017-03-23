@@ -43,7 +43,7 @@ using System.Collections;
 
 public class PlayerControllerSimple : MonoBehaviour {
 
-		private GameData gameData;
+		
 		private Transform myTransform;
 		private Rigidbody2D myRBody2D;
 		public float forceX;
@@ -54,7 +54,7 @@ public class PlayerControllerSimple : MonoBehaviour {
 		{
 			myTransform = GetComponent<Transform> ();
 			myRBody2D = GetComponent<Rigidbody2D> ();
-			gameData = GameObject.Find("GameManager").GetComponent<GameData>();
+			
 		}
 
 		void Start ()
@@ -97,7 +97,7 @@ public class PlayerControllerSimple : MonoBehaviour {
 			if (hitObject.CompareTag ("Pick-up")) {
 				Debug.Log ("Hit Pickup");
 				PickUp item = hitObject.GetComponent<PickUp> ();
-				gameData.Add (item);
+				GameData.instanceRef.Add (item);
 				
 			Destroy (hitObject.gameObject);
 			} else {
