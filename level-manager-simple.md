@@ -28,6 +28,7 @@ We can use the Start state to allow for a Splash screen and start-button event t
 
 ```java
 /// Inside LevelManager.cs class script
+
 void Start ()
 	{
          curLevel = LevelState.Start;  ///initialize curLevel
@@ -38,5 +39,26 @@ nextLevel ();  //starts the game -
 
 ```
 
+###CheckLevelEnd( )
+We can create a custom function that gets executed to determine if the next level should be loaded.  This check can be performed each time the Player collides with a pickup that changes the score.  This will require that the PlayerController script 
+has a reference to the LevelManager so it can call this method when the score is changed.  This may cause problems if we want to use the playerController in a different scene, where the LevelManager does not exist. levelScore is an instance variable that keeps track of the points scored within a level, it gets reset to 0 when the level changes.
+
+```java
+
+public void CheckLevelEnd ( int score )
+	{
+		levelScore += score;
+
+		Debug.Log ("Check if level is over" + levelScore);
+		////change the total score display
+
+		if (levelScore > 10) { ///level has changed
+			///reset level value display
+			levelScore = 0;   //reset level score
+
+			nextLevel ();  //go to next level
+		}
+	}
+```
 
 
