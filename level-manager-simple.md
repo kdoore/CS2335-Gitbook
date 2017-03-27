@@ -61,4 +61,48 @@ public void CheckLevelEnd ( int score )
 	}
 ```
 
+###Finite State Machine Logic - nextLevel( )
+
+The nextLevel() function provides the FSM logic for the Level management.
+
+```C#
+
+void nextLevel ()
+	{
+		switch (curLevel) {
+		case LevelState.Start:
+			Debug.Log ("State changed - goto :LoadLevel 1");
+			curLevel = LevelState.Level1;
+			LoadLevel1 ();
+			break;
+		case LevelState.Level1:
+			curLevel = LevelState.Level2;
+			LoadLevel2 ();
+			break;
+		case LevelState.Level2:
+			curLevel = LevelState.Level3;
+             //add code here
+			break;
+		case LevelState.Level3:
+			curLevel = LevelState.Win;
+             //add code here
+			break;
+		case LevelState.Win:
+			curLevel = LevelState.End;
+            // add code here
+			break;
+		case LevelState.End:
+            //add code here
+			break;
+		} // end switch
+        
+	} // end function
+
+```
+
+#Level-Change Behaviors
+The nextLevel() method provides the FSM structure to manage state-change logic, so now we just need to decide what to change in the game-scene when this level-change event occurs.
+One simple change to implement is toggling visibility of different background sprites. We can have logic to change the background sprite when the level changes.  
+
+
 
