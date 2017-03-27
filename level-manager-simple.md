@@ -102,7 +102,8 @@ void nextLevel ()
 
 #Level-Change Behaviors
 The nextLevel() method provides the FSM structure to manage state-change logic, so now we just need to decide what to change in the game-scene when this level-change event occurs.
-One simple change to implement is toggling visibility of different background sprites. We can have logic to change the background sprite when the level changes.  
+One simple change to implement is toggling visibility of different background sprites. We can have logic to change the background sprite when the level changes. 
+ 
 
 
 
