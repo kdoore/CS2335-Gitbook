@@ -16,5 +16,6 @@ Sorting layers provide a method to control the layer order of sprite rendering. 
 
 
 ###Tags:
+Tags provide a method to add categories to gameObjects that can be used to identify gameObjects within a custom script.  Tags are also created using the Layer editor, by selecting the 'Edit Layers' option, you are provided with an interface where you can create custom tags.  Then, a tag can be set for a gameObject at the top of the inspector panel for that gameObject.
 
 
