@@ -1,10 +1,9 @@
-# MiniGame - View
+# MiniGame
 
 
 
 ###MiniGame.cs 
-Since we've been using our State.cs classes for implementing the logic for the game UI, for now we can say that the MiniGame.cs class, which Implements IStateBase and  represents the current activeState for our State-Machine Framework.  Later we can create a Prefab to represent our Player heads-up display for presenting player game stat information, that will be the view.
-
+Since we've been using our State.cs classes for implementing the logic for the game UI, for now we can say that the MiniGame.cs class, which Implements IStateBase and  represents the current activeState for our State-Machine Framework.  
 
 
 ```
