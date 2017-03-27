@@ -10,6 +10,9 @@ Now that we are starting to work with GameObjects that aren't UI elements, we ne
 
 
 ###Sorting Layers:
+Sorting layers provide a method to control the layer order of sprite rendering.  Sorting Layer are is attribute of the Sprite Renderer component for 2D sprite gameObjects.  Sorting Layers are created using the Layer inspector panel, at the upper left of the editor window, see image below.  Select the bottom 
+
+![](/assets/SortingLayer.png)
 
 
 ###Tags:
