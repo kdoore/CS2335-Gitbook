@@ -1,6 +1,24 @@
 # MiniGame
 
+###Dynamic Interaction with Goals and Consequences
 
+The MiniGame is the portion of the Project where the player can dynamically interact with a player sprite, with some objective or goal that will result in some game data generated that will have consequential impact on the player experience in subsequent scenes in the game.
+
+In order to design the logic of the mini-game, we must first overview several concepts that impact our code design.
+
+1.  GameData - what is the data generated in the game and how do we store the data so we can access it in subsequent game scenes.
+	- Data Structures:  
+		- List< T >  
+		- Dictionary < TKey, TValue > 
+	
+2.  LevelManager - this custom script component will manage organization of the MiniGame logic and behaviors.
+	- What game objects does it need to communicate with?
+		- Player - score events
+		- UI - Level Display
+		- Spawner - when / what prefabs are spawned
+		- BackgroundImage - modify sprite when level changes
+		- 
+3.   
 
 ###MiniGame.cs 
 Since we've been using our State.cs classes for implementing the logic for the game UI, for now we can say that the MiniGame.cs class, which Implements IStateBase and  represents the current activeState for our State-Machine Framework.  
