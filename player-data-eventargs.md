@@ -9,7 +9,7 @@ using UnityEngine;
 using System.Collections;
 using System;
 
-[Serializable]
+[Serializable]  
 public class PlayerDataEventArgs : EventArgs {
 public int totalScore;
 public int health;
