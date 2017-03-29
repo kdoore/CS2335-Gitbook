@@ -4,6 +4,8 @@
 
 A Dictionary represents a collection of Key / Value pairs.
 
+Dictionary < TKey, TValue > //syntax to declare a new Dictionary object-reference.
+
 The Key is used as a indexer to allow storage of a value that is associated with a unique Key.  Keys must be unique, there cannot be duplicate Keys in a dictionary, so we must use care when adding new elements to a dictionary object to ensure that the item's key does not already exist in the dictionary.  There are several methods that can be used to test for the presence of a specific key, these helper functions prevent runtime errors in our programs.
 
 ###Dictionary.Add()
