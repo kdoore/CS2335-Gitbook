@@ -4,7 +4,7 @@
 
 The MiniGame is the portion of the Project where the player can dynamically interact with a player sprite, with some objective or goal that will result in some game-data generated that will have consequential impact on the player experience in subsequent scenes in the game.
 
-In order to design the logic of the mini-game, we must first overview several concepts that impact our code design.
+In order to design the logic of the mini-game, it will be good to take a high-level view of  several concepts that will impact our code design.
 
 1.  GameData - what is the data generated in the game and how do we store the data so we can access it in subsequent game scenes.
 	- Data Structures:  
