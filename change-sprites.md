@@ -2,6 +2,8 @@
 
 This code can be attached to a gameObject that has a spriteRenderer, it will allow creation of a list of sprites that can be changed by calling the swapSprite( ) method.
 
+```java
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,3 +30,5 @@ public class ChangeSprite : MonoBehaviour
 		}
 	}
 }
+
+```
