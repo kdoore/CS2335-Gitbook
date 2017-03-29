@@ -33,6 +33,7 @@
 * [Player Data - EventArgs](player-data-eventargs.md)
 * [Level Manager - Simple](level-manager-simple.md)
 * [Level Manager](level_manager.md)
+* [Change Sprites](change-sprites.md)
 * [Conversation](conversation.md)
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
