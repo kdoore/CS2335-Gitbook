@@ -16,4 +16,9 @@ public int health;
 public int lives;
 }
 
+
 ```
+
+The [Serializable] attribute indicates that this class can be Serialized, this means it can be saved to external memory as binary data so it can be recreated with the correct object values when needed.
+
+[MSDN Documentation for Serialization](https://msdn.microsoft.com/en-us/library/mt656716.aspx)
