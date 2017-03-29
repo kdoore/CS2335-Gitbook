@@ -19,6 +19,8 @@ public int lives;
 
 ```
 
-The [Serializable] attribute indicates that this class can be Serialized, this means it can be saved to external memory as binary data so it can be recreated with the correct object values when needed.
+The [Serializable] attribute in the code above indicates that this class can be Serialized, this means it can be saved to external memory as binary data so it can be recreated with the correct object values when needed.
+
+See [Saving Data](https://kdoore.gitbooks.io/cs-2335/content/saving_data_-_serialization.html)
 
 [MSDN Documentation for Serialization](https://msdn.microsoft.com/en-us/library/mt656716.aspx)
