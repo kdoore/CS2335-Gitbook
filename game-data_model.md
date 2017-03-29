@@ -103,19 +103,3 @@ public class GameData : MonoBehaviour {
 
 } // end class: GameData - this class functions as our Data-Model
 ```
-
-###PlayerDataEventArgs
-The following class is used to encapsulate the Player data that we'll want to publish to as event data when the PlayerData has been updated.  We can also use this data for a save event
-```
-using UnityEngine;
-using System.Collections;
-using System;
-
-[Serializable]
-public class PlayerDataEventArgs : EventArgs {
-	public int totalScore;
-	public int health;
-	public int lives;
-}
-
-```
