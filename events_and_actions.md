@@ -21,4 +21,5 @@ GameObject someSubscribeObject = GameObject.Find("SomeObject").GetComponent<Cust
 someSubscribeObject.NotifyMe();
 
 ###Event Handlers
+Delegates define the syntax for Event handlers.
 

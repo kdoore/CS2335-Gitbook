@@ -21,7 +21,10 @@ Details:
 
 ``` public SomeEventHandler handleEvent; ```
 
-* 
+
+
+[Delegate Tutorial](http://unitydojo.blogspot.com/2015/03/how-to-use-delegates-in-unity-like-boss.html) by Juan Gomez 
+
 
 
 
