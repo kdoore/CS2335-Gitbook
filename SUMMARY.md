@@ -32,6 +32,7 @@
 * [Game-Data Model](game-data_model.md)
 * [Player Data - EventArgs](player-data-eventargs.md)
 * [Level Manager - Simple](level-manager-simple.md)
+* [Level Manager - In Class](level-manager-in-class.md)
 * [Level Manager](level_manager.md)
 * [Change Sprites](change-sprites.md)
 * [Conversation](conversation.md)
