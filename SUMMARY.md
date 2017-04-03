@@ -35,6 +35,7 @@
 * [Level Manager - In Class](level-manager-in-class.md)
 * [Level Manager](level_manager.md)
 * [Change Sprites](change-sprites.md)
+* [Simple Spawner](simple-spawner.md)
 * [Conversation](conversation.md)
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)

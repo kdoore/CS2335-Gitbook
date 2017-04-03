@@ -147,12 +147,12 @@ void loadLevel1 ()
         changeSprite.SwapSprite ();
         levelValue.text = "2";
     }
-    
+
     void miniGameOver( ){
     //make sure to include: Using UnityEngine.SceneManagement at top of script
     //this will change Scene/State
                SceneManager.LoadScene ("EndScene");  //actual scene name
-		StateManager.instanceRef.SwitchState (new EndState ());  //create new state, pass to StateManager     
+        StateManager.instanceRef.SwitchState (new EndState ());  //create new state, pass to StateManager     
     }
 ```
 
