@@ -13,4 +13,4 @@ Game objects that are inter-dependent with the LevelManager are:
 3. Spawner - start spawning when splash screen start-button is clicked
 4. Spawner - spawn different prefabs depending on the current level
 5. UI Elements - Level and Score UI displays must be updated to reflect the current Level and the current Score value.
-6. PlayerController - this GameObject will sense collisions with PickUps
+6. PlayerController - this GameObject will sense collisions with PickUps, this will change the score and the level
