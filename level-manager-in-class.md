@@ -14,3 +14,39 @@ Game objects that are inter-dependent with the LevelManager are:
 4. Spawner - spawn different prefabs depending on the current level
 5. UI Elements - Level and Score UI displays must be updated to reflect the current Level and the current Score value.
 6. PlayerController - this GameObject will sense collisions with PickUps, this will change the score and the level
+
+###Level-State Enums
+
+```java
+
+public enum LevelState
+{
+	start,
+	level1,
+	level2,
+	level3,
+	win,
+	lose
+
+}
+```
+
+###Declare Object References
+
+```java
+LevelState curLevel;
+	// FSM - 1 unit of memory
+	int levelScore;
+
+	//UI game Objects - LevelValue, StartGameButton, StartGamePanel
+	Button startGameButton;
+	CanvasGroup cg;
+	Text levelValue;
+
+	//references to custom script components
+	Spawner spawner;
+	//to start the spawner, change objects that are spawned
+	ChangeSprite changeSprite;
+	//to change background sprite
+	
+	```
