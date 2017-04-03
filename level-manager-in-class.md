@@ -97,6 +97,37 @@ LevelState curLevel;
 
 			nextLevel ();  //go to next level
 		}
+		
 	}
+```
+
+###NextLevel - FSM 
+
+```java
+///This method manages the FSM control logic using switch-case structure. 
+///Each time this method is called, the matching logic must change the value of curLevel, 
+///and call a custom method: loadLevelX( ) where the details of the level loading logic are specified.
+
+public void nextLevel ()
+	{
+
+		switch (curLevel) {
+
+		case LevelState.start:
+			curLevel = LevelState.level1;
+			loadLevel1 ();
+			break;
+
+		case LevelState.level1:
+			curLevel = LevelState.level2;
+			loadLevel2 ();
+			break;
+
+		default:
+			Debug.Log ("No match on curLevel");
+			break;
+		}
+	}
+	
 ```
 	
