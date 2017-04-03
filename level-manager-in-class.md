@@ -49,4 +49,54 @@ LevelState curLevel;
 	ChangeSprite changeSprite;
 	//to change background sprite
 	
-	```
+```
+	
+###Start - Initialize Object References
+
+```java
+// Use this for initialization
+	void Start ()
+	{
+		curLevel = LevelState.start;
+		levelScore = 0;   // initialize
+
+		startGameButton = GameObject.Find ("StartGameButton").GetComponent<Button> ();
+		startGameButton.onClick.AddListener (nextLevel);
+		levelValue = GameObject.Find ("LevelValue").GetComponent<Text> ();
+
+		cg = GameObject.Find ("StartGamePanel").GetComponent<CanvasGroup> ();
+		Utility.ShowCG (cg);
+
+		spawner = GameObject.Find ("Spawner").GetComponent<Spawner> ();
+		changeSprite = GameObject.Find ("BackgroundImage").GetComponent<ChangeSprite> ();
+	}
+	
+```
+
+###Check For Level End
+
+```java
+
+ 	/// <summary>
+	/// Checks the level end.
+	/// Pass in PickUp item so levelScore can be updated using
+	/// item.value.  If levelScore > 10, then the nextLevel( ) method
+	/// is executed to change the level
+	/// </summary>
+	/// <param name="item">Item.</param>
+	public void CheckLevelEnd (PickUp item)
+	{
+		levelScore += item.value;
+
+		Debug.Log ("Check if level is over" + levelScore);
+		////change the total score display
+
+		if (levelScore > 10) { ///level has changed
+			///reset level value display
+			levelScore = 0;   //reset level score
+
+			nextLevel ();  //go to next level
+		}
+	}
+```
+	
