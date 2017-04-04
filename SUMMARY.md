@@ -35,7 +35,7 @@
 * [Level Manager - Simple](level-manager-simple.md)
 * [Level Manager - In Class](level-manager-in-class.md)
 * [Level Manager with Events](level_manager.md)
-* Score UI Display
+* [Score UI Display](score-ui-display.md)
 * [Change Sprites](change-sprites.md)
 * [Simple Spawner](simple-spawner.md)
 * [Spawn Prefab GameObjects](spawn_prefab_gameobjects.md)
