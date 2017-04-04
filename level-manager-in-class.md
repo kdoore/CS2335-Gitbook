@@ -84,10 +84,8 @@ public enum LevelState
     public void CheckLevelEnd (PickUp item)
     {
         levelScore += item.value;
-
         Debug.Log ("Check if level is over" + levelScore);
-        ////change the total score display
-
+      
         if (levelScore > 10) { ///level has changed
             ///reset level value display
             levelScore = 0;   //reset level score
