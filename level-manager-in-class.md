@@ -33,7 +33,7 @@ public enum LevelState
 ### Declare Object References
 
 ```java
-LevelState curLevel;
+   LevelState curLevel;
     // FSM - 1 unit of memory
     int levelScore;
 
