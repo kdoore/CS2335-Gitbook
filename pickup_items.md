@@ -11,35 +11,33 @@ using System;
 
 public enum PickupType
 {
-	crystal,
-	animatedCrystal,
-	mushroom,
-	rock}
+    crystal,
+    animatedCrystal,
+    mushroom,
+    rock}
 ;
 
 public class PickUp : MonoBehaviour
 {
 
-	public PickupType type;
-	public int value;
-	public int damage;
+    public PickupType type;
+    public int value;
+    public int damage;
 
-	public void DestroyMe ()
-	{
-		Debug.Log ("Item Destroy Me");
-		Destroy (gameObject);
-	}
-		
+    public void DestroyMe ()
+    {
+        Debug.Log ("Item Destroy Me");
+        Destroy (gameObject);
+    }
+
 }
 //end class
-
 ```
 
 ### Custom Events - Version of PickUp Class
 
-In the example code below, we have introduced custom events: onDied, which uses the custom Delegate: OnDiedHandler\( \);
-
-
+In the example code below, we have introduced custom events: onDied, which uses the custom Delegate: OnDiedHandler\( \);  
+This custom delegate and event can be used to have the PickUp object broadcast notification when the OnDied event happens, if any other gameObject components have subscribed as listeners to the OnDied event.
 
 ```
 using UnityEngine;
