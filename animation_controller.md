@@ -2,7 +2,7 @@
 
 The Unity Animator controller provides a visual programming language implementation of a state machine to control coordination of animations which can be attached to gameObjects. [Unity Animation Beginner Tutorial](https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/animate-anything)
 
-Animation Tutorials:   
+Animation Tutorials:  
 [2D Animation in Unity - Raywenderlich](http://www.raywenderlich.com/66345/unity-2d-tutorial-animations)
 
 ### Create an Animation from a series of sprites
@@ -17,6 +17,7 @@ In addition, in order to integrate animations with our Unity program, we will pr
 
 * Animator parameters
 * Custom C\# controller script
+* GameObject with RigidBody2D - used for GameObjects that will be moved by the Physics System.
 
 ### Animation Clip
 
