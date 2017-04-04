@@ -14,14 +14,13 @@ In order to design the logic of the mini-game, it will be good to take a high-le
      * List&lt; T &gt;  
      * Dictionary &lt; TKey, TValue &gt; 
 
-2. LevelManager - this custom script component will manage organization of the MiniGame logic and behaviors.
+2. **LevelManager** - this custom script component will manage organization of the MiniGame logic and behaviors.
 
    * What game objects does it need to communicate with?
      * Player - score events
      * UI - Level Display
      * Spawner - when / what prefabs are spawned
      * BackgroundImage - modify sprite when level changes
-     * 
 
 ### MiniGame.cs
 
