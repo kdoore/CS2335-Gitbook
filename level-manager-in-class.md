@@ -110,16 +110,20 @@ public void nextLevel ()
 
         switch (curLevel) {
 
-        case LevelState.start:
+        case LevelState.start:  // called when StartPanel, StartGameButton is clicked
             curLevel = LevelState.level1;
             loadLevel1 ();
             break;
 
-        case LevelState.level1:
+        case LevelState.level1:  //called when in Level1 from checkLevelEnd( ) 
             curLevel = LevelState.level2;
             loadLevel2 ();
             break;
-        case LevelState.End:
+        case LevelState.level2: //called when in Level2 from checkLevelEnd( ) 
+            curLevel=LevelState.level3;
+            loadLevel3();
+            break;
+        case: LevelState.level3: //called when in Level3 from checkLevelEnd( ) 
             miniGameOver();
         default:
             Debug.Log ("No match on curLevel");
@@ -151,7 +155,7 @@ void loadLevel1 ()
     void miniGameOver( ){
     //make sure to include: Using UnityEngine.SceneManagement at top of script
     //this will change Scene/State
-               SceneManager.LoadScene ("EndScene");  //actual scene name
+        SceneManager.LoadScene ("EndScene");  //actual scene name
         StateManager.instanceRef.SwitchState (new EndState ());  //create new state, pass to StateManager     
     }
 ```
