@@ -1,5 +1,46 @@
 # PickUp Items
+
 Throughout our game we will want to have game items for the player to interact with.  Often these are considered Pick-up items.  So, we'll want to create a base-class that represents this Pick-up type and create child classes to extend for specialized pick-up items.  Some of our pick-up objects will need the ability to generate events that can notify other objects when the pick-up item has died.  Therefore, we'll create a Delegate: OnDiedHandler which specifies the signature of any eventHandler that wants to register for notification when the died event occurs and the OnDied notifications are invoked.
+
+### Simple PickUp Class
+
+```
+using UnityEngine;
+using System.Collections;
+using System;
+
+public enum PickupType
+{
+	crystal,
+	animatedCrystal,
+	mushroom,
+	rock}
+;
+
+public class PickUp : MonoBehaviour
+{
+
+	public PickupType type;
+	public int value;
+	public int damage;
+
+	public void DestroyMe ()
+	{
+		Debug.Log ("Item Destroy Me");
+		Destroy (gameObject);
+	}
+		
+}
+//end class
+
+```
+
+### Custom Events - Version of PickUp Class
+
+In the example code below, we have introduced custom events: onDied, which uses the custom Delegate: OnDiedHandler\( \);
+
+
+
 ```
 using UnityEngine;
 using System.Collections;
@@ -8,62 +49,66 @@ using System;
 public enum PickupType { crystal, star, animatedCrystal, purpleCrystal };
 
 public class PickUp : MonoBehaviour {
-	/// <summary>
-	/// On died handler. Declare in the base class 
-	/// and use in all child classes
-	/// </summary>
-	public delegate void onDiedHandler( PickUp thisPickup);
+    /// <summary>
+    /// On died handler. Declare in the base class 
+    /// and use in all child classes
+    /// </summary>
+    public delegate void onDiedHandler( PickUp thisPickup);
 
-	/// <summary>
-	/// Occurs when on died. Use in base class and child classes
-	/// </summary>
-	public event onDiedHandler onDied; 
+    /// <summary>
+    /// Occurs when on died. Use in base class and child classes
+    /// </summary>
+    public event onDiedHandler onDied; 
 
-	public PickupType type;
-	public int value;
+    public PickupType type;
+    public int value;
 
-	public void DestroyMe(){
-		Debug.Log ("Item Destroy Me");
-		Destroy(gameObject);
-	}
-    
-	////since we want to use within animation, Unity won't let it be 
-	/// declared as a virtual method, this is a Unity bug. 
-	/// <summary>
-	/// Died this instance.
-	/// And Invoke onDied event: execute each eventHandler 
-	/// </summary>
-	public void Died(){
-		if (onDied != null) {
-			onDied (this);  // invoke event, and execute each 
-							// referenced eventHandler
-		}
-		DestroyMe ();  // then destroy the gameObject
-	}
-}  //end class 
+    public void DestroyMe(){
+        Debug.Log ("Item Destroy Me");
+        Destroy(gameObject);
+    }
+
+    ////since we want to use within animation, Unity won't let it be 
+    /// declared as a virtual method, this is a Unity bug. 
+    /// <summary>
+    /// Died this instance.
+    /// And Invoke onDied event: execute each eventHandler 
+    /// </summary>
+    public void Died(){
+        if (onDied != null) {
+            onDied (this);  // invoke event, and execute each 
+                            // referenced eventHandler
+        }
+        DestroyMe ();  // then destroy the gameObject
+    }
+}  //end class
 ```
-###Crystal Controller: Child Class of PickUp
+
+### Crystal Controller: Child Class of PickUp
+
 ```
 using UnityEngine;
 using System.Collections;
 
 public class CrystalController : PickUp {
 
-	// Life variables
-	private float minLifeTime;
-	private float maxLifeTime;
+    // Life variables
+    private float minLifeTime;
+    private float maxLifeTime;
 
-	//new public delegate void onDiedHandler( PickUp thisPickup);
-	//new public event onDiedHandler onDied; 
+    //new public delegate void onDiedHandler( PickUp thisPickup);
+    //new public event onDiedHandler onDied; 
 
-	// Called automatically thanks to MonoBehaviour
-	void Start () {
-		// Automatic destroy after random time by calling base class died method
-		minLifeTime = 100.0f;
-		maxLifeTime = 400.0f;
-		type = PickupType.crystal;
- 		Invoke ("Died", Random.Range(minLifeTime, maxLifeTime));  //
-	}
+    // Called automatically thanks to MonoBehaviour
+    void Start () {
+        // Automatic destroy after random time by calling base class died method
+        minLifeTime = 100.0f;
+        maxLifeTime = 400.0f;
+        type = PickupType.crystal;
+         Invoke ("Died", Random.Range(minLifeTime, maxLifeTime));  //
+    }
 }
 ```
+
+
 
