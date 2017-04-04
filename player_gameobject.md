@@ -94,10 +94,11 @@ public class PlayerControllerSimple : MonoBehaviour {
             myTransform.localScale = theScale;
         }
 
+        ////This is the EVENT that DRIVES the MiniGame, Player colliding with Pickup Objects
         void OnTriggerEnter2D (Collider2D hitObject)
         {
             Debug.Log ("Entered Trigger");
-            if (hitObject.CompareTag ("Pick-up")) {
+            if (hitObject.CompareTag ("PickUp")) {
                 Debug.Log ("Hit Pickup");
                 PickUp item = hitObject.GetComponent<PickUp> ();
                 GameData.instanceRef.Add (item);
@@ -110,68 +111,11 @@ public class PlayerControllerSimple : MonoBehaviour {
     }  // end class
 ```
 
-### Constrain Player Movement using Box Collider
+### Constrain Player Movement using Box Collider to create a Floor
 
 If we want to constrain the player, to keep her on the screen, we can create an empty game object and attach a collider2D component to that gameObject.  We can use this to create a floor in our scene, this will allow us to have a non-zero value for gravity on our player's Rigidbody2D component.  We can also create a leftBorder as an empty gameObject, again, add a  BoxCollider2D component.  If we don't set this gameObject to be a trigger, then it will act as a physical barrier to our playerGame object so it can't leave the camera view area.
 
-### MiniGameState 
-
-```
-###MiniGameState.cs
-We need to have a C# State class associated with each scene in our adventure. For this scene, we'll dynamically 
-modify the StarText in the gameScene to show how many stars the player is carrying. 
-This state implements IStateBase, so it has to have definitions for StateUpdate() and ShowIt().  
-This is also where we'll create code to control levels for the game and to provide button logic to leave the scene.
-```
-
-
-
-```
-using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-using UnityEngine.SceneManagement;
-
-public class MiniGameState : IStateBase
-{
-
-	private GameScene scene;
-
-	//add commenets
-	public GameScene Scene {
-		get{ return scene; }
-	}
-		
-	//GameScene objectRefs
-	private Button startBtn;
-
-	//constructor  // add comments
-	public MiniGameState ()
-	{
-		scene = GameScene.MiniGame; ///common place for mistakes
-		Debug.Log ("In MiniGame Constructor");
-	}
-		
-	//add comments
-	public void InitializeObjectRefs ()
-	{
-		startBtn = GameObject.Find ("StartButton").GetComponent<Button> ();
-		startBtn.onClick.AddListener (LoadBeginScene);
-
-		Debug.Log ("In MiniGame and completed InitializeObjectRefs");
-	}
-
-	public void LoadBeginScene ()
-	{  
-		Debug.Log ("Leaving MiniGame going to BeginState");
-
-		SceneManager.LoadScene ("BeginScene"); //unity switch scene
-
-		StateManager.instanceRef.SwitchState (new BeginState ()); //switch state
-	}
-}
-
-```
+### 
 
 
 
