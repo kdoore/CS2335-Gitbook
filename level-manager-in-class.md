@@ -85,7 +85,7 @@ public enum LevelState
     {
         levelScore += item.value;
         Debug.Log ("Check if level is over" + levelScore);
-      
+
         if (levelScore > 10) { ///level has changed
             ///reset level value display
             levelScore = 0;   //reset level score
@@ -96,7 +96,7 @@ public enum LevelState
     }
 ```
 
-### NextLevel - FSM
+### NextLevel - Finite State Machine Logic
 
 ```java
 ///This method manages the FSM control logic using switch-case structure. 
