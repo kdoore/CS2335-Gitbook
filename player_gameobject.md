@@ -51,6 +51,8 @@ public class PlayerControllerSimple : MonoBehaviour {
         private Rigidbody2D myRBody2D;
         public float forceX;
         private bool facingRight; 
+        private LevelManager levelManager;
+	private PlayerStatsDisplay statsDisplay;
 
 
         void Awake ()
@@ -64,6 +66,8 @@ public class PlayerControllerSimple : MonoBehaviour {
         {
             facingRight = true;
             forceX = 50f;
+            levelManager = GameObject.Find ("LevelManager").GetComponent<LevelManager> ();
+	     statsDisplay = GameObject.Find ("UIScorePanel").GetComponent<PlayerStatsDisplay> ();
         }
 
         void FixedUpdate ()
@@ -102,7 +106,9 @@ public class PlayerControllerSimple : MonoBehaviour {
                 Debug.Log ("Hit Pickup");
                 PickUp item = hitObject.GetComponent<PickUp> ();
                 GameData.instanceRef.Add (item);
-
+  	        levelManager.checkLevelEnd (item); //event: send item and notification to levelManager
+		statsDisplay.NotifyScoreUpdate (); //notify of score event
+		
             Destroy (hitObject.gameObject);
             } else {
                 Debug.Log ("collided with some other object");
