@@ -50,7 +50,7 @@ public class PlayerControllerSimple : MonoBehaviour {
         private Transform myTransform;
         private Rigidbody2D myRBody2D;
         public float forceX;
-        private bool facingRight;
+        private bool facingRight; 
 
 
         void Awake ()
