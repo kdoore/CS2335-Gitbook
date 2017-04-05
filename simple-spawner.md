@@ -35,7 +35,7 @@ public class Spawner : MonoBehaviour
     {
         prefabsCount = 6;
         pauseTime = 5;
-        StartSpawning ();
+       // StartSpawning ();  no longer start spawning in Start, let LevelManager call StartSpawning()
     }
 
     public void StartSpawning ()
@@ -57,7 +57,91 @@ public class Spawner : MonoBehaviour
 }
 ```
 
+### Called from LevelManager
+
+The 
+
 ### Spawn From a List of Prefabs
+
+The code below introduces a version of the Spawner that can spawn from a list of prefabs.  
+
+```
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class Spawner : MonoBehaviour
+{
+
+	// The prefab we will spawn
+	public List<GameObject> prefabs = new List<GameObject> ();
+
+	// Use this for initialization
+	private int prefabsCount;
+	private int pauseTime;
+	private int currentIndex;
+
+	void Start ()
+	{
+		prefabsCount = 6;
+		pauseTime = 5;
+		//prefabs = ; ///calling the list constructor
+		//StartSpawning ();
+	}
+
+	public void StartSpawning ()
+	{ 
+
+		if (prefabs.Count > 0) {  //make sure there are some gameObjects to spawn
+			for (int i = 0; i < prefabsCount; i++) {
+				Invoke ("SpawnRandomPrefab", Random.Range (pauseTime, pauseTime * prefabsCount)); 
+			}
+		}
+	}
+
+	/// <summary>
+	///  Called from Level Manager // pass in index of what we want spawned
+	/// </summary>
+	/// <param name="prefabIndex">Prefab index.</param>
+	/// if Level is 1, spawn prefab 0
+	public void StartSpawning (int levelIndex)
+	{ 
+		currentIndex = levelIndex - 1;
+		if (prefabs.Count > 0) {  //make sure there are some gameObjects to spawn
+			for (int i = 0; i < prefabsCount; i++) {
+
+				Invoke ("SpawnSpecificPrefab", Random.Range (pauseTime, pauseTime * prefabsCount)); 
+			}
+		}
+	}
+
+	public void SpawnRandomPrefab ()
+	{
+		currentIndex = Random.Range (0, prefabs.Count);//values, 0, 1,...upto prefabs.Count-1
+		Vector3 position = transform.localPosition;
+		position.x = Random.Range (-7.6f, 7.6f);
+		position.y = Random.Range (-2.4f, -3.7f);
+		Instantiate (prefabs [currentIndex], position, transform.rotation);
+		Debug.Log ("Something is spawned index: " + currentIndex);
+	}
+
+	/// <summary>
+	/// Spawns the specific prefab. - Specific prefab corresponds to a 
+	/// specific level number.
+	/// </summary>
+	public void SpawnSpecificPrefab ()
+	{
+		
+		Vector3 position = transform.localPosition;
+		position.x = Random.Range (-7.6f, 7.6f);
+		position.y = Random.Range (-2.4f, -3.7f);
+		Instantiate (prefabs [currentIndex], position, transform.rotation);
+		Debug.Log ("Something is spawned index: " + currentIndex);
+	}
+
+}
+
+```
 
 
 
