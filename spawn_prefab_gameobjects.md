@@ -34,8 +34,8 @@ public class CrystalController : PickUp {
 
 ### CrystalSpawner - Manage the Spawning
 
-We need to create a custom scritp that can spawn our game objects:   
-This script needs to be attached to an empty gameObject in our scene.   
+We need to create a custom scritp that can spawn our game objects:  
+This script needs to be attached to an empty gameObject in our scene.  
 In addition, the CrystalSpawn class has also defined an EventHandler: OnSpawn\(\) and an associated Event for notification: OnSpawn  
 This will allow any gameObject in the scene to register for, and receive notifications every time that we spawn a new prefab.
 
@@ -51,9 +51,7 @@ public class CrystalSpawner : MonoBehaviour {
     private int prefabsCount;
     private int pauseTime;
 
-    // Delegates to notify the UI
-    public delegate void OnSpawn();
-    public event OnSpawn onSpawn;
+  
 
     // Explicitly Create the first crystals in unity start
     void Start () {
@@ -81,9 +79,6 @@ public class CrystalSpawner : MonoBehaviour {
 
         newPickup.onDied += OnPickUpDied; //when this crystal dies, please notify this spawn class
 
-        // Notify if any UI is listening that we just had a spawn event
-        if (onSpawn != null)    //spawn event notification
-            onSpawn();
     }
 
 
