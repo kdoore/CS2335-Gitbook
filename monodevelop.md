@@ -1,8 +1,12 @@
-#MonoDevelop
+#MonoDevelop or Visual Studio Community Edition
 
-MonoDevelop is an Integrated Development Environment (IDE) that is installed as part of the Unity 5 installation.  It is an open-source IDE that is integrated to work with the Unity Editor.  For Windows OS, As of Unity 5.2.X, Visual Studio is configured to be installed as the default IDE when installing Unity 5.  For help with VS installation errors see [Unity forums](http://answers.unity3d.com/questions/1075675/-error-while-installing-visual-studio-error-code16.html) 
+MonoDevelop is an Integrated Development Environment (IDE) that is installed as part of the Unity installation.  It is an open-source IDE that is integrated to work with the Unity Editor.  
 
-To edit a script in MonoDevelop, first create a script component object inside Unity.  Make sure to name the file correctly when creating it in Unity because the script name is used to create the class name of the C# class that is created for each Unity script component.  
+For Windows OS, As of Unity 5.2.X, Visual Studio is configured to be installed as the default IDE when installing Unity 5.  For help with VS installation errors see [Unity forums](http://answers.unity3d.com/questions/1075675/-error-while-installing-visual-studio-error-code16.html) 
+
+Visual Stuio Community Edition ( for Windows or Mac ) https://www.visualstudio.com/vs/community/
+
+To edit a script in Unity, first create a script component object inside Unity.  Make sure to name the file correctly when creating it in Unity because the script name is used to create the class name of the C# class that is created for each Unity script component.  
 
 Most of the code that we write for this course will end up being attached to gameObjects within the Unity Editor.  
 
@@ -26,7 +30,7 @@ public class Example: MonoBehaviour {
 
 
 ##Create Script in Unity
-In the animation below, we create a C# script, name it "Controller", and then we double-click the script. This opens the script in MonoDevelop, where we can see that code for the Start() and Update() functions is already included in the file.  We see that we've created a ``class Controller`` that inherits from the ``MonoBehavior`` class.  When we create a public variable, then that variable shows up in the inspector panel in the Unity Editor, so we can easily modify that value.
+In the animation below, we create a C# script, name it "Controller", and then we double-click the script. This opens the script in either MonoDevelop or Visual Studio, where we can see that code for the Start() and Update() functions is already included in the file.  We see that we've created a ``class Controller`` that inherits from the ``MonoBehavior`` class.  When we create a public variable, then that variable shows up in the inspector panel in the Unity Editor, so we can easily modify that value.
     
 ![](createScript.gif)
     
