@@ -2,9 +2,9 @@
 
 * [Introduction](README.md)
 * [Unity Game Engine](chapter1.md)
-* [MonoDevelop](monodevelop.md)
+* [IDE - Coding Software](monodevelop.md)
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
-* [MonoBehaviour](monobehaviour.md)
+* [MonoBehavior - Base-Class](monobehaviour.md)
 * [Number Game](number_game.md)
 * [Number Game: State-Controlled](state_controlled_number_game.md)
 * [Screen-Space Canvas](screen-space_canvas.md)

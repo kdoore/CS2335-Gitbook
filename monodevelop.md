@@ -1,11 +1,12 @@
-#MonoDevelop or Visual Studio Community Edition
+#IDE MonoDevelop or Visual Studio Community Edition
 
-MonoDevelop is an Integrated Development Environment (IDE) that is installed as part of the Unity installation.  It is an open-source IDE that is integrated to work with the Unity Editor.  
+MonoDevelop is an Integrated Development Environment (IDE) that is installed as part of the Unity installation for Mac OS X.  It is an open-source IDE that is integrated to work with the Unity Editor.  
 
-For Windows OS, As of Unity 5.2.X, Visual Studio is configured to be installed as the default IDE when installing Unity 5.  For help with VS installation errors see [Unity forums](http://answers.unity3d.com/questions/1075675/-error-while-installing-visual-studio-error-code16.html) 
+For Windows OS, as of Unity 5.2.X, Visual Studio CE is configured to be installed as the default IDE when installing Unity 5.  For help with VS installation errors see [Unity forums](http://answers.unity3d.com/questions/1075675/-error-while-installing-visual-studio-error-code16.html) 
 
 Visual Stuio Community Edition ( for Windows or Mac ) https://www.visualstudio.com/vs/community/
 
+#Code Scripts
 To edit a script in Unity, first create a script component object inside Unity.  Make sure to name the file correctly when creating it in Unity because the script name is used to create the class name of the C# class that is created for each Unity script component.  
 
 Most of the code that we write for this course will end up being attached to gameObjects within the Unity Editor.  
