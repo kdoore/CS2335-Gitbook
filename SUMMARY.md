@@ -5,7 +5,7 @@
 * [IDE - Coding Software](monodevelop.md)
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
 * [MonoBehavior - Base-Class](monobehaviour.md)
-* [Project1](project1.md)
+* [NumberGame](project1.md)
   * [Number Game: State-Controlled](state_controlled_number_game.md)
   * [Number Game](number_game.md)
   * [Number Game: UI-Text](state_controlled_ui-text.md)
