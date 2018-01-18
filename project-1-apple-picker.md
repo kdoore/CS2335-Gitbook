@@ -16,7 +16,7 @@ There are a few notable differences between our game and the author's game, the 
  ###Create a New 2D Project
 Start by creating a new Unity project - select 2D as the project-type, and save the default scene as Scene0.  Menu: File>Save Project.    
 
-###Camera GameObject - Component Configuration
+###Camera Component Configuration
  Camera Configuration - Select the Main Camera GameObject, then in the inspector, change the size value from 5 to 10.  Make sure the camera is set to orthographic instead of perspective.
  
  
