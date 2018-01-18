@@ -6,7 +6,7 @@
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
 * [MonoBehavior - Base-Class](monobehaviour.md)
 * [Project1](project1.md)
-* [Project 1 - Apple Picker](project-1-apple-picker.md)
+  * [Project 1 - Apple Picker](project-1-apple-picker.md)
 * [Branching Narrative - Structure](branching_narrative_-_structure.md)
 * [Screen-Space Canvas](screen-space_canvas.md)
 * [StateManager - Singleton Design Pattern](statemanager.md)
