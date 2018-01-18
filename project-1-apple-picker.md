@@ -19,6 +19,9 @@ Start by creating a new Unity project - select 2D as the project-type, and save 
 ###Camera Component Configuration
  Camera Configuration - Select the Main Camera GameObject, then in the inspector, change the size value from 5 to 10.  Make sure the camera is set to orthographic instead of perspective.
  
-###Create GameObjects:
-We can use sprite primitives as placeholders for sprites, to do that, in the Project panel, right click and select: Create> Sprite>Circle.  This creates a white circle icon in the asset panel.  Create a folder named Sprites, and keep all of your sprites inside this folder. Also create a Square sprite.  
+###Create PlaceHolder Sprite Assets:
+We can use sprite primitives as placeholders for sprites, to do that, in the Project panel, right click and select: Create> Sprite>Circle.  This creates a white circle icon in the asset panel.  Create a folder named Sprites, and keep all of your sprites inside this folder. Also create a Square sprite. 
+
+ ###Create GameObjects
+ From the top menu, select GameObject > 2D > Sprite.  This puts a gameObject in the Hierarchy panel, rename this to Apple, and set the Sprite attribute in the Sprite Component to be the Circle sprite, do this by selecting the small circle to the right of the Sprite field in the Sprite component, it provides a way to select items from your Asset folder. 
 
