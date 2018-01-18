@@ -5,7 +5,7 @@
 * [IDE - Coding Software](monodevelop.md)
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
 * [MonoBehavior - Base-Class](monobehaviour.md)
-* [-UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
+* [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
 * [Branching Narrative - Structure](branching_narrative_-_structure.md)
 * [Screen-Space Canvas](screen-space_canvas.md)
 * [StateManager - Singleton Design Pattern](statemanager.md)
