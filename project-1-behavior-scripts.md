@@ -39,10 +39,30 @@ public class Apple : MonoBehaviour {
 ```
 
 ###Basket Class
-For the Basket, which catches falling objects, we'll make some simplifications compared to the textbook.  First, there's no need to create 3 instances of this object since the mouse is used to control the movement, 3 objects would all simply behave as a single object.  Second, there's no need to dynamically create the object, we can just place it directly in the scene from the beginning.  The Basket class code allows the mouse to move the basket, and checks for collisions with the falling Apple objects.  The code to do this is somewhat cryptic, as it requires the mouse's screen positioning to be translated into world coordinates.  After we determine the mouse's position in the world, we simply set the basket's transform.position using this calculated mouse position.  
+For the Basket, which catches falling objects, we'll make some simplifications compared to the textbook.  First, there's no need to create 3 instances of this object since the mouse is used to control the movement, 3 objects would all simply behave as a single object.  Second, there's no need to dynamically create the object, we can just place it directly in the scene from the beginning.  The Basket class code allows the mouse to move the basket, and checks for collisions with the falling Apple objects.  The code to do this is somewhat cryptic, as it requires the mouse's screen positioning to be translated into world coordinates.  After we determine the mouse's position in the world, we simply set the basket's transform.position using this calculated mouse position. 
+
+The following code is in the Basket Class, it causes the Basket's X position to be recalculated so matches the mouses X position.   
+
+	
+
+```java
+// Update in the Basket Class
+	void Update () {
+	//
+        Vector3 mousePos2D = Input.mousePosition; //temp variable to store the mousePosition on the screen
+        mousePos2D.z = -Camera.main.transform.position.z; //z position caclulation based on camera z position
+        Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D); //calculate the mouse position inside the world space coordinate system
+
+        Vector3 pos = this.transform.position; //temp variable that is the Basket's current position
+        pos.x = mousePos3D.x; //update Basket's X position so it's equal to mouseX
+        this.transform.position = pos; //update basket's position
+
+	}
+```
+
 
 ###Collision And Custom Tags
-To test for collision with falling Apples, we'll use the OnCollisionEnter2D( ) Unity event function.  Once a collision event has occurred, the code we write in this eventHandler function is executed, but we need to make sure that the object that we've collided with is actually an apple. So, follow the Unity Manual to create a new Tag: Apple, and then add that tag to the Apple prefab, so that all 
+To test for collision with falling Apples, we'll use the OnCollisionEnter2D( ) Unity event function.  Once a collision event has occurred, the code we write in this eventHandler function is executed, but we need to make sure that the object that we've collided with is actually an apple. So, follow the [Unity Manual to create a new Tag:](https://docs.unity3d.com/Manual/Tags.html) Apple, and then add that tag to the Apple prefab, and hit Apply to make the Tag 
 
 
 
