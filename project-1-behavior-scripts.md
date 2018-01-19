@@ -46,7 +46,7 @@ Attach the full Basket class script to the Basket GameObject to create a script 
 	
 
 ```java
-// Update in the Basket Class
+// In the Basket Class
 	void Update () {
 	//
         Vector3 mousePos2D = Input.mousePosition; //temp variable to store the mousePosition on the screen
@@ -58,7 +58,6 @@ Attach the full Basket class script to the Basket GameObject to create a script 
         this.transform.position = pos; //update basket's position
 	}
 ```
-
 
 ###Basket-Apple Collisions and Apple Custom Tags
 To test for collision with falling Apples, we'll use the OnCollisionEnter2D( ) Unity event function.  Once a collision event has occurred, the code we write in this eventHandler function is executed, but we need to make sure that the object that we've collided with is actually an apple. So, follow the [Unity Manual to create a new Tag:](https://docs.unity3d.com/Manual/Tags.html) Apple, and then add that tag to the Apple prefab, and hit Apply to make the Tag 
