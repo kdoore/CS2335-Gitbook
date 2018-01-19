@@ -61,19 +61,20 @@ The following code is in the Basket Class, it causes the Basket's X position to 
 ```
 
 
-###Collision And Custom Tags
+###Basket-Apple Collisions and Apple Custom Tags
 To test for collision with falling Apples, we'll use the OnCollisionEnter2D( ) Unity event function.  Once a collision event has occurred, the code we write in this eventHandler function is executed, but we need to make sure that the object that we've collided with is actually an apple. So, follow the [Unity Manual to create a new Tag:](https://docs.unity3d.com/Manual/Tags.html) Apple, and then add that tag to the Apple prefab, and hit Apply to make the Tag 
 
 The code below is in the Basket Class, it determines when the basket collides with an apple, then destroys the Apple GameObject.
 
 ```java
 
+//In the Basket Class
     void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject collidedWith = collision.gameObject;
         if(collidedWith.tag == "Apple"){
             Debug.Log("Collision");
-            Destroy(collidedWith);
+            Destroy(collidedWith); //destroy Apple GameObject
         }
     }
 
