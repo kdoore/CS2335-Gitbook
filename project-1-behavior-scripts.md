@@ -41,6 +41,8 @@ public class Apple : MonoBehaviour {
 For the Basket, which catches falling objects, we'll make some simplifications compared to the textbook.  First, there's no need to create 3 instances of this object since the mouse is used to control the movement, 3 objects would all simply behave as a single object.  Second, there's no need to dynamically create the object, we can just place it directly in the scene from the beginning.  The Basket class code allows the mouse to move the basket, and checks for collisions with the falling Apple objects.  The code to do this is somewhat cryptic, as it requires the mouse's screen positioning to be translated into world coordinates.  After we determine the mouse's position in the world, we simply set the basket's transform.position using this calculated mouse position. 
 
 The following code is in the Basket Class, it causes the Basket's X position to be recalculated so matches the mouses X position.   
+
+Attach this script to the Basket GameObject to create a script component
 	
 
 ```java
