@@ -7,7 +7,7 @@ In the Asset pane of the Project panel, right click and Create > C# Script.  Nam
 
 ###Apple Class - Apple Script Component
 The following class code determines when the apple's have fallen below the bottom of the screen, then they are destroyed.
-Attach this script to the Apple prefab to create a script component.  
+Attach this script to the Apple Prefab-GameObject to create a script component.  
 
 
 ```java
@@ -42,7 +42,7 @@ For the Basket, which catches falling objects, we'll make some simplifications c
 
 The following code is in the Basket Class, it causes the Basket's X position to be recalculated so matches the mouses X position.   
 
-Attach the full Basket class script to the Basket GameObject to create a script component
+Attach the full Basket class script to the Basket GameObject-Prefab to create a script component
 	
 
 ```java
@@ -79,4 +79,62 @@ The code below is in the Basket Class, it determines when the basket collides wi
 ```
 
  ###Apple Tree Class 
+The code below is for the AppleTree class.  This code must be attached to the AppleTree GameObject-Prefab.
+
+```java
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AppleTree : MonoBehaviour {
+
+    [Header("Set in Inspector")]
+    //prefab for apples that will be spawned
+    public GameObject applePrefab;
+
+    //speed the tree moves horizonatlly
+    public float speed = 1f;
+
+    //left right edges of the canvas
+    public float leftRightEdge = 10f;
+
+    public float chanceToChangeDirections = 0.01f;  //set to small probability
+
+    public float secondsBetweenAppleDrops = 1f;
+
+	// Use this for initialization
+	void Start () {
+        Invoke("DropApple", 2f);
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        Vector3 pos = transform.position;
+        pos.x += speed * Time.deltaTime;
+        transform.position = pos;
+
+        if( pos.x < -leftRightEdge){
+            speed = Mathf.Abs(speed); //make sure speed is positive
+        }else if( pos.x > leftRightEdge){
+            speed = -Mathf.Abs(speed); //make sure speed is negative
+        }
+	}
+
+    void FixedUpdate()
+    {
+        if(Random.value < chanceToChangeDirections){
+            speed *= -1;
+        }
+    }
+
+    void DropApple(){
+        GameObject apple = Instantiate<GameObject>(applePrefab);
+        apple.transform.position = this.transform.position;
+        Invoke("DropApple", secondsBetweenAppleDrops);
+    }
+}
+
  
+```
+
+
