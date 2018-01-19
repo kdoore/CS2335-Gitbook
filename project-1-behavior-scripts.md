@@ -42,7 +42,7 @@ For the Basket, which catches falling objects, we'll make some simplifications c
 
 The following code is in the Basket Class, it causes the Basket's X position to be recalculated so matches the mouses X position.   
 
-Attach this script to the Basket GameObject to create a script component
+Attach the full Basket class script to the Basket GameObject to create a script component
 	
 
 ```java
@@ -56,7 +56,6 @@ Attach this script to the Basket GameObject to create a script component
         Vector3 pos = this.transform.position; //temp variable that is the Basket's current position
         pos.x = mousePos3D.x; //update Basket's X position so it's equal to mouseX
         this.transform.position = pos; //update basket's position
-
 	}
 ```
 
