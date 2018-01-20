@@ -25,22 +25,7 @@ When we create object references, we're creating a variable that stores a memory
     endBtn.onClick.AddListener (LoadEndScene);
     
    ```
-###StateManager ObjectReferences
-The SwitchState process is quite interesting because the `SwitchState()` method belongs to the StateManager object, but the code is executed from within the current state, but the function requires the current state to call the function by calling the constructor method for the next state.  This code really illustrates the fact that methods are used by objects to communicate, they act to allow messages to be sent between objects. 
-The UnityEngine provides methods that allow easy message communication between objects, some of these methods are FindGameObject(), AttachListener(), OnTriggerEnter2D(), etc. [Unity GameObject.Find Documentation](http://docs.unity3d.com/ScriptReference/GameObject.Find.html)
 
-Code in BeginState to switch state and scene to correspond to the EndState, EndScene.  To do that, first we are assuming that the LoadEndScene( ) method will be activated when the endButton is clicked.  Once that happens, we use the Unity SceneManagement's SceneManager static method: LoadScene( "EndScene" ) , here we pass in the name of the Unity Scene that we want to go to.  Next, we use the singleton instance for the StateManager so we can call StateManager method: SwitchState().  When calling SwitchState, we first call the constructor for the new state: new EndState( ), and this object is passed as an input parameter for SwitchState( ), this is how StateManager is able to update the value of activeState, so it will now point to the newly created state.
-These 2 actions must be performed each time we want to leave 1 scene and go to another scene.
-
-```java
-
-public void LoadEndScene ()
-	{  
-		Debug.Log ("Add Debug Info");
-		SceneManager.LoadScene ("EndScene");  //actual scene name
-		StateManager.instanceRef.SwitchState (new EndState ());  //create new state, pass to StateManager
-	}
-```
 ###Errors - Reference not found
 Since we are creating references ( connections ) to GameObjects in our scenes from within our *State* classes, it seems that there can be some problems if the scene initialization does not occur before the new state object is initialized and begins executing methods that are called from the StateManager. 
 
