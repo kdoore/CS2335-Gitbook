@@ -64,6 +64,9 @@ Also: Search the Unity Asset Store for: Unity 2D-Platformer Tutorial Assets
 
 In Class -Zombie Game Items:
 
+[Tutorial - Dialog System:](http://www.indiana.edu/~gamedev/2015/09/27/creating-a-visual-novel-in-unity/)
+
+
 From: [http://opengameart.org/users/osmic](http://opengameart.org/users/osmic)
 
 [http://www.villeseppanen.com](http://www.villeseppanen.com)
