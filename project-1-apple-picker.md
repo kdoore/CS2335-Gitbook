@@ -11,7 +11,7 @@ Required Customizations:
     6. Restart Game Button
 
 ###Physics2D 
-There are a few notable differences between our game and the author's game, the main one is that we're creating a 2D game using 2D sprites, whereas he used 3D shape primitives with a 2D orthographic camera.  The difference requires that we always use the Physics2D components for our gameObjects, and that we write our code to reflect that we're using the Physics2D components.  In addition, the author seems to skip adding colliders to his gameObjects, so we'll need to make sure to add colliders to the apples and the baskets, so the Physics2D engine can determine when the objects overlap.
+There are a few notable differences between our game and the author's game, the main one is that we're creating a 2D game using 2D sprites, whereas he used 3D shape primitives with a 2D orthographic camera.  The difference requires that we always use the Physics2D components for our gameObjects, and that we write our code to reflect that we're using the Physics2D components.  In addition, the author seems to skip adding colliders to his gameObjects, so we'll need to make sure to add colliders to the apples and the baskets, so the Physics2D engine can determine when the objects overlap or collide.
  
  ###Create a New 2D Project
 Start by creating a new Unity project - select 2D as the project-type, and save the default scene as Scene0.  Menu: File>Save Project.    
