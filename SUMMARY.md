@@ -10,6 +10,7 @@
   * [Project 1 - Custom Scripts](project-1-behavior-scripts.md)
   * [Project 1 - Score and UI Elements](project-1-score-and-ui-elements.md)
   * [Project 1 - Game Controller](project-1-game-controller.md)
+  * Project 1 - Updates to Custom Scripts
 * [Game Objects](game_objects.md)
 * [Finding Game Objects](finding_game_objects.md)
 * [Canvas: Screen-Space Overlay](screen-space_canvas.md)
