@@ -1,6 +1,6 @@
 #Project 1 - Custom Scripts for Script Components
 
-To give our gameObjects the desired behavior, we'll write several custom C# scripts, one for each type of GameObject, and one to control the overall game.  
+To give our gameObjects the desired behavior, we'll write several custom C# scripts, one for each type of GameObject, and one to control the overall game. We'll make further changes to some of these scripts, but the scripts below are the starting script versions for the game. 
 
 ###Create Script Assets
 In the Asset pane of the Project panel, right click and Create > C# Script.  Name the script: Apple.  Repeat to create the following scripts:  AppleTree, Basket, GameController.  All scripts must be capitalized to meet Visual Studio's requirement that all class names must be capitalized.   Double-click on one of the scripts to open Visual Studio.  I recommend making sure that you open Visual Studio by clicking on a script-file in your open project to insure that the script files you modify are actually associated with the project you are working on.  
