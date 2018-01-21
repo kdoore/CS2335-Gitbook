@@ -113,6 +113,19 @@ The UpdateScore method is called from the Basket class whenever an object that's
     }
 ```
 
+###StopGame Method
+If the game is over, the StopGame method is called from UpdateScore, it activates the StartButton and the GameOverPanel.  Setting gameActive to false will allow the AppleTree to stop dropping apples, it'll stop moving, and the Basket will also stop moving.
 
 
+```java
+
+//Show gameOverPanel, startButton
+//set appleTree.gameActive to false to stop apples from dropping
+    private void StopGame(){
+        gameActive = false;
+        gameOverPanel.SetActive(true);
+        startButton.SetActive(true);
+    }
 	
+```
+
