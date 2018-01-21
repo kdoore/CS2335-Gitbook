@@ -82,6 +82,10 @@ The StartGame function will be executed when the StartButton is clicked.  This f
 
     }
 ```
+The image below shows that the StartButton's Button script has been configured to show both a Normal and Highlighted color, this is important for debugging, it will allow us to verify that the button is responding to mouse-over events.
 
+The OnClick section of the Button script shows that the GameController object has been selected, this allows us to select from the public methods of this gameObject's script components.  We have selected the GameController script component's StartGame( ) method.  This method will be executed when the StartButton is clicked. 
+
+![](/assets/Screen Shot 2018-01-20 at 7.23.59 PM.png)
 
 	
