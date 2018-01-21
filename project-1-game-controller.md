@@ -34,7 +34,8 @@ public class GameController : MonoBehaviour {
     private AppleTree appleTree;
 ```
 
-###Initialize variables, find gameObjects and components to interact with during the game:
+###Start Event Function
+The Unity Start event function is used to initialize variables, find gameObjects and components to interact with during the game:
 
 ```java
 // Use this for initialization
@@ -56,4 +57,31 @@ public class GameController : MonoBehaviour {
 	}
 ```
 
-###
+###StartGame and StartButton
+The StartGame function will be executed when the StartButton is clicked.  This function must be public so it can be execute.
+
+```java
+
+    /// <summary>
+    /// Starts the game.
+    /// this function Must be public 
+    /// function to be called by StartButton, 
+    /// This will be added to the OnClick event in the inspector for the StartButton
+    /// </summary>
+    public void StartGame()
+    {
+        score = 0;  //reset score to 0
+        scoreText.text = "Score: " + score;
+
+        gameActive = true; //this is used in other classes to control gameObjects
+
+        appleTree.DropApple(); //start apples dropping
+
+        startButton.SetActive(false); //hide StartButton
+        gameOverPanel.SetActive(false); //hide gameOver panel
+
+    }
+```
+
+
+	
