@@ -4,8 +4,8 @@ For project 1, we will make a modified version of the first digital game prototy
 
 Required Customizations:
     1. Customize the theme. Use sprites to show theme.
-    2. Have 3 types of falling objects - 2 good, 1 bad
-    3. Have a start-button / splash-screen
+    2. Have 3 types of falling objects - 1 or 2 good, 1 bad
+    3. Have a start-button 
     4. Have win / lose states 
     5. Show win / lose UI panel
     6. Restart Game Button
