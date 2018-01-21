@@ -13,3 +13,7 @@ When the Canvas is added to a scene, by default, it's layout is offset from the 
 ![](Screenshot 2016-02-15 20.14.52.png)
 
 ###UI-Button:
+Add a UI Button to the game scene.  Name the button 'StartButton'.  Set the text of the button to 'Start Game'.  Move the button to the center of the scene.
+
+###UI-Panel and Text for Score
+
