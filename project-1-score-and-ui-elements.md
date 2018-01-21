@@ -16,4 +16,5 @@ When the Canvas is added to a scene, by default, it's layout is offset from the 
 Add a UI Button to the game scene.  Name the button 'StartButton'.  Set the text of the button to 'Start Game'.  Move the button to the center of the scene.
 
 ###UI-Panel and Text for Score
+Add a UI-Panel to the scene, name it: 'ScorePanel'.  Add a Text gameObject as a child of the 'ScorePanel', name this 'ScoreText'.  For the 'ScorePanel', set the anchors to that it's anchored to the upper right corner of the scene.  Configure the text element so it is stretched to fit the 'ScorePanel'.
 
