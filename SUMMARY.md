@@ -6,7 +6,7 @@
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
 * [MonoBehavior - Base-Class](monobehaviour.md)
 * [Project1](project1.md)
-  * [Project 1 - Apple Picker](project-1-apple-picker.md)
+  * [Project 1 - Apple Picker - Game Overview](project-1-apple-picker.md)
   * [Project 1 - Custom Scripts](project-1-behavior-scripts.md)
   * [Project 1 - Score and UI Elements](project-1-score-and-ui-elements.md)
   * [Project 1 - Game Controller](project-1-game-controller.md)
