@@ -7,7 +7,7 @@ Now that we are starting to work with GameObjects that aren't UI elements, we ne
 [2D Sprites Editing Tutorial](https://www.youtube.com/watch?v=tp9PRN2TMy0)
 
 ###Layers:
-
+Layers provide a means to control physics interactions between objects.  
 
 ###Sorting Layers:
 Sorting layers provide a method to control the layer order of sprite rendering.  Sorting Layer are is attribute of the Sprite Renderer component for 2D sprite gameObjects.  Sorting Layers are created using the Layer inspector panel, at the upper left of the editor window, see image below.  Select the bottom choice 'Edit Layers' to add new Sorting Layers to your game.
