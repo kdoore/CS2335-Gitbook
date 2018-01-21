@@ -88,4 +88,31 @@ The OnClick section of the Button script shows that the GameController object ha
 
 ![](/assets/Screen Shot 2018-01-20 at 7.23.59 PM.png)
 
+###UpdateScore Method
+The UpdateScore method is called from the Basket class whenever an object that's either an Apple or a Rock collides with the Basket.  
+
+
+```java
+
+    //Update gamescore by points passed into function, called from Basket class
+    public void UpdateScore(int points)
+    {
+        score += points; //update score
+        scoreText.text = "Score: " + score; //update displayed score
+      //determine if the game is over and set the text to be displayed 
+     if (score >= winScore) 
+        {
+            gameOverText.text = "You are a Winner!";
+            StopGame();
+        }
+        else if (score <= 0)
+        {
+            gameOverText.text = "Sorry, you lost this time.";
+            StopGame();
+        }
+    }
+```
+
+
+
 	
