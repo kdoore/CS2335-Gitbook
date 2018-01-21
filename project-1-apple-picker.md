@@ -1,4 +1,4 @@
-Project 1 - Apple Picker Game Variation
+Project 1 - Apple Picker Game Overview
 
 For project 1, we will make a modified version of the first digital game prototype from the course textbook.  The Apple Picker Game is introduced in Chapter 16, where flow charts show the game logic for each object in the game. You will be required to use sprites in your projects, and the theme of your game must be different than the apple-tree theme the author uses.  In addition, instead of dropping just 1 type of object, your game must drop 3 types of objects, 2 objects that generate points, and 1 type of object that subtracts points from the user's score.  In addition, we'll need to have a splash-screen that will allow starting of the game, and a way to win and lose the game, with popups showing that the user has won or lost the game.
 
