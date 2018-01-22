@@ -9,6 +9,8 @@ It's critical that we add a directive to the top of our script to include the Un
 ```
 using UnityEngine.UI;
 ```
+
+###Object Reference Variables to GameObjects and GameObject Components
 In the code below, we'll create object reference variables to allow us to interact with the Text Component of these Text GameObjects.  We'll be modifying the text variable's value, which must be formatted as a String.  We need to first initialize the object reference variables, we do that in the Start() function, then we can actually disable the GameOver GameObject so it's hidden until the game is over.  
 
 
