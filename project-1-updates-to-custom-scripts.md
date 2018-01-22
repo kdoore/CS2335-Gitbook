@@ -27,16 +27,15 @@ In Update, we test the value of the: gameContoller.gameActive variable, if gameA
 ```java
 //To access inside AppleTree.cs
 //declare an Object Reference - the dataType is the GameController Class Name
- private GameController gameController;  
+private GameController gameController;  
  
-
-	void Start () {  
+void Start () {  
         //find the GameController GameObject by name
         // then find the ScriptComponent using GetComponent<T>( ); function
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
 
 // Update is called once per frame
-	void Update () {
+void Update () {
         if (gameController.gameActive)  //add this code
         {
             Vector3 pos = transform.position;
@@ -53,7 +52,7 @@ In Update, we test the value of the: gameContoller.gameActive variable, if gameA
             }
         }
 	}
-
+////OTHER CLASS CODE NOT SHOWN HERE
 ```
 
  ###Control Dropping Objects in AppleTree.cs 
@@ -70,6 +69,7 @@ public void DropObjects()
             GameObject apple = Instantiate<GameObject>(applePrefab);
             apple.transform.position = this.transform.position;
         }
+        //Add this code so we only call Invoke if  gameController.gameActive is true.
         if (gameController.gameActive) { 
         Invoke("DropObjects", secondsBetweenAppleDrops);
         }
