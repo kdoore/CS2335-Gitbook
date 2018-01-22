@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour {
     private int score=0;  
     private int winScore = 20;  
     
-    public bool gameActive = true; 
+    public bool gameActive = true; //control activation of gameObjects, like dropping apples
 
     //text elements that will be modified during game
     private Text scoreText, gameOverText;
