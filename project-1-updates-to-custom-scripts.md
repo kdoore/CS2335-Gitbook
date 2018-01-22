@@ -81,6 +81,20 @@ public void DropObjects()
 
 Just as we did in the AppleTree.cs class, we need to create an object-reference variable to allow us to interact with the GameController script component.  Here is the partial code from the Basket.cs class, showing the changed code:
 
+In the Basket class, we have modified the code in the OnCollisionEnter2D( ) function.  We want to update the score in the GameController each time we collide with an object, in order to do that, we need to find out how many points each object is worth.  
+
+Below we create an object reference variable to access the Apple script component, if we know we collided with an apple.
+
+
+```java
+Apple apple = collidedWith.GetComponent<Apple>(); 
+```
+
+Then we call the UpdateScore function of the gameController script component and pass along the points associated with the apple object.
+
+gameController.UpdateScore(apple.pointValue);
+
+
 Code in Basket.cs 
 
     
@@ -106,6 +120,19 @@ void Update () {
 	}
 
 
-	 
+void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameObject collidedWith = collision.gameObject;
+        if(collidedWith.tag == "Apple"){
+            Debug.Log("Collision with Apple");
+            Apple apple = collidedWith.GetComponent<Apple>();
+            gameController.UpdateScore(apple.pointValue);
+            Destroy(collidedWith);
+        }else if(collidedWith.tag =="Rock"){
+            Rock rock = collidedWith.GetComponent<Rock>();
+            gameController.UpdateScore(rock.pointValue);
+            Destroy(collidedWith);
+        }
+    }	 
 ```
 
