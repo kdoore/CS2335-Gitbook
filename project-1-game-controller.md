@@ -52,8 +52,8 @@ The Unity Start event function is used to initialize variables, find gameObjects
         gameOverText = GameObject.Find("GameOverText").GetComponent<Text>();
 
         //deactivate necessary gameObjects
-        gameOverPanel.SetActive(false);
-        gameActive = true;
+        gameOverPanel.SetActive(false); //Hide gameOverPanel and gameOver text
+        gameActive = false; //set to true when StartButton is clicked
 	}
 ```
 
