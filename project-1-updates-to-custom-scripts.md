@@ -16,6 +16,46 @@ We need to modify the AppleTree.cs class to make sure the AppleTree gameObject d
 public bool gameActive = false; //initialize to false
 ```
 
+###AppleTree.cs Script Changes
+Inside AppleTree.cs, first we must declare an object-reference variable that will allow us to interact with the GameController script-component object attached to the GameController GameObject
+
+In Start( ), we initialize our object-reference, so that it's memory address points to the GameController script component-object, to do that, first we must find the GameController GameObject, then we use GetComponent<T>(); function to find the GameController script component.
+
+In Update, we test the value of the: gameContoller.gameActive variable, if gameActive is true, then the AppleTree can have horizontal Movement.  If gameActive gets reset to false, the appleTree movement stops.
 
 
+```java
 //To access inside AppleTree.cs
+//declare an Object Reference - the dataType is the GameController Class Name
+ private GameController gameController;  
+ 
+
+	void Start () {  
+        //find the GameController GameObject by name
+        // then find the ScriptComponent using GetComponent<T>( ); function
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+
+// Update is called once per frame
+	void Update () {
+        if (gameController.gameActive)  //add this code
+        {
+            Vector3 pos = transform.position;
+            pos.x += speed * Time.deltaTime;
+            transform.position = pos;
+
+            if (pos.x < -leftRightEdge)
+            {
+                speed = Mathf.Abs(speed); //make sure speed is positive
+            }
+            else if (pos.x > leftRightEdge)
+            {
+                speed = -Mathf.Abs(speed); //make sure speed is negative
+            }
+        }
+	}
+
+```
+
+
+
+	 
