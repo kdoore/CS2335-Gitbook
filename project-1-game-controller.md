@@ -1,6 +1,48 @@
 ###Project 1 - GameController Class
 It's common to have a GameController class to manage the higher level logic of the game, such as keeping track of score, winning and losing, etc.  We'll create a GameController class for this purpose, and we can attach the script to an empty gameObject called GameController.
 
+###UI Elements
+As discussed in the previous page, we will have added User Interface (UI) elements to the game.
+The code below shows how we'll interact with those elements from the GameController.cs script.  
+It's critical that we add a directive to the top of our script to include the UnityEngine UI Library:
+
+```
+using UnityEngine.UI;
+```
+In the code below, we'll create object reference variables to allow us to interact with the Text Component of these Text GameObjects.  We'll be modifying the text variable's value, which must be formatted as a String.  We need to first initialize the object reference variables, we do that in the Start() function, then we can actually disable the GameOver GameObject so it's hidden until the game is over.  
+
+
+Declare our object-reference variables to the Text Component we want to control via script.
+```java
+private Text scoreText, gameOverText;
+```
+
+Initialize the object-reference variables, 
+
+```java
+scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+gameOverText = GameObject.Find("GameOverText").GetComponent<Text>();
+```
+###GameObjects - SetActive( );
+We need to find 2 gameObjects, a UI-Panel, and UI-Button, we will be hiding these GameObjects by setting the `SetActive(true /false ) `method to true or false.  Similarly, first we need
+
+```java
+private GameObject startButton, gameOverPanel;
+
+void Start(){
+    startButton = GameObject.Find("StartButton");
+    gameOverPanel = GameObject.Find("GameOverPanel");
+
+gameOverPanel.SetActive(false); //Hide gameOverPanel and gameOver text
+ 
+ //other code in Start not shown here
+}
+
+```
+
+
+
+###Game-Control Logic
 This class will manage: 
     * Starting the game when the StartButton is pressed
     * Updating the Score and Score Display when items hit the Basket
