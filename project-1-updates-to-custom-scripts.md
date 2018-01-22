@@ -56,6 +56,27 @@ In Update, we test the value of the: gameContoller.gameActive variable, if gameA
 
 ```
 
+ ###Control Dropping Objects in AppleTree.cs 
+
+```java
+public void DropObjects()
+    {
+        if (Random.value < chanceToDropRock)
+        {
+            GameObject rock = Instantiate<GameObject>(rockPrefab);
+            rock.transform.position = this.transform.position;
+        }
+        else { 
+            GameObject apple = Instantiate<GameObject>(applePrefab);
+            apple.transform.position = this.transform.position;
+        }
+        if (gameController.gameActive) { 
+        Invoke("DropObjects", secondsBetweenAppleDrops);
+        }
+    }
+
+```
+
 
 
 	 
