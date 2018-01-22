@@ -77,6 +77,35 @@ public void DropObjects()
 
 ```
 
+###Basket.cs Code Changes
+
+Just as we did in the AppleTree.cs class, we need to create an object-reference variable to allow us to interact with the GameController script component.  Here is the partial code from the Basket.cs class, showing the changed code:
+
+Code in Basket.cs 
+
+    
+
+```java
+private GameController gameController;
+
+    void Start(){
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+    }
+	// Update is called once per frame
+	void Update () {
+        if (gameController.gameActive)
+        {
+            Vector3 mousePos2D = Input.mousePosition;
+            mousePos2D.z = -Camera.main.transform.position.z;
+            Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
+
+            Vector3 pos = this.transform.position;
+            pos.x = mousePos3D.x;
+            this.transform.position = pos;
+        }
+	}
 
 
 	 
+```
+
