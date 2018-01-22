@@ -88,11 +88,11 @@ Code in Basket.cs
 ```java
 private GameController gameController;
 
-    void Start(){
+void Start(){
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 	// Update is called once per frame
-	void Update () {
+void Update () {
         if (gameController.gameActive)
         {
             Vector3 mousePos2D = Input.mousePosition;
