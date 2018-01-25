@@ -30,8 +30,11 @@ This sprite can be used as the Sprite for a SpriteRenderer component on a 2D Spr
 9. Add a Script component - add either Rock.cs or PickUp.cs script
 10. Set the Script component's pointValue to some negative value in the inspector
 11. Add Tag: "Rock" to the gameObject (top of inspector panel).   (If the tag doesn't exist, select 'addTag', and create a new tag: "Rock", then add to your gameObject
+12. Once the gameObject has been configured as shown in the animation below, drag it to your Project / Assets panel to turn it into a prefab.  The text should show as blue once it is a prefab.
 
 
 The animation clip below shows the above steps to create a 2D sprite gameObject, Rock, that can be used as a dropped object in our game.
 
-![](http://g.recordit.co/FDNPQGnBjE.gif)
+![](http://g.recordit.co/xikYSfgGYo.gif)
+
+
