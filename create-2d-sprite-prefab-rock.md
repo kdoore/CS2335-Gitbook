@@ -15,7 +15,7 @@ This sprite can be used as the Sprite for a SpriteRenderer component on a 2D Spr
    
 ###Animation: How to Create Sprite Assets.
 
-   ![](http://g.recordit.co/MkDOjWtvrp.gif)
+   ![](http://g.recordit.co/TW4j9r8eDV.gif)
 
 ###Steps to create a 2D-Sprite GameObject / Prefab
 
