@@ -1,11 +1,12 @@
 #Create 2D Sprite Prefab GameObject
 
 ###Steps to create a Sprite Asset:
-Option 1: Create a place-holder sprite asset:
+###Option 1: Create a place-holder sprite asset:
  In the project / asset panel, right click and select:
 Create > Sprite > Select the sprite shape, such as 'diamond'.
-This sprite can be used as the Sprite for a SpriteRenderer component on a 2D Sprite gameObject.
-Option 2: Importing an external image file:  
+This sprite can be used as the Sprite for a SpriteRenderer component on a 2D Sprite gameObject.  The color can be set using the colorSelector once the sprite has been added to a 2D Sprite gameObject.  This color can also be used to tint an image, however,  remember to select white as the color to show an un-tinted image used as a sprite.
+
+###Option 2: Importing an external image file:  
    1.  Open a finder / explorer window on your system, browse to the folder that contains your image file.
    2.  Drag the image file directly into the Project / Asset panel at the bottom of your Unity window.  
    3. If you have configured your game as a 2D game, then the sprite should be ready to use.  Otherwise, with the image selected in your project panel:  in the Inspector panel, select the options shown in the image below: 
