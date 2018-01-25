@@ -1,4 +1,4 @@
-$$$$#Project 1 - Updates to Custom Scripts
+#Project 1 - Updates to Custom Scripts
 
 The following changes need to be made to the custom scripts created earlier: AppleTree and Basket.  In addition, a Rock script is created to add a destructive object to the game. The Rock script is similar to the Apple.cs script, but the pointValue is negative.  
 

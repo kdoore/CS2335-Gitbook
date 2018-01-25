@@ -8,6 +8,7 @@
 * [Project1](project1.md)
   * [Project 1 - Apple Picker - Game Overview](project-1-apple-picker.md)
   * [Project 1 - Custom Scripts](project-1-behavior-scripts.md)
+  * [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
   * [Project 1 - Score and UI Elements](project-1-score-and-ui-elements.md)
   * [Project 1 - Game Controller](project-1-game-controller.md)
   * [Project 1 - Updates to Custom Scripts](project-1-updates-to-custom-scripts.md)
