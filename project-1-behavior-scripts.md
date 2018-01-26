@@ -18,7 +18,7 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour {
 
-```java
+
     //this variable tracks the lowest point the apples should reach before 
     //being destroyed, this is the same for all appples, so it's been
     //set as a class-level, static, variable and will not show up in the inspector.
