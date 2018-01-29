@@ -21,7 +21,7 @@ Add a UI-Panel to the scene, name it: 'ScorePanel'.  Add a Text gameObject as a 
 ![](/assets/Screen Shot 2018-01-20 at 6.41.40 PM.png)
 
 ###UI-Panel and Text for GameOver Notification.
-Create a UI-Panel and child Text element for the display of the GameOver notification.  Name the panel:  'GameOverPanel' and the text: 'GameOverText'.  Configure the text so it's stretched to fit the Panel and resize the panel and move to the center of the scene.  Set the color of the panel and text so they are visible during gameplay.  
+Create a UI-Panel and a child-gameObject that is a Text element, that'll be used for the display of the GameOver notification.  Name the Panel-gameObject:  'GameOverPanel' and name the Text-gameObject: 'GameOverText'.  Configure the rect-transform for the Text so it's stretched to fit the Panel, anchor it to the corners of it's parent. Resize the Panel and move to the center of the scene.  Set the color of the panel and text so they are visible during gameplay.  
 
 ![](/assets/Screen Shot 2018-01-20 at 6.51.12 PM.png)
 
