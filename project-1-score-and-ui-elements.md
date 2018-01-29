@@ -16,7 +16,10 @@ When the Canvas is added to a scene, by default, it's layout is offset from the 
 Add a UI Button to the game scene.  Name the button 'StartButton'.  The StartButton has a child gameObject: Text. Configure the Text GameObject, so it's Text Component', Text field has a value of 'Start Game'.  
 
 ###Set Position, Color of Button, 
-Use the RectTransform tool to set the anchors and position of the button to the center of the scene.  Set the 'normal' and 'highlight' colors of the button, so that you'll be able to see the button's highlight state when moused-over. 
+Use the RectTransform tool to set the anchors and position of the button to the center of the scene.  Set the 'normal' and 'highlight' colors of the button, so that you'll be able to see the button's highlight state when moused-over.
+
+ ###Set Canvas Render-Mode to Screen-Space Camera
+ The animation below shows that when you add a UI element to your scene, a Canvas and EventSystem are also added to the Hierarchy.  Then you need to configure the Canvas GameObject so it's set to Screen-Space Camera as described above.
 
 ![](http://g.recordit.co/YVfLJCsBTe.gif)
 
