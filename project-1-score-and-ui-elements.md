@@ -12,8 +12,13 @@ When the Canvas is added to a scene, by default, it's layout is offset from the 
 
 ![](Screenshot 2016-02-15 20.14.52.png)
 
-###UI-Button:
-Add a UI Button to the game scene.  Name the button 'StartButton'.  The StartButton has a child gameObject: Text. Configure the Text GameObject, so it's Text Component', Text field has a value of 'Start Game'.  Use the RectTransform tool to set the anchors and position of the button to the center of the scene.  Set the 'normal' and 'highlight' colors of the button, so that you'll be able to see the button's highlight state when moused-over. 
+###UI-Button, Child-GameObject: Text
+Add a UI Button to the game scene.  Name the button 'StartButton'.  The StartButton has a child gameObject: Text. Configure the Text GameObject, so it's Text Component', Text field has a value of 'Start Game'.  
+
+###Set Position, Color of Button, 
+Use the RectTransform tool to set the anchors and position of the button to the center of the scene.  Set the 'normal' and 'highlight' colors of the button, so that you'll be able to see the button's highlight state when moused-over. 
+
+![](http://g.recordit.co/YVfLJCsBTe.gif)
 
 ###UI-Panel and Text for Score
 Add a UI-Panel to the scene, name it: 'ScorePanel'.  Add a Text gameObject as a child of the 'ScorePanel', name this 'ScoreText'.  For the 'ScorePanel', set the anchors to that it's anchored to the upper right corner of the scene.  Configure the 'ScoreText', text element, so it is stretched to fit the 'ScorePanel', and set the starting text value to show 'Score: 0', with BestFit and alignment center, center as shown in the image below. Select a color for the panel and text so they will be visible during gameplay.
