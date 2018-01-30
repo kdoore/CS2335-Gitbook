@@ -14,21 +14,23 @@ using UnityEngine.UI;
 ```
 
 ###Object Reference Variables to GameObjects and GameObject Components - Declare and Initialize
-1. First, in the code below, we'll **declare** **object-reference variables** to allow us to interact with Components on these UI GameObjects.  We'll be modifying the Text GameObjects, specifically, we'll modify the `text` field of the Text Component, which must be formatted as a String in our code.  
+1. **Declare:** At the top of the class file definition, we will **declare object-reference variables** to allow us to interact with Components on these UI GameObjects. 
 
-2. Next, We need to **initialize the object reference variables**, we do that in the Start() function, then we can actually disable the GameOver GameObject so it's hidden until the game is over.  
+  We'll be modifying the Text GameObjects, specifically, we'll modify the `text` field of the Text Component, which must be formatted as a String in our code.  
 
+    - Declare our object-reference variables to the Text Component we want to control via script, at the top of the class definition.
 
-Declare our object-reference variables to the Text Component we want to control via script.
 ```java
-private Text scoreText, gameOverText;
+    private Text scoreText, gameOverText; //dataType is Text (Component) 
 ```
 
-Initialize the object-reference variables, 
+2. **Initialize:** We need to **initialize the object reference variables**, we do that in the Start() function, then we can actually disable the GameOver GameObject so it's hidden until the game is over.  
+
+    - To initialize the object-reference variables, we first need to find the gameObject, then find the Text component on the given gameObjects, this will be done in Start().
 
 ```java
-scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
-gameOverText = GameObject.Find("GameOverText").GetComponent<Text>();
+    scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+    gameOverText = GameObject.Find("GameOverText").GetComponent<Text>();
 ```
 ###GameObjects - SetActive( );
 We need to find 2 gameObjects, a UI-Panel, and UI-Button, we will be hiding these GameObjects by setting the `SetActive(true /false ) `method to true or false.  Similarly, first we need
