@@ -52,28 +52,38 @@ It's critical that we add a directive to the top of our script to include the Un
      }
      ```
     
-#Object Reference Variables for GameObjects;
+#Object Reference Variables for GameObjects:
+When working with GameObjects in our code, often we want to toggle visibility, to show / hide a gameObject.  There are several ways show / hide UI gameObjects, we'll look at other methods later in the course.  If we will hide a gameObject by setting 'setActive( false )', **the gameObject must be active when the scene first starts**, otherwise, we won't be able to make our initial connection to find the gameObject. 
+
 ###Declare, Initialize, Modify
 
-    - Declare: Object Reference variables  that will refer to GameObjects we want to control in our script.
+    - **Declare:** Object Reference variables that will refer to GameObjects we want to control in our script, at the top of the class definition.
     
 ```java
 private GameObject startButton, gameOverPanel;
 
 ```
-    
-We need to find 2 gameObjects, a UI-Panel, and UI-Button, we will be hiding these GameObjects by setting the `SetActive(true /false ) `method to true or false.  Similarly, first we need
+     - **Initialize:**   Next, in Start(), we need to find 2 gameObjects by name, a UI-Panel, and UI-Button.
 
 ```java
-private GameObject startButton, gameOverPanel;
 
 void Start(){
     startButton = GameObject.Find("StartButton");
-    gameOverPanel = GameObject.Find("GameOverPanel");
-
-gameOverPanel.SetActive(false); //Hide gameOverPanel and gameOver text
+    gameOverPanel = GameObject.Find("GameOverPanel"); 
  
- //other code in Start not shown here
+ //other code in Start() not shown here
+}
+
+```
+    - **Modify:**  Finally, we can modify these GameObjects that we have connected with, via the Object-Reference variables.  Often, when working with GameObjects, we'll be toggling the gameObject so that it's active / not active in the game scene.  We will be hiding these GameObjects by setting the `SetActive(true /false ) `method to true or false.  
+
+```java
+
+void Start(){
+    startButton = GameObject.Find("StartButton");
+    gameOverPanel = GameObject.Find("GameOverPanel"); 
+ 
+    gameOverPanel.setActive( false ); //disables / hides the GameObject
 }
 
 ```
