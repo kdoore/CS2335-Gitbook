@@ -16,7 +16,9 @@ It's critical that we add a directive to the top of our script to include the Un
  using UnityEngine.UI;   //Add this additional directive for UI components
 ```
 
-###Object Reference Variables for GameObject-Components: Declare, Initialize, and Modify
+#Object Reference Variables for GameObject-Components: 
+
+###Declare, Initialize, and Modify
  **Declare:** At the top of the class file definition, we will **declare object-reference variables** to allow us to interact with Components on these UI GameObjects. 
 
   - Declare our object-reference variables to the Text Component we want to control via script, at the top of the class definition.
@@ -50,7 +52,16 @@ It's critical that we add a directive to the top of our script to include the Un
      }
      ```
     
-###GameObjects - SetActive( );
+#Object Reference Variables for GameObjects;
+###Declare, Initialize, Modify
+
+    - Declare: Object Reference variables  that will refer to GameObjects we want to control in our script.
+    
+```java
+private GameObject startButton, gameOverPanel;
+
+```
+    
 We need to find 2 gameObjects, a UI-Panel, and UI-Button, we will be hiding these GameObjects by setting the `SetActive(true /false ) `method to true or false.  Similarly, first we need
 
 ```java
