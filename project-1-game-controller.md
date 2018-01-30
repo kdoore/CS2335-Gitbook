@@ -63,7 +63,7 @@ When working with GameObjects in our code, often we want to toggle visibility, t
 private GameObject startButton, gameOverPanel;
 
 ```
-     - **Initialize:**   In Start(), we need to find 2 gameObjects by name, a UI-Panel, and UI-Button, once we've initialized this connection between our object-reference variable and the GameObject in the scene, then we can use this variable to toggle the value of setActive( true / false ), throughout the lifetime of the scene.
+     - **Initialize:**   In Start(), we need to find 2 gameObjects by name, a UI-Panel, and UI-Button, once we've initialized this connection between our object-reference variable and the GameObject in the scene, then we can use this variable to toggle the value of setActive( true / false ), throughout the lifetime of this script and scene.
 
 ```java
 
