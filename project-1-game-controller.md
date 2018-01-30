@@ -7,10 +7,13 @@ When deciding what gameObject to attach a script to, we need to consider all gam
 ###UI Elements - using UnityEngine.UI
 As discussed in the previous page, we will have added several User Interface (UI) elements to the game.
 The code below shows how we'll interact with those elements from the GameController.cs script.  
-It's critical that we add a directive to the top of our script to include the UnityEngine UI Library:
+It's critical that we add a directive to the top of our script to include the UnityEngine UI Library, and that we add this to any script that modifies any UI Components:
 
-```
- using UnityEngine.UI; 
+```java
+ using System.Collections;
+ using System.Collections.Generic;
+ using UnityEngine;
+ using UnityEngine.UI;   //Add this additional directive for UI components
 ```
 
 ###Object Reference Variables for GameObject-Components: Declare, Initialize, and Modify
@@ -31,15 +34,20 @@ It's critical that we add a directive to the top of our script to include the Un
     scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
     gameOverText = GameObject.Find("GameOverText").GetComponent<Text>();
    
-     //other code in Start() 
+     //other code in Start(), not shown here 
     }
 ```
-**Modify:** We'll be modifying the Text GameObjects, specifically, we'll modify the `text` field of the Text Component, which must be formatted as a String in our code. 
+**Modify:** We'll be modifying the Text GameObjects, specifically, we'll modify the `text` field of the Text Component, which must be formatted as a String in our code. This code will be located along with other code in the  
   
     ```java
     //This code shows how to set the text field of the scoreText Text Component, we're setting a string value by using quotes, then we use + score to concatenate the current value of the score variable so it's displayed after the word "Score: "
-    
-     scoreText.text = "Score: " + score;  
+     
+     public void StartGame( ){
+     score = 0;
+     scoreText.text = "Score: " + score;
+     
+     //other code in StartGame(), not shown here  
+     }
      ```
     
 ###GameObjects - SetActive( );
