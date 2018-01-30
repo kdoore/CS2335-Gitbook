@@ -1,8 +1,11 @@
 #Project 1 - GameController Class
-It's common to have a GameController class to manage the higher level logic of the game, such as keeping track of score, winning and losing, etc.  We'll create a GameController class for this purpose, and we can attach the script to an empty gameObject called GameController.
+It's common to have a GameController class to manage the higher level logic of the game, such as keeping track of score, winning and losing, etc.  We'll create a GameController class for this purpose, and we can attach the script to an empty gameObject called GameController.  
+
+###What GameObject should have the GameController Script Attached?
+When deciding what gameObject to attach a script to, we need to consider all gameObjects that will be managed by a script, such that, a script should be placed on a gameObject that is conceptually broader than any single gameObject manipulated by the script.  Therefore, this script could optionally be on the Main Camera, or an Empty GameObject created for the purpose of holding the script, or potentially the Canvas GameObject.  If we put this script on the Canvas, that would imply that it's only controlling UI-elements.  However, in this case, the GameController script will also be storing the score and causing the first Apple to be dropped from the AppleTree.  For this reason, the Canvas might not be the best gameObject for this script to be attached to.  So, we have decided to put it on an empty gameObject called GameController, where we should move this gameObject higher in the Hierarchy panel, so it's just below the camera, this will make it easier to notice when looking at the Hierarchy panel.
 
 ###UI Elements
-As discussed in the previous page, we will have added User Interface (UI) elements to the game.
+As discussed in the previous page, we will have added several User Interface (UI) elements to the game.
 The code below shows how we'll interact with those elements from the GameController.cs script.  
 It's critical that we add a directive to the top of our script to include the UnityEngine UI Library:
 
@@ -10,8 +13,10 @@ It's critical that we add a directive to the top of our script to include the Un
 using UnityEngine.UI;
 ```
 
-###Object Reference Variables to GameObjects and GameObject Components
-In the code below, we'll create object reference variables to allow us to interact with the Text Component of these Text GameObjects.  We'll be modifying the text variable's value, which must be formatted as a String.  We need to first initialize the object reference variables, we do that in the Start() function, then we can actually disable the GameOver GameObject so it's hidden until the game is over.  
+###Object Reference Variables to GameObjects and GameObject Components - Declare and Initialize
+1. First, in the code below, we'll **declare** **object-reference variables** to allow us to interact with Components on these UI GameObjects.  We'll be modifying the Text GameObjects, specifically, we'll modify the `text` field of the Text Component, which must be formatted as a String in our code.  
+
+2. Next, We need to **initialize the object reference variables**, we do that in the Start() function, then we can actually disable the GameOver GameObject so it's hidden until the game is over.  
 
 
 Declare our object-reference variables to the Text Component we want to control via script.
