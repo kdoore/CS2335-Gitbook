@@ -13,26 +13,34 @@ It's critical that we add a directive to the top of our script to include the Un
  using UnityEngine.UI; 
 ```
 
-###Object Reference Variables for GameObject Components: Declare, Initialize, and Modify
+###Object Reference Variables for GameObject-Components: Declare, Initialize, and Modify
  **Declare:** At the top of the class file definition, we will **declare object-reference variables** to allow us to interact with Components on these UI GameObjects. 
 
-  We'll be modifying the Text GameObjects, specifically, we'll modify the `text` field of the Text Component, which must be formatted as a String in our code.  
-
-    - Declare our object-reference variables to the Text Component we want to control via script, at the top of the class definition.
+  - Declare our object-reference variables to the Text Component we want to control via script, at the top of the class definition.
 
 ```java
     private Text scoreText, gameOverText; //dataType is Text (Component) 
 ```
 
- **Initialize:** We need to **initialize the object reference variables**, we do that in the Start() function, then we can actually disable the GameOver GameObject so it's hidden until the game is over.  
+ **Initialize:** We need to **initialize the object reference variables**, we do that in the Start() function.  This is a 2 step process, first we need to find the gameObjects, then we specify the dataType < T > of Component we will be accessing. (< T > is a `C# Generics` placeholder where we must replace **T** with the corresponding component dataType, here it's a < `Text` > component). 
 
     - To initialize the object-reference variables, we first need to find the gameObject, then find the Text component on the given gameObjects, this will be done in Start().
 
 ```java
+ void Start(){
     scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
     gameOverText = GameObject.Find("GameOverText").GetComponent<Text>();
+   
+     //other code in Start() 
+    }
 ```
-**Modify:**  
+**Modify:** We'll be modifying the Text GameObjects, specifically, we'll modify the `text` field of the Text Component, which must be formatted as a String in our code. 
+  
+    ```java
+    //This code shows how to set the text field of the scoreText Text Component, we're setting a string value by using quotes, then we use + score to concatenate the current value of the score variable so it's displayed after the word "Score: "
+    
+     scoreText.text = "Score: " + score;  
+     ```
     
 ###GameObjects - SetActive( );
 We need to find 2 gameObjects, a UI-Panel, and UI-Button, we will be hiding these GameObjects by setting the `SetActive(true /false ) `method to true or false.  Similarly, first we need
