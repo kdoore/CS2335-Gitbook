@@ -79,7 +79,11 @@ public void DropObjects()
 
 ###Basket.cs Code Changes
 
-Just as we did in the AppleTree.cs class, we need to create an object-reference variable to allow us to interact with the GameController script component.  Here is the partial code from the Basket.cs class, showing the changed code:
+Just as we did in the AppleTree.cs class, we need to create an object-reference variable to allow us to interact with the GameController script component.  The code below shows code changes for the Basket.cs class:
+
+###Update( ) - Changes
+We'll modify the Unity Update method to force the basket to stay on the screen.  We'll do this using a newly declared class variable: ` private float leftRightEdge = 14f;`. 
+Then we'll use the Mathf class's Clamp( ) function which forces a given variable to be restricted to a given range where pos.x is the value we want to restrict between min, max values of: min = -leftRightEdge, max = leftRightEdge.  The code is listed below.
 
 ###OnCollisionEnter2D( ) - Changes
 In the Basket class, we have modified the code in the OnCollisionEnter2D( ) function.  We want to update the score in the GameController each time we collide with an object, in order to do that, we need to find out how many points each object is worth.  
@@ -103,6 +107,7 @@ gameController.UpdateScore(apple.pointValue);
    
 ```java
 private GameController gameController;
+private float leftRightEdge = 14.0f; //new variable to keep basket on screen
 
 void Start(){
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
@@ -117,6 +122,7 @@ void Update () {
 
             Vector3 pos = this.transform.position;
             pos.x = mousePos3D.x;
+            pos.x = Mathf.Clamp(pos.x, -leftRightEdge, leftRightEdge); //we can force the basket to stay on screen using the Mathf.Clamp( ) function.  
             this.transform.position = pos;
         }
 	}
