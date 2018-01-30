@@ -18,7 +18,7 @@ Add a UI Button to the game scene.  Name the button 'StartButton'.  The StartBut
 ###Set Position, Color of Button, 
 Use the RectTransform tool to set the anchors and position of the button to the center of the scene.  Set the 'normal' and 'highlight' colors of the button, so that you'll be able to see the button's highlight state when moused-over.
 
- ###Set Canvas Render-Mode to Screen-Space Camera
+ ###Animation: Set Canvas Render Mode to Screen Space-Camera
 The animation below shows that when you add a UI element, (such as a Button GameObject, to your scene, a Canvas and EventSystem are also added to the Hierarchy.  Then you need to configure the Canvas GameObject so it's set to Screen Space-Camera as described above.
 
 ![](http://g.recordit.co/YVfLJCsBTe.gif)
