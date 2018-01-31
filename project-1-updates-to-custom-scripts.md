@@ -25,7 +25,9 @@ In Update, we test the value of the: gameContoller.gameActive variable, if gameA
 
 
 ```java
-//To access inside AppleTree.cs
+//inside AppleTree.cs
+//Other AppleTree class variable declarations not shown here
+
 //declare an Object Reference - the dataType is the GameController Class Name
 private GameController gameController;  
  
