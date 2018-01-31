@@ -84,7 +84,9 @@ public float chanceToDropRock = 0.01f  //add this code
 //make changes to this method 
 public void DropObjects()
     {
-        if (Random.value < chanceToDropRock)
+    
+    ///ADD AND CHANGED CODE BELOW HERE 
+        if (Random.value < chanceToDropRock) 
         {
             GameObject rock = Instantiate<GameObject>(rockPrefab);
             rock.transform.position = this.transform.position;
@@ -93,11 +95,14 @@ public void DropObjects()
             GameObject apple = Instantiate<GameObject>(applePrefab);
             apple.transform.position = this.transform.position;
         }
-        //Add this code so we only call Invoke if  gameController.gameActive is true.
+        
+        //ADD THIS NEW CODE so we only call Invoke if  gameController.gameActive is true.
         if (gameController.gameActive) { 
         Invoke("DropObjects", secondsBetweenAppleDrops);
-        }
-    }
+        } //end if
+    
+    
+    } // end DropObjects
 
 ```
 
