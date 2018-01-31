@@ -101,7 +101,10 @@ public void DropObjects()
 Just as we did in the AppleTree.cs class, we need to create an object-reference variable to allow us to interact with the GameController script component.  The code below shows code changes for the Basket.cs class:
 
 ###Update( ) - Changes
-We'll modify the Unity Update method to force the basket to stay on the screen.  We'll do this using a newly declared class variable: ` private float leftRightEdge = 14f;`. 
+We'll modify the Unity Update method to force the basket to stay on the screen.  We'll do this using a newly declared class variable: 
+
+` private float leftRightEdge = 14f;`
+
 Then we'll use the Mathf class's Clamp( ) function which forces a given variable to be restricted to a given range where pos.x is the value we want to restrict between min, max values of: min = -leftRightEdge, max = leftRightEdge.  The code is listed below.
 
 ###OnCollisionEnter2D( ) - Changes
