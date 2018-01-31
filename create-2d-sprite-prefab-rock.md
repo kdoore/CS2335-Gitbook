@@ -18,7 +18,7 @@ The animation below shows how to create a place-holder sprite, and how to import
 
    ![](http://g.recordit.co/TW4j9r8eDV.gif)
    
-###Animation: How to use .png image Sprite to replace a placeholder Sprite.  
+###Animation: How to use .png image asset to replace a placeholder Sprite for a GameObject.  
 In the animation below, we change the sprite used for the basket from the square placeholder sprite, so that it's now using  a .png sprite file that was dragged into the asset folder.  After making the change, we reset the color so it's not tinting the image.
 
 ![](http://g.recordit.co/NT0BVSfR53.gif)
