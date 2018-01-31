@@ -54,8 +54,8 @@ void Update () {
 	}
 ////OTHER CLASS CODE NOT SHOWN HERE
 ```
-
- ###Control Dropping Objects in AppleTree.cs 
+###Other Code Changes in AppleTree.cs
+ ###Add code to drop rocks - in DropObjects( ) 
  In the AppleTree script, we also want to be randomly dropping rocks to reduce our score, in addition to dropping apples to increase our score.  
  
  At the top of the class, we need to add code so that we have both an applePrefab and a rockPrefab.
