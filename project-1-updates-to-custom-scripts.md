@@ -35,11 +35,14 @@ void Start () {
         //find the GameController GameObject by name
         // then find the ScriptComponent using GetComponent<T>( ); function
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        } // end Start
 
 // Update is called once per frame
 void Update () {
         if (gameController.gameActive)  //add this code
         {
+                        
+            //the code below has not changed        
             Vector3 pos = transform.position;
             pos.x += speed * Time.deltaTime;
             transform.position = pos;
@@ -52,8 +55,10 @@ void Update () {
             {
                 speed = -Mathf.Abs(speed); //make sure speed is negative
             }
-        }
-	}
+            
+            
+        }  //end if(gameController.gameActive)
+	} // end Update
 ////OTHER CLASS CODE NOT SHOWN HERE
 ```
 ###Other Code Changes in AppleTree.cs
@@ -65,8 +70,13 @@ void Update () {
 ```java
 
 ///top of class definition
+[Header("Set in Inspector")] 
+public GameObject rockPrefab;  //add this code
+
+public float chanceToDropRock = 0.01f  //add this code
 
 
+//make changes to this method 
 public void DropObjects()
     {
         if (Random.value < chanceToDropRock)
