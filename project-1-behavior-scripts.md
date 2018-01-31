@@ -108,7 +108,7 @@ public class AppleTree : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Invoke("DropObjects", 2f);  //this code will be removed
+        Invoke("DropObjects", 2f);  //this code will be removed later, and instead we'll call this function when the StartButton has been clicked
 	}
 	
 	// Update is called once per frame
