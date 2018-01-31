@@ -14,8 +14,14 @@ This sprite can be used as the Sprite for a SpriteRenderer component on a 2D Spr
    ![](/assets/Screen Shot 2018-01-25 at 12.22.37 PM.png)
    
 ###Animation: How to Create Sprite Assets.
+The animation below shows how to create a place-holder sprite, and how to import an external image, after locating the image file in an explorer or finder window.  The place-holder sprite is set as the sprite for the basket gameObject.
 
    ![](http://g.recordit.co/TW4j9r8eDV.gif)
+   
+###Animation: How to use .png image Sprite to replace a placeholder Sprite.  
+In the animation below, we change the sprite used for the basket from the square placeholder sprite, so that it's now using  a .png sprite file that was dragged into the asset folder.  After making the change, we reset the color so it's not tinting the image.
+
+![](http://g.recordit.co/NT0BVSfR53.gif)
 
 ###Steps to create a 2D-Sprite GameObject / Prefab
 
@@ -34,7 +40,7 @@ This sprite can be used as the Sprite for a SpriteRenderer component on a 2D Spr
 
 
 The animation clip below shows the above steps to create a 2D sprite gameObject, Rock, that can be used as a dropped object in our game.
-
+#Animation Showing how to create a Prefab for the Rock GameObject following the steps above.
 ![](http://g.recordit.co/xikYSfgGYo.gif)
 
 
