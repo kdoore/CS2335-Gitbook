@@ -144,10 +144,10 @@ The Unity Start event function is used to initialize variables, find gameObjects
         //deactivate necessary gameObjects
         gameOverPanel.SetActive(false); //Hide gameOverPanel and gameOver text
         gameActive = false; //set to true when StartButton is clicked
-	}
+	}  //end Start()
 ```
 
-###StartGame and StartButton
+###StartGame Custom Method and StartButton Function
 The StartGame function will be executed when the StartButton is clicked.  This function must be public so it can be execute.
 
 ```java
