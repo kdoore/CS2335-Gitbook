@@ -10,9 +10,10 @@ Since we don't want apples being dropped before the StartGame button has been se
 
 We need to modify the AppleTree.cs class to make sure the AppleTree gameObject doesn't move until the StartButton is clicked.  We do this by checking whether GameController.gameActive is true or false.  First we need to create a script Object-Reference variable to allow us to interact with the GameController script component within the AppleTree.cs script.  Since we want to access a variable outside the class definition, we need to declare the variable to have public access.
 
-//Inside GameController.cs:
+Inside GameController.cs, we'll be creating this variable that we'll use in other scripts:
 
 ```java
+//in GameController.cs
 public bool gameActive = false; //initialize to false
 ```
 
@@ -20,6 +21,7 @@ public bool gameActive = false; //initialize to false
 Inside AppleTree.cs, first we must declare an object-reference variable that will allow us to interact with the GameController script-component object attached to the GameController GameObject
 
 In Start( ), we initialize our object-reference, so that it's memory address points to the GameController script component-object, to do that, first we must find the GameController GameObject, then we use GetComponent<T>(); function to find the GameController script component.
+Also, we'll remove the code that we'd had in AppleTree.cs Start, where we called `Invoke("DropObjects", 2f);`
 
 In Update, we test the value of the: gameContoller.gameActive variable, if gameActive is true, then the AppleTree can have horizontal Movement.  If gameActive gets reset to false, the appleTree movement stops.
 
@@ -35,6 +37,9 @@ void Start () {
         //find the GameController GameObject by name
         // then find the ScriptComponent using GetComponent<T>( ); function
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        
+        //ALSO: REMOVE THE FOLLOWING CODE - we don't want to start dropping apples until the StartButton has been hit
+        //Invoke( "DropObjects", 2f);
         } // end Start
 
 // Update is called once per frame
@@ -57,7 +62,7 @@ void Update () {
             }
             
             
-        }  //end if(gameController.gameActive)
+        }  //add this closing bracket to end if(gameController.gameActive)
 	} // end Update
 ////OTHER CLASS CODE NOT SHOWN HERE
 ```
@@ -126,9 +131,12 @@ gameController.UpdateScore(apple.pointValue);
 
 
 ###Modified Code in Basket.cs 
+In the Basket.cs Class Code, we add an object-reference variable so we can access the gameController script component, just as we had done in the AppleTree.cs script.
+In addition, we've declared a new variable: `float leftRightEdge, that we'll use in Update to insure the basket's position.x value is clamped so the basket's movement is restricted so it stays between the edges of the camera's viewport.
    
 ```java
 private GameController gameController;
+
 private float leftRightEdge = 14.0f; //new variable to keep basket on screen
 
 void Start(){
@@ -136,18 +144,21 @@ void Start(){
     }
 	// Update is called once per frame
 void Update () {
-        if (gameController.gameActive)
-        {
+        if (gameController.gameActive) //ADD THIS CODE
+        { //ADD THIS OPENING BRACKET
+        
             Vector3 mousePos2D = Input.mousePosition;
             mousePos2D.z = -Camera.main.transform.position.z;
             Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
 
             Vector3 pos = this.transform.position;
             pos.x = mousePos3D.x;
-            pos.x = Mathf.Clamp(pos.x, -leftRightEdge, leftRightEdge); //we can force the basket to stay on screen using the Mathf.Clamp( ) function.  
+           
+            pos.x = Mathf.Clamp(pos.x, -leftRightEdge, leftRightEdge); //ADD THIS NEW CODE 
             this.transform.position = pos;
-        }
-	}
+            
+        } ///ADD THIS CLOSING BRACKET
+	}//end Update
 
 
 void OnCollisionEnter2D(Collision2D collision)
