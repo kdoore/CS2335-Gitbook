@@ -91,6 +91,8 @@ public class AppleTree : MonoBehaviour {
     [Header("Set in Inspector")]
     //prefab for apples that will be spawned
     public GameObject applePrefab;
+    //public GameObject rockPrefab; // we'll use this later
+
 
     //speed the tree moves horizonatlly
     public float speed = 1f;
@@ -99,6 +101,8 @@ public class AppleTree : MonoBehaviour {
     public float leftRightEdge = 10f;
 
     public float chanceToChangeDirections = 0.01f;  //set to small probability
+    
+    //public float chanceToDropRock = 0.01f //we'll add and use this later
 
     public float secondsBetweenAppleDrops = 1f;
 
@@ -127,7 +131,9 @@ public class AppleTree : MonoBehaviour {
         }
     }
 
-    void DropObjects(){
+//this function causes apples to be dropped from the apple tree
+//we'll modify in later, we'll add code to also drop rocks
+    public void DropObjects(){
         GameObject apple = Instantiate<GameObject>(applePrefab);
         apple.transform.position = this.transform.position;
         Invoke("DropObjects", secondsBetweenAppleDrops);
