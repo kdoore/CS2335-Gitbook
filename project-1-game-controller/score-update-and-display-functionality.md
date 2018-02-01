@@ -38,9 +38,9 @@ The first code to modify is the code in the GameController.cs script by creating
 **Steps: **
 
 1.  Create variable to hold score in GameController.cs
-2.  Create a public method: `UpdateScore( int points )`, in the GameController.cs script.
+2.  Create a public method: `UpdateScore( int points )`, in the GameController.cs.
 3.  Add code to Basket.cs to call the GameController `UpdateScore( )` method.
-4.  Add code to update the displayed ScoreText in GameController.cs
+4.  Add code to update the displayed ScoreText in GameController.cs.
 5.  Make sure that the score is reset to 0 when the game is restarted in GameController.cs
 
 ###Code Changes in GameController.cs
