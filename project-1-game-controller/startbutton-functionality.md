@@ -75,6 +75,7 @@ using UnityEngine.UI;  //must be added at top of script
         //Invoke("appleTree.DropObjects", 2f);  //could also use this to start apples dropping with 2 second delay.
 
         startButton.SetActive(false); //hide StartButton
+        
         // gameOverPanel.SetActive(false); // don't use this code until we have created the GameOverPanel etc
     }
       
