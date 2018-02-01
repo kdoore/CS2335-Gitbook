@@ -57,13 +57,13 @@ When working with GameObjects in our code, often we want to toggle visibility, t
 
 ###Declare, Initialize, Modify
 
-    - **Declare:** At the top of our class definition, we declare Object Reference variables that will refer to GameObjects we want to control in our script.
+**Declare:** At the top of our class definition, we declare Object Reference variables that will refer to GameObjects we want to control in our script.
     
 ```java
 private GameObject startButton, gameOverPanel;
 
 ```
-     - **Initialize:**   In Start(), we need to find 2 gameObjects by name, a UI-Panel, and UI-Button, once we've initialized this connection between our object-reference variable and the GameObject in the scene, then we can use this variable to toggle the value of setActive( true / false ), throughout the lifetime of this script and scene.
+**Initialize:**   In Start(), we need to find 2 gameObjects by name, a UI-Panel, and UI-Button, once we've initialized this connection between our object-reference variable and the GameObject in the scene, then we can use this variable to toggle the value of setActive( true / false ), throughout the lifetime of this script and scene.
 
 ```java
 
@@ -75,7 +75,7 @@ void Start(){
 }
 
 ```
-    - **Modify:**  Finally, we can modify these GameObjects that we have connected with, via the Object-Reference variables.  Often, when working with GameObjects, we'll be toggling the gameObject so that it's active / not active in the game scene.  We will be hiding these GameObjects by setting the `SetActive(true /false ) `method to true or false.  
+**Modify:**  Finally, we can modify these GameObjects that we have connected with, via the Object-Reference variables.  Often, when working with GameObjects, we'll be toggling the gameObject so that it's active / not active in the game scene.  We will be hiding these GameObjects by setting the `SetActive(true /false ) `method to true or false.  
 
 ```java
 
