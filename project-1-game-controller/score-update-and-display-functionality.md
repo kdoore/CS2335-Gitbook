@@ -82,8 +82,8 @@ This method will be called from the Basket.cs class when a collision has occured
 ```java
 public void UpdateScore(int points)
     { 
-score += points;
-        scoreText.text = "Score: " + score;
+    score += points;
+    scoreText.text = "Score: " + score;
         
     ///Additional code will be added here later
     }
