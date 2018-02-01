@@ -46,7 +46,21 @@ The first code to modify is the code in the GameController.cs script by creating
 ###Code Changes in GameController.cs
 As detailed in the [GameController section](https://kdoore.gitbooks.io/cs-2335/content/project-1-game-controller.html#object-reference-variables-for-gameobject-components-scoretext-gameovertext), first we need to declare object reference variables that allow us to interact with the ScoreText GameObject.
 
-**Declare Variables**
+**Add UnityEngine.UI directive**
+
+```java
+using UnityEngine.UI;   //Add this additional directive for UI components at the top of the script
+```
+
+
+**Declare Instance Variables For Score**
+
+```java
+ private int score=0; 
+ private Text scoreText;
+
+```
+
 
 
 
