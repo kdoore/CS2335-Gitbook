@@ -80,8 +80,14 @@ using UnityEngine.UI;  //must be added at top of script
       
       
 ```
+###Verify these changes work 
 
-###Other GameObjects and Scripts to be Modified Later
+
+
+##StartButton Functionality to Start / Stop other GameObject Behavior
+We'll have a separate page to cover the final functionality of the game, where we'll use the GameController gameActive variable to control behavior of other gameObjects and scripts, here are the scripts and gameObjects that will be included in that final phase of modifications.
+
+###Other GameObjects and Scripts to be Modified in Final Phase
  Later on, we will need to make additional modifications to the following gameObjects and scripts so they use the GameController.gameActive variable to control their behavior
 **GameObjects Involved using GameController: gameActive:**
 **Scripts Involved:**
