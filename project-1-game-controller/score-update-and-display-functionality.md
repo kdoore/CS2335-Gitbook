@@ -75,8 +75,20 @@ using UnityEngine.UI;   //Add this additional directive for UI components at the
     }  //end Start()
 
 ```
+**Create UpdateScore( ) Method**
+This method will be called from the Basket.cs class when a collision has occured, so it must be public.  We'll pass in the points for whatever object we've collided with.
 
 
+```
+public void UpdateScore(int points)
+    { 
+score += points;
+        scoreText.text = "Score: " + score;
+        
+    ///Additional code will be added here later
+    }
+
+```
 
 
 
