@@ -32,16 +32,16 @@ The animation below shows how to add a UI-Panel, then how to add a UI-Text eleme
 
 ![](http://g.recordit.co/EQdaJ1Vbrx.gif)
 
-###Code Changes associated with Tracking and Displaying Score
-The first code to modify is the code in the GameController.cs script, then we'll make changes to the Basket.cs code so the score is updated when a collision happens, finally, we'll update the display of the score.
+###Code Changes associated with Updating and Displaying Score
+The first code to modify is the code in the GameController.cs script by creating a method: UpdateScore(), that updates the score value, then we'll make changes to the Basket.cs code to call this UpdateScore( ) method  when a collision happens, finally, we'll update the display of the score.
 
 **Steps: **
 
-1.  Create variable to hold score.
-2.  Create a public method: `UpdateScore( int points)`, that can be executed from inside the Basket.cs script whenever a collision with an Apple or Rock occurs.
-3.  Add code to Basket.cs to call the GameController UpdateScore( ) method.
-4.  Add code to update the displayed ScoreText
-5.  Make sure that the score is reset to 0 when the game is restarted.
+1.  Create variable to hold score in GameController.cs
+2.  Create a public method: `UpdateScore( int points )`, in the GameController.cs script.
+3.  Add code to Basket.cs to call the GameController `UpdateScore( )` method.
+4.  Add code to update the displayed ScoreText in GameController.cs
+5.  Make sure that the score is reset to 0 when the game is restarted in GameController.cs
 
 ###Code Changes in GameController.cs
 As detailed in the [GameController section](https://kdoore.gitbooks.io/cs-2335/content/project-1-game-controller.html#object-reference-variables-for-gameobject-components-scoretext-gameovertext), first we need to declare object reference variables that allow us to interact with the ScoreText GameObject.
