@@ -46,7 +46,7 @@ The first code to modify is the code in the GameController.cs script by creating
 ###Code Changes in GameController.cs
 As detailed in the [GameController section](https://kdoore.gitbooks.io/cs-2335/content/project-1-game-controller.html#object-reference-variables-for-gameobject-components-scoretext-gameovertext), first we need to declare object reference variables that allow us to interact with the ScoreText GameObject.
 
-**Add UnityEngine.UI directive**
+**Make sure you have added UnityEngine.UI directive**
 
 ```java
 using UnityEngine.UI;   //Add this additional directive for UI components at the top of the script
@@ -56,8 +56,23 @@ using UnityEngine.UI;   //Add this additional directive for UI components at the
 **Declare Instance Variables For Score**
 
 ```java
- private int score=0; 
+ private int score; 
  private Text scoreText;
+
+```
+
+**Initialize Variables in Unity Start()**
+
+```java
+    // Use this for initialization
+    void Start () {
+ 
+   //find text components for score 
+    scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+    score = 0; //initialize score value
+ 
+    //other Start code not shown       
+    }  //end Start()
 
 ```
 
