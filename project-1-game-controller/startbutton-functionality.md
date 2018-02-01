@@ -1,8 +1,8 @@
 ###StartButton Functionality
 
-In this section, we'll take a look at the functionality of the StartButton in the Scene and the Scripts and other gameObjects that have behaviors that connected with this gameObject.
+In this section, we'll focus on the functionality of the StartButton in the Scene and the Scripts and other gameObjects that have behaviors that connected with this gameObject.
 
-The StartButton is used to start the game, it is used to call the custom StartGame( ) method in the GameController class. Once the StartButton has been clicked, objects should start falling from the AppleTree, and the StartButton should be hidden. When the StartButton is clicked, the GameController.gameActive  flag variable should be set to true.  
+The StartButton is used to start and restart the game, it is used to call the custom StartGame( ) method in the GameController class. Once the StartButton has been clicked, objects should start falling from the AppleTree, and the StartButton should be hidden. When the StartButton is clicked, the GameController.gameActive variable should be set to true.  
 
 ###Steps to Create / Configure The StartButton GameObject
 1. Add a UI-Button to the Scene
