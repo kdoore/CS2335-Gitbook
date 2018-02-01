@@ -82,10 +82,36 @@ This method will be called from the Basket.cs class when a collision has occured
 ```java
 public void UpdateScore(int points)
     { 
-    score += points;
-    scoreText.text = "Score: " + score;
+    
+    score += points; //add new points to current score
+    
+    scoreText.text = "Score: " + score; //This code sets the text for the ScoreText GameObject
         
-    ///Additional code will be added here later
+    ///Additional code will be added here later to determine if the game is over
+    }
+
+```
+**Make Changes to StartGame( ) Method**
+In the StartGame( ) method, we need to add code to reset the score value back to 0, we also need to update the displayed score by updating scoreText.text
+
+
+```java
+
+public void StartGame()
+    {   
+         ///ADD these 2 lines of NEW CODE
+        score = 0;  //reset score to 0
+        scoreText.text = "Score: " + score;
+
+         
+        ///Code below was already here
+        gameActive = true; //this is used in other classes to control gameObjects
+
+        //use one of these to start Dropping objects
+        appleTree.DropObjects(); //start apples dropping
+
+       startButton.SetActive(false); //hide StartButton
+     
     }
 
 ```
