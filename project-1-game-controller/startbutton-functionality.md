@@ -2,7 +2,9 @@
 
 In this section, we'll take a look at the functionality of the StartButton in the Scene and the Scripts and other gameObjects that have behaviors that connected with this gameObject.
 
-###Steps to Create StartButton GameObject
+The StartButton is used to start the game, it is used to call the custom StartGame( ) method in the GameController class. Once the StartButton has been clicked, objects should start falling from the AppleTree, and the StartButton should be hidden. When the StartButton is clicked, the GameController.gameActive  flag variable should be set to true.  
+
+###Steps to Create / Configure The StartButton GameObject
 1. Add a UI-Button to the Scene
 2. Rename the Button to StartButton
 3. Set Button colors: Highlight and Normal colors should be different.
@@ -15,5 +17,6 @@ In this section, we'll take a look at the functionality of the StartButton in th
 
 ![](http://g.recordit.co/j0q1PTchAr.gif)
 
+###Code for the StartButton is in the GameController Script
 
 
