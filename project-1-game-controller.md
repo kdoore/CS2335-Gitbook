@@ -4,6 +4,14 @@ It's common to have a GameController class to manage the higher level logic of t
 ###What GameObject should have the GameController Script Attached?
 When deciding what gameObject to attach a script to, we need to consider all gameObjects that will be managed by a script, such that, a script should be placed on a gameObject that is conceptually broader than any single gameObject manipulated by the script.  Therefore, this script could optionally be on the Main Camera, or an Empty GameObject created for the purpose of holding the script, or potentially the Canvas GameObject.  If we put this script on the Canvas, that would imply that it's only controlling UI-elements.  However, in this case, the GameController script will also be storing the score and causing the first Apple to be dropped from the AppleTree.  For this reason, the Canvas might not be the best gameObject for this script to be attached to.  So, we have decided to put it on an empty gameObject called GameController, where we should move this gameObject higher in the Hierarchy panel, so it's just below the camera, this will make it easier to notice when looking at the Hierarchy panel.
 
+###Create Script: GameController.cs and GameController GameObjects
+1.  Create a new script, name it:  GameController
+2.  Create an Empty GameObject, name it: GameController
+3.  Move this GameObject near the top of the Hierarchy Panel, just below the Main Camera
+4.  Add the GameController.cs script to this GameController empty gameObject.
+
+![](/assets/Screen Shot 2018-02-01 at 1.37.42 PM.png)     ![](/assets/Screen Shot 2018-02-01 at 1.41.39 PM.png)
+
 ###UI Elements - using UnityEngine.UI
 As discussed in the previous page, we will have added several User Interface (UI) elements to the game.
 The code below shows how we'll interact with those elements from the GameController.cs script.  
@@ -75,7 +83,7 @@ void Start(){
 }
 
 ```
-**Modify:**  Finally, we can modify these GameObjects that we have connected with, via the Object-Reference variables.  Often, when working with GameObjects, we'll be toggling the gameObject so that it's active / not active in the game scene.  We will be hiding these GameObjects by setting the `SetActive(true /false ) `method to true or false.  
+**Modify:**  Finally, we can modify these GameObjects that we have connected with, via the Object-Reference variables.  Often, when working with GameObjects, we'll be toggling the gameObject so that it's active / not active in the game scene.  We will be hiding these GameObjects by setting the `SetActive(true /false ) `method to true or false.  The StartButton will be modified in the StartGame( ) method we'll write later in the page.
 
 ```java
 
