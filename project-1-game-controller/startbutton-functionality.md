@@ -2,7 +2,18 @@
 
 In this section, we'll focus on the functionality of the StartButton in the Scene and the Scripts and other gameObjects that have behaviors that connected with this gameObject.
 
-The StartButton is used to start and restart the game, it is used to call the custom StartGame( ) method in the GameController class. Once the StartButton has been clicked, objects should start falling from the AppleTree, and the StartButton should be hidden. When the StartButton is clicked, the GameController.gameActive variable should be set to true.  
+The StartButton is used to start and restart the game, it is used to call the custom StartGame( ) method in the GameController class. Once the StartButton has been clicked, objects should start falling from the AppleTree, and the StartButton should be hidden. When the StartButton is clicked, the GameController.gameActive variable should be set to true.
+
+###Initial Configuration
+The following scripts and gameObjects will be created and modified to get the initial StartButton behavior working (At the bottom of this page are details for secondary modifications based on StartButton functionality)
+**Scripts Involved:**
+1.  AppleTree.cs
+2.  GameController.cs
+
+**GameObjects Involved:**
+1. StartButton
+2. AppleTree
+3. GameController
 
 ###Steps to Create / Configure The StartButton GameObject
 1. Add a UI-Button to the Scene
@@ -69,4 +80,19 @@ using UnityEngine.UI;  //must be added at top of script
       
       
 ```
+
+###Other GameObjects and Scripts to be Modified Later
+ Later on, we will need to make additional modifications to the following gameObjects and scripts so they use the GameController.gameActive variable to control their behavior
+**GameObjects Involved using GameController: gameActive:**
+**Scripts Involved:**
+1. AppleTree.cs
+2. Basket.cs
+3. GameController.cs
+
+**GameObjects Involved:**
+1. GameOverPanel
+2. GameOverText
+3. Basket
+4. AppleTree
+
 
