@@ -29,9 +29,9 @@ Add a UI-Panel to the scene, name it: 'ScorePanel'.  Add a Text gameObject as a 
 ![](/assets/Screen Shot 2018-01-20 at 6.41.40 PM.png)
 
 ###Animation:  Add UI Panel and UI Text.
-The animation below shows how to add a UI-Panel, then how to set the fill color for the panel.  Next, the panel is resized using the rect tool in the upper-right tools menu.The panel's Rect Transform is set so that the panel is anchored to the upper-right corner of the scene, we can see 4 triangles clustered in the upper-right corner showing that the all 4 anchors are set to the upper-right corner of the canvas.  Then, a UI Text element is added to the scene, the Text GameObject is dragged on top of the Panel GameObject so that it becomes a child object.  Then the Text has it's Rect Transform set so it's stretched and anchored to it's parent, the UI Panel.  Then Best Fit is selected for the text, and it's color is changed to white, it's Text field is set to display: Score: 20.
+The animation below shows how to add a UI-Panel, then how to add a UI-Text element and make that a child of the UI-Panel.  Next, the panel is resized using the rect tool in the upper-right tools menu.The panel's Rect Transform is set so that the panel is anchored to the upper-right corner of the scene, we can see 4 triangles clustered in the upper-right corner showing that the all 4 anchors are set to the upper-right corner of the canvas.  Then the Text has it's Rect Transform set so it's stretched and anchored to it's parent, the UI Panel.  Then Best Fit is selected for the text, and it's color is changed to white, it's Text field is set to display: Score: 0.  The UI-Panel should be named: ScorePanel, the UI-Text should be named: ScoreText
 
-![](http://g.recordit.co/7IYONkau7L.gif)
+![](http://g.recordit.co/EQdaJ1Vbrx.gif)
 
 ###UI-Panel and Text for GameOver Notification.
 Create a UI-Panel and a child-gameObject that is a Text element, that'll be used for the display of the GameOver notification.  Name the Panel-gameObject:  'GameOverPanel' and name the Text-gameObject: 'GameOverText'.  Configure the rect-transform for the Text so it's stretched to fit the Panel, anchor it to the corners of it's parent. Resize the Panel and move to the center of the scene.  Set the color of the panel and text so they are visible during gameplay.  
