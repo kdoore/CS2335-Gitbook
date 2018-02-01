@@ -46,9 +46,9 @@ using UnityEngine.UI;  //must be added at top of script
       }
       
       
-       /// <summary>
+    /// <summary>
     /// Starts the game.
-    /// this function Must be public 
+    /// this function Must be declared as public 
     /// function to be called by StartButton, 
     /// This will be added to the OnClick event in the inspector for the StartButton
     /// </summary>
