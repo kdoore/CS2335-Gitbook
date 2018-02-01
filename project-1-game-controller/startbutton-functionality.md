@@ -20,3 +20,53 @@ The StartButton is used to start the game, it is used to call the custom StartGa
 ###Code for the StartButton is in the GameController Script
 
 
+
+```java
+//GameController.cs
+
+using UnityEngine.UI;  //must be added at top of script
+
+//declare object reference variable to connect with the StartButton gameObject
+
+ private GameObject  startButton; 
+ public bool gameActive; //used to control start/stop behavior in many other classes
+ 
+ private AppleTree appleTree //allows us to interact with our custom AppleTree script on the AppleTree GameObject
+ 
+ void Start () {
+        //find all gameObjects that will be activated / deactivated 
+       startButton = GameObject.Find("StartButton"); //initialize object reference to create connection with Scene GameObject
+      
+       //get a reference to the AppleTree script component
+       appleTree = GameObject.Find("AppleTree").GetComponent<AppleTree>();
+      
+       gameActive = false;   //initialize to false
+      
+      //other code in Start() is not shown
+      }
+      
+      
+       /// <summary>
+    /// Starts the game.
+    /// this function Must be public 
+    /// function to be called by StartButton, 
+    /// This will be added to the OnClick event in the inspector for the StartButton
+    /// </summary>
+    public void StartGame()
+    {
+        score = 0;  //reset score to 0
+        //scoreText.text = "Score: " + score;  //Use once we have ScoreText GameObject etc
+
+        gameActive = true; //this is used in other classes to control gameObjects
+
+        appleTree.DropObjects(); //start apples dropping to start the game
+        
+        //Invoke("appleTree.DropObjects", 2f);  //could also use this to start apples dropping with 2 second delay.
+
+        startButton.SetActive(false); //hide StartButton
+        // gameOverPanel.SetActive(false); // don't use this code until we have created the GameOverPanel etc
+    }
+      
+      
+```
+
