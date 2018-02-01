@@ -10,7 +10,9 @@ When deciding what gameObject to attach a script to, we need to consider all gam
 3.  Move this GameObject near the top of the Hierarchy Panel, just below the Main Camera
 4.  Add the GameController.cs script to this GameController empty gameObject.
 
-![](/assets/Screen Shot 2018-02-01 at 1.37.42 PM.png)     ![](/assets/Screen Shot 2018-02-01 at 1.41.39 PM.png)
+    ![](/assets/Screen Shot 2018-02-01 at 1.37.42 PM.png)       ![](/assets/Screen Shot 2018-02-01 at 1.41.39 PM.png)
+[Link to Animation showing how to complete the steps above:
+](http://recordit.co/PoSc8aALqU)
 
 ###UI Elements - using UnityEngine.UI
 As discussed in the previous page, we will have added several User Interface (UI) elements to the game.
@@ -24,7 +26,7 @@ It's critical that we add a directive to the top of our script to include the Un
  using UnityEngine.UI;   //Add this additional directive for UI components
 ```
 
-#Object Reference Variables for GameObject-Components: 
+#Object Reference Variables for GameObject-Components: ScoreText, GameOverText
 
 ###Declare, Initialize, and Modify
  **Declare:** At the top of the class file definition, we will **declare object-reference variables** to allow us to interact with Components on these UI GameObjects. 
@@ -60,7 +62,7 @@ It's critical that we add a directive to the top of our script to include the Un
      }
      ```
     
-#Object Reference Variables for GameObjects:
+#Object Reference Variables for GameObjects: StartButton, GameOverPanel
 When working with GameObjects in our code, often we want to toggle visibility, to show / hide a gameObject.  There are several ways show / hide UI gameObjects, we'll look at other methods later in the course.  If we will hide a gameObject by setting 'setActive( false )', **the gameObject must be active when the scene first starts**, otherwise, we won't be able to make our initial connection to find the gameObject. 
 
 ###Declare, Initialize, Modify
