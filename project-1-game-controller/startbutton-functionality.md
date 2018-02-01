@@ -80,7 +80,20 @@ using UnityEngine.UI;  //must be added at top of script
       
       
 ```
-###Verify these changes work 
+###Verify Changes Work 
+After configuring the StartButton as detailed above, when we run the game we should see the following behaviors:
+1.  The StartButton should change colors when the mouse hovers over it, it should show the highlight color when mouseOver happens.
+2.  When the StartButton is clicked, it should disappear from the screen
+3. The StartButton gameObject should have the words grayed-out in the hierarchy panel, indicating it is disabled.
+4. Apples and Rocks should only start dropping after the StartButton was clicked.
+
+If these changes don't work, what debug techniques can you use?  
+1.  First, identify what behavior is not working correctly and try to think about the gameObjects and scripts that are responsible for the problematic behavior.
+2.  Look for error messages in the console.
+3.  Put a Debug.Log( "StartButton Clicked" ); in the StartGame() method of GameController to verify that the method has been executed.
+4.  Pus a Debug.Log("Dropping Objects"); in the DropObjects( ) method of the AppleTree script.
+
+What are other debug ideas?
 
 
 
