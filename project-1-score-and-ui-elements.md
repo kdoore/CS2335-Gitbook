@@ -12,7 +12,10 @@ When the Canvas is added to a scene, by default, it's layout is offset from the 
 
 ![](Screenshot 2016-02-15 20.14.52.png)
 
+
 ###UI-Button, Child-GameObject: Text
+[See additional documentation about configuring the StartButton](/project-1-game-controller/startbutton-functionality.md "StartButton Functionality")
+
 Add a UI Button to the game scene.  Name the button 'StartButton'.  The StartButton has a child gameObject: Text. Configure the Text GameObject, so it's Text Component', Text field has a value of 'Start Game'.  See the animation below to add a StartButton gameObject to the scene.
 
 ###Set Position, Color of Button, 
