@@ -32,5 +32,8 @@ The animation below shows how to add a UI-Panel, then how to add a UI-Text eleme
 
 ![](http://g.recordit.co/EQdaJ1Vbrx.gif)
 
+###Code Changes in GameController.cs
+
+
 
 
