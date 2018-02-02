@@ -78,7 +78,6 @@ using UnityEngine.UI;   //Add this additional directive for UI components at the
 **Create UpdateScore( ) Method**
 This method will be called from the Basket.cs class when a collision has occured, so it must be public.  We'll pass in the points for whatever object we've collided with.  We'll make additional changes to this code late.
 
-
 ```java
 public void UpdateScore(int points)
     { 
@@ -116,5 +115,55 @@ public void StartGame()
 
 ```
 
+###Basket Class Code Changes - Call `UpdateScore( int points)`
+In the Basket.cs script file, we need to change the OnCollisionEnter2D( ) event function so that we're updating the score.  
+
+**declare**
+First we need to create an object reference to the GameController script component.
+
+```java
+ //declare object reference
+ private GameController gameController;
+ ```
+**initialize**
+Then we need to make the connection with the GameController GameObject so we can interact with it.  First we need to find the GameObject named "GameController", then we need to get the GameController script component on that GameObject.  The code below shows how to make that connection
+
+
+
+```java
+ void Start(){
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+    }
+```
+
+**modify**
+In the code below, we need to add code to allow us to find out the pointValue associated with each object we've collided with, then we pass those points to the UpdateScore( ) method of the gameController script component.
+
+  
+```java
+ void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameObject collidedWith = collision.gameObject; //get  a reference to the gameObject 
+    
+       
+        if(collidedWith.tag == "Apple"){
+            //get a reference to the Apple script to find out how many points this object is worth.
+            Apple apple = collidedWith.GetComponent<Apple>(); //create a connection with the Apple script component on the apple 
+            //so we can get the pointValue.
+            //then pass those points to UpdateScore( )
+            gameController.UpdateScore(apple.pointValue);
+    
+            Destroy(collidedWith);
+        }else if(collidedWith.tag =="Rock")
+  {
+            //same as above, we want to pass the rock's pointValue to the UpdateScore( ) method.
+            Rock rock = collidedWith.GetComponent<Rock>();
+            gameController.UpdateScore(rock.pointValue);
+            Destroy(collidedWith);
+        }
+    }
+
+
+```
 
 
