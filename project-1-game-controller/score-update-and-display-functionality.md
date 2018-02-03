@@ -107,10 +107,10 @@ public void StartGame()
         ///Code below was already here
         gameActive = true; //this is used in other classes to control gameObjects
 
-        //use one of these to start Dropping objects
+        //call DropObjects( ) in the appleTree script component
         appleTree.DropObjects(); //start apples dropping
 
-       startButton.SetActive(false); //hide StartButton
+        startButton.SetActive(false); //hide StartButton
      
     }
 
@@ -190,7 +190,28 @@ In the code below, we need to add code to allow us to find out the pointValue as
 ```
 
 ###Verify if Changes Work
+When you play the scene, after you have pressed the StartGame Button, does the ScoreText get updated, so the value is modified as you collide with objects?  The score should increase when you collide with positive objects, it should decrease when you collide with negative objects.  
+
+###Debugging 
+
+1. When you run the game, do you get any errors in the console?    If you have any errors, see if you can identify the line in your scripts that's causing the error.  You must eliminate all error messages before you start any other debugging steps.
+
+ 2.  If the ScoreText isn't changing value when the game runs, stop the game, change the starting text for the ScoreText, so that it starts with no value, 'Score:'.  This should be modified when you hit the StartButton, because that is the first place where we try to modify it:  ` scoreText.text = "Score: " + score; ` . So, it should change to display 'Score: 0' after this StartButton code is executed. 
 
 
+3. Where can you add Debug.Log( ) statements to your code to give yourself more info about what's not working correctly?   
+
+The next place to add a debug statement is in the Basket.cs class, within the OnCollisionEnter2D, we would want to see the point value associated with the apple or rock objects, so we should add this Debug line of code between these lines.
+
+
+```java
+
+Apple apple = collidedWith.GetComponent<Apple>();
+Debug.Log("apple points: " + apple.pointValue); //Add this debug statement
+gameController.UpdateScore(apple.pointValue);
+```
+
+
+            
 
 
