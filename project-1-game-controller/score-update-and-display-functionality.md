@@ -121,7 +121,17 @@ We need to have points associated with each dropped object.  So, let's add a pub
 
 
 
+```java
+public class Apple : MonoBehaviour
+{
+    public int pointValue = 2; //this must be public so we can access it in the Basket.cs class
+  
+  ///rest of code in this class is unchanged
 
+
+}
+
+```
 
 
 ###Basket Class Code Changes - Call `UpdateScore( int points)`
@@ -180,5 +190,7 @@ In the code below, we need to add code to allow us to find out the pointValue as
 ```
 
 ###Verify if Changes Work
+
+
 
 
