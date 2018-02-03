@@ -35,7 +35,7 @@ The animation below shows how to add a UI-Panel, then how to add a UI-Text eleme
 ###Code Changes associated with Updating and Displaying Score
 The first code to modify is the code in the GameController.cs script by creating a method: UpdateScore(), that updates the score value, then we'll make changes to the Basket.cs code to call this UpdateScore( ) method  when a collision happens, finally, we'll update the display of the score.
 
-**Steps: **
+**Overview of Steps: **
 
 1.  Create variable to hold score in GameController.cs
 2.  Create a public method: `UpdateScore( int points )`, in the GameController.cs.
@@ -43,7 +43,7 @@ The first code to modify is the code in the GameController.cs script by creating
 4.  Add code to update the displayed ScoreText in GameController.cs.
 5.  Make sure that the score is reset to 0 when the game is restarted in GameController.cs
 
-###Code Changes in GameController.cs
+###Detailed Steps: Code Changes in GameController.cs
 As detailed in the [GameController section](https://kdoore.gitbooks.io/cs-2335/content/project-1-game-controller.html#object-reference-variables-for-gameobject-components-scoretext-gameovertext), first we need to declare object reference variables that allow us to interact with the ScoreText GameObject.
 
 **Make sure you have added UnityEngine.UI directive**
@@ -67,7 +67,7 @@ using UnityEngine.UI;   //Add this additional directive for UI components at the
     // Use this for initialization
     void Start () {
  
-   //find text components for score 
+   //find text components for score so we can modify 
     scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
     score = 0; //initialize score value
  
@@ -79,6 +79,7 @@ using UnityEngine.UI;   //Add this additional directive for UI components at the
 This method will be called from the Basket.cs class when a collision has occured, so it must be public.  We'll pass in the points for whatever object we've collided with.  We'll make additional changes to this code late.
 
 ```java
+//in GameController.cs
 public void UpdateScore(int points)
     { 
     
@@ -115,6 +116,14 @@ public void StartGame()
 
 ```
 
+###Apple, Rock, or PickUp Class Code Changes
+We need to have points associated with each dropped object.  So, let's add a public instance variable to the classes that represent our dropped objects.  
+
+
+
+
+
+
 ###Basket Class Code Changes - Call `UpdateScore( int points)`
 In the Basket.cs script file, we need to change the OnCollisionEnter2D( ) event function so that we're updating the score.  
 
@@ -122,6 +131,8 @@ In the Basket.cs script file, we need to change the OnCollisionEnter2D( ) event 
 First we need to create an object reference to the GameController script component.
 
 ```java
+ //in Basket.cs
+
  //declare object reference
  private GameController gameController;
  ```
@@ -129,8 +140,8 @@ First we need to create an object reference to the GameController script compone
 Then we need to make the connection with the GameController GameObject so we can interact with it.  First we need to find the GameObject named "GameController", then we need to get the GameController script component on that GameObject.  The code below shows how to make that connection
 
 
-
 ```java
+//in Basket.cs
  void Start(){
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
@@ -141,6 +152,8 @@ In the code below, we need to add code to allow us to find out the pointValue as
 
   
 ```java
+//in Basket.cs
+
  void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject collidedWith = collision.gameObject; //get  a reference to the gameObject 
