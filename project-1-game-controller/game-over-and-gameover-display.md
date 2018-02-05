@@ -43,3 +43,4 @@ void Start () {
 
 ```
 
+**Modify** - Set GameOverText when the game has ended, then make the panel and text visible
