@@ -194,9 +194,9 @@ When you play the scene, after you have pressed the StartGame Button, does the S
 
 ###Debugging 
 
-1. When you run the game, do you get any errors in the console?    If you have any errors, see if you can identify the line in your scripts that's causing the error.  You must eliminate all error messages before you start any other debugging steps.
+1. When you run the game, do you get any errors in the console?    If you have any errors, see if you can identify the line in your code that's causing the error.  You must eliminate all error messages before you start any other debugging steps.
 
- 2.  If the ScoreText isn't changing value when the game runs, stop the game, change the starting text for the ScoreText, so that it starts with no value, 'Score:'.  This should be modified when you hit the StartButton, because that is the first place where we try to modify it:  ` scoreText.text = "Score: " + score; ` . So, it should change to display 'Score: 0' after this StartButton code is executed. 
+ 2.  If the ScoreText isn't changing value when the game runs, stop the game, change the starting text for the ScoreText, so that it starts with no value, 'Score:'.  You should see this displayed value get modified when you hit the StartButton, because that is the first place where we try to modify it:  ` scoreText.text = "Score: " + score; `. So, it should change to display 'Score: 0' after this StartButton code is executed. 
 
 
 3. Where can you add Debug.Log( ) statements to your code to give yourself more info about what's not working correctly?   
