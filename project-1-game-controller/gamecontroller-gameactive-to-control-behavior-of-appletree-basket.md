@@ -97,6 +97,29 @@ We'll use the gameController.gameActive variable to wrap all code inside the App
          
         } //ADD THIS CLOSE CURLY BRACE
 	}//end Update
+	
+//Make change to last line of code in AppleTree.DropObjects, so Invoke( ) is only executed if gameActive is true
+	
+	
+    public void DropObjects()
+    {
+        //No new code below here
+        if (Random.value < chanceToDropRock)
+        {
+            GameObject rock = Instantiate<GameObject>(rockPrefab);
+            rock.transform.position = this.transform.position;
+        }
+        else { 
+            GameObject apple = Instantiate<GameObject>(applePrefab);
+            apple.transform.position = this.transform.position;
+        }
+        //No new code above here
+        
+        /////ADD THIS CODE at the bottom of the method
+        if (gameController.gameActive) { 
+            Invoke("DropObjects", secondsBetweenAppleDrops);
+        }
+    }
 
 ```
 
