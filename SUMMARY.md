@@ -14,6 +14,7 @@
     * [StartButton Functionality](project-1-game-controller/startbutton-functionality.md)
     * [Score: Update and Display Functionality](project-1-game-controller/score-update-and-display-functionality.md)
     * [Game-Over and GameOver Display](project-1-game-controller/game-over-and-gameover-display.md)
+    * [GameController gameActive to Control Behavior of AppleTree, Basket](project-1-game-controller/gamecontroller-gameactive-to-control-behavior-of-appletree-basket.md)
   * [Project 1 - Updates to Custom Scripts](project-1-updates-to-custom-scripts.md)
 * [Game Objects](game_objects.md)
 * [Finding Game Objects](finding_game_objects.md)
