@@ -15,14 +15,11 @@ For the Basket.cs code, we need to declare an object reference variable so we ca
 **Initialize** in Start( ) - find the GameObject: GameController, get the GameController script component on that gameObject.
 
 
-
 ```java
  void Start(){
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 ```
-
-
 
 **Access and Use: gameActive**
 We'll use the gameController.gameActive variable to wrap all code inside the Basket.cs Update function - so no code will be executed here unless gameController.gameActive is true.  This will keep the basket from moving until the game has been started.	
@@ -46,8 +43,64 @@ void Update () {
             this.transform.position = pos;
         //NO NEW CODE ABOVE HERE
     
-    
         } //ADD THIS - close curly-brace
 	} //End of Update
 ```
+
+###AppleTree.cs
+Just as we did in the Basket.cs class, in order to use gameActive in the AppleTree class, we must first Declare, and Initialize an object reference variable for the gameController script object.  Then we'll also use the gameActive variable to wrap code in AppleTree.cs Update.
+
+Declare - an object reference variable for the GameController script component
+
+**Declare** An object reference variable for the GameController script component
+
+
+```java
+ //AppleTree.cs
+ private GameController gameController;
+```
+**Initialize** in Start( ) - find the GameObject: GameController, get the GameController script component on that gameObject.
+
+
+```java
+ void Start(){
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+    }
+```
+
+**Access and Use: gameActive**
+We'll use the gameController.gameActive variable to wrap all code inside the AppleTree.cs Update function - so no code will be executed here unless gameController.gameActive is true.  This will keep the basket from moving until the game has been started.	
+
+
+
+```java
+
+	// Update is called once per frame
+	void Update () {
+        if (gameController.gameActive) //ADD THIS CODE
+        {  //ADD THIS OPEN CURLY BRACE
+    
+           //NO NEW CODE BELOW HERE
+            Vector3 pos = transform.position;
+            pos.x += speed * Time.deltaTime;
+            transform.position = pos;
+
+            if (pos.x < -leftRightEdge)
+            {
+                speed = Mathf.Abs(speed); //make sure speed is positive
+            }
+            else if (pos.x > leftRightEdge)
+            {
+                speed = -Mathf.Abs(speed); //make sure speed is negative
+            }
+    
+         //NO NEW CODE ABOVE HERE
+         
+        } //ADD THIS CLOSE CURLY BRACE
+	}//end Update
+
+```
+
+
+
 
