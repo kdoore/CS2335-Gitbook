@@ -209,6 +209,7 @@ The next place to add a debug statement is in the Basket.cs class, within the On
 Apple apple = collidedWith.GetComponent<Apple>();
 Debug.Log("apple points: " + apple.pointValue); //Add this debug statement
 gameController.UpdateScore(apple.pointValue);
+
 ```
 
 
