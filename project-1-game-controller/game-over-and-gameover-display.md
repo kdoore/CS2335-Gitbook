@@ -74,5 +74,18 @@ void Start () {
     }
 
 
+
+ public void StartGame()
+    {
+        //Add this code if you haven't already done this
+        gameActive = true; //this is used in other classes to control gameObjects
+
+       ///ADD THIS CODE to StartGame to hide this panel 
+       gameOverPanel.SetActive(false); //hide gameOver panel
+       
+       ///other StartGame code not shown
+    }
+	
+
 ```
 
