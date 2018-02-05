@@ -66,11 +66,11 @@ void Start () {
     
     
     //Show gameOverPanel, startButton
-    //set appleTree.gameActive to false
+    //set appleTree.gameActive to false - this is used to control behavior of appleTree and basket.
     private void StopGame(){
         gameActive = false;
-        gameOverPanel.SetActive(true);
-        startButton.SetActive(true);
+        gameOverPanel.SetActive(true);  //show gameOverPanel
+        startButton.SetActive(true);   //show start button
     }
 
 
