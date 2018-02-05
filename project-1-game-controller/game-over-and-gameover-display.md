@@ -18,13 +18,10 @@ Just as we added the ScorePanel and the ScoreText, we need to add these gameObje
 ** Declare **Object References
 
 ```java
- private Text gameOverText;
-   
- private GameObject  gameOverPanel;
+ private Text gameOverText; //Text component
+ private GameObject  gameOverPanel; //GameObject
 ```
-
 **Initialize** to connect with GameObject / Components in Start()
-
 
 ```java
 
@@ -42,5 +39,40 @@ void Start () {
 	}
 
 ```
+###GameController.cs UpdateScore( ) and StopGame( ) Methods
+**Modify** - Set GameOverText when the game has ended, then make the panel and text visible.  This happens in UpdateScore( ).  We've also created a new method: StopGame(), this is where we show the GameOverPanel
 
-**Modify** - Set GameOverText when the game has ended, then make the panel and text visible
+
+```java
+
+ //GameController.cs
+    public void UpdateScore(int points)
+    { 
+        score += points;
+        scoreText.text = "Score: " + score;
+       
+        //ADD CODE For Win condition
+        if (score >= winScore)
+        {
+            gameOverText.text = "You are a Winner!"; //Set text to show win state
+            StopGame();
+        }
+        else if (score <= 0)
+        {
+            gameOverText.text = "Sorry, you lost this time.";//Set text to show win state
+            StopGame();
+        }
+    }
+    
+    
+    //Show gameOverPanel, startButton
+    //set appleTree.gameActive to false
+    private void StopGame(){
+        gameActive = false;
+        gameOverPanel.SetActive(true);
+        startButton.SetActive(true);
+    }
+
+
+```
+
