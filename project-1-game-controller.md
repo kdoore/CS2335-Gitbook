@@ -175,7 +175,7 @@ The StartGame function will be executed when the StartButton is clicked.  This f
 
         gameActive = true; //this is used in other classes to control gameObjects
 
-        appleTree.DropApple(); //start apples dropping
+        appleTree.DropObjects(); //start objects dropping
 
         startButton.SetActive(false); //hide StartButton
         gameOverPanel.SetActive(false); //hide gameOver panel
