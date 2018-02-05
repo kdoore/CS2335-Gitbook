@@ -69,8 +69,7 @@ Declare - an object reference variable for the GameController script component
 ```
 
 **Access and Use: gameActive**
-We'll use the gameController.gameActive variable to wrap all code inside the AppleTree.cs Update function - so no code will be executed here unless gameController.gameActive is true.  This will keep the basket from moving until the game has been started.	
-
+We'll use the gameController.gameActive variable to wrap all code inside the AppleTree.cs Update function - so no code will be executed here unless gameController.gameActive is true.  This will keep the AppleTree from moving until the game has been started.	
 
 
 ```java
