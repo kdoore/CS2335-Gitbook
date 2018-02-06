@@ -28,6 +28,9 @@ The following scripts and gameObjects will be created and modified to get the in
 
 ![](http://g.recordit.co/j0q1PTchAr.gif)
 
+
+
+
 ###Code for the StartButton is in the GameController Script
 
 
@@ -81,6 +84,19 @@ using UnityEngine.UI;  //must be added at top of script
       
       
 ```
+
+###Animation Showing How to Add the GameController StartGame( ) function to the Button's OnClick() Event.
+Once we have defined the public method: StartGame in the GameController code, then we want to configure the StartButton to execute that method when it is clicked.  As in step 7 above: On the OnClick section of the Button's script component, select the GameController gameObject, then select the StartGame() method. This method will be executed when the StartButton is clicked.
+ 
+If the StartGame() method doesn't show up in the list of functions to select, then 
+
+![](http://g.recordit.co/EJN70APH3M.gif)
+
+Note in the image below, after selecting the GameController GameObject, and then selecting the StartGame() function, the displayed icon changes, so that it displays that we're using the GameController Script Component
+
+![](/assets/Screen Shot 2018-02-06 at 10.08.49 AM.png)
+
+
 ###Verify Changes Work 
 After configuring the StartButton as detailed above, when we run the game we should see the following behaviors:
 1.  The StartButton should change colors when the mouse hovers over it, it should show the highlight color when mouseOver happens.
