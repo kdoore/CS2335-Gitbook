@@ -37,7 +37,7 @@ public class Apple : MonoBehaviour {
 
 ```
 ###Rock.cs or PickUp.cs
-Similarly, We should create a script like the Apple script for any other dropped objects.  Or, we can create a script called PickUp, that can work for all dropped objects.  
+Similarly, we should create a script like the Apple script for any other dropped objects.  Or, we can create a script called PickUp, that can work for all dropped objects.
 
  
 
