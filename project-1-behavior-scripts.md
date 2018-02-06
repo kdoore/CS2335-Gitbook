@@ -46,11 +46,9 @@ Similarly, we should create a script like the Apple script for any other dropped
 public class PickUp : MonoBehaviour
 {
 
-    //this variable tracks the lowest point the apples should reach before 
-    //being destroyed, this is the same for all appples, so it's been
-    //set as a class-level, static, variable and will not show up in the inspector.
     public static float bottomY = -12f;
 
+    [Header("Set In Inspector")]
     public int pointValue;
 
     // Update is called once per frame
