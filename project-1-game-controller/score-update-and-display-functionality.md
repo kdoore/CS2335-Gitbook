@@ -101,7 +101,7 @@ public void StartGame()
     {   
          ///ADD these 2 lines of NEW CODE
         score = 0;  //reset score to 0
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score; //updates displayed score in scene
 
          
         ///Code below was already here
@@ -176,12 +176,23 @@ In the code below, we need to add code to allow us to find out the pointValue as
             //then pass those points to UpdateScore( )
             gameController.UpdateScore(apple.pointValue);
     
+            //If you used a PickUp script component, this is the code you'll need to use
+            //PickUp pickup = collidedWith.GetComponent<PickUp>();
+            //gameController.UpdateScore(pickup.pointValue);    
+    
+    
             Destroy(collidedWith);
         }else if(collidedWith.tag =="Rock")
   {
             //same as above, we want to pass the rock's pointValue to the UpdateScore( ) method.
-            Rock rock = collidedWith.GetComponent<Rock>();
+            Rock rock = collidedWith.GetComponent<Rock>();         
             gameController.UpdateScore(rock.pointValue);
+            
+            //If you used a PickUp script component, this is the code you'll need to use
+            //PickUp pickup = collidedWith.GetComponent<PickUp>();
+            //gameController.UpdateScore(pickup.pointValue);
+            
+           
             Destroy(collidedWith);
         }
     }
