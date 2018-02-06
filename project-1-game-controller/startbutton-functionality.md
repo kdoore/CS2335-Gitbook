@@ -92,7 +92,7 @@ If the StartGame() method doesn't show up in the list of functions to select, th
 
 ![](http://g.recordit.co/EJN70APH3M.gif)
 
-Note in the image below, after selecting the GameController GameObject, and then selecting the StartGame() function, the displayed icon changes, so that it displays that we're using the GameController Script Component
+Note in the image below, after selecting the GameController GameObject, and then selecting the StartGame() function, the displayed icon changes, so that it looks like we made the connection with the GameController Script Component, this is a bit confusing, but this is the correct final view.  Make sure you understand, this does not indicate that I have initially selected the script component from the project assets.
 
 ![](/assets/Screen Shot 2018-02-06 at 10.08.49 AM.png)
 
