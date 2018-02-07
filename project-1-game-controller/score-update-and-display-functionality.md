@@ -160,7 +160,7 @@ Then we need to make the connection with the GameController GameObject so we can
 **modify**
 In the code below, we need to add code to allow us to find out the pointValue associated with each object we've collided with, then we pass those points to the UpdateScore( ) method of the gameController script component.
 
-  
+###Basket.cs Code To Get Points from Apples, Rocks, and pass to GameController UpdateScore( )  
 ```java
 //in Basket.cs
 
@@ -214,12 +214,22 @@ When you play the scene, after you have pressed the StartGame Button, does the S
 
 The next place to add a debug statement is in the Basket.cs class, within the OnCollisionEnter2D, we would want to see the point value associated with the apple or rock objects, so we should add this Debug line of code between these lines.
 
+###Debug Code
+The most common place for an error is when trying to get the point value off of your collision objects.  First you must look at your prefabs to verify the script component that you're trying to access on the prefab. 
+
 
 ```java
 
 Apple apple = collidedWith.GetComponent<Apple>();
-Debug.Log("apple points: " + apple.pointValue); //Add this debug statement
-gameController.UpdateScore(apple.pointValue);
+int points = apple.pointValue;
+Debug.Log("apple points: " + points); //Add this debug statement
+gameController.UpdateScore(points);
+
+
+//If you used a PickUp script component, this is the code you'll need to use
+PickUp pickup = collidedWith.GetComponent<PickUp>();
+Debug.Log("pickup points: " + pickup.pointValue); //Add this debug 
+gameController.UpdateScore(pickup.pointValue);
 
 ```
 
