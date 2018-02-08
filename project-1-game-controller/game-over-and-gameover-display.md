@@ -76,16 +76,20 @@ void Start () {
     }
 
 
+//Final code for StartGame
+public void StartGame(){
+        Debug.Log("START GAME EXEZCUTED");
+        score = 0;
+        scoreText.text = "Score: " + score.ToString();
 
- public void StartGame()
-    {
-        //Add this code if you haven't already done this
-        gameActive = true; //this is used in other classes to control gameObjects
+        //order of the next 2 lines of code is critical
+        gameActive = true;  //this must happen before calling DropObjects
 
-       ///ADD THIS CODE to StartGame to hide this panel 
-       gameOverPanel.SetActive(false); //hide gameOver panel
-       
-       ///other StartGame code not shown
+        //make sure gameActive is true before calling DropObjects
+        appleTree.DropObjects();//set gameActive to true before this code
+
+        gameOverPanel.SetActive(false);
+        startButton.SetActive(false);
     }
 	
 

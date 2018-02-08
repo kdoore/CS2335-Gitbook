@@ -172,7 +172,8 @@ The StartGame function will be executed when the StartButton is clicked.  This f
     {
         score = 0;  //reset score to 0
         scoreText.text = "Score: " + score;
-
+        //ordering of next 2 lines of code is important
+        //set gameActive to true before calling DropObjects()
         gameActive = true; //this is used in other classes to control gameObjects
 
         appleTree.DropObjects(); //start objects dropping
