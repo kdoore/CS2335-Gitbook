@@ -33,7 +33,9 @@ void Start () {
    gameOverText = GameObject.Find("GameOverText").GetComponent<Text>();
 
    //deactivate the gameOverPanel, should be hidden at start
-   gameOverPanel.SetActive(false);
+  
+   //DO THIS LAST, find GameOverText first
+     gameOverPanel.SetActive(false);
      
     //Other code in Start is not shown here
 	}

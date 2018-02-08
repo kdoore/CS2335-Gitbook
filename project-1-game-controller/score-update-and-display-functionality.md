@@ -105,9 +105,11 @@ public void StartGame()
 
          
         ///Code below was already here
+        ///Ordering of this code matters, this must happen BEFORE appleTree.DropObjects
         gameActive = true; //this is used in other classes to control gameObjects
 
-        //call DropObjects( ) in the appleTree script component
+        //This MUST happen AFTER gameActive is set to true
+       //call DropObjects( ) in the appleTree script component
         appleTree.DropObjects(); //start apples dropping
 
         startButton.SetActive(false); //hide StartButton
