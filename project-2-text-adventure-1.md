@@ -15,4 +15,4 @@ For this project to work, you must first go into your project's Build Settings. 
 ![](/assets/Screen Shot 2018-02-12 at 2.40.58 PM.png)
 
 ###Play the Game
-If you've done the above steps correctly, you should be able to use the EndButton to go to the EndScene, and from there, you should be able to use the
+If you've done the above steps correctly, you should be able to use the EndButton to go to the EndScene, and from there, you should be able to use the StartButton to return to the StartScene.
