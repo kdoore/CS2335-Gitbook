@@ -20,6 +20,7 @@
 * [Game Objects](game_objects.md)
 * [Finding Game Objects](finding_game_objects.md)
 * [Canvas: Screen-Space Overlay](screen-space_canvas.md)
+* [Project 2 - Text Adventure 1](project-2-text-adventure-1.md)
 * [State Machine Framework](state_machine_framework.md)
 * [StateManager - Singleton Design Pattern](statemanager.md)
 * [IStateBase](istatebase.md)
