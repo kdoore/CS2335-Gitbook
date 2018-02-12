@@ -18,6 +18,10 @@ We will use the StateManager instance to delegate control of the Scene's logic t
 
 ![](/assets/Cs2335 - 8.png)
 
+###UML Class Diagram - State Machine Framework
+![](/assets/Screen Shot 2018-02-12 at 3.43.41 PM.png)
+
+
 ###StateManager.cs Code
 
 ```java
