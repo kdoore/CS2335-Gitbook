@@ -1,6 +1,11 @@
 # State Machine Framework
 
-The diagram below gives an overview of how we will implement a State Machine Framework for a Unity project. 
+The diagram below gives an overview of how we will implement a State Machine Framework for a Unity project.
+
+ ###State Machine Basics in Unity
+ The following link to the Unity Manual gives an overview of how State Machines are used in Unity.
+[ State Machines in Unity ](https://docs.unity3d.com/Manual/StateMachineBasics.html)
+	>Unity’s Animation State Machines provide a way to overview all of the animation clips related to a particular character and allow various events in the game (for example user input) to trigger different animations.
 
 ###StateManager Class
 The StateManager class will manage the stateMachine. It will keep track of the current activeState, it will delegate responsibility for scene logic to the current activeState. It will manage and coordinate messaging and state-transition event synchronization.
