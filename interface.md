@@ -22,4 +22,5 @@ interface IEquatable<T>
 
 
 [Unity video on Interfaces](https://unity3d.com/learn/tutorials/topics/scripting/interfaces)
+
 Interfaces provide a way implement similar behaviors across several classes.  Since most scripts we write will have MonoDevelop as the 

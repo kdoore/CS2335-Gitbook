@@ -5,6 +5,8 @@ The Unity Animator controller provides a visual programming language implementat
 Animation Tutorials:  
 [2D Animation in Unity - Raywenderlich](http://www.raywenderlich.com/66345/unity-2d-tutorial-animations)
 
+[Animate UI Elements](https://www.raywenderlich.com/149955/introduction-unity-ui-part-2-2)
+
 ### Create an Animation from a series of sprites
 
 To create an animation, we can select a series of sprites and drag them into the scene window.  We are then prompted to save this animation.  This immediately creates several components:
