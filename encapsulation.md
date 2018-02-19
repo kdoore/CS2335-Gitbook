@@ -8,4 +8,4 @@ Some programming language researchers and academics use the first meaning alone 
 
 >The second definition is motivated by the fact that in many of the OOP languages hiding of components is not automatic or can be overridden; thus, information hiding is defined as a separate notion by those who prefer the second definition.
 
-[Wikipedia link(https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
+Wikipedia link (https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)
