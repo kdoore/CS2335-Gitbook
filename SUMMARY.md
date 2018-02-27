@@ -28,6 +28,7 @@
   * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
   * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
   * [Utility - Static Class](utility_-_static_class.md)
+  * [Project 2 - Dialog Package](project-2-dialog-package.md)
 * [Text Input](text_input.md)
 * [Game Scene](game_scene.md)
 * [Player GameObject](player_gameobject.md)
