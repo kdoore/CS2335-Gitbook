@@ -99,4 +99,25 @@ To add a Button to the BeginScene, select: GameObject > UI > Button.  Name this 
 
 ###Add Code to BeginState for the new Button's Function
 
+- Declare Object-Reference Variable for a Button Component
+
+
+```java
+
+private Button someSceneBtn;
+```
+- Initialize the object reference in: InitializeObjectRefs( )
+
+
+```java
+
+public void InitializeObjectRefs ()
+	{
+		someSceneBtn = GameObject.Find ("SomeSceneButton").GetComponent<Button> ();
+		someSceneBtn.onClick.AddListener (LoadSomeScene);
+		Debug.Log ("In BeginState initializeObjRefs");
+	}
+
+```
+- 
 
