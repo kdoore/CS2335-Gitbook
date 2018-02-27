@@ -7,6 +7,11 @@ In Unity, we can use Scenes to implement game levels.  Using the StateManager fr
 
 1. Add 2-Buttons to each Scene
 2. Add all scenes to the edit => Build Settings  => Scenes
+3. Add code in StateX.cs file to:
+ A.  Find the Button Component
+ B.  Write a custom method to change scenes/ states
+ C.  Add the custom method to the OnClick event of the Button component in script
+ D.  Run the scene and see if the Button Works
 
 ###Add Scenes to Project Build Settings
 
@@ -16,12 +21,39 @@ Although there are methods that allow us to use the inspector to determine which
 
 We must create a custom method that we want to have executed by the Button component's onClick event, we'll learn more about passing functions to the AddListener Method, but essentially, we are using the method name: LoadBeginState, as an argument to AddListener( ), this registers our LoadBeginState as a Listener to this button's onClick event.
 
+###Button Logic in BeginState to Switch Scenes
 ```java
 
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
+public class BeginState : IStateBase
+{
+       //other class code is missing here
 
+	private Button endBtn
+	
+	public void InitializeObjectRefs ()
+	{
+		endBtn = GameObject.Find ("EndButton").GetComponent<Button> ();
+		endBtn.onClick.AddListener (LoadEndScene);
  
+		Debug.Log ("Add Debug Info");
+	}
+ 
+ 
+	/// <summary>
+	/// Event handler - called when endBtn is clicked
+	/// Loads the end scene.
+	/// </summary>
+	public void LoadEndScene ()
+	{  
+		Debug.Log ("Add Debug Info");
+		SceneManager.LoadScene ("EndScene"); //Unity event function to Load new scene by name
+		StateManager.managerInstance.SwitchState (new EndState ()); //StateManager code to change State
+	}
+}//end class
 
 ```
