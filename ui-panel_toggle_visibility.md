@@ -10,9 +10,8 @@
 ###Buttons to control UI Panels.
 If we add a UI-Panel gameObject to our canvas.  We can use it as a container in the hierarchy to 'hold' our other UI elements. We can create a different button to can control the visibility of the UI-Panel:  startPanel and we need to write a custom method in our Script class that will toggle the panel visibility when the user clicks the button. 
 
-The UI Panel can not be directly modified as a component in our C# scripts.  In order to use the panel to control visibility of itself and it's child elements, we need to add a ``Component -> Layout -> CanvasGroup`` to the Panel gameObject.   Here's a link to the Unity Documentation on [CanvasGroup](http://docs.unity3d.com/Manual/class-CanvasGroup.html)
-
-![](MapPanel.gif)
+###Layout Component: CanvasGroup controls UI-Transparancy
+A UI Panel often is used as a container for holding other UI elements.  In order to use the panel to control visibility of itself and it's child elements, we can add a ``Component -> Layout -> CanvasGroup`` to the Panel gameObject.   Here's a link to the Unity Documentation on [CanvasGroup](http://docs.unity3d.com/Manual/class-CanvasGroup.html)
 
 Once we have added the CanvasGroup component to our Panel-UI element, then we can need to write a function that will toggle the panel's alpha value, interactibility,and blocksRaycast properties.  We can add this functionality to any C# script file.  
 
