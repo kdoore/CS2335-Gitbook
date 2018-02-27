@@ -6,4 +6,8 @@ This section will provide details for how to create a Scene and corresponding st
 To create a new scene, right-click in the Unity Project / Assets Panel and select the Create > Scene option.  Name this scene using a descriptive name according to your project's theme.  Next, Add this scene to your project's build settings, following the instructions in the main Project2 page: [Add scene to Build Settings](https://kdoore.gitbooks.io/cs-2335/content/project-2-text-adventure-1.html#option-2-add-scenes-in-build-settings)
 
 ###Configure the Canvas to use Screen-Space Camera
-[ Configure Canvas to use Screen-Space Camera](https://kdoore.gitbooks.io/cs-2335/content/project-1-score-and-ui-elements.html#animation-set-canvas-render-mode-to-screen-space-camera) 
+[ See Animation: Configure Canvas to use Screen-Space Camera](https://kdoore.gitbooks.io/cs-2335/content/project-1-score-and-ui-elements.html#animation-set-canvas-render-mode-to-screen-space-camera) 
+
+###Create a StateX Script file to correspond to the new Scene
+Create a new C# Script in the scripts folder of your project's asset panel.  Name the script so it's obvious this script corresponds to the scene you just created.  Then, we'll need to modify the code for this script so that it is similar to the other StateX files that were included in the starter code, such as BeginState.
+
