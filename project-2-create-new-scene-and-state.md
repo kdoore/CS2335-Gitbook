@@ -114,10 +114,27 @@ private Button someSceneBtn;
 public void InitializeObjectRefs ()
 	{
 		someSceneBtn = GameObject.Find ("SomeSceneButton").GetComponent<Button> ();
-		someSceneBtn.onClick.AddListener (LoadSomeScene);
+		someSceneBtn.onClick.AddListener (LoadSomeScene); //call custom method defined below
 		Debug.Log ("In BeginState initializeObjRefs");
 	}
 
 ```
-- 
+- Write Custom Method to change scene and state
+
+
+```java
+
+/// <summary>
+	/// Event handler - called when endBtn is clicked
+	/// Loads the end scene.
+	/// </summary>
+	public void LoadSomeScene ()
+	{  
+		Debug.Log ("Leaving BeginScene going to SomeScene");
+		SceneManager.LoadScene ("SomeScene");  //actual scene name
+		StateManager.instanceRef.SwitchState (new SomeState ());  //create new state, pass to StateManager
+	}
+```
+
+
 
