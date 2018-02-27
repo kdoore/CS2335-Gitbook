@@ -93,5 +93,10 @@ public class SomeState : IStateBase
 ```
 
 ###Add A Button to the BeginScene to the new Scene.
+Now you must add buttons to other scenes, and code to other state scripts so you can get to this new scene.
+
+To add a Button to the BeginScene, select: GameObject > UI > Button.  Name this button so that it corresponds to the task it will be used for.  For example, we can call it: SomeSceneButton
+
+###Add Code to BeginState for the new Button's Function
 
 
