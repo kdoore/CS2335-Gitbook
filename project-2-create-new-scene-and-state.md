@@ -92,5 +92,6 @@ public class SomeState : IStateBase
 
 ```
 
-8.
+###Add A Button to the BeginScene to the new Scene.
+
 
