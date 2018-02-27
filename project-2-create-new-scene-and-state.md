@@ -27,7 +27,7 @@ public enum GameScene
 Create a new C# Script in the scripts folder of your project's asset panel.  Name the script so it's obvious this script corresponds to the scene you just created.  Then, we'll need to modify the code for this script so that it is similar to the other StateX files that were included in the starter code, such as BeginState.
 
 ###Change Script Steps:
-1.  Add 'using' directives for SceneManagement and UI to the top of the script file:
+ - Add 'using' directives for SceneManagement and UI to the top of the script file:
 
 
 ```java
@@ -36,10 +36,10 @@ using UnityEngine.SceneManagement;
 
 ```
 
-2.  Remove :MonoBehaviour ( Base-Class )
-3.  Add: :IStateBase ( interface )
-4.  Remove:  Unity Start( ) and Update( ) event functions
-5.  Add code for IStateBase, Property: Scene  
+- Remove :MonoBehaviour ( Base-Class )
+- Add: :IStateBase ( interface )
+- Remove:  Unity Start( ) and Update( ) event functions
+- Add code for IStateBase, Property: Scene  
           
 
 ```java
@@ -62,7 +62,7 @@ public class SomeState : IStateBase
 } //end class
     
 ```
-6.  Add code for IStateBase, Method:  InitializeObjectRefs()
+- Add code for IStateBase, Method:  InitializeObjectRefs()
 
 
 ```java
@@ -79,8 +79,7 @@ public class SomeState : IStateBase
 	}
 ```
 
-
-7.  Add Class Constructor, and set the corresponding GameScene Enum.
+ - Add Class Constructor, and set the corresponding GameScene Enum.
   
      
 
