@@ -18,11 +18,10 @@ To create a new scene, right-click in the Unity Project / Assets Panel and selec
 public enum GameScene
 {
 	Begin = 0,
-	End = 1
+	SomeScene = 1,
+	End = 2
 }
 ```
-
-
 
 ###Create a StateX Script file to correspond to the new Scene
 Create a new C# Script in the scripts folder of your project's asset panel.  Name the script so it's obvious this script corresponds to the scene you just created.  Then, we'll need to modify the code for this script so that it is similar to the other StateX files that were included in the starter code, such as BeginState.
