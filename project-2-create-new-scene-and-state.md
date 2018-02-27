@@ -43,6 +43,9 @@ using UnityEngine.SceneManagement;
           
 
 ```java
+
+public class SomeState : IStateBase
+{
     /// <summary>
 	/// The scene enum associated with this state.
 	/// </summary>
@@ -55,6 +58,8 @@ using UnityEngine.SceneManagement;
 	public GameScene Scene {
 		get{ return scene; }
 	}
+	
+} //end class
     
 ```
 6.  Add code for IStateBase, Method:  InitializeObjectRefs()
@@ -70,15 +75,23 @@ using UnityEngine.SceneManagement;
 	public void InitializeObjectRefs ()
 	{
 	  //code will be added for initializing object refs for scene buttons
-	  Debug.Log("In InitializeObjectRefs for ________State ");
+	  Debug.Log("In InitializeObjectRefs for SomeState ");
 	}
 ```
 
 
 7.  Add Class Constructor, and set the corresponding GameScene Enum.
   
-      public SomeState ()
+     
+
+```java
+ public SomeState ()
 	{
 		scene = GameScene.SomeScene;
+		Debug.Log("In Constructor for SomeState");
 	}
+
+```
+
+8.
 
