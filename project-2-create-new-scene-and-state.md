@@ -136,5 +136,5 @@ public void InitializeObjectRefs ()
 	}
 ```
 
-
+- Use the Button to go to the new Scene, Add Images,2 Buttons to each of 5 scenes  
 
