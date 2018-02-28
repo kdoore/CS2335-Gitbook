@@ -29,4 +29,4 @@ For this project to work, you must first go into your project's Build Settings. 
 If you've done the above steps correctly, you should be able to use the EndButton to go to the EndScene, and from there, you should be able to use the StartButton to return to the StartScene.
 
 ###Problems with TitlePanel and TitleText Display
-Sometimes Unity acts glitchy with UI-Panels and UI-Text gameObjects.  If the TitlePanel and TitleText aren't displaying correctly, 
+Sometimes Unity acts glitchy with UI-Panels and UI-Text gameObjects.  If the TitlePanel and TitleText aren't displaying correctly, select the TitlePanel in the hierarchy and then select the rect-transform tool which shows the positioning blue circles at the corners of the panel.  Try dragging the top blue circles below the bottom circles to see if the panel has flipped backwards.  Also try dragging the left corners over the right corners.  This may also be necessary to do with the text element.  If these efforts don't fix the problem, simply delete the panel and add new panel / text gameObjects to recreate the corrupted gameObjects.
