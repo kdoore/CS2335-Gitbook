@@ -15,14 +15,15 @@ A UI Panel often is used as a container for holding other UI elements.  In order
 
 Once we have added the CanvasGroup component to our Panel-UI element, then we can need to write a function that will toggle the panel's alpha value, interactibility,and blocksRaycast properties.  We can add this functionality to any C# script file.  
 
-###Scene Load-Event
-We need to initialize the value of our object references within the InitializeObjectRefs() method.  This way the object references will be re-initialized each time we enter this particular Scene. 
+###Scene Load-Event - Initialize Object References
+We need to initialize the value of our object references within the Unity Start() method.  This way the object references will be re-initialized each time we enter this particular Scene. 
 
 ### Toggle Properties: Alpha, Interactive and BlocksRaycast 
 
 Below is the new code that we've added to  our class.  
 
 ```java
+   //Declare Object Reference Variables for UI Components
    private Button mapBtn;
    private CanvasGroup mapCG, startCG;
 	
@@ -66,8 +67,8 @@ Now we need to create a button that's in the StartPanel, this button will contro
 
 
 ```
-  public void InitializeObjectRefs (){
-     // 
+  public void Start (){
+     // other code
     mapBtn = GameObject.Find ("MapButton").GetComponent<Button> ();
 	mapBtn.onClick.AddListener (LoadMapPanel);
 	}
