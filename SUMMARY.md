@@ -6,7 +6,8 @@
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
 * [MonoBehavior - Base-Class](monobehaviour.md)
 
-# Project 1
+## Project 1
+
 * [Project1](project1.md)
   * [Project 1 - Apple Picker - Game Overview](project-1-apple-picker.md)
   * [Project 1 - Custom Scripts](project-1-behavior-scripts.md)
@@ -23,7 +24,8 @@
 * [Finding Game Objects](finding_game_objects.md)
 * [Canvas: Screen-Space Overlay](screen-space_canvas.md)
 
-# Project 2
+## Project 2
+
 * [Project 2 - Text Adventure 1](project-2-text-adventure-1.md)
   * [Project 2 - Learning Objectives](project-2-learning-objectives.md)
   * [State Machine Framework](state_machine_framework.md)
@@ -60,7 +62,8 @@
 * [Custom Event Messaging](custom_event_messaging.md)
 * [Saving Data - Serialization](saving_data_-_serialization.md)
 
-#C\# Language
+## C\# Language
+
 * [C\# Language](c_language.md)
   * [Variables](variables.md)
   * [Enum](enumerations.md)
