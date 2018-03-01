@@ -26,7 +26,7 @@ public class Utility  {
 
 }
 
-////In another class we can use this by 
-CanvasGroup cg = GameObject.Find ("TxtPanel1").GetComponent<CanvasGroup> ();
+//In another class we can use this by: 
+CanvasGroup cg = GameObject.Find ("TxtPanel1").GetComponent<CanvasGroup>();
 Utility.HideCG (cg);
 ```
