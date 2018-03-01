@@ -74,7 +74,7 @@ Now we need to create a button that's in the StartPanel, this button will contro
 	}
 		
 		//function called when mapBtn is clicked - shows mapCG, hides startCG
-    private void LoadMapPanel(){
+    public void LoadMapPanel(){
         ShowCG(mapCG);
         HideCG(startCG);
     }
