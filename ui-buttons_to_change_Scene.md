@@ -17,7 +17,7 @@ In Unity, we can use Scenes to implement game levels.  Using the StateManager fr
 
 
 ###Control UI Elements via Code
-Although there are methods that allow us to use the inspector to determine which method gets executed when a Button is clicked. Since Unity can  is preferable to implement this logic within a custom script.  this will make it easier to extend our project and to debug issues.  The code below shows how we can create an object-reference variable which will give us access to a the <Button> Component of a Button GameObject. It is straightforward to write code to have a custom method executed when the button is clicked.  Here we have created a method:  LoadEndState(), this will switch to the Scene named: "EndScene".  
+Although there are methods that allow us to use the inspector to determine which method gets executed when a Button is clicked. Since Unity can  is preferable to implement this logic within a custom script.  this will make it easier to extend our project and to debug issues.  The code below shows how we can create an object-reference variable which will give us access to a the `<Button>` Component of a Button GameObject. It is straightforward to write code to have a custom method executed when the button is clicked.  Here we have created a method:  LoadEndState(), this will switch to the Scene named: "EndScene".  
 
 We must create a custom method that we want to have executed by the Button component's onClick event, we'll learn more about passing functions to the AddListener Method, but essentially, we are using the method name: LoadBeginState, as an argument to AddListener( ), this registers our LoadBeginState as a Listener to this button's onClick event.
 
