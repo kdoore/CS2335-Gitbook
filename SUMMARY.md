@@ -36,9 +36,9 @@
   * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
   * [Utility - Static Class](utility_-_static_class.md)
   * [Project 2 - Dialog Package](project-2-dialog-package.md)
-  
 
-  
+---
+
 * [Text Input](text_input.md)
 * [Game Scene](game_scene.md)
 * [Player GameObject](player_gameobject.md)
@@ -82,6 +82,7 @@
   * [Foreach](foreach.md)
   * [Static Classes](static_classes.md)
   * [Ternary Operator: ?](ternary_operator.md)
+  * [this](this.md)
 * [Diagrams](diagrams.md)
   * [Flow-Chart](flow-chart_example.md)
   * [Finite State Machine](finite_state_machine.md)
