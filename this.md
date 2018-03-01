@@ -12,7 +12,6 @@ Destroy( this.gameObject);  //example of identifying associated gameObject
 
 ```
 
-
 [MSDN Reference](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/this)
 
 >The this keyword refers to the current instance of the class ...
