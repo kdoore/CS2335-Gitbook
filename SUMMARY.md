@@ -65,6 +65,7 @@
 * [Delegates](delegates.md)
 * [Custom Event Messaging](custom_event_messaging.md)
 * [Saving Data - Serialization](saving_data_-_serialization.md)
+* [Disable Debug Logging](disable-debug-logging.md)
 
 ## C\# Language
 
