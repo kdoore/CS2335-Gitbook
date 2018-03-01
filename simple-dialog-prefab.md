@@ -19,4 +19,16 @@ The DialogText is anchored to 4 corners of it's parent, the SimpleDialogPanel.  
 
 ![](/assets/Screen Shot 2018-03-01 at 4.26.54 PM.png)
 
+###DialogPanel Script Component 
+The image below shows part of the Inspector panel for the SimpleDialogPanel.  It shows a CanvasGroup component and a DialogController script component have been added. The DialogController script has a DialogList with adjustable size, each element can hold some dialog text, which will be displayed sequentially when the scene is played.
+
+![](/assets/Screen Shot 2018-03-01 at 4.30.08 PM.png)
+
+###DialogController.cs Custom Script
+No we just have to figure out how to write the code logic.
+
+
+
+
+
 
