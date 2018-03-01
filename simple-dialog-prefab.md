@@ -25,18 +25,20 @@ The image below shows part of the Inspector panel for the SimpleDialogPanel.  It
 ![](/assets/Screen Shot 2018-03-01 at 4.30.08 PM.png)
 
 ###DialogController.cs Custom Script
-No we just have to figure out how to write the code logic. We need an List of strings that can hold our dialog items.  Unity can display for editing both List<string>, or array: string[] in the inspector as shown in the image above. 
+No we just have to figure out how to write the code logic. We need an List of strings that can hold our dialog items.  Unity can display for editing both List< string >, or array: string[] in the inspector as shown in the image above. 
 
 
 **List< T >** is part of the System.Collections.Generic Namespace in C#.  [MSDN Reference](https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx)
 
 
-**Queue<T>** is a data structure that operates like a queue / waiting line.  It will make it easy to remove each sequential dialog item from the collection so it can be displayed in sequence.[MSDN Reference](https://msdn.microsoft.com/en-us/library/7977ey2c.aspx)
+**Queue< T >** is a data structure that operates like a queue / waiting line.  It will make it easy to remove each sequential dialog item from the collection so it can be displayed in sequence.[MSDN Reference](https://msdn.microsoft.com/en-us/library/7977ey2c.aspx)
 
+
+```java
 
 public class DialogController : MonoBehaviour {
 
-    [TextArea] //show textarea in inspector for input
+    [TextArea] //show large textarea in inspector for input
     public List<string> dialogList = new List<string>();
 
     private Queue<string> queue = new Queue<string>();
@@ -46,6 +48,8 @@ public class DialogController : MonoBehaviour {
     private Text dialogText;
     private CanvasGroup cg;
 
+
+```
 
 
 
