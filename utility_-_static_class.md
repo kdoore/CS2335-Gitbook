@@ -9,15 +9,16 @@ Notice, the class is marked as static and each method is also marked as public s
 
 ###Example of using Utility Static Method: showPanel( )
 
-```C#
+```java
 //toggle canvas-group visibility
 CanvasGroup someCG = GameObject.Find("SomePanel").GetComponent<CanvasGroup>();
 Utility.ShowCG( someCG );
 
+
 ```
 
 ###Utility.cs Class
-```C#
+```java
 
 using UnityEngine;
 using UnityEngine.UI;
