@@ -1,4 +1,13 @@
-# Static Classes
+# Static
+The keyword `static`, when applied to a property, variable,  method, means that the element belongs to the class itself, and not an object instance of the class.  One way to think about this is that a class definition is used to create objects when a program is executing, these objects are dynamic, because they only exist when the code is executing.  In contrast, static items belong to the class itself, so they are not associated with dynamic-objects created at runtime.  
+
+###Example Use:
+
+
+
+
+
+###Static Class
 
 "A static class is basically the same as a non-static class, but there is one difference: a static class cannot be instantiated. In other words, you cannot use the new keyword to create a variable of the class type. Because there is no instance variable, you access the members of a static class by using the class name itself."
 [MSDN Reference - C# Programming Guide](https://msdn.microsoft.com/en-us/library/79b3xss3.aspx)

@@ -81,7 +81,7 @@
   * [List&lt; T &gt;](list_t.md)
   * [Dictionary](dictionary.md)
   * [Foreach](foreach.md)
-  * [Static Classes](static_classes.md)
+  * [Static](static_classes.md)
   * [Ternary Operator: ?](ternary_operator.md)
   * [this](this.md)
 * [Diagrams](diagrams.md)
