@@ -3,8 +3,13 @@ The keyword `static`, when applied to a property, variable,  method, means that 
 
 ###Example Use:
 
+```java
+//class Zombie.cs
+public static int numZombies;
 
-
+//in another class:
+int curZombies = Zombie.numZombies;
+```
 
 
 ###Static Class
@@ -19,7 +24,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class Utility  {
+public static class Utility  {
 
 	public static void ShowCG( CanvasGroup cg){
 		cg.alpha = 1;
