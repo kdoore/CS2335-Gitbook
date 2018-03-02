@@ -38,6 +38,8 @@ Unity can display for editing, both List< string >, or array: string[] in the in
 ###DialogController.cs Custom Script
 Below is the code where we declare the object reference variables for the dataStructures and components that we need for implementing our logic
 
+- **Declare Object Reference Variables**
+
 ```java
 
 public class DialogController : MonoBehaviour {
@@ -54,6 +56,9 @@ public class DialogController : MonoBehaviour {
 
 
 ```
+
+- **Initialize Object Reference Variables**
+
 
 
 
