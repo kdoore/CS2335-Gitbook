@@ -11,11 +11,11 @@ We should try to make something that will work as a prefab, so we can use it in 
       -Script must use a public List of strings that can be populated in the inspector, with new dialog each time the panel-prefab is used.  
 
  ###Prefab GameObject: Hierarchy     
- The image below shows the Hierarchy panel structure of these gameObjects.  The DialogController.cs script is attached to the top-level panel object.  The panel must also have a CanvasGroup component attached. In the Inspector panel: Add Component>Layout > CanvasGroup
+ The image below shows the Hierarchy panel structure of these gameObjects.  The DialogController.cs script is attached to the top-level panel object.  The panel must also have a CanvasGroup component attached. To add a CanvasGroup component, in the Inspector panel: Add Component>Layout > CanvasGroup
  
 ![](/assets/Screen Shot 2018-03-01 at 4.06.32 PM.png)
 
-The DialogText is anchored to 4 corners of it's parent, the SimpleDialogPanel.  The NextButton is anchored to the bottom -right corner of the panel.
+The DialogText is anchored to 4 corners of its' parent, the SimpleDialogPanel.  The NextButton is anchored to the bottom  corner of the panel (not shown here).
 
 ![](/assets/Screen Shot 2018-03-01 at 4.26.54 PM.png)
 
@@ -24,8 +24,10 @@ The image below shows part of the Inspector panel for the SimpleDialogPanel.  It
 
 ![](/assets/Screen Shot 2018-03-01 at 4.30.08 PM.png)
 
-###DialogController.cs Custom Script
-No we just have to figure out how to write the code logic. We need an List of strings that can hold our dialog items.  Unity can display for editing both List< string >, or array: string[] in the inspector as shown in the image above. 
+###Dialog Script Logic - DataStructures: List, Queue
+Now, we just have to figure out how to write the code logic. We need an List of strings that can hold our dialog items, then we need to display them sequentially when the next button has been clicked.
+
+Unity can display for editing, both List< string >, or array: string[] in the inspector, as shown in the image above. 
 
 
 **List< T >** is part of the System.Collections.Generic Namespace in C#.  [MSDN Reference](https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx)
@@ -33,6 +35,8 @@ No we just have to figure out how to write the code logic. We need an List of st
 
 **Queue< T >** is a data structure that operates like a queue / waiting line.  It will make it easy to remove each sequential dialog item from the collection so it can be displayed in sequence.[MSDN Reference](https://msdn.microsoft.com/en-us/library/7977ey2c.aspx)
 
+###DialogController.cs Custom Script
+Below is the code where we declare the object reference variables for the dataStructures and components that we need for implementing our logic
 
 ```java
 
