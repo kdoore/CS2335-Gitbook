@@ -39,6 +39,8 @@ Unity can display for editing, both List< string >, or array: string[] in the in
 Below is the code where we declare the object reference variables for the dataStructures and components that we need for implementing our logic
 
 - **Declare Object Reference Variables**
+    In the code below we specify that the `List< T >` and `Queue< T >` will both be collections of `string` objects.
+    Then we declare object reference variables for the components we'll interact with.
 
 ```java
 
@@ -58,6 +60,8 @@ public class DialogController : MonoBehaviour {
 ```
 
 - **Initialize Object Reference Variables**
+
+
 
 
 
