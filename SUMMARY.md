@@ -80,6 +80,7 @@
   * [Interface](interface.md)
   * [Switch-Case](switch-case.md)
   * [List&lt; T &gt;](list_t.md)
+  * [Queue&lt; T &gt;](queue-t.md)
   * [Dictionary](dictionary.md)
   * [Foreach](foreach.md)
   * [Static](static_classes.md)
@@ -92,5 +93,4 @@
   * [UML Class Diagram](uml_class_diagram.md)
 * [Glossary](GLOSSARY.md)
 * [References and Resources](references.md)
-* Object References
 
