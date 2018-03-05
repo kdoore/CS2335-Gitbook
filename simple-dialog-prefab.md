@@ -75,7 +75,8 @@ The following code would be located in the Unity Start( ) event function.
 - **Populate the queue data structure** 
 The following code is also in the Unity Start() event function.  In the code below, we use a foreach structure, which works like a for-loop, to step through each item in the List< string >: dialogList, and puts the string element into the queue.  Then, we check to make sure there are some items in the queue, we remove the first item, and use it to set the text to be displayed in the dialog panel.
      
-        ```java
+     
+```java
         //
         foreach(string dialogItem in dialogList){
             queue.Enqueue(dialogItem); //put all of the dialog items into the queue
@@ -87,9 +88,26 @@ The following code is also in the Unity Start() event function.  In the code bel
             dialogText.text = queue.Dequeue(); //display the first dialog item
         }
        
-
 ```
 
+###GetNextDialog Method
+The nextButton allows the user to move forward through the dialog items.  In the Start( ) method, we configured the nextButton's onClick method to execute the GetNextDialog method each time it is clicked.  The code below shows that each time the GetNextDialog method is executed, it first checks to make sure there are items in the queue.  Then, the dialogText is updated to display the first item in the queue.  The Queue< T > Dequeue( ) method retrieves and removes the item at the front of the queue returns that value so it can be used to set the text value for the dialogText.  If there are no more items in the queue, then the panel is hidden, using the Utility class static method: HideCG.
+
+
+
+```java
+public void GetNextDialog(){
+        if(queue.Count != 0){
+            dialogText.text = queue.Dequeue(); //pull out the first item and set to be displayed
+        }
+        else{  //hide the whole panel
+            Utility.HideCG(cg);
+            //Dialog over - decision panel?
+        }
+    }
+
+
+```
 
 
 
