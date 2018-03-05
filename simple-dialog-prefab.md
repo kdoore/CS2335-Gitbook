@@ -8,7 +8,8 @@ We should try to make something that will work as a prefab, so we can use it in 
     - UI-Button, a child of the UI-panel, this will allow us to advance through the dialog items
     - A custom script component- attached to the UI-Panel
     will have logic for the dialog system.
-      -Script must use a public List of strings that can be populated in the inspector, with new dialog each time the panel-prefab is used.  
+      -Script must use a public List of strings that can be populated in the inspector, with new dialog each time the panel-prefab is used. 
+      
 
  ###Prefab GameObject: Hierarchy     
  The image below shows the Hierarchy panel structure of these gameObjects.  The DialogController.cs script is attached to the top-level panel object.  The panel must also have a CanvasGroup component attached. To add a CanvasGroup component, in the Inspector panel: Add Component>Layout > CanvasGroup
@@ -117,6 +118,12 @@ public void GetNextDialog(){
 
 
 ```
+###Issues - Integrate Dialog with Scene-Transition logic:
+In order for this to work as a prefab, we have written the code in a general way so it'll work in any scene. In other words,  we don't want scene-specific logic in any of the code for this script. 
+ 
+       
+
+
 
 
 
