@@ -24,10 +24,10 @@ There are a few different issues here:
     5.  Add logic to the current prefab script to open a new panel when there are no remaining dialog items, have decision logic associated with the newly opened panel.  
     6.  Create custom events to allow other script components to be notified when the next button is clicked but there is no remaining dialog to be displayed.   (we'll learn how to create and use custom-events later in the semester)
        
-###Option 4: Add Logic to Open Another Panel
-
 The most obvious, simple solution is to hide scene-transition buttons beneath the dialog panel, so they are visible once the dialog panel is hidden.  
 
+###Option 4: Add Logic to Open Another Panel
+For more complex logic, we can open a new panel from the dialogPrefab, when the dialog is complete.  We'd probably just create a new version of the DialogPanel prefab, because this specialized behavior might not be used very often.
 
 
 
