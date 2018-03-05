@@ -1,9 +1,9 @@
-###Dialog and Scene-Decision Integration
+#Dialog and Scene-Transition Integration
 
 ###How to Integrate Dialog with Scene-Transition logic:
-In order for this to work as a prefab, we have written the code in a general way so it'll work in any scene. In other words,  we don't want scene-specific logic in any of the code for this script. 
+In order for this to work as a prefab, we have written the code in a general way so it'll work in any scene. In other words,  we don't want any scene-specific logic in any of the code for this script. 
 
-In addition, we want all scene-transition logic to be contained in the StateX.cs files, so is it possible to have dialog logic combined with the buttons for scene-transition decisions? So, how do we get the dialog panel (prefab) to include a panel that has buttons with logic to leave the scene?
+In addition, we want all scene-transition logic to be contained in the StateX.cs files. So how can we integrate dialog display with the buttons for scene-transition decisions? How do we get the dialog panel (prefab) to include a final display state, with buttons that can be used for scene transition?
 
 - **Issue: we want the general behavior of a prefab, but we want to integrate scene-transition decision logic. ** 
 
