@@ -36,6 +36,7 @@
   * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
   * [Utility - Static Class](utility_-_static_class.md)
   * [Simple Dialog Prefab](simple-dialog-prefab.md)
+  * [Dialogue and Scene-Decision Integration](dialogue-and-scene-decision-integration.md)
   * [DialogSystem as Unity.Package](project-2-dialog-package.md)
 
 ---

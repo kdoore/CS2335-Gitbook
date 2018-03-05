@@ -118,10 +118,6 @@ public void GetNextDialog(){
 
 
 ```
-###Issues - Integrate Dialog with Scene-Transition logic:
-In order for this to work as a prefab, we have written the code in a general way so it'll work in any scene. In other words,  we don't want scene-specific logic in any of the code for this script. 
- 
-       
 
 
 
