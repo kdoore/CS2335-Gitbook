@@ -56,11 +56,37 @@ public class DialogController : MonoBehaviour {
     private Text dialogText;
     private CanvasGroup cg;
 
-
 ```
 
 - **Initialize Object Reference Variables**
 
+The following code would be located in the Unity Start( ) event function.
+
+
+
+```java
+        nextBtn = GetComponentInChildren<Button>();   
+        nextBtn.onClick.AddListener(GetNextDialog);
+        
+        cg = GetComponent<CanvasGroup>(); //on this Panel GameObject 
+        
+        dialogText = GetComponentInChildren<Text>();
+        
+ ```       
+        
+      
+          
+        
+    foreach(string dialogItem in dialogList){
+            queue.Enqueue(dialogItem); //put all of the dialog items into the queue
+        }
+       
+       
+        if (queue.Count != 0) //check to make sure some dialog
+        {
+            dialogText.text = queue.Dequeue(); //display the first dialog item
+        }
+       
 
 
 
