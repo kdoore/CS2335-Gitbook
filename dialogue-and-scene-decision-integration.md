@@ -12,10 +12,10 @@ In addition, we want all scene-transition logic to be contained in the StateX.cs
     1.  Don't use a prefab that includes the attached custom script logic.  
     2.  Write a custom script every-time we want to display dialog
     3.  Put some logic into a static utility function that can be accessed anywhere
-    4.  Add logic to the current prefab script to open a new panel when there are no remaining dialog items.  
+    4.  Add logic to the current prefab script to open a new panel when there are no remaining dialog items, have decision logic associated with the newly opened panel.  
     5.  Create custom events to allow other script components to be notified when the next button is clicked but there is no remaining dialog to be displayed.   
        
-
+###Option 4 - Add Logic to Open Another Panel
 
 
 
