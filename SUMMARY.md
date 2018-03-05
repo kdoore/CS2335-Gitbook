@@ -38,6 +38,7 @@
   * [Simple Dialog Prefab](simple-dialog-prefab.md)
   * [Dialogue and Scene-Decision Integration](dialogue-and-scene-decision-integration.md)
   * [DialogSystem as Unity.Package](project-2-dialog-package.md)
+  * [List of Project 2 Steps](list-of-project-2-steps.md)
 
 ---
 
