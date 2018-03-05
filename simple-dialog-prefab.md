@@ -73,14 +73,14 @@ The following code would be located in the Unity Start( ) event function.
 ```
         
 - **GetComponentInChildren< T >();**
-The Unity method: GetComponentInChildren provides a convenient way to initialize an object reference variable based on the Hierarchy panel's parent-child relationships between gameObjects.  
+The Unity method: GetComponentInChildren, provides a convenient way to initialize an object reference variable based on the Hierarchy panel's parent-child relationships between gameObjects. In the code above, we've specified that we want to initialize the Text component reference variable: dialogText. Since the current script is on the DialogPanel in our custom prefab, and since there is a UI-Text gameObject that is a child of the DialogPanel, we can access the components on that child object using this method.  Important:  Note that this method will find the first < T > component while traversing the Parent-child relationships of the gameObject that this script is attached to. The first matching component of type < T > might actually be on this parent panel ( if < T > is an image component ).
         
 - **Populate the queue data structure** 
 The following code is also in the Unity Start() event function.  In the code below, we use a foreach structure, which works like a for-loop, to step through each item in the List< string >: dialogList, and puts the string element into the queue.  Then, we check to make sure there are some items in the queue, we remove the first item, and use it to set the text to be displayed in the dialog panel.
      
      
 ```java
-        //
+        // in Start( )
         foreach(string dialogItem in dialogList){
             queue.Enqueue(dialogItem); //put all of the dialog items into the queue
         }
