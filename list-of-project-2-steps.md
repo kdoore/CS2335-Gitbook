@@ -1,6 +1,6 @@
 #List of Steps for Project 2
 
-Below is an listing of steps for modifying  the TextAdventure starter-code, for completing Project2.  The link below gives more detailed information for 
+Below is an listing of steps for modifying  the TextAdventure starter-code, for completing Project2.  
 
 Gitbook page:  [Create new scene, state](/project-2-create-new-scene-and-state.md)
 
