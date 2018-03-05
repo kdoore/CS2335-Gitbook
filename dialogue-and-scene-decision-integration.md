@@ -14,8 +14,6 @@ There are a few different issues here:
    - We don't want to add scene specific logic to a prefab, otherwise we can't use it anywhere. 
    - We want all scene-transition logic in the StateX.cs files, not attached to a panel gameObject
    - We don't have a way to let the StateX file know that the dialog has finished, so that scene-transition buttons can be displayed after the dialog has finished.
-   - 
-    
   
 -  **Options:  **
     
