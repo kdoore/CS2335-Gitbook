@@ -71,13 +71,13 @@ The following code would be located in the Unity Start( ) event function.
         cg = GetComponent<CanvasGroup>(); //on this Panel GameObject 
         
         dialogText = GetComponentInChildren<Text>();
-        
- ```       
-        
-      
-          
-        
-    foreach(string dialogItem in dialogList){
+        ```
+- **Populate the queue data structure** 
+The following code is also in the Unity Start() event function.  In the code below, we use a foreach structure, which works like a for-loop, to step through each item in the List< string >: dialogList, and puts the string element into the queue.  Then, we check to make sure there are some items in the queue, we remove the first item, and use it to set the text to be displayed in the dialog panel.
+     
+        ```java
+        //
+        foreach(string dialogItem in dialogList){
             queue.Enqueue(dialogItem); //put all of the dialog items into the queue
         }
        
@@ -88,7 +88,7 @@ The following code would be located in the Unity Start( ) event function.
         }
        
 
-
+```
 
 
 
