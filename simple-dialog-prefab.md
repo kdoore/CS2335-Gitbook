@@ -62,8 +62,6 @@ public class DialogController : MonoBehaviour {
 
 The following code would be located in the Unity Start( ) event function.
 
-
-
 ```java
         nextBtn = GetComponentInChildren<Button>();   
         nextBtn.onClick.AddListener(GetNextDialog);
@@ -71,7 +69,12 @@ The following code would be located in the Unity Start( ) event function.
         cg = GetComponent<CanvasGroup>(); //on this Panel GameObject 
         
         dialogText = GetComponentInChildren<Text>();
-        ```
+        
+```
+        
+- **GetComponentInChildren< T >();**
+The Unity method: GetComponentInChildren provides a convenient way to initialize an object reference variable based on the Hierarchy panel's parent-child relationships between gameObjects.  
+        
 - **Populate the queue data structure** 
 The following code is also in the Unity Start() event function.  In the code below, we use a foreach structure, which works like a for-loop, to step through each item in the List< string >: dialogList, and puts the string element into the queue.  Then, we check to make sure there are some items in the queue, we remove the first item, and use it to set the text to be displayed in the dialog panel.
      
