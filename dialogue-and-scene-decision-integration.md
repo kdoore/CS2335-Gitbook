@@ -6,14 +6,25 @@ In order for this to work as a prefab, we have written the code in a general way
 In addition, we want all scene-transition logic to be contained in the StateX.cs files, so is it possible to have dialog logic combined with the buttons for scene-transition decisions? So, how do we get the dialog panel (prefab) to include a panel that has buttons with logic to leave the scene?
 
 - **Issue: we want the general behavior of a prefab, but we want to integrate scene-transition decision logic. ** 
-  
-  Options:  
+
+There are a few different issues here:
+ 
+  - **Issues:**
+
+   - We don't want to add scene specific logic to a prefab, otherwise we can't use it anywhere. 
+   - We want all scene-transition logic in the StateX.cs files, not attached to a panel gameObject
+   - We don't have a way to let the StateX file know that the dialog has finished, so that scene-transition buttons can be displayed after the dialog has finished.
+   - 
     
-    1.  Don't use a prefab that includes the attached custom script logic.  
-    2.  Write a custom script every-time we want to display dialog
-    3.  Put some logic into a static utility function that can be accessed anywhere
-    4.  Add logic to the current prefab script to open a new panel when there are no remaining dialog items, have decision logic associated with the newly opened panel.  
-    5.  Create custom events to allow other script components to be notified when the next button is clicked but there is no remaining dialog to be displayed.   
+  
+-  **Options:  **
+    
+    1.  Don't use a prefab that includes the attached custom script logic.
+    2.  Have the scene-transition buttons hidden beneath the dialog panel, so they are viewable after the dialog panel is hidden.
+    3.  Write a custom script every-time we want to display dialog
+    4.  Put some logic into a static utility function that can be accessed anywhere
+    5.  Add logic to the current prefab script to open a new panel when there are no remaining dialog items, have decision logic associated with the newly opened panel.  
+    6.  Create custom events to allow other script components to be notified when the next button is clicked but there is no remaining dialog to be displayed.   (we'll learn how to create and use custom-events later in the semester)
        
 ###Option 4 - Add Logic to Open Another Panel
 
