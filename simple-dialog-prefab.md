@@ -60,15 +60,18 @@ public class DialogController : MonoBehaviour {
 
 - **Initialize Object Reference Variables**
 
-The following code would be located in the Unity Start( ) event function.
+The following code would be located in the Unity Start( ) event function for this script that's attached to the panel gameObject:
 
 ```java
-        nextBtn = GetComponentInChildren<Button>();   
-        nextBtn.onClick.AddListener(GetNextDialog);
-        
-        cg = GetComponent<CanvasGroup>(); //on this Panel GameObject 
-        
-        dialogText = GetComponentInChildren<Text>();
+      
+    //in Start()
+      
+    nextBtn = GetComponentInChildren<Button>();   
+    nextBtn.onClick.AddListener(GetNextDialog);
+    
+    cg = GetComponent<CanvasGroup>(); //on this Panel GameObject 
+    
+    dialogText = GetComponentInChildren<Text>();
         
 ```
         
