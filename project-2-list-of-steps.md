@@ -19,5 +19,12 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
     
     - Create a new SomeStates.cs classes, add code so it is similar to BeginState.cs
     
-    - Modify code in SomeScene.cs
+        - Modify code in SomeScene.cs
+        - Add code for IStateBase interface:
+        - GameScene Scene
+        - InitializeObjectRefs( ){ }
+        - Constructor:
+            - public SomeScene( )
+            - set: scene = GameScene.someScene;
+        
     
