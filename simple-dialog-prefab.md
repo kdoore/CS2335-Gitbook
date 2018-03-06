@@ -111,8 +111,12 @@ public void GetNextDialog(){
             dialogText.text = queue.Dequeue(); //pull out the first item and set to be displayed
         }
         else{  //hide the whole panel
-            Utility.HideCG(cg);
+            //Utility.HideCG(cg);  if you've created the Utility class
             //Dialog over - decision panel?
+        cg.alpha = 0;
+	    cg.blocksRaycasts = false;
+	    cg.interactable = false;
+
         }
     }
 
