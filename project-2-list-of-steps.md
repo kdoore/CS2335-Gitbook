@@ -26,5 +26,16 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
         - Constructor:
             - public SomeScene( )
             - set: scene = GameScene.someScene;
+            
+    7. Modify BeginState - Add code for button to go to SomeScene
+        - Define object-reference variable
+        - Initialize variable in: InitializeObjectRefs( );
+        - Create custom method: public void LoadSomeScene
+        - Configure using similar code in from BeginState.cs for LoadEndScene( )
+        - 2 lines of code for to switching scene/state 
+           - `SceneManager.LoadScene ("EndScene"); //actual scene name
+           - `StateManager.instanceRef.SwitchState (new EndState ()); 
+        
+        
         
     
