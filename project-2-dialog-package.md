@@ -12,3 +12,9 @@ This project contains 2 main prefab objects in the Resources folder.  Both prefa
 
 Once the prefab has been added to a scene, then find the script component: 
 
+###Creating your own Scriptable Object
+
+###Configuring your Conversation
+The image below shows that when you create a new conversation, you need to set the colors for the text for both speakers.  **IMPORTANT TO NOTE - text and images will be invisible if you don't configure these values, they must be changed from the default values for a new conversation** - These colors have a default value when first created - of full transparancy, this must be changed, even if you just want to use black text.  The SpeakerFadeAlpha and SpeakerFullAlpha control the image alpha, these also default to an alpha of 0.  Compare to the example conversations to determine how you'd like to set these values.
+![](/assets/Screen Shot 2018-03-06 at 12.41.25 PM.png)
+
