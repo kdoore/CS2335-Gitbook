@@ -33,8 +33,8 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
         - Create custom method: public void LoadSomeScene
         - Configure using similar code in from BeginState.cs for LoadEndScene( )
         - 2 lines of code for to switching scene/state 
-           - `SceneManager.LoadScene ("EndScene"); //actual scene name
-           - `StateManager.instanceRef.SwitchState (new EndState ()); 
+           - `SceneManager.LoadScene ("EndScene"); //actual scene name`
+           - `StateManager.instanceRef.SwitchState (new EndState ());` 
         
         
         
