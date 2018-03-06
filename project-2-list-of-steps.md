@@ -11,6 +11,7 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
     3. Add UI Canvas in Scene
         - Configure: Screen-Space Camera
         - Set camera to: MainCamera
+        
     4. Add label to identify scene
     5. Add 2 Buttons, to jump to other scenes
     
