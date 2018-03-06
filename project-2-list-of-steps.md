@@ -15,7 +15,7 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
     4. Add label to identify scene
     5. Add 2 Buttons, to jump to other scenes
     
-    4. Add scene to StateManager.cs GameScene enums
+    6. Add scene to StateManager.cs GameScene enums
     
     - Create a new SomeStates.cs classes, add code so it is similar to BeginState.cs
     
