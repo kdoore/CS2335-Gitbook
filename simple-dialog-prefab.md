@@ -73,6 +73,12 @@ The following code would be located in the Unity Start( ) event function for thi
     cg = GetComponent<CanvasGroup>(); //on this Panel GameObject 
     
     dialogText = GetComponentInChildren<Text>();
+    
+    //set these in Start so they'll be correct when the scene starts.
+    cg.alpha = 1;
+    cg.blocksRaycasts = true;
+    cg.interactable = true;
+
         
 ```
 -  **GetComponentInChildren< Text >()**See section below for details     
