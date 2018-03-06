@@ -124,7 +124,13 @@ public void GetNextDialog(){
 ```
 
 ###Unity: GetComponentInChildren< T >()
-The Unity method: GetComponentInChildren, provides a convenient way to initialize an object reference variable based on the Hierarchy panel's parent-child relationships between gameObjects. In the code above, we've specified that we want to initialize the Text component reference variable: dialogText. Since the current script is on the DialogPanel in our custom prefab, and since there is a UI-Text gameObject that is a child of the DialogPanel, we can access the components on that child object using this method.  Important:  Note that this method will find the first < T > component while traversing the Parent-child relationships of the gameObject that this script is attached to. The first matching component of type < T > might actually be on this parent panel ( if < T > is an image component ). Unity also has a similar method: GetComponentsInChildren< T >(),  which returns an array of all matching object in children that are ordered according to parent-to children ordering in the hierarchy.[Unity Manual](https://docs.unity3d.com/ScriptReference/Component.GetComponentInChildren.html)
+The Unity method: GetComponentInChildren, provides a convenient way to initialize an object reference variable based on the Hierarchy panel's parent-child relationships between gameObjects. 
+
+In the code above, we've specified that we want to initialize the Text component reference variable: dialogText. Since the current script is on the DialogPanel in our custom prefab, and since there is a UI-Text gameObject that is a child of the DialogPanel, we can access the components on that child object using this method.  
+
+**Important:**  Note that this method will find the first < T > component while traversing the Parent-child relationships of the gameObject that this script is attached to. The first matching component of type < T > might actually be on this parent panel ( if < T > is an image component ). So, make sure to order your gameObjects in the hierarchy correctly if you plan to use this method.
+
+Unity also has a similar method: GetComponentsInChildren< T >(),  which returns an array of all matching object in children that are ordered according to parent-to children ordering in the hierarchy.[Unity Manual](https://docs.unity3d.com/ScriptReference/Component.GetComponentInChildren.html)
         
 
 
