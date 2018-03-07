@@ -20,6 +20,11 @@ The DialogText is anchored to 4 corners of its' parent, the SimpleDialogPanel.  
 
 ![](/assets/Screen Shot 2018-03-01 at 4.26.54 PM.png)
 
+###Important - Can Cause Issues:
+    - Make sure that the DialogText is the first child of the DialogPanel, and that the NextButton is below the DialogText in the Hierarchy Panel
+    - In the code, we're finding the DialogText component since it's the first child object of the SimpleDialogPanel that has a Text component.  If the Button is the first child, then it's text is what'll show the dialog text.
+    - The Dial
+
 ###DialogPanel Script Component 
 The image below shows part of the Inspector panel for the SimpleDialogPanel.  It shows a CanvasGroup component and a DialogController script component have been added. The DialogController script has a DialogList with adjustable size, each element can hold some dialog text, which will be displayed sequentially when the scene is played.
 
