@@ -14,6 +14,26 @@ There are a few different issues here:
    - We don't want to add scene specific logic to a prefab, otherwise we can't use it anywhere. 
    - We want all scene-transition logic in the StateX.cs files, not attached to a panel gameObject
    - We don't have a way to let the StateX file know that the dialog has finished, so that scene-transition buttons can be displayed after the dialog has finished.
+   
+ ###Idea 1. Hide the Buttons Behind the Panel
+  The most obvious, simple solution is to hide scene-transition buttons beneath the dialog panel, so they are visible once the dialog panel is hidden.  
+
+###Idea 2: Add Logic to Open Another Panel
+For more complex logic, we can open a new panel from the dialogPrefab, when the dialog is complete.  What is the best way to do this?  
+
+ - Put the Scene-decision Buttons in a Panel with a CanvasGroup component, so that panel can have it's visibility set to true when the dialog is complete.
+
+ -  How can we tel the dialog is complete?
+ 
+ -  We can write a new method within the corresponding sceneState.cs file, and have that method executed by the onClick event of the panel's next button....but the dialog is only done the last time the button is clicked.  So, we could create a variable:  boolean dialogComplete = false; //
+We'd set this variable to true 
+
+
+
+
+ 
+   
+   
   
 -  **Options:  **
     
