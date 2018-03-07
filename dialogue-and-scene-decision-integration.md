@@ -54,6 +54,7 @@ public class DialogController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        //if event hasn't been initialized
         if (onPanelClosing == null)
         {
             onPanelClosing = new UnityEvent();
@@ -78,14 +79,12 @@ public class DialogController : MonoBehaviour {
         //make sure panel is showing
         Utility.ShowCG(cg);
 	}
-	
-
 
     public void GetNextDialog(){
         if (queue.Count != 0)
         {
             dialogText.text = queue.Dequeue();
-        }else{
+        }else{  //No more dialog in the queue
             Utility.HideCG(cg); //hide panel
     
             //check to see if anyone is listening
