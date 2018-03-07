@@ -15,7 +15,7 @@ There are a few different issues here:
    - We want all scene-transition logic in the StateX.cs files, not attached to a panel gameObject
    - We don't have a way to let the StateX file know that the dialog has finished, so that scene-transition buttons can be displayed after the dialog has finished.
    
- ###Idea 1. Hide the Buttons Behind the Panel
+###Idea 1. Hide the Buttons Behind the Panel
   The most obvious, simple solution is to hide scene-transition buttons beneath the dialog panel, so they are visible once the dialog panel is hidden.  
 
 ###Idea 2: Add Logic to Open Another Panel
@@ -25,16 +25,89 @@ For more complex logic, we can open a new panel from the dialogPrefab, when the 
 
  -  How can we tel the dialog is complete?
  
- -  We can write a new method within the corresponding sceneState.cs file, and have that method executed by the onClick event of the panel's next button....but the dialog is only done the last time the button is clicked.  So, we could create a variable:  boolean dialogComplete = false; //
-We'd set this variable to true 
+ -  We can write a new method within the corresponding sceneState.cs file, and have that method executed by the onClick event of the panel's next button
+ -  The dialog is only finished the last time that the next button is clicked.  So, we could create a variable:  boolean dialogComplete = false; //
+We'd set this variable to true when the dialog queue is empty, we'd need to check this everytime in the new method OpenDecisionPanel in the SceneState.cs script.
+ - We can write a **custom UnityEvent**, that we'll invoke when the dialog is complete.  The OpenDecisionPanel method will be a listener to this event.  **This is the best option - **
+
+###Custom UnityEvent OnPanelClosing
+
+```java
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+
+public class DialogController : MonoBehaviour {
+
+    public UnityEvent onPanelClosing;
+
+    CanvasGroup cg;
+    Button nextBtn;
+    Text dialogText;
+
+    [TextArea]
+    public List<string> dialogList = new List<string>();
+    private Queue<string> queue = new Queue<string>(); //declare, initialize
+
+	// Use this for initialization
+	void Start () {
+        if (onPanelClosing == null)
+        {
+            onPanelClosing = new UnityEvent();
+        }
+
+        cg = GetComponent<CanvasGroup>();
+
+        nextBtn = GetComponentInChildren<Button>();
+        nextBtn.onClick.AddListener(GetNextDialog);
+
+        dialogText = GetComponentInChildren<Text>();
+
+        //put each string in the list into the queue
+        foreach(string curString in dialogList){
+            queue.Enqueue(curString);
+        }
+
+        if(queue.Count !=0){
+            dialogText.text = queue.Dequeue();
+        }
+    
+        //make sure panel is showing
+        Utility.ShowCG(cg);
+	}
+	
 
 
+    public void GetNextDialog(){
+        if (queue.Count != 0)
+        {
+            dialogText.text = queue.Dequeue();
+        }else{
+            Utility.HideCG(cg); //hide panel
+    
+            //check to see if anyone is listening
+            if (onPanelClosing != null)
+            {
+                onPanelClosing.Invoke(); //invoke event        
+            }
+        }
+
+    }
+	
+}
+
+```
 
 
- 
+   
+      
+            
    
    
-  
+ ### Additional Options
 -  **Options:  **
     
     1.  Don't use a prefab that includes the attached custom script logic.
