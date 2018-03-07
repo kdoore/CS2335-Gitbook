@@ -103,7 +103,6 @@ public class DialogController : MonoBehaviour {
 ###How to Find Use the Custom Unity Event
 //Code in BeginState, where we've put buttons into a panel and we want to open this Decision Panel when the dialogPanel event has happened.
 
-
 ```java
 //in BeginState.cs
   
@@ -112,18 +111,21 @@ public class DialogController : MonoBehaviour {
 
    public void InitializeObjectRefs ()
 	{
-	
- btnPanelCG = GameObject.Find("ButtonPanel").GetComponent<CanvasGroup>();
-        Utility.HideCG(btnPanelCG);
-	dialogController = GameObject.Find("DialogPanel").GetComponent<DialogController>();
-  
-        //Register to listen for the onPanelClosing custom event      dialogController.onPanelClosing.AddListener(OpenBtnPanel) ;
+    //other code here
+    
+    btnPanelCG = GameObject.Find("ButtonPanel").GetComponent<CanvasGroup>();
+    Utility.HideCG(btnPanelCG);
+    dialogController = GameObject.Find("DialogPanel").GetComponent<DialogController>();  //find the DialogPanel onPanelClosing custom event      dialogController.onPanelClosing.AddListener(OpenBtnPanel) ;
    }
    
    //method to be exectued when onPanelClosing event has happened
     public void OpenBtnPanel(){
         Utility.ShowCG(btnPanelCG); 
-    }	
+    }
+    
+    //other code in BeginState.cs
+    
+    } //end BeginState.cs class	
 ```
 
       
