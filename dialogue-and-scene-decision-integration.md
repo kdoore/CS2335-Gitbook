@@ -20,6 +20,7 @@ There are a few different issues here:
     1.  Don't use a prefab that includes the attached custom script logic.
     2.  Have the scene-transition buttons hidden beneath the dialog panel, so they are viewable after the dialog panel is hidden.
     3.  Write a custom script every-time we want to display dialog
+    4.  Create a variable that can be accessed in other files that sets a boolean flag to indicate the content has changed.
     4.  Put some logic into a static utility function that can be accessed anywhere
     5.  Add logic to the current prefab script to open a new panel when there are no remaining dialog items, have decision logic associated with the newly opened panel.  
     6.  Create custom events to allow other script components to be notified when the next button is clicked but there is no remaining dialog to be displayed.   (we'll learn how to create and use custom-events later in the semester)
