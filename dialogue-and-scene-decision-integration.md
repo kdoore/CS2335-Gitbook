@@ -38,11 +38,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
+using UnityEngine.Events; //must include this statement
 
 public class DialogController : MonoBehaviour {
 
-    public UnityEvent onPanelClosing;
+    public UnityEvent onPanelClosing; //define the custom event
 
     CanvasGroup cg;
     Button nextBtn;
@@ -99,8 +99,14 @@ public class DialogController : MonoBehaviour {
 }
 
 ```
-###How to Find Use the Custom Unity Event
+###How to Use the Custom Unity Event
 //Code in BeginState, where we've put buttons into a panel and we want to open this Decision Panel when the dialogPanel event has happened.
+
+Essentailly we'll be able to treat the dialogPanel as if it was a button, because the DialogController script now includes a UnityEvent: onPanelClosing.  So, we just need to write a simple method (OpenBtnPanel) that can get executed when that event occurs.  
+
+The OpenBtnPanel just shows a panel that contains the 2 buttons that allow users to decide which scene to go to next.  The ButtonPanel must have an attached CanvasGroup component.
+
+
 
 ```java
 //in BeginState.cs
@@ -113,7 +119,7 @@ public class DialogController : MonoBehaviour {
     //other code here
     
     btnPanelCG = GameObject.Find("ButtonPanel").GetComponent<CanvasGroup>();
-    Utility.HideCG(btnPanelCG);
+    Utility.HideCG(btnPanelCG); //make sure to hide 
     dialogController = GameObject.Find("DialogPanel").GetComponent<DialogController>();  //find the DialogPanel onPanelClosing custom event      dialogController.onPanelClosing.AddListener(OpenBtnPanel) ;
    }
    
@@ -131,22 +137,3 @@ public class DialogController : MonoBehaviour {
             
    
    
- ### Additional Options
--  **Options:  **
-    
-    1.  Don't use a prefab that includes the attached custom script logic.
-    2.  Have the scene-transition buttons hidden beneath the dialog panel, so they are viewable after the dialog panel is hidden.
-    3.  Write a custom script every-time we want to display dialog
-    4.  Create a variable that can be accessed in other files that sets a boolean flag to indicate the content has changed.
-    4.  Put some logic into a static utility function that can be accessed anywhere
-    5.  Add logic to the current prefab script to open a new panel when there are no remaining dialog items, have decision logic associated with the newly opened panel.  
-    6.  Create custom events to allow other script components to be notified when the next button is clicked but there is no remaining dialog to be displayed.   (we'll learn how to create and use custom-events later in the semester)
-       
-The most obvious, simple solution is to hide scene-transition buttons beneath the dialog panel, so they are visible once the dialog panel is hidden.  
-
-###Option 4: Add Logic to Open Another Panel
-For more complex logic, we can open a new panel from the dialogPrefab, when the dialog is complete.  We'd probably just create a new version of the DialogPanel prefab, because this specialized behavior might not be used very often.
-
-
-
-
