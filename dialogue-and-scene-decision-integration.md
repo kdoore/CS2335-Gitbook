@@ -16,19 +16,17 @@ There are a few different issues here:
    - We don't have a way to let the StateX file know that the dialog has finished, so that scene-transition buttons can be displayed after the dialog has finished.
    
 ###Idea 1. Hide the Buttons Behind the Panel
-  The most obvious, simple solution is to hide scene-transition buttons beneath the dialog panel, so they are visible once the dialog panel is hidden.  
+  The most obvious, simple solution is to hide scene-transition buttons beneath the dialog panel, so they are visible once the dialog panel is closed.  
 
 ###Idea 2: Add Logic to Open Another Panel
-For more complex logic, we can open a new panel from the dialogPrefab, when the dialog is complete.  What is the best way to do this?  
+For more complex logic, we can open a new panel that has the scene-transition buttons as child objects. Then, we'd like to trigger this buttonPanel to open when the dialog is complete.  What is the best way to do this?    
 
  - Put the Scene-decision Buttons in a Panel with a CanvasGroup component, so that panel can have it's visibility set to true when the dialog is complete.
 
  -  How can we tel the dialog is complete?
  
- -  We can write a new method within the corresponding sceneState.cs file, and have that method executed by the onClick event of the panel's next button
- -  The dialog is only finished the last time that the next button is clicked.  So, we could create a variable:  boolean dialogComplete = false; //
-We'd set this variable to true when the dialog queue is empty, we'd need to check this everytime in the new method OpenDecisionPanel in the SceneState.cs script.
- - We can write a **custom UnityEvent**, that we'll invoke when the dialog is complete.  The OpenDecisionPanel method will be a listener to this event.  **This is the best option - **
+
+ - The best solution is to give the dialogPanel a **custom UnityEvent**, that we'll invoke when the dialog is complete.  The OpenBtnPanel method in one of the State.cs files will be a listener for this event. 
 
 ###Custom UnityEvent OnPanelClosing
 
