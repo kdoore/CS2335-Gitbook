@@ -121,7 +121,7 @@ The OpenBtnPanel just shows a panel that contains the 2 buttons that allow users
     btnPanelCG = GameObject.Find("ButtonPanel").GetComponent<CanvasGroup>();
     Utility.HideCG(btnPanelCG); //make sure to hide 
     dialogController = GameObject.Find("DialogPanel").GetComponent<DialogController>();  //find the DialogPanel 
-    dialogController.onPanelClosing.AddListener(OpenBtnPanel) ;
+    dialogController.onPanelClosing.AddListener(OpenBtnPanel) ; //specify the method to be executed when the event happens
    }
    
    
