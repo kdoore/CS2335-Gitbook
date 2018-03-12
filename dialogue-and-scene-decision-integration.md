@@ -16,17 +16,22 @@ There are a few different issues here:
    - We don't have a way to let the StateX file know that the dialog has finished, so that scene-transition buttons can be displayed after the dialog has finished.
    
 ###Idea 1. Hide the Buttons Behind the Panel
-  The most obvious, simple solution is to hide scene-transition buttons beneath the dialog panel, so they are visible once the dialog panel is closed.  
+  The most obvious, simple solution is to hide scene-transition buttons beneath the dialog panel, so they are visible once the dialog panel is closed. In this case, the dialog panel should have it's color set to full opacity, and it might need be be larger than necessary, in order to hide 2 buttons behind the panel.    
 
 ###Idea 2: Add Logic to Open Another Panel
-For more complex logic, we can open a new panel that has the scene-transition buttons as child objects. Then, we'd like to trigger this buttonPanel to open when the dialog is complete.  What is the best way to do this?    
+Using slightly more complex logic, we can open a new panel that has the scene-transition buttons as child objects. To do this, we must first make our dialog-panel generate an event that can be used to trigger opening of this buttonPanel, when the dialog is complete. 
 
- - Put the Scene-decision Buttons in a Panel with a CanvasGroup component, so that panel can have it's visibility set to true when the dialog is complete.
+  Below are the steps required to do this:  
 
- -  How can we tel the dialog is complete?
+ - Put the Scene-decision buttons in a UI-panel that has an attached CanvasGroup component, so that panel can have it's visibility set to true when the dialog is complete.
+
+- Create a `Custom Unity Event` for the DialogPanel.
  
+- We will write code to invoke the custom event when the dialog is complete.  
 
- - The best solution is to give the dialogPanel a **custom UnityEvent**, that we'll invoke when the dialog is complete.  The OpenBtnPanel method in one of the State.cs files will be a listener for this event. 
+- In any State.cs file that corresponds to a Unity scene where we have selected to implement this dialogPanel prefab, we'll write a simple method such as:  OpenBtnPanel.
+
+-  We will files will be a listener for this event. 
 
 ###Custom UnityEvent OnPanelClosing
 
