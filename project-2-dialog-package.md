@@ -4,6 +4,14 @@ The link below is to a Unity package file that can be imported as an asset into 
 
 [Link to Unity Package:](https://utdallas.box.com/v/Dialog-Package)
 
+#Updated Unity Package File
+The version below has been updated so that default colors are specified for the Conversation ScriptableObjects
+https://utdallas.box.com/v/dialogWithDecisionPanel-S18
+
+See Details below for information about the updates in this version of the package
+
+
+
 ###Import package
 To install the package, I suggest that you first import this package into a new 2D Unity project, to see if you want to use it in your project. Otherwise, I'd strongly recommend saving a backup of your project before importing the Unity package.  To import into a Unity project, go to Assets > Import Package > Custom Package, then browse to the downloaded package file from the link above.  Select all assets for import.
 
