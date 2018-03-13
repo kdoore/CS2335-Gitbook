@@ -48,6 +48,7 @@ Below is the new code that we've added to  our class.
 ```
 	
 ###HidePanel, ShowPanel Methods
+///This code will be put in the Utility class
 ```
 	//Modifies CanvasGroup component properties to make visible
 	private void ShowCG( CanvasGroup cg){
