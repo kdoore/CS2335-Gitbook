@@ -48,8 +48,9 @@ Below is the new code that we've added to  our class.
 ```
 	
 ###HidePanel, ShowPanel Methods
-///This code will be put in the Utility class
-```
+This code will be put in the Utility class
+
+```java
 	//Modifies CanvasGroup component properties to make visible
 	private void ShowCG( CanvasGroup cg){
 		cg.alpha = 1;
@@ -70,7 +71,7 @@ Below is the new code that we've added to  our class.
 Now we need to create a button that's in the StartPanel, this button will control the visibility of the StartPanel and MapPanel.  It will call the LoadMapPanel() method when it's onClick() event is triggered.
 
 
-```
+```java
   public void Start (){
      // other code
     mapBtn = GameObject.Find ("MapButton").GetComponent<Button> ();
