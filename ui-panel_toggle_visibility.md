@@ -1,6 +1,6 @@
 #UI-Panel: Toggle Visibility
 
-The discussion below provides an overview of how to work with UI gameObjects, when interested in toggling the visibility of these objects.  This is a general overview, and some chunks of example code, but specific example of using these concepts are found in these gitbook sections: [Simple Dialog Prefab](/simple-dialog-prefab.md), [Dialogue and Scene-Decision Integration](/dialogue-and-scene-decision-integration.md).  Finally, code to show / hide UI elements is used frequently, so it will be added to a custom static class: [Utility](/utility_-_static_class.md), so it is easier to use.
+The discussion below provides an overview of how to work with UI gameObjects, when interested in toggling the visibility of these objects.  This is a general overview, along with some chunks of example code, but for specific examples of using these concepts, look at the following gitbook sections: [Simple Dialog Prefab](/simple-dialog-prefab.md), [Dialogue and Scene-Decision Integration](/dialogue-and-scene-decision-integration.md).  Finally, code to show / hide UI elements is used frequently, so it will be added to a custom static class: [Utility](/utility_-_static_class.md), so it is easier to use.
 
 ###Learning Goals - Provide an Overview:  
 - Learn how to execute custom C# script functions using UI-Button GameObjects.
