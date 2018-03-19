@@ -27,28 +27,23 @@ Below is the new code that we've added to  our class.
 
 ```java
    //Declare Object Reference Variables for UI Components
-   private Button mapBtn;
-   private CanvasGroup mapCG, startCG;
+   private Button hideBtn;
+   private CanvasGroup  panelCG;
 	
   void Start (){
-	    ///Map Button is used to hide StartPanel and show  MapPanel
-		mapBtn = GameObject.Find ("MapButton").GetComponent<Button> ();
-		mapBtn.onClick.AddListener (LoadMapPanel);  //method called when mapBtn is clicked
+	    ///hideButton is used to hide the TextPanel 
+		hideBtn = GameObject.Find ("HideButton").GetComponent<Button> ();
+		hideBtn.onClick.AddListener (HideCG);  //method called when hideBtn is clicked
 
      //CanasGroup components on Panel gameObjects
-        startCG = GameObject.Find ("StartPanel").GetComponent<CanvasGroup> ();
-		mapCG = GameObject.Find ("MapPanel").GetComponent<CanvasGroup> ();
-
-    //initializes panel configuration when scene loaded
-		ShowPanel (startCG);
-		HidePanel (mapCG);
+        panelCG = GameObject.Find ("TextPanel").GetComponent<CanvasGroup> ();
 		
-	}
+	} //end Start
 	
 ```
 	
 ###HidePanel, ShowPanel Methods
-This code will be put in the Utility class
+This code will be put in the Utility class, or it can be in the script to toggle visibility of a UI-Panle
 
 ```java
 	//Modifies CanvasGroup component properties to make visible
@@ -67,22 +62,21 @@ This code will be put in the Utility class
 	
 ```
 
-###Call HideCG() from Button onClick()
-Now we need to create a button that's in the StartPanel, this button will control the visibility of the StartPanel and MapPanel.  It will call the LoadMapPanel() method when it's onClick() event is triggered.
+###Call HidePanel() from Button onClick()
+Now we need to have a button that's in the TextPanel, this button will control the visibility of the TextPanel.  It will call the HidePanel() method when it's onClick() event is triggered. 
 
+It would have been nice if we could just call HideCG( panelCG ) directly from the button's onClick event...but any method used for a UI-Button's onClick event should not have any input parameters, but HideCG( cg ) takes a CanvasGroup input parameter. So we need a helper method: HidePanel( ), which can be invoked by the button's onClick event.
 
+When looking at the Start Code above, the lines that have been copied below show that the HideCG 
 ```java
-  public void Start (){
-     // other code
-    mapBtn = GameObject.Find ("MapButton").GetComponent<Button> ();
-	mapBtn.onClick.AddListener (LoadMapPanel);
-	}
-		
-		//function called when mapBtn is clicked - shows mapCG, hides startCG
-    public void LoadMapPanel(){
-        ShowCG(mapCG);
-        HideCG(startCG);
-    }
 
+public void HidePanel(){
+	/ call the HideCG function
+	HideCG( panelCG); // hides the panel
+	
+	//or, if you have a Utility class: 
+	Utility.HideCG (PanelCG);
+}
+
+    	
 ```
-
