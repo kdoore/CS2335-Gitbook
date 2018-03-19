@@ -41,6 +41,8 @@ Below is a simple example class: PlayerController.cs which checks for left-right
 
 [Link to Free - 2D GameArt - Cat Sprite Assets](http://www.gameart2d.com/freebies.html)
 
+[Example Project - MiniGame_S18](https://utdallas.box.com/v/MiniGameVersion1)
+
 ```
 using UnityEngine;
 using System.Collections;
