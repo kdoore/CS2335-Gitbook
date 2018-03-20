@@ -8,7 +8,12 @@ The image below shows the panels are contained within a larger-panel, and that p
 
 ![](Screenshot 2016-11-14 16.12.18.png)
 
-The parent panel has several child panels, each of which contain a UI-image and UI-text.  The Horizontal Layout Group
+The parent panel has several child panels, each of which contain a UI-image and UI-text.  The Horizontal Layout Group.  The logic for displaying the inventory items is:
+
+1. Create and resize a UI-panel that can be opened and closed, create a button that can show / hide this panel.  Within this parent UI panel, we'll place child objects that are prefabs to display each type of inventory item, along with a text item to show how many of the items we have.
+
+    - Create individual Prefabs with: a panel, image, and text for each item that will be in the inventory.  
+    - Add a horizontal layout component to the parent UI-panel.
 
 ![](Screenshot 2016-11-14 14.05.17.png)
 
