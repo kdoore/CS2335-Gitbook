@@ -45,10 +45,19 @@ We need object-reference variables for our UI panel's CanvasGroup component: `pa
 	
 ```
 	
-###HidePanel, ShowPanel Methods
-This code will be put in the Utility class, or it can be in the script to toggle visibility of a UI-Panle
+###HidePanel, HideCG, ShowCG Methods
+The code below shows the HidePanel method, this is executed when the hideButton onClick event is invoked. Within that method, we call HideCG( cg ) method where we actually toggle the properties.
 
 ```java
+
+public void HidePanel(){
+/ call the HideCG function
+HideCG( panelCG); // hides the panel
+//or, if you have a Utility class:
+Utility.HideCG (PanelCG);
+}
+
+
 	//Modifies CanvasGroup component properties to make visible
 	private void ShowCG( CanvasGroup cg){
 		cg.alpha = 1;
@@ -71,6 +80,9 @@ Now we need to have a button that's in the TextPanel, this button will control t
 It would have been nice if we could just call HideCG( panelCG ) directly from the button's onClick event...but any method used for a UI-Button's onClick event should not have any input parameters, but HideCG( cg ) takes a CanvasGroup input parameter. So we need a helper method: HidePanel( ), which can be invoked by the button's onClick event.
 
 When looking at the Start Code above, the lines that have been copied below show that the HideCG 
+
+
+
 ```java
 
 public void HidePanel(){
