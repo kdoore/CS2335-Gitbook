@@ -1,6 +1,8 @@
 # Animator Controller
 
-The Unity Animator controller provides a visual programming language implementation of a state machine to control coordination of animations which can be attached to gameObjects. [Unity Animation Beginner Tutorial](https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/animate-anything)
+The Unity Animator controller provides a visual programming language implementation of a state machine to control coordination of animations which can be attached to gameObjects.
+
+  [Unity Animation Beginner Tutorial](https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/animate-anything)
 
 Animation Tutorials:  
 [2D Animation in Unity - Raywenderlich](http://www.raywenderlich.com/66345/unity-2d-tutorial-animations)
