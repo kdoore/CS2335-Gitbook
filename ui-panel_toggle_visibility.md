@@ -48,10 +48,11 @@ The code below shows the HidePanel method, this is executed when the hideButton 
 ```java
 
 public void HidePanel(){
-/ call the HideCG function
-HideCG( panelCG); // hides the panel
-//or, if you have a Utility class:
-Utility.HideCG (PanelCG);
+	// call the HideCG function
+	HideCG( panelCG); // hides the panel
+	
+	//or, if you have a Utility class:
+	//Utility.HideCG (PanelCG);
 }
 
 
