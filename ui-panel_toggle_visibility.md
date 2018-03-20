@@ -33,14 +33,11 @@ We need object-reference variables for our UI panel's CanvasGroup component: `pa
 	
   void Start (){
   	//CanasGroup components on Panel gameObjects
-	panelCG = GameObject.Find ("TextPanel").GetComponent<CanvasGroup> ();
+	panelCG = GameObject.Find ("TextPanel").GetComponent<CanvasGroup>();
   
 	    ///hideButton is used to hide the TextPanel 
-		hideBtn = GameObject.Find ("HideButton").GetComponent<Button> ();
-		hideBtn.onClick.AddListener (HidePanel);  //method called when hideBtn is clicked
-
-    
-		
+	hideBtn = GameObject.Find ("HideButton").GetComponent<Button>();
+	hideBtn.onClick.AddListener (HidePanel);  //method called when hideBtn is clicked	
 	} //end Start
 	
 ```
