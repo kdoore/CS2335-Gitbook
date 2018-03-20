@@ -41,7 +41,7 @@
   * [Project 2 - List of Steps](project-2-list-of-steps.md)
 * GameData Class
 
----
+## Mini-Game
 
 * [Text Input](text_input.md)
 * [Game Scene](game_scene.md)
@@ -69,6 +69,7 @@
 * [Custom Event Messaging](custom_event_messaging.md)
 * [Saving Data - Serialization](saving_data_-_serialization.md)
 * [Disable Debug Logging](disable-debug-logging.md)
+* [Class-Code Examples](class-code-examples.md)
 
 ## C\# Language
 
