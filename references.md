@@ -11,6 +11,10 @@
 
 [Unity Tutorials - RayWenderlich.com](https://www.raywenderlich.com/category/unity)
 
+[Unity Power-up system](https://www.raywenderlich.com/171511/make-power-system-unity)
+
+[Unity 2D Character Animation Tutorial - John Stejskal](http://johnstejskal.com/wp/creating-2d-animations-from-sprite-sheets-in-unity3d/)
+
 [Sprite Sheet Animation Tutorial ](http://michaelcummings.net/mathoms/creating-2d-animated-sprites-using-unity-4.3)
 
 **Unity Animator Tutorial**  
