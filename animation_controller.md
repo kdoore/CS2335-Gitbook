@@ -59,7 +59,6 @@ public enum CatState  // input parameter signals to send to Animator controller
 public class PlayerController : MonoBehaviour
 {
     private Animator animator;
-    private Transform myTransform;
     private Rigidbody2D myRBody2D;
     public float forceX;
     private bool facingRight;
@@ -67,7 +66,6 @@ public class PlayerController : MonoBehaviour
     void Awake ()
     {
         animator = GetComponent<Animator> ();
-        myTransform = GetComponent<Transform> ();
         myRBody2D = GetComponent<Rigidbody2D> ();
     }
 
@@ -81,7 +79,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate ()
     {
         float inputX = Input.GetAxis ("Horizontal");
-        bool isDead = Input.GetButton ("Fire1");
+        bool isDead = Input.GetButton ("Fire1"); //this logic will be changed, this is for testing
         bool isWalking = Mathf.Abs (inputX) > 0;  // is there horizontal input 
 
         if (isWalking) {
