@@ -7,6 +7,10 @@
 
 ### Unity 2D Game Design Tutorials:
 
+[Unity Cheat Sheet](https://www.raywenderlich.com/181367/unity-cheat-sheet-quick-reference-2018)
+
+[Unity Tutorials - RayWenderlich.com](https://www.raywenderlich.com/category/unity)
+
 [Sprite Sheet Animation Tutorial ](http://michaelcummings.net/mathoms/creating-2d-animated-sprites-using-unity-4.3)
 
 **Unity Animator Tutorial**  
@@ -15,8 +19,7 @@ Link to download and Tutorial: [https://www.youtube.com/watch?v=TU6wflRqT5Q](htt
 
 ![](Player.png)
 
-Delegates Tutorials:   
-[Juan Gomez on UnityDojo](http://unitydojo.blogspot.com/2015/03/how-to-use-delegates-in-unity-like-boss.html)
+Delegates Tutorials:   [Juan Gomez on UnityDojo](http://unitydojo.blogspot.com/2015/03/how-to-use-delegates-in-unity-like-boss.html)
 
 [CSV File](http://bravenewmethod.com/2014/09/13/lightweight-csv-reader-for-unity/) Tutorial To Import Data from a CSV File:
 
