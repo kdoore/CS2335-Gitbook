@@ -14,8 +14,8 @@ public enum PickupType
     crystal,
     animatedCrystal,
     mushroom,
-    rock}
-;
+    rock
+};
 
 public class PickUp : MonoBehaviour
 {
@@ -44,14 +44,14 @@ using UnityEngine;
 using System.Collections;
 using System;
 
-public enum PickupType { crystal, star, animatedCrystal, purpleCrystal };
+public enum PickupType { crystal, star, animatedCrystal, rock };
 
 public class PickUp : MonoBehaviour {
     /// <summary>
     /// On died handler. Declare in the base class 
     /// and use in all child classes
     /// </summary>
-    public delegate void onDiedHandler( PickUp thisPickup);
+    public delegate void onDiedHandler( PickUp thisPickup );
 
     /// <summary>
     /// Occurs when on died. Use in base class and child classes
@@ -97,7 +97,7 @@ public class CrystalController : PickUp {
     //new public delegate void onDiedHandler( PickUp thisPickup);
     //new public event onDiedHandler onDied; 
 
-    // Called automatically thanks to MonoBehaviour
+  
     void Start () {
         // Automatic destroy after random time by calling base class died method
         minLifeTime = 100.0f;
