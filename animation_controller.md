@@ -2,20 +2,33 @@
 
 The Unity Animator controller provides a visual programming language implementation of a state machine to control coordination of animations which can be attached to gameObjects.
 
-  [Unity Animation Beginner Tutorial](https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/animate-anything)
 
-Animation Tutorials:  
+**Animation Tutorials:  **
+
+[Unity 2D Character Animation Tutorial - John Stejskal](http://johnstejskal.com/wp/creating-2d-animations-from-sprite-sheets-in-unity3d/)
+
 [2D Animation in Unity - Raywenderlich](http://www.raywenderlich.com/66345/unity-2d-tutorial-animations)
 
 [Animate UI Elements](https://www.raywenderlich.com/149955/introduction-unity-ui-part-2-2)
+
+[Unity3D-Live Training: Animation Beginner Tutorial](https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/animate-anything)
+
+
+**In Class Code Example:**
+[CS2335-In Class Code Example
+](https://utdallas.box.com/v/MiniGameVersion1)
+
+
 
 ### Create an Animation from a series of sprites
 
 To create an animation, we can select a series of sprites and drag them into the scene window.  We are then prompted to save this animation.  This immediately creates several components:
 
-* Animation clip
-* Animator controller
-* Animator component
+* Animation clip:   ![](/assets/Screen Shot 2018-03-22 at 12.26.09 PM.png)
+
+* Animator controller:  ![](/assets/Screen Shot 2018-03-22 at 12.27.35 PM.png)
+
+* Animator component  ![](/assets/Screen Shot 2018-03-22 at 12.27.51 PM.png)
 
 In addition, in order to integrate animations with our Unity program, we will probably want to use the following additional items:
 
