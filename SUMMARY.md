@@ -63,6 +63,7 @@
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Inventory Display](inventory_store_-_scriptable_objects.md)
+* [Adding Audio](adding-audio.md)
 * [Events and Actions](events_and_actions.md)
 * [Event Publishing Patterns](observer_pattern.md)
 * [Delegates](delegates.md)

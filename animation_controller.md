@@ -22,6 +22,7 @@ In addition, in order to integrate animations with our Unity program, we will pr
 * Animator parameters
 * Custom C\# controller script
 * GameObject with RigidBody2D - used for GameObjects that will be moved by the Physics System.
+* GameObject with Collider2D - to detect collisions with other GamObjects to: earn points, lose health, get collectable objects.
 
 ### Animation Clip
 
@@ -29,11 +30,13 @@ In 2D mode, we can create animation clips using sprites.  We can use a series of
 
 ### Animator Controller
 
-The Animator Controller, Mechanim, is a visual interface for creating a state machine to control animations in Unity.  It has the ability to utilize input parameters as event signals, these input parameters provide the connection between the Mechanim state-machine and custom C\# scripts.  There are many online tutorial examples that show how to use Mechanim as a state-machine to control game-logic, instead of animations.  The animation controller has a set of nodes that correspond to states, it is easy to add arc - transitions between nodes. Each transition can be configured to use any number of conditions to determine when a transition is executed to change the current state of the system.
+The Animator Controller, Mechanim, is a visual interface for creating a state machine to control animations in Unity.  It has the ability to utilize input parameters as event signals, these input parameters provide the connection between the Mechanim state-machine and custom C\# scripts.   The animation controller has a set of nodes that correspond to states, it is easy to add arc - transitions between nodes. Each transition can be configured to use any number of conditions to determine when a transition is executed to change the current state of the system. There are also many online tutorial examples that show how to use Mechanim as a state-machine to control game-logic, instead of animations. 
 
-### Animation Component
+### Animator Component
 
-In order to integrate an animation with a gameObject, we need a 2D gameObject that has a Sprite Renderer, then we can add an Animation Component from the component miscellaneous tab.  Then select the empty animator-controller section in the inspector to select an animation controller from your assets folder.
+In order to integrate an animation with a gameObject, we need a 2D gameObject that has a Sprite Renderer, then we can add an Animator Component from the component miscellaneous tab.  Then select the empty animator-controller section in the inspector to select an animation controller from your assets folder.
+
+
 
 ### Custom Player-Controller Script
 
