@@ -15,7 +15,7 @@ Objects to be Spawned in the MiniGame should have the following configuration:
 6. Can have a Rigidbody2D if the spawned object will be moving
 7. Can have an Animator component if the object will be animated
 
-```
+```java
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -65,7 +65,7 @@ The Level Manager can start the Spawning.
 
 The code below introduces a version of the Spawner that can spawn from a list of prefabs.  
 
-```
+```java
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -77,13 +77,13 @@ public class Spawner : MonoBehaviour
 	public List<GameObject> prefabs = new List<GameObject> ();
 
 	// Use this for initialization
-	private int prefabsCount;
+	
 	private int pauseTime;
 	private int currentIndex;
 
 	void Start ()
 	{
-		prefabsCount = 6;
+		
 		pauseTime = 5;
 		//prefabs = ; ///calling the list constructor
 		//StartSpawning ();
@@ -93,7 +93,7 @@ public class Spawner : MonoBehaviour
 	{ 
 
 		if (prefabs.Count > 0) {  //make sure there are some gameObjects to spawn
-			for (int i = 0; i < prefabsCount; i++) {
+			for (int i = 0; i < prefabs.Count; i++) {
 				Invoke ("SpawnRandomPrefab", Random.Range (pauseTime, pauseTime * prefabsCount)); 
 			}
 		}

@@ -6,7 +6,7 @@ In order to dynamically spawn game objects in a scene, we'll need to first creat
 
 In our mini-game, we want to spawn animated crystals - which melt.  So we need to create a 2D sprite gameObject, then we'll need to attach an animator component and create an animation clip that reduces the sprite's transform scale.x, scale.y values using keyframes.  We want the crystal to generate a custom event when it's destroyed, so we're using PickUp as a base-class and we've defined an OnDiedHandler delegate and an OnDied event, we will put this logic in a custom script: crystalController.cs
 
-```
+```java
 using UnityEngine;
 using System.Collections;
 
@@ -39,7 +39,7 @@ This script needs to be attached to an empty gameObject in our scene.
 In addition, the CrystalSpawn class has also defined an EventHandler: OnSpawn\(\) and an associated Event for notification: OnSpawn  
 This will allow any gameObject in the scene to register for, and receive notifications every time that we spawn a new prefab.
 
-```
+```java
 using UnityEngine;
 using System.Collections;
 
@@ -100,9 +100,5 @@ public class CrystalSpawner : MonoBehaviour {
 }
 ```
 
-### MiniGame.cs - The UI View
 
-Since we've been using our State.cs classes for implementing the logic for the game UI, for now we can say that the MiniGame.cs class, which Implements IStateBase and which represents the current activeState for our State-Machine Framework.  Later we can create a Prefab to represent our Player heads-up display for presenting player game stat information.
-
-Inside the UI-View, we want to receive notification of spawn events and we want to receive notification of data events so we can display these on the screen.
 
