@@ -61,7 +61,7 @@ public class Spawner : MonoBehaviour
 
 The Level Manager can start the Spawning.
 
-### Spawn From a List of Prefabs
+# Spawn From a List of Prefabs
 
 The code below introduces a version of the Spawner that can spawn from a list of prefabs.  
 
