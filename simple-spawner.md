@@ -115,7 +115,7 @@ public class Spawner : MonoBehaviour
 
 	public void SpawnRandomPrefab ()
 	{
-		currentIndex = Random.Range (0, prefabs.Count);//values, 0, 1,...upto prefabs.Count-1
+		currentIndex = Random.Range (0, prefabs.Count-1);//values, 0, 1,...upto prefabs.Count-1
 		Vector3 position = transform.localPosition;
 		position.x = Random.Range (-7.6f, 7.6f);
 		position.y = Random.Range (-2.4f, -3.7f);
