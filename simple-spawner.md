@@ -1,7 +1,8 @@
-# **Simple Spawner**
+# Simple Spawner
 
 In the code below, we will spawn a prefab gameObject that's added in the inspector, using the public GameObject variable.  
 The prefab gameObjects should have an instance of the PickUp Script added as a script component.
+
 
 The spawned objects must have a Tag that corresponds to the PlayerController Tag in OnTriggerEnter2D\( \).  It may work best to have all item Tags set to 'PickUp'.
 
