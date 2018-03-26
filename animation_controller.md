@@ -50,7 +50,6 @@ The Animator Controller, Mechanim, is a visual interface for creating a state ma
 In order to integrate an animation with a gameObject, we need a 2D gameObject that has a Sprite Renderer, then we can add an Animator Component from the component miscellaneous tab.  Then select the empty animator-controller section in the inspector to select an animation controller from your assets folder.
 
 
-
 ### Custom Player-Controller Script
 
 To control a animation associated with a gameObject, outside of the Animator Controller, such as user-input, then we'll need a custom C\# script that can manage the logic to determine what input events have occurred and whether the input should impact the animation controller state.  Our custom script will send input signals to the Animator Controller State Machine, where the animator controller state machine will consider the current animator state, the input signals, and the defined transition conditions to determine whether to switch to a new animation clip.
@@ -133,13 +132,9 @@ public class PlayerController : MonoBehaviour
 }  // end class
 ```
 
-### Unity 2D Animation Tutorials:
-
-[Introduction to Unity Animation: RayWenderlich.com ](https://www.raywenderlich.com/116652/introduction-unity-animation-system)
+###Additional Unity 2D Animation Links:
 
 [Sprite Sheet Animation Tutorial ](http://michaelcummings.net/mathoms/creating-2d-animated-sprites-using-unity-4.3)
-
-[Introduction to Unity 2D](https://www.raywenderlich.com/115688/introduction-unity-2d)
 
 John Stejskal, [IndieGameBuzz 3-Part tutorial](http://indiegamebuzz.com/create-2d-sprite-based-animation-states-in-unity3d/)
 

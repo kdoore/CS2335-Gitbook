@@ -71,6 +71,7 @@
 * [Saving Data - Serialization](saving_data_-_serialization.md)
 * [Disable Debug Logging](disable-debug-logging.md)
 * [Class-Code Examples](class-code-examples.md)
+* [Object Pooling](object-pooling.md)
 
 ## C\# Language
 
