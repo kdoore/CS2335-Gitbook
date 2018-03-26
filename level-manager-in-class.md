@@ -66,7 +66,7 @@ public enum LevelState
         Utility.ShowCG (cg);
 
         spawner = GameObject.Find ("Spawner").GetComponent<Spawner> ();
-        changeSprite = GameObject.Find ("BackgroundImage").GetComponent<ChangeSprite> ();
+       
     }
 ```
 
