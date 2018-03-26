@@ -23,12 +23,9 @@ using System.Collections.Generic;
 
 public class Spawner : MonoBehaviour
 {
-
     // The prefab we will spawn
     public GameObject prefab;
-
-
-    // Use this for initialization
+   // Use this for initialization
    
     private int pauseTime;
 
