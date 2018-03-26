@@ -58,7 +58,7 @@
 * [Score UI Display](score-ui-display.md)
 * [Change Sprites](change-sprites.md)
 * [Simple Spawner](simple-spawner.md)
-* [Spawn Prefab GameObjects](spawn_prefab_gameobjects.md)
+* [EventDriven Spawner](spawn_prefab_gameobjects.md)
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
