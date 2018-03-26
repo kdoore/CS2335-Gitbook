@@ -7,7 +7,7 @@ In this course, we are focused on the functional and structural design of the la
 
 For a mini-game that uses a single scene to implement a series of game-levels, we can use a lightweight Finite State Machine - where we define an enum: LevelState to define a set of states that the mini-game system can be in.  We'll put this code in the LevelManager.cs script file.
 
-```C#
+```java
 public enum LevelState
 {
 	Start,
@@ -21,11 +21,11 @@ public enum LevelState
 
 public LevelState curLevel;  //declare a LevelState variable to store the active state
 
-```
+``` 
 
 We can use the Start state to allow for a Splash screen and start-button event to trigger the start of the miniGame, or we can start the game-play use the LevelManager Class's Start( ) method.  The transtion between levels is managed by the NextLevel() function which is triggered when the PlayerDataUpdate event is broadcast from the GameData component object;
 
-```C#
+```java
 /// Inside LevelManager.cs class script
 void Start ()
 	{
