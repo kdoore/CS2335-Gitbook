@@ -105,7 +105,7 @@ public class Spawner : MonoBehaviour
 		if (prefabs.Count > 0) {  //make sure there are some gameObjects to spawn
 			for (int i = 0; i < prefabsCount; i++) {
 
-				Invoke ("SpawnSpecificPrefab", Random.Range (pauseTime, pauseTime * prefabsCount)); 
+				Invoke ("SpawnSpecificPrefab", Random.Range (pauseTime, pauseTime * prefabs.Count)); 
 			}
 		}
 	}
