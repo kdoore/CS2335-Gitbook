@@ -59,7 +59,7 @@ public class Spawner : MonoBehaviour
 
 ### Called from LevelManager
 
-The 
+The Level Manager can start the Spawning.
 
 ### Spawn From a List of Prefabs
 
