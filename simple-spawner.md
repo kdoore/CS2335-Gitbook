@@ -28,20 +28,19 @@ public class Spawner : MonoBehaviour
 
 
     // Use this for initialization
-    private int prefabsCount;
+   
     private int pauseTime;
 
     void Start ()
     {
-        prefabsCount = 6;
-        pauseTime = 5;
+      pauseTime = 5;
        // StartSpawning ();  no longer start spawning in Start, let LevelManager call StartSpawning()
     }
 
     public void StartSpawning ()
     {
-        for (int i = 0; i < prefabsCount; i++) {
-            Invoke ("SpawnPrefab", Random.Range (pauseTime, pauseTime * prefabsCount)); 
+        for (int i = 0; i < prefabs.Count; i++) {
+            Invoke ("SpawnPrefab", Random.Range (pauseTime, pauseTime * 2.0f)); 
         }
     }
 
@@ -83,10 +82,8 @@ public class Spawner : MonoBehaviour
 
 	void Start ()
 	{
-		
 		pauseTime = 5;
-		//prefabs = ; ///calling the list constructor
-		//StartSpawning ();
+		//StartSpawning (); //call in LevelManager
 	}
 
 	public void StartSpawning ()
@@ -94,7 +91,7 @@ public class Spawner : MonoBehaviour
 
 		if (prefabs.Count > 0) {  //make sure there are some gameObjects to spawn
 			for (int i = 0; i < prefabs.Count; i++) {
-				Invoke ("SpawnRandomPrefab", Random.Range (pauseTime, pauseTime * prefabsCount)); 
+				Invoke ("SpawnRandomPrefab", Random.Range (pauseTime, pauseTime * 2.0f)); 
 			}
 		}
 	}
@@ -131,7 +128,6 @@ public class Spawner : MonoBehaviour
 	/// </summary>
 	public void SpawnSpecificPrefab ()
 	{
-		
 		Vector3 position = transform.localPosition;
 		position.x = Random.Range (-7.6f, 7.6f);
 		position.y = Random.Range (-2.4f, -3.7f);
