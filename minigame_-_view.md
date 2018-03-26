@@ -36,8 +36,7 @@ public class MiniGameState : IStateBase{
 
 // Use this for initialization
 
-    private StateManager managerRef;
-    private  GameScene scene;
+   private  GameScene scene;
 
     //Public Property GameState
     public GameScene Scene {
