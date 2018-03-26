@@ -68,7 +68,6 @@ public class GameData : MonoBehaviour
 	////Called in Player controller when the player collides with a pickup    
 	public void Add (PickUp item)
 	{
-
 		totalScore += item.value;  // update totalScore by the value of this current item
 		Debug.Log ("Adding item value to totalScore, totalScore =  " + totalScore);
 		checkResetHighScore ();  //should we update PlayerPrefs, is this the alltime high score?
@@ -76,6 +75,7 @@ public class GameData : MonoBehaviour
 	}
 	// end Add()
 
+	public void TakeDamage(int damage){        health -= damage;        if(health < 0){            Debug.Log("GameOver due to low health");        }    }
 	/// <summary>
 	/// Function to check high score in PlayerPrefs and update with the current high score if necessary
 	/// </summary>
