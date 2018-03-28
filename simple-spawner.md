@@ -24,10 +24,11 @@ using System.Collections.Generic;
 public class Spawner : MonoBehaviour
 {
     // The prefab we will spawn
-    public GameObject prefab;
+    public GameObject prefabs;
    // Use this for initialization
    
     private int pauseTime;
+    private int prefabCount; //how many to spawn?
 
     void Start ()
     {
@@ -37,7 +38,7 @@ public class Spawner : MonoBehaviour
 
     public void StartSpawning ()
     {
-        for (int i = 0; i < prefabs.Count; i++) {
+        for (int i = 0; i < prefabCount; i++) {
             Invoke ("SpawnPrefab", Random.Range (pauseTime, pauseTime * 2.0f)); 
         }
     }
@@ -76,7 +77,7 @@ public class Spawner : MonoBehaviour
 	// Use this for initialization
 	
 	private int pauseTime;
-	private int currentIndex;
+	private int currentIndex;  //which one to spawn
 
 	void Start ()
 	{
@@ -103,9 +104,9 @@ public class Spawner : MonoBehaviour
 	{ 
 		currentIndex = levelIndex - 1;
 		if (prefabs.Count > 0) {  //make sure there are some gameObjects to spawn
-			for (int i = 0; i < prefabsCount; i++) {
+			for (int i = 0; i < prefabs.Count; i++) {
 
-				Invoke ("SpawnSpecificPrefab", Random.Range (pauseTime, pauseTime * prefabs.Count)); 
+				Invoke ("SpawnSpecificPrefab", Random.Range (pauseTime, pauseTime * i)); //delay 
 			}
 		}
 	}

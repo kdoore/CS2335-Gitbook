@@ -47,17 +47,15 @@ public class CrystalSpawner : MonoBehaviour {
 
   // The prefab that we're going to spawn 
     public PickUp prefab;  //use baseclass type
-
-    private int prefabsCount;
+    
     private int pauseTime;
 
   
 
     // Explicitly Create the first crystals in unity start
     void Start () {
-        prefabsCount = 2;
         pauseTime = 1;
-        for (int i = 0; i < prefabsCount; i++){
+        for (int i = 0; i < prefabs.Count; i++){
             Invoke("SpawnPrefab", Random.Range(pauseTime+1, pauseTime+5)); 
         }
     }
