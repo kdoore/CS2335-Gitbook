@@ -16,6 +16,7 @@ Objects to be Spawned in the MiniGame should have the following configuration:
 6. Can have a Rigidbody2D if the spawned object will be moving
 7. Can have an Animator component if the object will be animated
 
+
 ```java
 using UnityEngine;
 using System.Collections;
@@ -62,6 +63,8 @@ The Level Manager can start the Spawning.
 # Spawn From a List of Prefabs
 
 The code below introduces a version of the Spawner that can spawn from a list of prefabs.  
+
+
 
 ```java
 using UnityEngine;
@@ -138,5 +141,22 @@ public class Spawner : MonoBehaviour
 
 ```
 
+##Using Random Numbers in Unity
 
+[Unity Manual: Using Random Numbers](https://docs.unity3d.com/Manual/RandomNumbers.html) 
+
+>Choosing a Random Item from an Array
+Picking an array element at random boils down to choosing a random integer between zero and the array’s maximum index value (which is equal to the length of the array minus one). This is easily done using the built-in Random.Range function:-
+
+
+
+```
+ var element = myArray[Random.Range(0, myArray.Length)];
+ 
+ var element = myList[ Random.Range( 0, myList.Count)];
+```
+
+
+
+>Note that Random.Range returns a value from a range that includes the first parameter but excludes the second, so using myArray.Length, or myList.Count here gives the correct result.
 
