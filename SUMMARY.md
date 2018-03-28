@@ -73,6 +73,10 @@
 * [Class-Code Examples](class-code-examples.md)
 * [Object Pooling](object-pooling.md)
 
+## Project 3
+
+* [PlayerController](project-3/playercontroller.md)
+
 ## C\# Language
 
 * [C\# Language](c_language.md)
