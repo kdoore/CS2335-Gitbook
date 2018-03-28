@@ -81,6 +81,13 @@ public class Spawner : MonoBehaviour
 	
 	private int pauseTime;
 	private int currentIndex;  //which one to spawn
+ 
+ 	//property with write permissions
+ 	//can be set from LevelManager
+ 	public int CurrentIndex{
+ 		set{ currentIndex = value };
+ 	}
+ 	
 
 	void Start ()
 	{
@@ -128,6 +135,8 @@ public class Spawner : MonoBehaviour
 	/// <summary>
 	/// Spawns the specific prefab. - Specific prefab corresponds to a 
 	/// specific level number.
+	/// currentIndex is a public class instance variable that 
+	///can be set from another class like LevelManager
 	/// </summary>
 	public void SpawnSpecificPrefab ()
 	{
@@ -137,6 +146,18 @@ public class Spawner : MonoBehaviour
 		Instantiate (prefabs [currentIndex], position, transform.rotation);
 		Debug.Log ("Something is spawned index: " + currentIndex);
 	}
+	
+	//overloaded version takes an integer index value
+	public void SpawnSpecificPrefab ( int index)
+	{
+		Vector3 position = transform.localPosition;
+		position.x = Random.Range (-7.6f, 7.6f);
+		position.y = Random.Range (-2.4f, -3.7f);
+		Instantiate (prefabs [index], position, transform.rotation);
+		Debug.Log ("Something is spawned index: " + currentIndex);
+	}
+
+
 
 }
 
