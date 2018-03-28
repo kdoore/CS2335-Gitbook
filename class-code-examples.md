@@ -10,15 +10,15 @@
 ###Week March 26-30
 
 **Player**
-    - [PlayerController.cs](/project-3/playercontroller.md)
+- [PlayerController.cs](/project-3/playercontroller.md)
 
 **Screen Fading / Reloading**
-    - [ScreenFader](/simple-spawner/screen-fading-and-reloading.md)
+- [ScreenFader](/simple-spawner/screen-fading-and-reloading.md)
 
 **Spawner**
-    - [SimpleSpawner](/simple-spawner.md)
-    - [ AppleTreeSpawner](/project-1-game-controller/appletree-as-a-spawner.md)
-    -  [Event Driven Spawner](/spawn_prefab_gameobjects.md)
+   - [SimpleSpawner](/simple-spawner.md)
+   - [ AppleTreeSpawner](/project-1-game-controller/appletree-as-a-spawner.md)
+   -  [Event Driven Spawner](/spawn_prefab_gameobjects.md)
    
 **GameData**
  - [GameData - Simple](/gamedata-simple.md)
