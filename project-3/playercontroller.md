@@ -2,9 +2,10 @@
 
 This example code works for an Animator Controller with 4 States as listed in the enum: heroState.
 
-It also includes a [Fading Screen](/simple-spawner/screen-fading-and-reloading.md) and reload of the Scene when the player hits a prefab PickUp object with a tag: "Hazard"
+This code assumes  that there are prefab objects with tags:  
+Collectable, Hazard
 
-
+The prefabs must have the PickUp script on them.
 
 ```java
 
