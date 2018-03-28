@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 		idle=0,
 		walk=1,
 		jump = 2,
-           	dead =3
+        dead =3
 	};
 
 	private Rigidbody2D rb2D;
@@ -108,18 +108,26 @@ public class PlayerController : MonoBehaviour
 	void OnTriggerEnter2D (Collider2D hitObject)
 	{
 		if (hitObject.CompareTag ("Collectable")) {
-			Debug.Log ("Hit Collectable");
-			Destroy (hitObject.gameObject);
 			
+            PickUp item = hitObject.GetComponent<PickUp>();
+            if(item != null){
+                GameData.instanceRef.Add(item);
+                Debug.Log("Added item " + item.type);
+            }
+            Destroy(hitObject.gameObject);
 		}
 		if (hitObject.CompareTag ("Hazard")) {
             anim.SetInteger("HeroState", (int)heroState.dead);
-            //anim.SetInteger("HeroState", (int)heroState.idle);
-
-            Debug.Log ("Hit Hazard event");
-			Destroy (hitObject.gameObject);
+	
+            PickUp item = hitObject.GetComponent<PickUp>();
+            if (item != null)
+            {
+                GameData.instanceRef.TakeDamage(item.value);
+                Debug.Log("TakeDamage " + item.value);
+               
+            }
+            Destroy(hitObject.gameObject);
             dead = true;
-            ReloadScene();
 		}
 	}
 
@@ -129,12 +137,7 @@ public class PlayerController : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
-	}
-
-    public void ReloadScene(){
-        ScreenFader fader= FindObjectOfType<ScreenFader>();
-        fader.EndScene((int)GameScene.MiniGame);
-    }
+	}  
 
 }
 
