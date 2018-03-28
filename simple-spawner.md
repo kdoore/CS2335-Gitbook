@@ -85,7 +85,7 @@ public class Spawner : MonoBehaviour
  	//property with write permissions
  	//can be set from LevelManager
  	public int CurrentIndex{
- 		set{ currentIndex = value };
+ 		set{ currentIndex = value; }
  	}
  	
 
