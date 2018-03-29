@@ -77,9 +77,9 @@
 ## Project 3
 
 * Project 3 - Code
-* [GameData - With UnityEvent](project-3/gamedata-with-unityevent.md)
-* [PlayerController](project-3/playercontroller.md)
-* [Simple Spawner](project-3/simple-spawner.md)
+  * [GameData - With UnityEvent](project-3/gamedata-with-unityevent.md)
+  * [PlayerController](project-3/playercontroller.md)
+  * [Simple Spawner](project-3/simple-spawner.md)
 
 ## C\# Language
 
