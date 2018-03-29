@@ -1,5 +1,5 @@
 #Simple Spawner
-
+This code creates the simplest possible spawner.
 
 
 ```java
