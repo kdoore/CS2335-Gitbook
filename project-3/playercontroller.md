@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D hitObject)
 	{
-		if (hitObject.CompareTag ("Collectable")) {
+		if (hitObject.CompareTag ("Collectible")) {
 			
             PickUp item = hitObject.GetComponent<PickUp>();
             if(item != null){
