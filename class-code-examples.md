@@ -16,7 +16,8 @@
 - [ScreenFader](/simple-spawner/screen-fading-and-reloading.md)
 
 **Spawner**
-   - [SimpleSpawner](/simple-spawner.md)
+   - [Simplest Spawner](/project-3/simple-spawner.md)
+   - [SimpleSpawner - List of Prefabs](/simple-spawner.md)
    - [ AppleTreeSpawner](/project-1-game-controller/appletree-as-a-spawner.md)
    -  [Event Driven Spawner](/spawn_prefab_gameobjects.md)
    
