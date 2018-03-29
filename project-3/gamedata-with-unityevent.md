@@ -2,22 +2,27 @@
 
 This version of the GameData script uses a custom UnityEvent to notify listeners that some change happened to the player's data.
 
-This example uses a simple UnityEvent: `onPlayerDataUpdate,` to notify any Listeners that the playerData has been updated.  Potential Listener objects include the LevelManager script, the PlayerStatsDisplay, and the InventoryDisplay.
+**UnityEvent**
+This example uses a simple UnityEvent: `onPlayerDataUpdate,` to notify any Listeners that the playerData has been updated.  Potential Listener objects include the LevelManager script, the PlayerStatsDisplay, and the InventoryDisplay.  Make sure to add:  using `UnityEngine.Events;`, to the top of your script
+
+**GameObject:**  GameData should be added to the GameManager, empty gameObject, in the BeginScene, and in the MiniGame scene for easy testing of the game.
 
 ```java
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.Events;  //ADD THIS
 
+///Singleton Class - Accessible in all scenes
+///Manages all data for the game
 public class GameData : MonoBehaviour {
-
-
     public static GameData instanceRef; //singleton reference variable
-    //declare the Unity event: onPlayerDataUpdate
-public UnityEvent onPlayerDataUpdate;
+    
+    //declare our custom Unity event: onPlayerDataUpdate
+    public UnityEvent onPlayerDataUpdate;
 
+    
     private int health;
     private int lives;
     private int totalScore;
@@ -48,11 +53,12 @@ public UnityEvent onPlayerDataUpdate;
             totalScore = PlayerPrefs.GetInt("HighScore");
             Debug.Log("Starting High Score");
         }
-        else
+        else //"HighScore" has never been created, so create it and give initial value of 0.
         {
             PlayerPrefs.SetInt("HighScore", 0);
         }
 
+        //initialize the UnityEvent by calling the constructor.
         if(onPlayerDataUpdate == null){
             onPlayerDataUpdate = new UnityEvent();
         }
@@ -73,21 +79,23 @@ public UnityEvent onPlayerDataUpdate;
         Debug.Log("Adding item value to totalScore, totalScore = " + totalScore);
         checkResetHighScore(); //should we update PlayerPrefs, is this the alltime high score?
 
-        if(onPlayerDataUpdate != null){
-            onPlayerDataUpdate.Invoke();
+        if(onPlayerDataUpdate != null){  // some object is listening
+            onPlayerDataUpdate.Invoke(); //broadcast the event
         }
     } // end Add()
      
-    public void TakeDamage(int damage){
-        health -= damage;
+     //Called from PlayerController when the player has 
+     //collided with a Hazard, Damage is a negative value, so we should just add it to health.
+    public void TakeDamage(int damage){ 
+        health += damage;
+        Debug.Log("TakeDamage: Health " + health);
         if(health < 0){
             Debug.Log("GameOver due to low health");
         }
 
-        if (onPlayerDataUpdate != null)
-        {
-            onPlayerDataUpdate.Invoke();
-        }
+        if (onPlayerDataUpdate != null){// some object is listening
+            onPlayerDataUpdate.Invoke();//broadcast the event
+            }
     }
 
     /// <summary>
