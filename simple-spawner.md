@@ -33,7 +33,7 @@ public class Spawner : MonoBehaviour
    // Use this for initialization
    
     private int pauseTime;
-    private int numToSpawn; //how many to spawn?
+    public int numToSpawn=5; //how many to spawn?
 
     void Start ()
     {
