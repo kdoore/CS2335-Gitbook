@@ -25,7 +25,7 @@ Project includes:  PlayerController.cs, PickUp.cs, and MiniGame.cs, along with s
 
 **Spawner**
    - [Simplest Spawner](/project-3/simple-spawner.md)
-   - [SimpleSpawner - List of Prefabs](/simple-spawner.md)
+   - [Spawner with List of Prefabs](/simple-spawner.md)
    - [ AppleTreeSpawner](/project-1-game-controller/appletree-as-a-spawner.md)
    -  [Event Driven Spawner](/spawn_prefab_gameobjects.md)
    
