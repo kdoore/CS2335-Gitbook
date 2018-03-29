@@ -38,7 +38,10 @@ public class Spawner : MonoBehaviour
     void Start ()
     {
       pauseTime = 5;
-       // StartSpawning ();  no longer start spawning in Start, let LevelManager call StartSpawning()
+       
+       //UNCOMMENT THE LINE BELOW TO TEST - 
+       // StartSpawning ();  // have the LevelManager call this method
+       
     }
 
     public void StartSpawning ()
