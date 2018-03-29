@@ -3,9 +3,11 @@
 This example code works for an Animator Controller with 4 States as listed in the enum: heroState.
 
 This code assumes  that there are prefab objects with tags:  
-Collectable, Hazard
+Collectible, Hazard
 
 The prefabs must have the PickUp script on them.
+
+This example assumes you have a GameData object.  For ease of testing, create an empty GameObject: GameManager, in the MiniGame scene.  Add the GameData script to the GameManager.  Also, in the BeginScene, add GameData to the GameManager GameObject ( it currently has StateManager attached)
 
 ```java
 
