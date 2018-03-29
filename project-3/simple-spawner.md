@@ -1,6 +1,11 @@
 #Simple Spawner
-This code creates the simplest possible spawner.
-This code will be attached to an empty gameObject.  Make sure to check the Transform.position.Z value of the Spawner gameObject, make sure it is 0, not -10.  The spawned prefabs will be initialized with this value for Transform.position.Z. Then the objects will be behind the main camera and won't be visible when the scene plays.  
+This code creates the simplest possible spawner
+.
+This code will be attached to an empty gameObject: Spawner.  
+
+Make sure to check the Transform.position.Z value of the Spawner gameObject, make sure it is 0, not -10.  The spawned prefabs will be initialized with this value for Transform.position.Z. Then the objects will be behind the main camera and won't be visible when the scene plays.  
+
+You'll customize this to meet your needs.
 
 ```java
 
