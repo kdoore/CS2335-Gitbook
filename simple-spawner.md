@@ -82,6 +82,7 @@ public class Spawner : MonoBehaviour
 {
 
 	// The prefab we will spawn
+	[Header("Set in Inspector")]
 	public List<GameObject> prefabs = new List<GameObject> ();
 
 	// Use this for initialization
@@ -113,21 +114,22 @@ public class Spawner : MonoBehaviour
 	}
 
 	/// <summary>
-	///  Called from Level Manager // pass in index of what we want spawned
+	///  Called from Level Manager // pass in index of what we want spawned, how many we want to spawn
 	/// </summary>
 	/// <param name="prefabIndex">Prefab index.</param>
 	/// if Level is 1, spawn prefab 0
-	public void StartSpawning (int levelIndex)
+	public void StartSpawning (int levelIndex, int numToSpawn)
 	{ 
 		currentIndex = levelIndex - 1;
 		if (prefabs.Count > 0) {  //make sure there are some gameObjects to spawn
-			for (int i = 0; i < prefabs.Count; i++) {
+			for (int i = 0; i < numToSpawn; i++) {
 
 				Invoke ("SpawnSpecificPrefab", Random.Range (pauseTime, pauseTime * i)); //delay 
 			}
 		}
 	}
 
+	//spawns 1 prefab
 	public void SpawnRandomPrefab ()
 	{
 		currentIndex = Random.Range (0, prefabs.Count);//gives values, 0, 1,...up to prefabs.Count-1
