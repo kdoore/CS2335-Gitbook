@@ -16,6 +16,9 @@ Objects to be Spawned in the MiniGame should have the following configuration:
 6. Can have a Rigidbody2D if the spawned object will be moving
 7. Can have an Animator component if the object will be animated
 
+###Simple Spawner
+The code below creates a simple spawner
+
 
 ```java
 using UnityEngine;
@@ -25,11 +28,12 @@ using System.Collections.Generic;
 public class Spawner : MonoBehaviour
 {
     // The prefab we will spawn
-    public GameObject prefabs;
+    [Set In Inspector]
+    public GameObject prefab;
    // Use this for initialization
    
     private int pauseTime;
-    private int prefabCount; //how many to spawn?
+    private int numToSpawn; //how many to spawn?
 
     void Start ()
     {
@@ -39,7 +43,7 @@ public class Spawner : MonoBehaviour
 
     public void StartSpawning ()
     {
-        for (int i = 0; i < prefabCount; i++) {
+        for (int i = 0; i < numToSpawn; i++) {
             Invoke ("SpawnPrefab", Random.Range (pauseTime, pauseTime * 2.0f)); 
         }
     }
