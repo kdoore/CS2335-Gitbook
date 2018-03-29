@@ -71,7 +71,6 @@
 * [Custom Event Messaging](custom_event_messaging.md)
 * [Saving Data - Serialization](saving_data_-_serialization.md)
 * [Disable Debug Logging](disable-debug-logging.md)
-
 * [Object Pooling](object-pooling.md)
 
 ## Project 3
@@ -80,8 +79,7 @@
   * [GameData - With UnityEvent](project-3/gamedata-with-unityevent.md)
   * [PlayerController](project-3/playercontroller.md)
   * [Simple Spawner](project-3/simple-spawner.md)
-  * [Class-Code Examples](class-code-examples.md)
-
+* [Class-Code Examples](class-code-examples.md)
 
 ## C\# Language
 

@@ -1,9 +1,10 @@
 #GameData with UnityEvent
 
-This example uses simple UnityEvents to notify any Listeners that 
+This version of the GameData script uses a custom UnityEvent to notify listeners that some change happened to the player's data.
+
+This example uses a simple UnityEvent: `onPlayerDataUpdate,` to notify any Listeners that the playerData has been updated.  Potential Listener objects include the LevelManager script, the PlayerStatsDisplay, and the InventoryDisplay.
 
 ```java
-
 
 using System.Collections;
 using System.Collections.Generic;
@@ -13,20 +14,21 @@ using UnityEngine.Events;
 public class GameData : MonoBehaviour {
 
 
-public static GameData instanceRef; //singleton reference variable
+    public static GameData instanceRef; //singleton reference variable
+    //declare the Unity event: onPlayerDataUpdate
+public UnityEvent onPlayerDataUpdate;
+
     private int health;
     private int lives;
     private int totalScore;
 
-    public UnityEvent onPlayerDataUpdate;
-
-    public int TotalScore
+    public int TotalScore  //public property 
     { //read only
         get { return totalScore; }
     }
 
     void Awake()
-    { //create singleton
+    { //create singleton 
         if (instanceRef == null)
         {
             instanceRef = this;
