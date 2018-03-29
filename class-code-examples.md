@@ -8,11 +8,9 @@ The link below is the starter-project code for Project 3.
 
 **IMPORTANT:** I personally purchased the sprite-set used in the starter-project linked above. **You cannot use this character in your game**. It is not a free-art asset. 
 You can find a similar version of these sprites at the link below: 
-
-Project includes:  PlayerController.cs, PickUp.cs, and MiniGame.cs, along with scripts from Project2.
-
 [Link to Free - 2D GameArt - Animation Sprite Assets](http://www.gameart2d.com/freebies.html)
 
+**Project includes**:  PlayerController.cs, PickUp.cs, and MiniGame.cs, along with scripts from Project2.
 
 
 ###Week March 26-30
