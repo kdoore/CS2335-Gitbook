@@ -2,8 +2,8 @@
 
 This example code works for an Animator Controller with 4 States as listed in the enum: heroState.
 
-This code assumes  that there are prefab objects with tags:  
-Collectible, Hazard
+This code assumes  that there are prefab objects with **tags:  **
+**Collectible, Hazard**
 
 The prefabs must have the PickUp script on them.
 
