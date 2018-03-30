@@ -23,7 +23,7 @@
   * [Background Image - Add Sorting Layers](background-image-add-sorting-layers.md)
 * [Game Objects](game_objects.md)
 * [Finding Game Objects](finding_game_objects.md)
-* [Canvas: Screen-Space Overlay](screen-space_canvas.md)
+* [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
 
 ## Project 2
 
