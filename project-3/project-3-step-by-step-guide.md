@@ -17,7 +17,7 @@ You need a Player gameObject, where movement is controlled by keyboard input.  T
  1.  Create a 2D sprite gameObject, name it player. 
  2.  Create a script:  PlayerController.cs, using the example [PlayerController.cs](/project-3/playercontroller.md) script as a starting point.  You will need to modify this script to fit your gameplay scenario.
  
- 3.  Add the following components to your **Player** gameObject:
+ 3.  Add the following inspector **Components** to your **Player** gameObject:
   - PlayerController.cs  script component
   - Rigidbody2d, use default settings, including Dynamic Body-type.  
       - Modify, Select: Constraints: Freeze Rotation Z
