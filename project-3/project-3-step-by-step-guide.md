@@ -34,6 +34,6 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
   - **Animator Controller:** Use Hero-State enums to send parameter values into the Animator Controller.
   - **OnTriggerEnter2D( )**  You will add code for logic that should be exectued when the player collides with other GameObjects, depending on the Tags:  Collectible, or Hazard.
   
-  
+###PickUp Prefabs   
   
   
