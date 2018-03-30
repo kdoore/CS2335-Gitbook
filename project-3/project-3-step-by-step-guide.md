@@ -17,7 +17,7 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
  1.  Create a **2D sprite** gameObject, name it `Player`. 
  2.  Create a script:  **PlayerController.cs**, using the example [PlayerController.cs](/project-3/playercontroller.md) script as a starting point.  You will need to modify this script to fit your gameplay scenario.
  
- 3.  Add the following inspector **Components** to your **Player** gameObject:
+ 3.  Add the following **Components** to your **Player** gameObject:
   - **PlayerController.cs**  script component
   - **Rigidbody2d**, use default settings, including Dynamic Body-type.  
       - Modify, Select: Constraints: Freeze Rotation Z
@@ -37,6 +37,15 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
 ###3. PickUp Prefabs - Create 4:
 You are required to have a minimum of 4 different types of PickUp objects for the player to interact with.  For each of your 4 required PickUp type objects:   
 1. Create a 2D sprite gameObject 
+2. Modify the PickUp.cs script file as needed:  
+  - Change the `PickupType` enums to match your game's theme and objects.
+2.  Add the following **Components** to your PickUp GameObject:
+ - Collider2D:  with: isTrigger checked
+ - Tag:  Hazard or Collectible
+ - PickUp.cs script
+    - Set: PickupType from the dropdown
+    - Set: value to assign point value
+    
    
   
   
