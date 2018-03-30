@@ -2,7 +2,7 @@
 
 Follow the guidelines below to complete project 3.
 
-###Create Scene and State script for your MiniGame
+###1. Create Scene and StateX.cs script for MiniGame
 Follow the same steps used in [Project 2](https://kdoore.gitbooks.io/cs-2335/content/project-2-create-new-scene-and-state.html), to create a new scene and a new state.cs script.
 
 1.  Create a new scene, MiniGame, in a copy of Project 2. (You can name your scene anything you want, I'll refer to mine as MiniGame.  
@@ -11,7 +11,7 @@ Follow the same steps used in [Project 2](https://kdoore.gitbooks.io/cs-2335/con
 
 3.  Follow the steps in Project 2, to configure the canvas, so it uses [screen-space-camera](/screen-space_canvas.md) rendering mode.
 
-###Player GameObject
+###2. Player GameObject
 You need a **Player GameObject**, where movement is controlled by keyboard input.  This gameObject is similar to the Basket GameObject in the ApplePicker game.  
 
  1.  Create a **2D sprite** gameObject, name it `Player`. 
@@ -34,6 +34,6 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
   - **Animator Controller:** Use Hero-State enums to send parameter values into the Animator Controller.
   - **OnTriggerEnter2D( )**  You will add code for logic that should be exectued when the player collides with other GameObjects, depending on the Tags:  Collectible, or Hazard.
   
-###PickUp Prefabs   
+###3. PickUp Prefabs   
   
   
