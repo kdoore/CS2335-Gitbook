@@ -41,11 +41,18 @@ For each of your 4 required PickUp type objects:
 1. Create a 2D sprite gameObject 
 2. Modify the PickUp.cs script file as needed:  Change the `PickupType` enums to match your game's theme and objects.
 3.  Add the following **Components** to your PickUp GameObject:
- - Collider2D:  with: isTrigger checked
+ - Collider2D:  with: `isTrigger` checked as true
  - Tag:  Hazard or Collectible
  - PickUp.cs script
     - Set: PickupType from the dropdown
     - Set: value to assign point value
+    
+    
+Create a prefab of this object by dragging into your Resources folder.  
+Remove all prefab objects from the game-scene 
+
+###Spawner 
+You are not required to use a spawner.
     
    
   
