@@ -52,7 +52,13 @@ Create a prefab of this object by dragging into your Resources folder.
 Remove all prefab objects from the game-scene 
 
 ###Spawner 
-You are not required to use a spawner.
+You are not required to use a spawner. But using one or more spawners may be the easiest method to have objects for the player to interact with, for each mini-game level.
+
+To create a basic spawner:
+1.  Create an empty gameObject, name it Spawner.
+2.  Check the Transform.Position values, make sure the Z value is 0.  
+3.  Move the Spawner off-screen. If you use the spawner to spawn PickUp objects that will fall due to gravity, then move the spawner to the top of the scene so you can use the Spawner's transform Y and Z values to initialize the spawned object's initial position.
+4.  Determine the range of X values that are valid for initializing the position of spawned, by dragging a PickUp object to the left and right borders of the scene and noting the values for the Transform.Position.X, these will be used to initailize 
     
    
   

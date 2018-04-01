@@ -1,11 +1,11 @@
 #Simple Spawner
 This code creates the simplest possible spawner
 .
-This code will be attached to an empty gameObject: Spawner.  
+This code will be attached to an empty gameObject: Spawner.  The StartSpawning method can be executed from the LevelManager, rather than from Start...which will cause spawning as soon as the scene loads.
 
 Make sure to check the Transform.position.Z value of the Spawner gameObject, make sure it is 0, not -10.  The spawned prefabs will be initialized with this value for Transform.position.Z. Then the objects will be behind the main camera and won't be visible when the scene plays.  
 
-You'll customize this to meet your needs.
+You'll customize this to meet your needs.  
 
 ```java
 
@@ -27,9 +27,11 @@ public class Spawner : MonoBehaviour
     public float xRange = 8.0f;
     public float yRangeTop = -2.0f;
     public float yRangeBottom = -3.5f;
+    public bool activeSpawning = false;
 
     void Start()
     {
+       activeSpawning = true;
        StartSpawning (); //call in LevelManager
     }
 
@@ -46,6 +48,7 @@ public class Spawner : MonoBehaviour
     
     public void SpawnPrefab()
     {
+    if( activeSpawning){
         Vector3 position = transform.localPosition;
         position.x = Random.Range(-xRange, xRange);
         position.y = Random.Range(yRangeBottom, yRangeTop);
@@ -56,7 +59,9 @@ public class Spawner : MonoBehaviour
         }else{
         Instantiate(prefabGood, position, transform.rotation);
         }
-    }
-}
+    }  
+    } //end SpawnPrefab method
+    
+} // end Spawner
 ```
 
