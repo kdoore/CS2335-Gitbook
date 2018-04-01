@@ -78,7 +78,8 @@ GameData functions as a singleton database for storing all data for the game.  S
 4.  In your project's MiniGame scene, create a new empty  GameObject, GameManager, and add the GameData script component to the GameManager gameObject.
 5.  You will. start customizing your other scripts, so they will use GameData for storing data created by gameplay.
 
-
+###LevelManager
+If you use a single scene for your entire MiniGame, then we can create a LevelManager gameObject and Script component to manage the gameplay logic, such as determining the current level.
 
 
    
