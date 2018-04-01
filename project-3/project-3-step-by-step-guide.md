@@ -66,6 +66,7 @@ To create a basic spawner:
 5.  Repeat the previous step to determine range of Y values where an object can be spawned.
 5.  Create a C# script: [Spawner.cs](/project-3/simple-spawner.md).   Attach the script to the Spawner GameObject.
 6.  In the inspector, select Prefabs from your assets folder to populate the GoodPrefab, BadPrefab variables.
+7.  Customize variable values in the Spawner.cs script so they correspond with your game's requirements.
 
     
    
