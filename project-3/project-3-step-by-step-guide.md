@@ -63,7 +63,8 @@ To create a basic spawner:
 2.  Check the Transform.Position values, make sure the Z value is 0.  
 3.  Move the Spawner off-screen. If you use the spawner to spawn PickUp objects that will fall due to gravity, then move the spawner to the top of the scene so you can use the Spawner's transform Y and Z values to initialize the spawned object's initial position.
 4.  Determine the range of X values that are valid for initializing the position of spawned, by dragging a PickUp object to the left and right borders of the scene and noting the values for the Transform.Position.X.
-5.  Create a C# script: [Spawner.cs](/project-3/simple-spawner.md).
+5.  Repeat the previous step to determine range of Y values where an object can be spawned.
+5.  Create a C# script: [Spawner.cs](/project-3/simple-spawner.md).   Attach the script to the Spawner GameObject.
 6.  In the inspector, select Prefabs from your assets folder to populate the GoodPrefab, BadPrefab variables.
 
     
