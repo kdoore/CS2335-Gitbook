@@ -43,7 +43,7 @@ For each of your 4 required PickUp type objects:
 3.  Add the following **Components** to your PickUp GameObject:
  - Collider2D:  with: `isTrigger` checked as true
  - Tag:  Hazard or Collectible
- - PickUp.cs script
+ - [PickUp.cs](/pickup_items.md) script
     - Set: PickupType from the dropdown
     - Set: value to assign point value
     
@@ -58,7 +58,9 @@ To create a basic spawner:
 1.  Create an empty gameObject, name it Spawner.
 2.  Check the Transform.Position values, make sure the Z value is 0.  
 3.  Move the Spawner off-screen. If you use the spawner to spawn PickUp objects that will fall due to gravity, then move the spawner to the top of the scene so you can use the Spawner's transform Y and Z values to initialize the spawned object's initial position.
-4.  Determine the range of X values that are valid for initializing the position of spawned, by dragging a PickUp object to the left and right borders of the scene and noting the values for the Transform.Position.X, these will be used to initailize 
+4.  Determine the range of X values that are valid for initializing the position of spawned, by dragging a PickUp object to the left and right borders of the scene and noting the values for the Transform.Position.X.
+5.  Create a C# script: [Spawner.cs](/project-3/simple-spawner.md).
+6.  In the inspector, select Prefabs from your assets folder to 
     
    
   
