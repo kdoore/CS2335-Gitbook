@@ -69,6 +69,8 @@ To create a basic spawner:
 7.  Customize variable values in the Spawner.cs script so they correspond with your game's requirements.
 
     
+###GameData
+
    
   
   
