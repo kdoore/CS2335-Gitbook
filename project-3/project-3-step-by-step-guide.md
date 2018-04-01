@@ -38,18 +38,21 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
 You are required to have a minimum of 4 different types of PickUp objects for the player to interact with.  
 
 For each of your 4 required PickUp type objects:   
-1. Create a 2D sprite gameObject 
+1. Create a 2D sprite gameObject.
+2. Set the Transform.Position values to x: 0,y: 0,z: 0 
 2. Modify the PickUp.cs script file as needed:  Change the `PickupType` enums to match your game's theme and objects.
-3.  Add the following **Components** to your PickUp GameObject:
+3.  Set the SpriteRenderer Sorting Layer to `Foreground`.
+4.  If you will be using a Spawner, drag your PickUp around the screen to determine the range of X and Y values where this object can be spawned (for use in configuring the Spawner)
+5.  Add the following **Components** to your PickUp GameObject:
  - Collider2D:  with: `isTrigger` checked as true
  - Tag:  Hazard or Collectible
  - [PickUp.cs](/pickup_items.md) script
     - Set: PickupType from the dropdown
     - Set: value to assign point value
-    
-    
+     
 Create a prefab of this object by dragging into your Resources folder.  
-Remove all prefab objects from the game-scene 
+Remove all prefab objects from the game-scene. 
+Save your project.
 
 ###Spawner 
 You are not required to use a spawner. But using one or more spawners may be the easiest method to have objects for the player to interact with, for each mini-game level.
@@ -60,7 +63,8 @@ To create a basic spawner:
 3.  Move the Spawner off-screen. If you use the spawner to spawn PickUp objects that will fall due to gravity, then move the spawner to the top of the scene so you can use the Spawner's transform Y and Z values to initialize the spawned object's initial position.
 4.  Determine the range of X values that are valid for initializing the position of spawned, by dragging a PickUp object to the left and right borders of the scene and noting the values for the Transform.Position.X.
 5.  Create a C# script: [Spawner.cs](/project-3/simple-spawner.md).
-6.  In the inspector, select Prefabs from your assets folder to 
+6.  In the inspector, select Prefabs from your assets folder to populate the GoodPrefab, BadPrefab variables.
+
     
    
   
