@@ -33,6 +33,7 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
   - **Physics Movement:** This movement occurs in the FixedUpdate method.  
   - **Animator Controller:** Use Hero-State enums to send parameter values into the Animator Controller.
   - **OnTriggerEnter2D( )**  You will add code for logic that should be exectued when the player collides with other GameObjects, depending on the Tags:  Collectible, or Hazard.
+  5. If you will use your Player in multiple scenes, save your Player as a prefab, save your project.
   
 ###3. PickUp Prefabs - Create 4:
 You are required to have a minimum of 4 different types of PickUp objects for the player to interact with.  
