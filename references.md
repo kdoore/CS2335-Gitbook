@@ -1,9 +1,11 @@
 # References
+1. Introduction To Game-Design and Prototyping, Jeremy Gibon. [https://www.amazon.com/Introduction-Game-Design-Prototyping-Development/dp/0134659864/ref=dp_ob_title_bk](https://www.amazon.com/Introduction-Game-Design-Prototyping-Development/dp/0134659864/ref=dp_ob_title_bk)
 
-1. Crawford, Chris \(2012-12-12\). Chris Crawford on Interactive Storytelling \(2nd Edition\) \(p. 161\). Pearson Education. Kindle Edition.
-2. Shiffman, Daniel.  Learning Processing, [LeanringProcessing.org ](learningprocessing.org)
+2. Crawford, Chris \(2012-12-12\). Chris Crawford on Interactive Storytelling \(2nd Edition\) \(p. 161\). Pearson Education. Kindle Edition.
+
 3. [Miles, Rob. C\# Programming Yellow Book ](http://www.robmiles.com/c-yellow-book/) Exellent C\# Book, Free online / download pdf-version.
 4. Norton, Terry. [Learning C\# by Developing Games with Unity 3D Beginner's Guide, Terry Norton](http://www.amazon.com/Learning-Developing-Games-Unity-Beginners-ebook/dp/B00FFUL9LY).  PacktPub eBook Version
+5.  Unity Programming Patterns: [http://www.habrador.com/tutorials/programming-patterns/](http://www.habrador.com/tutorials/programming-patterns/)
 
 ### Unity 2D Game Design Tutorials:
 
@@ -83,17 +85,7 @@ Art by Osmic
 
 [Zombie Textures Download Link](https://utdallas.box.com/zombieTextures)
 
-# Course Starter Code - Spring 17
 
-### Project 2 - Text Adventure - Framework
-
-[Box.com Zip File - Project2](https://utdallas.box.com/v/CS2335Project2StarterCodeS17)
-
-
-
-### Text Adventure with Binary Save and Scriptable Object - Inventory Store
-
-[Box.com Zip File - link:](https://utdallas.box.com/v/MiniGame-SaveAndScriptableObj)
 
 
 
