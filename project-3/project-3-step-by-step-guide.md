@@ -76,7 +76,10 @@ GameData functions as a singleton database for storing all data for the game.  S
 2.  Use code from: [GameData](/project-3/gamedata-with-unityevent.md) to populate the class code in Visual Studio. 
 3.  In your project's first scene, (BeginScene), add the GameData script component to the GameManager gameObject.  
 4.  In your project's MiniGame scene, create a new empty  GameObject, GameManager, and add the GameData script component to the GameManager gameObject.
-5.  You will. start customizing your other scripts for storing data driven by gameplay.
+5.  You will. start customizing your other scripts, so they will use GameData for storing data created by gameplay.
+
+###Customize PlayerController.cs
+
 
    
   
