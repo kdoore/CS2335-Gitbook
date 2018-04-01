@@ -70,6 +70,10 @@ To create a basic spawner:
 
     
 ###GameData
+GameData functions as a singleton database for storing all data for the game.  Since GameData is a singleton, it will be an active object in all gameScenes, so there should not be any scene-specific code or dependencies within the GameData.cs code.  Instead, we'll use custom events to notify interested objects in any scene when the data has been updated.  UnityEvents provides the simplest way to implement custom events, so that is the first approach we'll use in GameData.
+
+1.  Create a C# script:  GameData.cs.
+2.  Use code from: [GameData](/project-3/gamedata-with-unityevent.md) to populate the class code in Visual Studio. 
 
    
   
