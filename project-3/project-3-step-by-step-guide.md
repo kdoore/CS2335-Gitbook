@@ -35,11 +35,12 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
   - **OnTriggerEnter2D( )**  You will add code for logic that should be exectued when the player collides with other GameObjects, depending on the Tags:  Collectible, or Hazard.
   
 ###3. PickUp Prefabs - Create 4:
-You are required to have a minimum of 4 different types of PickUp objects for the player to interact with.  For each of your 4 required PickUp type objects:   
+You are required to have a minimum of 4 different types of PickUp objects for the player to interact with.  
+
+For each of your 4 required PickUp type objects:   
 1. Create a 2D sprite gameObject 
-2. Modify the PickUp.cs script file as needed:  
-  - Change the `PickupType` enums to match your game's theme and objects.
-2.  Add the following **Components** to your PickUp GameObject:
+2. Modify the PickUp.cs script file as needed:  Change the `PickupType` enums to match your game's theme and objects.
+3.  Add the following **Components** to your PickUp GameObject:
  - Collider2D:  with: isTrigger checked
  - Tag:  Hazard or Collectible
  - PickUp.cs script
