@@ -45,8 +45,7 @@ public enum LevelState
     //references to custom script components
     Spawner spawner;
     //to start the spawner, change objects that are spawned
-    ChangeSprite changeSprite;
-    //to change background sprite
+    
 ```
 
 ### Start - Initialize Object References
@@ -146,7 +145,7 @@ void loadLevel1 ()
     void loadLevel2 ()
     {
         ///change background image
-        changeSprite.SwapSprite ();
+        
         levelValue.text = "2";
     }
 

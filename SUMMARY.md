@@ -50,7 +50,7 @@
 * [MiniGame - View](minigame_-_view.md)
 * [PickUp Items](pickup_items.md)
 * [GameData - Simple](gamedata-simple.md)
-* [Game-Data - with Events](game-data_model.md)
+* [Game-Data - with C\# Events](game-data_model.md)
 * [Player Data - EventArgs](player-data-eventargs.md)
 * [Screen Fading and Reloading](simple-spawner/screen-fading-and-reloading.md)
 * [Level Manager - In Class](level-manager-in-class.md)

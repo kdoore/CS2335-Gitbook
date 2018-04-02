@@ -30,3 +30,8 @@ You can find a similar version of these sprites at the link below:
 **GameData**
  - [GameData - Simple](/gamedata-simple.md)
  - [GameData - with UnityEvent  ](/project-3/gamedata-with-unityevent.md)
+ 
+ ###Week April 2-6
+ 
+ **Level Manager**
+ - [LevelManager](/level-manager-in-class.md)
