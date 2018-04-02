@@ -32,33 +32,12 @@ void Start ()
          curLevel = LevelState.Start;  ///initialize curLevel
 		crystalSpawner = GameObject.Find ("CrystalSpawner").GetComponent<CrystalSpawner> ();
 
-		gameData = GameData.instanceRef;  //Register CheckLevelEnd function to be notified when GameData broadcasts: onPlayerDataUpdate
-		gameData.onPlayerDataUpdate += CheckLevelEnd;  //registering to be notified
-
 		nextLevel ();  //starts the game -
 	}
 
 ```
 
-###OnPlayerDataUpdate Event - CheckLevelEnd is Registered as an Event Subscriber
-The GameData event: OnPlayerDataUpdate event is the trigger that provides notification to the LevelManager whenever the GameData Add( PickUp ) function is executed in response to a OnTriggerEnter2D event.  We've created a custom function that gets registered for notification of the event, and the CheckLevelEnd method matches the   
 
-```C#
-void CheckLevelEnd (object sender, PlayerDataEventArgs e)
-	{
-		int levelScore = e.levelScore;
-
-		Debug.Log ("Check if level is over" + levelScore);
-		////change the total score display
-
-		if (levelScore > 10) { ///level has changed
-			///reset level value display
-			gameData.LevelScore = 0;   //reset level score
-
-			nextLevel ();
-		}
-	}
-```
 ###Finite State Machine Logic - nextLevel( )
 
 The nextLevel() function provides the FSM logic for the Level management.
@@ -106,27 +85,3 @@ The screen-shot below shows a series of background gameObjects, these are Canvas
 
 ![](Screenshot 2016-11-10 16.16.02.png)
 
-#Utility Class - Static Methods to toggle visibility
-
-The [Utility class](https://kdoore.gitbooks.io/cs-2335/content/utility_-_static_class.html#utility---static-class), that we've discussed in previous sections, will provide a convenient way to toggle canvas group components.
-```C#
-//LevelManager.cs
-
-void Start(){
-
-// other initialization code
-
-startpanel = GameObject.Find ("StartImage").GetComponent<CanvasGroup> ();
-		bg1 = GameObject.Find ("Background1").GetComponent<CanvasGroup> ();
-		bg2 = GameObject.Find ("Background2").GetComponent<CanvasGroup> ();
-		bg3 = GameObject.Find ("Background3").GetComponent<CanvasGroup> ();
-
-		Utility.ShowPanel (startpanel);
-		Utility.HidePanel (bg1);
-		Utility.HidePanel (bg2);
-        
-  } // end LevelManager.Start()
-  
-  ```
-  
-  
