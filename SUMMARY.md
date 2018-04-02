@@ -53,7 +53,7 @@
 * [Game-Data - with C\# Events](game-data_model.md)
 * [Player Data - EventArgs](player-data-eventargs.md)
 * [Screen Fading and Reloading](simple-spawner/screen-fading-and-reloading.md)
-* [Level Manager - In Class](level-manager-in-class.md)
+* [Level Manager - Simple](level-manager-in-class.md)
 * [Level Manager with Events](level_manager.md)
 * [Score UI Display](score-ui-display.md)
 * [Change Sprites](change-sprites.md)
