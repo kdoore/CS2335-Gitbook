@@ -4,7 +4,7 @@ If you are interested in a simplified version of this code, look at the [GameDat
 
 
 ###C# Events
-The example below uses C# events, which are a little more complicated, but provide options for custom events where data is passed to the listener when the event is invoked.  We have defined an Event Handler and an Event to notify other gameObjects when the PlayerData has been updated
+The example below uses C# events, which are a little more complicated, but provide options for custom events where data is passed to the listener when the event is invoked.  We have defined an Event Handler and an Event to notify other gameObjects when the PlayerData has been updated.
 
 
 
