@@ -55,7 +55,7 @@ Create a prefab of this object by dragging into your Resources folder.
 Remove all prefab objects from the game-scene. 
 Save your project.
 
-###Spawner 
+###4. Spawner 
 You are not required to use a spawner. But using one or more spawners may be the easiest method to have objects for the player to interact with, for each mini-game level.
 
 To create a basic spawner:
@@ -69,7 +69,7 @@ To create a basic spawner:
 7.  Customize variable values in the Spawner.cs script so they correspond with your game's requirements.
 
     
-###GameData
+###5. GameData
 GameData functions as a singleton database for storing all data for the game.  Since GameData is a singleton, it will be an active object in all gameScenes, so there should not be any scene-specific code or dependencies within the GameData.cs code.  Instead, we'll use custom events to notify interested objects in any scene when the data has been updated.  UnityEvents provides the simplest way to implement custom events, so that is the first approach we'll use in GameData.
 
 1.  Create a C# script:  GameData.cs.
@@ -78,8 +78,10 @@ GameData functions as a singleton database for storing all data for the game.  S
 4.  In your project's MiniGame scene, create a new empty  GameObject, GameManager, and add the GameData script component to the GameManager gameObject.
 5.  You will. start customizing your other scripts, so they will use GameData for storing data created by gameplay.
 
-###LevelManager
+###6. LevelManager
 If you use a single scene for your entire MiniGame, then we can create a LevelManager gameObject and Script component to manage the gameplay logic, such as determining the current level.
+
+
 
 
    
