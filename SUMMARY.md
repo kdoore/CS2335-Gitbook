@@ -74,11 +74,12 @@
 
 ## Project 3
 
-* Project 3 - Code
+* [Project 3 - Code](project-3-code.md)
   * [PlayerController](project-3/playercontroller.md)
   * [Simple Spawner](project-3/simple-spawner.md)
   * [GameData - With UnityEvent](project-3/gamedata-with-unityevent.md)
-  * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
+  * LevelManager
+* [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
 * [Class-Code Examples](class-code-examples.md)
 
 ## C\# Language

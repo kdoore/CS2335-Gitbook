@@ -1,6 +1,6 @@
 # Game-Data Model - With C# Events
 
-If you are interested in a simplified version of this code, look at the [GameData with UnityEvents](/project-3/gamedata-with-unityevent.md) example.  
+**Important:**  If you are interested in a simplified version of this code, look at the [GameData with UnityEvents](/project-3/gamedata-with-unityevent.md) example.  
 
 
 ###C# Events
