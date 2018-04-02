@@ -34,9 +34,10 @@ public enum LevelState
 
 ```java
    LevelState curLevel;
+   
     // FSM - 1 unit of memory
-    int levelScore;
-
+    int levelScore; //used to determine when level is over
+    int maxLevelScore; //when to change levels
     //UI game Objects - LevelValue, StartGameButton, StartGamePanel
     Button startGameButton;
     CanvasGroup cg;
@@ -56,7 +57,7 @@ public enum LevelState
     {
         curLevel = LevelState.start;
         levelScore = 0;   // initialize
-
+        levelMaxScore = 30;
         startGameButton = GameObject.Find ("StartGameButton").GetComponent<Button> ();
         startGameButton.onClick.AddListener (nextLevel);
         levelValue = GameObject.Find ("LevelValue").GetComponent<Text> ();
@@ -80,12 +81,13 @@ public enum LevelState
     /// </summary>
     /// <param name="item">Item.</param>
     ///this will be called in the PlayerController whenever the score changes - OnTriggerEnter2D()
-    public void CheckLevelEnd (PickUp item)
+    
+    public void CheckLevelEnd (int points)
     {
-        levelScore += item.value;
+        levelScore += points;
         Debug.Log ("Check if level is over" + levelScore);
 
-        if (levelScore > 10) { ///level has changed
+        if (levelScore > levelMaxScore) { ///level has changed
             ///reset level value display
             levelScore = 0;   //reset level score
 
