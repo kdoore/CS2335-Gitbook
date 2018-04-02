@@ -78,7 +78,7 @@
   * [PlayerController](project-3/playercontroller.md)
   * [Simple Spawner](project-3/simple-spawner.md)
   * [GameData - With UnityEvent](project-3/gamedata-with-unityevent.md)
-  * LevelManager
+  * [LevelManager](project-3/levelmanager.md)
 * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
 * [Class-Code Examples](class-code-examples.md)
 
