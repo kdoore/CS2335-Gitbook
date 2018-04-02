@@ -81,6 +81,9 @@ GameData functions as a singleton database for storing all data for the game.  S
 ###6. LevelManager
 If you use a single scene for your entire MiniGame, then we can create a LevelManager gameObject and Script component to manage the gameplay logic, such as determining the current level.
 
+1.  Create a C# script:  LevelManager.cs
+2.  Create an empty GameObject, LevelManager, attach the script to the LevelManager gameObject.
+3.  Use code from LevelManager to populate the class code in visual studio.  You'll need to customize this code.
 
 
 
