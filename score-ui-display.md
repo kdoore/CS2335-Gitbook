@@ -8,3 +8,13 @@ In the MiniGame, We want to display the player's score, health and current level
 
 
 ###Minimize Coupling - Dependencies between GameObjects
+These UI elements should be updated when the associated values have changed.  
+
+Score, Health change when the player collides with objects.  This data is stored in GameData, so these objects should register as listeners to the GameData event: OnPlayerDataUpdate.  This requires writing a method that can work as a listener to a UnityEvent.  These methods must have the signature:  
+
+
+```java
+void DoSomething(  no input parameters )
+```
+
+
