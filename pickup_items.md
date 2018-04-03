@@ -72,14 +72,12 @@ public class PickUp : MonoBehaviour
 		Debug.Log ("Item Destroy Me");
         if (OnDied != null)  //someone is listening (spawner)
         { //initailize the event, call the constructor
-            OnDied.Invoke(); // notify the spawner
+            OnDied.Invoke(); // broadcast event: (notify the spawner)
             OnDied.RemoveAllListeners(); //unregister the spawner, so the event-connection is removed 
 //and this guy can die in peace.
         }
 
         Destroy (gameObject);
-        //Remove all non - persisent(ie created from script) listeners from the event.
-       
     }
 
 }
