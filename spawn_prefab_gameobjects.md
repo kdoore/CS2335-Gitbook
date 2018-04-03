@@ -6,6 +6,21 @@ In order to dynamically spawn game objects in a scene, we'll need to first creat
 
 In our mini-game,  We want the PickUp to generate an custom event when it's destroyed, so it can notify the spawner to spawn a new PickUp.
 
+
+```java
+using UnityEngine;
+using UnityEngine.Events;
+using System.Collections;
+using System;
+
+public enum PickupType
+{
+	crystal,
+	star,
+	animatedCrystal,
+	rock
+};
+
 public class PickUp : MonoBehaviour
 {
     //Add custom UnityEvent - Used to notify Spawner to spawn new object
@@ -36,6 +51,9 @@ public class PickUp : MonoBehaviour
 
 }
   //end class
+```
+
+
 
 
 
