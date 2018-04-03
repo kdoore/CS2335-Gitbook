@@ -3,9 +3,9 @@
 Throughout our game we will want to have game items for the player to interact with.  Often these are considered Pick-up items.  
 
 ###Variations - See code below
-So, we'll want to create a base-class that represents this Pick-up type and create child classes to extend for specialized pick-up items.  See SelfDestructPickup
+So, we'll want to create a base-class that represents this Pick-up type and create child classes to extend for specialized pick-up items.  [See SelfDestructPickup](https://kdoore.gitbooks.io/cs-2335/content/pickup_items.html#selfdestructpickup-child-class-of-pickup)
 
-Some of our pick-up objects will need the ability to generate events that can notify other objects when the pick-up item has died.  
+Some of our pick-up objects will need the ability to generate events that can notify other objects when the pick-up item has died.  [See PickUp with Events](https://kdoore.gitbooks.io/cs-2335/content/pickup_items.html#selfdestructpickup-child-class-of-pickup)
 
 ### Simple PickUp Class
 
@@ -27,8 +27,7 @@ public class PickUp : MonoBehaviour
 
     public PickupType type;
     public int value;
-    public int damage;
-
+   
     public void DestroyMe ()
     {
         Debug.Log ("Item Destroy Me");
@@ -44,7 +43,7 @@ public class PickUp : MonoBehaviour
 In the example code below, we have introduced custom events: onDied, which uses the custom Delegate: OnDiedHandler\( \);  
 This custom delegate and event can be used to have the PickUp object broadcast notification when the OnDied event happens, if any other gameObject components have subscribed as listeners to the OnDied event.
 
-```
+```java
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
@@ -90,9 +89,9 @@ public class PickUp : MonoBehaviour
 ```
 
 ### SelfDestructPickup: Child Class of PickUp
-The code below can be used to create a PickUp object that self-destructs after some amount of time.
+The code below can be used to create a PickUp object that self-destructs after some amount of time. This child-class inherits events and methods from the base-class: PickUp.
 
-```
+```java
 using UnityEngine;
 using System.Collections;
 
