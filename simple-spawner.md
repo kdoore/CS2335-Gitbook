@@ -51,7 +51,7 @@ public void StartSpawning()
 {
 	for (int i = 0; i < numToSpawn; i++)
 	{
-	Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f));
+	Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f * i)); //more delay for each value of i in the for-loop
 	}
 }
 
