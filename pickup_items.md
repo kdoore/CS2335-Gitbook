@@ -85,6 +85,7 @@ public class PickUp : MonoBehaviour
 ```
 
 ### SelfDestructPickup: Child Class of PickUp
+The code below can be used to create a PickUp object that self-destructs after some amount of time.
 
 ```
 using UnityEngine;
