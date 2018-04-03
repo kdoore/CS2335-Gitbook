@@ -35,7 +35,7 @@ public GameObject prefabGood, prefabBad;
 
 private int pauseTime=2;//wait 2 sec before starting
 public int numToSpawn=3;
-public float chanceToSpawnBad = .01f;
+public float chanceToSpawnBad = .10f; //10% chance
 public float xRange = 8.0f;
 public float yRangeTop = -2.0f;
 public float yRangeBottom = -3.5f;
