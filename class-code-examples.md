@@ -35,6 +35,12 @@ You can find a similar version of these sprites at the link below:
  **GameData**
 
  - [GameData - with UnityEvent  ](/project-3/gamedata-with-unityevent.md)
+ 
+ **PickUp with Events**
+ 
+ 
+ **Spawner with Events**
+ 
 
 **Level Manager**
  - [LevelManager - v1](/level-manager-in-class.md)
