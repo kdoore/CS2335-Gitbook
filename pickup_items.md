@@ -106,7 +106,8 @@ public class SelfDestructPickup : PickUp {
         // Automatic destroy after random time by calling base class died method
         minLifeTime = 100.0f;
         maxLifeTime = 400.0f;
-        type = PickupType.crystal;
+       
+     //call's it's own DestroyMe method after a random delay
          Invoke ("DestroyMe", Random.Range(minLifeTime, maxLifeTime));  //
     }
 }
