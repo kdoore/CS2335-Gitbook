@@ -19,7 +19,6 @@ Objects to be Spawned in the MiniGame should have the following configuration:
 ###Simple Spawner
 The code below creates a simple spawner
 
-
 ```java
 using UnityEngine;
 using System.Collections;
@@ -27,41 +26,54 @@ using System.Collections.Generic;
 
 public class Spawner : MonoBehaviour
 {
-    // The prefab we will spawn
-    [Header("Set in Inspector")]
-    public GameObject prefab;
-   // Use this for initialization
-   
-    private int pauseTime;
-    public int numToSpawn=5; //how many to spawn?
 
-    void Start ()
-    {
-      pauseTime = 5;
-       
-       //UNCOMMENT THE LINE BELOW TO TEST - 
-       // StartSpawning ();  // have the LevelManager call this method
-       
-    }
+// The prefab we will spawn
+[Header("Set in Inspector")]
+public GameObject prefabGood, prefabBad;
 
-    public void StartSpawning ()
-    {
-        for (int i = 0; i < numToSpawn; i++) {
-            Invoke ("SpawnPrefab", Random.Range (pauseTime, pauseTime * 2.0f * i));  //delay more for each value of i in the loop.
-        }
-    }
+// Use this for initialization
 
-    public void SpawnPrefab ()
-    {
-        Vector3 position = transform.localPosition;
-        position.x = Random.Range (-7.6f, 7.6f);
-        position.y = Random.Range (-2.4f, -3.7f);
-        Instantiate(prefab, position, transform.rotation);
-        Debug.Log("Prefab item has been Spawned");
-    }
+private int pauseTime=2;//wait 2 sec before starting
+public int numToSpawn=3;
+public float chanceToSpawnBad = .01f;
+public float xRange = 8.0f;
+public float yRangeTop = -2.0f;
+public float yRangeBottom = -3.5f;
+public bool activeSpawning = false;
 
+void Start()
+{
+	activeSpawning = true;
+	StartSpawning (); //call in LevelManager
 }
+
+public void StartSpawning()
+{
+	for (int i = 0; i < numToSpawn; i++)
+	{
+	Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f));
+	}
+}
+
+public void SpawnPrefab()
+{
+	if( activeSpawning){
+		Vector3 position = transform.localPosition;
+		position.x = Random.Range(-xRange, xRange);
+		position.y = Random.Range(yRangeBottom, yRangeTop);
+		float rand = Random.value;
+		if (rand < chanceToSpawnBad)
+		{
+			Instantiate(prefabBad, position, transform.rotation);
+		}else{
+			Instantiate(prefabGood, position, transform.rotation);
+		}
+	}
+} //end SpawnPrefab method
+
+} // end Spawner
 ```
+
 
 ### Called from LevelManager
 

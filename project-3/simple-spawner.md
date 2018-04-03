@@ -17,6 +17,7 @@ public class Spawner : MonoBehaviour
 {
 
     // The prefab we will spawn
+   [Header("Set in Inspector")]
     public GameObject prefabGood, prefabBad;
 
     // Use this for initialization
