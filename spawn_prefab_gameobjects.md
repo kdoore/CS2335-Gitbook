@@ -2,55 +2,84 @@
 
 In order to dynamically spawn game objects in a scene, we'll need to first create a Prefab of a gameObject.  A prefab is an asset that we can include in any scene, we can consider that it is a preconfigured gameObject, which can include any valid components such as script and animator as pre-configured components which are instantiated when an instance of a Prefab is instantiated in a scene.
 
-### Melting Crystal - Specialized PickUp
+### PickUp with UnityEvent: OnDied
 
-In our mini-game, we want to spawn animated crystals - which melt.  So we need to create a 2D sprite gameObject, then we'll need to attach an animator component and create an animation clip that reduces the sprite's transform scale.x, scale.y values using keyframes.  We want the crystal to generate a custom event when it's destroyed, so we're using PickUp as a base-class and we've defined an OnDiedHandler delegate and an OnDied event, we will put this logic in a custom script: crystalController.cs
+In our mini-game,  We want the PickUp to generate an custom event when it's destroyed, so it can notify the spawner to spawn a new PickUp.
+
+public class PickUp : MonoBehaviour
+{
+    //Add custom UnityEvent - Used to notify Spawner to spawn new object
+    public UnityEvent OnDied; 
+	
+	public PickupType type;
+	public int value;
+
+    public void Start()
+    {
+        if(OnDied == null){ //initailize the event, call the constructor
+            OnDied = new UnityEvent();
+        }
+    }
+    public void DestroyMe () //execute to 
+	{
+		Debug.Log ("Item Destroy Me");
+        if (OnDied != null)  //someone is listening (spawner)
+        { //initailize the event, call the constructor
+            OnDied.Invoke(); // notify the spawner
+        }
+
+        Destroy (gameObject);
+        //Remove all non - persisent(ie created from script) listeners from the event.
+        OnDied.RemoveAllListeners(); //unregister the spawner, so the event-connection is removed 
+                                    //and this guy can die in peace.
+    }
+
+}
+  //end class
+
+
+
+###Self-Destructive PickUp
+This code creates a PickUp that destroys itself, within some random time, after it was created. 
 
 ```java
 using UnityEngine;
+using UnityEngine.Events;  //ADD THIS
 using System.Collections;
 
-public class CrystalController : PickUp {
+public class SelfDestructPickup: PickUp {
 
     // Life variables
     private float minLifeTime;
     private float maxLifeTime;
 
-//Declare custom delegate and event - so crystal can notify subscribers ( spawner ) when 
-// the crystal has died.
-
-    new public delegate void onDiedHandler( PickUp thisPickup);
-    new public event onDiedHandler onDied; 
-
     void Start () {
         // Self-destruct after random time by calling base class died method
         minLifeTime = 100.0f;
         maxLifeTime = 400.0f;
-        type = PickupType.crystal;
-        Invoke ("Died", Random.Range(minLifeTime, maxLifeTime));  //
+        
+        Invoke ("DestroyMe", Random.Range(minLifeTime, maxLifeTime));  //
     }
 }
 ```
 
-### CrystalSpawner - Manage the Spawning
+### Spawner - Listen for notification of dying PickUps
 
 We need to create a custom scritp that can spawn our game objects:  
-This script needs to be attached to an empty gameObject in our scene.  
-In addition, the CrystalSpawn class has also defined an EventHandler: OnSpawn\(\) and an associated Event for notification: OnSpawn  
-This will allow any gameObject in the scene to register for, and receive notifications every time that we spawn a new prefab.
+This script needs to be attached to an empty gameObject in our scene.  The spawner will 
+
+
 
 ```java
 using UnityEngine;
 using System.Collections;
 
-public class CrystalSpawner : MonoBehaviour {
+public class Spawner : MonoBehaviour {
 
   // The prefab that we're going to spawn 
     public PickUp prefab;  //use baseclass type
     
     private int pauseTime;
-
-  
 
     // Explicitly Create the first crystals in unity start
     void Start () {
@@ -82,14 +111,8 @@ public class CrystalSpawner : MonoBehaviour {
 
     // OnPickUpDied is an EventHandler Function that will be called automatically when the pickup object instance dies
     // This allows it to spawn a new prefab instance, and then 
-    // we need to remember to unregister
-
-    public void OnPickUpDied (PickUp thisPickUp){
-
-        // We unsubscribe to avoid memory leaks, we need to use the
-        //object reference passed into this method in order to unregister
-        //as a listener to the onDied event on this crystal
-        thisPickUp.onDied -= OnPickUpDied;
+   
+    public void OnPickUpDied (){
 
         // Spawn a new crystal 
         Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime+3));
