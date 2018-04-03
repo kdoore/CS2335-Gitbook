@@ -1,6 +1,11 @@
 # PickUp Items
 
-Throughout our game we will want to have game items for the player to interact with.  Often these are considered Pick-up items.  So, we'll want to create a base-class that represents this Pick-up type and create child classes to extend for specialized pick-up items.  Some of our pick-up objects will need the ability to generate events that can notify other objects when the pick-up item has died.  
+Throughout our game we will want to have game items for the player to interact with.  Often these are considered Pick-up items.  
+
+###Variations - See code below
+So, we'll want to create a base-class that represents this Pick-up type and create child classes to extend for specialized pick-up items.  See SelfDestructPickup
+
+Some of our pick-up objects will need the ability to generate events that can notify other objects when the pick-up item has died.  
 
 ### Simple PickUp Class
 
