@@ -28,7 +28,7 @@ using System.Collections.Generic;
 public class Spawner : MonoBehaviour
 {
     // The prefab we will spawn
-    [Set In Inspector]
+    [Header("Set in Inspector")]
     public GameObject prefab;
    // Use this for initialization
    
@@ -47,7 +47,7 @@ public class Spawner : MonoBehaviour
     public void StartSpawning ()
     {
         for (int i = 0; i < numToSpawn; i++) {
-            Invoke ("SpawnPrefab", Random.Range (pauseTime, pauseTime * 2.0f)); 
+            Invoke ("SpawnPrefab", Random.Range (pauseTime, pauseTime * 2.0f * i));  //delay more for each value of i in the loop.
         }
     }
 

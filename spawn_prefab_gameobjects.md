@@ -27,7 +27,7 @@ public class CrystalController : PickUp {
         minLifeTime = 100.0f;
         maxLifeTime = 400.0f;
         type = PickupType.crystal;
-         Invoke ("Died", Random.Range(minLifeTime, maxLifeTime));  //
+        Invoke ("Died", Random.Range(minLifeTime, maxLifeTime));  //
     }
 }
 ```
