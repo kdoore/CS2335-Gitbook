@@ -41,12 +41,12 @@ public class PickUp : MonoBehaviour
         if (OnDied != null)  //someone is listening (spawner)
         { //initailize the event, call the constructor
             OnDied.Invoke(); // notify the spawner
+            OnDied.RemoveAllListeners(); //unregister the spawner, so the event-connection is removed 
         }
 
         Destroy (gameObject);
         //Remove all non - persisent(ie created from script) listeners from the event.
-        OnDied.RemoveAllListeners(); //unregister the spawner, so the event-connection is removed 
-                                    //and this guy can die in peace.
+       
     }
 
 }
