@@ -102,10 +102,10 @@ public class SelfDestructPickup : PickUp {
     private float maxLifeTime;
 
    
-    void Start () {
+    void Awake () {
         // Automatic destroy after random time by calling base class died method
-        minLifeTime = 100.0f;
-        maxLifeTime = 400.0f;
+        minLifeTime = 5.0f;
+        maxLifeTime = 15.0f;
        
      //call's it's own DestroyMe method after a random delay
          Invoke ("DestroyMe", Random.Range(minLifeTime, maxLifeTime));  //

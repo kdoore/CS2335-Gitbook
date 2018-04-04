@@ -36,10 +36,12 @@ You can find a similar version of these sprites at the link below:
 
  - [GameData - with UnityEvent  ](/project-3/gamedata-with-unityevent.md)
  
- **PickUp with Events**
+**PickUp with Events**
+ - [ PickUp with UnityEvent](https://kdoore.gitbooks.io/cs-2335/content/pickup_items.html#custom-events---version-of-pickup-class)
  
  
  **Spawner with Events**
+ 
  
 
 **Level Manager**
