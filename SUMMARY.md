@@ -76,6 +76,7 @@
 
 * [Project 3 - Code](project-3-code.md)
   * [PlayerController](project-3/playercontroller.md)
+  * [PickUp](project-3/pickup.md)
   * [Simple Spawner](project-3/simple-spawner.md)
   * [GameData - With UnityEvent](project-3/gamedata-with-unityevent.md)
   * [LevelManager](project-3/levelmanager.md)
