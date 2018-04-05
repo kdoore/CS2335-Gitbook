@@ -37,6 +37,12 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
   - **OnTriggerEnter2D( )**  You will add code for logic that should be exectued when the player collides with other GameObjects, depending on the Tags:  Collectible, or Hazard.
   5. If you will use your Player in multiple scenes, save your Player as a prefab, then save your project.
   
+ - **Floor**
+ Create an emtpy GameObject, name it Floor, move to the bottom of the screen. Attach a BoxCollider2D, and edit the collider so it creates a wide rectangle across the bottom of the screen.
+ 
+ - **Walls**
+ If desired, create empty GameObjects, similar to the floor, with a BoxCollider2D, edited to form walls on the sides of the canvas.  These can also be used as triggers to allow the player to change scenes.  
+  
 ###3. PickUp Prefabs - Create 4:
 You are required to have a minimum of 4 different types of PickUp objects for the player to interact with.  
 
