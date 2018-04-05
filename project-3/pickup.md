@@ -11,7 +11,7 @@ The PickUp gameObject should be a 2D sprite with the following details:
 	- Sorting Layer: Forground
 	- Layer: default is ok unless Physics behavior doesn't seem to be working.
 	- Rigidbody2D if the pickUp will fall or move
-	- Additional Collider if the 
+	- Add an Additional Collider2D if the object will fall but must stop when hitting the floor
 
 ```java
 using UnityEngine;
