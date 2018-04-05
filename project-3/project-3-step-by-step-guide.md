@@ -32,6 +32,8 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
   - **Keyboard input**: Check for keyboard input, set variables such as jump, inputX based on keyboard input. 
   - **Physics Movement:** This movement occurs in the FixedUpdate method.  
   - **Animator Controller:** Use Hero-State enums to send parameter values into the Animator Controller.
+  - **Animator Controller**  Create an int Parameter that matches the named value you use in the PlayerController Script, this parameter is used for setting conditional logic on the transition arrows in the animator controller view.  Example: ` anim.SetInteger("HeroState", (int)heroState.idle);`
+
   - **OnTriggerEnter2D( )**  You will add code for logic that should be exectued when the player collides with other GameObjects, depending on the Tags:  Collectible, or Hazard.
   5. If you will use your Player in multiple scenes, save your Player as a prefab, then save your project.
   
