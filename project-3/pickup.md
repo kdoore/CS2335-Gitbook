@@ -71,22 +71,20 @@ public class PickUp : MonoBehaviour
 	[Header("Set in Inspector")]
 	public int value;
 
-
-
     public void Start()
     {
         if(OnDied == null){ //initailize the event, call the constructor
             OnDied = new UnityEvent();
         }
     }
-    public void DestroyMe () //execute to 
+    public void DestroyMe () //execute to manage destroying the object and invokeing the event.
 	{
 		Debug.Log ("Item Destroy Me");
         if (OnDied != null)  //someone is listening (spawner)
         { //initailize the event, call the constructor
             OnDied.Invoke(); // broadcast event: (notify the spawner)
-            OnDied.RemoveAllListeners(); //unregister the spawner, so the event-connection is removed 
-//and this guy can die in peace.
+            OnDied.RemoveAllListeners(); //unregister the spawner, so no traces of the connection remain.
+
         }
 
         Destroy (gameObject);
