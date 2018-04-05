@@ -29,11 +29,10 @@ public class PickUp : MonoBehaviour
 		Destroy (gameObject);
 	}
 
-}
-  //end class
-
-
+}//end class
 ```
+
+
 # PickUp - With UnityEvent
 The 
 
