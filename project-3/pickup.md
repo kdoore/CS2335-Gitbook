@@ -4,10 +4,14 @@ The code below is for the most basic type of PickUp.
 You will need to change the PickupType enums, add new enums to match your game scenario.  Below this code section is code for a PickUp with custom events, which can be used with a spawner.
 
 The PickUp gameObject should be a 2D sprite with the following details:
-	- Collider2D, with isTrigger selected
+	- Collider2D, with `isTrigger` selected
 	- Tag:  Collectible or Hazard
 	- PickUp script added to the gameObject
-	- Populate in the inspector
+	- Populate in the inspector: type, value
+	- Sorting Layer: Forground
+	- Layer: default is ok unless Physics behavior doesn't seem to be working.
+	- Rigidbody2D if the pickUp will fall or move
+	- Additional Collider if the 
 
 ```java
 using UnityEngine;
