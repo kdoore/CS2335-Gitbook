@@ -57,6 +57,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
@@ -132,7 +133,6 @@ public enum LevelState
     ///   If LevelScore > maxLevelScore, then reset the LevelScore and call the nextLevel( ) method
     ///  to change the level
     /// </summary>
-   
     ///this will be called when the OnPlayerDataUpdate event 
     ///happens in GameData, it is registered as a listener for that event
 
@@ -194,7 +194,7 @@ void loadLevel1 ()
     {
         Utility.HideCG (cg); //hide the StartGamePanel and StartGameButton
         spawner.StartSpawning ();
-        levelValue.text = "1";
+        levelText.text = "Level 1";
 
     }
 
@@ -202,7 +202,7 @@ void loadLevel1 ()
     {
         ///change background image
 
-        levelValue.text = "2";
+        levelText.text = "Level 2";
     }
 
     void miniGameOver( ){
