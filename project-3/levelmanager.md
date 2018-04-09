@@ -6,6 +6,7 @@ See code in: [LevelManager-Events](/level-manager-in-class.md)
 ###GameData -- new code must be added
 You will need to add some new code to GameData, this is specified in the LevelManager-Events documentation
 
+[See new code to be Added to GameData](https://kdoore.gitbooks.io/cs-2335/content/level-manager-in-class.html#updates-to-gamedata)
 
 
 ###LevelManager code
