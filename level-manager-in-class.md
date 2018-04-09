@@ -50,6 +50,20 @@ Game objects that are inter-dependent with the LevelManager are:
 ```
 
 
+#LevelManager Class
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+
+public class LevelManager : MonoBehaviour {
+
+        ///CODE TO BE ADDED HERE
+
+} //end class
+
 
 ### Level-State Enums
 
@@ -128,9 +142,8 @@ public enum LevelState
         Debug.Log ("Check if level is over" + levelScore);
 
         if (levelScore >= levelMaxScore) { ///level has changed
-            ///reset level value display
-            GameData.instanceRef.LevelScore;
- = 0;   //reset GameData.LevelScore
+         
+            GameData.instanceRef.LevelScore= 0;   //reset GameData.LevelScore
 
             NextLevel ();  //go to next level
         }
