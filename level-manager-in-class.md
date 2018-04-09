@@ -91,7 +91,7 @@ public enum LevelState
             ///reset level value display
             levelScore = 0;   //reset level score
 
-            nextLevel ();  //go to next level
+            NextLevel ();  //go to next level
         }
 
     }
@@ -104,7 +104,7 @@ public enum LevelState
 ///Each time this method is called, the matching logic must change the value of curLevel, 
 ///and call a custom method: loadLevelX( ) where the details of the level loading logic are specified.
 
-public void nextLevel ()
+public void NextLevel ()
     {
 
         switch (curLevel) {
