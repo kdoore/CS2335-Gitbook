@@ -49,9 +49,10 @@ Game objects that are inter-dependent with the LevelManager are:
     
 ```
 
-
 #LevelManager Class
+Start by adding the following code to the top of the LevelManager Class
 
+```java
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -65,9 +66,12 @@ public class LevelManager : MonoBehaviour {
 
 } //end class
 
+```
+
+
 
 ### Level-State Enums
-The first code we'll add to the LevelManager class is a set of Enums that are used to track which state we are in.  We'll create a LevelState variable: curLevel, and it's value will change as the Level changes.  This corresponds to a simple Finite State Machine for managing levels.
+The next code we'll add to the LevelManager class is a set of Enums that are used to track which state we are in.  We'll create a LevelState variable: curLevel, and it's value will change as the Level changes.  This corresponds to a simple Finite State Machine for managing levels.
 
 ```java
 public enum LevelState
@@ -102,6 +106,7 @@ After declaring the LevelState enums, then we'll declare the LevelManager's obje
 ```
 
 ### Start - Initialize Object References
+Add the following code to the Start( ) method.
 
 ```java
 // Use this for initialization
@@ -129,6 +134,7 @@ After declaring the LevelState enums, then we'll declare the LevelManager's obje
 ```
 
 ### Check For Level End
+Write code for the CheckLevelEnd method, this method will be executed every time the OnPlayerDataUpdate event occurs in GameData.
 
 ```java
      /// <summary>
