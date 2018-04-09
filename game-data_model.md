@@ -33,15 +33,18 @@ public class GameData : MonoBehaviour {
 
 	public static GameData instanceRef;
 	private int health;
-	private int lives;
-	private Text score;
 	private int totalScore;
 
 	public int TotalScore {  //read only
 		get{ return  totalScore; }
 		}
 
-	void Awake(){  //create singleton
+	void Awake(){  
+		health = 100;
+		levelScore = 0;
+		totalScore = 0;
+		
+	//create singleton
 		if (instanceRef == null) {
 			instanceRef = this;
 		    DontDestroyOnLoad (gameObject);  //the gameObject this is attached to 
@@ -49,20 +52,19 @@ public class GameData : MonoBehaviour {
 			DestroyImmediate (gameObject);   
 			Debug.Log ("Destroy GameObject");
 		}
-
+		
+		
 		// Set HighScore
 		if (PlayerPrefs.HasKey ("HighScore")) {
-			totalScore = PlayerPrefs.GetInt ("HighScore");
-			Debug.Log ("Starting High Score");
+			int priorHighScore = PlayerPrefs.GetInt ("HighScore");
+			Debug.Log ("Starting High Score" + priorHighScore);
 		} else {
 			PlayerPrefs.SetInt ("HighScore", 0);
 		}
 	}
 	// Use this for initialization
 	void Start () {
-		health = 100;
-		lives = 5;
-		totalScore = 0;
+		//move initialization to Awake
 		}
 
 	////Called in Player controller when the player collides with a pickup	
