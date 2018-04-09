@@ -2,6 +2,7 @@
 
 In order to dynamically spawn game objects in a scene, we'll need to first create a Prefab of a gameObject.  A prefab is an asset that we can include in any scene, we can consider that it is a preconfigured gameObject, which can include any valid components such as script and animator as pre-configured components which are instantiated when an instance of a Prefab is instantiated in a scene.
 
+
 ### PickUp with UnityEvent: OnDied
 
 In our mini-game,  We want the PickUp to generate an custom event when it's destroyed, so it can notify the spawner to spawn a new PickUp.
@@ -135,5 +136,38 @@ public class Spawner : MonoBehaviour {
 }
 ```
 
+##Code Change is required in OnTriggerEnter PlayerController.cs
 
+```java
+void OnTriggerEnter2D (Collider2D hitObject)
+	{
+        
+		if (hitObject.CompareTag ("Collectible")) {
+			
+            PickUp item = hitObject.GetComponent<PickUp>();
+            GameData.instanceRef.Add(item);
+
+            item.DestroyMe();  //ADD THIS CODE
+            //Destroy(hitObject.gameObject); //REMOVE THIS CODE
+            Debug.Log("Hit Collectible");
+		}
+		if (hitObject.CompareTag ("Hazard")) {
+            anim.SetInteger("HeroState", (int)heroState.dead);
+
+            PickUp item = hitObject.GetComponent<PickUp>();
+            GameData.instanceRef.TakeDamage(item.value);
+
+            item.DestroyMe();  //ADD THIS CODE will invoke onDied event to spawn new prefab
+            //Destroy(hitObject.gameObject); //REMOVE THIS CODE
+            dead = true;
+          
+            Debug.Log("Hit Hazard");
+		}
+	}
+
+
+
+
+
+```
 
