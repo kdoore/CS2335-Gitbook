@@ -54,7 +54,7 @@
 * [Player Data - EventArgs](player-data-eventargs.md)
 * [Screen Fading and Reloading](simple-spawner/screen-fading-and-reloading.md)
 * [Score UI Display](score-ui-display.md)
-* [Level Manager](level-manager-in-class.md)
+* [Level Manager-Events](level-manager-in-class.md)
 * [Change Sprites](change-sprites.md)
 * [Simple Spawner](simple-spawner.md)
 * [EventDriven Spawner](spawn_prefab_gameobjects.md)
