@@ -54,7 +54,7 @@ public enum LevelState
 // Use this for initialization
     void Start()
     {
-        curLevel = LevelState.start;
+        curLevel = LevelState.start; //initialize Level-FSM 
         
         maxLevelScore = 30; //used to determine when a level is over
         startGameButton = GameObject.Find("StartGameButton").GetComponent<Button>();
