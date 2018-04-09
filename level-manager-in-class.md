@@ -67,6 +67,7 @@ public class LevelManager : MonoBehaviour {
 
 
 ### Level-State Enums
+The first code we'll add to the LevelManager class is a set of Enums that are used to track which state we are in.  We'll create a LevelState variable: curLevel, and it's value will change as the Level changes.  This corresponds to a simple Finite State Machine for managing levels.
 
 ```java
 public enum LevelState
@@ -81,12 +82,13 @@ public enum LevelState
 }
 ```
 
-### Declare Object References
+### Declare LevelManager Object Reference Variables
+After declaring the LevelState enums, then we'll declare the LevelManager's object reference variables.
 
 ```java
    LevelState curLevel; //track current level for FSM
    
-   //int levelScore is stored in GameData
+   //levelScore is stored in GameData
    int maxLevelScore; //when to change levels
     
     //UI game Objects - LevelText, StartGameButton, StartGamePanel
@@ -106,20 +108,21 @@ public enum LevelState
    void Start()
     {
         curLevel = LevelState.start;
-        levelScore = 0;   // initialize
-        maxLevelScore = 30;
+       
+        maxLevelScore = 30;  //ADJUST FOR YOUR GAME
         startGameButton = GameObject.Find("StartGameButton").GetComponent<Button>();
         startGameButton.onClick.AddListener(NextLevel);
 
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
+        levelText.text = "";
 
         cg = GameObject.Find("StartGamePanel").GetComponent<CanvasGroup>();
-        Utility.ShowCG(cg);
+        Utility.ShowCG(cg);  //show StartButton
 
         spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
 
-        ///Update Check to see if level is over when playerDataUpdate event happens
-        GameData.instanceRef.OnPlayerDataUpdate.AddListener(CheckLevelEnd);
+    ///REGISTER AS A LISTENER TO GameData event: OnPlayerDataUpdate
+    GameData.instanceRef.OnPlayerDataUpdate.AddListener(CheckLevelEnd);
     }
     
     
