@@ -48,9 +48,7 @@ public class GameData : MonoBehaviour
 	public int LevelScore {  //read / write
 		get{ return  levelScore; }
 		set{  levelScore= value; }
-
 	}
-
 
 	void Awake (){
 		//initialize variables
@@ -78,7 +76,7 @@ public class GameData : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		//move to Awake
+		//moved code to Awake
 	}
 
 	////Called in Player controller when the player collides with a pickup    
