@@ -8,7 +8,6 @@ This version also contains:
     - health variable, Health Property
 
 
-
 **UnityEvent**
 This example uses a simple UnityEvent: `onPlayerDataUpdate,` to notify any Listeners that the playerData has been updated.  Potential Listener objects include the LevelManager script, the PlayerStatsDisplay, and the InventoryDisplay.  Make sure to add:  using `UnityEngine.Events;`, to the top of your script
 
