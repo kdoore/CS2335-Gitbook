@@ -17,9 +17,9 @@ Game objects that are inter-dependent with the LevelManager are:
 7. GameData - create a new variable levelScore, and a new property: LevelScore, these are changed in GameData when the score is updated.
 
 ###Updates to GameData
- Add a new instance variable: levelScore, to GameData.  
- Add a property: LevelScore, to allow read / write access 
- Add code in GameData Add(PickUp item )  so the levelScore is   updated when points are added to the TotalScore.
+ Add a new instance variable: **private int levelScore**, to GameData.  
+ Add a property: **public int LevelScore**, to allow read / write access. 
+ Also,  Add code to GameData Add() - method  so the levelScore is   updated when points are added to the TotalScore.
  
 ```java
 ////ADD NEW CODE IN GameData
@@ -35,7 +35,7 @@ Game objects that are inter-dependent with the LevelManager are:
         set { levelScore = value; }
     }
     
-    //add the following line of code to GameData Add( ) method
+    //ADD the following line of code to GameData Add( ) method
        
        public void Add(PickUp item)
     {
