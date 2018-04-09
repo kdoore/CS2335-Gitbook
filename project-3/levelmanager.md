@@ -63,7 +63,7 @@ public class LevelManager : MonoBehaviour {
         spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
 
         ///Update Check to see if level is over when playerDataUpdate event happens
-        GameData.instanceRef.OnPlayerDataUpdate.AddListener(CheckLevelEnd);
+        GameData.instanceRef.onPlayerDataUpdate.AddListener(CheckLevelEnd);
     }
 
     public void CheckLevelEnd()

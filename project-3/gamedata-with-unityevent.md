@@ -19,18 +19,33 @@ using UnityEngine.Events;  //ADD THIS
 public class GameData : MonoBehaviour {
     public static GameData instanceRef; //singleton reference variable
     
-    //declare our custom Unity event: onPlayerDataUpdate
+    //UNITY EVENT: onPlayerDataUpdate
     public UnityEvent onPlayerDataUpdate;
 
-    
     private int health;
-    private int lives;
     private int totalScore;
+    
+    //ADD CODE BELOW if using LevelManager
+    private int levelScore;
+    
+    ///Properties
+    public int LevelScore{
+        get{ return levelScore };
+        set{ levelScore = value };
+    }
+    
 
     public int TotalScore  //public property 
     { //read only
         get { return totalScore; }
     }
+    
+    public int Health //public property 
+    { //read only
+        get { return health; }
+    }
+
+
 
     void Awake()
     { //create singleton 
@@ -45,8 +60,18 @@ public class GameData : MonoBehaviour {
             DestroyImmediate(gameObject);
             Debug.Log("Destroy GameObject");
         }
+        
+        //initialize the UnityEvent by calling the constructor.
+        if(onPlayerDataUpdate == null){
+        onPlayerDataUpdate = new UnityEvent();
+        }
+        
+        ///ADD THIS CODE TO AWAKE
+        health=0;
+        levelScore = 0;
+        totalScore = 0;
 
-///////UPDATE THIS CODE - IT HAD AN ERROR
+        ///////UPDATE THIS CODE - IT HAD AN ERROR
         // Get / Set HighScore using Unity PlayerPrefs dictionary
         if (PlayerPrefs.HasKey("HighScore"))
         {
@@ -58,18 +83,14 @@ public class GameData : MonoBehaviour {
         {
             PlayerPrefs.SetInt("HighScore", 0);
         }
-
-        //initialize the UnityEvent by calling the constructor.
-        if(onPlayerDataUpdate == null){
-            onPlayerDataUpdate = new UnityEvent();
-        }
-    }
+    } // end Awake
+    
+    
+    
     // Use this for initialization
     void Start()
     {
-        health = 100;
-        lives = 5;
-        totalScore = 0;
+      ////REMOVE INITIALIZATION CODE, MOVE TO AWAKE
     }
 
 

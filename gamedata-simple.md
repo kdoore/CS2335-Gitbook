@@ -31,13 +31,26 @@ public class GameData : MonoBehaviour
 {
 
 	public static GameData instanceRef;  //singleton reference variable
+	
 	private int health;
-	private int lives;
 	private int totalScore;
+	private int levelScore;
 
+	///Properties
 	public int TotalScore {  //read only
 		get{ return  totalScore; }
 	}
+	
+	public int Health {  //read only
+		get{ return  health; }
+	}
+	
+	public int LevelScore {  //read only
+		get{ return  levelScore; }
+		set{  levelScore= value; }
+
+	}
+
 
 	void Awake ()
 	{  //create singleton
@@ -48,11 +61,16 @@ public class GameData : MonoBehaviour
 			DestroyImmediate (gameObject);   
 			Debug.Log ("Destroy GameObject");
 		}
+		
+		health = 100;
+		lives = 5;
+		totalScore = 0;
+
 
 		// Set HighScore using Unity PlayerPrefs dictionary
 		if (PlayerPrefs.HasKey ("HighScore")) {
-			totalScore = PlayerPrefs.GetInt ("HighScore");
-			Debug.Log ("Starting High Score");
+			int priorHighScore = PlayerPrefs.GetInt ("HighScore");
+			Debug.Log ("Starting High Score" + priorHighScore);
 		} else {
 			PlayerPrefs.SetInt ("HighScore", 0);
 		}
@@ -60,9 +78,7 @@ public class GameData : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		health = 100;
-		lives = 5;
-		totalScore = 0;
+		//move to Awake
 	}
 
 	////Called in Player controller when the player collides with a pickup    
