@@ -203,6 +203,8 @@ loadLevel3( ), etc.
 ```java
 void loadLevel1 ()
     {
+        //STARTS Gameplay, Spawner, etc
+        
         Utility.HideCG (cg); //hide the StartGamePanel and StartGameButton
         spawner.StartSpawning ();
         levelText.text = "Level 1";
@@ -218,10 +220,10 @@ void loadLevel1 ()
     
     void loadLevel3 ()
     {
-    ///change background image?
-    ///change objects getting spawned?
+        ///change background image?
+        ///change objects getting spawned?
     
-    levelText.text = "Level 3";
+        levelText.text = "Level 3";
     
     }
 
