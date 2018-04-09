@@ -45,15 +45,20 @@ public class GameData : MonoBehaviour
 		get{ return  health; }
 	}
 	
-	public int LevelScore {  //read only
+	public int LevelScore {  //read / write
 		get{ return  levelScore; }
 		set{  levelScore= value; }
 
 	}
 
 
-	void Awake ()
-	{  //create singleton
+	void Awake (){
+		//initialize variables
+		health = 100;
+		totalScore = 0;
+		levelScore = 0;  //used in LevelManager
+
+	  //create singleton
 		if (instanceRef == null) {
 			instanceRef = this;
 			DontDestroyOnLoad (gameObject);  //the gameObject this is attached to 
@@ -62,11 +67,6 @@ public class GameData : MonoBehaviour
 			Debug.Log ("Destroy GameObject");
 		}
 		
-		health = 100;
-		totalScore = 0;
-		levelScore = 0;
-
-
 		// Set HighScore using Unity PlayerPrefs dictionary
 		if (PlayerPrefs.HasKey ("HighScore")) {
 			int priorHighScore = PlayerPrefs.GetInt ("HighScore");
