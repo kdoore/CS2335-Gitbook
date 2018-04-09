@@ -197,7 +197,8 @@ public void NextLevel ()
 
 ### LoadLevel Methods
 
-For each level change, a method: loadLevelX\( \) contains the level change logic.
+For each level change, a method: loadLevelX( )contains the level change logic. You'll need to add additional LoadLevel Methods for 
+loadLevel3( ), etc.
 
 ```java
 void loadLevel1 ()
@@ -205,14 +206,23 @@ void loadLevel1 ()
         Utility.HideCG (cg); //hide the StartGamePanel and StartGameButton
         spawner.StartSpawning ();
         levelText.text = "Level 1";
-
     }
 
     void loadLevel2 ()
     {
-        ///change background image
-
+        ///change background image?
+        ///change objects getting spawned?
+        
         levelText.text = "Level 2";
+    }
+    
+    void loadLevel3 ()
+    {
+    ///change background image?
+    ///change objects getting spawned?
+    
+    levelText.text = "Level 3";
+    
     }
 
     void miniGameOver( ){
