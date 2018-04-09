@@ -1,4 +1,4 @@
-# Level Manager - In Class
+# Level Manager 
 
 ### Level Manager Overview
 
@@ -14,6 +14,42 @@ Game objects that are inter-dependent with the LevelManager are:
 4. Spawner - spawn different prefabs depending on the current level
 5. UI Elements - Level and Score UI displays must be updated to reflect the current Level and the current Score value.
 6. PlayerController - this GameObject will sense collisions with PickUps, this will change the score and the level
+7. GameData - create a new variable levelScore, and a new property: LevelScore, these are changed in GameData when the score is updated.
+
+###Updates to GameData
+ Add a new instance variable: levelScore, to GameData.  
+ Add a property: LevelScore, to allow read / write access 
+ Add code in GameData Add(PickUp item )  so the levelScore is   updated when points are added to the TotalScore.
+ 
+```java
+////ADD NEW CODE IN GameData
+ 
+   private int levelScore; 
+ 
+     /// <summary>
+    /// Gets or sets the level score.
+    /// </summary>
+    /// <value>The level score.</value>
+    public int LevelScore{
+        get { return levelScore; }
+        set { levelScore = value; }
+    }
+    
+    //add the following line of code to GameData Add( ) method
+       
+       public void Add(PickUp item)
+    {
+        totalScore += item.value;  // update totalScore by the value of this current item
+        levelScore += item.value; /////ADD THIS LINE OF CODE
+        
+        
+        ////more code below here not shown
+    }
+    
+    
+```
+
+
 
 ### Level-State Enums
 
@@ -52,25 +88,26 @@ public enum LevelState
 
 ```java
 // Use this for initialization
-    void Start()
+   void Start()
     {
-        curLevel = LevelState.start; //initialize Level-FSM 
-        
-        maxLevelScore = 30; //used to determine when a level is over
+        curLevel = LevelState.start;
+        levelScore = 0;   // initialize
+        maxLevelScore = 30;
         startGameButton = GameObject.Find("StartGameButton").GetComponent<Button>();
         startGameButton.onClick.AddListener(NextLevel);
 
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
-        levelText.text = "";
-        
+
         cg = GameObject.Find("StartGamePanel").GetComponent<CanvasGroup>();
         Utility.ShowCG(cg);
 
         spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
-        
-    
 
+        ///Update Check to see if level is over when playerDataUpdate event happens
+        GameData.instanceRef.OnPlayerDataUpdate.AddListener(CheckLevelEnd);
     }
+    
+    
 ```
 
 ### Check For Level End
