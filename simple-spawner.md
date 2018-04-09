@@ -11,8 +11,8 @@ Objects to be Spawned in the MiniGame should have the following configuration:
 1. GameObject should be a PreFab
 2. A SpriteRenderer Component
 3. At least 1 Collider2D component with IsTrigger set to true \(can have additional nested Collider2D components if necessary\)
-4. A PickUp script component, with the public attributes like: value, type, damage set in the inspector.
-5. GameObject: Tag:  PickUp
+4. A PickUp script component, with the public attributes like: value, type set in the inspector.
+5. GameObject: Tag:  Collectible or Hazard
 6. Can have a Rigidbody2D if the spawned object will be moving
 7. Can have an Animator component if the object will be animated
 
