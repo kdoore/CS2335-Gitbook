@@ -161,11 +161,10 @@ Write code for the CheckLevelEnd method, this method will be executed every time
 ```
 
 ### NextLevel - Finite State Machine Logic
+This method manages the FSM control logic using switch-case structure. Each time this method is called, the matching logic must change the value of curLevel, and call a custom method: loadLevelX( ) where the details of the level loading logic are specified.
 
 ```java
-///This method manages the FSM control logic using switch-case structure. 
-///Each time this method is called, the matching logic must change the value of curLevel, 
-///and call a custom method: loadLevelX( ) where the details of the level loading logic are specified.
+
 
 public void NextLevel ()
     {
@@ -173,16 +172,18 @@ public void NextLevel ()
         switch (curLevel) {
 
         case LevelState.start:  // called when StartPanel, StartGameButton is clicked
-            curLevel = LevelState.level1;
+            curLevel = LevelState.level1; //change level
             loadLevel1 ();
             break;
 
         case LevelState.level1:  //called when in Level1 from checkLevelEnd( ) 
-            curLevel = LevelState.level2;
+            curLevel = LevelState.level2; //change level
+
             loadLevel2 ();
             break;
         case LevelState.level2: //called when in Level2 from checkLevelEnd( ) 
-            curLevel=LevelState.level3;
+            curLevel=LevelState.level3; //change level
+
             loadLevel3();
             break;
         case: LevelState.level3: //called when in Level3 from checkLevelEnd( ) 
