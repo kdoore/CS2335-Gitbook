@@ -16,38 +16,6 @@ Game objects that are inter-dependent with the LevelManager are:
 6. PlayerController - this GameObject will sense collisions with PickUps, this will change the score and the level
 7. GameData - create a new variable levelScore, and a new property: LevelScore, these are changed in GameData when the score is updated.
 
-###Updates to GameData
- Add a new instance variable: **private int levelScore**, to GameData.  
- Add a property: **public int LevelScore**, to allow read / write access. 
- Also,  Add code to GameData Add() - method  so the levelScore is   updated when points are added to the TotalScore.
- 
-```java
-////ADD NEW CODE IN GameData
- 
-   private int levelScore; 
- 
-     /// <summary>
-    /// Gets or sets the level score.
-    /// </summary>
-    /// <value>The level score.</value>
-    public int LevelScore{
-        get { return levelScore; }
-        set { levelScore = value; }
-    }
-    
-    //ADD the following line of code to GameData Add( ) method
-       
-       public void Add(PickUp item)
-    {
-        totalScore += item.value;  // update totalScore by the value of this current item
-        levelScore += item.value; /////ADD THIS LINE OF CODE
-        
-        
-        ////more code below here not shown
-    }
-    
-    
-```
 
 #LevelManager Class
 Start by adding the following code to the top of the LevelManager Class
