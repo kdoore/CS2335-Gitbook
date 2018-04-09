@@ -63,8 +63,8 @@ public class GameData : MonoBehaviour
 		}
 		
 		health = 100;
-		lives = 5;
 		totalScore = 0;
+		levelScore = 0;
 
 
 		// Set HighScore using Unity PlayerPrefs dictionary
