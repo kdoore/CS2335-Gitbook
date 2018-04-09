@@ -50,7 +50,8 @@ public class GameData : MonoBehaviour {
         // Get / Set HighScore using Unity PlayerPrefs dictionary
         if (PlayerPrefs.HasKey("HighScore"))
         {
-           /// totalScore = PlayerPrefs.GetInt("HighScore"); //this will cause problems, remove this line of code
+            ////REMOVE or COMMENT-OUT the line of code below
+           /// totalScore = PlayerPrefs.GetInt("HighScore"); 
             Debug.Log("Initial High Score:" + PlayerPrefs.GetInt("HighScore"));
         }
         else //"HighScore" has never been created, so create it and give initial value of 0.
