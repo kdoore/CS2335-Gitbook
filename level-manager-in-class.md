@@ -56,7 +56,7 @@ public enum LevelState
     {
         curLevel = LevelState.start;
         levelScore = 0;   // initialize
-        maxLevelScore = 30;
+        maxLevelScore = 30; //used to determine when a level is over
         startGameButton = GameObject.Find("StartGameButton").GetComponent<Button>();
         startGameButton.onClick.AddListener(NextLevel);
 
