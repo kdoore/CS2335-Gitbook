@@ -9,7 +9,7 @@ In our mini-game,  We want the PickUp to generate an custom event when it's dest
 
 ```java
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.Events; //ADD THIS
 using System.Collections;
 using System;
 
@@ -52,9 +52,6 @@ public class PickUp : MonoBehaviour
 }
   //end class
 ```
-
-
-
 
 
 ###Self-Destructive PickUp
@@ -122,7 +119,7 @@ public class Spawner : MonoBehaviour {
         // Subscribe so the other class handles notification automatically
         ///the spawn object has it's OnPickUpDied function added to the list of subscribers
 
-        newPickup.onDied += OnPickUpDied; //when this crystal dies, please notify this spawn class
+        newPickup.onDied += ReSpawnItem; //when this crystal dies, please notify this spawn class
 
     }
 
@@ -130,7 +127,7 @@ public class Spawner : MonoBehaviour {
     // OnPickUpDied is an EventHandler Function that will be called automatically when the pickup object instance dies
     // This allows it to spawn a new prefab instance, and then 
    
-    public void OnPickUpDied (){
+    public void ReSpawnItem (){
 
         // Spawn a new crystal 
         Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime+3));
