@@ -117,12 +117,11 @@ public class Spawner : MonoBehaviour {
         PickUp newPickup = (PickUp)Instantiate(prefab,pos,transform.rotation);
 
         // Subscribe so the other class handles notification automatically
-        ///the spawn object has it's OnPickUpDied function added to the list of subscribers
+        ///the spawn object has it's ReSpawnItem function added to the list of subscribers
 
-        newPickup.onDied += ReSpawnItem; //when this crystal dies, please notify this spawn class
+        newPickup.onDied.AddListener(ReSpawnItem); //when this crystal dies, please notify this spawn class
 
     }
-
 
     // OnPickUpDied is an EventHandler Function that will be called automatically when the pickup object instance dies
     // This allows it to spawn a new prefab instance, and then 
