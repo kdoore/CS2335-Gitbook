@@ -33,11 +33,11 @@ public enum LevelState
 ### Declare Object References
 
 ```java
-   LevelState curLevel;
-
-    // FSM - 1 unit of memory
-    int levelScore; //used to determine when level is over
-    int maxLevelScore; //when to change levels
+   LevelState curLevel; //track current level for FSM
+   
+   //int levelScore is stored in GameData
+   int maxLevelScore; //when to change levels
+    
     //UI game Objects - LevelText, StartGameButton, StartGamePanel
     Button startGameButton;
     CanvasGroup cg;
@@ -55,17 +55,20 @@ public enum LevelState
     void Start()
     {
         curLevel = LevelState.start;
-        levelScore = 0;   // initialize
+        
         maxLevelScore = 30; //used to determine when a level is over
         startGameButton = GameObject.Find("StartGameButton").GetComponent<Button>();
         startGameButton.onClick.AddListener(NextLevel);
 
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
-
+        levelText.text = "Level 1";
+        
         cg = GameObject.Find("StartGamePanel").GetComponent<CanvasGroup>();
         Utility.ShowCG(cg);
 
         spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
+        
+    
 
     }
 ```
@@ -75,14 +78,14 @@ public enum LevelState
 ```java
      /// <summary>
     /// Checks the level end.
-    /// Pass in PickUp item so levelScore can be updated using
-    /// item.value.  If levelScore > 10, then the nextLevel( ) method
-    /// is executed to change the level
+    ///   If levelScore > maxLevelScore, then reset the levelScore and call the nextLevel( ) method
+    ///  to change the level
     /// </summary>
-    /// <param name="item">Item.</param>
-    ///this will be called in the PlayerController whenever the score changes - OnTriggerEnter2D()
+   
+    ///this will be called when the OnPlayerDataUpdate event 
+    ///happens in GameData, it is registered as a listener for that event
 
-    public void CheckLevelEnd (int points)
+    public void CheckLevelEnd ( )
     {
         levelScore += points;
         Debug.Log ("Check if level is over" + levelScore);
