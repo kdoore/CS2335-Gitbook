@@ -9,7 +9,10 @@ You will need to add some new code to GameData, this is specified in the LevelMa
 [See new code to be Added to GameData](https://kdoore.gitbooks.io/cs-2335/content/level-manager-in-class.html#updates-to-gamedata)
 
 
-###LevelManager code
+###LevelManager Code 
+You will need to modify this code to match your game's logic
+
+
 ```java
 
 using System.Collections;
