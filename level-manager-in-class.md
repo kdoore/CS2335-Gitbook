@@ -61,7 +61,7 @@ public enum LevelState
         startGameButton.onClick.AddListener(NextLevel);
 
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
-        levelText.text = "Level 1";
+        levelText.text = "";
         
         cg = GameObject.Find("StartGamePanel").GetComponent<CanvasGroup>();
         Utility.ShowCG(cg);
@@ -78,7 +78,7 @@ public enum LevelState
 ```java
      /// <summary>
     /// Checks the level end.
-    ///   If levelScore > maxLevelScore, then reset the levelScore and call the nextLevel( ) method
+    ///   If LevelScore > maxLevelScore, then reset the LevelScore and call the nextLevel( ) method
     ///  to change the level
     /// </summary>
    
@@ -87,12 +87,13 @@ public enum LevelState
 
     public void CheckLevelEnd ( )
     {
-        levelScore += points;
+        int levelScore = GameData.instanceRef.LevelScore;
         Debug.Log ("Check if level is over" + levelScore);
 
-        if (levelScore > levelMaxScore) { ///level has changed
+        if (levelScore >= levelMaxScore) { ///level has changed
             ///reset level value display
-            levelScore = 0;   //reset level score
+            GameData.instanceRef.LevelScore;
+ = 0;   //reset GameData.LevelScore
 
             NextLevel ();  //go to next level
         }
