@@ -4,9 +4,9 @@
 See code in: [LevelManager-Events](/level-manager-in-class.md)
 
 ###GameData -- new code must be added
-You will need to add some new code to GameData, this is specified in the LevelManager-Events documentation
+You will need to add some new code to GameData, this is specified in the LevelManager-Events documentation.  It may be easier to simply replace all code in GameData with the code linked below.
 
-[See new code to be Added to GameData](https://kdoore.gitbooks.io/cs-2335/content/level-manager-in-class.html#updates-to-gamedata)
+[See updated version of GameData](/project-3/gamedata-with-unityevent.md)
 
 
 ###LevelManager Code 
