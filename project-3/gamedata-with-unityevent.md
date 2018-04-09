@@ -46,12 +46,12 @@ public class GameData : MonoBehaviour {
             Debug.Log("Destroy GameObject");
         }
 
-
-        // Set HighScore using Unity PlayerPrefs dictionary
+///////UPDATE THIS CODE - IT HAD AN ERROR
+        // Get / Set HighScore using Unity PlayerPrefs dictionary
         if (PlayerPrefs.HasKey("HighScore"))
         {
-            totalScore = PlayerPrefs.GetInt("HighScore");
-            Debug.Log("Starting High Score");
+           /// totalScore = PlayerPrefs.GetInt("HighScore"); //this will cause problems, remove this line of code
+            Debug.Log("Initial High Score:" + PlayerPrefs.GetInt("HighScore"));
         }
         else //"HighScore" has never been created, so create it and give initial value of 0.
         {
