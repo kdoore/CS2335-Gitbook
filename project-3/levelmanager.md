@@ -3,8 +3,20 @@
 
 See code in: [LevelManager-Events](/level-manager-in-class.md)
 
-###GameData -- new code must be added
+###GameData -- new code must be incorporated -
 You will need to add some new code to GameData, this is specified in the LevelManager-Events documentation.  It may be easier to simply replace all code in GameData with the code linked below.
+
+These are changes that should be incorporated into GameData prior to working with the Level Manager
+    - levelScore variable
+    - onPlayerDataUpdate, UnityEvent
+    - inventory - Dictionary<PickupType, int>
+    - LevelScore, Health properties
+    - Update Add( )
+        - increment levelScore with points
+        - invoke onPlayerDataUpdate
+    - Update TakeDamage( )
+        - invoke onPlayerDataUpdate
+
 
 [See updated version of GameData](/project-3/gamedata-with-unityevent.md)
 
@@ -119,7 +131,7 @@ public class LevelManager : MonoBehaviour {
         //STARTS Gameplay, Spawner, etc
 
         Utility.HideCG(cg); //hide the StartGamePanel and StartGameButton
-        spawner.StartSpawning();
+        spawner.StartSpawning();  //Make sure to remove this code from Start in the spawner script
         levelText.text = "Level 1";
     }
 
