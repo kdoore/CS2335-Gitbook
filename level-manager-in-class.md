@@ -34,39 +34,39 @@ public enum LevelState
 
 ```java
    LevelState curLevel;
-   
+
     // FSM - 1 unit of memory
     int levelScore; //used to determine when level is over
     int maxLevelScore; //when to change levels
-    //UI game Objects - LevelValue, StartGameButton, StartGamePanel
+    //UI game Objects - LevelText, StartGameButton, StartGamePanel
     Button startGameButton;
     CanvasGroup cg;
-    Text levelValue;
+    Text levelText;
 
     //references to custom script components
     Spawner spawner;
     //to start the spawner, change objects that are spawned
-    
 ```
 
 ### Start - Initialize Object References
 
 ```java
 // Use this for initialization
-    void Start ()
+    void Start()
     {
         curLevel = LevelState.start;
         levelScore = 0;   // initialize
-        levelMaxScore = 30;
-        startGameButton = GameObject.Find ("StartGameButton").GetComponent<Button> ();
-        startGameButton.onClick.AddListener (nextLevel);
-        levelValue = GameObject.Find ("LevelValue").GetComponent<Text> ();
+        maxLevelScore = 30;
+        startGameButton = GameObject.Find("StartGameButton").GetComponent<Button>();
+        startGameButton.onClick.AddListener(NextLevel);
 
-        cg = GameObject.Find ("StartGamePanel").GetComponent<CanvasGroup> ();
-        Utility.ShowCG (cg);
+        levelText = GameObject.Find("LevelText").GetComponent<Text>();
 
-        spawner = GameObject.Find ("Spawner").GetComponent<Spawner> ();
-       
+        cg = GameObject.Find("StartGamePanel").GetComponent<CanvasGroup>();
+        Utility.ShowCG(cg);
+
+        spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
+
     }
 ```
 
@@ -81,7 +81,7 @@ public enum LevelState
     /// </summary>
     /// <param name="item">Item.</param>
     ///this will be called in the PlayerController whenever the score changes - OnTriggerEnter2D()
-    
+
     public void CheckLevelEnd (int points)
     {
         levelScore += points;
@@ -147,7 +147,7 @@ void loadLevel1 ()
     void loadLevel2 ()
     {
         ///change background image
-        
+
         levelValue.text = "2";
     }
 
