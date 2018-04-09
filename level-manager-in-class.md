@@ -166,34 +166,38 @@ This method manages the FSM control logic using switch-case structure. Each time
 ```java
 
 
-public void NextLevel ()
+public void NextLevel()
     {
 
-        switch (curLevel) {
+        switch (curLevel)
+        {
 
-        case LevelState.start:  // called when StartPanel, StartGameButton is clicked
-            curLevel = LevelState.level1; //change level
-            loadLevel1 ();
-            break;
+            case LevelState.start:  // called when StartPanel, StartGameButton is clicked
+                curLevel = LevelState.level1; //change level
+                loadLevel1();
+                break;
 
-        case LevelState.level1:  //called when in Level1 from checkLevelEnd( ) 
-            curLevel = LevelState.level2; //change level
+            case LevelState.level1:  //called when in Level1 from checkLevelEnd( ) 
+                curLevel = LevelState.level2; //change level
 
-            loadLevel2 ();
-            break;
-        case LevelState.level2: //called when in Level2 from checkLevelEnd( ) 
-            curLevel=LevelState.level3; //change level
+                loadLevel2();
+                break;
+            case LevelState.level2: //called when in Level2 from checkLevelEnd( ) 
+                curLevel = LevelState.level3; //change level
 
-            loadLevel3();
-            break;
-        case: LevelState.level3: //called when in Level3 from checkLevelEnd( ) 
-            miniGameOver();
-        default:
-            Debug.Log ("No match on curLevel");
-            break;
+                loadLevel3();
+                break;
+            case LevelState.level3: //called when in Level3 from checkLevelEnd( ) 
+                //ADD logic to determine if it's a winning or losing ending
+
+                miniGameOver();
+                break;
+            
+            default:
+                Debug.Log("No match on curLevel");
+                break;
         }
-    }
-```
+    }```
 
 ### LoadLevel Methods
 
