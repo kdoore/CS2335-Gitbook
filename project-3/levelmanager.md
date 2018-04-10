@@ -93,6 +93,7 @@ public class LevelManager : MonoBehaviour {
 
     }
 
+//This method implements the Finite State Machine to Manage Level Logic, you will modify this code to correspond to your game's logic
     public void NextLevel()
     {
 
