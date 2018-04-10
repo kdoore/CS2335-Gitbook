@@ -27,7 +27,7 @@ public class GameData : MonoBehaviour
 {
     public static GameData instanceRef;  //singleton reference variable
 
-    public UnityEvent OnPlayerDataUpdate;   //custom Unity Event
+    public UnityEvent onPlayerDataUpdate;   //custom Unity Event
 
     public Dictionary<PickupType, int> inventory = new Dictionary<PickupType, int>();
 
@@ -83,9 +83,9 @@ public class GameData : MonoBehaviour
         levelScore = 0;
 
         /////////Initialize Custom EVENT
-        if (OnPlayerDataUpdate == null)//test to see if it has been initialized
+        if (onPlayerDataUpdate == null)//test to see if it has been initialized
         {
-            OnPlayerDataUpdate = new UnityEvent();
+            onPlayerDataUpdate = new UnityEvent();
         }
 
     }
@@ -104,8 +104,8 @@ public class GameData : MonoBehaviour
         levelScore += item.value;
         Debug.Log("Adding item value to totalScore, totalScore =  " + totalScore);
        
-        if(OnPlayerDataUpdate  != null){   /////Are there any objects registered as listeners
-            OnPlayerDataUpdate.Invoke();  ///Invoke the event
+        if(onPlayerDataUpdate  != null){   /////Are there any objects registered as listeners
+            onPlayerDataUpdate.Invoke();  ///Invoke the event
         }
 
         int count = 0;
@@ -127,9 +127,9 @@ public class GameData : MonoBehaviour
             Debug.Log("GameOver due to low health");
         }
 
-        if (OnPlayerDataUpdate != null)
+        if (onPlayerDataUpdate != null)
         {   /////Are there any objects registered as listeners
-            OnPlayerDataUpdate.Invoke();  ///Invoke the event
+            onPlayerDataUpdate.Invoke();  ///Invoke the event
         }
     }
 
