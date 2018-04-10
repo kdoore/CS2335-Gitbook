@@ -1,5 +1,5 @@
 #PlayerStatsDisplay
-
+The following code can be used to update UI Game Items to display the totalScore and health.  Th
 
 
 ```java
@@ -18,7 +18,7 @@ public class PlayerStatsDisplay : MonoBehaviour {
 	void Start () {
         scoreText  = GameObject.Find("ScoreText").GetComponent<Text>();
         healthText = GameObject.Find("HealthText").GetComponent<Text>();
-        GameData.instanceRef.OnPlayerDataUpdate.AddListener(UpdateDisplay);
+        GameData.instanceRef.onPlayerDataUpdate.AddListener(UpdateDisplay);
         UpdateDisplay();
     }
 
