@@ -1,5 +1,5 @@
 #PlayerStatsDisplay
-The following code can be used to update UI Game Items to display the totalScore and health.  Th
+The following code can be used to update UI Game Items to display the totalScore and health.  The UI gameObjects must have the same name as listed in the code below.
 
 
 ```java
