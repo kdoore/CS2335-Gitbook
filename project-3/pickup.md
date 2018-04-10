@@ -51,7 +51,7 @@ The code below can be used to create a PickUp GameObject / Prefab, that can noti
 
 ```java
 using UnityEngine;
-using UnityEngine.Events;  //ADD THIS
+using UnityEngine.Events;
 using System.Collections;
 using System;
 
@@ -59,43 +59,39 @@ public enum PickupType
 {
 	crystal,
 	star,
-	animatedCrystal,
-	rock
+	rock,
+    gem,
+    bug
 };
 
 public class PickUp : MonoBehaviour
 {
-    //Add custom UnityEvent - Used to notify Spawner to spawn new object
-    
-    public UnityEvent OnDied;  //custom Event
-	
-	[Header("Set in Inspector")]
+    public UnityEvent onDied;
 	public PickupType type;
-	
-	[Header("Set in Inspector")]
 	public int value;
 
-    public void Start()
-    {
-        if(OnDied == null){ //initailize the event, call the constructor
-            OnDied = new UnityEvent();
+    void Start(){
+        //initialize the UnityEvent by calling the constructor
+        if(onDied == null){   
+            onDied = new UnityEvent();
         }
     }
-    public void DestroyMe () //execute to manage destroying the object and invokeing the event.
+
+	public void DestroyMe () //executed by Animation-Trigger
 	{
-		Debug.Log ("Item Destroy Me");
-        if (OnDied != null)  //someone is listening (spawner)
-        {  
-            OnDied.Invoke(); // broadcast event: (notify the spawner)
-            OnDied.RemoveAllListeners(); //unregister the spawner, so no traces of the connection remain.
-
+		//if there are any registered listeners, 
+        //then broadcast / publish the event
+        if(onDied != null){
+            onDied.Invoke(); //tells the Spawner it has died so a new item can be spawned
+            Debug.Log("Invoked event when PickUp died");
+            onDied.RemoveAllListeners(); //remove spawner's registration/ listener connection
         }
+        //Debug.Log("Item Destroy Me");
+        Destroy(gameObject);
+	}
 
-        Destroy (gameObject);
-    }
+}//end class
 
-}
-  //end class
 ```
 
 
