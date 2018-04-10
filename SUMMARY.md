@@ -77,10 +77,10 @@
   * [PlayerController](project-3/playercontroller.md)
   * [PickUp](project-3/pickup.md)
   * [Simple Spawner](project-3/simple-spawner.md)
+  * [Spawner with UnityEvent](project-3/spawner-with-unityevent.md)
   * [GameData - With UnityEvent](project-3/gamedata-with-unityevent.md)
   * [LevelManager](project-3/levelmanager.md)
   * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
-  * [Spawner with UnityEvent](project-3/spawner-with-unityevent.md)
 * [Class-Code Examples](class-code-examples.md)
 
 ## C\# Language
