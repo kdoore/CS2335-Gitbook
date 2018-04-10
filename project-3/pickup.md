@@ -85,7 +85,7 @@ public class PickUp : MonoBehaviour
 	{
 		Debug.Log ("Item Destroy Me");
         if (OnDied != null)  //someone is listening (spawner)
-        { //initailize the event, call the constructor
+        {  
             OnDied.Invoke(); // broadcast event: (notify the spawner)
             OnDied.RemoveAllListeners(); //unregister the spawner, so no traces of the connection remain.
 
