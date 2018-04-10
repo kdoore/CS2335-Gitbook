@@ -108,7 +108,7 @@ public class GameData : MonoBehaviour
             onPlayerDataUpdate.Invoke();  ///Invoke the event
         }
 
-///Add item to dictionary
+   ///Add item to dictionary
         int count = 0;
         if( inventory.TryGetValue(item.type, out count)){
             count++;
