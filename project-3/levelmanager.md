@@ -47,7 +47,7 @@ public class LevelManager : MonoBehaviour {
     LevelState curLevel;
 
     // FSM - 1 unit of memory
-    int levelScore; //used to determine when level is over
+   
     int maxLevelScore; //when to change levels
     //UI game Objects - LevelValue, StartGameButton, StartGamePanel
     Button startGameButton;
@@ -62,7 +62,6 @@ public class LevelManager : MonoBehaviour {
     void Start()
     {
         curLevel = LevelState.start;
-        levelScore = 0;   // initialize
         maxLevelScore = 30;
         startGameButton = GameObject.Find("StartGameButton").GetComponent<Button>();
         startGameButton.onClick.AddListener(NextLevel);
@@ -81,23 +80,27 @@ public class LevelManager : MonoBehaviour {
     public void CheckLevelEnd()
     {
         int levelScore = GameData.instanceRef.LevelScore;
-        Debug.Log("Check if level is over" + levelScore);
+        //Debug.Log("Check if level is over" + levelScore);
 
+        //Add code here to see if health is <=0
+        
+
+        //if health is ok, then check if level is over
         if (levelScore >= maxLevelScore)
         { ///level has changed
           ///reset level value display
             GameData.instanceRef.LevelScore = 0;   //reset GameData.LevelScore
-
-            NextLevel();  //go to next level
+        NextLevel();  //go to next level
         }
 
     }
 
-//This method implements the Finite State Machine to Manage Level Logic, you will modify this code to correspond to your game's logic
+    //This method implements the Finite State Machine to Manage Level Logic. 
+    //You will modify this code to correspond to your game's logic
     public void NextLevel()
     {
 
-        switch (curLevel)
+        switch (curLevel)  //check the curLevel, find matching case below
         {
 
             case LevelState.start:  // called when StartPanel, StartGameButton is clicked
