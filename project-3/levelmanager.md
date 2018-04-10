@@ -116,7 +116,7 @@ public class LevelManager : MonoBehaviour {
                 break;
             case LevelState.level3: //called when in Level3 from checkLevelEnd( ) 
                 //ADD logic to determine if it's a winning or losing ending
-
+                
                 miniGameOver();
                 break;
             
@@ -126,6 +126,7 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
+////YOU WILL MODIFY THESE METHODS SO THEY CORRESPOND TO YOUR GAME"S LOGIC
     void loadLevel1()
     {
         //STARTS Gameplay, Spawner, etc
@@ -139,7 +140,7 @@ public class LevelManager : MonoBehaviour {
     {
         ///change background image?
         ///change objects getting spawned?
-
+         
         levelText.text = "Level 2";
     }
 
