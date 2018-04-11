@@ -82,6 +82,7 @@
   * [LevelManager](project-3/levelmanager.md)
   * [PlayerStatsDisplay](project-3/playerstatsdisplay.md)
   * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
+  * [InventoryDisplay](project-3/inventorydisplay.md)
 * [Class-Code Examples](class-code-examples.md)
 
 ## C\# Language
