@@ -115,7 +115,7 @@ public class GameData : MonoBehaviour
             inventory.Add(item.type, 1);  //add a new entry to the dictionary
         }
         
-        ///THE EVENT
+        ///THE EVENT - MAKE SURE THIS IS THE LAST CODE IN ADD( )
         if(onPlayerDataUpdate != null){ /////Are there any objects registered as listeners
             onPlayerDataUpdate.Invoke(); ///Invoke the event
         }
