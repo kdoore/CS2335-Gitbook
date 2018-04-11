@@ -118,5 +118,20 @@ public class Spawner : MonoBehaviour
         Debug.Log("Spawned new prefab");
     }
 }
+
+///This method can be called from any other script using the Spawner object, to destroy all spawned objects with Tags as shown.
+
+public void DestroyAllSpawnedObjects(){
+        GameObject[] goodItems = GameObject.FindGameObjectsWithTag("Collectible") ;
+        foreach(var item in goodItems){
+            Destroy(item);
+        }
+        GameObject[] badItems = GameObject.FindGameObjectsWithTag("Hazard");
+        foreach (var item in badItems)
+        {
+            Destroy(item);
+        }
+    }
+
 ```
 
