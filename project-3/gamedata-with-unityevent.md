@@ -104,10 +104,8 @@ public class GameData : MonoBehaviour
         levelScore += item.value;
         Debug.Log("Adding item value to totalScore, totalScore =  " + totalScore);
        
-        if(onPlayerDataUpdate  != null){   /////Are there any objects registered as listeners
-            onPlayerDataUpdate.Invoke();  ///Invoke the event
-        }
-
+       
+   ///THE INVENTORY DICTIONARY 
    ///Add item to dictionary
         int count = 0;
         if( inventory.TryGetValue(item.type, out count)){
@@ -116,8 +114,14 @@ public class GameData : MonoBehaviour
         }else{
             inventory.Add(item.type, 1);  //add a new entry to the dictionary
         }
+        
+        ///THE EVENT
+        if(onPlayerDataUpdate != null){ /////Are there any objects registered as listeners
+onPlayerDataUpdate.Invoke(); ///Invoke the event
+}
 
     }
+    
     // end Add()
 
     public void TakeDamage(int damage)
