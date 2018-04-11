@@ -70,6 +70,7 @@ public class Spawner : MonoBehaviour
     public float xRange = 8.0f;
     public float yRangeTop = -2.0f;
     public float yRangeBottom = -3.5f;
+     public bool activeSpawning = false;
 
     void Start()
     {
@@ -113,12 +114,15 @@ public class Spawner : MonoBehaviour
         spawnedItem.onDied.AddListener(SpawnNewOne);  //Call SpawnPrefab again when this spawnedItem dies
     }
 
-    public void SpawnNewOne(){
-        Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f));
+    public void SpawnNewOne()
+    {
+        if (activeSpawning)
+        {
+            Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f));
+        }
         Debug.Log("Spawned new prefab");
     }
-}
-
+    
 ///This method can be called from any other script using the Spawner object, to destroy all spawned objects with Tags as shown.
 
 public void DestroyAllSpawnedObjects(){
@@ -132,6 +136,7 @@ public void DestroyAllSpawnedObjects(){
             Destroy(item);
         }
     }
+}//end of class
 
 ```
 
