@@ -2,6 +2,9 @@
 
 Use the following code for the Inventory Display functionality
 
+Inventory Display - Unity Package
+[https://utdallas.box.com/v/InventoryDisplay](https://utdallas.box.com/v/InventoryDisplay)
+
 ```java
 
 using System.Collections;
