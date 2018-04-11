@@ -117,8 +117,8 @@ public class GameData : MonoBehaviour
         
         ///THE EVENT
         if(onPlayerDataUpdate != null){ /////Are there any objects registered as listeners
-onPlayerDataUpdate.Invoke(); ///Invoke the event
-}
+            onPlayerDataUpdate.Invoke(); ///Invoke the event
+        }
 
     }
     
