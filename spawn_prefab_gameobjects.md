@@ -89,50 +89,73 @@ This script needs to be attached to an empty gameObject in our scene.  The spawn
 ```java
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class Spawner : MonoBehaviour {
+public class Spawner : MonoBehaviour
+{
 
-  // The prefab that we're going to spawn 
-    public PickUp prefab;  //use baseclass type
+    // The prefab we will spawn
+    [Header("Set in Inspector")] ///ONLY ONE BAD ONE USED HERE
+    public GameObject prefabBad;
     
-    private int pauseTime;
+     [Header("Set in Inspector")] //LIST OF GOOD ONES
+    public List<GameObject> prefabsGood;
 
-    // Explicitly Create the first crystals in unity start
-    void Start () {
-        pauseTime = 1;
-        for (int i = 0; i < prefabs.Count; i++){
-            Invoke("SpawnPrefab", Random.Range(pauseTime+1, pauseTime+5)); 
-        }
+    // Use this for initialization
+
+    private int pauseTime=2;//wait 2 sec before starting
+    public int numToSpawn=3;
+    public float chanceToSpawnBad = .01f;
+    public float xRange = 8.0f;
+    public float yRangeTop = -2.0f;
+    public float yRangeBottom = -3.5f;
+
+    void Start()
+    {
+       StartSpawning (); //call in LevelManager
     }
 
-    // Helper function to spawn prefabs and to register as a subscriber
-    // to the crystal OnDied event notification
-    public void SpawnPrefab (){ //this is the actual SpawnEvent
+    public void StartSpawning()
+    {
 
-        //select position to spawn based on spawner position
-        Vector3 pos = transform.position;
-        pos.x = Random.Range(-6.0f, 6.0f);  //figure these range values based on scene geometry - move temp prefab to min, max positions
-        pos.y = Random.Range (-4.8f, -4.2f);
-
-        // Spawn the Pickup and assign to a temp object reference
-        PickUp newPickup = (PickUp)Instantiate(prefab,pos,transform.rotation);
-
-        // Subscribe so the other class handles notification automatically
-        ///the spawn object has it's ReSpawnItem function added to the list of subscribers
-
-        newPickup.onDied.AddListener(ReSpawnItem); //when this crystal dies, please notify this spawn class
+       for (int i = 0; i < numToSpawn; i++)
+            {
+                Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f *i));  ///for delay
+            }
 
     }
 
-    // OnPickUpDied is an EventHandler Function that will be called automatically when the pickup object instance dies
-    // This allows it to spawn a new prefab instance, and then 
-   
-    public void ReSpawnItem (){
+    
+    public void SpawnPrefab()
+    {
+        Vector3 position = transform.localPosition;
+        position.x = Random.Range(-xRange, xRange);
+        position.y = Random.Range(yRangeBottom, yRangeTop);
 
-        // Spawn a new crystal 
-        Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime+3));
+        float rand = Random.value;
+        GameObject item;
+        PickUp spawnedItem;
+       
+    if (rand < chanceToSpawnBad)
+        {
+            item = Instantiate(prefabBad, position, transform.rotation);
+
+        }else{ //pick a good item from the array using random index 
+            int randIndex = Random.Range(0, prefabsGood.Count);
+            item = Instantiate(prefabsGood[randIndex], position, transform.rotation);
+
+        } 
+        //get the PickUp component so we can 
+        //register as a listener for the OnDied event 
+        //for the Spawned object
+        spawnedItem = item.GetComponent<PickUp>();
+        spawnedItem.onDied.AddListener(SpawnNewOne);  //Call SpawnPrefab again when this spawnedItem dies
     }
 
+    public void SpawnNewOne(){
+        Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f));
+        Debug.Log("Spawned new prefab");
+    }
 }
 ```
 
