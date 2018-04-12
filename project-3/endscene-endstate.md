@@ -35,3 +35,26 @@ public void InitializeObjectRefs ()
 
 
 ###Restart the Game /  MiniGameState
+To allow players to restart the game, you might want to add this code to MiniGameState.cs script.  This is necessary because the data stored in GameData is not destroyed when switching scenes, this is good when wanting to access GameData information in other scenes, but it's a problem when wanting to restart the MiniGame, so the MiniGame state is a good place to call to  ResetGameData( ) . 	
+	
+
+```java
+   updated 4/12/18 3:40pm
+       
+       //CODE in MiniGameState.cs
+	public void InitializeObjectRefs ()
+	{
+        GameData.instanceRef.ResetGameData();
+       }
+       
+       
+       ////CODE IN GameData
+       //call when scene is reloaded in MiniGameState.cs
+     public void ResetGameData(){
+          health = 100;
+          levelScore = 0;
+          totalScore = 0;
+          inventory.Clear();
+     }
+```
+
