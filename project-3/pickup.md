@@ -23,8 +23,8 @@ public enum PickupType
 	crystal,
 	star,
 	rock,
-        gem,
-        bug
+	gem,
+	bug
 };
 
 public class PickUp : MonoBehaviour
@@ -93,7 +93,53 @@ public class PickUp : MonoBehaviour
 }//end class
 
 ```
+###Self-Destructive PickUp with Event
 
+```java
+using UnityEngine;
+using UnityEngine.Events;
+using System.Collections;
+using System;
+
+public enum PickupType
+{
+crystal,
+star,
+rock,
+gem,
+bug
+};
+
+public class PickUp : MonoBehaviour
+{
+public UnityEvent onDied;
+public PickupType type;
+public int value;
+
+void Start(){
+//initialize the UnityEvent by calling the constructor
+	if(onDied == null){
+		onDied = new UnityEvent();
+	}
+ 
+}
+
+public void DestroyMe () //executed by Animation-Trigger
+{
+//if there are any registered listeners,
+//then broadcast / publish the event
+	if(onDied != null){
+		onDied.Invoke(); //tells the Spawner it has died so a new item can be spawned
+		Debug.Log("Invoked event when PickUp died");
+		onDied.RemoveAllListeners(); //remove spawner's registration/ listener connection
+}
+	//Debug.Log("Item Destroy Me");
+	Destroy(gameObject);
+}
+
+}//end class
+
+```
 
 
 
