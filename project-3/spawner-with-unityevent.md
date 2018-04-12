@@ -140,4 +140,22 @@ public void DestroyAllSpawnedObjects(){
 }//end of class
 
 ```
+###LevelManager Code to Stop Spawning
+The code below shows how to stop spawning for the spawner object, by setting activeSpawning to false. Calling the DestroyAllSpawnedObjects( ) will destroy all pickup items remaining objects in the scene. 
+
+
+```java
+void loadLevel2()
+    {
+        ///STOP LEVEL 1 SPAWNER
+        spawner.activeSpawning = false;
+        spawner.DestroyAllSpawnedObjects();
+
+        //start new spawner
+        spawner2.StartSpawning();
+
+        levelText.text = "Level 2";
+    }
+
+```
 
