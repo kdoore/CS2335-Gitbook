@@ -11,7 +11,7 @@ The following code can be used to update UI Game Items to display the totalScore
 ![](/assets/Screen Shot 2018-04-12 at 11.08.46 AM.png)
 
 ```java
-
+//code updated 4/12/18 11:00am
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,20 +21,21 @@ public class PlayerStatsDisplay : MonoBehaviour {
 
     private Text scoreText, healthText;
 
-
 	// Use this for initialization
 	void Start () {
         scoreText  = GameObject.Find("ScoreText").GetComponent<Text>();
         healthText = GameObject.Find("HealthText").GetComponent<Text>();
         GameData.instanceRef.onPlayerDataUpdate.AddListener(UpdateDisplay);
-        UpdateDisplay();
+        UpdateDisplay(); //call once to set initial values
     }
 
+    //Executed each time score / heath is updated in GameData
     void UpdateDisplay(){
         Debug.Log("Score Updated");
         scoreText.text = "Score: " + GameData.instanceRef.TotalScore;
         healthText.text = "Health: " + GameData.instanceRef.Health;
     }
-}
+    
+} //end class
 ```
 
