@@ -26,7 +26,7 @@ You will need to modify this code to match your game's logic
 
 
 ```java
-//updated 4/12/18  11:10 am
+//updated 4/12/18  3:35pm
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -74,11 +74,13 @@ public class LevelManager : MonoBehaviour {
         cg = GameObject.Find("StartGamePanel").GetComponent<CanvasGroup>();
         Utility.ShowCG(cg);
 
+        //initialize other spawners here
         spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
 
         ///Update Check to see if level is over when playerDataUpdate event happens
         GameData.instanceRef.onPlayerDataUpdate.AddListener(CheckLevelEnd);
-        //NextLevel(); //add this if not using a StartGamePanel and StartGameButton to start the gameplay.
+        
+        //NextLevel(); //uncomment and use this option if not using StartGamePanel and StartGameButton to start the gameplay.
     }
 
     public void CheckLevelEnd()
@@ -159,7 +161,12 @@ public class LevelManager : MonoBehaviour {
     {
         ///change background image?
         ///change objects getting spawned?
-
+        ///change background image?
+        ///stop spawning?
+        //spawner2.activeSpawning = false;///stops spawning
+        //spawner2.DestroyAllSpawnedObjects();
+        ///change objects getting spawned?
+        ///spawner3.StartSpawning(); //start next spawner
         levelText.text = "Level 3";
 
     }
