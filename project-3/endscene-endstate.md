@@ -39,7 +39,7 @@ To allow players to restart the game, you might want to add this code to MiniGam
 	
 
 ```java
-   updated 4/12/18 3:40pm
+   //updated 4/12/18 3:40pm
        
        //CODE in MiniGameState.cs
 	public void InitializeObjectRefs ()
