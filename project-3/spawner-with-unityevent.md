@@ -5,7 +5,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
-using System;
+
 
 public enum PickupType
 {
@@ -27,6 +27,9 @@ public class PickUp : MonoBehaviour
         if(onDied == null){   
             onDied = new UnityEvent();
         }
+        //Uncomment the line below to have PickUp destroy itself based on Range min, max value in seconds
+         //Invoke("DestroyMe", Random.Range(2, 7));
+  
     }
 
 	public void DestroyMe () //executed by Animation-Trigger
