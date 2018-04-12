@@ -31,13 +31,16 @@ public class InventoryDisplay : MonoBehaviour {
     bool starActive, crystalActive, gemActive;
 	// Use this for initialization
 	void Start () {
+	//Button shows / hides inventory display panel
         inventoryDisplayBtn = GameObject.Find("InventoryDisplayBtn").GetComponent<Button>();
         inventoryDisplayBtn.onClick.AddListener(ShowHideInventory);
-
+        //Find all panel's CanvasGroup
         panelCG = GameObject.Find("InventoryDisplayPanel").GetComponent<CanvasGroup>();
         starPanelCG = GameObject.Find("StarPanel").GetComponent<CanvasGroup>();
         crystalPanelCG = GameObject.Find("CrystalPanel").GetComponent<CanvasGroup>();
         gemPanelCG = GameObject.Find("GemPanel").GetComponent<CanvasGroup>();
+        
+        //hide all panels
         Utility.HideCG(starPanelCG);
         Utility.HideCG(gemPanelCG);
         Utility.HideCG(crystalPanelCG);
@@ -45,7 +48,11 @@ public class InventoryDisplay : MonoBehaviour {
         starActive = false;
         gemActive = false;
         crystalActive = false;
+   
+        //Register to be notified when playerDataUpdate event happens     
         GameData.instanceRef.onPlayerDataUpdate.AddListener(UpdateDisplay);
+        UpdateDisplay(); ///call one time so this works in a scene without 
+        //the events happening
     }
 
     public void ShowHideInventory(){
@@ -72,26 +79,31 @@ public class InventoryDisplay : MonoBehaviour {
         Text itemText;
         switch (type)
         {
-            case PickupType.star:
+            case PickupType.star:   ////UPDATE TO MATCH YOUR GAME
                 if (starActive == false) { 
                 Utility.ShowCG(starPanelCG);
+                starActive=true; //set flag to true
                 }
                 itemText = starPanelCG.gameObject.GetComponentInChildren<Text>();
                 itemText.text = value.ToString();
                 break;
 
-            case PickupType.crystal:
+            case PickupType.crystal: ////UPDATE TO MATCH YOUR GAME
+
                 if(crystalActive==false){
                     Utility.ShowCG(crystalPanelCG);
+                    crystalActive = true; 
                 }
 
                 itemText = crystalPanelCG.gameObject.GetComponentInChildren<Text>();
                 itemText.text = value.ToString();
                 break;
 
-            case PickupType.gem:
+            case PickupType.gem: ////UPDATE TO MATCH YOUR GAME
+
                 if(gemActive==false){
                     Utility.ShowCG(gemPanelCG);
+                    gemActive = true;
                 }
                
                 itemText = gemPanelCG.gameObject.GetComponentInChildren<Text>();
@@ -101,7 +113,6 @@ public class InventoryDisplay : MonoBehaviour {
         }
     }
 
-}
 
 ```
 
