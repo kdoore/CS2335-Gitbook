@@ -106,7 +106,9 @@ public class GameData : MonoBehaviour
        
        
    ///THE INVENTORY DICTIONARY 
-   ///Add item to dictionary
+   ///Add item to dictionary - based on it's PickupType value.
+   ///The PickupType is used to determine which item to display in the InventoryDisplay script.
+   
         int count = 0;
         if( inventory.TryGetValue(item.type, out count)){
             count++;
