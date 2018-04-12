@@ -17,7 +17,6 @@ When creating the prefabs, make sure to set the PickUp component's `type` value 
 ![](/assets/Screen Shot 2018-04-12 at 10.30.46 AM.png)
 
 ```java
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,25 +30,24 @@ public class InventoryDisplay : MonoBehaviour {
     bool starActive, crystalActive, gemActive;
 	// Use this for initialization
 	void Start () {
-	//Button shows / hides inventory display panel
         inventoryDisplayBtn = GameObject.Find("InventoryDisplayBtn").GetComponent<Button>();
         inventoryDisplayBtn.onClick.AddListener(ShowHideInventory);
-        //Find all panel's CanvasGroup
+
         panelCG = GameObject.Find("InventoryDisplayPanel").GetComponent<CanvasGroup>();
+
         starPanelCG = GameObject.Find("StarPanel").GetComponent<CanvasGroup>();
         crystalPanelCG = GameObject.Find("CrystalPanel").GetComponent<CanvasGroup>();
         gemPanelCG = GameObject.Find("GemPanel").GetComponent<CanvasGroup>();
-        
-        //hide all panels
+
         Utility.HideCG(starPanelCG);
         Utility.HideCG(gemPanelCG);
         Utility.HideCG(crystalPanelCG);
         Utility.HideCG(panelCG);
+
         starActive = false;
         gemActive = false;
         crystalActive = false;
-   
-        //Register to be notified when playerDataUpdate event happens     
+
         GameData.instanceRef.onPlayerDataUpdate.AddListener(UpdateDisplay);
         UpdateDisplay(); ///call one time so this works in a scene without 
         //the events happening
@@ -68,7 +66,7 @@ public class InventoryDisplay : MonoBehaviour {
 	// Update is called once per frame
 	void UpdateDisplay () {
         inventory = GameData.instanceRef.inventory;
-        //get each item and update the display
+
         foreach (var item in inventory)
         {
             updateUI(item.Key, item.Value);
@@ -79,40 +77,43 @@ public class InventoryDisplay : MonoBehaviour {
         Text itemText;
         switch (type)
         {
-            case PickupType.star:   ////UPDATE TO MATCH YOUR GAME
+            case PickupType.star:  ////YOU NEED TO CHANGE THIS TO MATCH YOUR ENUMS
                 if (starActive == false) { 
                 Utility.ShowCG(starPanelCG);
-                starActive=true; //set flag to true
+                    starActive = true;
                 }
                 itemText = starPanelCG.gameObject.GetComponentInChildren<Text>();
                 itemText.text = value.ToString();
                 break;
 
-            case PickupType.crystal: ////UPDATE TO MATCH YOUR GAME
-
+            case PickupType.crystal: ////YOU NEED TO CHANGE THIS TO MATCH YOUR ENUMS
                 if(crystalActive==false){
                     Utility.ShowCG(crystalPanelCG);
-                    crystalActive = true; 
+                    starActive = true;
                 }
 
                 itemText = crystalPanelCG.gameObject.GetComponentInChildren<Text>();
                 itemText.text = value.ToString();
                 break;
 
-            case PickupType.gem: ////UPDATE TO MATCH YOUR GAME
-
+            case PickupType.gem: ////YOU NEED TO CHANGE THIS TO MATCH YOUR ENUMS
                 if(gemActive==false){
                     Utility.ShowCG(gemPanelCG);
-                    gemActive = true;
+                    starActive = true;
                 }
                
                 itemText = gemPanelCG.gameObject.GetComponentInChildren<Text>();
                 itemText.text = value.ToString();
                 break;
-
         }
+    }//end UpdateUI
+
+    //remove listener when scene is ending, so GameData doesn't maintain
+    //the list of listeners going into a new scene
+    void OnDisable(){
+        GameData.instanceRef.onPlayerDataUpdate.RemoveListener(UpdateDisplay);
     }
 
-
+}//end Class
 ```
 
