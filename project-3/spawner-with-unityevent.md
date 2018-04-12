@@ -50,16 +50,15 @@ public class PickUp : MonoBehaviour
 
 
 ```java
-//Code Updated 4/12/18 2:00 pm
+//Code Updated 4/12/18 2:30 pm
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
-public class Spawner : MonoBehaviour {
+public class Spawner : MonoBehaviour
+{
 
+   
     // The prefab we will spawn
     [Header("Set in Inspector")]
     //public GameObject goodPrefab, badPrefab;
@@ -69,24 +68,20 @@ public class Spawner : MonoBehaviour {
     public List<GameObject> prefabsBad;
 
     // Use this for initialization
+
     private int pauseTime = 2;//wait 2 sec before starting
     public int numToSpawn = 3;
-    public Vector3 PlaceToSpawn;
-    public float TimeBetweenSpawns= 1.5f;
-    public float chanceToSpawnBad = 0.11f;
-    public float chanceToSpawnGood = 0.5f;
+    public float chanceToSpawnBad = .01f;
+    public float xRange = 8.0f;
+    public float yRangeTop = -2.0f;
+    public float yRangeBottom = -3.5f;
     public bool activeSpawning = false;
-   
-
-    // Use this for initialization
-
 
     void Start()
     {
-        StartSpawning(); //call in LevelManager
-        Invoke("Spawn", TimeBetweenSpawns);
+        //StartSpawning(); //call in LevelManager
+        activeSpawning = true;
     }
-
 
     public void StartSpawning()
     {
@@ -98,60 +93,66 @@ public class Spawner : MonoBehaviour {
 
     }
 
+
     public void SpawnPrefab()
     {
         Vector3 position = transform.localPosition;
-
+        position.x = Random.Range(-xRange, xRange);
+        position.y = Random.Range(yRangeBottom, yRangeTop);
 
         float rand = Random.value;
         GameObject item;
         PickUp spawnedItem;
-        //check to make sure there are objects to spawn
+
         if (rand < chanceToSpawnBad && prefabsBad.Count > 0)
         {
             int randIndex = Random.Range(0, prefabsBad.Count);
             item = Instantiate(prefabsBad[randIndex], position, transform.rotation);
             spawnedItem = item.GetComponent<PickUp>();
-            spawnedItem.OnDied.AddListener(SpawnNewOne);
+            spawnedItem.onDied.AddListener(SpawnNewOne);
         }
         else if (prefabsGood.Count > 0)
         { //pick a good item from the array using random index 
             int randIndex = Random.Range(0, prefabsGood.Count);
             item = Instantiate(prefabsGood[randIndex], position, transform.rotation);
             spawnedItem = item.GetComponent<PickUp>();
-            spawnedItem.OnDied.AddListener(SpawnNewOne);
+            spawnedItem.onDied.AddListener(SpawnNewOne);
         }
         //get the PickUp component so we can 
         //register as a listener for the OnDied event 
         //for the Spawned object
-          //Call SpawnPrefab again when this spawnedItem dies
-
-    }
+     }
 
     public void SpawnNewOne()
     {
         if (activeSpawning)
         {
-            SpawnPrefab(); //this version gives no delay 
-                           // Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f)); //this version gives a delay
+            Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f));
         }
         Debug.Log("Spawned new prefab");
     }
 
+//}///end of Class
+
+    ///This method can be called from any other script using the Spawner object, to destroy all spawned objects with Tags as shown.
+
     public void DestroyAllSpawnedObjects()
     {
         GameObject[] goodItems = GameObject.FindGameObjectsWithTag("Collectible");
+        Debug.Log("Destroy goodObjects spawner" + goodItems.Length);
         foreach (var item in goodItems)
         {
             Destroy(item);
         }
         GameObject[] badItems = GameObject.FindGameObjectsWithTag("Hazard");
+        Debug.Log("Destroy badObjects spawner" + badItems.Length);
         foreach (var item in badItems)
         {
             Destroy(item);
         }
     }
-}//end of class
+
+}////ENd of class
 ```
 ###LevelManager Code to Stop Spawning
 The code below shows how to stop spawning for the spawner object, by setting activeSpawning to false. Calling the DestroyAllSpawnedObjects( ) will destroy all pickup items remaining objects in the scene. 
