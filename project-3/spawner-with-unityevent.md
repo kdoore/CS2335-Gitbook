@@ -54,7 +54,7 @@ public class PickUp : MonoBehaviour
 
 
 ```java
-//Code Updated 4/12/18 2:40 pm
+//Code Updated 4/12/18 3:30 pm
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -131,11 +131,17 @@ public class Spawner : MonoBehaviour
         
      }
 
+    //Method to spawn a new object when another PickUp Destroys itself.  
+    //Select one of the methods below to either spawn with a delay, or spawn with no delay.  
+    //If you spawn with no delay, then it's easier to stop spawning when switching levels, 
+    //because no delayed spawning can happen after setting activeSpawning to false.
     public void SpawnNewOne()
     {
         if (activeSpawning)
         {
-            Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f));
+            // SpawnPrefab(); //use this one for no delayed spawning, comment out line below
+   
+            Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f)); //comment out if using code in line above, for spawning with no delay
         }
         Debug.Log("Spawned new prefab");
     }
