@@ -103,24 +103,28 @@ public class Spawner : MonoBehaviour
         float rand = Random.value;
         GameObject item;
         PickUp spawnedItem;
-
+        
+        //make sure there are some items to spawn
         if (rand < chanceToSpawnBad && prefabsBad.Count > 0)
         {
             int randIndex = Random.Range(0, prefabsBad.Count);
             item = Instantiate(prefabsBad[randIndex], position, transform.rotation);
+            
+            //register as a listener for the OnDied event 
             spawnedItem = item.GetComponent<PickUp>();
             spawnedItem.onDied.AddListener(SpawnNewOne);
         }
-        else if (prefabsGood.Count > 0)
+        else if (prefabsGood.Count > 0) //make sure there are some items to spawn
         { //pick a good item from the array using random index 
             int randIndex = Random.Range(0, prefabsGood.Count);
             item = Instantiate(prefabsGood[randIndex], position, transform.rotation);
+            
+            //register as a listener for the OnDied event 
             spawnedItem = item.GetComponent<PickUp>();
             spawnedItem.onDied.AddListener(SpawnNewOne);
         }
-        //get the PickUp component so we can 
-        //register as a listener for the OnDied event 
-        //for the Spawned object
+        
+        
      }
 
     public void SpawnNewOne()
