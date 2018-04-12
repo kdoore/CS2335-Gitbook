@@ -13,7 +13,8 @@ This example uses a simple UnityEvent: `onPlayerDataUpdate,` to notify any Liste
 
 **GameObject:**  GameData should be added to the GameManager, empty gameObject, in the BeginScene, and in the MiniGame scene for easy testing of the game.
 
-```java
+```java  
+//updated 4/12/18 11:00 am
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -109,9 +110,9 @@ public class GameData : MonoBehaviour
    ///Add item to dictionary - based on it's PickupType value.
    ///The PickupType is used to determine which item to display in the InventoryDisplay script.
    
-        int count = 0;
+        int count = 0; //variable to hold out parameter value, if the Dictionary already has the item.type key.
         if( inventory.TryGetValue(item.type, out count)){
-            count++;
+            count++;  //item already in dictionary, add one to count
             inventory[item.type] = count; ///update the dictionary's value
         }else{
             inventory.Add(item.type, 1);  //add a new entry to the dictionary
@@ -122,9 +123,7 @@ public class GameData : MonoBehaviour
             onPlayerDataUpdate.Invoke(); ///Invoke the event
         }
 
-    }
-    
-    // end Add()
+    }// end Add()
 
     public void TakeDamage(int damage)
     {
@@ -149,6 +148,6 @@ public class GameData : MonoBehaviour
         //should inventory be cleared out?
         //inventory.Clear();
     }
-}
+} //end class
 ```
 
