@@ -7,6 +7,14 @@ Inventory Display - Unity Package
 
 The code below is included in the package file.
 
+The package file includes a prefab that is composed of UI panels, a button, text, and images.  To use the prefab, it must be dragged onto the word 'Canvas' in the Hierarchy Panel.  This will make it a child of the Canvas.  The script: InventoryDisplay.cs is a script component on the top-level gameObject: InventoryDisplay
+
+The code below shows the parts of this code that you will need to customize, to match with the PickupType enums that you've defined in your PickUp script.  You need to make sure you have 3 different types of good prefabs in your game, these will be displayed in this inventory display.
+
+###Prefab PickUp - Set the type variable in the inspector
+When creating the prefabs, make sure to set the PickUp component's `type` value in the inspector, and select the prefab 'apply' button to apply, if you are modifying a prefab instance instead of the actual prefab in your assets folder. In the image below, the PickUp type has been set to Crystal, the drop-down list of values are determined by the PickUpType enums. This `type` variable is used to track the type of item stored and displayed in your inventory.
+
+![](/assets/Screen Shot 2018-04-12 at 10.30.46 AM.png)
 
 ```java
 
