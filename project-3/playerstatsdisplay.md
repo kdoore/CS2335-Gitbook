@@ -1,6 +1,14 @@
 #PlayerStatsDisplay
-The following code can be used to update UI Game Items to display the totalScore and health.  The UI gameObjects must have the same name as listed in the code below.
+The following code can be used to update UI Game Items to display the totalScore and health.  The UI gameObjects must have the same name as listed in the code below. 
+    - StatsDisplay is a UIPanel
+    - ScoreText is UIText (child of the UIPanel)  
+    - HealthText is UIText (child of the UIPanel)  
+    - Set the RectTransforms for the ScoreText so it's stretched and anchored to the top of it's parent, UIPanel
+    - Set the RectTransform for the HealthText so it is stretched and anchored to the bottom of it's parent, UIPanel 
 
+![](/assets/Screen Shot 2018-04-12 at 11.05.02 AM.png)
+
+![](/assets/Screen Shot 2018-04-12 at 11.08.46 AM.png)
 
 ```java
 
