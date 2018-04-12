@@ -26,7 +26,7 @@ You will need to modify this code to match your game's logic
 
 
 ```java
-
+//updated 4/12/18  11:10 am
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -78,7 +78,7 @@ public class LevelManager : MonoBehaviour {
 
         ///Update Check to see if level is over when playerDataUpdate event happens
         GameData.instanceRef.onPlayerDataUpdate.AddListener(CheckLevelEnd);
-    //NextLevel(); //add this if not using a StartGamePanel and StartGameButton to start the gameplay.
+        //NextLevel(); //add this if not using a StartGamePanel and StartGameButton to start the gameplay.
     }
 
     public void CheckLevelEnd()
