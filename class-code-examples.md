@@ -41,8 +41,7 @@ You can find a similar version of these sprites at the link below:
  
  
  **Spawner with Events**
- 
- 
+ -
 
 **Level Manager**
  - [LevelManager - v1](/level-manager-in-class.md)
