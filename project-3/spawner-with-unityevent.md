@@ -70,7 +70,7 @@ public class Spawner : MonoBehaviour
     public float xRange = 8.0f;
     public float yRangeTop = -2.0f;
     public float yRangeBottom = -3.5f;
-     public bool activeSpawning = false;
+    public bool activeSpawning = false;
 
     void Start()
     {
@@ -118,7 +118,8 @@ public class Spawner : MonoBehaviour
     {
         if (activeSpawning)
         {
-            Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f));
+            SpawnPrefab(); //this version gives no delay 
+           // Invoke("SpawnPrefab", Random.Range(pauseTime, pauseTime * 2.0f)); //this version gives a delay
         }
         Debug.Log("Spawned new prefab");
     }
