@@ -140,11 +140,14 @@ public class GameData : MonoBehaviour
         }
     }
 
-    //called when health == 0 and scene is reloaded
+    //can be called when health == 0 or when is scene is reloaded
     public void ResetGameData(){
         health = 100;
         levelScore = 0;
         totalScore = 0;
+        
+        //should inventory be cleared out?
+        //inventory.Clear();
     }
 }
 ```
