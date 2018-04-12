@@ -42,30 +42,33 @@ public class LevelManager : MonoBehaviour {
         level1,
         level2,
         level3
+        //add more if desired
     }
 
-    LevelState curLevel;
-
-    // FSM - 1 unit of memory
+    LevelState curLevel;   // FSM - 1 unit of memory
    
     int maxLevelScore; //when to change levels
+    
     //UI game Objects - LevelValue, StartGameButton, StartGamePanel
     Button startGameButton;
     CanvasGroup cg;
     Text levelText;
 
     //references to custom script components
-    Spawner spawner;
-    //to start the spawner, change objects that are spawned
+    Spawner spawner;  //add more spawners here
+    //to start the spawner from LevelManager
 
 
     void Start()
     {
         curLevel = LevelState.start;
         maxLevelScore = 30;
+        
+        //comment out UI elements below if not using a start-screen / start-button
         startGameButton = GameObject.Find("StartGameButton").GetComponent<Button>();
         startGameButton.onClick.AddListener(NextLevel);
 
+        //Shows Level
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
 
         cg = GameObject.Find("StartGamePanel").GetComponent<CanvasGroup>();
@@ -75,6 +78,7 @@ public class LevelManager : MonoBehaviour {
 
         ///Update Check to see if level is over when playerDataUpdate event happens
         GameData.instanceRef.onPlayerDataUpdate.AddListener(CheckLevelEnd);
+    //NextLevel(); //add this if not using a StartGamePanel and StartGameButton to start the gameplay.
     }
 
     public void CheckLevelEnd()
@@ -90,7 +94,7 @@ public class LevelManager : MonoBehaviour {
         { ///level has changed
           ///reset level value display
             GameData.instanceRef.LevelScore = 0;   //reset GameData.LevelScore
-        NextLevel();  //go to next level
+            NextLevel();  //go to next level - call FSM
         }
 
     }
@@ -143,8 +147,11 @@ public class LevelManager : MonoBehaviour {
     void loadLevel2()
     {
         ///change background image?
+        ///stop spawning?
+        //spawner.activeSpawning = false;///stops spawning
+        //spawner.DestroyAllSpawnedObjects();
         ///change objects getting spawned?
-         
+        ///spawner2.StartSpawning();    //start next spawner 
         levelText.text = "Level 2";
     }
 
@@ -163,6 +170,8 @@ public class LevelManager : MonoBehaviour {
         //this will change Scene/State
         ///ADD Additional logic to determine which scene to go to 
         /// based on win or lose condition
+        ///StateManager code will cause an error when not started from BeginScene, error can be ignored for testing
+        //
         SceneManager.LoadScene("EndScene");  //actual scene name
         StateManager.instanceRef.SwitchState(new EndState());  //create new state, pass to StateManager     
     }
