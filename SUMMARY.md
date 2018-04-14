@@ -86,7 +86,7 @@
 * [Class-Code Examples](class-code-examples.md)
 * [Additional Options](additional-options.md)
   * [Parallax Scrolling](additional-options/parallax-scrolling.md)
-  * Sprite Animation Tutorial
+  * [Sprite Animation Tutorial](additional-options/sprite-animation-tutorial.md)
   * [Object Pooling](object-pooling.md)
 
 ## C\# Language
