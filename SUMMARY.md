@@ -87,7 +87,7 @@
 * [Additional Options](additional-options.md)
   * [Parallax Scrolling](additional-options/parallax-scrolling.md)
   * Sprite Animation Tutorial
-* [Object Pooling](object-pooling.md)
+  * [Object Pooling](object-pooling.md)
 
 ## C\# Language
 
