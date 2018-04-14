@@ -69,7 +69,6 @@
 * [Custom Event Messaging](custom_event_messaging.md)
 * [Saving Data - Serialization](saving_data_-_serialization.md)
 * [Disable Debug Logging](disable-debug-logging.md)
-* [Object Pooling](object-pooling.md)
 
 ## Project 3
 
@@ -85,6 +84,10 @@
   * [InventoryDisplay](project-3/inventorydisplay.md)
   * [EndScene / EndState ](project-3/endscene-endstate.md)
 * [Class-Code Examples](class-code-examples.md)
+* [Additional Options](additional-options.md)
+  * [Parallax Scrolling](additional-options/parallax-scrolling.md)
+  * Sprite Animation Tutorial
+* [Object Pooling](object-pooling.md)
 
 ## C\# Language
 
