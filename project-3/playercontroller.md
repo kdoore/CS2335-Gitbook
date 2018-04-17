@@ -121,7 +121,11 @@ public class PlayerController : MonoBehaviour
             //Destroy(hitObject.gameObject);
 		}
 		if (hitObject.CompareTag ("Hazard")) {
-            anim.SetInteger("HeroState", (int)heroState.dead);
+             if (GameData.instanceRef.Health <= 0)   ///play when health less than eq to 0
+            {
+                anim.SetInteger("HeroState", (int)heroState.dead);
+
+            }
 	
             PickUp item = hitObject.GetComponent<PickUp>();
             if (item != null)
