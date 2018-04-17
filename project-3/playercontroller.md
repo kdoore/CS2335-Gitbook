@@ -148,13 +148,25 @@ public class PlayerController : MonoBehaviour
 		transform.localScale = theScale;
 	}  
 	
-	 public void ReloadScene(){
+	 public void ReloadScene()
+    {
         //ScreenFader fader = FindObjectOfType<ScreenFader>();
         //fader.EndScene((int)GameScene.MiniGame);
-        StateManager.instanceRef.SwitchState(new MiniGameState());
-        SceneManager.LoadScene("MiniGameScene");
-    }
+        if (GameData.instanceRef.Lives > 1)
+        {
+            GameData.instanceRef.Lives -= 1; //loose a life each time to reload the scene
+            StateManager.instanceRef.SwitchState(new MiniGameState());
+            SceneManager.LoadScene("MiniGameScene");
+        }
 
+        else //end the game
+        {
+            StateManager.instanceRef.SwitchState(new EndState());
+            SceneManager.LoadScene("EndScene");
+        }
+       
+
+    }//end ReloadScene
 }
 
 ```
