@@ -116,8 +116,9 @@ public class PlayerController : MonoBehaviour
             if(item != null){
                 GameData.instanceRef.Add(item);
                 Debug.Log("Added item " + item.type);
+                item.DestroyMe(); //have item destroy itse.f
             }
-            Destroy(hitObject.gameObject);
+            //Destroy(hitObject.gameObject);
 		}
 		if (hitObject.CompareTag ("Hazard")) {
             anim.SetInteger("HeroState", (int)heroState.dead);
@@ -127,9 +128,10 @@ public class PlayerController : MonoBehaviour
             {
                 GameData.instanceRef.TakeDamage(item.value);
                 Debug.Log("TakeDamage " + item.value);
-               
+                item.DestroyMe();  //have item destroy itself
+
             }
-            Destroy(hitObject.gameObject);
+            //Destroy(hitObject.gameObject);
             dead = true;
 		}
 	}
