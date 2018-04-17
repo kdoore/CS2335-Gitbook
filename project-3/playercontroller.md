@@ -147,6 +147,13 @@ public class PlayerController : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}  
+	
+	 public void ReloadScene(){
+        //ScreenFader fader = FindObjectOfType<ScreenFader>();
+        //fader.EndScene((int)GameScene.MiniGame);
+        StateManager.instanceRef.SwitchState(new MiniGameState());
+        SceneManager.LoadScene("MiniGameScene");
+    }
 
 }
 
