@@ -75,9 +75,11 @@ public class PickUp : MonoBehaviour
         if(onDied == null){   
             onDied = new UnityEvent();
         }
+        //uncomment code below to allow self-destruction
+        //Invoke("DestroyMe", Random.Range(2, 7));
     }
 
-	public void DestroyMe () //executed by Animation-Trigger
+	public void DestroyMe ()  
 	{
 		//if there are any registered listeners, 
         //then broadcast / publish the event
