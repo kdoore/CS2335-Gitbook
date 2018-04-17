@@ -53,7 +53,6 @@ The code below can be used to create a PickUp GameObject / Prefab, that can noti
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
-using System;
 
 public enum PickupType
 {
@@ -75,7 +74,7 @@ public class PickUp : MonoBehaviour
         if(onDied == null){   
             onDied = new UnityEvent();
         }
-        //uncomment code below to allow self-destruction
+        //uncomment code below to allow self-destruction within time-delay
         //Invoke("DestroyMe", Random.Range(2, 7));
     }
 
@@ -95,53 +94,5 @@ public class PickUp : MonoBehaviour
 }//end class
 
 ```
-###Self-Destructive PickUp with Event
-
-```java
-using UnityEngine;
-using UnityEngine.Events;
-using System.Collections;
-using System;
-
-public enum PickupType
-{
-crystal,
-star,
-rock,
-gem,
-bug
-};
-
-public class PickUp : MonoBehaviour
-{
-public UnityEvent onDied;
-public PickupType type;
-public int value;
-
-void Start(){
-//initialize the UnityEvent by calling the constructor
-	if(onDied == null){
-		onDied = new UnityEvent();
-	}
- 
-}
-
-public void DestroyMe () //executed by Animation-Trigger
-{
-//if there are any registered listeners,
-//then broadcast / publish the event
-	if(onDied != null){
-		onDied.Invoke(); //tells the Spawner it has died so a new item can be spawned
-		Debug.Log("Invoked event when PickUp died");
-		onDied.RemoveAllListeners(); //remove spawner's registration/ listener connection
-}
-	//Debug.Log("Item Destroy Me");
-	Destroy(gameObject);
-}
-
-}//end class
-
-```
-
 
 
