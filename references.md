@@ -38,6 +38,10 @@ Saving Player Data:
 
 Saving World Objects: [Sitepoint Tutorial](http://www.sitepoint.com/mastering-save-and-load-functionality-in-unity-5/)
 
+
+[Turn-Based RPG Battle
+](https://gamedevacademy.org/how-to-create-an-rpg-game-in-unity-comprehensive-guide/)
+
 ### Unity Scriptable Object Factory
 
 [http://www.tallior.com/unity-scriptableobject-factory/](http://www.tallior.com/unity-scriptableobject-factory/)
