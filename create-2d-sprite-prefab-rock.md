@@ -1,5 +1,7 @@
 #Create 2D Sprite Prefab GameObject
 
+In this section, we'll create a 2D sprite gameObject that will have 2D physics configured to act on the object.  Once the gameObject has been configured, then we'll create a Prefab from the gameObject, this allows us to store the custom gameObject as a named asset which is stored independently from a specific scene.  One use of prefabs is that they can be used for dynamically generating gameObjects at run-time via code.  
+
 ###Steps to create a Sprite Asset:
 ###Option 1: Create a place-holder sprite asset:
  In the project / asset panel, right click and select:
