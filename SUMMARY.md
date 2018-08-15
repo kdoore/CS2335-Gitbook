@@ -9,8 +9,6 @@
 ## Project 1
 
 * [Project1](project1.md)
-  * [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
-  * [Project 1 - Score and UI Elements](project-1-score-and-ui-elements.md)
   * [Project 1 - Game Controller](project-1-game-controller.md)
     * [StartButton Functionality](project-1-game-controller/startbutton-functionality.md)
     * [Score: Update and Display Functionality](project-1-game-controller/score-update-and-display-functionality.md)
@@ -18,9 +16,11 @@
     * [GameController gameActive to Control Behavior of AppleTree, Basket](project-1-game-controller/gamecontroller-gameactive-to-control-behavior-of-appletree-basket.md)
     * [AppleTree as a Spawner](project-1-game-controller/appletree-as-a-spawner.md)
   * [Project 1 - Updates to Custom Scripts](project-1-updates-to-custom-scripts.md)
-  * [Background Image - Add Sorting Layers](background-image-add-sorting-layers.md)
 * [Game Objects](game_objects.md)
+* [Sorting Layers to control sprite render ordering.](background-image-add-sorting-layers.md)
 * [Finding Game Objects](finding_game_objects.md)
+* [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
+* [Score and UI Elements](project-1-score-and-ui-elements.md)
 * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
 
 ## Project 2

@@ -1,4 +1,4 @@
-#Project 1 - Score and UI Elements 
+#Score and UI Elements 
 
 In order for these interacting sprites to feel like a game, we need to keep track of the score, we need to display notification for winning and losing, and and we need a button that will let us start and restart the game.  
 

@@ -1,6 +1,6 @@
-#Background Image - Add Sorting Layers
+#Sorting Layers to Control Sprite Rendering Order
 
-Adding a background image is completely optional for Project 1, but if you choose to add a background image, it can cause some complications to your game. In this section, we'll look at how to create Sorting Layers to control the layer ordering of sprite rendering, this will make it easier to add a background image to your game.
+In this section, we'll look at how to create Sorting Layers to control the layer ordering of sprite rendering.
 
 ###Sorting Layers to Control Sprite Rendering Order
 [Unity Video on Sorting Layers](https://unity3d.com/learn/tutorials/topics/2d-game-creation/sorting-layers)
