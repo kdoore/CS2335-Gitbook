@@ -2,12 +2,12 @@
 
 For Windows OS, as of Unity 5.2.X, Visual Studio CE is configured to be installed as the default IDE when installing Unity 5.  For help with VS installation errors see [Unity forums](http://answers.unity3d.com/questions/1075675/-error-while-installing-visual-studio-error-code16.html) 
 
-Visual Studio Community Edition ( for Windows or Mac ) https://www.visualstudio.com/vs/community/
+**Visual Studio Community Edition **( for Windows or Mac ) https://www.visualstudio.com/vs/community/
 
 As of Spring 2018, this course will use Visual Studio as the IDE.
 
-#Code Scripts
-To edit a script in Unity, first create a script component object inside Unity.  Make sure to name the file correctly when creating it in Unity because the script name is used to create the class name of the C# class that is created for each Unity script component.  
+#Script Components - Unity Code Files
+To edit a script in Unity, first create a **_script component object_** inside Unity.  You can right-click in the   Make sure to name the file correctly when creating it in Unity because the script name is used to create the class name of the C# class that is created for each Unity script component.  
 
 Most of the code that we write for this course will end up being attached to gameObjects within the Unity Editor.  
 

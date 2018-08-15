@@ -1,8 +1,8 @@
-# Game Objects 
+#Two Types of Game Objects - UI elements vs. 2D sprites
 
 The UnityEngine provides methods that allow easy message communication between GameObjects and components some of these methods are FindGameObject(), AttachListener(), OnTriggerEnter2D(), etc.
 
-Now that we are starting to work with GameObjects that aren't UI elements, we need to understand how we can define custom sorting layers to control rendering layer ordering and also how to define custom tags to help easily identify gameObjects within a game scene.
+It is instructive to consider 2 different categories of GameObjects that we'll work with in this course.  UI elements vs. 2D sprites, which  we need to understand how we can define custom sorting layers to control rendering layer ordering and also how to define custom tags to help easily identify gameObjects within a game scene.
 
 [2D Sprites Editing Tutorial](https://www.youtube.com/watch?v=tp9PRN2TMy0)
 
