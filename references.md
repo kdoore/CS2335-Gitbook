@@ -90,6 +90,8 @@ Art by Osmic
 
 [Zombie Textures Download Link](https://utdallas.box.com/zombieTextures)
 
+##Hero's Journey
+[Summary from Myth and the Movie -Christopher Vogler](http://www.tlu.ee/~rajaleid/montaazh/Hero's%20Journey%20Arch.pdf)
 
 ##Story Generator Ideas
 [Emoji Story Prompts](https://thejohnfox.com/2016/05/writing-prompt-pictures/)
