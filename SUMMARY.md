@@ -6,12 +6,10 @@
 * [MonoBehavior - Base-Class](monobehaviour.md)
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
 
-## Project 1
+## Project 1 - Prototype Game Design
 
 * [Game Objects](game_objects.md)
-* [Sorting Layers to control sprite render ordering.](background-image-add-sorting-layers.md)
 * [Finding Game Objects](finding_game_objects.md)
-* [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
 * [Score and UI Elements](project-1-score-and-ui-elements.md)
 * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
 
@@ -33,6 +31,8 @@
 
 ## Mini-Game
 
+* [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
+* [Sorting Layers to control sprite render ordering.](background-image-add-sorting-layers.md)
 * [Text Input](text_input.md)
 * [Game Scene](game_scene.md)
 * [Player GameObject](player_gameobject.md)

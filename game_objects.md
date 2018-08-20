@@ -1,9 +1,11 @@
 #Two Types of Game Objects - UI elements vs. 2D sprites
 
-The UnityEngine provides methods that allow easy message communication between GameObjects and components some of these methods are FindGameObject(), AttachListener(), OnTriggerEnter2D(), etc.
-
 It is instructive to consider 2 different categories of GameObjects that we'll work with in this course.  UI elements vs. 2D sprites, which  we need to understand how we can define custom sorting layers to control rendering layer ordering and also how to define custom tags to help easily identify gameObjects within a game scene.
+#UI Elements
+UI gameObjects are a relatively new addition to Unity, they provide easy to customize User-Interaction elements.  UI Elements should always be children of a Canvas GameObject, and there should also be an EventSystem GameObject as a child of the Canvas, in order to have UI events active on UI elements. UI elements include Buttons, Text, Sliders, and can be useful in creating in-game menus. 
 
+#2D Sprites 
+2D Sprites are the other main category of gameObjects that we will work with in this course.  2D sprites are used to add images assets to your game. 2D sprites are often configured to have physics behaviors.  
 [2D Sprites Editing Tutorial](https://www.youtube.com/watch?v=tp9PRN2TMy0)
 
 ###Layers:
