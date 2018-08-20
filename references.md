@@ -55,6 +55,7 @@ Saving World Objects: [Sitepoint Tutorial](http://www.sitepoint.com/mastering-sa
 * [Assets](https://github.com/ThirdPartyNinjas/GlitchAssets)
 * [Inhabitants](https://github.com/ThirdPartyNinjas/GlitchAssets-Inhabitants)
 
+
 [Free Fantasy Maps](http://freefantasymaps.org/free-fantasy-maps/)
 
 [Open Game Art](http://opengameart.org/)
@@ -90,6 +91,7 @@ Art by Osmic
 [Zombie Textures Download Link](https://utdallas.box.com/zombieTextures)
 
 
-
+##Story Generator Ideas
+[Emoji Story Prompts](https://thejohnfox.com/2016/05/writing-prompt-pictures/)
 
 
