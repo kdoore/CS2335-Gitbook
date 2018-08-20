@@ -94,4 +94,7 @@ Art by Osmic
 ##Story Generator Ideas
 [Emoji Story Prompts](https://thejohnfox.com/2016/05/writing-prompt-pictures/)
 
+[Create-Your-Own Story Ideas](http://editthis.info/create_your_own_story/Idea_Pitches)
 
+###CYOA - Templates
+[Branched Learning Scenarios](https://blogs.articulate.com/rapid-elearning/build-branched-e-learning-scenarios-in-three-simple-steps/)
