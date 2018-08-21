@@ -48,6 +48,8 @@ Saving World Objects: [Sitepoint Tutorial](http://www.sitepoint.com/mastering-sa
 
 ### Public Domain 2-D Game Assets:
 
+[**GameArt 2D - (Used in Class Demo Project)**](http://www.gameart2d.com/freebies.html)
+
 [Daniel Cook's Planet Cute](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
 
 [Glitch Garden](http://www.glitchthegame.com/public-domain-game-art/)
@@ -67,8 +69,6 @@ Saving World Objects: [Sitepoint Tutorial](http://www.sitepoint.com/mastering-sa
 [Random Game-World Generator](http://donjon.bin.sh/)
 
 [Fantasy Map Tutorial and Resources](http://calthyechild.deviantart.com/art/Fantasy-Map-TutorialxResources-258559867)
-
-[GameArt 2D](http://www.gameart2d.com/freebies.html)
 
 [Jessee Freeman](http://jessefreeman.com/game-art-packs/)
 

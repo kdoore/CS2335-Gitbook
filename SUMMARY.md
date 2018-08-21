@@ -10,7 +10,7 @@
 
 * [Game Objects](game_objects.md)
 * [Finding Game Objects](finding_game_objects.md)
-* [Score and UI Elements](project-1-score-and-ui-elements.md)
+* [UI Elements](project-1-score-and-ui-elements.md)
 * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
 
 ## Project 2

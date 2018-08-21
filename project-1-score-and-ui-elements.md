@@ -1,8 +1,8 @@
-#Score and UI Elements 
+#UI Elements 
 
-In order for these interacting sprites to feel like a game, we need to keep track of the score, we need to display notification for winning and losing, and and we need a button that will let us start and restart the game.  
+User Interaction Elements provide easy to configure gameObjects that allow for user interaction with the game.   
 
-These UI / display elements will all be controlled by the GameController class, but in this section, we'll discuss how to create and position UI elements in a scene.
+In this section, we'll discuss how to create and position UI elements in a scene.
 
 ###Canvas
 All UI elements are children of the Canvas class.  When the first UI element is added to a scene, in addition, a Canvas gameObject and an EventSystem gameObject are also added to a scene, these are required to be in the Hierarchy for every scene that has UI elements to be displayed and have interactivity.  
