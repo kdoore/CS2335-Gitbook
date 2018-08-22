@@ -23,11 +23,33 @@ We'll create one script:  Controller.cs
 **Declare Variables **
    - At the top of the file, we will declare variables that will be connected with gameObjects, components, etc.  The dataType of the variable must match the dataType that the variable will refer to.
    
-   
+#Unity Code - To 
 
 ```java
-   Text displayText;
-   Button showButton, hideButton, clearButton;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+
+public class Controller : MonoBehaviour {
+
+    Text displayText;  //declare a variable that will refer to the Text component on the DisplayText gameObject in the scene  
+
+	// Use this for initialization
+	void Start () {
+	//initialize the variable, First find the GameObject named "DisplayText, then connect to the Text component on that gameObject
+        displayText = GameObject.Find("DisplayText").GetComponent<Text>(); 
+        //change the value of the text field to be displayed in Unity
+        displayText.text = "Goodbye";
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+}
+
 
 ```
 
