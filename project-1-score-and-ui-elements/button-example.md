@@ -24,3 +24,14 @@ We'll create one script:  Controller.cs
    - At the top of the file, we will declare variables that will be connected with gameObjects, components, etc.  The dataType of the variable must match the dataType that the variable will refer to.
    
    
+
+```
+Text displayText;
+   Button showButton, hideButton, clearButton;
+
+```
+
+   
+   
+   
+   
