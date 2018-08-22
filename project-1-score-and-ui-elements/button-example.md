@@ -15,5 +15,12 @@ We'll create one script:  Controller.cs
    
 **Check** The Filename and the ClassName to make sure they match - otherwise you will get an error when you try to attach the script to a gameObject.
 
+**Code: Declare Library Directives **- To include code libraries - If using UI elements in the script, we must add the following at the top of the file.
+
+   `using UnityEngine.UI;`
+
+
 **Declare Variables **
    - At the top of the file, we will declare variables that will be connected with gameObjects, components, etc.  The dataType of the variable must match the dataType that the variable will refer to.
+   
+   
