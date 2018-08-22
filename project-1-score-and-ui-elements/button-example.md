@@ -15,3 +15,5 @@ To Edit in Visual Studio
    
 Check The Filename and the ClassName to make sure they match - otherwise you will get an error when you try to attach the script to a gameObject.
 
+Create Variables 
+   - At the top of the file, we will declare variables that will be connected with gameObjects, components, etc.  The dataType of the variable must match the dataType that the variable will refer to.
