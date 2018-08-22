@@ -25,8 +25,8 @@ We'll create one script:  Controller.cs
    
    
 
-```
-Text displayText;
+```java
+   Text displayText;
    Button showButton, hideButton, clearButton;
 
 ```
