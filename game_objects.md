@@ -1,6 +1,7 @@
 #Two Types of Game Objects - UI elements vs. 2D sprites
 
 It is instructive to consider 2 different categories of GameObjects that we'll work with in this course.  UI elements vs. 2D sprites, which  we need to understand how we can define custom sorting layers to control rendering layer ordering and also how to define custom tags to help easily identify gameObjects within a game scene.
+
 #UI Elements
 UI gameObjects are a relatively new addition to Unity, they provide easy to customize User-Interaction elements.  UI Elements should always be children of a Canvas GameObject, and there should also be an EventSystem GameObject as a child of the Canvas, in order to have UI events active on UI elements. UI elements include Buttons, Text, Sliders, and can be useful in creating in-game menus. 
 
@@ -10,7 +11,6 @@ UI gameObjects are a relatively new addition to Unity, they provide easy to cust
 
 ###Layers:
 Layers provide a means to control physics interactions between objects.  
-
 
 ###Tags:
 Tags provide a method to add categories to gameObjects that can be used to identify gameObjects within a custom script.  Tags are also created using the Layer editor, by selecting the 'Edit Layers' option, you are provided with an interface where you can create custom tags.  Then, a tag can be set for a gameObject at the top of the inspector panel for that gameObject.

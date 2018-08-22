@@ -11,7 +11,11 @@
 * [Game Objects](game_objects.md)
 * [Finding Game Objects](finding_game_objects.md)
 * [UI Elements](project-1-score-and-ui-elements.md)
+  * [Button Example](project-1-score-and-ui-elements/button-example.md)
 * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
+* [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
+* [Utility - Static Class](utility_-_static_class.md)
+* [Simple Dialog Prefab](simple-dialog-prefab.md)
 
 ## Project 2
 
@@ -22,9 +26,6 @@
   * [IStateBase](istatebase.md)
   * [Project 2 -Create new Scene and State](project-2-create-new-scene-and-state.md)
   * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
-  * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
-  * [Utility - Static Class](utility_-_static_class.md)
-  * [Simple Dialog Prefab](simple-dialog-prefab.md)
   * [Dialogue and Scene-Decision Integration](dialogue-and-scene-decision-integration.md)
   * [DialogSystem as Unity.Package](project-2-dialog-package.md)
   * [Project 2 - List of Steps](project-2-list-of-steps.md)
