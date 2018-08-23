@@ -2,6 +2,9 @@
 
 For this basic example, we'll create a Text UI gameObject, and we'll add Button objects to change the text.
 
+**Create UI-Text GameObject in Unity**
+
+
 We'll create one script:  Controller.cs
 
 **To create a script file, **
@@ -44,10 +47,13 @@ displayText = GameObject.Find("DisplayText").GetComponent<Text>();
 displayText.text = "Goodbye";
 ```
 
-
+**Debugging**
+Return to Unity after saving or building the file changes in Visual Studio. Play the scene by pressing the play button at the top of the Game Panel.
+If the text doesn't change:
+1.  
 
    
-#Unity Code 
+#Controller.cs Code
 
 ```java
 using System.Collections;
