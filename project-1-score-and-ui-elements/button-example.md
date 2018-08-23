@@ -1,6 +1,6 @@
-#Button Example
+#Simple Script - Text & Buttons
 
-For this basic example, we'll create some Button and Text gameObjects, and we'll have the Button objects change the text.
+For this basic example, we'll create a Text UI gameObject, and we'll add Button objects to change the text.
 
 We'll create one script:  Controller.cs
 
