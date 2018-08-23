@@ -3,9 +3,19 @@
 For this basic example, we'll create a Text UI gameObject, and we'll add Button objects to change the text.
 
 **Create UI-Text GameObject in Unity**
+In The Unity Hierarchy Panel, add a UI-Text element.   This should create 3 GameObjects:
+   - Canvas
+   - Text
+   - EventSystem 
+   
+**Configure Text GameObject**
+   - Rename to:  DisplayText
+   - Set color so it's visible
+   - change font size, or select BestFit, so it's visible
+   - Change default text to: "Hello"
 
 
-We'll create one script:  Controller.cs
+**Create C# script:  Controller.cs**
 
 **To create a script file, **
    - right-click in the Unity Project panel (bottom panel)
@@ -50,7 +60,10 @@ displayText.text = "Goodbye";
 **Debugging**
 Return to Unity after saving or building the file changes in Visual Studio. Play the scene by pressing the play button at the top of the Game Panel.
 If the text doesn't change:
-1.  
+1.  Did you add the script to the canvas gameObject to create a Script Component?
+2.  Null-Reference exception - means there's a mismatch between the GameObject name in Unity and in your script.
+3.  If you can't add the script to the Canvas GameObject, then there's probably a mismatch between the script's file-Name and the class-Name in the script.  
+
 
    
 #Controller.cs Code
