@@ -1,6 +1,6 @@
-#Simple Script - Text & Buttons
+#Simple Script - Text 
 
-For this basic example, we'll create a Text UI gameObject, and we'll add Button objects to change the text.
+For this basic example, we'll create a Text UI gameObject, later we'll add Button objects to change the text.
 
 **Create UI-Text GameObject in Unity**
 In The Unity Hierarchy Panel, add a UI-Text element.   This should create 3 GameObjects:
