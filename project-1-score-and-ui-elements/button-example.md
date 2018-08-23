@@ -9,8 +9,10 @@ We'll create one script:  Controller.cs
    - select 'Create C# Script' from the pop-up options
    - when the script icon shows up in the Asset panel, name it 'Controller'
    
+   
+   
 **To Edit in Visual Studio**
-   - Double-click the script icon in the Asset Panel
+   - Double-click the 'Controller' script icon in the Asset Panel
    - Visual Studio should open with the script displayed
    
 **Check** The Filename and the ClassName to make sure they match - otherwise you will get an error when you try to attach the script to a gameObject.
@@ -22,12 +24,28 @@ We'll create one script:  Controller.cs
 
 **Declare Variables **
   At the top of the file, we will declare variables that will be connected with gameObjects, components, etc.  The dataType of the variable must match the dataType that the variable will refer to.
+  
+  `Text displayText; `
    
    **Initialize Variables in Start()**
  In Start( ), make connection between variable and the gameObject's Text component
  In one line of code, we do 2 things:
   -  Find GameObject 
   -  make connection with the Text component
+
+   
+```
+displayText = GameObject.Find("DisplayText").GetComponent<Text>(); 
+    
+```
+**Change the Value for the Text component's 'text' field: **
+
+```
+displayText.text = "Goodbye";
+```
+
+
+
    
 #Unity Code 
 
