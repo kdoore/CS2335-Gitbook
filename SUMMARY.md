@@ -12,6 +12,7 @@
 * [Finding Game Objects](finding_game_objects.md)
 * [UI Elements](project-1-score-and-ui-elements.md)
   * [Simple Script - Dynamic Text](project-1-score-and-ui-elements/button-example.md)
+  * [Basic Buttons](project-1-score-and-ui-elements/basic-buttons.md)
   * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
   * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Utility - Static Class](utility_-_static_class.md)

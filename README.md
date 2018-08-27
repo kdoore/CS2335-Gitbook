@@ -29,6 +29,7 @@ For a comparison between programming languages: Java and C#, see this [MSDN refe
 
 [Unity Community Wiki: Programming, C# Tutorial](http://wiki.unity3d.com/index.php/CSharp_Unity_Tutorial)
 
+[Unity Hot Keys:](https://docs.unity3d.com/Manual/UnityHotkeys.html)
 
 
 

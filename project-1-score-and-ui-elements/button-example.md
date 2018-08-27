@@ -96,6 +96,9 @@ public class Controller : MonoBehaviour {
 
 ```
 
+#Save your Scene
+The logic we have just configured is contained in our default Unity Scene.  We need to save the scene by giving it a unique name, we should always save the scene we're working on before leaving the scene or quitting Unity.  From the Menu, 
+
    
    
    
