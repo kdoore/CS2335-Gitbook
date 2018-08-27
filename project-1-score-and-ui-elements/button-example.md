@@ -65,9 +65,9 @@ displayText.text = "Goodbye";
 **Debugging**
 Return to Unity after saving or building the file changes in Visual Studio. Play the scene by pressing the play button at the top of the Game Panel.
 If the text doesn't change:
-1.  Did you add the script to the canvas gameObject to create a Script Component?
-2.  Null-Reference exception - means there's a mismatch between the GameObject name in Unity and in your script.
-3.  If you can't add the script to the Canvas GameObject, then there's probably a mismatch between the script's file-Name and the class-Name in the script.  
+   -   Did you add the script to the canvas gameObject to create a Script Component?
+   -   Null-Reference exception - means there's a mismatch between the GameObject name in Unity and in your script.
+   -   If you can't add the script to the Canvas GameObject, then there's probably a mismatch between the script's file-Name and the class-Name in the script.  
 
 
    
