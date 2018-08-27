@@ -2,6 +2,9 @@
 
 For this basic example, we'll create a Text UI gameObject, later we'll add Button objects to change the text.
 
+**Name and Save Scene** 
+Always start by giving your scene a meaningful name, then save the scene, this scene name should now be displayed in the hierarchy panel. 
+
 **Create UI-Text GameObject in Unity**
 In The Unity Hierarchy Panel, add a UI-Text element.   This should create 3 GameObjects:
    - Canvas
