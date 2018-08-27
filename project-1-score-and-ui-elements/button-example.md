@@ -16,6 +16,8 @@ In The Unity Hierarchy Panel, add a UI-Text element.   This should create 3 Game
    - Set color so it's visible
    - change font size, or select BestFit, so it's visible
    - Change default text to: "Hello"
+   - Set paragraph alignment as desired
+   - Set the Rect-Transform so the text is anchored to stay within the canvas.
 
 
 **Create C# script:  Controller.cs**
