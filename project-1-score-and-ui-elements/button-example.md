@@ -18,7 +18,7 @@ In The Unity Hierarchy Panel, add a UI-Text element.   This should create 3 Game
    - Change default text to: "Hello"
    - Set paragraph alignment as desired
    - Set the Rect-Transform so the text is anchored to stay within the canvas.
-
+   - [Link ](/screen-space_canvas.md)To directions for changing the Canvas RenderMode to Screen-Space Camera
 
 **Create C# script:  Controller.cs**
 
@@ -102,7 +102,9 @@ public class Controller : MonoBehaviour {
 ```
 
 #Save your Scene
-The logic we have just configured is contained in our default Unity Scene.  We need to save the scene by giving it a unique name, we should always save the scene we're working on before leaving the scene or quitting Unity.  From the Menu, 
+The logic we have just configured is contained in our default Unity Scene.  We need to save the scene by giving it a unique name, we should always save the scene we're working on before leaving the scene or quitting Unity. 
+
+
 
    
    
