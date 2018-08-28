@@ -25,4 +25,7 @@ Button button1; //declare obj-reference variable
 ```java
 button1 = GameObject.Find("Button1").GetComponent<Button>();
 ```
+
+
+
     
