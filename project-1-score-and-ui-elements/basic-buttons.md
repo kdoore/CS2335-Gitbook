@@ -26,6 +26,22 @@ Button button1; //declare obj-reference variable
 button1 = GameObject.Find("Button1").GetComponent<Button>();
 ```
 
+3.  Write a public custom method (function) that will be executed when the Button is clicked:
+
+
+
+```java
+public void DoSomething(){
+    displayText.text = "Hey Button1 was clicked";
+}
+```
+
+4.  In Start( ), after finding the Button component, add the following code so the DoSomething( ) method is added as a listener to the Button's onClick event.
+
+
+
+
+
 
 
     
