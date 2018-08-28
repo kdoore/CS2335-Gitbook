@@ -46,8 +46,57 @@ public void DoSomething(){
 ```
 
 
+###Updated Controller.cs Script
+
+```java
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Controller : MonoBehaviour {
+
+   public int score = 5;   //declare and initialize
+
+    /// <summary>
+    /// We want to modify the text field of the Text component 
+    /// </summary>
+    Text displayText; //can connect wiht a Text Component
+
+    GameObject TextGameObject; //can connect with a GameObject
+
+    Button button1;
+
+	// Use this for initialization
+	private void Start () {
+        score = 10;
+        Debug.Log("score " + score);
+        TextGameObject = GameObject.Find("DisplayText");
+        displayText = TextGameObject.GetComponent< Text >(); //Generics <T> is a placeholder
+
+        displayText = GameObject.Find("DisplayText").GetComponent<Text>();
+        displayText.text = "HELLO Today is not Tuesday";
+
+        button1 = GameObject.Find("Button1").GetComponent<Button>();
+        button1.onClick.AddListener(DoSomething);
+
+	}
+	
+	// Update is called once per frame
+	private void Update () {
+		
+	}
+
+    //custom function / method to be executed when  Button1 is clicked
+    public void DoSomething(   ){
+        displayText.text = "Yipee you clicked Button1 !!!!!!!!!";
+    }
+
+}
 
 
+
+```
 
 
 
