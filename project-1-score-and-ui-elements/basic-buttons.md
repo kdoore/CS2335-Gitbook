@@ -39,6 +39,13 @@ public void DoSomething(){
 4.  In Start( ), after finding the Button component, add the following code so the DoSomething( ) method is added as a listener to the Button's onClick event.
 
 
+```java
+
+  button1.onClick.AddListener(DoSomething);
+
+```
+
+
 
 
 
