@@ -101,7 +101,7 @@ public class Controller : MonoBehaviour {
 #FULL CODE For Controller.cs 
 
 
-```java
+``` 
 
 using System.Collections;
 using System.Collections.Generic;
