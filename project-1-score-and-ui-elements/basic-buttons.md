@@ -98,6 +98,97 @@ public class Controller : MonoBehaviour {
 
 ```
 
+#FULL CODE For Controller.cs 
+
+
+
+```java
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI; //make sure to include this for UI behaviour scripts
+
+public class Controller : MonoBehaviour {
+
+   public int score = 5;   //declare and initialize
+
+    /// <summary>
+    /// We want to modify the text field of the Text component 
+    /// </summary>
+    Text displayText, toggleBtnText; //can connect wiht a Text Component
+
+    Button button1,openDialogBtn;
+    CanvasGroup dialogPanelCG;
+
+	// Use this for initialization
+	private void Start () {
+        score = 10;
+        Debug.Log("score " + score);
+
+        //connect obj-ref variables with GameObject components: 
+        displayText = GameObject.Find("DisplayText").GetComponent<Text>();
+        displayText.text = "HELLO Today is not Tuesday";
+
+        toggleBtnText = GameObject.Find("ToggleBtnText").GetComponent<Text>();
+        toggleBtnText.text = "Hide Dialog"; //initialize Button's text 
+
+        //connect button1 obj-ref variable with Button1's Button Component
+        button1 = GameObject.Find("Button1").GetComponent<Button>();
+        button1.onClick.AddListener(DoSomething); //execute DoSomething when button is clicked
+
+        dialogPanelCG = GameObject.Find("DialogPanel").GetComponent<CanvasGroup>();
+
+        openDialogBtn = GameObject.Find("OpenDialogButton").GetComponent<Button>();
+        openDialogBtn.onClick.AddListener(ToggleDialogVisibility);
+        ShowCG(dialogPanelCG);
+
+	}
+	
+	
+    //custom function / method to be executed when  Button1 is clicked
+    public void DoSomething(   ){
+        displayText.text = "Yipee you clicked Button1 !!!!!!!!!";
+    }
+
+    //OpenDialogButton calls this method when onClick is executed to
+    //toggle visiblity of the DialogPanel - using CanvasGroup for behaviour
+    public void ToggleDialogVisibility(){
+        if(dialogPanelCG.alpha >=.5 ){
+            HideCG(dialogPanelCG);
+            toggleBtnText.text = "Show Dialog";
+        }else{
+            ShowCG(dialogPanelCG);
+            toggleBtnText.text = "Hide Dialog";
+        }
+
+    }
+
+    /// <summary>
+    /// Toggle visibility/interactivity of canvas group & children to ON
+    /// </summary>
+    /// <param name="cg">Cg.</param>
+    /// This will be moved to a Utility Class
+    void ShowCG( CanvasGroup cg){
+        cg.alpha = 1;
+        cg.blocksRaycasts = true;
+        cg.interactable = true;
+    }
+    /// <summary>
+    ///toggle visibility/interactivity of canvas group & children to OFF
+    /// </summary>
+    /// <param name="cg">Cg.</param>
+    /// This will be moved to a Utility Class
+    void HideCG(CanvasGroup cg)
+    {
+        cg.alpha = 0;
+        cg.blocksRaycasts = false;
+        cg.interactable = false;
+    }
+
+}
+
+```
+
 
 
     
