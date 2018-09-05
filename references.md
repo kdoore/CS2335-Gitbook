@@ -106,6 +106,8 @@ Art by Osmic
 
 [Creating Atmosphere](http://www.adventuregamestudio.co.uk/wiki/Creating_Atmosphere)
 
+[HerStory](http://www.herstorygame.com/about/)
+
 #Tutorials
 [2D Camera Tutorial](https://adventurecreator.org/tutorials/working-2d-cameras-unity-2d)
 
