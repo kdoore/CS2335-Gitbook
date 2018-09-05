@@ -101,6 +101,11 @@ Art by Osmic
 ###CYOA - Templates
 [Branched Learning Scenarios](https://blogs.articulate.com/rapid-elearning/build-branched-e-learning-scenarios-in-three-simple-steps/)
 
+###Adventure Games - Articles
+[Character Development Discussion](http://www.adventuregamestudio.co.uk/wiki/Giving_Personality_to_Characters)
+
+[Creating Atmosphere](http://www.adventuregamestudio.co.uk/wiki/Creating_Atmosphere)
+
 #Tutorials
 [2D Camera Tutorial](https://adventurecreator.org/tutorials/working-2d-cameras-unity-2d)
 
