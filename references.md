@@ -108,6 +108,12 @@ Art by Osmic
 
 [HerStory](http://www.herstorygame.com/about/)
 
+[Game Design Concepts - ch1](https://gamedesignconcepts.wordpress.com/2009/06/29/level-1-overview-what-is-a-game/)
+
+[Critical Vocabulary for Games - Costikyan](http://www.costik.com/nowords2002.pdf)
+
+[Standard Patterns in Choice-Based Games](https://heterogenoustasks.wordpress.com/2015/01/26/standard-patterns-in-choice-based-games/)
+
 #Tutorials
 [2D Camera Tutorial](https://adventurecreator.org/tutorials/working-2d-cameras-unity-2d)
 
