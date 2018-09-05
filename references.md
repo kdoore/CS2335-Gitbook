@@ -108,6 +108,8 @@ Art by Osmic
 
 [HerStory](http://www.herstorygame.com/about/)
 
+[Narrative Structure](https://thestoryelement.wordpress.com/2015/02/11/designing-branching-narrative/)
+
 [Game Design Concepts - ch1](https://gamedesignconcepts.wordpress.com/2009/06/29/level-1-overview-what-is-a-game/)
 
 [Critical Vocabulary for Games - Costikyan](http://www.costik.com/nowords2002.pdf)
