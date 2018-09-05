@@ -7,7 +7,7 @@ We have been using static methods of the GameObject class, such as: GameObject.F
 
 Notice, the class is marked as static and each method is also marked as public static.  This means we can use the method in another class with the following syntax:
 
-###Example of using Utility Static Method: showPanel( )
+###Example of using Utility Static Method: ShowCG( )
 
 ```java
 //toggle canvas-group visibility
