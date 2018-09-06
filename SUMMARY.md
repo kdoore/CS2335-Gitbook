@@ -8,6 +8,7 @@
 
 ## Project 1 - Prototype Game Design
 
+* [Visual Novel in Unity](visual-novel-in-unity.md)
 * [Game Objects](game_objects.md)
 * [Finding Game Objects](finding_game_objects.md)
 * [UI Elements](project-1-score-and-ui-elements.md)
