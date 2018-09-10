@@ -1,6 +1,17 @@
 #Dialog and Scene-Transition Integration
 
+The link below provides a simple Unity project with a dialog system that you can customize for Project 1. 
+
 [Box.com Unity Package: DialogManager_ Fall 18_v1](https://utdallas.box.com/s/7c2e1nhk99r5kttb9e0ee2kagcpoxmq1)
+
+**Includes:** 
+    - DialogManager Prefab - Nested UI Components
+    - Coroutine for 'dynamic typing-style' dialog reveal
+    - Custom UnityEvent: OnDialogClosing - Can be used to trigger opening of other gameObjects
+    - Serializable ConversationEntry Class
+    - ScriptableObject ConversationList
+    - ScriptableObject Factory: (Lior Tal)
+
 
 ###How to Integrate Dialog with Scene-Transition logic:
 In order for this to work as a prefab, we have written the code in a general way so it'll work in any scene. In other words,  we don't want any scene-specific logic in any of the code for this script. 
