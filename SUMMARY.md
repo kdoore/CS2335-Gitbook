@@ -17,8 +17,8 @@
   * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Utility - Static Class](utility_-_static_class.md)
 * [Simple Dialog Prefab](simple-dialog-prefab.md)
-* [Conversation Scriptable Objects](conversation-scriptable-objects.md)
 * [Dialogue and Scene-Decision Integration](dialogue-and-scene-decision-integration.md)
+* [Conversation Scriptable Objects](conversation-scriptable-objects.md)
 * [Visual Novel in Unity](visual-novel-in-unity.md)
 
 ## Project 2

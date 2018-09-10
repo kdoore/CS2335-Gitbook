@@ -1,18 +1,22 @@
 # Conversation Scriptable Objects
 
-### Scriptable Object Factory Unity Plugin
+### Scriptable Object Factory Unity Package
 
-Lior Tal has created a Unity plugin that makes it easy to create scriptable object instances.  His website below provides a link to his github account where he provides a download link to the Unity Plugin.  Import this plug-in into a project and you'll be able to place any scriptableObject instance of code in the
+Lior Tal has created a Unity package that makes it easy to create scriptable object instances.  His website below provides a link to his github account where he provides a download link to the Unity Plugin.  
+
+**Import this Unity Package into a Unity project** and you'll be able to create any scriptableObject using the project-panel's context menu.
 
 [http://www.tallior.com/unity-scriptableobject-factory/](http://www.tallior.com/unity-scriptableobject-factory/)
 
-Class ConversationEntry
 
-```
+
+###Class ConversationEntry
+
+```java
 using UnityEngine;
 using System.Collections;
 
-[System.Serializable]  //attribute
+[System.Serializable]  //attribute so this custom class can be displayed as an item in the inspector
 public class ConversationEntry  {
 
     public string SpeakingCharacterName;
@@ -21,37 +25,16 @@ public class ConversationEntry  {
 }
 ```
 
-Class Conversation
+###Class ConversationList
+This class
 
-```
+```java
 using UnityEngine;
 using System.Collections;
 
-public class Conversation : ScriptableObject {
-
-    public ConversationEntry[] ConversationLines;
-}
-```
-
-Editor Code: ConversationManager
-
-```
-using UnityEngine;
-using UnityEditor;
-
-public class ConversationManager : MonoBehaviour {
-
-    [MenuItem("Assets/Create/Conversation")]
-    public static void CreateAsset(){
-
-        Conversation conversationManager = ScriptableObject.CreateInstance<Conversation> ();
-
-        AssetDatabase.CreateAsset (conversationManager, "Assets/newConversationManager.asset");
-        AssetDatabase.SaveAssets ();
-
-        EditorUtility.FocusProjectWindow ();
-        Selection.activeObject = conversationManager;
-    }
+public class ConversationList : ScriptableObject
+{
+    public List<ConversationEntry> Conversation;
 }
 ```
 
@@ -69,7 +52,7 @@ Since the StateManager script-component object exists in every scene, for our fi
 
 ```
 // in Some script that will go on a gameObject  
-    public Conversation myConversation;  
+    public ConversationList myConversation;  
 
     //public SpriteRenderer convSprite; // to use a regular image
 
