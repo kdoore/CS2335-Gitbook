@@ -1,5 +1,7 @@
 #Dialog and Scene-Transition Integration
 
+[Box.com Unity Package: DialogManager_ Fall 18_v1](https://utdallas.box.com/s/7c2e1nhk99r5kttb9e0ee2kagcpoxmq1)
+
 ###How to Integrate Dialog with Scene-Transition logic:
 In order for this to work as a prefab, we have written the code in a general way so it'll work in any scene. In other words,  we don't want any scene-specific logic in any of the code for this script. 
 
