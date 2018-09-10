@@ -13,7 +13,6 @@ The link below provides a simple Unity project with a dialog system that you can
     - ScriptableObject Factory: (Lior Tal)
     
 
-
 ###How to Integrate Dialog with Scene-Transition logic:
 In order for this to work as a prefab, we have written the code in a general way so it'll work in any scene. In other words,  we don't want any scene-specific logic in any of the code for this script. 
 
