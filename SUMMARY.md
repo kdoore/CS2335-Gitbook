@@ -8,7 +8,6 @@
 
 ## Project 1 - Prototype Game Design
 
-* [Visual Novel in Unity](visual-novel-in-unity.md)
 * [Game Objects](game_objects.md)
 * [Finding Game Objects](finding_game_objects.md)
 * [UI Elements](project-1-score-and-ui-elements.md)
@@ -18,6 +17,7 @@
   * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Utility - Static Class](utility_-_static_class.md)
 * [Simple Dialog Prefab](simple-dialog-prefab.md)
+* [Visual Novel in Unity](visual-novel-in-unity.md)
 
 ## Project 2
 
