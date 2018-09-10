@@ -11,6 +11,7 @@ The link below provides a simple Unity project with a dialog system that you can
     - Serializable ConversationEntry Class
     - ScriptableObject ConversationList
     - ScriptableObject Factory: (Lior Tal)
+    
 
 
 ###How to Integrate Dialog with Scene-Transition logic:
