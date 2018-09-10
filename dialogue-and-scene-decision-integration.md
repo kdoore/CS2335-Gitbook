@@ -18,7 +18,7 @@ There are a few different issues here:
 ###Idea 1. Hide the Buttons Behind the Panel
   The most obvious, simple solution is to hide scene-transition buttons beneath the dialog panel, so they are visible once the dialog panel is closed. In this case, the dialog panel should have it's color set to full opacity, and it might need be be larger than necessary, in order to hide 2 buttons behind the panel.    
 
-###Idea 2: Add Logic to Open Another Panel
+###Idea 2: Add Custom Event Logic to Open Another Panel
 Using slightly more complex logic, we can open a new panel that has the scene-transition buttons as child objects. To do this, we must first make our dialog-panel generate an event that can be used to trigger opening of this buttonPanel, when the dialog is complete. 
 
   Below are the steps required to do this:  
@@ -29,9 +29,7 @@ Using slightly more complex logic, we can open a new panel that has the scene-tr
  
 - We will write code to invoke the custom event when the dialog is complete.  
 
-- In any State.cs file that corresponds to a Unity scene where we have selected to implement this dialogPanel prefab, we'll write a simple method such as:  OpenBtnPanel.
-
--  We will files will be a listener for this event. 
+- In scene management script, where we have selected to implement this dialogPanel prefab, we'll write a simple method such as:  OpenDecisionPanel.
 
 ###Custom UnityEvent OnPanelClosing
 
@@ -43,7 +41,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events; //must include this statement
 
-public class DialogController : MonoBehaviour {
+public class DialogManager : MonoBehaviour {
 
     public UnityEvent onPanelClosing; //define the custom event
 
@@ -103,39 +101,38 @@ public class DialogController : MonoBehaviour {
 
 ```
 ###How to Use the Custom Unity Event
-//Code in BeginState, where we've put buttons into a panel and we want to open this Decision Panel when the dialogPanel event has happened.
+//Decision Buttons have been placed into a panel and we want to open this DecisionBtnPanel when the DialogController's onPanelClosing event has happened.
 
-Essentailly we'll be able to treat the dialogPanel as if it was a button, because the DialogController script now includes a UnityEvent: onPanelClosing.  So, we just need to write a simple method (OpenBtnPanel) that can get executed when that event occurs.  
+The DialogController script now includes a custom UnityEvent: onPanelClosing,  so, we just need to write a simple method (OpenBtnPanel) that can be executed when that event occurs.  
 
-The OpenBtnPanel just shows a panel that contains the 2 buttons that allow users to decide which scene to go to next.  The ButtonPanel must have an attached CanvasGroup component.
-
+The DecisionPanel is a UI-panel that contains the 2 buttons that allow users to decide which scene to go to next.  The DecisionPanel must have an attached CanvasGroup component.
 
 
 ```java
-//in BeginState.cs
+//in MenuScript for Project 1
   
     private DialogController dialogController;
-    private CanvasGroup btnPanelCG;
+    private CanvasGroup decisionPanelCG;
 
    public void InitializeObjectRefs ()
 	{
     //other code here
     
-    btnPanelCG = GameObject.Find("ButtonPanel").GetComponent<CanvasGroup>();
-    Utility.HideCG(btnPanelCG); //make sure to hide 
+    decisionPanelCG = GameObject.Find("DecisionPanel").GetComponent<CanvasGroup>();
+    Utility.HideCG(decisionPanelCG); //make sure to hide 
     dialogController = GameObject.Find("DialogPanel").GetComponent<DialogController>();  //find the DialogPanel 
-    dialogController.onPanelClosing.AddListener(OpenBtnPanel) ; //specify the method to be executed when the event happens
+    dialogController.onPanelClosing.AddListener(OpenDecisionPanel) ; //specify the method to be executed when the event happens
    }
    
    
    //method to be exectued when onPanelClosing event has happened
-    public void OpenBtnPanel(){
-        Utility.ShowCG(btnPanelCG); 
+    public void OpenDecisionPanel(){
+        Utility.ShowCG(decisionPanelCG); 
     }
     
-    //other code in BeginState.cs
+  //other code in MenuScript.cs 
     
-    } //end BeginState.cs class	
+    } //end MenuScript.cs	
 ```
 
       

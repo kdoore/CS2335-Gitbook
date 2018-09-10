@@ -17,6 +17,8 @@
   * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
 * [Utility - Static Class](utility_-_static_class.md)
 * [Simple Dialog Prefab](simple-dialog-prefab.md)
+* [Conversation Scriptable Objects](conversation-scriptable-objects.md)
+* [Dialogue and Scene-Decision Integration](dialogue-and-scene-decision-integration.md)
 * [Visual Novel in Unity](visual-novel-in-unity.md)
 
 ## Project 2
@@ -28,8 +30,6 @@
   * [IStateBase](istatebase.md)
   * [Project 2 -Create new Scene and State](project-2-create-new-scene-and-state.md)
   * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
-  * [Dialogue and Scene-Decision Integration](dialogue-and-scene-decision-integration.md)
-  * [DialogSystem as Unity.Package](project-2-dialog-package.md)
   * [Project 2 - List of Steps](project-2-list-of-steps.md)
 
 ## Mini-Game
@@ -50,7 +50,6 @@
 * [Level Manager-Events](level-manager-in-class.md)
 * [Change Sprites](change-sprites.md)
 * [Simple Spawner](simple-spawner.md)
-* [EventDriven Spawner](spawn_prefab_gameobjects.md)
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
 * [Inventory Dictionary](inventory.md)
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
