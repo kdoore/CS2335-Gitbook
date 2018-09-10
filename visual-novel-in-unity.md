@@ -28,7 +28,7 @@ Examples of Story-Structure Diagrams:
 
 Unity Tutorials:
 
-This youtube video series shows how to make a Visual Novel in Unity.  [HappieCat](https://www.youtube.com/watch?v=doHpwFZ1S5c)
+[How to make a Visual Novel in Unity HappieCat ](https://www.youtube.com/watch?v=doHpwFZ1S5c)
 
-[Dialog System - [Brackeys]](https://www.youtube.com/watch?v=_nRzoTzeyxU)
+[How to create a Dialog System in Unity - [Brackeys]](https://www.youtube.com/watch?v=_nRzoTzeyxU)
 
