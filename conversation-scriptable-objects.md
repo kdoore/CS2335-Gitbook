@@ -14,7 +14,8 @@ There are several steps required when creating a new type of scriptable object. 
 
 -  Install the Scriptable Object Factory - Unity Package  [Link - Tal Lior](http://www.tallior.com/unity-scriptableobject-factory/)
 
-- 
+- Add a public instance of the Scriptable Object to a custom script that will be attached to a gameObject in a scene.  In our case this is the DialogManager.cs script.  
+     
 
 >Scriptable Objects are amazing data containers. They don't need to be attached to a GameObject in a scene. They can be saved as assets in our project. Most often, they are used as assets which are only meant to store data, but can also be used to help serialize objects and can be instantiated in our scenes.  [Adam Buckner - Official Unity Tutorial](/Adam Buckner)
 
@@ -58,9 +59,9 @@ In the Dialog UnityPackage,[Box.com Unity Package: DialogManager_ Fall 18_v1](ht
 
 ### Create a Conversation Asset
 
-To create an instance of a Conversation asset, we right click in the project panel, or right click on the assets folder and select: create -&gt; Conversation, where our custom asset: Conversation, now shows up as an option at the bottom of the menu.  After clicking on Conversation, we now have a new item in our Assets panel, we should give it a unique name so we can reference it in our code.  I've named the example one: `ConversationList_CatScene1`.
+To create an instance of a Conversation asset, we right click in the project panel, or right click on the assets folder and select the bottom-most menu option: create -&gt; ScriptableObject, where our custom asset: Conversation, now shows up as an option at the bottom of the menu.  After clicking on Conversation, we now have a new item in our Assets panel, we should give it a unique name so we can reference it in our code.  I've named the example one: `ConversationList_CatScene1`.
 
-![](Screenshot 2016-03-08 14.18.18.png)
+![](/assets/Screen Shot 2018-09-16 at 3.48.36 PM.png)
 
 ![](/assets/Screen Shot 2018-09-16 at 2.48.30 PM.png)
 
