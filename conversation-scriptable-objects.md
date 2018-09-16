@@ -66,11 +66,6 @@ public class DialogManager : MonoBehaviour {
      //more class definition code below
 ```
 
-
- 
-
-
-
 ### Create a Conversation Asset
 
 To create an instance of a Conversation asset, we right click in the project panel, or right click on the assets folder and select the bottom-most menu option: create -&gt; ScriptableObject, where our custom asset: Conversation, now shows up as an option at the bottom of the menu.  After clicking on Conversation, we now have a new item in our Assets panel, we should give it a unique name so we can reference it in our code.  I've named the example one: `ConversationList_CatScene1`.
@@ -81,6 +76,11 @@ To create an instance of a Conversation asset, we right click in the project pan
 
 ![](/assets/Screen Shot 2018-09-16 at 2.48.30 PM.png)
 
+###Select ScriptableObject Instance in Inspector
+The image below shows that the public ConversationList variable: convList has been set in the inspector by selecting the circle-icon to the right of the ConvList item.
+
+
+![](/assets/Screen Shot 2018-09-16 at 3.56.35 PM.png) 
 
 ### Scriptable Object Factory Unity Package
 
