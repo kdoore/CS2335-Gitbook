@@ -14,6 +14,8 @@ There are several steps required when creating a new type of scriptable object. 
 
 -  Install the Scriptable Object Factory - Unity Package  [Link - Tal Lior](http://www.tallior.com/unity-scriptableobject-factory/)
 
+- 
+
 >Scriptable Objects are amazing data containers. They don't need to be attached to a GameObject in a scene. They can be saved as assets in our project. Most often, they are used as assets which are only meant to store data, but can also be used to help serialize objects and can be instantiated in our scenes.  [Adam Buckner - Official Unity Tutorial](/Adam Buckner)
 
 [Scriptable Objects - Unity Manual, Scripting API](https://docs.unity3d.com/Manual/class-ScriptableObject.html?_ga=2.21799608.2060655022.1537129337-1484586345.1534795685)
