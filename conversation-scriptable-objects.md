@@ -1,13 +1,25 @@
 # Conversation Scriptable Objects
+Scriptable Objects provide an easy way to create and populate custom data elements. In this course, will use scriptable objects to store dialog data and inventory items.
 
-### Scriptable Object Factory Unity Package
+There are several steps required when creating a new type of scriptable object. Detailed example provided below using our dialog example: 
+    -  Define a custom class (or struct) that has variables for each of the items you'll have associated with each  scriptable object.  This class must be defined using the `[System.Serializable] `attribute
+        - `Class ConversationEntry `
+        
+-  Create a custom class that inherits from the Scriptable Object class.
+        - `public class ConversationList : ScriptableObject`
 
-Lior Tal has created a Unity package that makes it easy to create scriptable object instances.  His website below provides a link to his github account where he provides a download link to the Unity Plugin.  
 
-**Import this Unity Package into a Unity project** and you'll be able to create any scriptableObject using the project-panel's context menu.
+-  Define a collection data-structure, within this class the  to hold a collection of the above defined composite elements. 
+        - `public List<ConversationEntry> Conversation`
 
-[http://www.tallior.com/unity-scriptableobject-factory/](http://www.tallior.com/unity-scriptableobject-factory/)
+-  Install the Scriptable Object Factory - Unity Package  [Link - Tal Lior](http://www.tallior.com/unity-scriptableobject-factory/)
 
+>Scriptable Objects are amazing data containers. They don't need to be attached to a GameObject in a scene. They can be saved as assets in our project. Most often, they are used as assets which are only meant to store data, but can also be used to help serialize objects and can be instantiated in our scenes.  [Adam Buckner - Official Unity Tutorial](/Adam Buckner)
+
+[Scriptable Objects - Unity Manual, Scripting API](https://docs.unity3d.com/Manual/class-ScriptableObject.html?_ga=2.21799608.2060655022.1537129337-1484586345.1534795685)
+ScriptableObject is a class that allows you to store large quantities of shared data independent from script instances. 
+
+A class you can derive from if you want to create objects that don't need to be attached to game objects.  This is most useful for assets which are only meant to store data.
 
 
 ###Class ConversationEntry
@@ -37,6 +49,10 @@ public class ConversationList : ScriptableObject
     public List<ConversationEntry> Conversation;
 }
 ```
+### Edit the ConversationList
+In the Dialog UnityPackage,[Box.com Unity Package: DialogManager_ Fall 18_v1](https://utdallas.box.com/s/7c2e1nhk99r5kttb9e0ee2kagcpoxmq1)
+
+ 
 
 ### Create a Conversation Asset
 
@@ -44,7 +60,19 @@ To create an instance of a Conversation asset, we right click in the project pan
 
 ![](Screenshot 2016-03-08 14.18.18.png)
 
-![](Screenshot 2016-03-08 14.35.40.png)
+![](/assets/Screen Shot 2018-09-16 at 2.48.30 PM.png)
+
+
+### Scriptable Object Factory Unity Package
+
+Lior Tal has created a Unity package that makes it easy to create scriptable object instances.  His website below provides a link to his github account where he provides a download link to the Unity Plugin.  I have included these files in the Dialog Unity_Package
+
+**Import this Unity Package into a Unity project** and you'll be able to create any scriptableObject using the project-panel's context menu.
+
+[http://www.tallior.com/unity-scriptableobject-factory/](http://www.tallior.com/unity-scriptableobject-factory/)
+
+
+
 
 
 
