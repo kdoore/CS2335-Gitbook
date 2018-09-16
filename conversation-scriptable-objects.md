@@ -55,6 +55,22 @@ public class ConversationList : ScriptableObject
 ### Edit the ConversationList
 In the Dialog UnityPackage,[Box.com Unity Package: DialogManager_ Fall 18_v1](https://utdallas.box.com/s/7c2e1nhk99r5kttb9e0ee2kagcpoxmq1)
 
+###Add as a public ObjectReference Variable in a custom class that inherits from MonoBehaviour:  
+
+
+```java
+public class DialogManager : MonoBehaviour {
+
+     public ConversationList convList; //attach scriptable object in Inspector
+     
+     //more class definition code below
+```
+
+
+ 
+
+
+
 ### Create a Conversation Asset
 
 To create an instance of a Conversation asset, we right click in the project panel, or right click on the assets folder and select the bottom-most menu option: create -&gt; ScriptableObject, where our custom asset: Conversation, now shows up as an option at the bottom of the menu.  After clicking on Conversation, we now have a new item in our Assets panel, we should give it a unique name so we can reference it in our code.  I've named the example one: `ConversationList_CatScene1`.
