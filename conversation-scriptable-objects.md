@@ -1,11 +1,12 @@
 # Conversation Scriptable Objects
 Scriptable Objects provide an easy way to create and populate custom data elements. In this course, will use scriptable objects to store dialog data and inventory items.
 
-There are several steps required when creating a new type of scriptable object. Detailed example provided below using our dialog example: 
-    -  Define a custom class (or struct) that has variables for each of the items you'll have associated with each  scriptable object.  This class must be defined using the `[System.Serializable] `attribute
+There are several steps required when creating a new type of scriptable object. Detailed example provided below using our Dialog Manager example: 
+    -  Define a custom class (or struct) that has variables for each of the items you'll have associated with each  scriptable object.  This class must be defined using the `[System.Serializable] `attribute:  See details in full code below.
         - `Class ConversationEntry `
         
--  Create a custom class that inherits from the Scriptable Object class.
+-  Create a custom class that inherits from the Scriptable Object class. See details in full code below.
+
         - `public class ConversationList : ScriptableObject`
 
 
@@ -14,8 +15,17 @@ There are several steps required when creating a new type of scriptable object. 
 
 -  Install the Scriptable Object Factory - Unity Package  [Link - Tal Lior](http://www.tallior.com/unity-scriptableobject-factory/)
 
-- Add a public instance of the Scriptable Object to a custom script that will be attached to a gameObject in a scene.  In our case this is the DialogManager.cs script.  
+- Add a public instance of the Scriptable Object to a custom script that will be attached to a gameObject in a scene.  In our case this is the DialogManager.cs script.
+  
+     ```java
+public class DialogManager : MonoBehaviour {
+
+     public ConversationList convList; //attach scriptable object in Inspector
      
+     //more class definition code below
+```
+
+- Use inspector to select a ConversationList scriptableObject from your project's assets, to populate the convList variable defined above.
 
 >Scriptable Objects are amazing data containers. They don't need to be attached to a GameObject in a scene. They can be saved as assets in our project. Most often, they are used as assets which are only meant to store data, but can also be used to help serialize objects and can be instantiated in our scenes.  [Adam Buckner - Official Unity Tutorial](/Adam Buckner)
 
