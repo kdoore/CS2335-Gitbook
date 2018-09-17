@@ -20,6 +20,7 @@
 * [Dialogue and Scene-Decision Integration](dialogue-and-scene-decision-integration.md)
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
 * [Visual Novel in Unity](visual-novel-in-unity.md)
+* [Project1 Checklist](project1-checklist.md)
 
 ## Project 2
 
