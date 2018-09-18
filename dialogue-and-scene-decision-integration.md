@@ -4,6 +4,8 @@ The link below provides a simple Unity project with a dialog system that you can
 
 [Box.com Unity Package: DialogManager_ Fall 18_v1](https://utdallas.box.com/s/7c2e1nhk99r5kttb9e0ee2kagcpoxmq1)
 
+[Box.com Unity Package: DialogManager_ Fall 18_v2](https://utdallas.box.com/v/DialogManager-Version2-F18) 
+
 **Includes:** 
     - DialogManager Prefab - Nested UI Components
     - Coroutine for 'dynamic typing-style' dialog reveal
