@@ -22,7 +22,7 @@ For Project 1, follow these steps to complete the **Unity Project** requirements
 - **Dialog** 
 	- You can use the Simple Dialog Prefab if you'd like
 	- You can use the DialogManager Package: 
-	[Box.com Unity Package: DialogManager_ Fall 18_v1](https://utdallas.box.com/s/7c2e1nhk99r5kttb9e0ee2kagcpoxmq1)
+	[Box.com Unity Package: DialogManager_ Fall 18_v2](https://utdallas.box.com/v/DialogManager-Version2-F18)
 	
 Dialog Requirements:
 	-  Have a 'next-type' button to allow player to view successive dialog entries.
