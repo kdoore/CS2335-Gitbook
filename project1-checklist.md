@@ -10,7 +10,7 @@ For Project 1, follow these steps to complete the **Unity Project** requirements
 		- Add a UI-Panel
 		- Select a sprite to your background image.
 		- Adjust the sprite color's alpha so it's 100%.
-		- Make sure this is the top item in the canvas hierarchy
+		- Make sure this is the top item in the canvas hierarchy, so it is behind all other UI elements
 
 - **Create Scene1 GameObjects**
 	- UI-Text:  Title
