@@ -138,8 +138,8 @@ In the code above, we've specified that we want to initialize the Text component
 Unity also has a similar method: GetComponentsInChildren< T >(),  which returns an array of all matching object in children that are ordered according to parent-to children ordering in the hierarchy.[Unity Manual](https://docs.unity3d.com/ScriptReference/Component.GetComponentInChildren.html)
         
 
-
 ###COMPLETE SCRIPT
+This is the version of the script created in class on Wed Sept 19, 2018
 
 
 ```java
