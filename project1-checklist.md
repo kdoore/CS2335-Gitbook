@@ -35,5 +35,8 @@ Dialog Requirements:
 	-  The dialog should present the use with background story and lead up to the decision that ends the scene, where the player will make a decision to go to a different scene.	
 	
 - **DecisionPanel**
+	- Create a UI panel that opens when the dialog is complete, or have the panel hidden behind the dialogPanel.
+       - In the Panel, have child 
+
 
 
