@@ -13,7 +13,7 @@ For Project 1, follow these steps to complete the **Unity Project** requirements
 		- Make sure this is the top item in the canvas hierarchy, so it is behind all other UI elements
 
 - **Create Scene1 GameObjects**
-	- UI-Text:  Title
+	- UI-Text:  Title ( suggestion: put in a Panel)
 	- Some Dialog / Backstory
 	- 2 Buttons that allow you make a decision about 	how the scene ends
 		- no need to have logic for connect to new scenes
@@ -21,7 +21,7 @@ For Project 1, follow these steps to complete the **Unity Project** requirements
 - **Title (TitlePanel) ** 
 	Follow Directions in [HidePanel Script](/project-1-score-and-ui-elements/hidepanel-script.md) Section
 	
-This creates a UI-Panel, with a CanvasGroup.  The Panel should have a child GameObject that is a Button, it will close the panel.  Add a child GameObject: UI-Text for your Title
+Suggestion:  Put the TitleText in a UI-Panel. Then, add a CanvasGroup.  The Panel should have a child GameObject that is a Button, it will close the panel.  Add a child GameObject: UI-Text for your Title.  Add the HidePanel.cs script to the parent- UI-Panel.
 	
 
 - **Dialog** 
@@ -35,4 +35,5 @@ Dialog Requirements:
 	-  The dialog should present the use with background story and lead up to the decision that ends the scene, where the player will make a decision to go to a different scene.	
 	
 - **DecisionPanel**
+
 
