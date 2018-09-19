@@ -15,6 +15,7 @@
   * [Basic Buttons](project-1-score-and-ui-elements/basic-buttons.md)
   * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
   * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
+  * [HidePanel Script](project-1-score-and-ui-elements/hidepanel-script.md)
 * [Utility - Static Class](utility_-_static_class.md)
 * [Simple Dialog Prefab](simple-dialog-prefab.md)
 * [Dialogue and Scene-Decision Integration](dialogue-and-scene-decision-integration.md)
