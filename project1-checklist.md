@@ -20,6 +20,9 @@ For Project 1, follow these steps to complete the **Unity Project** requirements
 		
 - **Title (TitlePanel) ** 
 	Follow Directions in [HidePanel Script](/project-1-score-and-ui-elements/hidepanel-script.md) Section
+	
+This creates a UI-Panel, with a CanvasGroup.  The Panel should have a child GameObject that is a Button, it will close the panel.  Add a child GameObject: UI-Text for your Title
+	
 
 - **Dialog** 
 	- You can use the Simple Dialog Prefab if you'd like
