@@ -22,7 +22,7 @@ The StateManager class will use the Singleton Design Pattern which will insure t
 ###Keep Track of the ActiveState
 We will use the StateManager object to keep track of the current `activeState`.  Finite State Machines require that we maintain a persistent reference to the currently activeState, so this is one responsibility of our StateManager class.
 
-###Delegate Control to the ActiveState
+###Pass Control to the ActiveState
 We will use the StateManager instance to delegate control of the Scene's logic to the current activeState object instance.  To delegate control, we need to provide the current activeState instance with the ability to have code executed when the Unity Event Functions execute, this will insure the logic code gets executed when necessary.  For each Unity event function that is useful for the activeState to execute, we'll need to provide the activeState a similar event hook, and this will be executed in the StateManager Unity Event Function as discussed using the Unity Update () Event.
 
 ##State Machine Framework - Overview Diagram
