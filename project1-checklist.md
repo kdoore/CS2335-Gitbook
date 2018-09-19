@@ -24,8 +24,8 @@ For Project 1, follow these steps to complete the **Unity Project** requirements
 	- Create a StartButton as a child of the TitlePanel
 	- Create a Title UI-text as a child of the TitlePanel
 	- Add a CanvasGroup to the TitlePanel
-	- Create a customScript: ClosePanel.cs - This can be a re-usable script.
-	- Attach the ClosePanel script as a component to the TitlePanel
+	- Create a customScript: HidePanel.cs - This can be a re-usable script.
+	- Attach the HidePanel script as a component to the TitlePanel
 	- Declare object-reference variables for the Button and CanvasGroup components.
 		
 
@@ -38,23 +38,21 @@ For Project 1, follow these steps to complete the **Unity Project** requirements
 	- In the script - Start( ):
 		- Find the CanvasGroup:
 			
-				`canvasGroup = GetComponent<CanvasGroup>();`
+			`canvasGroup = GetComponent<CanvasGroup>();`
 		- Find the Button as a child component of the Panel		
 			
-				`closeBtn = GetComponentInChildren<Button>();`
+			`closeBtn = GetComponentInChildren<Button>();`
 		
 	- Write a function that can be executed when the button is clicked: 
 	
-	
-
 ```java
-public void HidePanel(){
+public void HideThisPanel(){
 	   Utility.HideCG( canvasGroup );
 	}
 ```
-	- Add the ClosePanel( ) method as a listener to the Button's onClick event:
+	- Add the HideThisPanel( ) method as a listener to the Button's onClick event:
 	
-			`closeBtn.onClick.AddListener( ClosePanel );`
+		`closeBtn.onClick.AddListener( HideThisPanel );`
 
 
 - **Dialog** 
