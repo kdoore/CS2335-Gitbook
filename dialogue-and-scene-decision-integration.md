@@ -28,10 +28,39 @@ So how can we integrate dialog display with the buttons for scene-transition dec
 ###Idea 1. Hide the Buttons Behind the Panel
   The most obvious, simple solution is to hide scene-transition buttons beneath the dialog panel, so they are visible once the dialog panel is closed. In this case, the dialog panel should have it's color set to full opacity, and it might need be be larger than necessary, in order to hide 2 buttons behind the panel.    
 
-###Idea 2: Add Custom Event Logic to Open Another Panel
+
+###Idea 2:  Use public CanvasGroup variable in DialogManager.  
+Populate the CanvasGroup variable in the inspector by dragging in the panel that you want to have opened when the dialog is done.  When the dialog is completed, the CloseDialog( ) method checks to see if the CanvasGroup variable refers to a valid object, if so, then it makes that panel active and visible using Utility.ShowCG().
+
+
+```java
+public class DialogManager : MonoBehaviour {
+ 
+ public CanvasGroup nextPanelToShow; //populate in inspector
+ 
+ public void CloseDialog()
+    {
+        Utility.HideCG(dialogPanelCG);
+        Debug.Log("Closing Dialog");
+        if(nextPanelToShow != null){
+           Utility.ShowCG(nextPanelToShow);
+        }
+    }
+
+```
+
+
+
+###Idea 3: Add Custom Event Logic to Open Another Panel
 Using slightly more complex logic, we can open a new panel that has the scene-transition buttons as child objects. To do this, we must first make our dialog-panel generate an event that can be used to trigger opening of this buttonPanel, when the dialog is complete. 
 
-  Below are the steps required to do this:  
+
+
+public CanvasGroup nextPanelToShow;
+
+
+
+ Below are the steps required to do this:  
 
  - Put the Scene-decision buttons in a UI-panel that has an attached CanvasGroup component, so that panel can have it's visibility set to true when the dialog is complete.  
 
