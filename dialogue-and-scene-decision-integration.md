@@ -127,51 +127,54 @@ public class DialogManager : MonoBehaviour {
         }else{  //No more dialog in the queue
             Utility.HideCG(cg); //hide panel
     
-            //check to see if anyone is listening
-            if (onPanelClosing != null)
-            {
-                onPanelClosing.Invoke(); //invoke event        
-            }
+            CloseDialog();
         }
 
+    }
+    
+    public void CloseDialog()
+    {
+        Utility.HideCG(dialogPanelCG);
+        if(OnDialogClosing != null){ //check to make sure there are listeners
+            Debug.Log("Invoking OnDialogClosing");
+            OnDialogClosing.Invoke(); //Invoke all event listener - methods to open another panel
+        }
     }
 	
 }
 
 ```
 ###How to Use the Custom Unity Event
-//Decision Buttons have been placed into a panel and we want to open this DecisionBtnPanel when the DialogController's onPanelClosing event has happened.
+//Decision Buttons have been placed into a panel and we want to open this DecisionPanel when the DialogManager's onDialogClosing event has happened.
 
-The DialogController script now includes a custom UnityEvent: onPanelClosing,  so, we just need to write a simple method (OpenBtnPanel) that can be executed when that event occurs.  
+The DialogManager script now includes a custom UnityEvent: onDialogClosing,  so, we just need to write a simple method (OpenDecisionPanel) that can be executed when that event occurs.  
 
-The DecisionPanel is a UI-panel that contains the 2 buttons that allow users to decide which scene to go to next.  The DecisionPanel must have an attached CanvasGroup component.
+The DecisionPanel is a UI-panel that contains the 2 buttons that allow users to decide which scene to go to next.  The DecisionPanel must have an attached CanvasGroup component. This script: DecisionScript_TextScene.cs should also be attached to the DecisionPanel.
 
 
 ```java
-//in MenuScript for Project 1
+//in DecisionScript_TestScene for Project 1
   
     private DialogController dialogController;
     private CanvasGroup decisionPanelCG;
 
-   public void InitializeObjectRefs ()
+  void Start ()
 	{
     //other code here
     
-    decisionPanelCG = GameObject.Find("DecisionPanel").GetComponent<CanvasGroup>();
-    Utility.HideCG(decisionPanelCG); //make sure to hide 
-    dialogController = GameObject.Find("DialogPanel").GetComponent<DialogController>();  //find the DialogPanel 
-    dialogController.onPanelClosing.AddListener(OpenDecisionPanel) ; //specify the method to be executed when the event happens
+    decisionPanelCG = GetComponent<CanvasGroup>();
+    Utility.HideCG(decisionPanelCG); //make sure to hide at Start 
+    
+    dialogManager = GameObject.Find("DialogPanel1").GetComponent<DialogManager>();  //find the DialogPanel 
+    dialogManager.onDialogClosing.AddListener(OpenDecisionPanel) ; //specify the method to be executed when the event happens
    }
    
    
-   //method to be exectued when onPanelClosing event has happened
+   //method to be executed when onPanelClosing event has happened
     public void OpenDecisionPanel(){
         Utility.ShowCG(decisionPanelCG); 
     }
-    
-  //other code in MenuScript.cs 
-    
-    } //end MenuScript.cs	
+ } 
 ```
 
       
