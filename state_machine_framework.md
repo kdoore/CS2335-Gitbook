@@ -8,9 +8,11 @@ State Machines are a fundamental pattern for representing an event-driven system
 [Game Programming Patterns, - Overview: FSM](http://gameprogrammingpatterns.com/state.html#finite-state-machines-to-the-rescue)
 
 
+
  ###State Machine Basics in Unity
  The following link to the Unity Manual gives an overview of how State Machines are used in Unity.
 [ State Machines in Unity ](https://docs.unity3d.com/Manual/StateMachineBasics.html)
+	
 	
 	>Unity’s Animation State Machines provide a way to overview all of the animation clips related to a particular character and allow various events in the game (for example user input) to trigger different animations.
 
