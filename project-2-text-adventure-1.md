@@ -5,7 +5,7 @@ For Project 2, we'll begin to create a framework for a branching-narrative adven
 ###Starter Code - Assets: 
 [Link to Assets zip file](https://utdallas.box.com/v/Project2-assets-S18)
 
-[Link to Full Project zip file](https://utdallas.box.com/v/Project2-S18-StarterProject)
+[Link to Full Project zip file](https://utdallas.box.com/shared/static/4l2xpumu38hzg2aq7hulqkywp6f5730k.zip)
 
 ###2 Options
 To get started on Project 2, you have 2 options, using the zip files above. You can either use Full Project starter-code , or follow steps below to import contents of the Assets folder into a new project's Asset folder.
