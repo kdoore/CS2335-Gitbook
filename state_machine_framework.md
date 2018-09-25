@@ -5,6 +5,7 @@ The diagram below gives an overview of how we will implement a State Machine Fra
 ###State Machine - A Design Pattern
 State Machines are a fundamental pattern for representing an event-driven system.  We are surrounded by event-driven systems. Understanding how the elegant simplicity of using a State Machine to design event-driven systems is critical for anyone designing interactive media.
 [Game Programming Patterns, Robert Nystrom - State Pattern](http://gameprogrammingpatterns.com/state.html) 
+
 [Game Programming Patterns, - Overview: FSM](http://gameprogrammingpatterns.com/state.html#finite-state-machines-to-the-rescue)
 
 
