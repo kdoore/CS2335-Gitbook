@@ -18,6 +18,7 @@
   * [HidePanel Script](project-1-score-and-ui-elements/hidepanel-script.md)
 * [Utility - Static Class](utility_-_static_class.md)
 * [Simple Dialog Prefab](simple-dialog-prefab.md)
+  * [SimpleDialog\_version2](simple-dialog-prefab/simpledialogversion2.md)
 * [Dialogue and Scene-Decision Integration](dialogue-and-scene-decision-integration.md)
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
 * [Visual Novel in Unity](visual-novel-in-unity.md)
