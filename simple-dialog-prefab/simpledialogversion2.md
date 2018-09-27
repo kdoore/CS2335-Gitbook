@@ -1,5 +1,5 @@
 ##Code Sept26 -F18
-
+This example code includes a public CanvasGroup reference variable.  
 
 
 ```java
@@ -58,7 +58,9 @@ public class SimpleDialog : MonoBehaviour
         else
         {////This is where the event happens - the dialog is done
             Utility.HideCG(canvasGroup);
-            Utility.ShowCG(nextPanelToOpen);
+            if( nextPanelToOpen != null){  //prevents error if there is no nextPanelToOpen set in the inspector
+                Utility.ShowCG(nextPanelToOpen);
+            }
         }
     }
 
