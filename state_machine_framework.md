@@ -14,7 +14,8 @@ State Machines are a fundamental pattern for representing an event-driven system
 [ State Machines in Unity ](https://docs.unity3d.com/Manual/StateMachineBasics.html)
 	
 	
-	>Unity’s Animation State Machines provide a way to overview all of the animation clips related to a particular character and allow various events in the game (for example user input) to trigger different animations.
+	> Unity’s Animation State Machines provide a way to overview all of the animation clips related to a particular character and allow various events in the game (for example user input) to trigger different animations.
+	
 
 ###StateManager Class
 The StateManager class will manage the stateMachine. It will keep track of the current activeState, it will delegate responsibility for scene logic to the current activeState. It will manage and coordinate messaging and state-transition event synchronization.
