@@ -16,6 +16,16 @@ State Machines are a fundamental pattern for representing an event-driven system
 	
 	> Unity’s Animation State Machines provide a way to overview all of the animation clips related to a particular character and allow various events in the game (for example user input) to trigger different animations.
 	
+###Finite State Machine (FSM)
+A Finite State Machine is model of a dynamic, event driven system. FSM's allow for simplification of the logic of a complex-dynamic event driven system.  The simplification comes from the structure of the FSM, it specifies that the system can be represented by:
+	- a finite set of states
+	- a finite set of events that cause the system to change state
+	- a well-defined set of state-event transitions
+	- identification of the starting state
+	- memory to keep track of the current state of the system. 
+	
+State-Event-transitions specify which events cause allowable transitions between states. This information is often represented in a state-transition table with the following information:  currentState, event, nextState
+The State Machine structure insures that for each state that the system can be in, when the system is in that state, if a valid transition event occurs the system's state changes to the corresponding valid state.  This structure implies that there is no 'history' of prior states of the system.  At any point in time, the system is in one specific state, and for that state, there are a well-defined set of events that can change the state. Events are considered as external signals to the system.  Examples of events are user key or mouse input, or physics engine notification that a collision has occurred between gameObjects. 
 
 ###StateManager Class
 The StateManager class will manage the stateMachine. It will keep track of the current activeState, it will delegate responsibility for scene logic to the current activeState. It will manage and coordinate messaging and state-transition event synchronization.

@@ -11,6 +11,7 @@ In Project 2, we have created the StateManager class to manage which state our a
 
 ### Singleton Design Pattern
 The [Singleton Design Pattern](https://en.wikipedia.org/wiki/Singleton_pattern) is a software engineering paradigm where a class is designed with the understanding that only 1 instance of the class will ever be created. 
+
 We want to insure that an object of this class is only created once, otherwise every time an instance object is created, initialization of the class object would return us to whatever we set as the initial state.  Instead, we want to use one instance of a StateManager object throughout the lifetime of our application. In order to insure that 1 single instance is created when our game is started, and that no other instances are ever created, we can create a special static class reference variable:``StateManager instanceRef; ``, then any other object instances of the StateManager script component that are created are immediately destroyed.
 
 
