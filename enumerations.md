@@ -8,8 +8,8 @@ The **enum** keyword is used to declare an enumeration, a distinct type that con
 Enumerations are useful when designing state-based programs because we can define meaningful states labels and we can use those names in our program to in our control statements to test and query the  the active state. 
 
 ```cpp
-private enum gameStates {start, game, win, lose, end};
-private gameStates activeState;  //variable to hold active state
+public enum GameStates {start, game, win, lose, end};
+private GameStates activeState;  //variable to hold active state
 
 void start(){
     activeState=gameStates.start;  //set one state as active
