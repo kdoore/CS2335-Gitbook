@@ -12,12 +12,12 @@ public enum GameStates {start, game, win, lose, end};
 private GameStates activeState;  //variable to hold active state
 
 void start(){
-    activeState=gameStates.start;  //set one state as active
+    activeState = GameStates.start;  //set one state as active
 }
 
 	
 void update(){
-    if(activeState==gameStates.start){
+    if(activeState == GameStates.start){
         Debug.Log( activeState.ToString() );  //this allows us to print out the labeled name, otherwise we'd see the integer value of the state: 0;
     }
    }
