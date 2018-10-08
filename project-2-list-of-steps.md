@@ -4,7 +4,7 @@ Below is an listing of steps for modifying the TextAdventure starter-code, for c
 
 The link below gives more detailed information for Gitbook: [Create new scene, state](/project-2-create-new-scene-and-state.md)
 
-    1. Create 3 new scenes
+    1. Create a total of 5 scenes (completed in project 1)
     
     2. For each scene: add scene to the Unity Build Settings
     
@@ -35,6 +35,11 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
         - 2 lines of code for to switching scene/state 
            - `SceneManager.LoadScene ("EndScene"); //actual scene name`
            - `StateManager.instanceRef.SwitchState (new EndState ());` 
+           
+           
+   8.  Add UI elements to each scene for narrative or dialog.  
+   
+   
         
         
         
