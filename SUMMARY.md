@@ -21,6 +21,7 @@
   * [SimpleDialog\_version2](simple-dialog-prefab/simpledialogversion2.md)
 * [Dialogue and Scene-Decision Integration](dialogue-and-scene-decision-integration.md)
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
+  * DialogManager\_ConvList
 * [Visual Novel in Unity](visual-novel-in-unity.md)
 * [Project1 Checklist](project1-checklist.md)
 
