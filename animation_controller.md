@@ -15,8 +15,8 @@ The Unity Animator controller provides a visual programming language implementat
 
 
 **In Class Code Example:**
-[CS2335-In Class Code Example
-](https://utdallas.box.com/v/MiniGameVersion1)
+[CS2335-In Class Code Example - Spring 18
+](https://utdallas.box.com/v/miniGameS18-v1)
 
 
 
