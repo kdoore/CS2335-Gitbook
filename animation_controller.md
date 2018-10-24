@@ -58,78 +58,140 @@ Below is a simple example class: PlayerController.cs which checks for left-right
 
 [Link to Free - 2D GameArt - Cat Sprite Assets](http://www.gameart2d.com/freebies.html)
 
-[Example Project - MiniGame_S18](https://utdallas.box.com/v/MiniGameVersion1)
 
 ```
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public enum CatState  // input parameter signals to send to Animator controller
-{
-    idle = 0,
-    walk = 1,
-    dead = 2
-}
 
 public class PlayerController : MonoBehaviour
 {
-    private Animator animator;
-    private Rigidbody2D myRBody2D;
+
+    private enum heroState
+    {
+        idle = 0,
+        walk = 1,
+        jump = 2,
+        dead = 3
+    };
+
+    private Rigidbody2D rb2D;
+    private Animator anim;
     public float forceX;
+    public float jumpForce;
+    private bool jump;
     private bool facingRight;
+    private bool dead;
 
-    void Awake ()
-    {
-        animator = GetComponent<Animator> ();
-        myRBody2D = GetComponent<Rigidbody2D> ();
-    }
 
-    void Start ()
+    // Use this for initialization
+    void Start()
     {
-        animator.SetInteger ("CatState", (int)CatState.idle);
+        forceX = 80;
+        jumpForce = 6;
+        rb2D = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        anim.SetInteger("HeroState", (int)heroState.idle);
         facingRight = true;
-        forceX = 50f;
+        jump = false;
+        dead = false;
     }
 
-    void FixedUpdate ()
+    //every frame, check to see if Jump button has been pressed
+    void Update()
     {
-        float inputX = Input.GetAxis ("Horizontal");
-        bool isDead = Input.GetButton ("Fire1"); //this logic will be changed, this is for testing
-        bool isWalking = Mathf.Abs (inputX) > 0;  // is there horizontal input 
-
-        if (isWalking) {
-
-            //send signal: 1 to animator component: 
-            animator.SetInteger ("CatState", (int)CatState.walk);
-
-            if (inputX > 0 && !facingRight) {
-                flip (); // flip right
-            }
-            if (inputX < 0 && facingRight) {
-                flip (); // flip left
-            }
-            myRBody2D.velocity = new Vector2 (0, 0);  // reset velocity to 0
-            myRBody2D.AddForce (new Vector2 (forceX * inputX, 0));  ///move with force
-
-        } else { // not walking - reset to idle
-            //send signal: 0 to animator component: 
-            animator.SetInteger ("CatState", (int)CatState.idle);
+        if (Input.GetButtonDown("Jump")) //spacebar
+        {
+            jump = true;
         }
-        if (isDead) { // fire1 key 
-            animator.SetInteger ("CatState", (int)CatState.dead);
+        else
+        {
+            jump = false;
         }
-    } // end FixedUpdate
 
-//flip the animation left or right facing using Scale.x
-    void flip ()
+    }
+
+    /// <summary>
+    /// //move the player
+    /// </summary>
+    void FixedUpdate()
+    {
+            float inputX = Input.GetAxis("Horizontal"); //arrows, a,d,
+            bool isWalking = Mathf.Abs(inputX) > 0; //we need to move the player
+
+            if (isWalking)
+            {
+                anim.SetInteger("HeroState", (int)heroState.walk);//1
+                if (inputX > 0 && !facingRight)
+                {
+                    flip();
+                    Debug.Log("Flipped to face Right");
+                }
+                if (inputX < 0 && facingRight)
+                {
+                    flip();
+                }
+                //set x velocity to 0, keep y velocity the same
+                rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+
+                rb2D.AddForce(new Vector2(forceX * inputX, 0)); //add x force
+
+            }
+            else
+            {
+                anim.SetInteger("HeroState", (int)heroState.idle);
+            }
+
+            if (jump)
+            {
+                anim.SetInteger("HeroState", (int)heroState.jump);
+                //set y velocity to 0, maintain x velocity when jumping
+                rb2D.velocity = new Vector2(rb2D.velocity.x, 0);
+                rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse); //add force in Y direction
+            }
+    }
+
+    void OnTriggerEnter2D(Collider2D hitObject)
+    {
+        if (hitObject.CompareTag("Collectible"))
+        {
+            PickUp item = hitObject.GetComponent<PickUp>();
+            if (item != null)
+            {
+              //  GameData.instanceRef.Add(item);
+                Debug.Log("Added item " + item.type);
+                item.DestroyMe(); //better way to have item destroy itself
+                //Destroy(hitObject.gameObject);     //one way to destroy object
+            }
+
+        }
+        if (hitObject.CompareTag("Hazard"))
+        {
+            PickUp item = hitObject.GetComponent<PickUp>();
+            if (item != null)
+            {
+                //GameData.instanceRef.TakeDamage(item.value);
+                Debug.Log("TakeDamage " + item.value);
+                item.DestroyMe(); //have item destroy itself
+
+            }
+            //Destroy(hitObject.gameObject);
+           // dead = true;
+        }
+    }
+
+    void flip()
     {
         facingRight = !facingRight;
-        Vector3 theScale = myTransform.localScale;
+        Vector3 theScale = transform.localScale;
         theScale.x *= -1;
-        myTransform.localScale = theScale;
+        transform.localScale = theScale;
     }
 
-}  // end class
+}
+
 ```
 
 ###Additional Unity 2D Animation Links:
