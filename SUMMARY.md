@@ -19,7 +19,7 @@
 * [Utility - Static Class](utility_-_static_class.md)
 * [Simple Dialog Prefab](simple-dialog-prefab.md)
   * [SimpleDialog\_version2](simple-dialog-prefab/simpledialogversion2.md)
-* [Dialogue and Scene-Decision Integration](dialogue-and-scene-decision-integration.md)
+* [DialogManager using UnityEvent](dialogue-and-scene-decision-integration.md)
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
   * [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
 * [Visual Novel in Unity](visual-novel-in-unity.md)
