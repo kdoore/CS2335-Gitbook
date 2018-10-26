@@ -18,8 +18,8 @@ Populate the CanvasGroup variable in the inspector by dragging in the panel that
 ###Add Custom Event Logic to Open Another Panel - OptionPanel or DecisionPanel
 One way we we can open a new panel that has our decision buttons, we'll attach the following script to the DecisionPanel that has the scene-transition buttons as child objects. To do this, we'll use the DialogManager that has the custom UnityEvent: OnDialogClosing, shown in code below.
 
-###OpenOptionPanel 
-This code will go on a panel that has decision buttons, it listens for the DialogManager OnDialogClosing event. This won't work for having multiple dialogs in one scene.
+###OpenOptionPanel  ( Was DecisionScript_TestScene)
+This script will go on a panel that has decision buttons, it listens for the DialogManager OnDialogClosing event. This can be used in all scenes.  This will only when there's only one dialog in the scene.  It will open the panel with Buttons to change scene.  The Button logic will be in the SceneXState.cs file for the corresponding scene.
  
 ```java
 
@@ -47,6 +47,8 @@ void Start () {
 }
 
 ```
+###DialogManager with Custom UnityEvent OnPanelClosing
+
 
 - Create a `Custom Unity Event` for the DialogManager that is executed when the dialog is done.
  
@@ -54,7 +56,7 @@ void Start () {
 
 - In scene management script, where we have selected to implement this dialogPanel prefab, we'll write a simple method such as:  OpenDecisionPanel.
 
-###DialogManager with Custom UnityEvent OnPanelClosing
+###DialogManager w/Custom Event Code
 
 ```java
 
