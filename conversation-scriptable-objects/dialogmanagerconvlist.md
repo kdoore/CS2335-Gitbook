@@ -27,7 +27,7 @@ The code below has logic to open the next panel, when the dialog is complete.  I
         }
 ```
 
-###DialogManager - Full Code
+###DialogManager - Without Custom Unity Event Full Code
 
 ```java
 
@@ -77,6 +77,9 @@ public class DialogManager : MonoBehaviour {
         if (!showOnStart)
         {
             Utility.HideCG(dialogPanelCG);
+        }else{
+            Utility.ShowCG(dialogPanelCG);
+            NextDialog();
         }
     }
 
