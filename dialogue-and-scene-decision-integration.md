@@ -1,4 +1,4 @@
-#Dialog and Scene-Transition Integration
+#DialogManager using CustomEvent and ScriptableObject
 
 The link below provides a simple Unity project with a dialog system that you can customize for Project 1. 
 
@@ -14,7 +14,6 @@ The link below provides a simple Unity project with a dialog system that you can
     
 ###Idea 2:  Use public CanvasGroup variable in DialogManager.  
 Populate the CanvasGroup variable in the inspector by dragging in the panel that you want to have opened when the dialog is done.  When the dialog is completed, the CloseDialog( ) method checks to see if the CanvasGroup variable refers to a valid object, if so, then it makes that panel active and visible using Utility.ShowCG().
-
 
 ###Add Custom Event Logic to Open Another Panel - OptionPanel or DecisionPanel
 One way we we can open a new panel that has our decision buttons, we'll attach the following script to the DecisionPanel that has the scene-transition buttons as child objects. To do this, we'll use the DialogManager that has the custom UnityEvent: OnDialogClosing, shown in code below.
@@ -78,7 +77,7 @@ public class DialogManager : MonoBehaviour {
     private Queue<string> queue = new Queue<string>(); //declare, initialize
 
 	// Use this for initialization
-	void Start () {
+void Start () {
         //if event hasn't been initialized
         if (onPanelClosing == null)
         {
@@ -105,7 +104,7 @@ public class DialogManager : MonoBehaviour {
         Utility.ShowCG(cg);
 	}
 
-    public void GetNextDialog(){
+public void GetNextDialog(){
         if (queue.Count != 0)
         {
             dialogText.text = queue.Dequeue();
@@ -115,7 +114,7 @@ public class DialogManager : MonoBehaviour {
         }
     }
     
-    public void CloseDialog()
+public void CloseDialog()
     {
         Utility.HideCG(dialogPanelCG);
         if(OnDialogClosing != null){ //check to make sure there are listeners
@@ -126,38 +125,6 @@ public class DialogManager : MonoBehaviour {
 	
 }
 
-```
-###How to Use the Custom Unity Event
-//Decision Buttons have been placed into a panel and we want to open this DecisionPanel when the DialogManager's onDialogClosing event has happened.
-
-The DialogManager script now includes a custom UnityEvent: onDialogClosing,  so, we just need to write a simple method (OpenDecisionPanel) that can be executed when that event occurs.  
-
-The DecisionPanel is a UI-panel that contains the 2 buttons that allow users to decide which scene to go to next.  The DecisionPanel must have an attached CanvasGroup component. This script: OpenDecisionPanel.cs should also be attached to the DecisionPanel.
-
-##OpenDecisionPanel
-
-```java
-//in OpenDecisionPanel for Project 1
-  
-    private DialogController dialogController;
-    private CanvasGroup decisionPanelCG;
-
-  void Start ()
-	{
-    
-    decisionPanelCG = GetComponent<CanvasGroup>();
-    Utility.HideCG(decisionPanelCG); //make sure to hide at Start 
-    //find the DialogManager Script component in the scene
-    dialogManager =FindObjectOfType<DialogManager>();  //find the DialogPanel 
-    dialogManager.onDialogClosing.AddListener(OpenPanel) ; //specify the method to be executed when the event happens
-   }
-   
-   
-   //method to be executed when onPanelClosing event has happened
-    public void OpenPanel(){
-        Utility.ShowCG(decisionPanelCG); 
-    }
- } 
 ```
 
       
