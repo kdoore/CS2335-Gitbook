@@ -11,6 +11,7 @@ The code below has logic to open the next panel, when the dialog is complete.  I
             Utility.ShowCG(nextPanelToOpenCG);
         }
 ```
+
 ###DialogManager - Without Custom Unity Event Full Code
 
 ```java
