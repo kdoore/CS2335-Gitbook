@@ -77,9 +77,10 @@ public class DialogManager : MonoBehaviour {
         if (!showOnStart)
         {
             Utility.HideCG(dialogPanelCG);
-        }else{
+        }else{ 
+        //When showing when scene first starts
             Utility.ShowCG(dialogPanelCG);
-            NextDialog();
+            NextDialog();  //call to display first dialog
         }
     }
 
