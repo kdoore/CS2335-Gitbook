@@ -149,29 +149,29 @@ public class DialogManager : MonoBehaviour {
 
 The DialogManager script now includes a custom UnityEvent: onDialogClosing,  so, we just need to write a simple method (OpenDecisionPanel) that can be executed when that event occurs.  
 
-The DecisionPanel is a UI-panel that contains the 2 buttons that allow users to decide which scene to go to next.  The DecisionPanel must have an attached CanvasGroup component. This script: DecisionScript_TextScene.cs should also be attached to the DecisionPanel.
+The DecisionPanel is a UI-panel that contains the 2 buttons that allow users to decide which scene to go to next.  The DecisionPanel must have an attached CanvasGroup component. This script: OpenDecisionPanel.cs should also be attached to the DecisionPanel.
 
+##OpenDecisionPanel
 
 ```java
-//in DecisionScript_TestScene for Project 1
+//in OpenDecisionPanel for Project 1
   
     private DialogController dialogController;
     private CanvasGroup decisionPanelCG;
 
   void Start ()
 	{
-    //other code here
     
     decisionPanelCG = GetComponent<CanvasGroup>();
     Utility.HideCG(decisionPanelCG); //make sure to hide at Start 
-    
-    dialogManager = GameObject.Find("DialogPanel1").GetComponent<DialogManager>();  //find the DialogPanel 
-    dialogManager.onDialogClosing.AddListener(OpenDecisionPanel) ; //specify the method to be executed when the event happens
+    //find the DialogManager Script component in the scene
+    dialogManager =FindObjectOfType<DialogManager>();  //find the DialogPanel 
+    dialogManager.onDialogClosing.AddListener(OpenPanel) ; //specify the method to be executed when the event happens
    }
    
    
    //method to be executed when onPanelClosing event has happened
-    public void OpenDecisionPanel(){
+    public void OpenPanel(){
         Utility.ShowCG(decisionPanelCG); 
     }
  } 
