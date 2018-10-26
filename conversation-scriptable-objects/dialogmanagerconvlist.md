@@ -1,22 +1,7 @@
 #DialogManager for Scriptable Objects
+Updated Oct 26, 2018
 
-The link below provides a simple Unity project with a dialog system that you can customize for Project 1. 
-
-[Box.com Unity Package: DialogManager_ Fall 18_v1](https://utdallas.box.com/s/7c2e1nhk99r5kttb9e0ee2kagcpoxmq1)
-
-[Box.com Unity Package: DialogManager_ Fall 18_v2](https://utdallas.box.com/v/DialogManager-Version2-F18) 
-
-**Includes:** 
-    - DialogManager Prefab - Nested UI Components
-    - Coroutine for 'dynamic typing-style' dialog reveal
-    - Custom UnityEvent: OnDialogClosing - Can be used to trigger opening of other gameObjects
-    - Serializable ConversationEntry Class
-    - ScriptableObject ConversationList
-    - ScriptableObject Factory: (Lior Tal)
-
-###DialogManager using ScriptableObject: ConversationList
-See previous page for instructions to work with ConversationList ScriptableObject that is used in this code.
-
+###NextPanel To Open
 The code below has logic to open the next panel, when the dialog is complete.  If there is no nextPanelToOpen configured in the inspector, then no error will occur because the code first checks to see if that variable contains a valid object (memory address)  
 
    
@@ -26,44 +11,43 @@ The code below has logic to open the next panel, when the dialog is complete.  I
             Utility.ShowCG(nextPanelToOpenCG);
         }
 ```
-
 ###DialogManager - Without Custom Unity Event Full Code
 
 ```java
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
+
 
 public class DialogManager : MonoBehaviour {
 
+   
     public ConversationList convList; //attach scriptable object in Inspector
     public CanvasGroup nextPanelToOpenCG;  //next panel to open, set in Inspector
+    public Button openDialogBtn; //Button that will open Dialog
 
-    public bool showOnStart = false; //if set in inspector, panel is visible at start of scene
+    public bool showOnStart = false;
     private Button nextDialogBtn;
-    public Button openDialogBtn;  //button to open dialog
+
     private CanvasGroup dialogPanelCG;
     private Text dialogText, speakerName; //speakerName;
     private Image speakerImage;
-    public int conversationIndex;
+    private int conversationIndex;
 
-   
     // Use this for initialization
     void Start () {
-      
+
         conversationIndex = 0;
 
-        dialogPanelCG = GetComponent<CanvasGroup>();
+        dialogPanelCG = GetComponent<CanvasGroup>(); //used to show/hide panel
        
         Text[] childTextElements = GetComponentsInChildren<Text>();
 
         speakerName = childTextElements[0]; //first child of Panel
         speakerImage = GetComponentInChildren<Image>();
 
-        if (openDialogBtn != null )
+        if (openDialogBtn != null ) //if opening dialog with a Button, Populate OpenDialogButton in the Inspector 
         {
             openDialogBtn.onClick.AddListener(OpenDialog);
         }
@@ -77,10 +61,10 @@ public class DialogManager : MonoBehaviour {
         if (!showOnStart)
         {
             Utility.HideCG(dialogPanelCG);
-        }else{ 
-        //When showing when scene first starts
+        }
+        else{ //if showing on scene load, get first Dialog 
             Utility.ShowCG(dialogPanelCG);
-            NextDialog();  //call to display first dialog
+            NextDialog();
         }
     }
 
@@ -95,6 +79,8 @@ public class DialogManager : MonoBehaviour {
         }
     }
 	
+    //this method is called if there is an openDialog button set in the Inspector
+    //called when this button is clicked
     public void OpenDialog()
     {
         Utility.ShowCG(dialogPanelCG);
@@ -141,9 +127,8 @@ public class DialogManager : MonoBehaviour {
             dialogText.text += letter;
             yield return new WaitForSeconds(0.05f); ;
         }
-
-
     }
 }
+
 ```
 
