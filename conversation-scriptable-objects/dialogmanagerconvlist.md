@@ -1,4 +1,4 @@
-#DialogManager for Scriptable Objects
+#DialogManager for ConversationList
 Updated Oct 26, 2018
 
 ###NextPanel To Open
