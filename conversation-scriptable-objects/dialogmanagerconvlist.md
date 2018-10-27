@@ -2,7 +2,9 @@
 Updated Oct 26, 2018
 
 ###NextPanel To Open
-The code below has logic to open the next panel, when the dialog is complete.  If there is no nextPanelToOpen configured in the inspector, then no error will occur because the code first checks to see if that variable contains a valid object (memory address)  
+The code below has logic to open the next panel, when the dialog is complete.  If there is no nextPanelToOpen configured in the inspector, then no error will occur because the code first checks to see if that variable contains a valid object (memory address) 
+
+ ###Remove  
 
    
 **Includes public CanvasGroup nextPanelToOpen;**
