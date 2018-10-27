@@ -3,7 +3,9 @@ Updated Oct 26, 2018
 
 [Link: Unity Package For DialogManager Assets](https://utdallas.box.com/v/DialogManager3-unityPkg)
 
-The link above contains a testScene, prefabs, conversationList scriptableObject, dialogManager script etc.
+The link above contains a testScene, prefabs, conversationList scriptableObject, dialogManager script etc.  The Link below is for a Unity Project that has the same content.  Alternately, you can open the Unity project using the link below to look at files, etc.  Be careful importing the full UnityPackage into your project, make sure you are not going to overwrite any of your project file with imported files, such as: StateManager or SceneXState files.  
+
+Link:  [Full Unity Project for DialogManager Assets](https://utdallas.box.com/v/DialogManager-UnityProject)
 
 ###Inspector Images
 
