@@ -63,8 +63,10 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
      2.  Add an OpenDialogButton to the scene.
      3.  Add a DecisionPanel to the scene.
          - Panel with CanvasGroup
-         - Add Buttons to change scenes or to open a new DialogPanel.
-     4. Create a new ConversationList ScriptableObject for each scene.  
+         - Add Buttons  to change scenes or to open a new DialogPanel.
+             - Option1Btn
+             - Option2Btn
+     4. Create a new ConversationList ScriptableObject for each dialog.  
      - You can create a duplicate of an existing one, or you can use the asset panel's right-click menu to create ScriptableObject.
      - Create ConversationList Elements, fill with DialogText, CharacterImage
          
