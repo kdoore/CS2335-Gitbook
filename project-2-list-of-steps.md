@@ -68,7 +68,7 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
              - Option2Btn
      4. Create a new ConversationList ScriptableObject for each dialog.  
      - You can create a duplicate of an existing one, or you can use the asset panel's right-click menu to create ScriptableObject.
-     - Create ConversationList Elements, fill with DialogText, CharacterImage
+     - Create ConversationList Elements, fill with DialogText, CharacterImage, CharacterName
          
     5. Configure DialogManager Script Component in Inspector Panel
     
@@ -80,6 +80,7 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
         - Select Show On Start if not using OpenDialogBtn.
         
     Image shows how to configure DialogManager Script Component
+    
 ![](/assets/Screen Shot 2018-10-27 at 6.26.21 AM.png)
 
          
