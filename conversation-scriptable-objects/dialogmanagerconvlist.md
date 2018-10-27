@@ -1,6 +1,10 @@
 #DialogManager for ConversationList
 Updated Oct 26, 2018
 
+[Link: Unity Package For DialogManager Assets](https://utdallas.box.com/v/DialogManager3-unityPkg)
+
+The link above contains a testScene, prefabs, conversationList scriptableObject, dialogManager script etc.
+
 ###Inspector Images
 
 The images below show the Inspector panel configuration for the DialogPanel and Decision panels.  **Note that the DialogPanel has had the Image(Script) component removed.**  If the Image(Script) isn't removed from the DialogPanel, then the character images will show up in the panel background instead of in the CharacterImage gameObject, this is because we are displaying the CharacterImage in the first child of the DecisionPanel, and it finds it's own Panel image as the first child if that image component isn't removed.
