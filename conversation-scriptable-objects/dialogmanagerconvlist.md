@@ -1,6 +1,8 @@
 #DialogManager for ConversationList
 Updated Oct 26, 2018
 
+![](/assets/Screen Shot 2018-10-27 at 5.57.09 AM.png)
+
 ###NextPanel To Open
 The code below has logic to open the next panel, when the dialog is complete.  If there is no nextPanelToOpen configured in the inspector, then no error will occur because the code first checks to see if that variable contains a valid object (memory address) 
 
