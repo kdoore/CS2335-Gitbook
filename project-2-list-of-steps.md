@@ -38,8 +38,23 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
     
 ###Tips for Adding Dialog to 3 Scenes     
            
-   8.  Add UI elements to each scene for narrative or dialog. 
+   Adding UI elements to each scene for narrative or dialog. 
    See the updated [DialogManager](/conversation-scriptable-objects/dialogmanagerconvlist.md) script, unityPackage, unityProject with prefabs for DialogManager, ConversationList scriptableObject. 
+   
+   For each of 3 scenes.
+   1.  Add the dialogPanel prefab to the scene.
+       **Hierarchy:  DialogPanel Details**
+       - DialogPanel  
+       - with CanvasGroup
+       - remove Image(Script)
+       - Add DialogManager script component
+       - Child GameObjects (Use thie ordering)
+           - DialogText
+           - NextDialogButton
+           - CharacterImage
+
+                      
+   2.  Add an OpenDialogButton to the scene.
    
    
    
