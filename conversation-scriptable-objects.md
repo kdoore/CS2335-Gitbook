@@ -63,7 +63,7 @@ public class ConversationList : ScriptableObject
 }
 ```
 ### Edit the ConversationList
-In the Dialog UnityPackage,[Box.com Unity Package: DialogManager_ Fall 18_v1](https://utdallas.box.com/s/7c2e1nhk99r5kttb9e0ee2kagcpoxmq1)
+
 
 ###Use in DialogManager Class
 Use as a public object-reference variable in a custom class, like DialogManager, that inherits from MonoBehaviour: The scriptable object instance will be connected in the inspector panel. 

@@ -8,7 +8,7 @@ The code below has logic to open the next panel, when the dialog is complete.  I
 **Includes public CanvasGroup nextPanelToOpen;**
 ```
  if(nextPanelToOpenCG != null){
-            Utility.ShowCG(nextPanelToOpenCG);
+        Utility.ShowCG(nextPanelToOpenCG);
         }
 ```
 
@@ -20,17 +20,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+/// <summary>
+/// Dialog manager.
+/// Put this script on a panel with canvasGroup, 
+/// Important:  remove SpriteRenderer from Panel
+/// required child objects: dialogText, speakerName, nextDialogBtn
+/// </summary>
 public class DialogManager : MonoBehaviour {
 
-   
     public ConversationList convList; //attach scriptable object in Inspector
     public CanvasGroup nextPanelToOpenCG;  //next panel to open, set in Inspector
     public Button openDialogBtn; //Button that will open Dialog
-
     public bool showOnStart = false;
-    private Button nextDialogBtn;
 
+    private Button nextDialogBtn;
     private CanvasGroup dialogPanelCG;
     private Text dialogText, speakerName; //speakerName;
     private Image speakerImage;
@@ -69,6 +72,11 @@ public class DialogManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Gets the next dialog.
+    /// If no more dialog, close the dialog panel
+    /// open the nextPanelToOpen
+    /// </summary>
     void GetNextDialog()
     {
         bool moreDialog = NextDialog();
@@ -76,12 +84,20 @@ public class DialogManager : MonoBehaviour {
         {
             Utility.HideCG(dialogPanelCG); // close panel
             CloseDialog();
-            Utility.ShowCG(nextPanelToOpenCG);
+            if (nextPanelToOpenCG != null) //check to see if valid gameObject was set in inspector
+            {
+                Utility.ShowCG(nextPanelToOpenCG);
+            }
         }
     }
-	
-    //this method is called if there is an openDialog button set in the Inspector
-    //called when this button is clicked
+
+
+    /// <summary>
+    /// Opens the dialog.
+    /// this method is called if there is an 
+    /// openDialog button set in the Inspector
+    /// otherwise, select checkbox showOnStart 
+    /// </summary>
     public void OpenDialog()
     {
         Utility.ShowCG(dialogPanelCG);
@@ -89,6 +105,9 @@ public class DialogManager : MonoBehaviour {
         openDialogBtn.gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Closes the dialog.
+    /// </summary>
     public void CloseDialog()
     {
         Utility.HideCG(dialogPanelCG);
@@ -99,15 +118,19 @@ public class DialogManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Nexts the dialog.
+    /// Sets UI elements: speakerName, speakerImage, dialogText
+    /// </summary>
+    /// <returns><c>true</c>, if dialog there is more dialog, <c>false</c> otherwise.</returns>
     public bool NextDialog()
-    {
+    {   
         if (conversationIndex < convList.Conversation.Count)
         {   speakerName.text = convList.Conversation[conversationIndex].speakerName;
             speakerImage.sprite = convList.Conversation[conversationIndex].speakerImg;
             StopAllCoroutines();
             string curSentence = convList.Conversation[conversationIndex].dialogTxt;
             StartCoroutine(TypeSentence(curSentence));
-
         }
         else
         {
