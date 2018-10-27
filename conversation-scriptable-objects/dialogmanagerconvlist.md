@@ -7,6 +7,8 @@ The link above contains a testScene, prefabs, conversationList scriptableObject,
 
 Link:  [Full Unity Project for DialogManager Assets](https://utdallas.box.com/v/DialogManager-UnityProject)
 
+Link: [See supplemental instructions for configuring gameObjects: ](/project-2-list-of-steps.md)
+
 ###Inspector Images
 
 The images below show the Inspector panel configuration for the DialogPanel and Decision panels.  **Note that the DialogPanel has had the Image(Script) component removed.**  If the Image(Script) isn't removed from the DialogPanel, then the character images will show up in the panel background instead of in the CharacterImage gameObject, this is because we are displaying the CharacterImage in the first child of the DecisionPanel, and it finds it's own Panel image as the first child if that image component isn't removed.
