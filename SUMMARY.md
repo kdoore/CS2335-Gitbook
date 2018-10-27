@@ -22,6 +22,7 @@
 * [DialogManager using UnityEvent](dialogue-and-scene-decision-integration.md)
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
   * [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
+    * [Hide\_Show\_Panel Script](conversation-scriptable-objects/dialogmanagerconvlist/hideshow-panel-script.md)
 * [Visual Novel in Unity](visual-novel-in-unity.md)
 * [Project1 Checklist](project1-checklist.md)
 
