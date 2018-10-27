@@ -35,9 +35,13 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
         - 2 lines of code for to switching scene/state 
            - `SceneManager.LoadScene ("EndScene"); //actual scene name`
            - `StateManager.instanceRef.SwitchState (new EndState ());` 
+    
+###Tips for Adding Dialog to 3 Scenes     
            
-           
-   8.  Add UI elements to each scene for narrative or dialog.  
+   8.  Add UI elements to each scene for narrative or dialog. 
+   See the updated [DialogManager](/conversation-scriptable-objects/dialogmanagerconvlist.md) script, unityPackage, unityProject with prefabs for DialogManager, ConversationList scriptableObject. 
+   
+   
    
    
         
