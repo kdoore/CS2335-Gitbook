@@ -42,21 +42,23 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
    See the updated [DialogManager](/conversation-scriptable-objects/dialogmanagerconvlist.md) script, unityPackage, unityProject with prefabs for DialogManager, ConversationList scriptableObject. 
    
    For each of 3 scenes.
-   1.  Add the dialogPanel prefab to the scene.
-       **Hierarchy:  DialogPanel Details**
-       - DialogPanel  
-       - with CanvasGroup
+   1.  Add the **DialogPanel prefab** to the scene.
+   
+       Hierarchy:  DialogPanel Prefab Details
+       - DialogPanel  - UI-Panel
+       - add CanvasGroup
        - remove Image(Script)
        - Add DialogManager script component
-       - Child GameObjects (Use thie ordering)
-           - DialogText
-           - NextDialogButton
-           - CharacterImage
-           
+       - Child GameObjects (as ordered below)
+           - CharacterImage 
+           - NameText
+           - TextPanel
+               - DialogText
+               - NextDialogBtn
+          
        - Configure DialogManager Script component - see details below
             
-       
-![](/assets/Screen Shot 2018-10-27 at 5.57.09 AM.png)
+![](/assets/Screen Shot 2018-10-27 at 9.47.57 AM.png)
 
      2.  Add an OpenDialogButton to the scene.
      3.  Add a DecisionPanel to the scene.
