@@ -52,14 +52,72 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
            - DialogText
            - NextDialogButton
            - CharacterImage
+           
+       - Configure DialogManager Script component - see details below
+            
+       
+![](/assets/Screen Shot 2018-10-27 at 5.57.09 AM.png)
 
-                      
-   2.  Add an OpenDialogButton to the scene.
-   
-   
-   
-   
+     2.  Add an OpenDialogButton to the scene.
+     3.  Add a DecisionPanel to the scene.
+         - Panel with CanvasGroup
+         - Add Buttons to change scenes or to open a new DialogPanel.
+     4. Create a new ConversationList ScriptableObject for each scene.  
+     - You can create a duplicate of an existing one, or you can use the asset panel's right-click menu to create ScriptableObject.
+     - Create ConversationList Elements, fill with DialogText, CharacterImage
+         
+    5. Configure DialogManager Script Component in Inspector Panel
+    
+    **Inspector Panel: DialogPanel Details**
+    - Configure DialogManager Script component
+        - Select Conv List: ConversationList - ScriptableObject
+        - Select Next Panel To Open - with DecisionPanel - gameObject
+        - Select Open Dialog Btn - with OpenDialogBtn - gameObject
+        - Select Show On Start if not using OpenDialogBtn.
         
+    Image shows how to configure DialogManager Script Component
+![](/assets/Screen Shot 2018-10-27 at 6.26.21 AM.png)
+
+         
+     - **Configure logic in SceneXState.cs file for buttons to do scene transition:**
+         - Find Button by name in `InitializeObjectRefs( )` 
+         - Write `LoadSceneX` methods
+         - Add LoadSceneX method as listeners to Button.onClick event handler.
+         
+```java
+       public void InitializeObjectRefs ()
+	{
+	    option1Btn = GameObject.Find ("Option1Btn").GetComponent<Button> ();
+		option1Btn.onClick.AddListener (LoadScene2);
+
+        option2Btn = GameObject.Find("Option2Btn").GetComponent<Button>();
+        option2Btn.onClick.AddListener(LoadScene3);
+        Debug.Log ("Inititalize Object Refs for Scene1State");
+	}
+       
+ public void LoadScene2()
+    {
+        Debug.Log("Leaving Scene1, going to Scene2");
+        SceneManager.LoadScene("Scene2");  //actual scene name
+        StateManager.instanceRef.SwitchState(new Scene2State());  //create new state, pass to StateManager
+
+ public void LoadScene3()
+    {
+        Debug.Log("Leaving Scene1, going to Scene3");
+        SceneManager.LoadScene("Scene3");  //actual scene name
+        StateManager.instanceRef.SwitchState(new Scene3State());  //create new state, pass to StateManager
+    }
+  
+```
+
+
+         
+   
+   
+   
+   
+
+
         
         
     
