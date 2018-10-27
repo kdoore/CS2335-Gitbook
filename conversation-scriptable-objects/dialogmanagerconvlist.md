@@ -1,12 +1,20 @@
 #DialogManager for ConversationList
 Updated Oct 26, 2018
 
+###Inspector Images
+
+The images below show the Inspector panel configuration for the DialogPanel and Decision panels.  **Note that the DialogPanel has had the Image(Script) component removed.**  If the Image(Script) isn't removed from the DialogPanel, then the character images will show up in the panel background instead of in the CharacterImage gameObject, this is because we are displaying the CharacterImage in the first child of the DecisionPanel, and it finds it's own Panel image as the first child if that image component isn't removed.
+
 ![](/assets/Screen Shot 2018-10-27 at 5.57.09 AM.png)
+![](/assets/Screen Shot 2018-10-27 at 6.26.21 AM.png)
+![](/assets/Screen Shot 2018-10-27 at 6.24.47 AM.png)
 
-###NextPanel To Open
-The code below has logic to open the next panel, when the dialog is complete.  If there is no nextPanelToOpen configured in the inspector, then no error will occur because the code first checks to see if that variable contains a valid object (memory address) 
 
- ###Remove  
+###NextPanelToOpen
+The DialogManager script has a public reference variable that can be set in the Inspector allows for the nextPanelToOpen to be populated. After all of the dialog entries has been displayed, the dialogPanel is closed, and then the nextPanelToOpen will be opened.  If not  populated, no error will occur because the code first checks to see if that variable contains a valid object reference (memory address). 
+
+ ###OpenDialogBtn
+ The OpenDialogBtn public reference in the Inspector should be populated if a button will be used to open the dialog.  Otherwise, the ShowOnStart checkbox in the Inspector should be selected, it will make the panel visible at the beginning of the scene..  
 
    
 **Includes public CanvasGroup nextPanelToOpen;**
