@@ -2,6 +2,8 @@
 
 This example code works for an Animator Controller with 4 States as listed in the enum: heroState.
 
+See [Animator Controller](/animation_controller.md) details: 
+
 This code assumes  that there are prefab objects with **tags:  **
 **Collectible, Hazard**
 
