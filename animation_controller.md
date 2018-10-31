@@ -13,6 +13,7 @@ The Unity Animator controller provides a visual programming language implementat
 
 [Unity3D-Live Training: Animation Beginner Tutorial](https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/animate-anything)
 
+[Link to Free - 2D GameArt - Sprites used here](http://www.gameart2d.com/freebies.html)
 
 **In Class Code Example:**
 [CS2335-In Class Code Example - Spring 18
