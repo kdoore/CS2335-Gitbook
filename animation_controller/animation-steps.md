@@ -37,8 +37,10 @@ After downloading the sprite set, determine which animation states your characte
     - Rename the remaining gameObject: player
     - Add Tag:  player
     
-    - Find the Animator Component on the player gameObject, Identify the Animator Controller **(idle) **that is on the player gameObject, this one **will not be deleted**. -  ![](/assets/Screen Shot 2018-10-31 at 11.12.37 AM.png)
-    - Delete all other Animator Controllers (don't delete the one identified above )
-    - 
+    - Find the Animator Component on the player gameObject, Identify the Animator Controller **(idle) **that is on the player gameObject.
+     **This one will not be deleted (idle)**.   ![](/assets/Screen Shot 2018-10-31 at 11.12.37 AM.png)
+    - Delete all other Animator Controller (dead, walk, jump )
+    - The image below shows the remaining assets: 4 animation clips and 1 animator controller ( idle ) 
+    - ![](/assets/Screen Shot 2018-10-31 at 11.15.01 AM.png)
     
 
