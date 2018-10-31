@@ -56,5 +56,8 @@ After downloading the sprite set, determine which animation states your characte
     ![](/assets/Screen Shot 2018-10-31 at 11.30.03 AM.png)
     
 **Configure new States**
+
+    - Configure hero_walk state:
+    - Select
     
     
