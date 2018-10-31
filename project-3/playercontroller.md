@@ -147,6 +147,7 @@ public class PlayerController : MonoBehaviour
 		transform.localScale = theScale;
 	}  
 	
+	//this method is executed from a trigger at the last frame of the dead animation.
 	 public void ReloadScene()
     {
          if (GameData.instanceRef.Lives > 1)
