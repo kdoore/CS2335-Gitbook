@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         anim.SetInteger("HeroState", (int)heroState.idle);
 		
         facingRight = true;
-		jump = false;
+	jump = false;
         
 	}
 
