@@ -43,4 +43,5 @@ After downloading the sprite set, determine which animation states your characte
     - The image below shows the remaining assets: 4 animation clips and 1 animator controller ( idle ) 
     - ![](/assets/Screen Shot 2018-10-31 at 11.15.01 AM.png)
     
-
+**Modify the idle Animator Controller:**
+    - 
