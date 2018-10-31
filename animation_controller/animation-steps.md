@@ -14,3 +14,8 @@ After downloading the sprite set, determine which animation states your characte
     - Drag the set of sprites into the Scene view, you will be prompted to SaveAs,  'Create a new animation' 
     
     ![](/assets/Screen Shot 2018-10-31 at 10.31.50 AM.png)
+    
+    This creates the following Items:
+        - A gameObject in the hierarchy with an attached: **Animator Component**
+        - An **Animation clip** - this can be viewed/edited in the Animation window when the gameObject is selected
+        - An **Animator controller** - this can be viewed/edited in the Animator window when the gameObject is selected
