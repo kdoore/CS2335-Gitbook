@@ -46,3 +46,4 @@ After downloading the sprite set, determine which animation states your characte
 **Modify the idle Animator Controller:**
     - Open the Animator Window - ( menu: window/Animator)  
     - With the player gameObject selected, the animator window should display as below.
+    ![](/assets/Screen Shot 2018-10-31 at 11.23.46 AM.png)
