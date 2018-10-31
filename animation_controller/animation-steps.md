@@ -15,16 +15,29 @@ After downloading the sprite set, determine which animation states your characte
     
  ![](/assets/Screen Shot 2018-10-31 at 10.41.50 AM.png)
     
-    This creates the following Items:
+  **  This creates the following Items:**
     - A gameObject in the hierarchy with an attached: **Animator Component**
     
     - An **Animation clip** - in the selected assets folder. This can be viewed/edited in the Animation window when the gameObject is selected
        
-         * Animation clip:   ![](/assets/Screen Shot 2018-03-22 at 12.26.09 PM.png)
+         - Animation clip:   ![](/assets/Screen Shot 2018-03-22 at 12.26.09 PM.png)
 
 
         - An **Animator Controller** - in the selected assets folder. This can be viewed/edited in the Animator window when the gameObject is selected
         
             - Animator Controller  ![](/assets/Screen Shot 2018-03-22 at 12.27.35 PM.png)
 
+- **Play the Unity scene** to make sure the created gameObject animation works as expected
+
+- **Repeat steps** for each desired Animation State ( idle, walk, jump, dead )
+
+**Delete the following:**
+    - Delete all except one of the gameObjects.
+    - Rename the remaining gameObject: player
+    - Add Tag:  player
+    
+    - Find the Animator Component on the player gameObject, Identify the Animator Controller that is on the player gameObject, this one will not be deleted. 
+    - Delete all other Animator Controllers (don't delete the one identified above )
+    - 
+    
 
