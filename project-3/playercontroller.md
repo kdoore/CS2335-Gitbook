@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 	public float jumpForce;
 	private bool jump;
 	private bool facingRight;
-    private bool dead;
+ 
 
 
 	// Use this for initialization
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
 		
         facingRight = true;
 		jump = false;
-        dead = false;
+        
 	}
 
     //every frame, check to see if Jump button has been pressed
@@ -74,8 +74,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
 	void FixedUpdate ()
    {
-        if (!dead)  //stop movement
-        {   
+         
 		float inputX = Input.GetAxis ("Horizontal"); //arrows, a,d, 
 		bool isWalking = Mathf.Abs (inputX) > 0; //we need to move the player
 
@@ -105,9 +104,7 @@ public class PlayerController : MonoBehaviour
 			rb2D.velocity = new Vector2 (rb2D.velocity.x, 0);
 			rb2D.AddForce (new Vector2 (0f, jumpForce), ForceMode2D.Impulse);  //add force in Y direction
 		  }
-        }//end of if dead
-       
-
+   
 	}
 
 	void OnTriggerEnter2D (Collider2D hitObject)
@@ -138,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
             }
             //Destroy(hitObject.gameObject);
-            dead = true;
+          
 		}
 	}
 
@@ -152,9 +149,7 @@ public class PlayerController : MonoBehaviour
 	
 	 public void ReloadScene()
     {
-        //ScreenFader fader = FindObjectOfType<ScreenFader>();
-        //fader.EndScene((int)GameScene.MiniGame);
-        if (GameData.instanceRef.Lives > 1)
+         if (GameData.instanceRef.Lives > 1)
         {
             GameData.instanceRef.Lives -= 1; //loose a life each time to reload the scene
             StateManager.instanceRef.SwitchState(new MiniGameState());
