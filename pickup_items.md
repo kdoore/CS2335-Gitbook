@@ -1,8 +1,9 @@
 # PickUp Items
 
-Throughout our game we will want to have game items for the player to interact with.  Often these are considered Pick-up items.  
+Throughout our game we will want to have game items for the player to interact with.  Often these are considered Pick-up items.
 
-###Variations - See code below
+### Variations - See code below
+
 So, we'll want to create a base-class that represents this Pick-up type and create child classes to extend for specialized pick-up items.  [See SelfDestructPickup](https://kdoore.gitbooks.io/cs-2335/content/pickup_items.html#selfdestructpickup-child-class-of-pickup)
 
 Some of our pick-up objects will need the ability to generate events that can notify other objects when the pick-up item has died.  [See PickUp with Events](https://kdoore.gitbooks.io/cs-2335/content/pickup_items.html#selfdestructpickup-child-class-of-pickup)
@@ -27,7 +28,7 @@ public class PickUp : MonoBehaviour
 
     public PickupType type;
     public int value;
-   
+
     public void DestroyMe ()
     {
         Debug.Log ("Item Destroy Me");
@@ -51,19 +52,19 @@ using System;
 
 public enum PickupType
 {
-	crystal,
-	star,
-	animatedCrystal,
-	rock
+    crystal,
+    star,
+    animatedCrystal,
+    rock
 };
 
 public class PickUp : MonoBehaviour
 {
     //Add custom UnityEvent - Used to notify Spawner to spawn new object
     public UnityEvent OnDied; 
-	
-	public PickupType type;
-	public int value;
+
+    public PickupType type;
+    public int value;
 
     public void Start()
     {
@@ -72,8 +73,8 @@ public class PickUp : MonoBehaviour
         }
     }
     public void DestroyMe () //execute to 
-	{
-		Debug.Log ("Item Destroy Me");
+    {
+        Debug.Log ("Item Destroy Me");
         if (OnDied != null)  //someone is listening (spawner)
         { //initailize the event, call the constructor
             OnDied.Invoke(); // broadcast event: (notify the spawner)
@@ -89,6 +90,7 @@ public class PickUp : MonoBehaviour
 ```
 
 ### SelfDestructPickup: Child Class of PickUp
+
 The code below can be used to create a PickUp object that self-destructs after some amount of time. This child-class inherits events and methods from the base-class: PickUp.
 
 ```java
@@ -101,12 +103,12 @@ public class SelfDestructPickup : PickUp {
     private float minLifeTime;
     private float maxLifeTime;
 
-   
+
     void Awake () {
         // Automatic destroy after random time by calling base class died method
         minLifeTime = 5.0f;
         maxLifeTime = 15.0f;
-       
+
      //call's it's own DestroyMe method after a random delay
          Invoke ("DestroyMe", Random.Range(minLifeTime, maxLifeTime));  //
     }
