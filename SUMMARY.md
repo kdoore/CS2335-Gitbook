@@ -47,7 +47,7 @@
 * [Player GameObject](player_gameobject.md)
 * [Animator Controller](animation_controller.md)
   * [Animation Steps](animation_controller/animation-steps.md)
-* [MiniGame - View](minigame_-_view.md)
+* [MiniGame - Scene/State](minigame_-_view.md)
 * [PickUp Items](pickup_items.md)
 * [GameData - Simple](gamedata-simple.md)
 * [Game-Data - with C\# Events](game-data_model.md)
