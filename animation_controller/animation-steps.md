@@ -121,4 +121,35 @@ Since we don't want the hero_dead animation clip to loop continuously, we need t
 ![](/assets/Screen Shot 2018-11-08 at 9.23.55 AM.png)
 
 ###Add Animation Trigger to hero_dead Animation Clip
+Finally, you may choose to add a trigger to the hero_dead Animation clip.  An animation trigger allows for a function/method to be executed when at a specific animation keyframe is played.  In this case, we'd like the hero_dead animation to play completely before leaving the scene or reloading the scene. So, an animation trigger allows for some  specially defined event to be triggered when a specific keyframe is executed.  The animation trigger can be configured to execute any public method with the following syntax:  `public void someMethod( )`, but this method must be defined within a script-component that's on the same gameObject as the animation clip that has the trigger defined.
+
+
+![](/assets/Screen Shot 2018-11-08 at 11.21.00 AM.png)
+
+![](/assets/Screen Shot 2018-11-08 at 11.22.20 AM.png)
+
+
+
+
+```java
+///Method in PlayerController.cs
+///This method is executed from within the hero_dead animation, 
+//when the keyframe with the corresponding trigger is played.
+    public void ReloadScene(){
+        if(GameData.instanceRef.Lives <= 0){
+            //go to end scene if there are no more Lives left
+            SceneManager.LoadScene("Scene5");  //actual scene name
+            StateManager.instanceRef.SwitchState(new Scene5State());  //create new state, pass to StateManager
+
+        }
+        else //if there are still Lives left, reload the current scene 
+        {
+            //reload this current scene
+            SceneManager.LoadScene("Scene4");  //actual scene name
+            StateManager.instanceRef.SwitchState(new Scene4State());  //create new state, pass to StateManager
+            //How should we reset score, health variables for the game?
+        }
+
+    }
+```
 
