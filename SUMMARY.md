@@ -56,7 +56,6 @@
 * [Level Manager-Events](level-manager-in-class.md)
 * [Simple Spawner](simple-spawner.md)
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
-* [Inventory Dictionary](inventory.md)
 * [Inventory Display](inventory_store_-_scriptable_objects.md)
 
 ## Optional, Supplemental Content
@@ -80,9 +79,9 @@
 * [Project 3 - Code](project-3-code.md)
   * [PlayerController](project-3/playercontroller.md)
   * [PickUp](project-3/pickup.md)
+  * [GameData - With Inventory, UnityEvent](project-3/gamedata-with-unityevent.md)
   * [Simple Spawner](project-3/simple-spawner.md)
   * [Spawner with UnityEvent](project-3/spawner-with-unityevent.md)
-  * [GameData - With UnityEvent](project-3/gamedata-with-unityevent.md)
   * [LevelManager](project-3/levelmanager.md)
   * [PlayerStatsDisplay](project-3/playerstatsdisplay.md)
   * [InventoryDisplay](project-3/inventorydisplay.md)
