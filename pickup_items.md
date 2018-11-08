@@ -7,7 +7,7 @@ In Unity, we'll want to create and configure gameObjects that will have this scr
 You are required to have 4 types of PickUp objects in your game, 3 must have tag: Collectible, 1 can have tag: Hazard.
 
     - Create a 2D Sprite GameObject
-    - Add a Collider2D to the GameObject
+    - Add a Collider2D to the GameObject, configure collider shape
     - Configure the Collider2D to be isTrigger = checked true
     - Select a tag for the gameObject:  "Collectible", "Hazard", other?
     - Add Rigidbody2D if the gameObject will move
