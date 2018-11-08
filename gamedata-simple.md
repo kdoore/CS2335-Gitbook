@@ -6,6 +6,10 @@ Below is a simple class definition for GameData, we'll add more to this as we pr
 
 This script will be attached to the GameManager in the BeginScene and will be persisted throughout the game since it uses the singleton design pattern.
 
+When designing the mini-game scene, it is helpful to have a GameManager gameObject in the hierarchy that has the 
+For Testing the MiniGame
+![](/assets/Screen Shot 2018-11-08 at 12.29.37 PM.png)
+
 To use the singleton reference in another class use the following syntax, for example, when calling the Add method from the PlayerController script:
 
 // in PlayerController.cs
