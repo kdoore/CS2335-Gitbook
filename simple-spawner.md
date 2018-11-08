@@ -6,15 +6,17 @@ The prefab gameObjects should have an instance of the PickUp Script added as a s
 ###Objects to Spawn - PickUp Prefabs
 PickUp Prefabs to be Spawned in the MiniGame should have the following configuration:  [See PickUp PreFabs](/pickup_items.md)
 
-Important: The PickUp Prefabs must have a Tag set that corresponds to the PlayerController Tag in OnTriggerEnter2D\( \).  
-
 	- GameObject should be a PreFab
 	- A SpriteRenderer Component
 	- At least 1 Collider2D component with IsTrigger set to true \(can have additional nested Collider2D components if necessary\)
 	- A PickUp script component, with the public attributes like: value, type set in the inspector.
-	- GameObject: Tag:  Collectible or Hazard
+	- GameObject: Tag:  "Collectible" or "Hazard"
 	- Can have a Rigidbody2D if the spawned object will be moving
 	- Can have an Animator component if the object will be animated
+	
+	**Important:** The PickUp Prefabs must have a Tag set that corresponds to the PlayerController Tag in OnTriggerEnter2D\( \).  
+
+
 
 ###Simple Spawner
 The code below creates a simple spawner
