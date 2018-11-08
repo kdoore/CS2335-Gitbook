@@ -2,7 +2,7 @@
 
 Throughout our game we will want to have game items for the player to interact with.  Often these are considered Pick-up items.
 
-###PreFab
+###Create / Configure PickUp PreFab GameObject
 In Unity, we'll want to create and configure gameObjects that will have this script attached to give desired behavior.
 
     - Create a 2D Sprite GameObject
