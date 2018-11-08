@@ -4,6 +4,7 @@ Throughout our game we will want to have game items for the player to interact w
 
 ###Create / Configure PickUp PreFab GameObject
 In Unity, we'll want to create and configure gameObjects that will have this script attached to give desired behavior.
+You are required to have 4 types of PickUp objects in your game, 3 must have tag: Collectible, 1 can have tag: Hazard.
 
     - Create a 2D Sprite GameObject
     - Add a Collider2D to the GameObject
