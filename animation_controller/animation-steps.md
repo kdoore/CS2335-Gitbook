@@ -71,6 +71,25 @@ After downloading the sprite set, determine which animation states your characte
 
 - Configure hero\_walk state:
 
+###State-Event Transition Table
+The following table shows the details for logic that is used to configure the transition arrows between states
+Each line of the table represents logic for an arrow between the CurState and NextState nodes. 
+
+
+**State - Event Transition Table**
+
+| CurState | Event | NextState | HasExitTime |
+|-----------|-------|-----------|-------------|
+| hero_idle | HeroState == 1 | hero_walk | False |
+| hero_idle | HeroState == 2  | hero_jump |  False|
+| hero_walk | HeroState == 0 | hero_idle | False |
+| hero_walk | HeroState == 2 | hero_jump | False |
+| hero_jump | HeroState == 0 | hero_idle | True |
+| Any State | HeroState == 3 | hero_dead | False |
+
+The diagram below shows that 6 transition arrows have been created in the Animator Controller, using the configuration information listed in the table above.
+
+![](/assets/Screen Shot 2018-11-08 at 8.55.16 AM.png)
 
 
 
