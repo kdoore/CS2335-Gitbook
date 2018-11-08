@@ -73,7 +73,7 @@
   * [Delegates](delegates.md)
   * [Parallax Scrolling](additional-options/parallax-scrolling.md)
   * [Sprite Animation Tutorial](additional-options/sprite-animation-tutorial.md)
-* [Change Sprites](change-sprites.md)
+  * [Change Sprites](change-sprites.md)
 
 ## Project 3
 
