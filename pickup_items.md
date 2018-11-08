@@ -8,7 +8,7 @@ You are required to have 4 types of PickUp objects in your game, 3 must have tag
 
     - Create a 2D Sprite GameObject
     - Add a Collider2D to the GameObject, configure collider shape
-    - Configure the Collider2D to be isTrigger = checked true
+    - Configure the Collider2D to be isTrigger == true
     - Select a tag for the gameObject:  "Collectible", "Hazard", other?
     - Add Rigidbody2D if the gameObject will move
     - Optional add additional Collider2D inside trigger Collider2D, to keep this gameObject from falling through the floor's Collider2D.
