@@ -2,6 +2,20 @@
 
 Throughout our game we will want to have game items for the player to interact with.  Often these are considered Pick-up items.
 
+###PreFab
+In Unity, we'll want to create and configure gameObjects that will have this script attached to give desired behavior.
+
+    - Create a 2D Sprite GameObject
+    - Add a Collider2D to the GameObject
+    - Configure the Collider2D to be isTrigger = checked true
+    - Select a tag for the gameObject:  "Collectible", "Hazard", other?
+    - Add Rigidbody2D if the gameObject will move
+    - Optional add additional Collider2D inside trigger Collider2D, to keep this gameObject from falling through the floor's Collider2D.
+    - Add PickUp script
+        - Select type from dropdown in inspector
+        - Set value, set a positive value
+    - Drag into Project Assets Resource Folder to create as a prefab
+
 ### Variations - See code below
 
 So, we'll want to create a base-class that represents this Pick-up type and create child classes to extend for specialized pick-up items.  [See SelfDestructPickup](https://kdoore.gitbooks.io/cs-2335/content/pickup_items.html#selfdestructpickup-child-class-of-pickup)
