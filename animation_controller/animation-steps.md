@@ -69,14 +69,17 @@ After downloading the sprite set, determine which animation states your characte
 
 **Configure new States**
 
-- Configure state nodes as shown in tables below.  
-  - Each state-node must be assigned an animation clip.
+- Configure state-nodes as shown in tables below.  
+  - Each state-node must be assigned an animation clip, 
+  - Select the state-node in the animator window, then set _**Motion**_ in the inspector by selecting the corresponding animation clip listed below.
   - Each state-node must have event arrows created and configured to allow transitions between state-nodes
   - Right-click on a state, select: Make Transition, drag to next state node according to the tables below 
+  
+  ![](/assets/Screen Shot 2018-11-08 at 9.00.12 AM.png)
 
 State Configuration:
  
-| State | Set Animation-Clip | Create Transition Arrows |
+| State |  Motion - Animation Clip | Create Transition Arrows |
 |-----------|-------|-----------|
 | hero_idle | _hero_idle animation_ | hero_idle -> hero_walk |
 | hero_idle | _hero_idle animation_ | hero_idle -> hero_jump |
@@ -84,14 +87,6 @@ State Configuration:
 | hero_walk | _hero_walk animation_ | hero_walk -> hero_jump |
 | hero_jump | _hero_jump animation_ | hero_jump -> hero_idle |
 | hero-dead | _hero_dead animation_ | Any State -> hero_dead |
-
-
-
-
-
-
-
-
 
 
 
