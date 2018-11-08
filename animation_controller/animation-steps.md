@@ -112,7 +112,7 @@ The diagram below shows that 6 transition arrows have been created in the Animat
 
 ###Configure Loop-time for the hero_dead animation clip
 
-Since we don't want the hero_dead animation clip to loop continuously, we need to set that configuration as part of the hero-dead animation clip asset. In the project assets panel, find and select the hero-dead animation clip.  Once the animation-clip is selected, in the inspector panel, uncheck the Loop Time checkbox.
+Since we don't want the hero_dead animation clip to loop continuously, we need to set that configuration as part of the hero-dead animation clip asset. In the project assets panel, find and select the hero-dead animation clip.  Once the animation-clip is selected, in the inspector panel, uncheck the Loop Time checkbox.  Loop-time will remain checked for all other animation clips.
 
 
 ![](/assets/Screen Shot 2018-11-08 at 9.23.55 AM.png)
