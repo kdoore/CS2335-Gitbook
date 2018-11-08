@@ -63,18 +63,18 @@
 ## Optional, Supplemental Content
 
 * Optional Content
-* [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
-* [Screen Fading and Reloading](simple-spawner/screen-fading-and-reloading.md)
-* [Disable Debug Logging](disable-debug-logging.md)
-* [Saving Data - Serialization](saving_data_-_serialization.md)
-* [Custom Event Messaging](custom_event_messaging.md)
-* [Event Publishing Patterns](observer_pattern.md)
-* [Events and Actions](events_and_actions.md)
-* [Adding Audio](adding-audio.md)
-* [Delegates](delegates.md)
-* [Parallax Scrolling](additional-options/parallax-scrolling.md)
-* [Sprite Animation Tutorial](additional-options/sprite-animation-tutorial.md)
-* Optional Content
+  * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
+  * [Screen Fading and Reloading](simple-spawner/screen-fading-and-reloading.md)
+  * [Disable Debug Logging](disable-debug-logging.md)
+  * [Saving Data - Serialization](saving_data_-_serialization.md)
+  * [Custom Event Messaging](custom_event_messaging.md)
+  * [Event Publishing Patterns](observer_pattern.md)
+  * [Events and Actions](events_and_actions.md)
+  * [Adding Audio](adding-audio.md)
+  * [Delegates](delegates.md)
+  * [Parallax Scrolling](additional-options/parallax-scrolling.md)
+  * [Sprite Animation Tutorial](additional-options/sprite-animation-tutorial.md)
+
 
 ## Project 3
 
