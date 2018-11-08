@@ -62,6 +62,7 @@
 
 ## Optional, Supplemental Content
 
+* Optional Content
 * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Screen Fading and Reloading](simple-spawner/screen-fading-and-reloading.md)
 * [Disable Debug Logging](disable-debug-logging.md)
@@ -73,7 +74,7 @@
 * [Delegates](delegates.md)
 * [Parallax Scrolling](additional-options/parallax-scrolling.md)
 * [Sprite Animation Tutorial](additional-options/sprite-animation-tutorial.md)
-* [Object Pooling](object-pooling.md)
+* Optional Content
 
 ## Project 3
 
