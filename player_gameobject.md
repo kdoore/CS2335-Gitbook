@@ -44,7 +44,7 @@ PlayerController.cs
 using UnityEngine;
 using System.Collections;
 
-public class PlayerControllerSimple : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
 
         private Transform myTransform;
