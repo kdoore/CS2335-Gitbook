@@ -52,22 +52,25 @@
 * [GameData - Simple](gamedata-simple.md)
 * [Game-Data - C\# Events - Complex Version](game-data_model.md)
   * [Player Data - EventArgs](player-data-eventargs.md)
-* [Screen Fading and Reloading](simple-spawner/screen-fading-and-reloading.md)
 * [Score UI Display](score-ui-display.md)
 * [Level Manager-Events](level-manager-in-class.md)
 * [Change Sprites](change-sprites.md)
 * [Simple Spawner](simple-spawner.md)
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
 * [Inventory Dictionary](inventory.md)
-* [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
 * [Inventory Display](inventory_store_-_scriptable_objects.md)
-* [Adding Audio](adding-audio.md)
-* [Events and Actions](events_and_actions.md)
-* [Event Publishing Patterns](observer_pattern.md)
-* [Delegates](delegates.md)
-* [Custom Event Messaging](custom_event_messaging.md)
-* [Saving Data - Serialization](saving_data_-_serialization.md)
+
+## Optional, Supplemental Content
+
+* [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
+* [Screen Fading and Reloading](simple-spawner/screen-fading-and-reloading.md)
 * [Disable Debug Logging](disable-debug-logging.md)
+* [Saving Data - Serialization](saving_data_-_serialization.md)
+* [Custom Event Messaging](custom_event_messaging.md)
+* [Event Publishing Patterns](observer_pattern.md)
+* [Events and Actions](events_and_actions.md)
+* [Adding Audio](adding-audio.md)
+* [Delegates](delegates.md)
 
 ## Project 3
 
