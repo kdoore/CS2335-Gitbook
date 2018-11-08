@@ -143,9 +143,10 @@ As seen in the image below, once you've configured an animation-event, then when
 
 
 ```java
-///Method in PlayerController.cs
+///Example Method in PlayerController.cs
 ///This method is executed from within the hero_dead animation, 
-//when the keyframe with the corresponding trigger is played.
+//when the keyframe is played with the corresponding animation event.
+
     public void ReloadScene(){
         if(GameData.instanceRef.Lives <= 0){
             //go to end scene if there are no more Lives left
