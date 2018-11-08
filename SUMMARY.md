@@ -54,7 +54,6 @@
     * [Player Data - EventArgs](player-data-eventargs.md)
 * [Score UI Display](score-ui-display.md)
 * [Level Manager-Events](level-manager-in-class.md)
-* [Change Sprites](change-sprites.md)
 * [Simple Spawner](simple-spawner.md)
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
 * [Inventory Dictionary](inventory.md)
@@ -74,7 +73,7 @@
   * [Delegates](delegates.md)
   * [Parallax Scrolling](additional-options/parallax-scrolling.md)
   * [Sprite Animation Tutorial](additional-options/sprite-animation-tutorial.md)
-
+* [Change Sprites](change-sprites.md)
 
 ## Project 3
 
