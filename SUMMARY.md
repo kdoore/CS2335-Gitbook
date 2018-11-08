@@ -52,10 +52,9 @@
 * [GameData - Simple](gamedata-simple.md)
   * [Game-Data - C\# Events - Complex Version](game-data_model.md)
     * [Player Data - EventArgs](player-data-eventargs.md)
-* [PickUp Items](pickup_items.md)
 * [Level Manager-Events](level-manager-in-class.md)
 * [Simple Spawner](simple-spawner.md)
-* [Conversation Scriptable Objects](conversation-scriptable-objects.md)
+
 * [Inventory Display](inventory_store_-_scriptable_objects.md)
 
 ## Optional, Supplemental Content
