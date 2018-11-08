@@ -120,21 +120,23 @@ Since we don't want the hero_dead animation clip to loop continuously, we need t
 **Uncheck Loop Time in Inspector Panel for hero-dead Animation clip**
 ![](/assets/Screen Shot 2018-11-08 at 9.23.55 AM.png)
 
-###Add Animation Trigger to hero_dead Animation Clip
-Finally, you may choose to add a trigger to the hero_dead Animation clip.  An animation trigger allows for a function/method to be executed when at a specific animation keyframe is played.  In this case, we'd like the hero_dead animation to play completely before leaving the scene or reloading the scene. So, an animation trigger allows for some  specially defined event to be triggered when a specific keyframe is executed.  The animation trigger can be configured to execute any public method with the following syntax:  `public void someMethod( )`, but this method must be defined within a script-component that's on the same gameObject as the animation clip that has the trigger defined.
+###Add Animation Event to hero_dead Animation Clip
+Finally, you may choose to add an animation-event to the hero_dead Animation clip.  An animation event allows for a function/method to be executed when at a specific animation keyframe is played.  In this case, we'd like the hero_dead animation to play completely before leaving the scene or reloading the scene. So, an animation event allows for some  specially defined event to be triggered when a specific keyframe is executed.  The animation event can be configured to execute any public method with the following syntax:  `public void someMethod( )`, but this method must be defined within a script-component that's on the same gameObject as the animation clip that has the animation event defined.
 
-###Steps to Create An Animation Trigger 
+###Steps to Create An Animation Event 
   - Select the player in the hierarchy.
   - Open the Animation panel 
   - From the Animation panel dropdown, select the hero_dead animation clip
   - Select the timeline section above the final keyframe
-  - Push the button: with icon: small white vertical rectangle ![](/assets/Screen Shot 2018-11-08 at 11.32.38 AM.png)
-  - In the inspector, select the Function from the dropdown, to be executed as the Animation Event.
+  - Push the button: with icon: small white vertical rectangle, when you hover over this icon, it will say Animation Event  ![](/assets/Screen Shot 2018-11-08 at 11.32.38 AM.png)
+  - In the inspector, select the Function from the dropdown, to be executed as the Animation Event.(See images below)
   - If the ReloadScene( ) method hasn't been added to the player controller yet, see code below, it will need to be customized for your game details.
   - You may want to add additonal keyframes, at a later keyframe time slice, if you want the dead animation to be displayed for a longer time before the scene is reloaded.
   
 ![](/assets/Screen Shot 2018-11-08 at 11.21.00 AM.png)
 
+As seen in the image below, once you've configured an animation-event, then when you hovering over the icon, it will display the message shown below, which is the name of the function / method you've configured to be executed. 
+ 
 ![](/assets/Screen Shot 2018-11-08 at 11.22.20 AM.png)
 
 
