@@ -3,7 +3,6 @@
 In the code below, we will spawn a prefab gameObject that's added in the inspector, using the public GameObject variable.  
 The prefab gameObjects should have an instance of the PickUp Script added as a script component.
 
-The spawned objects must have a Tag that corresponds to the PlayerController Tag in OnTriggerEnter2D\( \).  
 ###Objects to Spawn - PickUp Prefabs
 PickUp Prefabs to be Spawned in the MiniGame should have the following configuration:  [See PickUp PreFabs](/pickup_items.md)
 
