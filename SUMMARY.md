@@ -71,6 +71,9 @@
 * [Events and Actions](events_and_actions.md)
 * [Adding Audio](adding-audio.md)
 * [Delegates](delegates.md)
+* [Parallax Scrolling](additional-options/parallax-scrolling.md)
+* [Sprite Animation Tutorial](additional-options/sprite-animation-tutorial.md)
+* [Object Pooling](object-pooling.md)
 
 ## Project 3
 
@@ -85,10 +88,6 @@
   * [InventoryDisplay](project-3/inventorydisplay.md)
   * [EndScene / EndState ](project-3/endscene-endstate.md)
   * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
-* [Additional Options](additional-options.md)
-  * [Parallax Scrolling](additional-options/parallax-scrolling.md)
-  * [Sprite Animation Tutorial](additional-options/sprite-animation-tutorial.md)
-  * [Object Pooling](object-pooling.md)
 * [Class-Code Examples](class-code-examples.md)
 
 ## C\# Language

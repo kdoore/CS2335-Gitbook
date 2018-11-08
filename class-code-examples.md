@@ -13,35 +13,28 @@ You can find a similar version of these sprites at the link below:
 **Project includes**:  PlayerController.cs, PickUp.cs, and MiniGame.cs, along with scripts from Project2.
 
 
-###Week March 26-30
+###Player, GameData, PickUp
 
 **Player**
 - [PlayerController.cs](/project-3/playercontroller.md)
 
-**Screen Fading / Reloading**
-- [ScreenFader](/simple-spawner/screen-fading-and-reloading.md)
-
 **Spawner**
    - [Simplest Spawner](/project-3/simple-spawner.md)
    - [Spawner with List of Prefabs](/simple-spawner.md)
-   - [ AppleTreeSpawner](/project-1-game-controller/appletree-as-a-spawner.md)
    -  [Event Driven Spawner](/spawn_prefab_gameobjects.md)
    
 **GameData**
  - [GameData - Simple](/gamedata-simple.md)
  - [GameData - with UnityEvent  ](/project-3/gamedata-with-unityevent.md)
  
-###Week April 2-6
- **GameData**
-
- - [GameData - with UnityEvent  ](/project-3/gamedata-with-unityevent.md)
+###PickUp, Spawner with Events, LevelManager
  
 **PickUp with Events**
  - [ PickUp with UnityEvent](https://kdoore.gitbooks.io/cs-2335/content/pickup_items.html#custom-events---version-of-pickup-class)
  
  
  **Spawner with Events**
- -
+ - [Event Driven Spawner](/spawn_prefab_gameobjects.md)
 
 **Level Manager**
  - [LevelManager - v1](/level-manager-in-class.md)
