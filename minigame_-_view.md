@@ -10,7 +10,7 @@ In order to design the logic of the mini-game, it will be good to take a high-le
 
 1. **GameData** - what is the data generated in the game and how do we store the data so we can access it in subsequent game scenes.
 
-   * Data Structures:  
+   * Some C# Data Structures:  
      * List&lt; T &gt;  
      * Dictionary &lt; TKey, TValue &gt; 
 
