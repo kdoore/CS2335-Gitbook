@@ -6,6 +6,7 @@ This version also contains:
     - Inventory: Dictionary< PickupType, int> inventory
     - levelScore variable, LevelScore Property
     - health variable, Health Property
+    - lives variable, Lives Property
 
 
 **UnityEvent**
@@ -35,6 +36,7 @@ public class GameData : MonoBehaviour
     private int health;
     private int totalScore;
     private int levelScore;
+    private int lives;
 
     /// <summary>
     /// property
@@ -62,6 +64,11 @@ public class GameData : MonoBehaviour
         get { return levelScore; }
         set { levelScore = value; }
     }
+    
+    public int Lives
+    { //read only
+        get { return lives; }
+    }
 
     void Awake()
     {  
@@ -82,6 +89,7 @@ public class GameData : MonoBehaviour
         health = 100;
         totalScore = 0;
         levelScore = 0;
+        lives = 3;
 
         /////////Initialize Custom EVENT
         if (onPlayerDataUpdate == null)//test to see if it has been initialized
@@ -145,8 +153,10 @@ public class GameData : MonoBehaviour
         levelScore = 0;
         totalScore = 0;
         
-        //should inventory be cleared out?
+        //should inventory dictionary be cleared out?
         //inventory.Clear();
+        //should lives be reset?
+
     }
 } //end class
 ```
