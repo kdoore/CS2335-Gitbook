@@ -1,4 +1,4 @@
-# Game-Data Model - With C# Events
+# Game-Data Model - Using C# Events - Complex, Custom Events Version
 
 ###**Important:**  See simplified version of this code, look at the [GameData with UnityEvents](/project-3/gamedata-with-unityevent.md) example.  
 
