@@ -69,7 +69,31 @@ After downloading the sprite set, determine which animation states your characte
 
 **Configure new States**
 
-- Configure hero\_walk state:
+- Configure state nodes as shown in tables below.  
+  - Each state-node must be assigned an animation clip.
+  - Each state-node must have event arrows created and configured to allow transitions between state-nodes
+  - Right-click on a state, select: Make Transition, drag to next state node according to the tables below 
+
+State Configuration:
+ 
+| State | Set Animation-Clip | Create Transition Arrows |
+|-----------|-------|-----------|
+| hero_idle | _hero_idle animation_ | hero_idle -> hero_walk |
+| hero_idle | _hero_idle animation_ | hero_idle -> hero_jump |
+| hero_walk | _hero_walk animation_ | hero_walk -> hero_idle |
+| hero_walk | _hero_walk animation_ | hero_walk -> hero_jump |
+| hero_jump | _hero_jump animation_ | hero_jump -> hero_idle |
+| hero-dead | _hero_dead animation_ | Any State -> hero_dead |
+
+
+
+
+
+
+
+
+
+
 
 ###State-Event Transition Table
 The following table shows the details for logic that is used to configure the transition arrows between states
@@ -78,7 +102,7 @@ Each line of the table represents logic for an arrow between the CurState and Ne
 
 **State - Event Transition Table**
 
-| CurState | Event | NextState | HasExitTime |
+| Current State | Event Condition | Next State | HasExitTime |
 |-----------|-------|-----------|-------------|
 | hero_idle | HeroState == 1 | hero_walk | False |
 | hero_idle | HeroState == 2  | hero_jump |  False|
