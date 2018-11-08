@@ -37,7 +37,7 @@ After downloading the sprite set, determine which animation states your characte
 
 **Delete the following:**
 
-  - Delete all except the **idle gameObject** \( the animation auto-created gameObjects\)
+  - Delete auto-created GameObjects: all **except** the **idle gameObject** \( the animation auto-created gameObjects\)
   - Rename the remaining gameObject: player
   - Add Tag:  player
 
@@ -47,6 +47,7 @@ After downloading the sprite set, determine which animation states your characte
  ![](/assets/Screen Shot 2018-10-31 at 11.12.37 AM.png)
 
 - Delete all other Animator Controller \(dead, walk, jump \)
+- Keep all auto-created Animation clips (Don't delete these)
 
 - The image below shows the remaining assets: 4 animation clips and 1 animator controller \( idle \) 
  ![](/assets/Screen Shot 2018-10-31 at 11.15.01 AM.png)
