@@ -36,7 +36,6 @@ GameData.instanceRef.Add( item );
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 //Class to create a singleton object
 //this will be attached to the GameManager in BeginScene and
@@ -98,8 +97,7 @@ public class GameData : MonoBehaviour
     {
         totalScore += item.value;  // update totalScore by the value of this current item
         Debug.Log ("Adding item value to totalScore, totalScore =  " + totalScore);
-        checkResetHighScore ();  //should we update PlayerPrefs, is this the alltime high score?
-
+   
     }
     // end Add()
 
