@@ -2,8 +2,8 @@
 
 Follow the guidelines below to complete project 3.
 
-###1. Create Scene and StateX.cs script for MiniGame
-Follow the same steps used in [Project 2](https://kdoore.gitbooks.io/cs-2335/content/project-2-create-new-scene-and-state.html), to create a new scene and a new state.cs script.
+###1. Create Scene and StateX.cs script for MiniGame, or use an Existing Scene.
+Follow the same steps used in [Project 2](https://kdoore.gitbooks.io/cs-2335/content/project-2-create-new-scene-and-state.html), to create a new scene and a new state.cs script, or use an existing scene/state pair from the 5 you created for project 2. 
 
 1.  Create a new scene, MiniGame, in a copy of Project 2. (You can name your scene anything you want, I'll refer to mine as MiniGame.  
  
@@ -25,14 +25,14 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
   - **Animator Component** (if you choose to animate your player)
   
   - Set the GameObject: Layer to `Player`
-  - Set the SpriteRenderer Sorting Layer to `Foreground`
+  - Set the Sprite-Renderer Sorting Layer to `Player` (create a new sorting layer if necessary)
   - Make sure the Transform.Position.Z value is 0
   
  4.  Customize the `PlayerController.cs` script as needed.  The Script has 4 main functional sections:
   - **Keyboard input**: Check for keyboard input, set variables such as jump, inputX based on keyboard input. 
   - **Physics Movement:** This movement occurs in the FixedUpdate method.  
   - **Animator Controller:** Use Hero-State enums to send parameter values into the Animator Controller.
-  - **Animator Controller**  Create an int Parameter that matches the named value you use in the PlayerController Script, this parameter is used for setting conditional logic on the transition arrows in the animator controller view.  Example: ` anim.SetInteger("HeroState", (int)heroState.idle);`
+  - **Animator Controller**  See [animation steps](/animation_controller/animation-steps.md) for creating player animation. Within the Animator Controller, create an int Parameter that matches the named value you use in the PlayerController Script, this parameter is used for setting conditional logic on the transition arrows in the animator controller view.  Example: ` anim.SetInteger("HeroState", (int)heroState.idle);`
 
   - **OnTriggerEnter2D( )**  You will add code for logic that should be exectued when the player collides with other GameObjects, depending on the Tags:  Collectible, or Hazard.
   5. If you will use your Player in multiple scenes, save your Player as a prefab, then save your project.
