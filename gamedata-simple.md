@@ -61,7 +61,7 @@ public class GameData : MonoBehaviour
     }
 
     public int Lives {  //read 
-        get{ return  levelScore; }
+        get{ return  lives; }
     }
 
     void Awake (){
