@@ -1,8 +1,10 @@
 # Inventory Display
 
+[Inventory Display, Unity Package](https://utdallas.box.com/v/inventory-display-package)
+
 In this section, we create a set of gameObject panels that we can use to show the inventory of items that the player has collected during the game.
 
-THe first step to creating an inventory display is to create a single UI panel that can function as the template for displaying your inventory items.  This can be used to create a prefab that can be customized to display each type of collectable object.
+The first step to creating an inventory display is to create a single UI panel that can function as the template for displaying your inventory items.  This can be used to create a prefab that can be customized to display each type of collectable object.
 
 The image below shows the panels are contained within a larger-panel, and that parent panel has a Layout-Component: Horizontal Layout Group
 
@@ -19,82 +21,95 @@ The parent panel has several child panels, each of which contain a UI-image and 
 
 ### Inventory Display:
 
-```C\#
-using UnityEngine;
-using UnityEngine.UI;
+```java
+
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
+public class InventoryDisplay : MonoBehaviour {
 
-public class InventoryDisplay : MonoBehaviour
-{
+    Button inventoryDisplayBtn;
+    CanvasGroup panelCG, starPanelCG, gemPanelCG, crystalPanelCG;
+    Dictionary<PickupType, int> inventory;
+    bool starActive, crystalActive, gemActive;
+	// Use this for initialization
+	void Start () {
+        inventoryDisplayBtn = GameObject.Find("InventoryDisplayBtn").GetComponent<Button>();
+        inventoryDisplayBtn.onClick.AddListener(ShowHideInventory);
 
-    public List<GameObject> prefabs = new List<GameObject> ();
-;
+        panelCG = GameObject.Find("InventoryDisplayPanel").GetComponent<CanvasGroup>();
+        starPanelCG = GameObject.Find("StarPanel").GetComponent<CanvasGroup>();
+        crystalPanelCG = GameObject.Find("CrystalPanel").GetComponent<CanvasGroup>();
+        gemPanelCG = GameObject.Find("GemPanel").GetComponent<CanvasGroup>();
+        Utility.HideCG(starPanelCG);
+        Utility.HideCG(gemPanelCG);
+        Utility.HideCG(crystalPanelCG);
+        Utility.HideCG(panelCG);
+        starActive = false;
+        gemActive = false;
+        crystalActive = false;
 
-    // Use this for initialization
-    void Start ()
-    {
-     //set prefabs as inactive until they have inventory items to show   
-    for (int i = 0; i < prefabs.Count; i++) {
-            prefabs [i].SetActive (false);
-        }
-        // register function as subscriber for onPlayerDataEvent
-        GameData.instanceRef.onPlayerDataUpdate += updateInventoryDisplay;
+        GameData.instanceRef.onPlayerDataUpdate.AddListener(UpdateDisplay);
     }
 
-//called when GameData event: OnPlayerDataUpdate is executed
-//matches signature for UnityEvent 
-    public void updateInventoryDisplay ()
-    {
-        Dictionary<PickupType, int> inventory = GameData.instanceRef.inventory;
-
-        foreach (var item in inventory) {
-            UpdateUI ( item.Key, item.Value); 
-            Debug.Log ("item Count " + item.Value);
+    public void ShowHideInventory(){
+        if(panelCG.alpha > 0){ //currently visible
+            Utility.HideCG(panelCG);
+        }else{
+            Utility.ShowCG(panelCG);
+            Debug.Log("ShowPanel");
         }
+
     }
+	
+	// Update Display is executed when GameData's PlayerDataUpdate UnityEvent is Invoked
+	void UpdateDisplay () {
+        inventory = GameData.instanceRef.inventory; //get inventory
 
-    void UpdateUI ( PickupType item, int val)
-    {
-        Text temp;  //UI text reference
-        switch (item) {
+        foreach (var item in inventory)
+        {
+            updateUI(item.Key, item.Value);
+        }   
+	}
 
-        case PickupType.crystal:
-            if (val > 0) {
-                prefabs [0].SetActive (true);
-                temp = prefabs [0].GetComponentInChildren<Text> ();
-                temp.text = string.Format ("{0}", val);
-            } else {
-                prefabs [0].SetActive (false);
-            }
+    void updateUI(PickupType type, int value){
+        Text itemText;
+        switch (type)
+        {
+            case PickupType.star:
+                if (starActive == false) { 
+                Utility.ShowCG(starPanelCG);
+                }
+                itemText = starPanelCG.gameObject.GetComponentInChildren<Text>();
+                itemText.text = value.ToString();
+                break;
 
-            break;
+            case PickupType.crystal:
+                if(crystalActive==false){
+                    Utility.ShowCG(crystalPanelCG);
+                }
 
-        case PickupType.star:
-            if (val > 0) {
-                prefabs [1].SetActive (true);
-                temp = prefabs [1].GetComponentInChildren<Text> ();
-                temp.text = string.Format ("{0}", val);
-            } else {
-                prefabs [1].SetActive (false);
-            }
-            break;
+                itemText = crystalPanelCG.gameObject.GetComponentInChildren<Text>();
+                itemText.text = value.ToString();
+                break;
 
-        case PickupType.purpleGem:
-            if (val > 0) {
-                prefabs [2].SetActive (true);
-                temp = prefabs [2].GetComponentInChildren<Text> ();
-                temp.text = string.Format ("{0}", val);
-            } else {
-                prefabs [2].SetActive (false);
-            }
-            break;
+            case PickupType.gem:
+                if(gemActive==false){
+                    Utility.ShowCG(gemPanelCG);
+                }
+               
+                itemText = gemPanelCG.gameObject.GetComponentInChildren<Text>();
+                itemText.text = value.ToString();
+                break;
 
         }
     }
 
 }
+
+
 ```
 
 
