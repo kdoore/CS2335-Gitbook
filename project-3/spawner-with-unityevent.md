@@ -61,8 +61,6 @@ using System.Collections.Generic;
 
 public class Spawner : MonoBehaviour
 {
-
-   
     // The prefab we will spawn
     [Header("Set in Inspector")]
     //public GameObject goodPrefab, badPrefab;
