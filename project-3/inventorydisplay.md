@@ -3,7 +3,7 @@
 Use the following code for the Inventory Display functionality
 
 Inventory Display - Unity Package
-[https://utdallas.box.com/v/InventoryDisplay](https://utdallas.box.com/v/InventoryDisplay)
+[Inventory Display, Unity Package](https://utdallas.box.com/v/inventory-display-package)
 
 The code below is included in the package file.
 
@@ -17,6 +17,7 @@ When creating the prefabs, make sure to set the PickUp component's `type` value 
 ![](/assets/Screen Shot 2018-04-12 at 10.30.46 AM.png)
 
 ```java
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,23 +35,18 @@ public class InventoryDisplay : MonoBehaviour {
         inventoryDisplayBtn.onClick.AddListener(ShowHideInventory);
 
         panelCG = GameObject.Find("InventoryDisplayPanel").GetComponent<CanvasGroup>();
-
         starPanelCG = GameObject.Find("StarPanel").GetComponent<CanvasGroup>();
         crystalPanelCG = GameObject.Find("CrystalPanel").GetComponent<CanvasGroup>();
         gemPanelCG = GameObject.Find("GemPanel").GetComponent<CanvasGroup>();
-
         Utility.HideCG(starPanelCG);
         Utility.HideCG(gemPanelCG);
         Utility.HideCG(crystalPanelCG);
         Utility.HideCG(panelCG);
-
         starActive = false;
         gemActive = false;
         crystalActive = false;
 
         GameData.instanceRef.onPlayerDataUpdate.AddListener(UpdateDisplay);
-        UpdateDisplay(); ///call one time so this works in a scene without 
-        //the events happening
     }
 
     public void ShowHideInventory(){
@@ -63,9 +59,9 @@ public class InventoryDisplay : MonoBehaviour {
 
     }
 	
-	// Update is called once per frame
+	// Update Display is executed when GameData's PlayerDataUpdate UnityEvent is Invoked
 	void UpdateDisplay () {
-        inventory = GameData.instanceRef.inventory;
+        inventory = GameData.instanceRef.inventory; //get inventory
 
         foreach (var item in inventory)
         {
@@ -77,43 +73,36 @@ public class InventoryDisplay : MonoBehaviour {
         Text itemText;
         switch (type)
         {
-            case PickupType.star:  ////YOU NEED TO CHANGE THIS TO MATCH YOUR ENUMS
+            case PickupType.star:
                 if (starActive == false) { 
                 Utility.ShowCG(starPanelCG);
-                    starActive = true;
                 }
                 itemText = starPanelCG.gameObject.GetComponentInChildren<Text>();
                 itemText.text = value.ToString();
                 break;
 
-            case PickupType.crystal: ////YOU NEED TO CHANGE THIS TO MATCH YOUR ENUMS
+            case PickupType.crystal:
                 if(crystalActive==false){
                     Utility.ShowCG(crystalPanelCG);
-                    starActive = true;
                 }
 
                 itemText = crystalPanelCG.gameObject.GetComponentInChildren<Text>();
                 itemText.text = value.ToString();
                 break;
 
-            case PickupType.gem: ////YOU NEED TO CHANGE THIS TO MATCH YOUR ENUMS
+            case PickupType.gem:
                 if(gemActive==false){
                     Utility.ShowCG(gemPanelCG);
-                    starActive = true;
                 }
                
                 itemText = gemPanelCG.gameObject.GetComponentInChildren<Text>();
                 itemText.text = value.ToString();
                 break;
-        }
-    }//end UpdateUI
 
-    //remove listener when scene is ending, so GameData doesn't maintain
-    //the list of listeners going into a new scene
-    void OnDisable(){
-        GameData.instanceRef.onPlayerDataUpdate.RemoveListener(UpdateDisplay);
+        }
     }
 
-}//end Class
+}
+
 ```
 
