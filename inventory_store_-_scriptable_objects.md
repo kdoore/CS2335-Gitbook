@@ -43,7 +43,9 @@ public class InventoryDisplay : MonoBehaviour
         GameData.instanceRef.onPlayerDataUpdate += updateInventoryDisplay;
     }
 
-    public void updateInventoryDisplay (object s, PlayerDataEventArgs e)
+//called when GameData event: OnPlayerDataUpdate is executed
+//matches signature for UnityEvent 
+    public void updateInventoryDisplay ()
     {
         Dictionary<PickupType, int> inventory = GameData.instanceRef.inventory;
 

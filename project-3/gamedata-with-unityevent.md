@@ -1,4 +1,4 @@
-#GameData with UnityEvent
+#GameData with Inventory and Custom UnityEvent
 
 This version of the GameData script uses a custom UnityEvent to notify listeners that some change happened to the player's data.
 
@@ -85,7 +85,7 @@ public class GameData : MonoBehaviour
             Debug.Log("Destroy Imposter GameObject");
         }
 
-        //initilize these instance variables
+        //initialize these instance variables
         health = 100;
         totalScore = 0;
         levelScore = 0;
@@ -101,9 +101,8 @@ public class GameData : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //health = 100;  MOVE THIS TO Awake( )
+        //MOVED initialization to Awake( )
 
-        //totalScore = 0;  MOVE THIS TO Awake( )
     }
 
     ////Called in Player controller when the player collides with a pickup    
