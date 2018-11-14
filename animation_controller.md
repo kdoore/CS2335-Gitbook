@@ -7,7 +7,10 @@ The Unity Animator controller provides a visual programming language implementat
 
 [Unity 2D Character Animation Tutorial - John Stejskal](http://johnstejskal.com/wp/creating-2d-animations-from-sprite-sheets-in-unity3d/)
 
+
+**Recommended for creating simple animations**
 [2D Animation in Unity - Raywenderlich](http://www.raywenderlich.com/66345/unity-2d-tutorial-animations)
+
 
 [Animate UI Elements](https://www.raywenderlich.com/149955/introduction-unity-ui-part-2-2)
 
