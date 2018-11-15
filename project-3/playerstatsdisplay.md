@@ -41,6 +41,7 @@ public class PlayerStatsDisplay : MonoBehaviour {
 ```
 
 ###Fall 18 Version with Public Variables 
+This is the version of code presented in the Fall 18 semester.
 
 ```java
 //code updated 11/15/18 
