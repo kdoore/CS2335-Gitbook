@@ -20,7 +20,7 @@ using UnityEngine.Events;
 
 public class PlayerStatsDisplay : MonoBehaviour {
 
-    private Text scoreText, healthText;
+    private Text scoreText, healthText; //initialize in Inspector panel
 
 	// Use this for initialization
 	void Start () {
@@ -43,7 +43,7 @@ public class PlayerStatsDisplay : MonoBehaviour {
 ###Fall 18 Version with Public Variables 
 
 ```java
-//code updated 4/12/18 11:00am
+//code updated 11/15/18 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
