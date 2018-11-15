@@ -16,6 +16,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class PlayerStatsDisplay : MonoBehaviour {
 
@@ -25,6 +26,37 @@ public class PlayerStatsDisplay : MonoBehaviour {
 	void Start () {
         scoreText  = GameObject.Find("ScoreText").GetComponent<Text>();
         healthText = GameObject.Find("HealthText").GetComponent<Text>();
+        GameData.instanceRef.onPlayerDataUpdate.AddListener(UpdateDisplay);
+        UpdateDisplay(); //call once to set initial values
+    }
+
+    //Executed each time score / heath is updated in GameData
+    void UpdateDisplay(){
+        Debug.Log("Score Updated");
+        scoreText.text = "Score: " + GameData.instanceRef.TotalScore;
+        healthText.text = "Health: " + GameData.instanceRef.Health;
+    }
+    
+} //end class
+```
+
+###Fall 18 Version with Public Variables 
+
+```java
+//code updated 4/12/18 11:00am
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+
+public class PlayerStatsDisplay : MonoBehaviour {
+
+    public Text scoreText, healthText;
+
+	// Use this for initialization
+	void Start () {
+       //use Inspector to create connection between script and gameObject components
         GameData.instanceRef.onPlayerDataUpdate.AddListener(UpdateDisplay);
         UpdateDisplay(); //call once to set initial values
     }
