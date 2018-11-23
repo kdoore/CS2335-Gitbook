@@ -67,13 +67,13 @@ public class Spawner : MonoBehaviour
 
     public void DestroyAllSpawnedObjects()
     {
-    GameObject[] goodItems =GameObject.FindGameObjectsWithTag("Collectible");
+    GameObject[] goodItems=GameObject.FindGameObjectsWithTag("Collectible");
     Debug.Log("Destroy goodObjects spawner" + goodItems.Length);
         foreach (var item in goodItems)
         {
             Destroy(item);
         }
-    GameObject[] badItems =GameObject.FindGameObjectsWithTag("Hazard");
+    GameObject[] badItems=GameObject.FindGameObjectsWithTag("Hazard");
     Debug.Log("Destroy badObjects spawner" + badItems.Length);
         foreach (var item in badItems)
         {
