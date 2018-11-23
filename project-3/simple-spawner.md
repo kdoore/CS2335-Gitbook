@@ -62,6 +62,45 @@ public class Spawner : MonoBehaviour
     }  
     } //end SpawnPrefab method
     
+    
+    ///This method can be called from any other script using the Spawner object, to destroy all spawned objects with Tags as shown.
+
+    public void DestroyAllSpawnedObjects()
+    {
+    GameObject[] goodItems =GameObject.FindGameObjectsWithTag("Collectible");
+    Debug.Log("Destroy goodObjects spawner" + goodItems.Length);
+        foreach (var item in goodItems)
+        {
+            Destroy(item);
+        }
+    GameObject[] badItems =GameObject.FindGameObjectsWithTag("Hazard");
+    Debug.Log("Destroy badObjects spawner" + badItems.Length);
+        foreach (var item in badItems)
+        {
+        Destroy(item);
+        }
+    } // end DestroyAll
+
+    
 } // end Spawner
 ```
+###LevelManager Code to Stop Spawning
+The code below shows how to stop spawning for the spawner object, by setting activeSpawning to false. Calling the DestroyAllSpawnedObjects( ) will destroy all pickup items remaining objects in the scene. 
+
+
+```java
+void loadLevel2()
+    {
+        ///STOP LEVEL 1 SPAWNER
+        spawner.activeSpawning = false;
+        spawner.DestroyAllSpawnedObjects();
+
+        //start new spawner
+        spawner2.StartSpawning();
+
+        levelText.text = "Level 2";
+    }
+
+```
+
 

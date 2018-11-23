@@ -144,7 +144,7 @@ public class Spawner : MonoBehaviour
         Debug.Log("Spawned new prefab");
     }
 
-//}///end of Class
+
 
     ///This method can be called from any other script using the Spawner object, to destroy all spawned objects with Tags as shown.
 
