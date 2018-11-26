@@ -92,9 +92,15 @@ If you use a single scene for your entire MiniGame, then we can create a LevelMa
 1.  Create a C# script:  LevelManager.cs
 2.  Create an empty GameObject, LevelManager, attach the script to the LevelManager gameObject.
 3.  Use code from LevelManager to populate the class code in visual studio.  You'll need to customize this code.
+4.  Add a UI-Text item, LevelText, to the miniGame scene to display the current game level.  
+
+### PlayerStatsDisplay
+In the miniGame scene, you must have some display for the Score and player health .  Create a C# script: PlayerStatsDisplay.cs.
+
+###InventoryDisplay
 
 
-
+###Mini-Game Consequences
    
   
   
