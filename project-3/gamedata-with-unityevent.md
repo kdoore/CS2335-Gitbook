@@ -137,6 +137,7 @@ public class GameData : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            lives -= 1;  //subtract one life
             Debug.Log("GameOver due to low health");
         }
 
