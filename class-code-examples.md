@@ -18,23 +18,18 @@ You can find a similar version of these sprites at the link below:
 **Player**
 - [PlayerController.cs](/project-3/playercontroller.md)
 
+**PickUp**
+ - [PickUp.cs](/project-3/pickup.md)
+
+**GameData**
+ 
+ - [GameData - with UnityEvent  ](/project-3/gamedata-with-unityevent.md)
+
+
 **Spawner**
    - [Simplest Spawner](/project-3/simple-spawner.md)
    - [Spawner with List of Prefabs](/simple-spawner.md)
    -  [Event Driven Spawner](/spawn_prefab_gameobjects.md)
    
-**GameData**
- - [GameData - Simple](/gamedata-simple.md)
- - [GameData - with UnityEvent  ](/project-3/gamedata-with-unityevent.md)
- 
-###PickUp, Spawner with Events, LevelManager
- 
-**PickUp with Events**
- - [ PickUp with UnityEvent](https://kdoore.gitbooks.io/cs-2335/content/pickup_items.html#custom-events---version-of-pickup-class)
- 
- 
- **Spawner with Events**
- - [Event Driven Spawner](/spawn_prefab_gameobjects.md)
-
 **Level Manager**
- - [LevelManager - v1](/level-manager-in-class.md)
+ - [LevelManager](/project-3/levelmanager.md)
