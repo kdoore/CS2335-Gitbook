@@ -2,22 +2,6 @@
 
 When the MiniGame has ended, you may choose to load the EndScene and show a panel with text that tells about your game results.  This code can be added to EndState.cs file.
 
-
-//In MiniGame
-
-
-```
-
-//add comments
-	public void InitializeObjectRefs ()
-	{
-        GameData.instanceRef.ResetGameData();
-    }
-
-```
-
-
-
 Here are some code snippets that might help you determine logic to be used in the final scene.  You'll need to create a UI Panel and UI text to update depending on the GameData Results.
 
 

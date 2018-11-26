@@ -95,10 +95,10 @@ If you use a single scene for your entire MiniGame, then we can create a LevelMa
 4.  Add a UI-Text item, LevelText, to the miniGame scene to display the current game level.  
 
 ### PlayerStatsDisplay
-In the miniGame scene, you must have some display for the Score and player health .  Create a C# script: PlayerStatsDisplay.cs.
+In the miniGame scene, you must have some display for the Score and player health .  Create a C# script: PlayerStatsDisplay.cs, follow directions on link: [PlayerStatsDisplay](/project-3/playerstatsdisplay.md)
 
 ###InventoryDisplay
-
+Follow the directions for the [InventoryDisplay](/InventoryDisplay).  You will download the Unity package file and import it into your project.  It is a prefab with panels to display an image and count for each collectible item that is stored in the GameData dictionary.
 
 ###Mini-Game Consequences
    
