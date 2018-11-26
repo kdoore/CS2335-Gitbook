@@ -57,6 +57,23 @@
 
 * [Inventory Display](inventory_store_-_scriptable_objects.md)
 
+## Project 3
+
+* [Project 3 - Code](project-3-code.md)
+  * [PlayerController](project-3/playercontroller.md)
+  * [PickUp](project-3/pickup.md)
+  * [GameData - With Inventory, UnityEvent](project-3/gamedata-with-unityevent.md)
+  * [Simple Spawner](project-3/simple-spawner.md)
+  * [Spawner with UnityEvent](project-3/spawner-with-unityevent.md)
+  * [LevelManager](project-3/levelmanager.md)
+  * [PlayerStatsDisplay](project-3/playerstatsdisplay.md)
+  * [InventoryDisplay](project-3/inventorydisplay.md)
+  * [EndScene / EndState ](project-3/endscene-endstate.md)
+  * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
+* [Class-Code Examples](class-code-examples.md)
+
+
+
 ## Optional, Supplemental Content
 
 * Optional Content
@@ -73,20 +90,7 @@
   * [Sprite Animation Tutorial](additional-options/sprite-animation-tutorial.md)
   * [Change Sprites](change-sprites.md)
 
-## Project 3
 
-* [Project 3 - Code](project-3-code.md)
-  * [PlayerController](project-3/playercontroller.md)
-  * [PickUp](project-3/pickup.md)
-  * [GameData - With Inventory, UnityEvent](project-3/gamedata-with-unityevent.md)
-  * [Simple Spawner](project-3/simple-spawner.md)
-  * [Spawner with UnityEvent](project-3/spawner-with-unityevent.md)
-  * [LevelManager](project-3/levelmanager.md)
-  * [PlayerStatsDisplay](project-3/playerstatsdisplay.md)
-  * [InventoryDisplay](project-3/inventorydisplay.md)
-  * [EndScene / EndState ](project-3/endscene-endstate.md)
-  * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
-* [Class-Code Examples](class-code-examples.md)
 
 ## C\# Language
 
