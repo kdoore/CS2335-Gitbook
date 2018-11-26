@@ -151,8 +151,7 @@ public class PlayerController : MonoBehaviour
     {
          if (GameData.instanceRef.Lives > 1)
         {
-            GameData.instanceRef.Lives -= 1; //loose a life each time to reload the scene
-            StateManager.instanceRef.SwitchState(new MiniGameState());
+           StateManager.instanceRef.SwitchState(new MiniGameState());
             SceneManager.LoadScene("MiniGameScene");
         }
 
