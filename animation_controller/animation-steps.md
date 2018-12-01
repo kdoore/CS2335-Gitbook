@@ -78,6 +78,19 @@ After downloading the sprite set, determine which animation states your characte
   
   ![](/assets/Screen Shot 2018-11-08 at 9.00.12 AM.png)
 
+###Create Animator Parameter:  HeroState
+In the image below, in the left hand panel of the Animator Controller, select the **Parameter** tab.  Select **+** to add a new int parameter, you will name it **HeroState**.  This is the value that is used to set the logic for transition arrows between states.  The is is used in the code to send a signal to the animator controller in the player controller script.
+![](/assets/Screen Shot 2018-12-01 at 7.19.31 AM.png)
+
+![](/assets/Screen Shot 2018-12-01 at 7.15.35 AM.png)
+
+```
+//Code in PlayerController to set the HeroState parameter in the animator controller.
+ animator.SetInteger("HeroState", (int)heroState.idle);
+```
+
+
+
 State Configuration:
  
 | State |  Motion - Animation Clip | Create Transition Arrows |
