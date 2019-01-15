@@ -1,12 +1,18 @@
 # Summary
 
+## Introduction
+
 * [Introduction](README.md)
 * [Unity Game Engine](chapter1.md)
 * [IDE - Visual Studio ](monodevelop.md)
+
+## Unity Basics
+
+* [Unity Editor Windows](unity-editor-windows.md)
 * [MonoBehavior - Base-Class](monobehaviour.md)
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
 
-## Project 1 - Prototype Game Design
+## Project 2 - Scene UI Design
 
 * [Game Objects](game_objects.md)
 * [Finding Game Objects](finding_game_objects.md)
@@ -24,19 +30,19 @@
   * [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
     * [Hide\_Show\_Panel Script](conversation-scriptable-objects/dialogmanagerconvlist/hideshow-panel-script.md)
 * [Visual Novel in Unity](visual-novel-in-unity.md)
-* [Project1 Checklist](project1-checklist.md)
+* [Project2 Checklist](project1-checklist.md)
 
-## Project 2
+## Project 3
 
-* [Project 2 - Text Adventure 1](project-2-text-adventure-1.md)
-  * [Project 2 - Learning Objectives](project-2-learning-objectives.md)
+* [Project 3 - Text Adventure ](project-2-text-adventure-1.md)
+  * [Project 3 - Learning Objectives](project-2-learning-objectives.md)
   * [State Machine Framework](state_machine_framework.md)
     * [Singleton Pattern](state_machine_framework/singleton.md)
   * [StateManager - Singleton Design Pattern](statemanager.md)
   * [IStateBase](istatebase.md)
   * [Project 2 -Create new Scene and State](project-2-create-new-scene-and-state.md)
   * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
-  * [Project 2 - List of Steps](project-2-list-of-steps.md)
+  * [Project 3 - List of Steps](project-2-list-of-steps.md)
 
 ## Mini-Game
 
@@ -54,12 +60,11 @@
     * [Player Data - EventArgs](player-data-eventargs.md)
 * [Level Manager-Events](level-manager-in-class.md)
 * [Simple Spawner](simple-spawner.md)
-
 * [Inventory Display](inventory_store_-_scriptable_objects.md)
 
-## Project 3
+## Project 4
 
-* [Project 3 - Code](project-3-code.md)
+* [Project 4 - Code](project-3-code.md)
   * [PlayerController](project-3/playercontroller.md)
   * [PickUp](project-3/pickup.md)
   * [GameData - With Inventory, UnityEvent](project-3/gamedata-with-unityevent.md)
@@ -71,8 +76,6 @@
   * [EndScene / EndState ](project-3/endscene-endstate.md)
   * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
 * [Class-Code Examples](class-code-examples.md)
-
-
 
 ## Optional, Supplemental Content
 
@@ -89,8 +92,6 @@
   * [Parallax Scrolling](additional-options/parallax-scrolling.md)
   * [Sprite Animation Tutorial](additional-options/sprite-animation-tutorial.md)
   * [Change Sprites](change-sprites.md)
-
-
 
 ## C\# Language
 
