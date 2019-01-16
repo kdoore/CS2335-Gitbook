@@ -11,6 +11,7 @@
 * [Unity Editor Windows](unity-editor-windows.md)
 * [MonoBehavior - Base-Class](monobehaviour.md)
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
+* [Getting Started](getting-started.md)
 
 ## Project 2 - Scene UI Design
 
