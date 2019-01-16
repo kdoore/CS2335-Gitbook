@@ -14,5 +14,5 @@ After downloading and installing the Unity Editor, Open the Unity application an
 
 ###Add Sprites to Unity Project Assets 
 1. Create a new folder: _**textures**_ in the Project / Assets windows by right-clicking and selecting new folder 
-2. Select and add .png files to your Unity project by dragging each file into the textures folder in your project / assets window. 
+2. Add .png files to your Unity project by dragging each file into the textures folder in your project / assets window. 
 
