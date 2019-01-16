@@ -33,9 +33,10 @@ Gives sprites a collision boundry - allows for collision interactions with other
     
 4. Floor - Create an empty GameObject, attach a  BoxCollider2D, edit the collider so it is a wide rectangle, move toward the bottom of the screen.
 
-5. PlayerController Script
+5. PlayerController Script - Simple Version
+See the script below
     
-
+###Player Controller Script - version 1    
 
 ```java
 
@@ -53,7 +54,6 @@ public class PlayerController : MonoBehaviour
        myRBody2D = GetComponent<Rigidbody2D>();
     }
     
-    
     void FixedUpdate()
     {
         float inputX = Input.GetAxis("Horizontal");
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         if (isWalking)
         {
             myRBody2D.velocity = new Vector2(0, 0);  // reset velocity to 0
-            myRBody2D.AddForce(new Vector2(forceX * inputX, 0));
+            myRBody2D.AddForce(new Vector2(forceX * inputX, 0)); update x component velocity by adding a force, nothing happens to y velocity
         }
     }
 
@@ -86,6 +86,39 @@ public class PlayerController : MonoBehaviour
     
 
 ```
+ ###GameData
+ 
+ 
 
-    
+```java
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameData : MonoBehaviour {
+
+    public int score;
+    public int health;
+	// Use this for initialization
+	void Start () {
+        score = 0;
+        health = 100;
+	}
+	
+    void Add( int points ){
+        score += points;
+        Debug.Log("Score updated " + score);
+    }
+
+    void TakeDamage( int points){
+        health -= points;
+        Debug.Log("Health updated " + health);
+    }
+}
+ 
+  
+```
+
+  
 
