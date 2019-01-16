@@ -3,8 +3,8 @@
 ## Introduction
 
 * [Introduction](README.md)
-* [Unity Game Engine](chapter1.md)
-* [IDE - Visual Studio ](monodevelop.md)
+* [Unity - Download](chapter1.md)
+* [Visual Studio - IDE](monodevelop.md)
 
 ## Unity Basics
 
