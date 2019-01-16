@@ -7,7 +7,8 @@ The Unity Editor has several windows which can be arranged in a variety of layou
 
 2.  **Scene View** - this window allows constructing details of a scene by adding, modifying gameObjects.  When the editor is in play-mode, the Game view becomes active instead of the scene view in the default layout.  You can manually select the Scene-view tab to see edit-mode details of gameObjects.
 
-3.  **Toolbar** - buttons allow movement / scaling / rotation of gameObjects - See links below for keyboard hotkeys:  Q - pan, W - move, E - Rotate, R - Scale, T-Rect Tool (resize)
+3.  **Toolbar** - buttons allow movement / scaling / rotation of gameObjects - See links below for **keyboard hot-keys:  
+Q - pan, W - move, E - Rotate, R - Scale, T- Rect Tool (resize)**
 
 4.  **Inspector Panel **- provides editable details of components for the gameObject currently selected in the hierarchy, or for selected gameAssets 
 
