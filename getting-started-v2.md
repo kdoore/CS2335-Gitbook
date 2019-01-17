@@ -1,8 +1,10 @@
 # Getting Started - Project 1
 
+#### Create a new 2D project in Unity
+
 After downloading and installing the Unity Editor, Open the Unity application and create a new **2D** project.
 
-### Download Free Game Art Assets:
+#### Download Free Game Art Assets:
 
 **GameArt 2D Free Assets**  
 [Winter Tile Set](https://www.gameart2d.com/winter-platformer-game-tileset.html)
@@ -11,22 +13,22 @@ After downloading and installing the Unity Editor, Open the Unity application an
 
 **Planet Cute** [Planet Cute Zipfile ](https://utdallas.box.com/v/planet-cute-zipfile) - from: [http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
 
-Images Below:  Planet Cute: Star, CatGirl, EnemyBug,
+Images Below from Planet Cute: Star, CatGirl, EnemyBug:
 
 ![](/star.png)![](/Character Cat Girl.png)![](/assets/Enemy Bug.png)
 
-### Add Sprites to Unity Project Assets
+#### Add Sprites to Unity Project Assets
 
 1. Create a new folder: _**textures**_ in the Project / Assets windows by right-clicking and selecting new folder 
 2. Add .png files to your Unity project by dragging each file into the textures folder in your project / assets window. 
 
-### 2D Sprite GameObject:
+#### 2D Sprite GameObject:
 
 Select GameObject in the top menu, select: GameObject&gt; 2D Object&gt; Sprite, this should add a new item in the **Hierarchy panel**.  In the **Inspector panel**, select a sprite image \(from the assets tab\) to associate with this new 2D object by selecting the small circle icon to the right of the Sprite Rendererer Component's **Sprite** field.
 
-### Collider2D Components
+#### Collider2D Components
 
-Gives sprites a collision boundry - allows for collision interactions with other objects
+Gives sprites a collision boundary - allows for collision interactions with other objects, objects with Collider2D have a physical boundary 
 
 * **IsTrigger** - when checking this checkbox: then this collider **will not display** collision interaction behavior, but it will cause the **OnTriggerEnter2D** event to be exectued. This is often used for sensing movement into zones, or for for objects that will be destroyed.   
 
@@ -76,6 +78,7 @@ public class PlayerController : MonoBehaviour
     }
 
     ////This is the EVENT that DRIVES the MiniGame, Player colliding with Pickup Objects
+    //Custom Tags: Collectible and Hazard must be created in Unity and added to the PickUp objects.
     void OnTriggerEnter2D(Collider2D hitObject)
     {
         Debug.Log("Entered Trigger");
