@@ -46,7 +46,8 @@ This component gives sprites a physical presence, it gives them a collision boun
 
 ###Create and Configure 2D Sprite GameObjects:
 
-1. Import a sprite that can be used as a background image - scale to fill the camera's viewport. 
+1. Import a sprite that can be used as a background image - scale to fill the camera's viewport. Objects higher in the Hierarchy panel are rendered behind gameObjects lower in the Hierarchy, however, SortingLayers is the preferred method for ordering sprite layering for rendering. [Unity Tutorial Video on SortingLayers](https://unity3d.com/learn/tutorials/topics/2d-game-creation/sorting-layers)
+
 2. **Player** gameObject - 2D Sprite GameObject
     * Add **Physics2D &gt; RigidBody2D** Component - this is required for objects that will have **movement**, physics forces should be used to give movement to gameObjects.
     
