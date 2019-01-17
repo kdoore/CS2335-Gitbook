@@ -23,9 +23,13 @@ Images Below are from Planet Cute: Star, CatGirl, EnemyBug:
 2. Add .png files to your Unity project by dragging each file into the textures folder in your project / assets window. 
 3. When you select an image in your assets folder, the Inspector should show that the **texture-type is Sprite \(2D and UI\)**
 
-#### 2D Sprite GameObject:
+#### 2D Sprite GameObject - Player:
 
-Select GameObject in the top menu, select: GameObject &gt; 2D Object &gt; Sprite, this should add a new item in the **Hierarchy panel**.  Select the new GameObject in the Hierarchy Panel, now the **Inspector panel** should show the details of this new gameObject. To select a sprite image \(from the assets tab\) to associate with this new 2D object, you will select/press the small circle icon to the right of the Sprite Renderer Component's **Sprite** field. This will create a new pop-up window that shows all possible items in the assets that can be selected as the sprite to be rendered.  
+Select **GameObject** in the top menu, select: **GameObject &gt; 2D Object &gt; Sprite,** this should add a new item in the **Hierarchy panel**.  Select this new gameObject in the Hierarchy Panel,  the **Inspector panel** should show the details of this new gameObject, **rename** the gameObject by typing the 'Player' into the top textbox in the Inspector panel. To **select a sprite** image \(from the assets tab\) to associate with this new 2D object, you will select/press the small circle icon to the right of the Sprite Renderer Component's **Sprite** field. This will create a new pop-up window that shows all possible items in the assets that can be selected as the sprite to be rendered.  
+
+![](/assets/SelectSpriteImg.png)
+
+
 
 #### Collider2D Components
 
@@ -37,9 +41,10 @@ Gives sprites a collision boundary - allows for collision interactions with othe
 
 1. Background Image - scale to fill the camera's viewport. 
 2. **Player** gameObject - 2D Sprite GameObject
-
-   * Add **Physics2D &gt; Collider2D** Components - select 1 or more Colliders to fit your gameObject
-   * Add **Physics2D &gt; RigidBody2D** Component - this is required for objects that will have **movement**, physics forces should be used to give movement to gameObjects.
+    * Add **Physics2D &gt; RigidBody2D** Component - this is required for objects that will have **movement**, physics forces should be used to give movement to gameObjects.
+    
+    * Add **Physics2D &gt; Collider2D** Components - select 1 or more Colliders to fit your gameObject
+   
 
 3. Several** **2D Sprite Game Objects: \(objects for the player to interact with - we'll call these **PickUp **objects \)
 
