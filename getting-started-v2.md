@@ -22,6 +22,7 @@ Images Below are from Planet Cute: Star, CatGirl, EnemyBug:
 1. Create a new folder: _**textures**_ in the Project / Assets windows by right-clicking and selecting new folder 
 2. Add .png files to your Unity project by dragging each file into the textures folder in your project / assets window. 
 3. When you select an image in your assets folder, the Inspector should show that the **texture-type is Sprite \(2D and UI\)**
+4.  You can also use the 3D basic shape-primitives as place-holders for prototyping 2D gameObjects.  [Unity Manual - primitive objects](https://docs.unity3d.com/Manual/PrimitiveObjects.html)
 
 ####Create a 2D Sprite GameObject - Player:
 
@@ -30,14 +31,16 @@ Select **GameObject** in the top menu, select: **GameObject &gt; 2D Object &gt; 
 ![](/assets/SelectSpriteImg.png)
 
 ###Physics2D
-The Physics2D Engine manages movement and collisions for 2D gameObjects.  We'll add Rigidbody2D for gameObjects that need to move in a scene.  We'll add Collider2D components to give gameObjects a physical boundry for collisions with other gameObjects.
+The Physics2D Engine manages movement and collisions for 2D gameObjects.  We'll add Rigidbody2D for gameObjects that need to move in a scene.  We'll add Collider2D components to give gameObjects a physical boundary for collisions with other gameObjects.
 
-###RigidBody2D
-This component puts a gameObject's movement under control of the Physics2D engine.  The gameObject's movement should be managed using Physics2D methods which can add forces to the object, change the velocity, etc.  The Physics2D engine should be used to determine a moving gameObject's changing position values. In contrast, moving a gameObject by changing the transform position values is not recommended.  The Rigidbody2D component manages movement of the gameObject's colliders in an optimized manner. 
+![](/assets/Screen Shot 2019-01-17 at 2.47.49 PM.png)
+
+####RigidBody2D
+This component puts a gameObject's movement under control of the Physics2D engine.  The gameObject's movement should be managed using Physics2D methods which can add forces to the object, change the velocity, etc.  The Physics2D engine should be used to determine a moving gameObject's changing position values. In contrast, moving a gameObject by changing the transform position values is not recommended.  The Rigidbody2D component manages movement of the gameObject's colliders in an optimized manner. You will need to expand the Constraints section so you can FreezeRotation for the Z axis as shown in the image above.
 **Any gameObject that will be moving in a scene should have a Rigidbody2D component. **
 
 ####Collider2D Components
-This component gives sprites a physical presence, it gives them a collision boundary, it allows for collision interactions with other gameObjects that also have Collider2D component.  GameObjects that will have any movement during gameplay should have an attached Rigidbody2D component which also manages movement of the object's Collider2D's.  
+This component gives sprites a physical presence, it gives them a collision boundary, it allows for collision interactions with other gameObjects that also have Collider2D component.  GameObjects that will have any movement during gameplay should have an attached Rigidbody2D component which also manages movement of the object's Collider2D's.  Multiple colliders can be used on a single gameObject, if the boundaries overlap, they will act as a composite collider for the gameObject.  Sometimes you may also have a small collider nested within a larger collider, where the outer-collider can function as a trigger, but the inner collider will interact with the floor's collider to keep the object within the scene.
 
 * **IsTrigger** - when checking this checkbox: then this collider **will not display** collision interaction behavior, but it will cause the **OnTriggerEnter2D** event to be exectued. This is often used for sensing movement into zones, or for for objects that will be destroyed.   
 
@@ -47,7 +50,7 @@ This component gives sprites a physical presence, it gives them a collision boun
 2. **Player** gameObject - 2D Sprite GameObject
     * Add **Physics2D &gt; RigidBody2D** Component - this is required for objects that will have **movement**, physics forces should be used to give movement to gameObjects.
     
-    * Add **Physics2D &gt; Collider2D** Components - select 1 or more Colliders to fit your gameObject
+    * Add **Physics2D &gt; Collider2D** Components - select 1 or more Colliders to fit your gameObject.  Select the Edit-collider button to change the size of the collider, manually change the x or y offset.
    
 
 3. Several** **2D Sprite Game Objects: \(objects for the player to interact with - we'll call these **PickUp **objects \)
