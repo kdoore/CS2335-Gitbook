@@ -21,6 +21,7 @@ Images Below from Planet Cute: Star, CatGirl, EnemyBug:
 
 1. Create a new folder: _**textures**_ in the Project / Assets windows by right-clicking and selecting new folder 
 2. Add .png files to your Unity project by dragging each file into the textures folder in your project / assets window. 
+3. When you select an image in your assets folder, the Inspector should show that the **texture-type is Sprite \(2D and UI\)**
 
 #### 2D Sprite GameObject:
 
@@ -28,26 +29,27 @@ Select GameObject in the top menu, select: GameObject&gt; 2D Object&gt; Sprite, 
 
 #### Collider2D Components
 
-Gives sprites a collision boundary - allows for collision interactions with other objects, objects with Collider2D have a physical boundary 
+Gives sprites a collision boundary - allows for collision interactions with other objects, objects with Collider2D have a physical boundary
 
 * **IsTrigger** - when checking this checkbox: then this collider **will not display** collision interaction behavior, but it will cause the **OnTriggerEnter2D** event to be exectued. This is often used for sensing movement into zones, or for for objects that will be destroyed.   
 
 ### Create and Configure 2D Sprite GameObjects:
 
-1. Background Image - scale to fill the camera's viewport.
-2. Player gameObject
+1. Background Image - scale to fill the camera's viewport. 
+2. **Player** gameObject
 
-   * Add Physics2D Capsule Collider Component
+   * Add Physics Collider2D Components - select 1 or more Colliders to fit your gameObject
 
-3. Several _PickUp_ objects: \(objects for the player to interact with\)
+3. Several _**PickUp**_** **objects: \(objects for the player to interact with\)
 
-   * Add a Physics2D Collider to each object
+   * Add one or more Physics2D Collider2D components to create a collision-boundry for each object
+   * Select **IsTrigger** checkbox for these collider components.
 
-4. Floor - Create an empty GameObject, attach a  BoxCollider2D, edit the collider so it is a wide rectangle, move toward the bottom of the screen.
+4. **Floor** - Create an empty GameObject, attach a  BoxCollider2D, edit the collider so it is a wide rectangle, move toward the bottom of the screen.
 
-5. PlayerController Script - Simple Version  
-   See the script below
+5. Create C\# Script:  **PlayerController** - Simple Version \(script provided below\)
 
+6. 
 ### Player Controller Script - version 1
 
 ```java
