@@ -4,7 +4,7 @@
 
 After downloading and installing the Unity Editor, Open the Unity application and create a new **2D** project.
 
-#### Download Free Game Art Assets:
+#### Download Some Free Game Art Assets:
 
 **GameArt 2D Free Assets**  
 [Winter Tile Set](https://www.gameart2d.com/winter-platformer-game-tileset.html)
@@ -13,7 +13,7 @@ After downloading and installing the Unity Editor, Open the Unity application an
 
 **Planet Cute** [Planet Cute Zipfile ](https://utdallas.box.com/v/planet-cute-zipfile) - from: [http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
 
-Images Below from Planet Cute: Star, CatGirl, EnemyBug:
+Images Below are from Planet Cute: Star, CatGirl, EnemyBug:
 
 ![](/star.png)![](/Character Cat Girl.png)![](/assets/Enemy Bug.png)
 
@@ -25,7 +25,7 @@ Images Below from Planet Cute: Star, CatGirl, EnemyBug:
 
 #### 2D Sprite GameObject:
 
-Select GameObject in the top menu, select: GameObject&gt; 2D Object&gt; Sprite, this should add a new item in the **Hierarchy panel**.  In the **Inspector panel**, select a sprite image \(from the assets tab\) to associate with this new 2D object by selecting the small circle icon to the right of the Sprite Rendererer Component's **Sprite** field.
+Select GameObject in the top menu, select: GameObject &gt; 2D Object &gt; Sprite, this should add a new item in the **Hierarchy panel**.  Select the new GameObject in the Hierarchy Panel, now the **Inspector panel** should show the details of this new gameObject. To select a sprite image \(from the assets tab\) to associate with this new 2D object, you will select/press the small circle icon to the right of the Sprite Renderer Component's **Sprite** field. This will create a new pop-up window that shows all possible items in the assets that can be selected as the sprite to be rendered.  
 
 #### Collider2D Components
 
