@@ -41,16 +41,25 @@ Gives sprites a collision boundary - allows for collision interactions with othe
    * Add **Physics2D &gt; Collider2D** Components - select 1 or more Colliders to fit your gameObject
    * Add **Physics2D &gt; RigidBody2D** Component - this is required for objects that will have **movement**, physics forces should be used to give movement to gameObjects.
 
-3. Several** **2D Sprite Game Objects: \(objects for the player to interact with - PickUp \)
+3. Several** **2D Sprite Game Objects: \(objects for the player to interact with - we'll call these **PickUp **objects \)
 
    * Add one or more **Physics2D &gt; Collider2D** components to create a collision-boundry for each object
    * Select **IsTrigger** checkbox for these collider components.
 
 4. **Floor** - Create an empty GameObject, attach a  BoxCollider2D, edit the collider so it is a wide rectangle, move toward the bottom of the screen.
 
-5. Create C\# Script:  **PlayerController** - Simple Version \(script provided below\)
+5. Create C\# Script:  **PlayerController** - Simple Version \(script provided below
 
-6. ### Player Controller Script - version 1
+     - Add PlayerController as a Script Component to Player GameObject  
+
+6. Create C\# Script:  **PickUp **
+    - Add PickUp as a Script Component to each PickUp gameObject
+
+7.  Create C\# Script: **GameData **
+
+        - Add GameData as a Script Component to new Empty GameObject - GameData
+
+### Player Controller Script - version 1
 
 ```java
 using System.Collections;
@@ -139,7 +148,7 @@ public class PickUp: MonoBehaviour {
 
     public int value;
     public string type;
-    
+
 }
 ```
 
