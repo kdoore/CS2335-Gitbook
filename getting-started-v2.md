@@ -46,15 +46,14 @@ This component gives sprites a physical presence, it gives them a collision boun
 
 ###Create and Configure 2D Sprite GameObjects:
 
-1. Import a sprite that can be used as a background image - scale to fill the camera's viewport. Objects higher in the Hierarchy panel are rendered behind gameObjects lower in the Hierarchy, however, SortingLayers is the preferred method for ordering sprite layering for rendering. [Unity Tutorial Video on SortingLayers](https://unity3d.com/learn/tutorials/topics/2d-game-creation/sorting-layers)
+1. **Background** Create a 2D Sprite GameObject by selecting a sprite that can be used as a background image - scale to fill the camera's viewport. Objects higher in the Hierarchy panel are rendered behind gameObjects lower in the Hierarchy, however, SortingLayers is the preferred method for ordering sprite layering for rendering. [Unity Tutorial Video on SortingLayers](https://unity3d.com/learn/tutorials/topics/2d-game-creation/sorting-layers)
 
 2. **Player** gameObject - 2D Sprite GameObject
     * Add **Physics2D &gt; RigidBody2D** Component - this is required for objects that will have **movement**, physics forces should be used to give movement to gameObjects.
     
     * Add **Physics2D &gt; Collider2D** Components - select 1 or more Colliders to fit your gameObject.  Select the Edit-collider button to change the size of the collider, manually change the x or y offset.
    
-
-3. Several** **2D Sprite Game Objects: \(objects for the player to interact with - we'll call these **PickUp **objects \)
+3. Create Several** **2D Sprite Game Objects: \(objects for the player to interact with - we'll call these **PickUp **objects \)
 
    * Add one or more **Physics2D &gt; Collider2D** components to create a collision-boundry for each object
    * Select **IsTrigger** checkbox for these collider components.
