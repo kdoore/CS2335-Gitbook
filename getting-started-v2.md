@@ -26,7 +26,7 @@ Images Below are from Planet Cute: Star, CatGirl, EnemyBug:
 
 ####Create a 2D Sprite GameObject - Player:
 
-Select **GameObject** in the top menu, select: **GameObject &gt; 2D Object &gt; Sprite,** this should add a new item in the **Hierarchy panel**.  Select this new gameObject in the Hierarchy Panel,  the **Inspector panel** should show the details of this new gameObject, **rename** the gameObject by typing the 'Player' into the top textbox in the Inspector panel. To **select a sprite** image \(from the assets tab\) to associate with this new 2D object, you will select/press the small circle icon to the right of the Sprite Renderer Component's **Sprite** field. This will create a new pop-up window that shows all possible items in the assets that can be selected as the sprite to be rendered.  
+Select **GameObject** in the top menu, select: **GameObject &gt; 2D Object &gt; Sprite,** this should add a new item in the **Hierarchy panel**.  Select this new gameObject in the Hierarchy Panel,  Now, the **Inspector panel** should show details of this selected gameObject, **rename** the gameObject by typing the 'Player' into the top textbox in the Inspector panel. To **select a sprite** image \(from the assets tab\) to associate with this new 2D object, you will select/press the small circle icon to the right of the Sprite Renderer Component's **Sprite** field. This will create a new pop-up window that shows all possible items in the assets that can be selected as the sprite to be rendered.  
 
 ![](/assets/SelectSpriteImg.png)
 
