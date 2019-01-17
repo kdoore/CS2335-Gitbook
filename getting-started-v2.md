@@ -29,15 +29,18 @@ Select **GameObject** in the top menu, select: **GameObject &gt; 2D Object &gt; 
 
 ![](/assets/SelectSpriteImg.png)
 
+###Physics2D
 
 
-#### Collider2D Components
+###RigidBody2D
+This component 
 
-Gives sprites a collision boundary - allows for collision interactions with other objects, objects with Collider2D have a physical boundary
+####Collider2D Components
+This component gives sprites a physical presence, it gives them a collision boundary, it allows for collision interactions with other gameObjects that also have Collider2D component.
 
 * **IsTrigger** - when checking this checkbox: then this collider **will not display** collision interaction behavior, but it will cause the **OnTriggerEnter2D** event to be exectued. This is often used for sensing movement into zones, or for for objects that will be destroyed.   
 
-### Create and Configure 2D Sprite GameObjects:
+###Create and Configure 2D Sprite GameObjects:
 
 1. Background Image - scale to fill the camera's viewport. 
 2. **Player** gameObject - 2D Sprite GameObject
