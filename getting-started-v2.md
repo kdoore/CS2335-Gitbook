@@ -36,21 +36,21 @@ Gives sprites a collision boundary - allows for collision interactions with othe
 ### Create and Configure 2D Sprite GameObjects:
 
 1. Background Image - scale to fill the camera's viewport. 
-2. **Player** gameObject
+2. **Player** gameObject - 2D Sprite GameObject
 
-   * Add Physics Collider2D Components - select 1 or more Colliders to fit your gameObject
+   * Add **Physics2D &gt; Collider2D** Components - select 1 or more Colliders to fit your gameObject
+   * Add **Physics2D &gt; RigidBody2D** Component - this is required for objects that will have **movement**, physics forces should be used to give movement to gameObjects.
 
-3. Several _**PickUp**_** **objects: \(objects for the player to interact with\)
+3. Several** **2D Sprite Game Objects: \(objects for the player to interact with - PickUp \)
 
-   * Add one or more Physics2D Collider2D components to create a collision-boundry for each object
+   * Add one or more **Physics2D &gt; Collider2D** components to create a collision-boundry for each object
    * Select **IsTrigger** checkbox for these collider components.
 
 4. **Floor** - Create an empty GameObject, attach a  BoxCollider2D, edit the collider so it is a wide rectangle, move toward the bottom of the screen.
 
 5. Create C\# Script:  **PlayerController** - Simple Version \(script provided below\)
 
-6. 
-### Player Controller Script - version 1
+6. ### Player Controller Script - version 1
 
 ```java
 using System.Collections;
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
 }  // end class
 ```
 
-### GameData
+### GameData - version1
 
 ```java
 using System.Collections;
@@ -125,6 +125,21 @@ public class GameData : MonoBehaviour {
         health -= points;
         Debug.Log("Health updated " + health);
     }
+}
+```
+
+### PickUp - version1
+
+```java
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PickUp: MonoBehaviour {
+
+    public int value;
+    public string type;
+    
 }
 ```
 
