@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D myRBody2D;
     public float forceX = 100f;
 
-    void Awake()
+    void Awake()   
     {
        myRBody2D = GetComponent<Rigidbody2D>();
     }
