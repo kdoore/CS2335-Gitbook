@@ -51,6 +51,7 @@ This component gives sprites a physical presence, it gives them a collision boun
 **Sorting Layers** is the preferred method for ordering sprite layering for rendering. [Unity Tutorial Video on SortingLayers](https://unity3d.com/learn/tutorials/topics/2d-game-creation/sorting-layers)
 
 2. **Player** Create a 2D Sprite GameObject
+    * Select desired sprite from the Assets for the SpriteRenderer component's sprite field (as detailed above).
     * Add **Physics2D &gt; RigidBody2D** Component - this is required for objects that will have **movement**, physics forces should be used to give movement to gameObjects.
     
     * Add **Physics2D &gt; Collider2D** Components - select 1 or more Colliders to fit your gameObject.  Select the Edit-collider button to change the size of the collider, manually change the x or y offset.
