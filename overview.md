@@ -36,7 +36,9 @@ For a simple 2D game, we'll focus on simple 2D game-mechanics and UI-display of 
 
 4. **User Interface - Stats** - Stats Displays - Display changing score, health, inventory to give player feedback about game-play actions.
 
-5. **Game-Manager** - 
+5. **Game-Manager** 
+
+
 
 
 **References:**
