@@ -21,6 +21,8 @@
 
 [Sprite Sheet Animation Tutorial ](http://michaelcummings.net/mathoms/creating-2d-animated-sprites-using-unity-4.3)
 
+[Ground-Check Tutorial](https://kylewbanks.com/blog/unity-2d-checking-if-a-character-or-object-is-on-the-ground-using-raycasts)
+
 **Unity Animator Tutorial**  
 Player Sprite Sheeet:   
 Link to download and Tutorial: [https://www.youtube.com/watch?v=TU6wflRqT5Q](https://www.youtube.com/watch?v=TU6wflRqT5Q)
