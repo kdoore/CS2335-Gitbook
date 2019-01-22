@@ -14,6 +14,7 @@
 
 ## Project 1 - Simple Game
 
+* [Overview](overview.md)
 * [Getting Started](getting-started-v2.md)
 
 ## Project 2 - Scene UI Design
