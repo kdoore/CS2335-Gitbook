@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()   
     {
-       myRBody2D = GetComponent<Rigidbody2D>();
+       myRBody2D = GetComponent<Rigidbody2D>(); //variable allows access to the RigidBody2D component on Player
     }
 
     void FixedUpdate()
