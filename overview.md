@@ -7,11 +7,9 @@ The Mechanics Dynamics Aesthetics Framework for design of game:
 
 Mechanics - a "mechanic", something that connects players' actions with the purpose of the game and its main challenges.[Defining Game Mechanics - Michael Sicart GameStudies.org ](http://gamestudies.org/0802/articles/sicart)
 
-Dynamics - 
+What are Game Mechanics? [http://www.lostgarden.com/2006/10/what-are-game-mechanics.html](http://www.lostgarden.com/2006/10/what-are-game-mechanics.html)
 
-Aesthetics - 
-
-For the most simple type of 2D game, can include:
+For the most simple type of 2D game, we'll focus on simple 2D game mechanics:
 
 1.  A **Player** gameObject that can be **controlled by the user** to **interact** with other objects in the game-world.
 
