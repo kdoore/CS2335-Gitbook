@@ -9,6 +9,8 @@
 
 ### Unity 2D Game Design Tutorials:
 
+[David Arcila - Game Design Resources](https://game-development.zeef.com/david.arcila)
+
 [Unity Cheat Sheet](https://www.raywenderlich.com/181367/unity-cheat-sheet-quick-reference-2018)
 
 [Unity Tutorials - RayWenderlich.com](https://www.raywenderlich.com/category/unity)
