@@ -4,20 +4,24 @@ Games: “A game is a voluntary interactive activity, in which one or more playe
 
 A system that encourages learning through strong feedback mechanisms is a game. [ Daniel Cook](http://www.lostgarden.com/2006/10/what-are-game-mechanics.html)
 
-The Mechanics Dynamics Aesthetics Framework for design of game:
-
 Mechanics - a "mechanic", something that connects players' actions with the purpose of the game and its main challenges.[Defining Game Mechanics - Michael Sicart GameStudies.org ](http://gamestudies.org/0802/articles/sicart)
 
 What are Game Mechanics? [http://www.lostgarden.com/2006/10/what-are-game-mechanics.html](http://www.lostgarden.com/2006/10/what-are-game-mechanics.html)
 
-For the most simple type of 2D game, we'll focus on simple 2D game mechanics, and UI display to provide feedback to the player:
+For the most simple type of 2D game, we'll focus on simple 2D game mechanics, and UI- StatsDisplay to provide feedback to the player:
 
 1.  A **Player** gameObject that can be **controlled by the user** to **interact** with other objects in the game-world.
 
-    1.  User-Input: Input-Events control movement
-    2.  Interaction:  Collision-Events modify: Score, Health, Collected Items, etc.
+    1.  User-Input: **Input-Events** control **movement**
+    2.  Interaction:  **Collision-Events modify: Score, Health,** Collected Items, etc.
     
-2. 
+2. **PickUp objects**: gameObjects that the Player gameObject interacts with to change the game's data.
+    1. Interaction:  Collision-Events - destroy or inactivate gameObject 
+    2. Movement - 
+
+3. **GameData** - Singleton gameObject to store score, health, etc.
+
+4. **User Interface** - Stats Displays - Display changing score, health, inventory to give player feedback about game-play actions.
 
 
 **References:**
