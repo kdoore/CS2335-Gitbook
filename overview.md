@@ -1,4 +1,6 @@
-#Overview
+#Project 1 - Overview
+
+In Project 1, we will create a very simple game so we can become familiar with the Unity Editor and using custom scripts to create GameObjects with custom behaviors.
 
 **Games: **
 
@@ -12,11 +14,12 @@
 
 >Game mechanics are concerned with the actual interaction with the game state, while rules provide the possibility space where that interaction is possible, regulating as well the transition between states. In this sense, rules are modeled after agency, while mechanics are modeled for agency.
 
-In this object-oriented framework, **rules** could be considered general or particular **properties of the game system and its agents**. **All objects in games have properties**. These **properties are **often either** rules or determined by rules**. These **rules are evaluated by a game loop**, an algorithm that relates the current state of the game and the properties of the objects with a number of conditions that consequently can **modify the game state.** For example, the winning condition, the losing condition and the effects of action in the player's avatar health are calculated when running the game loop. This **algorithm relates rules with mechanics**, exemplifying the applicability of an ontological distinction between rules and mechanics.
+>In this object-oriented framework, **rules** could be considered general or particular **properties of the game system and its agents**. **All objects in games have properties**. These **properties are **often either** rules or determined by rules**. These **rules are evaluated by a game loop**, an algorithm that relates the current state of the game and the properties of the objects with a number of conditions that consequently can **modify the game state.** For example, the winning condition, the losing condition and the effects of action in the player's avatar health are calculated when running the game loop. This **algorithm relates rules with mechanics**, exemplifying the applicability of an ontological distinction between rules and mechanics.
 [Michael Sicart](http://gamestudies.org/0802/articles/sicart)
 
-**Simple 2D Game**
-For a simple 2D game, we'll focus on simple 2D game-mechanics, and UI-display of game-stats to provide feedback to the player:
+
+###Simple Game Objects
+For a simple 2D game, we'll focus on simple 2D game-mechanics and UI-display of game-stats to provide feedback to the player:
 
 **GameObjects:**
 
@@ -24,8 +27,6 @@ For a simple 2D game, we'll focus on simple 2D game-mechanics, and UI-display of
 
     -  User-Input: **Input-Events** control **movement**
     -  Interaction:  **Collision-Events modify: Score, Health,** Collected Items, etc.
-    
-    Rules:  
     
 2. **PickUp objects**: gameObjects that the Player gameObject interacts with to change the game's data.
     - Interaction:  Collision-Events - destroy or inactivate gameObject 
