@@ -23,7 +23,7 @@ For a simple 2D game, we'll focus on simple 2D game-mechanics and UI-display of 
 
 **GameObjects:**
 
-1.  A **Player** gameObject that can be **controlled by the user** to **interact** with other objects in the game-world.
+1.  A **Player** gameObject (see image below) that can be **controlled by the user** to **interact** with other objects in the game-world.
 
     -  User-Input: **Input-Events** control **movement**
     -  Interaction:  **Collision-Events modify: Score, Health,** Collected Items, etc.
@@ -38,6 +38,16 @@ For a simple 2D game, we'll focus on simple 2D game-mechanics and UI-display of 
 
 5. **Game-Manager** 
 
+
+###Player GameObject - Component Details
+The image below shows the general behaviors controlled by each component on the Player gameObject.
+  
+**User-Input controls GameObject movement :** The PlayerController script controls how user-input events are used to control the Player gameObject's movement by interacting with the RigidBody2D component.  
+
+
+  The PlayerController script 
+
+![](/assets/Screen Shot 2019-01-22 at 3.54.08 PM.png)
 
 
 
