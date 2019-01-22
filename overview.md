@@ -34,7 +34,7 @@ For a simple 2D game, we'll focus on simple 2D game-mechanics and UI-display of 
 
 3. **GameData** - Singleton gameObject to store score, health, etc.
 
-4. **User Interface - Stats** - Stats Displays - Display changing score, health, inventory to give player feedback about game-play actions.
+4. **User Interface ** - Game-Stats Display - Display changing score, health, inventory to give player feedback about game-play actions.
 
 5. **Game-Manager** 
 
