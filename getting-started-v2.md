@@ -44,7 +44,7 @@ This component gives sprites a physical presence, it gives them a collision boun
 
 * **IsTrigger** - when checking this checkbox: then this collider **will not display** collision interaction behavior, but it will cause the **OnTriggerEnter2D** event to be exectued. This is often used for sensing movement into zones, or for for objects that will be destroyed.   
 
-###Create and Configure 2D Sprite GameObjects:
+###Steps to Create and Configure 2D Sprite GameObjects:
 
 1. **Background** Create a 2D Sprite GameObject by selecting a sprite that can be used as a background image - scale to fill the camera's viewport. Objects higher in the Hierarchy panel are rendered behind gameObjects lower in the Hierarchy, however, SortingLayers is the preferred method for ordering sprite layering for rendering. [Unity Tutorial Video on SortingLayers](https://unity3d.com/learn/tutorials/topics/2d-game-creation/sorting-layers)
 
@@ -53,23 +53,25 @@ This component gives sprites a physical presence, it gives them a collision boun
     
     * Add **Physics2D &gt; Collider2D** Components - select 1 or more Colliders to fit your gameObject.  Select the Edit-collider button to change the size of the collider, manually change the x or y offset.
    
-3. Create Several** **2D Sprite Game Objects: \(objects for the player to interact with - we'll call these **PickUp **objects \)
+   - Create C\# Script:  **PlayerController** - Simple Version \(script provided below
+  - Add PlayerController as a Script Component to Player GameObject  
 
-   * Add one or more **Physics2D &gt; Collider2D** components to create a collision-boundry for each object
-   * Select **IsTrigger** checkbox for these collider components.
+###Other GameObjects:
 
-4. **Floor** - Create an empty GameObject, attach a  BoxCollider2D, edit the collider so it is a wide rectangle, move toward the bottom of the screen.
+1. ** Pickup:**
+Create Several 2D Sprite Game Objects: \(objects for the player to interact with - we'll call these **PickUp **objects \)
+    - Add one or more **Physics2D &gt; Collider2D** components to create a collision-boundry for each object
+    - Select **IsTrigger** checkbox for these collider components.
+    - Create C\# Script:  **PickUp **
+        - Add PickUp as a Script Component to each PickUp gameObject
+    - Create a **Prefab** from each type of PickUp object
 
-5. Create C\# Script:  **PlayerController** - Simple Version \(script provided below
+2. **GameData:** Create C\# Script: **GameData **
+         - Add GameData as a Script Component to new Empty GameObject named: GameData
 
-     - Add PlayerController as a Script Component to Player GameObject  
+3. **Floor** - Create an empty GameObject, attach a  BoxCollider2D, edit the collider so it is a wide rectangle, move toward the bottom of the screen.
 
-6. Create C\# Script:  **PickUp **
-    - Add PickUp as a Script Component to each PickUp gameObject
 
-7.  Create C\# Script: **GameData **
-
-        - Add GameData as a Script Component to new Empty GameObject - GameData
 
 ### Player Controller Script - version 1
 
