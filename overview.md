@@ -50,7 +50,6 @@ The PlayerController script works with the Collider2D component to  determine wh
 ![](/assets/Screen Shot 2019-01-22 at 3.54.08 PM.png)
 
 
-
 **References:**
 
 Zimmerman, E. Narrative, Interactivity, Play, and Games. In Wardrip-Fruin, N. & Harrigan, P. (eds), First
