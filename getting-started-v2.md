@@ -54,6 +54,7 @@ This component gives sprites a physical presence, it gives them a collision boun
     * Add **Physics2D &gt; Collider2D** Components - select 1 or more Colliders to fit your gameObject.  Select the Edit-collider button to change the size of the collider, manually change the x or y offset.
    
    - Create C\# Script:  **PlayerController** - Simple Version \(script provided below
+   
   - Add PlayerController as a Script Component to Player GameObject  
 
 ###Other GameObjects:
