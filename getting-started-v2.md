@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
         if (isWalking)
         {
             myRBody2D.velocity = new Vector2(0, 0);  // reset velocity to 0
-            myRBody2D.AddForce(new Vector2(forceX * inputX, 0)); update x component velocity by adding a force, nothing happens to y velocity
+            myRBody2D.AddForce(new Vector2(forceX * inputX, 0)); //update x component velocity by adding a force, nothing happens to y velocity
         }
     }
 
