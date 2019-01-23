@@ -25,3 +25,13 @@ In C#, a child class can inherit from a parent / base class.  The syntax uses a 
 ### Generic Types
 
 ### Object Constructors
+
+###SerializeField Attribute
+SerializeField attribute allows you to have private script variables that will be visible in the Inspector. This allows setting values in the editor without giving access to the variable from within other scripts.
+  
+
+```java
+ [SerializeField]
+    private string description;
+```
+
