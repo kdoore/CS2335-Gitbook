@@ -15,13 +15,21 @@
 
 [Unity Tutorials - RayWenderlich.com](https://www.raywenderlich.com/category/unity)
 
-[Unity Power-up system](https://www.raywenderlich.com/171511/make-power-system-unity)
+- [Unity Power-up system](https://www.raywenderlich.com/171511/make-power-system-unity)
+
+- [groundCheck, particle system, parallax](https://www.raywenderlich.com/5459-how-to-make-a-game-like-jetpack-joyride-in-unity-2d-part-2):  
+
+- [Unity 2D Tile System](https://www.raywenderlich.com/23-introduction-to-the-new-unity-2d-tilemap-system)
+
+- [sounds](https://www.raywenderlich.com/6449-introduction-to-unity-sound) 
 
 [Unity 2D Character Animation Tutorial - John Stejskal](http://johnstejskal.com/wp/creating-2d-animations-from-sprite-sheets-in-unity3d/)
 
 [Sprite Sheet Animation Tutorial ](http://michaelcummings.net/mathoms/creating-2d-animated-sprites-using-unity-4.3)
 
 [Ground-Check Tutorial](https://kylewbanks.com/blog/unity-2d-checking-if-a-character-or-object-is-on-the-ground-using-raycasts)
+
+
 
 **Unity Animator Tutorial**  
 Player Sprite Sheeet:   
