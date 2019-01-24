@@ -16,6 +16,8 @@
 
 * [Overview](overview.md)
 * [Getting Started](getting-started-v2.md)
+* [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
+* [PickUp PreFabs](pickup_items.md)
 
 ## Project 2 - Scene UI Design
 
@@ -51,7 +53,6 @@
 
 ## Mini-Game
 
-* [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
 * [Sorting Layers to control sprite render ordering.](background-image-add-sorting-layers.md)
 * [Text Input](text_input.md)
 * [Game Scene](game_scene.md)
@@ -59,7 +60,6 @@
 * [Animator Controller](animation_controller.md)
   * [Animation Steps](animation_controller/animation-steps.md)
 * [MiniGame - Scene/State](minigame_-_view.md)
-* [PickUp PreFabs](pickup_items.md)
 * [GameData - Simple](gamedata-simple.md)
   * [Game-Data - C\# Events - Complex Version](game-data_model.md)
     * [Player Data - EventArgs](player-data-eventargs.md)
