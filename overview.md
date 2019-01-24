@@ -17,6 +17,12 @@ In Project 1, we will create a very simple game so we can become familiar with t
 >In this object-oriented framework, **rules** could be considered general or particular **properties of the game system and its agents**. **All objects in games have properties**. These **properties are **often either** rules or determined by rules**. These **rules are evaluated by a game loop**, an algorithm that relates the current state of the game and the properties of the objects with a number of conditions that consequently can **modify the game state.** For example, the winning condition, the losing condition and the effects of action in the player's avatar health are calculated when running the game loop. This **algorithm relates rules with mechanics**, exemplifying the applicability of an ontological distinction between rules and mechanics.
 [Michael Sicart](http://gamestudies.org/0802/articles/sicart)
 
+###Game Requirements:
+A simple list of essential game components could be: 
+
+1. Player Interaction
+2. Win / Lose condition
+3. Feedback
 
 ###Simple Game Objects
 For a simple 2D game, we'll focus on simple 2D game-mechanics and UI-display of game-stats to provide feedback to the player:
