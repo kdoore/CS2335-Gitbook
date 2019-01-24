@@ -84,6 +84,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+////attribute: only allows 1 instance of component on any gameObject 
+[DisallowMultipleComponent] 
+
+
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D myRBody2D;
@@ -158,6 +162,9 @@ public class GameData : MonoBehaviour {
 ### PickUp - version1
 
 ```java
+////attribute only allows 1 instance of component on any gameObject 
+[DisallowMultipleComponent] 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
