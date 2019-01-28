@@ -67,7 +67,6 @@ public class GameData : MonoBehaviour
             Debug.Log ("Destroy GameObject");
         }
 
-       
     // Use this for initialization
     void Start ()
     {
@@ -88,10 +87,8 @@ public class GameData : MonoBehaviour
         if(health < 0){
             Debug.Log("GameOver due to low health");
         }
-    }
-   
-
-}
+    }  
+} //end GameData version1
 ```
 
 
