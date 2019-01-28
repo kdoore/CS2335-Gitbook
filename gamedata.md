@@ -4,16 +4,12 @@ In the game we'll need an object that is persisted throughout the gameplay sessi
 
 Below is a simple class definition for GameData, we'll add more to this as we progress.
 
-This script will be attached to the GameManager in the BeginScene and will be persisted throughout the game since it uses the singleton design pattern.
+This script will be attached to the GameManager in the first game Scene and will be persisted throughout the game since it uses the singleton design pattern.
 
-Add GameData script to an Empty GameObject: GameManager in your starting scene, so it will be executed as a singleton and shows up as 'DontDestroyOnLoad' in the Hierarchy when the game is played.
-
-**Add to GameData to GameManager in Start Scene**
-![](/assets/Screen Shot 2018-11-08 at 12.33.45 PM.png)
+**Add GameData script to an Empty GameObject:** GameManager in your starting scene, so it will be executed as a singleton and shows up as 'DontDestroyOnLoad' in the Hierarchy when the game is played.
 
 **DontDestroyOnLoad - in Play-mode**
 ![](/assets/Screen Shot 2018-11-08 at 12.35.36 PM.png)
-
 
 **How to use GameData Singleton**
 To use the singleton reference in another class use the following syntax, for example, when calling the Add method from the PlayerController script:
