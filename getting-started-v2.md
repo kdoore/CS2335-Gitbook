@@ -79,15 +79,18 @@ Create Several 2D Sprite Game Objects: \(objects for the player to interact with
 4.  **PlayerStats:** [ Create c\# Script: PlayerStatsDisplay
 ](/playerstatsdisplay-version1.md) 
 
-5.  **Utility**  [Create C\# Script: Utility](/utility_-_static_class.md)
+5.  **Utility**  [Create C\# Script: Utility](/utility_-_static_class.md) - This script does not inherit from MonoBehaviour, it will not be put on a gameObject in any scenes, it's code will be accessible to other scripts using the class name, and then the desired method to be exectued:  `Utility.ShowCG( somePanel );`
 
-6. **Spawner** [Create C\# Script: Spawner](/project-3/simple-spawner.md)
+6. **Spawner** [Create C\# Script: Spawner](/project-3/simple-spawner.md) Add Script to an Empty GameObject:  **Spawner**
 
-### Player Controller Script - version 1
+
+##Links To Code
+
+###Player Controller Script - version 1
 
 See Link [PlayerController - Version1:](/player_gameobject.md)
 
-##GameData - Version1
+###GameData - Version1
 
 See link:[ GameData-Version1:](/gamedata-simple.md)
 
