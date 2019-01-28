@@ -24,7 +24,9 @@ See the following Pages for more info on working with UI Elements:
     - Resize the Panel and Use the Rect-Transform component to set the Panel's anchors to the top of the canvas.
   - Add UI-Text element: name it: ** ScoreText **
   - Use Rect-Transform Component panel to set the  anchors of the ScoreText so it is aligned to the Left Side of the Panel.  
-      
+ 
+Attach the PlayerStats script to the ScorePanel gameObject.  Populate the Inspector fields: ScoreText and HealthText in the Inspector using the ScoreText and HealthText GameObjects.
+                      
 ###PlayerStats.cs:
 
 ```java
