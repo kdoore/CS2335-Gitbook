@@ -22,6 +22,7 @@
 * [Player GameObject](player_gameobject.md)
 * [GameData Version1](gamedata.md)
 * [PlayerStatsDisplay - Version1](playerstatsdisplay-version1.md)
+* [Utility - Static Class](utility_-_static_class.md)
 * [Simple Spawner](simple-spawner.md)
 
 ## Project 2 - Scene UI Design
@@ -34,7 +35,6 @@
     * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
     * [UI-Panel Toggle Visibility](ui-panel_toggle_visibility.md)
     * [HidePanel Script](project-1-score-and-ui-elements/hidepanel-script.md)
-  * [Utility - Static Class](utility_-_static_class.md)
   * [Simple Dialog Prefab](simple-dialog-prefab.md)
   * [SimpleDialog\_version2](simple-dialog-prefab/simpledialogversion2.md)
   * [DialogManager using UnityEvent](dialogue-and-scene-decision-integration.md)

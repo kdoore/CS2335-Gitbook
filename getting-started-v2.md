@@ -74,10 +74,14 @@ Create Several 2D Sprite Game Objects: \(objects for the player to interact with
 
 3. **GameData:** [Create C\# Script: **GameData **
 ](/gamedata-simple.md) 
-         - Add GameData as a Script Component to new Empty GameObject named: GameManager
+         - Add GameData as a Script Component to new Empty GameObject named: **GameManager**
 
-4.  **PlayerStats:**  Create c\# Script: PlayerStatsDisplay
+4.  **PlayerStats:** [ Create c\# Script: PlayerStatsDisplay
+](/playerstatsdisplay-version1.md) 
 
+5.  **Utility**  [Create C\# Script: Utility](/utility_-_static_class.md)
+
+6. **Spawner** [Create C\# Script: Spawner](/project-3/simple-spawner.md)
 
 ### Player Controller Script - version 1
 

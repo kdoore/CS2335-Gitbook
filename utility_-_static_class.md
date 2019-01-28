@@ -15,14 +15,13 @@ Notice, the class is marked as static and each method is also marked as public s
 CanvasGroup someCG = GameObject.Find("SomePanel").GetComponent<CanvasGroup>();
 Utility.ShowCG( someCG );
 
-
 ```
 
 ###Utility.cs Class
 ```java
 
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; //make sure to add this
 using System.Collections;
 
 public static class Utility
