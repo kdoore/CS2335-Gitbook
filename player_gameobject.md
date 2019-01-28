@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour {
             if (hitObject.CompareTag ("Collectible")) {
                 Debug.Log ("Hit Collectible");
                 PickUp item = hitObject.GetComponent<PickUp> ();                
-                GameData.instanceRef.Add(item.value);
+                 GameData.instanceRef.Add(item.value);
                  Destroy (hitObject.gameObject);
              }
             else if(hitObject.CompareTag("Hazard")){
