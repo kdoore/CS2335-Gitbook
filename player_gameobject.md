@@ -4,18 +4,10 @@
 
 To create a player character, we need to create a gameObject =&gt;  2D Sprite. Then, we can set the sprite-Renderer component to refer to an image that we've added to our project assets folder.  To import an image as a 2D sprite, you select the image in the assets panel and set the component: texture-type set to \*Sprite\(2D - UI\).
 
-Below are some example open-source game sprites that you can download to use in your proejct, these sprites are from:  [Daniel Cook's Planet Cute](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
-
-![](girl1.png)![](healthheart.png)  
-![](star.png)
-
 ### Moving GameObjects: RigidBody2D
 
 Then we need to attach a RigidBody2D component to our Girl-player gameObject.  The [Unity Manual](http://docs.unity3d.com/ScriptReference/Rigidbody2D.html) explains that we need to add a RigidBody2D component so that we can use the Unity Physics Engine to move our Girl-player in the scene.  We can update the player's RigidBody.velocity or add a force to the RigidBody2D each frame in response to the user key-presses, to cause the gameObject to move in a realistic way.
 
-### Canvas Mode:  Screen-Space Camera
-
-Since we are using sprites to create a game in this scene, we'll need to change our camera settings to allow us to also use UI-objects that will be on a Canvas GameObject. Add a UI-Text GameObject to the scene.  If you double click on your text, you'll see that the scaling for the canvas does not match the scaling for the sprites we've used to create the scene.
 
 ### Custom Sorting Layers
 
@@ -30,45 +22,35 @@ In the PlayerMove code below, we write code to allow the user to move the player
  Rigidbodies enable your GameObjects to act under the control of physics. The Rigidbody can receive forces and torque to make your objects move in a realistic way.  
 [Rigidbody 2D](http://docs.unity3d.com/Manual/class-Rigidbody2D.html), the difference that in 2D, objects can only move in the XY plane and can only rotate on an axis perpendicular to that plane.  Remember to set gravity to 0 if you don't want it to impact your objects.
 
-### Colliders
+### 2D-Colliders
 
-[Collider interactions](http://docs.unity3d.com/Manual/CollidersOverview.html)  Colliders interact with each other differently depending on how the collider and Rigidbody components are configured. The three important configurations are the Static Collider \(ie, no Rigidbody is attached at all\), the Rigidbody Collider and the Kinematic Rigidbody Collider.  Collider Components define the shape of an object for the purposes of physical collisions. A collider, which is invisible, does not have to be the exact same shape as the object’s mesh. A GameObject that has a Collider but no RigidBody component will act like an immovable object that other objects can run into, the collider gives the gameObject a physical presence in the scene.  When `isTrigger` is selected, then the collider does not show physics-based collision behavior, instead, an event is generated that can be used to execute related actions or behaviors.
+[Collider interactions](http://docs.unity3d.com/Manual/CollidersOverview.html)  Colliders interact with each other differently depending on how the Collider and Rigidbody components are configured. Collider Components define the shape of an object for the purposes of physical collisions. A collider, which is invisible, does not have to be the exact same shape as the object’s mesh. A GameObject that has a Collider but no RigidBody component will act like an immovable object that other objects can run into, the collider gives the gameObject a physical presence in the scene.  When `isTrigger` is selected, then the collider does not show physics-based collision behavior, instead, an event is generated that can be used to execute related actions or behaviors.
 
 ## PlayerController.cs Code:  Attached to the Player Sprite
-###Version 1 - Does not include animation, or score logic.
+###Version 1 - Does not include animation
+
+###PickUp objects must have Tags: 
+PickUp items must have Tags set to match logic in PlayerController.cs:  **Collectible, Hazard**
 
 The code in the PlayerController.cs file is responsible for checking for user-input, determining if the input should cause the player-gameObject to move, and for determining actions or game-logic to be executed if the player-gameObject collides with other gameObjects.
 
-PlayerController.cs
+###PlayerController.cs
 
-```
+```java
 using UnityEngine;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-
-        private Transform myTransform;
-        private Rigidbody2D myRBody2D;
+        private Rigidbody2D rb2D;
         public float forceX;
         private bool facingRight; 
-        private LevelManager levelManager;
-	private PlayerStatsDisplay statsDisplay;
-
-
-        void Awake ()
-        {
-            myTransform = GetComponent<Transform> ();
-            myRBody2D = GetComponent<Rigidbody2D> ();
-
-        }
-
+            
         void Start ()
         {
+            rb2D = GetComponent<Rigidbody2D> ();
             facingRight = true;
             forceX = 50f;
-            levelManager = GameObject.Find ("LevelManager").GetComponent<LevelManager> ();
-	     statsDisplay = GameObject.Find ("UIScorePanel").GetComponent<PlayerStatsDisplay> ();
         }
 
         void FixedUpdate ()
@@ -85,8 +67,8 @@ public class PlayerController : MonoBehaviour {
                     flip ();
                     Debug.Log ("flip left");
                 }
-                myRBody2D.velocity = new Vector2 (0, 0);  // reset velocity to 0
-                myRBody2D.AddForce (new Vector2 (forceX * inputX, 0));
+                rb2D.velocity = new Vector2 (0, 0);  // reset velocity to 0
+                rb2D.AddForce (new Vector2 (forceX * inputX, 0));
             } 
 
         }
@@ -94,27 +76,30 @@ public class PlayerController : MonoBehaviour {
         void flip ()
         {
             facingRight = !facingRight;
-            Vector3 theScale = myTransform.localScale;
+            Vector3 theScale = transform.localScale;
             theScale.x *= -1;
-            myTransform.localScale = theScale;
+            transform.localScale = theScale;
         }
 
         ////This is the EVENT that DRIVES the MiniGame, Player colliding with Pickup Objects
         void OnTriggerEnter2D (Collider2D hitObject)
         {
-            Debug.Log ("Entered Trigger");
-            if (hitObject.CompareTag ("PickUp")) {
-                Debug.Log ("Hit Pickup");
-                PickUp item = hitObject.GetComponent<PickUp> ();
-                GameData.instanceRef.Add (item);
-  	        levelManager.checkLevelEnd (item); //event: send item and notification to levelManager
-		statsDisplay.NotifyScoreUpdate (); //notify of score event
-		
-            Destroy (hitObject.gameObject);
-            } else {
+            if (hitObject.CompareTag ("Collectible")) {
+                Debug.Log ("Hit Collectible");
+                PickUp item = hitObject.GetComponent<PickUp> ();                
+                GameData.instanceRef.Add(item.value);
+                 Destroy (hitObject.gameObject);
+             }
+            else if(hitObject.CompareTag("Hazard")){
+                Debug.Log ("Hit Hazard");
+                GameData.instanceRef.TakeDamage( item.value);
+                Destroy (hitObject.gameObject);
+            }
+            else {
                 Debug.Log ("collided with some other object");
             }
-        }
+        } //end OnTriggerEnter2D
+        
     }  // end class
 ```
 
