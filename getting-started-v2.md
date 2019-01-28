@@ -85,60 +85,11 @@ Create Several 2D Sprite Game Objects: \(objects for the player to interact with
 
 ### Player Controller Script - version 1
 
-```java
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-////attribute: only allows 1 instance of component on any gameObject 
-[DisallowMultipleComponent] 
-
-
-public class PlayerController : MonoBehaviour
-{
-    private Rigidbody2D myRBody2D;
-    public float forceX = 100f;
-
-    void Awake()   
-    {
-       myRBody2D = GetComponent<Rigidbody2D>(); //variable allows access to the RigidBody2D component on Player
-    }
-
-    void FixedUpdate()
-    {
-        float inputX = Input.GetAxis("Horizontal");
-        bool isWalking = Mathf.Abs(inputX) > 0;
-
-        if (isWalking)
-        {
-            myRBody2D.velocity = new Vector2(0, 0);  // reset velocity to 0
-            myRBody2D.AddForce(new Vector2(forceX * inputX, 0)); //update x component velocity by adding a force, nothing happens to y velocity
-        }
-    }
-
-    ////This is the EVENT that DRIVES the MiniGame, Player colliding with Pickup Objects
-    //Custom Tags: Collectible and Hazard must be created in Unity and added to the PickUp objects.
-    void OnTriggerEnter2D(Collider2D hitObject)
-    {
-        Debug.Log("Entered Trigger");
-
-        if (hitObject.CompareTag("Collectible"))
-        {
-            Debug.Log("Hit Collectible");
-            Destroy(hitObject.gameObject);
-        }
-        else if(hitObject.CompareTag("Hazard"))
-        {
-            Debug.Log("collided with Hazard");
-            Destroy(hitObject.gameObject);
-        }
-    }
-}  // end class
-```
+See Link [PlayerController - Version1:](/player_gameobject.md)
 
 ##GameData - Version1
 
-[See link GameData-Version1:](/gamedata-simple.md)
+See link:[ GameData-Version1:](/gamedata-simple.md)
 
 
 
