@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour {
         {
             rb2D = GetComponent<Rigidbody2D> ();
             facingRight = true;
-            forceX = 50f;
+            forceX = 90f;
         }
 
         void FixedUpdate ()
@@ -90,8 +90,9 @@ public class PlayerController : MonoBehaviour {
         {
             if (hitObject.CompareTag ("Collectible")) {
                 Debug.Log ("Hit Collectible");
-                PickUp item = hitObject.GetComponent<PickUp> ();                
-                 GameData.instanceRef.Add(item.value);
+                PickUp item = hitObject.GetComponent<PickUp> ();  
+                //Pass the full PickUp component to GameData              
+                 GameData.instanceRef.Add(item );
                  Destroy (hitObject.gameObject);
              }
             else if(hitObject.CompareTag("Hazard")){
