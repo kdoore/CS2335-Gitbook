@@ -25,6 +25,36 @@ See the following Pages for more info on working with UI Elements:
   - Add UI-Text element: name it: ** ScoreText **
   - Use Rect-Transform Component panel to set the  anchors of the ScoreText so it is aligned to the Left Side of the Panel.  
       
+###PlayerStats.cs:
 
+```java
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PlayerStats : MonoBehaviour {
+
+    //make connection with Text elements in the inspector
+    public  Text healthText, scoreText;
+    // Use this for initialization
+
+    void Start()
+    {
+        healthText.text = "Health" + GameData.instanceRef.Health;  
+        scoreText.text = "Score" + GameData.instanceRef.Score;  
+    }
+
+    void Update(){ //called every frame - polling to see if data changed
+        healthText.text = "Health" + GameData.instanceRef.Health;
+        scoreText.text = "Score" + GameData.instanceRef.Score;
+    }
+
+
+}
     
+```
+
+
     
