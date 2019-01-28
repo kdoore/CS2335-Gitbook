@@ -46,7 +46,7 @@ public bool activeSpawning = false;
 void Start()
 {
 	activeSpawning = true;
-	StartSpawning (); //call in LevelManager
+	StartSpawning (); //can be called from a Game-controller type class when using a StartGame button.
 }
 
 public void StartSpawning()
