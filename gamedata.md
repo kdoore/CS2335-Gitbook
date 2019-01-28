@@ -32,13 +32,11 @@ using UnityEngine;
 //This object will maintain the important data about the gameplay experience
 public class GameData : MonoBehaviour
 {
-
     public static GameData instanceRef;  //singleton reference variable
 
     private int health;
     private int score;
     
-
     ///Properties
     public int  Score {  //read only
         get{ return  totalScore; }
@@ -47,7 +45,6 @@ public class GameData : MonoBehaviour
     public int Health {  //read only
         get{ return  health; }
     }
-
 
     void Awake (){
         //initialize variables
