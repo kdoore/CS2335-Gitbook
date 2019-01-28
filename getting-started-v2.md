@@ -70,13 +70,12 @@ Create Several 2D Sprite Game Objects: \(objects for the player to interact with
         - Add PickUp as a Script Component to each PickUp gameObject
     - Create a **Prefab** from each type of PickUp object
 
-2. **GameData:** [Create C\# Script:](/gamedata-simple.md) **GameData **
+2. **Floor** - Create an empty GameObject, attach a  BoxCollider2D, edit the collider so it is a wide rectangle, move toward the bottom of the screen.
+
+3. **GameData:** [Create C\# Script:](/gamedata-simple.md) **GameData **
          - Add GameData as a Script Component to new Empty GameObject named: GameManager
 
-3. **Floor** - Create an empty GameObject, attach a  BoxCollider2D, edit the collider so it is a wide rectangle, move toward the bottom of the screen.
-
 4.  
-
 
 
 ### Player Controller Script - version 1
