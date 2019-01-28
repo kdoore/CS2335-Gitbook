@@ -86,7 +86,7 @@ Create Several 2D Sprite Game Objects: \(objects for the player to interact with
 7.  **MiniGameManager**  Create C\# Script:  MiniGameManager, Add Script to Empty GameObject:  **MiniGameManager**
 
 
-##Links To Code
+##Additional Links 
 
 ###Player Controller Script - version 1
 
