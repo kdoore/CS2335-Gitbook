@@ -70,10 +70,12 @@ Create Several 2D Sprite Game Objects: \(objects for the player to interact with
         - Add PickUp as a Script Component to each PickUp gameObject
     - Create a **Prefab** from each type of PickUp object
 
-2. **GameData:** Create C\# Script: **GameData **
-         - Add GameData as a Script Component to new Empty GameObject named: GameData
+2. **GameData:** [Create C\# Script:](/gamedata-simple.md) **GameData **
+         - Add GameData as a Script Component to new Empty GameObject named: GameManager
 
 3. **Floor** - Create an empty GameObject, attach a  BoxCollider2D, edit the collider so it is a wide rectangle, move toward the bottom of the screen.
+
+4.  
 
 
 
@@ -130,52 +132,15 @@ public class PlayerController : MonoBehaviour
 }  // end class
 ```
 
-### GameData - version1
+##GameData - Version1
 
-```java
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+[See link GameData-Version1:](/gamedata-simple.md)
 
-public class GameData : MonoBehaviour {
 
-    public int score;
-    public int health;
-    // Use this for initialization
-    void Start () {
-        score = 0;
-        health = 100;
-    }
-
-    void Add( int points ){
-        score += points;
-        Debug.Log("Score updated " + score);
-    }
-
-    void TakeDamage( int points){
-        health -= points;
-        Debug.Log("Health updated " + health);
-    }
-}
-```
 
 ### PickUp - version1
 
-```java
-////attribute only allows 1 instance of component on any gameObject 
-[DisallowMultipleComponent] 
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PickUp: MonoBehaviour {
-
-    public int value;
-    public string type;
-
-}
-```
+See Link: [PickUp PreFabs](/pickup_items.md)
 
 
 
