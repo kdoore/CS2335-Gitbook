@@ -18,12 +18,6 @@ You are required to have 4 types of PickUp objects in your game, 3 must have tag
         - Set value, set a positive value
     - Drag into Project Assets Resource Folder to create as a prefab
 
-### Variations - See code below
-
-So, we'll want to create a base-class that represents this Pick-up type and create child classes to extend for specialized pick-up items.  [See SelfDestructPickup](https://kdoore.gitbooks.io/cs-2335/content/pickup_items.html#selfdestructpickup-child-class-of-pickup)
-
-Some of our pick-up objects will need the ability to generate events that can notify other objects when the pick-up item has died.  [See PickUp with Events](https://kdoore.gitbooks.io/cs-2335/content/pickup_items.html#selfdestructpickup-child-class-of-pickup)
-
 ### Simple PickUp Class
 
 ```
