@@ -34,7 +34,7 @@ PickUp items must have Tags set to match logic in PlayerController.cs:  **Collec
 
 The code in the PlayerController.cs file is responsible for checking for user-input, determining if the input should cause the player-gameObject to move, and for determining actions or game-logic to be executed if the player-gameObject collides with other gameObjects.
 
-###PlayerController.cs
+###PlayerController.cs - No Animation
 
 ```java
 using UnityEngine;
