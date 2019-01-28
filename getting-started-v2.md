@@ -62,12 +62,13 @@ This component gives sprites a physical presence, it gives them a collision boun
 
 ###Other GameObjects:
 
-1. ** Pickup:**
+1. ** Pickup: Prefabs**
 Create Several 2D Sprite Game Objects: \(objects for the player to interact with - we'll call these **PickUp **objects \)
     - Add one or more **Physics2D &gt; Collider2D** components to create a collision-boundry for each object
     - Select **IsTrigger** checkbox for these collider components.
     - [Create C\# Script:  **PickUp **](/pickup_items.md)
-        - Add PickUp as a Script Component to each PickUp gameObject
+        - Add PickUp as a Script Component to each PickUp gameObject: Set the value in the Inspector.
+    - **Add Tag:**  Collectible or Hazard to each PickUp
     - Create a **Prefab** from each type of PickUp object
 
 2. **Floor** - Create an empty GameObject, attach a  BoxCollider2D, edit the collider so it is a wide rectangle, move toward the bottom of the screen.
