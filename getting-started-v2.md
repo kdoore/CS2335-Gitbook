@@ -83,6 +83,8 @@ Create Several 2D Sprite Game Objects: \(objects for the player to interact with
 
 6. **Spawner** [Create C\# Script: Spawner](/project-3/simple-spawner.md) Add Script to an Empty GameObject:  **Spawner**
 
+7.  **MiniGameManager**  Create C\# Script:  MiniGameManager, Add Script to Empty GameObject:  **MiniGameManager**
+
 
 ##Links To Code
 
