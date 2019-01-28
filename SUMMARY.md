@@ -20,6 +20,7 @@
 * [Sorting Layers to control sprite render ordering.](background-image-add-sorting-layers.md)
 * [PickUp PreFabs](pickup_items.md)
 * [Player GameObject](player_gameobject.md)
+* [GameData](gamedata.md)
 * [Simple Spawner](simple-spawner.md)
 
 ## Project 2 - Scene UI Design

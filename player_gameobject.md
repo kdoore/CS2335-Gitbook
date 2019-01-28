@@ -26,6 +26,10 @@ In the PlayerMove code below, we write code to allow the user to move the player
 
 [Collider interactions](http://docs.unity3d.com/Manual/CollidersOverview.html)  Colliders interact with each other differently depending on how the Collider and Rigidbody components are configured. Collider Components define the shape of an object for the purposes of physical collisions. A collider, which is invisible, does not have to be the exact same shape as the object’s mesh. A GameObject that has a Collider but no RigidBody component will act like an immovable object that other objects can run into, the collider gives the gameObject a physical presence in the scene.  When `isTrigger` is selected, then the collider does not show physics-based collision behavior, instead, an event is generated that can be used to execute related actions or behaviors.
 
+### Constrain Player Movement using Box Collider to create a Floor
+
+If we want to constrain the player, to keep her on the screen, we can create an empty game object and attach a collider2D component to that gameObject.  We can use this to create a floor in our scene, this will allow us to have a non-zero value for gravity on our player's Rigidbody2D component.  We can also create a leftBorder as an empty gameObject, again, add a  BoxCollider2D component.  If we don't set this gameObject to be a trigger, then it will act as a physical barrier to our playerGame object so it can't leave the camera view area.
+
 ## PlayerController.cs Code:  Attached to the Player Sprite
 ###Version 1 - Does not include animation
 
@@ -103,8 +107,6 @@ public class PlayerController : MonoBehaviour {
     }  // end class
 ```
 
-### Constrain Player Movement using Box Collider to create a Floor
 
-If we want to constrain the player, to keep her on the screen, we can create an empty game object and attach a collider2D component to that gameObject.  We can use this to create a floor in our scene, this will allow us to have a non-zero value for gravity on our player's Rigidbody2D component.  We can also create a leftBorder as an empty gameObject, again, add a  BoxCollider2D component.  If we don't set this gameObject to be a trigger, then it will act as a physical barrier to our playerGame object so it can't leave the camera view area.
 
 
