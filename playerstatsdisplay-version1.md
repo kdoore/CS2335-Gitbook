@@ -13,6 +13,6 @@ Steps:
     
     - When any additional UI elements are added to the Hierarchy, the Canvas will be the parent element.  
     
-
+See the following Pages for more info on working with UI Elements: 
     
     
