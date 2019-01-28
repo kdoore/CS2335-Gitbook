@@ -19,6 +19,8 @@
 * [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
 * [Sorting Layers to control sprite render ordering.](background-image-add-sorting-layers.md)
 * [PickUp PreFabs](pickup_items.md)
+* [Player GameObject](player_gameobject.md)
+* [Simple Spawner](simple-spawner.md)
 
 ## Project 2 - Scene UI Design
 
@@ -56,7 +58,6 @@
 
 * [Text Input](text_input.md)
 * [Game Scene](game_scene.md)
-* [Player GameObject](player_gameobject.md)
 * [Animator Controller](animation_controller.md)
   * [Animation Steps](animation_controller/animation-steps.md)
 * [MiniGame - Scene/State](minigame_-_view.md)
@@ -64,7 +65,6 @@
   * [Game-Data - C\# Events - Complex Version](game-data_model.md)
     * [Player Data - EventArgs](player-data-eventargs.md)
 * [Level Manager-Events](level-manager-in-class.md)
-* [Simple Spawner](simple-spawner.md)
 * [Inventory Display](inventory_store_-_scriptable_objects.md)
 
 ## Project 4
