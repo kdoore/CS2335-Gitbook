@@ -12,22 +12,23 @@
 * [MonoBehavior - Base-Class](monobehaviour.md)
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
 
-### Project 1 - Simple Game
+## Project 1 - Simple Game
 
 * [Overview](overview.md)
 * [Getting Started](getting-started-v2.md)
 * [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
-* [Sorting Layers to control sprite render ordering.](background-image-add-sorting-layers.md)
+* [Sorting Layers](background-image-add-sorting-layers.md)
 
-### Project1 Code
- * [PickUp PreFabs](pickup_items.md)
- * [Player GameObject](player_gameobject.md)
- * [GameData Version1](gamedata.md)
- * [PlayerStats Version1](playerstatsdisplay-version1.md)
- * [Simple Spawner](simple-spawner.md)
- * [Utility Class](utility-class.md)
+## Project1 Code
 
-### Project 2 - Scene UI Design
+* [PickUp PreFabs](pickup_items.md)
+* [Player GameObject](player_gameobject.md)
+* [GameData Version1](gamedata.md)
+* [PlayerStats Version1](playerstatsdisplay-version1.md)
+* [Simple Spawner](simple-spawner.md)
+* [Utility Class](utility-class.md)
+
+## Project 2 - Scene UI Design
 
 * [Game Objects](game_objects.md)
   * [Finding Game Objects](finding_game_objects.md)
