@@ -6,7 +6,6 @@
         "mermaid",
         "js-sequence-hand-diagram",
         "anchors",
-        "prism",
         "-highlight"
     ],
     "pluginsConfig": {}
