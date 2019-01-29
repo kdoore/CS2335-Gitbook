@@ -64,11 +64,11 @@ public class PlayerController : MonoBehaviour {
 
             if (isWalking) {
                 if (inputX > 0 && !facingRight) {
-                    flip ();
+                    Flip ();
                     Debug.Log ("flip right");
                 }
                 if (inputX < 0 && facingRight) {
-                    flip ();
+                    Flip ();
                     Debug.Log ("flip left");
                 }
                 rb2D.velocity = new Vector2 (0, 0);  // reset velocity to 0
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour {
 
         }
 
-        void flip ()
+       private void Flip ()
         {
             facingRight = !facingRight;
             Vector3 theScale = transform.localScale;
