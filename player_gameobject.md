@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour {
         {
             rb2D = GetComponent<Rigidbody2D> ();
             facingRight = true;
-            forceX = 90f;
+            forceX = 90f; //if initialized here can't be overridden in Inspector
         }
 
         void FixedUpdate ()
@@ -91,8 +91,8 @@ public class PlayerController : MonoBehaviour {
             if (hitObject.CompareTag ("Collectible")) {
                 Debug.Log ("Hit Collectible");
                 PickUp item = hitObject.GetComponent<PickUp> ();  
-                //Pass the full PickUp component to GameData              
-                 GameData.instanceRef.Add(item );
+                //will be updated later so that full item is passed to GameData's Add method so items can be added to inventory             
+                 GameData.instanceRef.Add(item.value );
                  Destroy (hitObject.gameObject);
              }
             else if(hitObject.CompareTag("Hazard")){

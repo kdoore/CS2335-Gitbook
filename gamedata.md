@@ -52,12 +52,12 @@ public class GameData : MonoBehaviour
         score = 0;     
 
     //create singleton
-        if (instanceRef == null) {
+        if (instanceRef == null) { //has never been initialized before
             instanceRef = this;
             DontDestroyOnLoad (gameObject);  //the gameObject this is attached to 
         } else {   //
             DestroyImmediate (gameObject);   
-            Debug.Log ("Destroy GameObject");
+            Debug.Log ("Destroy Duplicate GameData");
         }
 
     // Use this for initialization
@@ -67,9 +67,10 @@ public class GameData : MonoBehaviour
     }
 
     ////Called in Player controller when the player collides with a pickup    
-    public void Add (PickUp item)
+    ///this will be modified later so the input parameter is a PickUp item so it can be added to inventory
+    public void Add (int value)
     {
-        score += item.value;  // update totalScore by the value of this current item
+        score += value;  // update score by the value of this current item
         Debug.Log ("Adding item value to score, score =  " + score);
    
     }
