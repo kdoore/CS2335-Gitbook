@@ -47,18 +47,20 @@ public class PlayerStats : MonoBehaviour {
 
     void Start()
     {
-        healthText.text = "Health" + GameData.instanceRef.Health;  
-        scoreText.text = "Score" + GameData.instanceRef.Score;  
+        UpdateDisplay();
     }
 
     void Update(){ //called every frame - polling to see if data changed
-        healthText.text = "Health" + GameData.instanceRef.Health;
-        scoreText.text = "Score" + GameData.instanceRef.Score;
+        UpdateDisplay();
     }
 
+    public void UpdateDisplay(){
+        healthText.text = "Health: " + GameData.instanceRef.Health;
+        scoreText.text = "Score: " + GameData.instanceRef.Score;
 
-}
-    
+    }
+} // end Class
+ 
 ```
 
 
