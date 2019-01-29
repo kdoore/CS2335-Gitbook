@@ -31,8 +31,10 @@ See the following Pages for more info on working with UI Elements:
  
 Attach the PlayerStats script to the ScorePanel gameObject.  Populate the Inspector fields: ScoreText and HealthText in the Inspector using the ScoreText and HealthText GameObjects.
 
+The image below shows the ScorePanel has 2 UI-Text gameObjects as children in the Hierarchy Panel.  In the Inspector Panel, the ScoreText has it's Rect Transform set to Upper-Left. 
 ![](/assets/Screen Shot 2019-01-29 at 6.26.07 AM.png)
 
+The image below shows that the ScorePanel is anchored using stretch-top setting in the Rect Transform component.  Also, the HealthText and ScoreText gameObjects have been used to populate the corresponding fields in the PlayerStats script component.
 ![](/assets/Screen Shot 2019-01-29 at 5.57.40 AM.png)
                       
 ###PlayerStats.cs:
