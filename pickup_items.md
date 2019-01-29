@@ -19,6 +19,22 @@ You are required to have 4 types of PickUp objects in your game, 3 must have tag
     - Drag into Project Assets Resource Folder to create as a prefab
 
 ### Simple PickUp Class
+###Version 1
+```
+using UnityEngine;
+using System.Collections;
+using System;
+
+public class PickUp : MonoBehaviour
+{
+    public int value;
+
+}
+//end class
+```
+
+### Simple PickUp Class
+###Version 2
 
 ```
 using UnityEngine;
