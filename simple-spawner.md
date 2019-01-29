@@ -81,9 +81,8 @@ public void SpawnPrefab()
 
 [Unity Manual: Using Random Numbers](https://docs.unity3d.com/Manual/RandomNumbers.html) 
 
->Choosing a Random Item from an Array
+>Choosing a Random Item from an Array - We could refactor Spawner so that it randomly selects elements from an array of prefabs.
 Picking an array element at random boils down to choosing a random integer between zero and the array’s maximum index value (which is equal to the length of the array minus one). This is easily done using the built-in Random.Range function:-
-
 
 
 ```
