@@ -95,7 +95,7 @@ See Link [PlayerController - Version1:](/player_gameobject.md)
 
 ###GameData - Version1
 
-See link:[ GameData-Version1:](/gamedata-simple.md)
+See link:  [GameData-Version1:](/gamedata.md) 
 
 
 
