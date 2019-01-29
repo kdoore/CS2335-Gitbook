@@ -19,7 +19,7 @@
 * [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
 * [Sorting Layers to control sprite render ordering.](background-image-add-sorting-layers.md)
 
- ### Project1 Code
+### Project1 Code
  * [PickUp PreFabs](pickup_items.md)
  * [Player GameObject](player_gameobject.md)
  * [GameData Version1](gamedata.md)
