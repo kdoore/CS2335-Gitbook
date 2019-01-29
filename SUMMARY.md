@@ -22,8 +22,8 @@
 * [Player GameObject](player_gameobject.md)
 * [GameData Version1](gamedata.md)
 * [PlayerStats - Version1](playerstatsdisplay-version1.md)
-* [Utility - Static Class](utility_-_static_class.md)
 * [Simple Spawner](simple-spawner.md)
+* [Utility Class](utility-class.md)
 
 ## Project 2 - Scene UI Design
 
