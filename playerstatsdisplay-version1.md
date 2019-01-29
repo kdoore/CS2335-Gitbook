@@ -37,7 +37,7 @@ The image below shows the ScorePanel has 2 UI-Text gameObjects as children in th
 The image below shows that the ScorePanel is anchored using stretch-top setting in the Rect Transform component.  Also, the HealthText and ScoreText gameObjects have been used to populate the corresponding fields in the PlayerStats script component.
 ![](/assets/Screen Shot 2019-01-29 at 5.57.40 AM.png)
                       
-###PlayerStats.cs:
+###Class: PlayerStats.cs:
 
 ```java
 
