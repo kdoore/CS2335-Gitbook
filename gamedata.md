@@ -16,7 +16,7 @@ To use the singleton reference in another class use the following syntax, for ex
 
 _Example of using GameData singleton in PlayerController.cs_
 ```java
-GameData.instanceRef.Add( item );
+GameData.instanceRef.Add( item.value );
 ```
 
 ### GameData Class Definition
