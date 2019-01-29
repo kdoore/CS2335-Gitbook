@@ -9,8 +9,9 @@ Steps Create GameObjects:
 - UI-Text:  ScoreText
 - UI-Text:  HealthText
 
-See the following Pages for more info on working with UI Elements: 
+![](/assets/Screen Shot 2019-01-29 at 6.23.51 AM.png)
 
+See the following Pages for more info on working with UI Elements: 
 [UI Elements: link](/project-1-score-and-ui-elements.md)
 
 **Details:**
@@ -29,6 +30,10 @@ See the following Pages for more info on working with UI Elements:
 
  
 Attach the PlayerStats script to the ScorePanel gameObject.  Populate the Inspector fields: ScoreText and HealthText in the Inspector using the ScoreText and HealthText GameObjects.
+
+![](/assets/Screen Shot 2019-01-29 at 6.26.07 AM.png)
+
+![](/assets/Screen Shot 2019-01-29 at 5.57.40 AM.png)
                       
 ###PlayerStats.cs:
 
