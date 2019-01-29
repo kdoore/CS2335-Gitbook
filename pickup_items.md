@@ -1,4 +1,4 @@
-# PickUp Items
+# PickUp Items - Prefab GameObjects
 
 Throughout our game we will want to have game items for the player to interact with.  Often these are considered Pick-up items.
 
