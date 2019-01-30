@@ -16,6 +16,7 @@
 
 * [Overview](overview.md)
 * [Getting Started](getting-started-v2.md)
+  * [UML Class Diagram](getting-started-v2/uml-class-diagram.md)
 * [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
 * [Sorting Layers](background-image-add-sorting-layers.md)
 
