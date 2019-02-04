@@ -1,7 +1,6 @@
 #Mini Game Manager
 
-###Code: 
-
+###Overview:
 This class manages logic for:
 - Start Button to Start Gameplay
     - Function ReStartGame( ) is executed when the StartButton is clicked
@@ -12,8 +11,32 @@ This class manages logic for:
   - Starts the Spawner 
       - Set the Spawner's activeSpawning = true
       - Calls Spawner's StartSpawning( ) method.
+      
+  
+- Polling - Code Executed in Update: - Checked Every Frame
+     - Checks to determine what the current MiniGameState is
+     - if MiniGameState.active
+         - Check that Health is still greater than 0
+         - If Health is Greater than 0
+             - Check Score, if Score > WinScore
+                 - Set MiniGameState.Win
+                 - Call GameOver( )
+         - Else if Health is Less than 0
+                 - Set MiniGameState.Lose
+                - Call GameOver( )
+             
+- GameOver( ) Method  
+    - Set Result Text to Win or Lose message
+    - Make ResultsPanel visible ( Use Utility to set CanvasGroup values) 
+    -  StartButton - setActive is true, makes visible 
+    -  Stop Spawner by activeSpawning = false
+    -  Destroy any remaining spawned objects
+    
+- DisplayResult - This method is called when the Game
 
 
+
+#Code MiniGameState, MiniGameManager
 
 ```java
 
@@ -31,6 +54,7 @@ public class MiniGameManager : MonoBehaviour {
     public Button startButton;
     public CanvasGroup  resultsCG; //let's panel be hidden
     public Text resultText;
+    public float WinScore = 20; //determines when player wins
 	
     // Use this for initialization
 	void Start () {
@@ -44,7 +68,7 @@ public class MiniGameManager : MonoBehaviour {
         {
             if (GameData.instanceRef.Health > 0) //still alive
             {
-                if (GameData.instanceRef.Score >= 20) //win condition
+                if (GameData.instanceRef.Score >= WinScore) //win condition
                 {
                     curGameState = MiniGameState.win; //change state
                     GameOver();
