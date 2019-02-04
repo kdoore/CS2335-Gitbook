@@ -32,6 +32,7 @@ This class manages logic for:
     -  Stop Spawner by activeSpawning = false
     -  Destroy any remaining spawned objects
     
+    
 - DisplayResult - This method is called when the Game
 
 
@@ -96,8 +97,11 @@ public class MiniGameManager : MonoBehaviour {
     {
         Utility.ShowCG(resultsCG);
         startButton.gameObject.SetActive(true);
+         //get a reference to the Button's child Text element
         Text btnTxt = startButton.GetComponentInChildren<Text>();
-        btnTxt.text = "Play Again";
+        btnTxt.text = "Play Again"; //change button text
+        
+        
     }
 
 
