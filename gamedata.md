@@ -89,11 +89,18 @@ public class GameData : MonoBehaviour
 } //end GameData version1
 ```
 
-###Update:  ResetGameData() - Resets Score and Health to correct initial values.  Public, so it can be executed from MiniGameManager Script.
+###Update:  ResetGameData() 
+Resets Score and Health to correct initial values.  Public, so it can be executed from MiniGameManager Script.
 
+
+
+```java
 
  public void ResetGameData()
     {
         health = 100; //initialize
         score = 0;
     } 
+
+```
+
