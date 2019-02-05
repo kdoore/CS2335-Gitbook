@@ -70,5 +70,45 @@ public class PlayerStats : MonoBehaviour {
  
 ```
 
-
+###Code Version with no Public Variables
     
+  
+    ###Class: PlayerStats.cs:
+
+```java
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PlayerStats : MonoBehaviour {
+
+    //make connection in this script
+    private  Text healthText, scoreText;
+    // Use this for initialization
+
+    void Start()
+    {
+    //here we make the connection with the variable and the gameObject's component using script -
+    //Important, make sure the GameObject's name, (in quotes) matches the actual GameObject name in the Unity scene.
+        healthText = GameObject.Find("HealthText").GetComponent< Text >();
+        scoreText = GameObject.Find("ScoreText").GetComponent< Text >();
+        UpdateDisplay();
+    }
+
+    void Update(){ //called every frame - polling to see if data changed
+        UpdateDisplay();
+    }
+
+    public void UpdateDisplay(){
+        healthText.text = "Health: " + GameData.instanceRef.Health;
+        scoreText.text = "Score: " + GameData.instanceRef.Score;
+
+    }
+} // end Class
+ 
+```
+
+
+      
