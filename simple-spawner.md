@@ -79,9 +79,9 @@ public void SpawnPrefab()
 
 ###Simple Updates:
 
-1.  Update SpawnPrefab( ) method so that all spawned objects become children of the Spawner gameObject in the Hierarchy Panel, this makes the Hierarchy more organized.
+1.  Updates to: SpawnPrefab( ) method so that all spawned objects become children of the Spawner gameObject in the Hierarchy Panel, this makes the Hierarchy more organized.
 
-
+2. DestroyAllPickups( ) - finds all objects with PickUp Components that are active in the scene, then destroys their associated gameObject.  This can be executed from the MiniGameManager when the game has ended.
 
 ```java
     

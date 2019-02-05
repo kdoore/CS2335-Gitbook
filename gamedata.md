@@ -82,9 +82,18 @@ public class GameData : MonoBehaviour
         if(health < 0){
             Debug.Log("GameOver due to low health");
         }
-    }  
+    }
+   
+    //Add code for: ResetGameData, see below 
+        
 } //end GameData version1
 ```
 
+###Update:  ResetGameData() - Resets Score and Health to correct initial values.  Public, so it can be executed from MiniGameManager Script.
 
 
+ public void ResetGameData()
+    {
+        health = 100; //initialize
+        score = 0;
+    } 
