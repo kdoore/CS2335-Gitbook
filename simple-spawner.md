@@ -77,6 +77,50 @@ public void SpawnPrefab()
 ```
 
 
+###Simple Updates:
+
+1.  Update SpawnPrefab( ) method so that all spawned objects become children of the Spawner gameObject in the Hierarchy Panel, this makes the Hierarchy more organized.
+
+
+
+```java
+    
+    public void SpawnPrefab()
+    {
+        if (activeSpawning)
+        {
+            Vector3 position = transform.localPosition;
+            position.x = Random.Range(-xRange, xRange);
+            position.y = Random.Range(yRangeBottom, yRangeTop);
+            float rand = Random.value; //returns value between 0.0 - 1.0 (property)
+            GameObject prefab; //variable to hold address of newly spawned gameObject.
+            if ( rand < chanceToSpawnBad)
+            {    //
+                 prefab = Instantiate(badPrefab,position, transform.rotation   );    //instantiate bad
+            }
+            else  //instantiate good
+            {
+                 prefab= Instantiate(goodPrefab, position, transform.rotation);
+            }
+            prefab.transform.SetParent(this.transform); //set Spawner as parent of prefabs in Hierarchy 
+        }
+    } //end SpawnPrefab
+
+    //Populate an array of all active objects of type: PickUp
+    //then destroy the gameObject that has the PickUp component
+    public void DestroyAllPickups()
+    {
+        PickUp[] spawnedPickups = FindObjectsOfType<PickUp>();
+        foreach( PickUp item in spawnedPickups)
+        {
+            Destroy(item.gameObject);
+        }
+    } //end DestroyAllPickups
+
+```
+
+
+
 ##Using Random Numbers in Unity
 
 [Unity Manual: Using Random Numbers](https://docs.unity3d.com/Manual/RandomNumbers.html) 
