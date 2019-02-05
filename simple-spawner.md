@@ -77,7 +77,7 @@ public void SpawnPrefab()
 ```
 
 
-###Simple Updates:
+###Code Updates:
 
 1.  Updates to: SpawnPrefab( ) method so that all spawned objects become children of the Spawner gameObject in the Hierarchy Panel, this makes the Hierarchy more organized.
 
