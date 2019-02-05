@@ -105,4 +105,6 @@ See link:  [GameData-Version1: ](/gamedata.md)
 See Link: [PickUp PreFabs](/pickup_items.md)
 
 
+### MiniGameManager 
 
+See Link:  [MiniGameManager](/minigamemanager.md)
