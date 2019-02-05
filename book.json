@@ -1,10 +1,7 @@
 {
     "plugins": [
-        "ace",
-        "quiz",
-        "js-sequence-diagram",
-        "mermaid",
-        "js-sequence-hand-diagram",
+         
+ 
         "anchors",
         "-highlight"
     ],
