@@ -32,16 +32,16 @@ public class GameData : MonoBehaviour {
 
 	public static GameData instanceRef;
 	private int health;
-	private int totalScore;
+	private int score;
 
-	public int TotalScore {  //read only
-		get{ return  totalScore; }
+	public int  Score {  //read only
+		get{ return  score; }
 		}
 
 	void Awake(){  
 		health = 100;
 		levelScore = 0;
-		totalScore = 0;
+		score = 0;
 		
 	//create singleton
 		if (instanceRef == null) {
@@ -69,7 +69,7 @@ public class GameData : MonoBehaviour {
 	////Called in Player controller when the player collides with a pickup	
 	public void Add(PickUp item){
 		
-		totalScore += item.value;  // update totalScore by the value of this current item
+		score += item.value;  // update totalScore by the value of this current item
 
 		checkResetHighScore ();  //should we update PlayerPrefs, is this the alltime high score?
 
@@ -95,7 +95,7 @@ public class GameData : MonoBehaviour {
 	/// </summary>
 	private void checkResetHighScore(){
 		int curHighScore = PlayerPrefs.GetInt ("HighScore");
-		if (TotalScore > curHighScore) {
+		if (score > curHighScore) {
 			PlayerPrefs.SetInt ("HighScore", TotalScore);
 		}
 	} // end checkReset
@@ -105,7 +105,7 @@ public class GameData : MonoBehaviour {
 	/// </summary>
 	/// <returns>The player data event arguments.</returns>
 	public void GetPlayerDataEventArgs(PlayerDataEventArgs playerData){
-		playerData.totalScore = this.totalScore;
+		playerData.score = this.score;
 		playerData.health = this.health;
 		playerData.lives = this.lives;
 	
