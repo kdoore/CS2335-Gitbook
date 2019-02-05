@@ -47,12 +47,12 @@ public class GameData : MonoBehaviour
     public static GameData instanceRef;  //singleton reference variable
 
     private int health;
-    private int totalScore;
+    private int score;
     private int lives;
 
     ///Properties
-    public int TotalScore {  //read only
-        get{ return  totalScore; }
+    public int  Score {  //read only
+        get{ return  score; }
     }
 
     public int Health {  //read only
@@ -66,7 +66,7 @@ public class GameData : MonoBehaviour
     void Awake (){
         //initialize variables
         health = 100;
-        totalScore = 0;
+        score = 0;
         lives = 3;  
 
       //create singleton
@@ -95,8 +95,8 @@ public class GameData : MonoBehaviour
     ////Called in Player controller when the player collides with a pickup    
     public void Add (PickUp item)
     {
-        totalScore += item.value;  // update totalScore by the value of this current item
-        Debug.Log ("Adding item value to totalScore, totalScore =  " + totalScore);
+        score += item.value;  // update totalScore by the value of this current item
+        Debug.Log ("Adding item value to totalScore, score =  " + score);
    
     }
     // end Add()
@@ -113,8 +113,8 @@ public class GameData : MonoBehaviour
     private void checkResetHighScore ()
     {
         int curHighScore = PlayerPrefs.GetInt ("HighScore");
-        if (TotalScore > curHighScore) {
-            PlayerPrefs.SetInt ("HighScore", TotalScore);
+        if (score > curHighScore) {
+            PlayerPrefs.SetInt ("HighScore", score);
         }
     }
     // end checkReset
