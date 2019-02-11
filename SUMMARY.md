@@ -33,6 +33,7 @@
 ## Project1 Enhancements
 
 * [PlayerController - jump](project1-enhancements/playercontroller-v2.md)
+* [PlayerController Animations](project1-enhancements/playercontroller-animations.md)
 
 ## Project 2 - Scene UI Design
 
