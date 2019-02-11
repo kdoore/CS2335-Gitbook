@@ -34,6 +34,7 @@
 
 * [PlayerController - jump](project1-enhancements/playercontroller-v2.md)
 * [PlayerController Animations](project1-enhancements/playercontroller-animations.md)
+* [PickUp - SelfDestruct](project1-enhancements/pickup-selfdestruct.md)
 
 ## Project 2 - Scene UI Design
 
