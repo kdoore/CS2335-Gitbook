@@ -30,6 +30,10 @@
 * [Simple Spawner](simple-spawner.md)
 * [Utility Class](utility-class.md)
 
+## Project1 Enhancements
+
+* [PlayerController - jump](project1-enhancements/playercontroller-v2.md)
+
 ## Project 2 - Scene UI Design
 
 * [Game Objects](game_objects.md)
