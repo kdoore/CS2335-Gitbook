@@ -11,7 +11,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     private Rigidbody2D rb2D;
-    public Transform groundCheck; //add empty gameObject at player's feet
+    public Transform groundCheck; //add child to player - empty gameObject at player's feet
     public float forceX=80f;
     public float jumpForce=8f;
     private bool facingRight; 
