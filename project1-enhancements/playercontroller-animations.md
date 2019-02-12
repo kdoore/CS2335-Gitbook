@@ -6,6 +6,7 @@ The following script incorporates logic for changing the animation state, and re
 [Animation Steps](/animation_controller/animation-steps.md)
 
 
+###PlayerController - Animator Component
 ```java
 using System.Collections;
 using System.Collections.Generic;
