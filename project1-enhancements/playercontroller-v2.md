@@ -1,6 +1,10 @@
 #PlayerController with Jumping
 
+In order to use the following script to enable your player to jump, the following changes must be configured in Unity before the following script will work.
 
+1.  Create a new Layer: **Ground** in the Unity Layer Editor.  All gameObjects which will act as ground to allow jumping, must have this layer set in the inspector.
+
+###PlayerController Code
 
 ```java
 using System.Collections;
