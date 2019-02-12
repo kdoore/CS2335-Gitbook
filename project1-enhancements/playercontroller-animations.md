@@ -1,6 +1,10 @@
 #PlayerController with Animations and Jumping
 The following script incorporates logic for changing the animation state, and requires using an Animator Component - the Animator Controller must have an `int parameter: heroState` that controls which animation clip is played for the Player gameObject
 
+**Animation: Gitbook Links to configuration details:**
+[Animator Controller](/animation_controller.md)
+[Animation Steps](/animation_controller/animation-steps.md)
+
 
 ```java
 using System.Collections;
