@@ -120,4 +120,88 @@ public class MiniGameManager : MonoBehaviour {
 }// end class
 
 ```
+#Simplified Code Version
+The code below is a simplified version, either version should work, select the one you prefer
+
+
+```java
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+//custom data-type to manage Finite State Machine - variable: curGamestate is the FSM's memory
+public enum MiniGameState { idle, active, win, lose }
+
+public class MiniGameManager : MonoBehaviour
+{
+
+    public MiniGameState curGameState = MiniGameState.idle;
+    public Spawner spawner; //set in inspector
+    public Button startButton; //set in inspector
+    public Text resultText;
+    public CanvasGroup resultsCG; //canvas group on results panel
+    public int winScore = 30;
+
+
+    // Use this for initialization
+    void Start()
+    {
+        Utility.ShowCG(resultsCG); //show the panel and it's children
+        resultText.text = "Score " + winScore + " points to win";
+        startButton.onClick.AddListener(ReStartGame);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (curGameState == MiniGameState.active)
+        {
+            if (GameData.instanceRef.Health > 0) //still have health
+            {
+                if( GameData.instanceRef.Score >= winScore)
+                {
+                    curGameState = MiniGameState.win;
+                    resultText.text = "You Win";
+                    GameOver();
+                }
+            }
+            else //we have no health
+            {
+                curGameState = MiniGameState.lose;
+                resultText.text = "You Lost";
+                GameOver();
+            }
+        }
+    } //end update
+
+    private void GameOver()
+    {
+        Utility.ShowCG(resultsCG); //make the panel and children visible
+        startButton.gameObject.SetActive(true); //set gameObject with Button Component to active
+        Text btnText = startButton.GetComponentInChildren<Text>();
+        btnText.text = "Play Again";
+        spawner.activeSpawning = false;
+        spawner.DestroyAllPickups();
+    }
+
+
+    /// <summary>
+    /// starts game.
+    /// Executed by Unity when the StartButton is clicked
+    /// </summary>
+    public void ReStartGame()
+    {
+        GameData.instanceRef.ResetGameData();
+        Utility.HideCG(resultsCG);
+        curGameState = MiniGameState.active; //FSM - change state
+        startButton.gameObject.SetActive(false); //disables the StartButton GO
+        spawner.activeSpawning = true;
+        spawner.StartSpawning();
+
+    }
+}
+
+```
+
 
