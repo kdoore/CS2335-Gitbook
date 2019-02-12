@@ -4,7 +4,7 @@ The following script incorporates logic for changing the animation state, and re
 **Animation: Gitbook Links to configuration details:**
 [Animator Controller](/animation_controller.md)
 [Animation Steps](/animation_controller/animation-steps.md)
-
+[PlayerController with Jump](/project1-enhancements/playercontroller-v2.md)
 
 ###PlayerController - Animator Component
 ```java
