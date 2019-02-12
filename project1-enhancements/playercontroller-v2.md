@@ -2,9 +2,20 @@
 
 In order to use the following script to enable your player to jump, the following changes must be configured in Unity before the following script will work.
 
-1.  Create a new Layer: **Ground** in the Unity Layer Editor.  All gameObjects which will act as ground to allow jumping, must have this layer set in the inspector.
+**Unity Configuration Steps:**
+ - Create a new **Layer:** **Ground** in the Unity Layer Editor.  All gameObjects which will act as ground, (example: Floor) to allow jumping, must have this layer set in the inspector. See image below
 
-###PlayerController Code
+![](/assets/Screen Shot 2019-02-12 at 11.15.18 AM.png)
+
+ - Set the **Layer: Ground **for all gameObjects that the player should be able to jump from.  Example:  Floor 
+ 
+![](/assets/Screen Shot 2019-02-12 at 11.18.11 AM.png)
+
+    - Create an empty gameObject, make it a child of the Player, name: GroundCheck. Add an icon (orange capsule in the image ), so it's easy to see.  Move the GroundCheck gameObject to the bottom of the player's feet, this gameObject will check to see if it's in contact with a gameObject that is in the 'Ground' layer.  
+    
+    ![](/assets/Screen Shot 2019-02-12 at 11.26.14 AM.png)
+
+###PlayerController - with jump Code
 
 ```java
 using System.Collections;
@@ -15,14 +26,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     private Rigidbody2D rb2D;
-    public Transform groundCheck; //add child to player - empty gameObject at player's feet
     public float forceX=80f;
-    public float jumpForce=8f;
     private bool facingRight; 
-    public bool grounded;
-    private bool jump;
-    public LayerMask groundLayer;
-    public float groundCheckRadius = 0.2f;
+   
+   //add these new variables  
+    public bool grounded; //tracks if player is touching ground
+    private bool jump;  //has jump key (spacebar been pressed - last)
+    public Transform groundCheck; //set in inspector, (add child to player - empty gameObject at player's feet)
+    public LayerMask groundLayer;  //set in inspector
+    public float groundCheckRadius = 0.2f;  //modify as needed
+    public float jumpForce=8f; //modify as needed
 
     void Start()
     {
@@ -37,8 +50,15 @@ public class PlayerController : MonoBehaviour {
         float inputX = Input.GetAxis("Horizontal");
         bool isWalking = Mathf.Abs(inputX) > 0;
 
-        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        if (Input.GetButtonDown("Jump")) //spacebar
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer); //draws a small circle to check for intersection with a gameObject on Ground Layer
+        
+        //to use w and up arrow use the following:
+        /*
+        float inputY = Input.GetAxis("Vertical");
+        bool jumpPressed = inputY > 0;
+        */
+        bool isJump = Input.GetButtonDown("Jump");
+        if (jumpPressed) //spacebar
         {
             jump = true;
         }
