@@ -60,6 +60,7 @@ public class GameData : MonoBehaviour
             DestroyImmediate (gameObject);   
             Debug.Log ("Destroy Duplicate GameData");
         }
+    } //end Awake
 
     // Use this for initialization
     void Start ()
