@@ -11,9 +11,11 @@ In order to use the following script to enable your player to jump, the followin
  
 ![](/assets/Screen Shot 2019-02-12 at 11.18.11 AM.png)
 
-    - Create an empty gameObject, make it a child of the Player, name: **GroundCheck**. Add an icon (orange capsule in the image ), so it's easy to see.  Move the GroundCheck gameObject to the bottom of the player's feet, this gameObject will check to see if it's in contact with a gameObject that is in the 'Ground' layer.  
     
-    ![](/assets/Screen Shot 2019-02-12 at 11.26.14 AM.png)
+ - Create an empty gameObject, make it a child of the Player, name: **GroundCheck**. Add an icon (orange capsule in the image ), so it's easy to see.  Move the GroundCheck gameObject to the bottom of the player's feet, this gameObject will check to see if it's in contact with a gameObject that is in the 'Ground' layer.  
+    
+    
+![](/assets/Screen Shot 2019-02-12 at 11.26.14 AM.png)
 
 ###PlayerController - with jump Code
 
@@ -82,7 +84,7 @@ public class PlayerController : MonoBehaviour {
             rb2D.velocity = new Vector2(0, rb2D.velocity.y); //zero out velocity.x, maintain velocity.y
             // reset velocity to 0
             rb2D.AddForce(new Vector2(forceX * inputX, 0));
-        }
+        } // end if
         if (jump && grounded)//must also be grounded in order to jump
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, 0); //zero out velocity.y, maintain velocity.x
