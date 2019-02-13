@@ -84,12 +84,12 @@ public class PlayerController : MonoBehaviour {
             rb2D.velocity = new Vector2(0, rb2D.velocity.y); //zero out velocity.x, maintain velocity.y
             // reset velocity to 0
             rb2D.AddForce(new Vector2(forceX * inputX, 0));
-        } // end if
+        } // end if (isWalking)
         if (jump && grounded)//must also be grounded in order to jump
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, 0); //zero out velocity.y, maintain velocity.x
-            rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-        } //add force as impulse
+            rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse); //add force as impulse
+        } // end if (jump)
 
     }
 
