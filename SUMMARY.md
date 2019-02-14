@@ -34,6 +34,8 @@
 
 * [PlayerController - jump](project1-enhancements/playercontroller-v2.md)
 * [PlayerController Animations](project1-enhancements/playercontroller-animations.md)
+* [Animator Controller](animation_controller.md)
+  * [Animation Steps](animation_controller/animation-steps.md)
 * [PickUp - SelfDestruct](project1-enhancements/pickup-selfdestruct.md)
 * [Spawn from Arrays](project1-enhancements/spawn-from-arrays.md)
 
@@ -72,8 +74,6 @@
 
 * [Text Input](text_input.md)
 * [Game Scene](game_scene.md)
-* [Animator Controller](animation_controller.md)
-  * [Animation Steps](animation_controller/animation-steps.md)
 * [MiniGame - Scene/State](minigame_-_view.md)
 * [GameData - Simple](gamedata-simple.md)
   * [Game-Data - C\# Events - Complex Version](game-data_model.md)
