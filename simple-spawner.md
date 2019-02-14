@@ -45,7 +45,7 @@ public bool activeSpawning = false;
 
 void Start()
 {
-	activeSpawning = true;
+	activeSpawning = true; //this will be moved to MiniGameManager so it can start spawning.
 	StartSpawning (); //can be called from a Game-controller type class when using a StartGame button.
 }
 
