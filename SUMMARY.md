@@ -41,6 +41,7 @@
 
 ## Project 2 - StateManager and Dialog
 
+* [Project2 Starter Assets](project2-starter-assets.md)
 * [Game Objects](game_objects.md)
   * [Finding Game Objects](finding_game_objects.md)
   * [UI Elements](project-1-score-and-ui-elements.md)
