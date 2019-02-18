@@ -197,6 +197,61 @@ public class BeginState : IStateBase
     }
 } //end class BeginState
 
+```
 
+## EndState.cs
+
+
+```java
+
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.SceneManagement; //add to all State Files
+
+public class EndState : IStateBase
+{
+
+    private GameScene scene;
+
+    //add commenets
+    public GameScene Scene
+    {
+        get { return scene; }
+    }
+
+    //GameScene objectRefs
+    private Button startBtn;
+
+    //constructor  // add comments
+    public EndState()
+    {
+        scene = GameScene.End;
+    }
+
+    //add comments
+    public void StateUpdate()
+    {
+
+    }
+
+    //add comments
+    public void InitializeObjectRefs()
+    {
+        startBtn = GameObject.Find("StartButton").GetComponent<Button>();
+        startBtn.onClick.AddListener(LoadBeginScene);
+        Debug.Log("Add Debug Info");
+    }
+
+
+    public void LoadBeginScene()
+    {
+        Debug.Log("Add Debug Info");
+        SceneManager.LoadScene("BeginScene");
+        StateManager.instanceRef.SwitchState(new BeginState());
+
+    }
+} //end class:  EndState
 
 ```
+
