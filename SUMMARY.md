@@ -42,7 +42,7 @@
 ## Project 2 - StateManager and Dialog
 
 * [Project 2 - Learning Objectives](project-2-learning-objectives.md)
-* [Project 2 Starter Assets](project2-starter-assets.md)
+* [Project 2 - Starter Assets](project2-starter-assets.md)
 * [Project 2 - Text Adventure ](project-2-text-adventure-1.md)
   * [State Machine Framework](state_machine_framework.md)
     * [Singleton Pattern](state_machine_framework/singleton.md)
@@ -56,6 +56,7 @@
     * [Text Input](text_input.md)
     * [HidePanel Script](project-1-score-and-ui-elements/hidepanel-script.md)
   * [Project 2 - List of Steps](project-2-list-of-steps.md)
+    * [Project 2 - Code](project-2-list-of-steps/project-2-code.md)
 
 ## Project2 Old Content
 
