@@ -42,7 +42,7 @@
 ## Project 2 - StateManager and Dialog
 
 * [Project 2 - Learning Objectives](project-2-learning-objectives.md)
-* [Project2 Starter Assets](project2-starter-assets.md)
+* [Project 2 Starter Assets](project2-starter-assets.md)
 * [Project 2 - Text Adventure ](project-2-text-adventure-1.md)
   * [State Machine Framework](state_machine_framework.md)
     * [Singleton Pattern](state_machine_framework/singleton.md)
