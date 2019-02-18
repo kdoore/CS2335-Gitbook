@@ -200,7 +200,7 @@ public class BeginState : IStateBase
 ```
 
 ## EndState.cs
-
+Example code for a Scene_X_State class
 
 ```java
 
