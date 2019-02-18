@@ -39,7 +39,7 @@
 * [PickUp - SelfDestruct](project1-enhancements/pickup-selfdestruct.md)
 * [Spawn from Arrays](project1-enhancements/spawn-from-arrays.md)
 
-## Project 2 - Scene UI Design
+## Project 2 - StateManager and Dialog
 
 * [Game Objects](game_objects.md)
   * [Finding Game Objects](finding_game_objects.md)
@@ -56,7 +56,7 @@
     * [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
       * [Hide\_Show\_Panel Script](conversation-scriptable-objects/dialogmanagerconvlist/hideshow-panel-script.md)
   * [Visual Novel in Unity](visual-novel-in-unity.md)
-  * [Project2 Checklist](project1-checklist.md)
+  * [Project2 Checklist\_outdated](project1-checklist.md)
 
 ## Project 3
 
