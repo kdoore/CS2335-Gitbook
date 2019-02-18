@@ -49,12 +49,13 @@
   * [StateManager - Singleton Design Pattern](statemanager.md)
   * [IStateBase, BeginState](istatebase.md)
   * [Project 2 -Create new Scene and State](project-2-create-new-scene-and-state.md)
-  * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
-  * [Project 2 - List of Steps](project-2-list-of-steps.md)
-* [Game Objects](game_objects.md)
+  * [Game Objects: UI vs. 2D Sprite](game_objects.md)
   * [UI Elements](project-1-score-and-ui-elements.md)
     * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
+    * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
+    * [Text Input](text_input.md)
     * [HidePanel Script](project-1-score-and-ui-elements/hidepanel-script.md)
+  * [Project 2 - List of Steps](project-2-list-of-steps.md)
 
 ## Project2 Old Content
 
@@ -72,7 +73,6 @@
 
 ## Mini-Game
 
-* [Text Input](text_input.md)
 * [Game Scene](game_scene.md)
 * [MiniGame - Scene/State](minigame_-_view.md)
 * [GameData - Simple](gamedata-simple.md)
