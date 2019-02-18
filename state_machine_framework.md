@@ -30,7 +30,7 @@ The State Machine structure insures that for each state that the system can be i
 ###StateManager Class
 The StateManager class will manage the stateMachine. It will keep track of the current activeState, it will delegate responsibility for scene logic to the current activeState. It will manage and coordinate messaging and state-transition event synchronization.
 
-###Persistent Object: InstanceRef
+###Singleton Global Object-Reference: InstanceRef
 The StateManager class will use the Singleton Design Pattern which will insure that only 1 instance: `instanceRef` of this class will exist in our program.  The StateManager class will inherit from MonoBehaviour, this means we can attach this script to an empty GameObject in the starting scene for our program. We'll use the Unity function: `DontDestroyOnLoad(gameObject)` to insure this script component is not destroyed when transitioning between scenes.  
 
 ###Keep Track of the ActiveState

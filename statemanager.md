@@ -7,34 +7,93 @@
 - Learn how to instantiate objects by calling the class constructor method.
 
 
-In Project 2, we have created the StateManager class to manage which state our application is in.  The StateManager inherits from MonoBehavior, so this class can be attached to an empty gameObject as a script component: *GameManager*, and Unity will execute the Start(), Update(), and other Unity event hook functions for the StateManager object instance, which, in-turn will execute StateUpdate() for the currently *activeState*.  
+#StateManager Code
 
-### Singleton Design Pattern
-The [Singleton Design Pattern](https://en.wikipedia.org/wiki/Singleton_pattern) is a software engineering paradigm where a class is designed with the understanding that only 1 instance of the class will ever be created. 
+```java
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
-We want to insure that an object of this class is only created once, otherwise every time an instance object is created, initialization of the class object would return us to whatever we set as the initial state.  Instead, we want to use one instance of a StateManager object throughout the lifetime of our application. In order to insure that 1 single instance is created when our game is started, and that no other instances are ever created, we can create a special static class reference variable:``StateManager instanceRef; ``, then any other object instances of the StateManager script component that are created are immediately destroyed.
+///
+/// CS2335 - Spring 17
+///  
+/// <summary>
+/// Game Scene. Matches Unity Scenes in Build Settings
+/// </summary>
+public enum GameScene
+{
+	Begin = 0,
+	End = 1
+}
 
+/// <summary>
+/// State manager.  Add comments
+/// </summary>
+public class StateManager : MonoBehaviour
+{
+	public static StateManager instanceRef;
+	public IStateBase activeState;
+	public GameScene curScene;
 
-```
-public class StateManager : MonoBehaviour {
-
-    public static StateManager instanceRef;  //this will be a reference to the only class object instance allowed to exist
-    
-	//Called before any GameObjects Start() method is called
-	//Allows pre-initialization: Called once when a script is loaded
-	void Awake(){
-		if(instanceRef==null){  //test to see if instanceRef has been assigned to an object yet.
-			instanceRef=this;  //if not, assign it to this current object instance
-			Debug.Log ("create me");
-			DontDestroyOnLoad(gameObject);  //make sure the gameObject that this is attached to is not destroyed when jumping to a new scene
+	/// <summary>
+	/// Create this singleton instance.
+	/// Implement the Singleton Design Pattern - initialize managerInstance
+	/// </summary>
+	void Awake ()
+	{
+		if (instanceRef == null) {
+			instanceRef = this;
+			DontDestroyOnLoad (gameObject);  //the gameObject this is attached to 
+		} else {   //
+			DestroyImmediate (gameObject);   
+			Debug.Log ("Destroy GameObject");
 		}
-		else{  //an instance of this class had previously been created.
-			Debug.Log ("destroy me");
-			DestroyImmediate(gameObject);  //destroy gameObject and the script object instance, to prevent duplication
-		}
+
 	}
+	// Use this for initialization
+	void Start ()
+	{
+		activeState = new BeginState ();
+		curScene = GameScene.Begin;
+		activeState.InitializeObjectRefs ();  //call to Initialize BeginState object references
+
+		//next scene change - this event will call OnLevelFinishedLoading custom function
+		SceneManager.sceneLoaded += OnLevelFinishedLoading;  //add function to sceneLoaded delegate
+
+	}
+
+	/// <summary>
+	/// Switchs the state.
+	/// </summary>
+	/// <param name="newState">New state.</param>
+	public void SwitchState (IStateBase newState)
+	{
+		activeState = newState;
+		curScene = newState.Scene;
+		Debug.Log ("Add Debug Info");
+	}
+
+
+
+	//StateManager needs to know when a new scene has been loaded
+	//then it can call: InitializeObjectRefs for the current state
+    void OnLevelFinishedLoading (Scene scene, LoadSceneMode mode)
+	{
+		int sceneID = scene.buildIndex;
+		if (sceneID == (int)curScene) {
+			Debug.Log ("New function in StateManager to initialize new scene objects - exectued");
+			activeState.InitializeObjectRefs ();
+		} else {
+			Debug.Log ("Big Problems - Scene & State Mismatch");
+			Debug.Log ("LevelFinished Loading :Scene Loaded: " + sceneID + " ActiveState Scene Enum: " + activeState.Scene);
+		}
+
+
+	}
+} //end StateManager
+
 	
-	//additional StateManager code
 ```
 
 ###Object Persistence 

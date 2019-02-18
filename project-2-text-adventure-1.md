@@ -6,7 +6,7 @@ For Project 2, we'll begin to create a framework for a branching-narrative adven
 [See previous section: Project2 starter-assets](/project2-starter-assets.md):
 
 ###2 Options
-To get started on Project 2, you have 2 options. You can  follow steps below to import contents of the Assets folder into a new project's Asset folder, or you can import these items as a Unity Package.
+To get started on Project 2, you have 2 options. You can  follow steps below to import contents of the Assets folder into a copy of Project1's Asset folder, or you can import these items as a Unity Package.
 
 ###Option 2: Create New Project: Unity 2D 
  
