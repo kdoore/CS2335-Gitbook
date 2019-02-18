@@ -7,14 +7,13 @@ In this section, we'll discuss how to create and position UI elements in a scene
 ###Canvas
 All UI elements are children of the Canvas class.  When the first UI element is added to a scene, in addition, a Canvas gameObject and an EventSystem gameObject are also added to a scene, these are required to be in the Hierarchy for every scene that has UI elements to be displayed and have interactivity.  
 
-###Canvas: ScreenSpace-Overlay
+###Canvas: Configure ScreenSpace-Camera
 When the Canvas is added to a scene, by default, it's layout is offset from the main camera.  For our purposes, it is easiest to configure the Canvas Component so that it's rendered in the same position as the regular game scene.  To do that, we need to change the Render-Mode of the Canvas, we'll change it from Screen-Space Overlay to `Screen Space - Camera`, and we'll select the `Main Camera` as the `Render Camera` for the Canvas Component.  See image and animation below to configure the `Render Mode` of the Canvas to be `Screen Space Camera`, with the `Render Camera` set to `Main Camera`.   
 
 ![](Screenshot 2016-02-15 20.14.52.png)
 
 
 ###UI-Button, Child-GameObject: Text
-
 
 Add a UI Button to the game scene.  Name the button 'StartButton'.  The StartButton has a child gameObject: Text. Configure the Text GameObject, so it's Text Component', Text field has a value of 'Start Game'.  See the animation below to add a StartButton gameObject to the scene.
 

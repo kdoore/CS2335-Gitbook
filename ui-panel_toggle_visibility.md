@@ -19,7 +19,7 @@ Once we have added the CanvasGroup component to our Panel-UI element, then we ca
 ###Scene Load-Event - Initialize Object References
 We need to initialize the value of our object references within the Unity Start() method.  This way the object references will be re-initialized each time we enter this particular Scene. 
 
-### Find GameObject Components: Button, CanvasGroup 
+### Find GameObject Components: Button, CanvasGroup.  
 
 Below is the code that we've added to  a new script: `PanelVisiblity.cs `, or this code can be added to one of the stateX.cs scripts in our projects.
 We need object-reference variables for our UI panel's CanvasGroup component: `panelCG`, and the Button component: `hideBtn`  
@@ -37,7 +37,7 @@ We need object-reference variables for our UI panel's CanvasGroup component: `pa
 	hideBtn = GameObject.Find ("HideButton").GetComponent<Button>();
 	hideBtn.onClick.AddListener (HidePanel);  //method called when hideBtn is clicked	
 	
-	ShowCG( panelCG); //make sure panel is visible 
+	Utility.ShowCG( panelCG); //make sure panel is visible 
 	} //end Start
 	
 ```
@@ -53,28 +53,11 @@ The code below shows the HidePanel method, this is executed when the hideButton 
 
 ```java
 public void HidePanel(){
-	// call the HideCG function
-	HideCG( panelCG); // hides the panel
-	
-	//or, if you have a Utility class:
-	//Utility.HideCG (PanelCG);
+
+	Utility.HideCG (PanelCG);
 }
 
 
-	//Modifies CanvasGroup component properties to make visible
-	public void ShowCG( CanvasGroup cg){
-		cg.alpha = 1;
-		cg.blocksRaycasts = true;
-		cg.interactable = true;
-	}
-
-    //Modifies CanvasGroup component properties to hide
-	public void HideCG( CanvasGroup cg){
-		cg.alpha = 0;
-		cg.blocksRaycasts = false;
-		cg.interactable = false;
-	}
-	
 ```
 
 ###Button onClick Event - Event-Handler Methods

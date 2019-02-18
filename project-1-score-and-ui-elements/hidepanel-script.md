@@ -5,7 +5,7 @@ Suggestion:  You can write a simple script that can be used on any UI panel to h
 ###Steps:
 Create a UI panel: TitlePanel to act as a container for the Title UI-text and startButton objects.
  
- 
+Requires Utility.cs Custom Script: [Utility.cs ](/utility-class.md)
  
 	- Create a StartButton as a child of the TitlePanel
 	- Create a Title UI-text as a child of the TitlePanel
