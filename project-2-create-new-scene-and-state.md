@@ -58,7 +58,8 @@ public class SomeState : IStateBase
 	public GameScene Scene {
 		get{ return scene; }
 	}
-	
+
+//additional code must be added, see below	
 } //end class
     
 ```
