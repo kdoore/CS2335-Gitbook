@@ -2,15 +2,17 @@
 
 For the remaining projects in this course, we'll use the following provided script files:
 
-Scripts:
-StateManager.cs
-IStateBase.cs
-BeginState.cs
-EndState.cs
+**Scripts:**
+StateManager.cs - Custom State Machine Logic - Inherits from MonoBehaviour
+IStateBase.cs - Interface specification
+BeginState.cs - Example Scene-State script
+EndState.cs - Example Scene-State script
 
-Scenes: 
+**Scenes: **
 BeginScene
 EndScene
+ - Each scene contains:
+- UI Button, UI panel with UI - Text
 
 [Starter Code - Assets Folder Zip](https://utdallas.box.com/v/project2-starterAssets)
 
