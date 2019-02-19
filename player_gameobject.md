@@ -97,6 +97,7 @@ public class PlayerController : MonoBehaviour {
              }
             else if(hitObject.CompareTag("Hazard")){
                 Debug.Log ("Hit Hazard");
+                PickUp item = hitObject.GetComponent<PickUp> ();  
                 GameData.instanceRef.TakeDamage( item.value);
                 Destroy (hitObject.gameObject);
             }
