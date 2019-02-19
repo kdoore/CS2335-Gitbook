@@ -3,19 +3,26 @@
 This script will be on emptyGameObject: MiniGameManager
 You'll need to populate public fields in the inspector. See Images below: 
 
+Create The following GameObjects:
+
+ResultsPanel: UI-Panel with CanvasGroup Component
+ResultsText: UI-Text - child of ResultsPanel
+StartButton: UI-Button
+MiniGameManager: Empty GameObject
+
+![](/assets/Screen Shot 2019-02-19 at 4.10.44 PM.png) 
+![](/assets/Screen Shot 2019-02-19 at 4.11.18 PM.png)
+
+Put Script on an empty gameObject in the Scene.
+
+![](/assets/Screen Shot 2019-02-19 at 4.11.04 PM.png)
+
 ###Overview:
 This class manages logic for:
 - Start Button to Start Gameplay
     - Function ReStartGame( ) is executed when the StartButton is clicked
   - Resets GameData
-  - Hides the Results Panel:  
-      
-      ResultsPanel: UI-Panel with CanvasGroup
-      ResultsText:  UI-Text - child of ResultsPanel
-  
-   ![](/assets/Screen Shot 2019-02-19 at 4.10.44 PM.png) 
-   
-  ![](/assets/Screen Shot 2019-02-19 at 4.11.18 PM.png)
+  - Hides the Results Panel:
   - Sets the GameState to MiniGameState.active
   - Sets the StartButton so it's inactive (hidden)
   - Starts the Spawner 
@@ -44,9 +51,6 @@ This class manages logic for:
     
     
 - DisplayResult - This method is called when the Game
-
-![](/assets/Screen Shot 2019-02-19 at 4.11.04 PM.png)
-Put Script on an empty gameObject in the Scene.
 
 
 #Code MiniGameState, MiniGameManager
