@@ -1,4 +1,4 @@
-#Mini Game Manager
+#MiniGame Manager
 
 This script will be on emptyGameObject: MiniGameManager
 You'll need to populate public fields in the inspector. See Images below: 
@@ -17,7 +17,8 @@ Put Script on an empty gameObject in the Scene.
 
 ![](/assets/Screen Shot 2019-02-19 at 4.11.04 PM.png)
 
-###Overview:
+###Overview - MiniGameManager.cs:
+
 This class manages logic for:
 - Start Button to Start Gameplay
     - Function ReStartGame( ) is executed when the StartButton is clicked
