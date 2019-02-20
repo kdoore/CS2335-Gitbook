@@ -57,6 +57,7 @@
     * [HidePanel Script](project-1-score-and-ui-elements/hidepanel-script.md)
   * [Project 2 - List of Steps](project-2-list-of-steps.md)
     * [Project 2 - Code](project-2-list-of-steps/project-2-code.md)
+* [Visual Novel in Unity](visual-novel-in-unity.md)
 
 ## Project2 Old Content
 
@@ -65,7 +66,6 @@
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
   * [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
     * [Hide\_Show\_Panel Script](conversation-scriptable-objects/dialogmanagerconvlist/hideshow-panel-script.md)
-* [Visual Novel in Unity](visual-novel-in-unity.md)
 * [DialogManager using UnityEvent](dialogue-and-scene-decision-integration.md)
 * [Simple Dialog Prefab](simple-dialog-prefab.md)
 * [SimpleDialog\_version2](simple-dialog-prefab/simpledialogversion2.md)
