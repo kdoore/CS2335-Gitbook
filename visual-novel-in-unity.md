@@ -20,7 +20,7 @@ Examples of Story-Structure Diagrams:
 
 [Basics of Story Design: Story Worksheet:](https://drive.google.com/file/d/1sDVT7Km8PKYsgEFmkBiCgbEFlcbP65Aj/view) 
 
-[Michaela Banks - Safe Passage Diagram](https://utdallas.box.com/s/qn8o7avjcqry8n1t04rhnt5g6silaasw)
+[Michaela Banks - Safe Passage Diagram](https://utdallas.box.com/s/lnrc425sxjt5g7h2j109wq0d54jl978i)
 
 [What is Visual Novel - Cloudnovel](https://blog.cloudnovel.net/what-is-visual-novel/)
 
