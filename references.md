@@ -109,6 +109,12 @@ Art by Osmic
 [Summary from Myth and the Movie -Christopher Vogler](http://www.tlu.ee/~rajaleid/montaazh/Hero's%20Journey%20Arch.pdf)
 
 ##Story Generator Ideas
+
+Rules for Story-Telling: [Pixar, Emily Coats:](http://storyshots.tumblr.com/post/25032057278/22-storybasics-ive-picked-up-in-my-time-at-pixar)
+
+[Pixar: 6 Rules of StoryTelling](https://medium.com/build-acl/pixars-rules-of-storytelling-applied-to-product-managers-ux-designers-420cec0a18a6)
+
+
 [Emoji Story Prompts](https://thejohnfox.com/2016/05/writing-prompt-pictures/)
 
 [Create-Your-Own Story Ideas](http://editthis.info/create_your_own_story/Idea_Pitches)
