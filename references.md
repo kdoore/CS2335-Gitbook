@@ -113,7 +113,13 @@ Art by Osmic
 Rules for Story-Telling: [Pixar, Emily Coats:](http://storyshots.tumblr.com/post/25032057278/22-storybasics-ive-picked-up-in-my-time-at-pixar)
 
 [Pixar: 6 Rules of StoryTelling](https://medium.com/build-acl/pixars-rules-of-storytelling-applied-to-product-managers-ux-designers-420cec0a18a6)
-
+    - Rule #14 — Why must you tell THIS story? What’s the belief burning within you that your story feeds off of? That’s the heart of it.
+    - Rule #1 — You admire a character for trying, more than for their successes.
+    - Rule #16 — What- are the stakes? Give us reason to root for the character. What happens if they don’t succeed? Stack the odds against.
+    - Rule #15 — If you were your character, in this situation, how would you feel? Honesty lends credibility to unbelievable situations.
+    - Rule #4 — Once upon a time there was ___. Every day, ___. One day ___. Because of that, ___. Because of that, ___. Until finally ___.
+    - Rule #12 — Discount the first thing that comes to mind. And the 2nd, 3rd, 4th, 5th — get the obvious out of the way. Surprise yourself.
+    - Rule #7 — Come up with your ending before you figure out your middle. Seriously. Endings are hard, get yours working up front.
 
 [Emoji Story Prompts](https://thejohnfox.com/2016/05/writing-prompt-pictures/)
 
