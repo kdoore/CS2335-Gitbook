@@ -28,6 +28,10 @@ Examples of Story-Structure Diagrams:
 
 [Designing Branching Narrative](https://thestoryelement.wordpress.com/2015/02/11/designing-branching-narrative/)
 
+[Standard Patterns in Choice-Based Games](https://heterogenoustasks.wordpress.com/2015/01/26/standard-patterns-in-choice-based-games/)
+
+
+
 ##Hero's Journey
 [Summary from Myth and the Movie -Christopher Vogler](http://www.tlu.ee/~rajaleid/montaazh/Hero's%20Journey%20Arch.pdf)
 
