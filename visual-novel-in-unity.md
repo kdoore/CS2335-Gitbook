@@ -1,11 +1,11 @@
 #Visual Novel in Unity
 
-Planning the game: 
+**Planning the game: **
 1.  Identify story's main character and high-level story plot
-2.  Identify a minimum of 5 major scenes in the plot
+2.  Identify a minimum of **5 major scenes** in the plot
 3.  Identify plot-decision points in each scene that will cause transitions to new scenes
 4.  Find assets for main scenes - background, etc.
-5.  Define introductory narrative or dialog for Scene1 that provides the player with their first decision to change scenes.
+5.  **Define introductory narrative or dialog for Scene1 that provides the player with their first decision to change scenes.**
 
 ###Resources: 
 
