@@ -55,3 +55,26 @@ Rules for Story-Telling: [Pixar, Emily Coats:](http://storyshots.tumblr.com/post
 
 [How to create a Dialog System in Unity - [Brackeys]](https://www.youtube.com/watch?v=_nRzoTzeyxU)
 
+
+###Other Resources
+
+[Emoji Story Prompts](https://thejohnfox.com/2016/05/writing-prompt-pictures/)
+
+[Create-Your-Own Story Ideas](http://editthis.info/create_your_own_story/Idea_Pitches)
+
+###CYOA - Templates
+[Branched Learning Scenarios](https://blogs.articulate.com/rapid-elearning/build-branched-e-learning-scenarios-in-three-simple-steps/)
+
+###Adventure Games - Articles
+[Character Development Discussion](http://www.adventuregamestudio.co.uk/wiki/Giving_Personality_to_Characters)
+
+[Creating Atmosphere](http://www.adventuregamestudio.co.uk/wiki/Creating_Atmosphere)
+
+[HerStory](http://www.herstorygame.com/about/)
+
+[Narrative Structure](https://thestoryelement.wordpress.com/2015/02/11/designing-branching-narrative/)
+
+[Game Design Concepts - ch1](https://gamedesignconcepts.wordpress.com/2009/06/29/level-1-overview-what-is-a-game/)
+
+[Critical Vocabulary for Games - Costikyan](http://www.costik.com/nowords2002.pdf)
+
