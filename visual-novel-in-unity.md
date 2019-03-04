@@ -24,6 +24,8 @@ Examples of Story-Structure Diagrams:
 
 [What is Visual Novel - Cloudnovel](https://blog.cloudnovel.net/what-is-visual-novel/)
 
+[How to Plan the Structure of Your Visual Novel](https://blog.cloudnovel.net/2018/05/24/how-to-plan-structure-of-your-visual-novel/) - Plot-Based or Character-Based
+
 [Designing Branching Narrative](https://thestoryelement.wordpress.com/2015/02/11/designing-branching-narrative/)
 
 Unity Tutorials:
