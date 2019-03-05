@@ -5,7 +5,7 @@ This section will provide details for how to create a Scene and corresponding st
 ###Create New Scene, Add Scene to Build Settings
 To create a new scene, right-click in the Unity Project / Assets Panel and select the Create > Scene option.  Name this scene using a descriptive name according to your project's theme.  Next, Add this scene to your project's build settings, following the instructions in the main Project2 page: 
 
-##IMPORTANT: Add Scenes in Build Settings 
+##IMPORTANT: Add Scenes in Unity Build Settings 
 For this project to work, you must first go into your project's Build Settings. (File > Build Settings)  You must add all scenes to the Scenes to Build Panel.  **Drag the scenes from your assets directly into the Scenes to Build Panel.**  **Note the order, and SceneID's on the right side, this must match GameScene Enums in StateManager**, BeginScene must be higher than EndScene in the order, it will have a 0 on the right side of the panel, while EndScene will has ID: 1.
 
 ![](/assets/Screen Shot 2019-03-05 at 10.52.59 AM.png)
