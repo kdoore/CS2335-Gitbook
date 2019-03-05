@@ -25,12 +25,13 @@ For this project to work, you must first go into your project's Build Settings. 
 /// <summary>
 /// Game Scene. Matches Unity Scenes in Build Settings
 /// </summary>
-public enum GameScene
+public enum GameScene //must match Build Settings Order
 {
 	Begin = 0,
-	End = 1, 
-	Scene2 = 2  //Create an Enum value for each scene in your Unity Build Settings - Scenes In Build
-
+	Scene2 = 1,   
+	MiniGame = 2,
+	Scene3 = 3,
+	End = 4
 }
 ```
 ###Configure the Canvas to use Screen-Space Camera
