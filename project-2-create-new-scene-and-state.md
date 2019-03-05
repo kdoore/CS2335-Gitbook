@@ -1,6 +1,6 @@
-****#Project 2 - Create New Scene and State
+#Project 2 - Create New SceneX and SceneXState.cs File
 
-This section will provide details for how to create a Scene and corresponding state, where these items will be added to a copy of Project1, **rename to Project2**.  This assumes you have either downloaded the Proj2 starter-code unity-package, or the Proj2 starter-code assets folder. See: [Starter Assets](/project2-starter-assets.md)
+This section will provide details for how to create a SceneX and corresponding SceneXState.cs C# file, where these items will be added to a copy of Project1, **rename to Project2**.  This assumes you have either downloaded the Proj2 starter-code unity-package, or the Proj2 starter-code assets folder. See: [Starter Assets](/project2-starter-assets.md)
 
 ###Create New Scene, Add Scene to Build Settings
 To create a new scene, right-click in the Unity Project / Assets Panel and select the Create > Scene option.  Name this scene using a descriptive name according to your project's theme.  Next, Add this scene to your project's build settings, following the instructions in the main Project2 page: 
@@ -37,8 +37,8 @@ public enum GameScene //must match Build Settings Order
 ###Configure the Canvas to use Screen-Space Camera
 [ See: Configure Canvas to use Screen-Space Camera](https://kdoore.gitbooks.io/cs-2335/content/project-1-score-and-ui-elements.html#animation-set-canvas-render-mode-to-screen-space-camera) 
 
-###Create a StateX Script file to correspond to the new Scene
-Create a new C# Script in the scripts folder of your project's asset panel.  Name the script so it's obvious this script corresponds to the scene you just created.  Then, we'll need to modify the code for this script so that it is similar to the other StateX files that were included in the starter code, such as BeginState.
+###Create a SceneXState.cs Script file to correspond to the new Scene
+Create a new C# Script in the scripts folder of your project's asset panel.  Name the script so it's obvious this script corresponds to the scene you just created.  Then, we'll need to modify the code for this script so that it is similar to the other SceneXState.cs files that were included in the starter code, such as BeginState.
 
 ###Change Script Steps:
  - **Add 'using' directives for SceneManagement and UI to the top of the script file:**
@@ -110,7 +110,7 @@ public class SomeState : IStateBase
 
 ```
 
-###Add A Button in BeginScene to go to the new Scene.
+##Add A Button in BeginScene to go to the new Scene.
 Now you must add buttons to other scenes, and code to other state scripts so you can get to this new scene.
 
 To add a Button to the BeginScene, select: GameObject > UI > Button.  Name this button so that it corresponds to the task it will be used for.  For example, we can call it: SomeSceneButton
