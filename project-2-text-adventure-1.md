@@ -16,7 +16,7 @@ If you're not able to drag your sub-folder content directly into the Project > A
 
 
 
-##: IMPORTANT: Add Scenes in Build Settings
+## IMPORTANT: Add Scenes in Build Settings
 For this project to work, you must first go into your project's Build Settings. (File > Build Settings)  You must add both scenes to the Scenes to Build Panel.  You can drag the scenes from your assets directly into the Scenes to Build Panel.  Note the ordering, BeginScene must be higher than EndScene in the order, it will have a 0 on the right side of the panel, while EndScene will have a 1.
 
 ![](/assets/Unity 2.JPG)
