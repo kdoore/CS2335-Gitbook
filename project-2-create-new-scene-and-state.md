@@ -1,4 +1,4 @@
-#Project 2 - Create New Scene and State
+****#Project 2 - Create New Scene and State
 
 This section will provide details for how to create a Scene and corresponding state, where these items will be added to a copy of Project1, **rename to Project2**.  This assumes you have either downloaded the Proj2 starter-code unity-package, or the Proj2 starter-code assets folder. See: [Starter Assets](/project2-starter-assets.md)
 
@@ -37,7 +37,7 @@ public enum GameScene
 Create a new C# Script in the scripts folder of your project's asset panel.  Name the script so it's obvious this script corresponds to the scene you just created.  Then, we'll need to modify the code for this script so that it is similar to the other StateX files that were included in the starter code, such as BeginState.
 
 ###Change Script Steps:
- - Add 'using' directives for SceneManagement and UI to the top of the script file:
+ - **Add 'using' directives for SceneManagement and UI to the top of the script file:**
 
 
 ```java
@@ -46,10 +46,13 @@ using UnityEngine.SceneManagement;
 
 ```
 
-- Remove :MonoBehaviour ( Base-Class )
-- Add: :IStateBase ( interface )
-- Remove:  Unity Start( ) and Update( ) event functions
-- Add code for IStateBase, Property: Scene  
+- **Remove:** MonoBehaviour ( Base-Class )
+- **Add:** :IStateBase ( interface )
+- **Remove: ** Unity Start( ) and Update( ) event functions
+- **Add code** for IStateBase, 
+	- Property: Scene, variable: scene
+	- Method: InitializeObjectRefs( )
+- **Add: ** Constructor for the Class  
           
 
 ```java
@@ -103,7 +106,7 @@ public class SomeState : IStateBase
 
 ```
 
-###Add A Button to the BeginScene to the new Scene.
+###Add A Button in BeginScene to go to the new Scene.
 Now you must add buttons to other scenes, and code to other state scripts so you can get to this new scene.
 
 To add a Button to the BeginScene, select: GameObject > UI > Button.  Name this button so that it corresponds to the task it will be used for.  For example, we can call it: SomeSceneButton

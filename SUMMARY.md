@@ -48,7 +48,7 @@
     * [Singleton Pattern](state_machine_framework/singleton.md)
   * [StateManager - Singleton Design Pattern](statemanager.md)
   * [IStateBase, BeginState](istatebase.md)
-  * [Project 2 -Create new Scene and State](project-2-create-new-scene-and-state.md)
+  * [Project 2 -Steps: Create new Scene and State](project-2-create-new-scene-and-state.md)
   * [Game Objects: UI vs. 2D Sprite](game_objects.md)
   * [UI Elements](project-1-score-and-ui-elements.md)
     * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
