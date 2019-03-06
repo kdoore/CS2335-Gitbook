@@ -13,7 +13,8 @@ There are several steps required when creating a new type of scriptable object. 
 -  Define a collection data-structure, within this class the  to hold a collection of the above defined composite elements. 
         - `public List<ConversationEntry> Conversation`
 
--  Install the Scriptable Object Factory - Unity Package  [Link - Tal Lior](http://www.tallior.com/unity-scriptableobject-factory/)
+### Install the Scriptable Object Factory - Unity Package  
+[Scriptable Object Factory - Download Link - Tal Lior](http://www.tallior.com/unity-scriptableobject-factory/)
 
 - Add a public instance of the Scriptable Object to a custom script that will be attached to a gameObject in a scene.  In our case this is the DialogManager.cs script.
   
