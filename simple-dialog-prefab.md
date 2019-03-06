@@ -15,10 +15,11 @@ We should try to make something that will work as a prefab, so we can use it in 
  The image below shows the Hierarchy panel structure of these gameObjects.  The **SimpleDialog.cs** script is attached to the top-level panel object: **DialogPrefab**.  The panel must also have a **CanvasGroup **component attached. To add a CanvasGroup component, in the Inspector panel: Add Component>Layout > CanvasGroup
 
 ![](/assets/Screen Shot 2019-03-06 at 2.27.16 PM.png)
+![](/assets/Screen Shot 2019-03-06 at 2.32.44 PM.png)
 
 The DialogText is anchored to 4 corners of its' parent, the DialogPanel.  The NextButton is anchored to the bottom  corner of the panel (not shown here).
 
-![](/assets/Screen Shot 2019-03-06 at 2.32.44 PM.png)
+You will create a Prefab of this after adding and configuring the SimpleDialog script component.
 
 ###Important - Order The Text Elements As Children 1,2,3:
     - Make sure that the **DialogText is the first child **of the DialogPanel, and that the NextButton is below the DialogText in the Hierarchy Panel, the **SpeakerName is the 3rd child** Text element of the main panel:  DialogPrefab.
