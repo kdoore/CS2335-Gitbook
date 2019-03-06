@@ -162,6 +162,12 @@ void GetNextDialog()
             Utility.HideCG(dialogCG); //hide the dialog
         } 
     }
+    
+    //Helper Method, allows Button-click To Execute Utility.ShowCG( )
+    public void ShowDialogPanel()
+    {
+        Utility.ShowCG(dialogCG);
+    }//end function
 ```
 
 
