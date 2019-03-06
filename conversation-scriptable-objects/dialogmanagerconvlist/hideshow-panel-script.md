@@ -43,7 +43,7 @@ public class Hide_Show_Panel : MonoBehaviour {
         }
         if (openButton != null)
         {
-            closeButton.onClick.AddListener(ShowPanel);
+            openButton.onClick.AddListener(ShowPanel);
         }
 
     }
