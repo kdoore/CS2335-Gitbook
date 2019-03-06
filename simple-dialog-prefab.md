@@ -104,7 +104,7 @@ The following logic would be located in the Unity Start( ) event function for th
         dialogText = textChildren[0]; //first child Text
         speakerText = textChildren[2]; //3rd child Text
 
-        InitializeDialog();
+        InitializeDialog(); //populate Queue, set initial conversation values
 
         nextButton = GetComponentInChildren<Button>();
         nextButton.onClick.AddListener(GetNextDialog);
@@ -124,17 +124,49 @@ The following logic would be located in the Unity Start( ) event function for th
     }//end start
 
 ```
-
-
-
 -  **GetComponentsInChildren< Text >()**See section below for details     
+
 - **Populate the queue data structure** 
 
 ###Initialize DialogQueue
 In the code below we specify that the `List< T >` and `Queue< T >` will both be collections of `ConversationEntry` objects.
 
+```java
+void InitializeDialog()
+    {
+        foreach( ConversationEntry item in conversations)
+        {
+            conversationsQueue.Enqueue(item); //put each string -item in the queue
+        }
+        GetNextDialog();  //get first item
+    }
+```
+
 ###GetNextDialog Method
 The nextButton allows the user to move forward through the dialog items.  In the Start( ) method, we configured the nextButton's onClick method to execute the GetNextDialog method each time it is clicked.  The code below shows that each time the GetNextDialog method is executed, it first checks to make sure there are items in the queue.  Then, the dialogText is updated to display the first item in the queue.  The Queue< T > Dequeue( ) method retrieves and removes the item at the front of the queue returns that value so it can be used to set the text value for the dialogText.  If there are no more items in the queue, then the panel is hidden, using the Utility class static method: HideCG.
+
+
+
+```java
+void GetNextDialog()
+    {
+        if (conversationsQueue.Count > 0)
+        {
+            ConversationEntry item = conversationsQueue.Dequeue();
+            dialogText.text = item.dialogTxt;
+            speakerText.text = item.speakerName;
+        }
+        else { //no more dialog
+            if ( nextPanelToOpen != null)
+            {
+                Utility.ShowCG(nextPanelToOpen);
+            }
+            Utility.HideCG(dialogCG); //hide the dialog
+        } 
+    }
+```
+
+
 
 ###Unity: GetComponentsInChildren< T >()
 The Unity method: GetComponentsInChildren, provides a convenient way to initialize an object reference variable based on the Hierarchy panel's parent-child relationships between gameObjects. 
