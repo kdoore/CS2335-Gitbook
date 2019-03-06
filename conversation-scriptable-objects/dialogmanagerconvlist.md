@@ -1,13 +1,4 @@
 #DialogManager for ConversationList
-Updated Oct 26, 2018
-
-[Link: Unity Package For DialogManager Assets](https://utdallas.box.com/v/DialogManager3-unityPkg)
-
-The link above contains a testScene, prefabs, conversationList scriptableObject, dialogManager script etc.  The Link below is for a Unity Project that has the same content.  Alternately, you can open the Unity project using the link below to look at files, etc.  
-
-Link:  [Full Unity Project for DialogManager Assets](https://utdallas.box.com/v/DialogManager-UnityProject)
-
-Link: [See supplemental instructions for configuring gameObjects: ](/project-2-list-of-steps.md)
 
 Also see [Hide_Show_Panel Script ](/conversation-scriptable-objects/dialogmanagerconvlist/hideshow-panel-script.md)
 

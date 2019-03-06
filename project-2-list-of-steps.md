@@ -1,6 +1,6 @@
 # Project 2 - List of Steps
 
-Below is an listing of steps for modifying the TextAdventure starter-code, for completing Project2.
+Below is an listing of steps for modifying the for completing Project2.
 
 The link below gives more detailed information for Gitbook: [Create new scene, state](/project-2-create-new-scene-and-state.md)
 
@@ -38,3 +38,6 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
    * 2 lines of code for to switching scene/state 
      * `SceneManager.LoadScene ("EndScene"); //actual scene name`
      * `StateManager.instanceRef.SwitchState (new EndState ());` 
+
+
+#Dialog Requirements
