@@ -93,7 +93,7 @@ The image below shows that the public ConversationList variable: convList has be
 
 ![](/assets/Screen Shot 2018-09-16 at 3.56.35 PM.png) 
 
-### Scriptable Object Factory Unity Package
+### Download Scriptable Object Factory Unity Package
 
 Lior Tal has created a Unity package that makes it easy to create scriptable object instances.  His website below provides a link to his github account where he provides a download link to the Unity Plugin.  I have included these files in the Dialog Unity_Package
 

@@ -59,6 +59,7 @@
     * [Project 2 - Code](project-2-list-of-steps/project-2-code.md)
 * [Visual Novel in Unity](visual-novel-in-unity.md)
 * [Project2 - Scene-State Steps](project1-checklist.md)
+  * [Project2 List Of Steps](project1-checklist/project2-list-of-steps.md)
 
 ## Project2 Old Content
 
