@@ -68,19 +68,31 @@ Unity can display for editing, both List< string >, or array: string[] in the in
 #SimpleDialog.cs 
 (See complete code at bottom of page)
 
-- **Declare Object Reference Variables**
+- **Declare Object Reference Variables - ConversationEntry**
    
   -  In the code below we specify that the `List< T >` and `Queue< T >` will both be collections of `ConversationEntry` objects.
 
 ```java
     private Queue<ConversationEntry> conversationsQueue = new Queue<ConversationEntry>();
-    public List<ConversationEntry> conversations;
+    public List<ConversationEntry> conversations; //initialized by Unity in Inspector
 
+```
+  - **Declare object reference variables for the components ** we'll interact with. 
+
+```java
+    public Button openButton;
+    public CanvasGroup nextPanelToOpen;
+    public bool showOnStart = false;
+
+    //find in children
+    private Button nextButton; //only 1 child button
+    private Text dialogText;   //find as a child - Hierarchy order mattersprivate CanvasGroup dialogCG;  //Canvas Group on top level - script attached to this Panel
+    private Text speakerText;  //find as a child - Hierarchy order matters
+    private CanvasGroup dialogCG; //top level panel
 
 ```
 
 
-  - Then we declare object reference variables for the components we'll interact with. 
 
 - **Start: Initialize Object Reference Variables**
 
