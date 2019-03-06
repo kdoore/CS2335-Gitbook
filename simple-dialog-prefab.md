@@ -264,10 +264,13 @@ public class SimpleDialog : MonoBehaviour
 
 } //end class
 
-
-
 ```
-###Other Items Used for Simple Dialog
 
+###Other Items Used for Simple Dialog
+For TitlePanel, Attach CanavasGroup and Hide_Show_Panel.cs
+For DecisionPanel, Attach CanvasGroup and Hide_Show_Panel.cs
+
+![](/assets/Screen Shot 2019-03-06 at 3.25.54 PM.png)
 ![](/assets/Screen Shot 2019-03-06 at 2.26.55 PM.png)
 ![](/assets/Screen Shot 2019-03-06 at 2.27.05 PM.png)
+
