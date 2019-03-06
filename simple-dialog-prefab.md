@@ -70,99 +70,34 @@ Unity can display for editing, both List< string >, or array: string[] in the in
     In the code below we specify that the `List< T >` and `Queue< T >` will both be collections of `string` objects.
     Then we declare object reference variables for the components we'll interact with. 
 
-```java
 
-public class DialogController : MonoBehaviour {
-
-    [TextArea] //show large textarea in inspector for input
-    public List<string> dialogList = new List<string>();
-
-    private Queue<string> queue = new Queue<string>();
-
-    //component object reference variables
-    private Button nextBtn;
-    private Text dialogText;
-    private CanvasGroup cg;
-
-```
 
 - **Initialize Object Reference Variables**
 
 The following code would be located in the Unity Start( ) event function for this script that's attached to the panel gameObject:
 
-```java
-      
-    //in Start()
-      
-    nextBtn = GetComponentInChildren<Button>();   
-    nextBtn.onClick.AddListener(GetNextDialog);
-    
-    cg = GetComponent<CanvasGroup>(); //on this Panel GameObject 
-    
-    dialogText = GetComponentInChildren<Text>();
-    
-    //set these in Start so they'll be correct when the scene starts.
-    cg.alpha = 1;
-    cg.blocksRaycasts = true;
-    cg.interactable = true;
 
-        
-```
 -  **GetComponentInChildren< Text >()**See section below for details     
 - **Populate the queue data structure** 
 The following code is also in the Unity Start() event function.  In the code below, we use a foreach structure, which works like a for-loop, to step through each item in the List< string >: dialogList, and puts the string element into the queue.  Then, we check to make sure there are some items in the queue, we remove the first item, and use it to set the text to be displayed in the dialog panel.
      
-     
-```java
-        // in Start( )
-        foreach(string dialogItem in dialogList){
-            queue.Enqueue(dialogItem); //put all of the dialog items into the queue
-        }
-       
-       
-        if (queue.Count != 0) //check to make sure some dialog
-        {
-            dialogText.text = queue.Dequeue(); //display the first dialog item
-        }
-       
-```
 
 ###GetNextDialog Method
 The nextButton allows the user to move forward through the dialog items.  In the Start( ) method, we configured the nextButton's onClick method to execute the GetNextDialog method each time it is clicked.  The code below shows that each time the GetNextDialog method is executed, it first checks to make sure there are items in the queue.  Then, the dialogText is updated to display the first item in the queue.  The Queue< T > Dequeue( ) method retrieves and removes the item at the front of the queue returns that value so it can be used to set the text value for the dialogText.  If there are no more items in the queue, then the panel is hidden, using the Utility class static method: HideCG.
 
 
 
-```java
-public void GetNextDialog(){
-        if(queue.Count != 0){
-            dialogText.text = queue.Dequeue(); //pull out the first item and set to be displayed
-        }
-        else{  //hide the whole panel
-            //Utility.HideCG(cg);  if you've created the Utility class
-            //Dialog over - decision panel?
-        cg.alpha = 0;
-	    cg.blocksRaycasts = false;
-	    cg.interactable = false;
+###Unity: GetComponentsInChildren< T >()
+The Unity method: GetComponentsInChildren, provides a convenient way to initialize an object reference variable based on the Hierarchy panel's parent-child relationships between gameObjects. 
 
-        }
-    }
+In the code above, we've specified that we want to initialize the Text component reference variable: dialogText, speakerText. Since the current script is on the DialogPanel in our custom prefab, and since there is a UI-Text gameObject that is a child of the DialogPanel, we can access the components on that child object using this method.  
 
-
-```
-
-###Unity: GetComponentInChildren< T >()
-The Unity method: GetComponentInChildren, provides a convenient way to initialize an object reference variable based on the Hierarchy panel's parent-child relationships between gameObjects. 
-
-In the code above, we've specified that we want to initialize the Text component reference variable: dialogText. Since the current script is on the DialogPanel in our custom prefab, and since there is a UI-Text gameObject that is a child of the DialogPanel, we can access the components on that child object using this method.  
-
-**Important:**  Note that this method will find the first < T > component while traversing the Parent-child relationships of the gameObject that this script is attached to. The first matching component of type < T > might actually be on this parent panel ( if < T > is an image component ). So, make sure to order your gameObjects in the hierarchy correctly if you plan to use this method.
+**Important:**  Note that this method will find all < T > components while traversing the Parent-child relationships of the gameObject that this script is attached to.  So, make sure to order your gameObjects in the hierarchy correctly if you plan to use this method.
 
 Unity also has a similar method: GetComponentsInChildren< T >(),  which returns an array of all matching object in children that are ordered according to parent-to children ordering in the hierarchy.[Unity Manual](https://docs.unity3d.com/ScriptReference/Component.GetComponentInChildren.html)
         
 
-This example code includes a public CanvasGroup reference variable.  
-
-
+#SimpleDialog.cs Complete Code
 ```java
 
 using System.Collections;
