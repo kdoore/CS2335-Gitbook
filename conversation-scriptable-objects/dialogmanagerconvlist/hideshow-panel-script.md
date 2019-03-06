@@ -9,7 +9,6 @@ The Panel must have a CanvasGroup.
 When working with [DialogManager](/conversation-scriptable-objects/dialogmanagerconvlist.md), this DecisionPanel should be set as the Next Panel To Open in the DialogManager script.
 
 
-
 ```java
 
 using System.Collections;

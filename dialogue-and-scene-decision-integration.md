@@ -1,24 +1,6 @@
 #DialogManager using CustomEvent and ScriptableObject
 
-The link below provides a simple Unity project with a dialog system that you can customize for Project 1. 
-
-[Box.com Unity Package: DialogManager_ Fall 18_v2](https://utdallas.box.com/v/DialogManager-Version2-F18) 
-
-**Includes:** 
-    - DialogManager Prefab - Nested UI Components
-    - Coroutine for 'dynamic typing-style' dialog reveal
-    - Custom UnityEvent: OnDialogClosing - Can be used to trigger opening of other gameObjects
-    - Serializable ConversationEntry Class
-    - ScriptableObject ConversationList
-    - ScriptableObject Factory: (Lior Tal)
-    
-###Idea 2:  Use public CanvasGroup variable in DialogManager.  
-Populate the CanvasGroup variable in the inspector by dragging in the panel that you want to have opened when the dialog is done.  When the dialog is completed, the CloseDialog( ) method checks to see if the CanvasGroup variable refers to a valid object, if so, then it makes that panel active and visible using Utility.ShowCG().
-
-###Add Custom Event Logic to Open Another Panel - OptionPanel or DecisionPanel
-One way we we can open a new panel that has our decision buttons, we'll attach the following script to the DecisionPanel that has the scene-transition buttons as child objects. To do this, we'll use the DialogManager that has the custom UnityEvent: OnDialogClosing, shown in code below.
-
-###OpenOptionPanel  ( Was DecisionScript_TestScene)
+###OpenOptionPanel
 This script will go on a panel that has decision buttons, it listens for the DialogManager OnDialogClosing event. This can be used in all scenes.  This will only when there's only one dialog in the scene.  It will open the panel with Buttons to change scene.  The Button logic will be in the SceneXState.cs file for the corresponding scene.
  
 ```java
