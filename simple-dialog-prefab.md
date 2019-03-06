@@ -91,12 +91,41 @@ Unity can display for editing, both List< string >, or array: string[] in the in
     private CanvasGroup dialogCG; //top level panel
 
 ```
-
-
-
 - **Start: Initialize Object Reference Variables**
-
 The following logic would be located in the Unity Start( ) event function for this script that's attached to the panel gameObject:
+
+```java
+ // Use this for initialization
+    void Start()
+    {
+        dialogCG = GetComponent<CanvasGroup>();
+    //Find all children Text elements of current Panel GameObject
+        Text[] textChildren = GetComponentsInChildren<Text>();
+        dialogText = textChildren[0]; //first child Text
+        speakerText = textChildren[2]; //3rd child Text
+
+        InitializeDialog();
+
+        nextButton = GetComponentInChildren<Button>();
+        nextButton.onClick.AddListener(GetNextDialog);
+        if (!showOnStart) //Should this be hidden at Start
+        {   //is there a button to display panel
+            if (openButton != null)
+            {
+            openButton.onClick.AddListener(ShowDialogPanel);
+            }
+            Utility.HideCG(dialogCG); //hide initially
+        }
+        else //show on start
+        {
+            Utility.ShowCG(dialogCG);
+        }
+
+    }//end start
+
+```
+
+
 
 -  **GetComponentsInChildren< Text >()**See section below for details     
 - **Populate the queue data structure** 
