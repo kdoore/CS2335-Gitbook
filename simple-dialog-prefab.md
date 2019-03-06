@@ -138,8 +138,7 @@ In the code above, we've specified that we want to initialize the Text component
 Unity also has a similar method: GetComponentsInChildren< T >(),  which returns an array of all matching object in children that are ordered according to parent-to children ordering in the hierarchy.[Unity Manual](https://docs.unity3d.com/ScriptReference/Component.GetComponentInChildren.html)
         
 
-###COMPLETE SCRIPT
-This is the version of the script created in class on Wed Sept 19, 2018
+This example code includes a public CanvasGroup reference variable.  
 
 
 ```java
@@ -149,22 +148,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SimpleDialog : MonoBehaviour {
+public class SimpleDialog : MonoBehaviour
+{
 
     CanvasGroup canvasGroup;
     Button nextBtn;
     Text dialogText;
 
     public Button openBtn; //make connection in inspector
+    public CanvasGroup nextPanelToOpen;
 
     [TextArea]
     public List<string> dialogList = new List<string>();
 
     Queue<string> dialogQueue = new Queue<string>();
 
-	
+
     // Use this for initialization
-	void Start () {
+    void Start()
+    {
         canvasGroup = GetComponent<CanvasGroup>();
 
         nextBtn = GetComponentInChildren<Button>();
@@ -174,30 +176,38 @@ public class SimpleDialog : MonoBehaviour {
 
         dialogText = GetComponentInChildren<Text>();
 
-        foreach( string item in dialogList){ //put dialog in the queue
+        foreach (string item in dialogList)
+        { //put dialog in the queue
             dialogQueue.Enqueue(item);
-             }
-        if( dialogQueue.Count >0){
+        }
+        if (dialogQueue.Count > 0)
+        {
             dialogText.text = dialogQueue.Dequeue();
         }
 
         Utility.HideCG(canvasGroup);
-	}
+    }
 
-    public void GetNextDialog(){
+    public void GetNextDialog()
+    {
         if (dialogQueue.Count > 0)
         {
             dialogText.text = dialogQueue.Dequeue();
-        }else{
+        }
+        else
+        {////This is where the event happens - the dialog is done
             Utility.HideCG(canvasGroup);
+            if( nextPanelToOpen != null){  //prevents error if there is no nextPanelToOpen set in the inspector
+                Utility.ShowCG(nextPanelToOpen);
+            }
         }
     }
-	
-    public void ShowPanel(){
+
+    public void ShowPanel()
+    {
         Utility.ShowCG(canvasGroup);
     }
 }
-
 
 
 ```

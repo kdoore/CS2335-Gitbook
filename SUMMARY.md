@@ -58,16 +58,15 @@
     * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
     * [Text Input](text_input.md)
     * [HidePanel Script](project-1-score-and-ui-elements/hidepanel-script.md)
+  * [Simple Dialog Prefab](simple-dialog-prefab.md)
+  * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
+    * [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
+      * [Hide\_Show\_Panel Script](conversation-scriptable-objects/dialogmanagerconvlist/hideshow-panel-script.md)
 * [Visual Novel in Unity-Links](visual-novel-in-unity.md)
 
 ## Project2 Old Content
 
-* [Conversation Scriptable Objects](conversation-scriptable-objects.md)
-  * [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
-    * [Hide\_Show\_Panel Script](conversation-scriptable-objects/dialogmanagerconvlist/hideshow-panel-script.md)
 * [DialogManager using UnityEvent](dialogue-and-scene-decision-integration.md)
-* [Simple Dialog Prefab](simple-dialog-prefab.md)
-* [SimpleDialog\_version2](simple-dialog-prefab/simpledialogversion2.md)
 
 ## Project 3
 
