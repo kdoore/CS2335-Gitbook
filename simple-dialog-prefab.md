@@ -1,6 +1,6 @@
 #Simple Dialog Prefab
 
-How can we create a very simple dialog system in Unity?  
+How can we create a simple dialog system in Unity?  
 We should try to make something that will work as a prefab, so we can use it in any scene, as many times as we'd like. 
 - We need to include
     - UI-panel as a container with a CanvasGroup component   so we can toggle it's visibiltiy
@@ -12,41 +12,63 @@ We should try to make something that will work as a prefab, so we can use it in 
       
 
  ###Prefab GameObject: Hierarchy     
- The image below shows the Hierarchy panel structure of these gameObjects.  The DialogController.cs script is attached to the top-level panel object.  The panel must also have a CanvasGroup component attached. To add a CanvasGroup component, in the Inspector panel: Add Component>Layout > CanvasGroup
- 
-![](/assets/Screen Shot 2018-03-01 at 4.06.32 PM.png)
+ The image below shows the Hierarchy panel structure of these gameObjects.  The **SimpleDialog.cs** script is attached to the top-level panel object: **DialogPrefab**.  The panel must also have a **CanvasGroup **component attached. To add a CanvasGroup component, in the Inspector panel: Add Component>Layout > CanvasGroup
 
-The DialogText is anchored to 4 corners of its' parent, the SimpleDialogPanel.  The NextButton is anchored to the bottom  corner of the panel (not shown here).
+![](/assets/Screen Shot 2019-03-06 at 2.27.16 PM.png)
 
-![](/assets/Screen Shot 2018-03-01 at 4.26.54 PM.png)
+The DialogText is anchored to 4 corners of its' parent, the DialogPanel.  The NextButton is anchored to the bottom  corner of the panel (not shown here).
 
-###Important - Can Cause Issues:
-    - Make sure that the DialogText is the first child of the DialogPanel, and that the NextButton is below the DialogText in the Hierarchy Panel
-    - In the code, we're finding the DialogText component since it's the first child object of the SimpleDialogPanel that has a Text component.  If the Button is the first child, then it's text is what'll show the dialog text.
-    - Also, if we have any gameObjects that are covering our Buttons, then the buttons won't respond to our mouse movement or clicking.  Always add highlight color to the button, if the highlight color doesn't show, then something is blocking the button, or the button  may have Interactable set to false, by a parent object with a CanvasGroup.
+![](/assets/Screen Shot 2019-03-06 at 2.32.44 PM.png)
 
-###DialogPanel Script Component 
-The image below shows part of the Inspector panel for the SimpleDialogPanel.  It shows a CanvasGroup component and a DialogController script component have been added. The DialogController script has a DialogList with adjustable size, each element can hold some dialog text, which will be displayed sequentially when the scene is played.
+###Important - Order The Text Elements As Children 1,2,3:
+    - Make sure that the **DialogText is the first child **of the DialogPanel, and that the NextButton is below the DialogText in the Hierarchy Panel, the **SpeakerName is the 3rd child** Text element of the main panel:  DialogPrefab.
+    
+    - In the code, we're finding the DialogText, and the SpeakerText components since it's the first (and third) children objects of the SimpleDialogPanel that has a Text component.  If the Button is the first child, then it's text is what'll show the dialog text.
 
-![](/assets/Screen Shot 2018-03-01 at 4.30.08 PM.png)
+#DialogPanel Logic
+The image below shows part of the Inspector panel for the DialogPrefab.  It shows a CanvasGroup component and a SimpleDialog.cs script component have been added. The SimpleDialog script has a Conversations List with adjustable size, each element can hold some dialog text,speakerName, (and Sprite) which will be displayed sequentially when the scene is played.
 
-###Dialog Script Logic - DataStructures: List, Queue
-Now, we just have to figure out how to write the code logic. We need an List of strings that can hold our dialog items, then we need to display them sequentially when the next button has been clicked.
+![](/assets/Screen Shot 2019-03-06 at 2.34.53 PM.png)
 
-Unity can display for editing, both List< string >, or array: string[] in the inspector, as shown in the image above. 
+#ConversationEntry.cs Custom Script
 
+Below is the code for a simple class that has elements for each ConversationEntry: Since we use the Class Attribute: 
+[System.Serializable], then we'll be able to display and populate each ConversationEntry in our list in the inspector panel.
+
+
+```java
+
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+[System.Serializable]
+public class ConversationEntry
+{
+    public string speakerName;
+
+    [TextArea]
+    public string dialogTxt;
+
+    public Sprite speakerImg;
+}
+```
+
+#DataStructures: List<T>, Queue<T> - For ConversationEntries
+Now, we just have to figure out how to write the code logic. We need an List of ConversationEntry items, then we need to display them sequentially when the next button has been clicked.
+
+Unity can display for editing, both List< string >, or array: string[] in the inspector below. 
 
 **List< T >** is part of the System.Collections.Generic Namespace in C#.  [MSDN Reference](https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx)
 
-
 **Queue< T >** is a data structure that operates like a queue / waiting line.  It will make it easy to remove each sequential dialog item from the collection so it can be displayed in sequence.[MSDN Reference](https://msdn.microsoft.com/en-us/library/7977ey2c.aspx)
 
-###DialogController.cs Custom Script
-Below is the code where we declare the object reference variables for the dataStructures and components that we need for implementing our logic
+
+#SimpleDialog.cs
 
 - **Declare Object Reference Variables**
     In the code below we specify that the `List< T >` and `Queue< T >` will both be collections of `string` objects.
-    Then we declare object reference variables for the components we'll interact with.
+    Then we declare object reference variables for the components we'll interact with. 
 
 ```java
 
@@ -151,65 +173,83 @@ using UnityEngine.UI;
 public class SimpleDialog : MonoBehaviour
 {
 
-    CanvasGroup canvasGroup;
-    Button nextBtn;
-    Text dialogText;
-
-    public Button openBtn; //make connection in inspector
+    public Button openButton;
     public CanvasGroup nextPanelToOpen;
+    public bool showOnStart = false;
 
-    [TextArea]
-    public List<string> dialogList = new List<string>();
+    //find in children
+    private Button nextButton; //only 1 child button
+    private Text dialogText;   //find as a child - Hierarchy order mattersprivate CanvasGroup dialogCG;  //Canvas Group on top level - script attached to this Panel
+    private Text speakerText;  //find as a child - Hierarchy order matters
+    private CanvasGroup dialogCG; //top level panel
 
-    Queue<string> dialogQueue = new Queue<string>();
-
+    public Queue<ConversationEntry> conversationsQueue = new Queue<ConversationEntry>();
+    public List<ConversationEntry> conversations;
 
     // Use this for initialization
     void Start()
     {
-        canvasGroup = GetComponent<CanvasGroup>();
+        dialogCG = GetComponent<CanvasGroup>();
+        Text[] textChildren = GetComponentsInChildren<Text>();
+        dialogText = textChildren[0];
+        speakerText = textChildren[2];
 
-        nextBtn = GetComponentInChildren<Button>();
-        nextBtn.onClick.AddListener(GetNextDialog);
+        InitializeDialog();
 
-        openBtn.onClick.AddListener(ShowPanel);
-
-        dialogText = GetComponentInChildren<Text>();
-
-        foreach (string item in dialogList)
-        { //put dialog in the queue
-            dialogQueue.Enqueue(item);
+        nextButton = GetComponentInChildren<Button>();
+        nextButton.onClick.AddListener(GetNextDialog);
+        if (!showOnStart)
+        {   //click button to display panel
+            if (openButton != null)
+            {
+                openButton.onClick.AddListener(ShowDialogPanel);
+            }
+            Utility.HideCG(dialogCG); //hide initially
         }
-        if (dialogQueue.Count > 0)
+        else //show on start
         {
-            dialogText.text = dialogQueue.Dequeue();
+            Utility.ShowCG(dialogCG);
         }
 
-        Utility.HideCG(canvasGroup);
+    }//end start
+
+    void InitializeDialog()
+    {
+        foreach( ConversationEntry item in conversations)
+        {
+            conversationsQueue.Enqueue(item); //put each string -item in the queue
+        }
+        GetNextDialog();  //get first item
     }
 
-    public void GetNextDialog()
+    void GetNextDialog()
     {
-        if (dialogQueue.Count > 0)
+        if (conversationsQueue.Count > 0)
         {
-            dialogText.text = dialogQueue.Dequeue();
+            ConversationEntry item = conversationsQueue.Dequeue();
+            dialogText.text = item.dialogTxt;
+            speakerText.text = item.speakerName;
         }
-        else
-        {////This is where the event happens - the dialog is done
-            Utility.HideCG(canvasGroup);
-            if( nextPanelToOpen != null){  //prevents error if there is no nextPanelToOpen set in the inspector
+        else { //no more dialog
+            if ( nextPanelToOpen != null)
+            {
                 Utility.ShowCG(nextPanelToOpen);
             }
-        }
+            Utility.HideCG(dialogCG); //hide the dialog
+        } 
     }
 
-    public void ShowPanel()
+    public void ShowDialogPanel()
     {
-        Utility.ShowCG(canvasGroup);
-    }
-}
+        Utility.ShowCG(dialogCG);
+    }//end function
+
+} //end class
+
 
 
 ```
-![![](/assets/Screen Shot 2018-09-19 at 4.28.17 PM.pn](/assets/Screen Shot 2018-09-19 at 4.28.32 PM.png)g)
+###Other Items Used for Simple Dialog
 
+![](/assets/Screen Shot 2019-03-06 at 2.26.55 PM.png)
+![](/assets/Screen Shot 2019-03-06 at 2.27.05 PM.png)
