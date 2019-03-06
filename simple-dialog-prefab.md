@@ -170,8 +170,6 @@ void GetNextDialog()
     }//end function
 ```
 
-
-
 ###Unity: GetComponentsInChildren< T >()
 The Unity method: GetComponentsInChildren, provides a convenient way to initialize an object reference variable based on the Hierarchy panel's parent-child relationships between gameObjects. 
 
