@@ -145,8 +145,6 @@ void InitializeDialog()
 ###GetNextDialog Method
 The nextButton allows the user to move forward through the dialog items.  In the Start( ) method, we configured the nextButton's onClick method to execute the GetNextDialog method each time it is clicked.  The code below shows that each time the GetNextDialog method is executed, it first checks to make sure there are items in the queue.  Then, the dialogText is updated to display the first item in the queue.  The Queue< T > Dequeue( ) method retrieves and removes the item at the front of the queue returns that value so it can be used to set the text value for the dialogText.  If there are no more items in the queue, then the panel is hidden, using the Utility class static method: HideCG.
 
-
-
 ```java
 void GetNextDialog()
     {
