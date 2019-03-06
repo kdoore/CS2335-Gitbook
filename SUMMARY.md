@@ -50,23 +50,29 @@
   * [IStateBase, BeginState](istatebase.md)
   * [Project 2 -Steps: Create new Scene and State](project-2-create-new-scene-and-state.md)
   * [Project 2 - List of Steps](project-2-list-of-steps.md)
-    * [Project 2 - Code](project-2-list-of-steps/project-2-code.md)
-  * [Game Objects: UI vs. 2D Sprite](game_objects.md)
-  * [Finding Game Objects](finding_game_objects.md)
-  * [UI Elements](project-1-score-and-ui-elements.md)
-    * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
-    * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
-    * [Text Input](text_input.md)
-    * [HidePanel Script](project-1-score-and-ui-elements/hidepanel-script.md)
-  * [Simple Dialog Prefab](simple-dialog-prefab.md)
-  * [Hide\_Show\_Panel Script](conversation-scriptable-objects/dialogmanagerconvlist/hideshow-panel-script.md)
-  * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
-    * [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
-* [Visual Novel in Unity-Links](visual-novel-in-unity.md)
+    * [Project 2 - Starter Code](project-2-list-of-steps/project-2-code.md)
 
-## Project2 Old Content
+## Project 2 -Dialog
 
+* [Simple Dialog Prefab](simple-dialog-prefab.md)
+* [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
+* [Conversation Scriptable Objects](conversation-scriptable-objects.md)
+* [Hide\_Show\_Panel Script](conversation-scriptable-objects/dialogmanagerconvlist/hideshow-panel-script.md)
 * [DialogManager using UnityEvent](dialogue-and-scene-decision-integration.md)
+
+## UI Components
+
+* [Finding Game Objects](finding_game_objects.md)
+* [Game Objects: UI vs. 2D Sprite](game_objects.md)
+* [UI Elements](project-1-score-and-ui-elements.md)
+  * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
+  * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
+  * [Text Input](text_input.md)
+  * [HidePanel Script](project-1-score-and-ui-elements/hidepanel-script.md)
+
+## Project2 Resources
+
+* [Visual Novel in Unity-Links](visual-novel-in-unity.md)
 
 ## Project 3
 
