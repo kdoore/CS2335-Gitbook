@@ -1,4 +1,4 @@
-# Project 2:  CheckList
+# Project 2:  Scene-State Steps
 
 For Project 1, follow these steps to complete the **Unity Project** requirements:
 
@@ -26,9 +26,8 @@ For Project 1, follow these steps to complete the **Unity Project** requirements
 Suggestion:  Put the TitleText in a UI-Panel. Then, add a CanvasGroup.  The Panel should have a child GameObject that is a Button, it will close the panel.  Add a child GameObject: UI-Text for your Title.  Add the HidePanel.cs script to the parent- UI-Panel.
 
 * **Dialog** 
-  * You can use the Simple Dialog Prefab if you'd like
-  * You can use the DialogManager Package: 
-    [Box.com Unity Package: DialogManager\_ Fall 18\_v2](https://utdallas.box.com/v/DialogManager-Version2-F18)
+
+    
 
 Dialog Requirements:
 
@@ -38,7 +37,7 @@ Dialog Requirements:
 
 * **DecisionPanel**
   * Create a UI panel that opens when the dialog is complete, or have the panel hidden behind the dialogPanel.
-    * In the Panel, have child 
+    * Children Button Objects - Have 2 Buttons to change scenes. 
 
 
 

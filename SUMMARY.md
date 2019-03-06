@@ -58,10 +58,10 @@
   * [Project 2 - List of Steps](project-2-list-of-steps.md)
     * [Project 2 - Code](project-2-list-of-steps/project-2-code.md)
 * [Visual Novel in Unity](visual-novel-in-unity.md)
+* [Project2 - Scene-State Steps](project1-checklist.md)
 
 ## Project2 Old Content
 
-* [Project2 Checklist\_outdated](project1-checklist.md)
 * [Finding Game Objects](finding_game_objects.md)
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
   * [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
