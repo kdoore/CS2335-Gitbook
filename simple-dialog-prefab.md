@@ -19,7 +19,7 @@ We should try to make something that will work as a prefab, so we can use it in 
 
 The DialogText is anchored to 4 corners of its' parent, the DialogPanel.  The NextButton is anchored to the bottom  corner of the panel (not shown here).
 
-You will create a Prefab of this after adding and configuring the SimpleDialog script component.
+**Prefab:** You will create a Prefab of this after adding and configuring the SimpleDialog script component.
 
 ###Important - Order The Text Elements As Children 1,2,3:
     - Make sure that the **DialogText is the first child **of the DialogPanel, and that the NextButton is below the DialogText in the Hierarchy Panel, the **SpeakerName is the 3rd child** Text element of the main panel:  DialogPrefab.
@@ -65,28 +65,35 @@ Unity can display for editing, both List< string >, or array: string[] in the in
 **Queue< T >** is a data structure that operates like a queue / waiting line.  It will make it easy to remove each sequential dialog item from the collection so it can be displayed in sequence.[MSDN Reference](https://msdn.microsoft.com/en-us/library/7977ey2c.aspx)
 
 
-#SimpleDialog.cs
+#SimpleDialog.cs 
+(See complete code at bottom of page)
 
 - **Declare Object Reference Variables**
-    In the code below we specify that the `List< T >` and `Queue< T >` will both be collections of `string` objects.
-    Then we declare object reference variables for the components we'll interact with. 
+   
+  -  In the code below we specify that the `List< T >` and `Queue< T >` will both be collections of `ConversationEntry` objects.
+
+```java
+    private Queue<ConversationEntry> conversationsQueue = new Queue<ConversationEntry>();
+    public List<ConversationEntry> conversations;
 
 
-
-- **Initialize Object Reference Variables**
-
-The following code would be located in the Unity Start( ) event function for this script that's attached to the panel gameObject:
+```
 
 
--  **GetComponentInChildren< Text >()**See section below for details     
+  - Then we declare object reference variables for the components we'll interact with. 
+
+- **Start: Initialize Object Reference Variables**
+
+The following logic would be located in the Unity Start( ) event function for this script that's attached to the panel gameObject:
+
+-  **GetComponentsInChildren< Text >()**See section below for details     
 - **Populate the queue data structure** 
-The following code is also in the Unity Start() event function.  In the code below, we use a foreach structure, which works like a for-loop, to step through each item in the List< string >: dialogList, and puts the string element into the queue.  Then, we check to make sure there are some items in the queue, we remove the first item, and use it to set the text to be displayed in the dialog panel.
-     
+
+###Initialize DialogQueue
+In the code below we specify that the `List< T >` and `Queue< T >` will both be collections of `ConversationEntry` objects.
 
 ###GetNextDialog Method
 The nextButton allows the user to move forward through the dialog items.  In the Start( ) method, we configured the nextButton's onClick method to execute the GetNextDialog method each time it is clicked.  The code below shows that each time the GetNextDialog method is executed, it first checks to make sure there are items in the queue.  Then, the dialogText is updated to display the first item in the queue.  The Queue< T > Dequeue( ) method retrieves and removes the item at the front of the queue returns that value so it can be used to set the text value for the dialogText.  If there are no more items in the queue, then the panel is hidden, using the Utility class static method: HideCG.
-
-
 
 ###Unity: GetComponentsInChildren< T >()
 The Unity method: GetComponentsInChildren, provides a convenient way to initialize an object reference variable based on the Hierarchy panel's parent-child relationships between gameObjects. 
@@ -119,7 +126,7 @@ public class SimpleDialog : MonoBehaviour
     private Text speakerText;  //find as a child - Hierarchy order matters
     private CanvasGroup dialogCG; //top level panel
 
-    public Queue<ConversationEntry> conversationsQueue = new Queue<ConversationEntry>();
+    private Queue<ConversationEntry> conversationsQueue = new Queue<ConversationEntry>();
     public List<ConversationEntry> conversations;
 
     // Use this for initialization
