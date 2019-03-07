@@ -54,11 +54,10 @@
 
 ## Project 2 -Dialog
 
-* [Simple Dialog Prefab](simple-dialog-prefab.md)
-* [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
-* [Conversation Scriptable Objects](conversation-scriptable-objects.md)
 * [Hide\_Show\_Panel Script](conversation-scriptable-objects/dialogmanagerconvlist/hideshow-panel-script.md)
-* [DialogManager using UnityEvent](dialogue-and-scene-decision-integration.md)
+* [Simple Dialog Prefab](simple-dialog-prefab.md)
+* [Conversation Scriptable Objects](conversation-scriptable-objects.md)
+* [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
 
 ## UI Components
 

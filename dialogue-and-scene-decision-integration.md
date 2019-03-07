@@ -1,6 +1,6 @@
 #DialogManager using CustomEvent and ScriptableObject
 
-###OpenOptionPanel
+###OpenPanelOnDialogClosing
 This script will go on a panel that has decision buttons, it listens for the DialogManager OnDialogClosing event. This can be used in all scenes.  This will only when there's only one dialog in the scene.  It will open the panel with Buttons to change scene.  The Button logic will be in the SceneXState.cs file for the corresponding scene.
  
 ```java
@@ -11,18 +11,16 @@ using UnityEngine;
 
 //add this script to a panel that will open when the 
 //DialogManager's OnPanelClose event happens
-public class OpenOptionPanel : MonoBehaviour {
-
-    DialogManager dialogManager;
-    CanvasGroup cg;
+public class OpenPanelOnDialogClosing : MonoBehaviour {
+public DialogManager dialogManager; //set in Inspector
+    CanvasGroup cg; // cg on same gameObject as current script
 	// Use this for initialization
 void Start () {
-        dialogManager = FindObjectOfType<DialogManager>();
-        dialogManager.OnDialogClosing.AddListener(OpenPanel);
+                dialogManager.OnDialogClosing.AddListener(OpenPanel);
         cg = GetComponent<CanvasGroup>();
     }
 	
-	// Update is called once per frame
+	//Displays using cg on current gameObject
 	public void OpenPanel() {
         Utility.ShowCG(cg);
 	}
