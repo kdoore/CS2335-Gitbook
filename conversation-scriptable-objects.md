@@ -1,6 +1,8 @@
 # Conversation Scriptable Objects
 Scriptable Objects provide an easy way to create and populate custom data elements. In this course, will use scriptable objects to store dialog data and inventory items.
 
+In the image below, we've created a ConversationList scriptableObject, to permanently store date associated with a Conversation.
+
 ![](/assets/Screen Shot 2019-03-11 at 2.19.08 PM.png)
 
 There are several steps required when creating a new type of scriptable object. Detailed example provided below using our Dialog Manager example: 
