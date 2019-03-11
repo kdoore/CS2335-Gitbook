@@ -12,8 +12,13 @@ Links:
 [Using Arrays, Lists, ArrayLists, Dictionaries, HashTable in Unity](https://hub.packtpub.com/arrays-lists-dictionaries-unity-3d-game-development/)
 
 ###Dictionaries: A collection of Key,Value pairs
+Dictionaries provide a data-structure for storing data that has 2 associated parts, which is very useful for data associated with games, such as inventory systems, character choice systems, weapon systems, etc.  
+
 
 The Key is used as a index to allow storage of a value that is associated with a unique Key. **Keys must be unique, there cannot be duplicate Keys** in a dictionary, so we must use care when adding new elements to a dictionary object to ensure that the item's key does not already exist in the dictionary. There are several methods that can be used to test for the presence of a specific key, these helper functions prevent runtime errors in our programs.
+
+
+Unity does not show Dictionary elements in the inspector.
 
 **Include as a directive at top of script:**
 **using System.Collections.Generic;**
@@ -21,7 +26,6 @@ The Key is used as a index to allow storage of a value that is associated with a
 Dictionary < TKey,TValue >    
 Dictionary - you specify the data-type of the key: Tkey, and value: TValue.
 
-Dictionaries provide a data-structure for storing data that has 2 associated parts, which is very useful for data associated with games, such as inventory systems, character choice systems, weapon systems, etc.  
 
 Unity does not show Dictionary elements in the inspector.
 
