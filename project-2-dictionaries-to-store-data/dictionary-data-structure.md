@@ -11,18 +11,26 @@ Links:
 
 [Using Arrays, Lists, ArrayLists, Dictionaries, HashTable in Unity](https://hub.packtpub.com/arrays-lists-dictionaries-unity-3d-game-development/)
 
-###Dictionaries represent a collection of Key,Value pairs of data.
+###Dictionaries: A collection of Key,Value pairs
 
-Dictionary<TKey,TValue>    Generic Dictionary - you specify the data-type of the key: Tkey, and value: TValue.
+**Include as a directive at top of script:**
+**using System.Collections.Generic;**
+
+Dictionary < TKey,TValue >    
+Dictionary - you specify the data-type of the key: Tkey, and value: TValue.
 
 Dictionaries provide a data-structure for storing data that has 2 associated parts, which is very useful for data associated with games, such as inventory systems, character choice systems, weapon systems, etc.  
 
 Unity does not show Dictionary elements in the inspector.
 
-**Include as a directive at top of script:**
-**using System.Collections.Generic;**
+### Example: GameData Inventory 
+Stores: Pickup-Item count
 
-### GameData Inventory - Score Pickup-Item count
 
+
+```
 public Dictionary<PickupType, int> inventory = new Dictionary<PickupType, int>();
+```
+
+
 
