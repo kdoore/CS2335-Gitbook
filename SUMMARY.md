@@ -61,7 +61,7 @@
 
 ## Project 2 - Dictionaries to Store Data
 
-* [Dictionary Data Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
+* [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
   * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
 
 ## UI Components

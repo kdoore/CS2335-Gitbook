@@ -13,6 +13,8 @@ Links:
 
 ###Dictionaries: A collection of Key,Value pairs
 
+The Key is used as a index to allow storage of a value that is associated with a unique Key. **Keys must be unique, there cannot be duplicate Keys** in a dictionary, so we must use care when adding new elements to a dictionary object to ensure that the item's key does not already exist in the dictionary. There are several methods that can be used to test for the presence of a specific key, these helper functions prevent runtime errors in our programs.
+
 **Include as a directive at top of script:**
 **using System.Collections.Generic;**
 
@@ -26,11 +28,31 @@ Unity does not show Dictionary elements in the inspector.
 ### Example: GameData Inventory 
 Stores: Pickup-Item count
 
+```java
+public Dictionary<PickupType, int> inventory = new Dictionary<PickupType, int>(); //initialize
 
+inventory.Add(PickupType.Gem, 1); //add an item
+int gems = inventory[PickupType.Gem]; //get value associated with key
+
+inventory[PickupType.Gem] = 2; //change an item
+
+if( inventory.ContainsKey( PickupType.Cow ){
+  int count = inventory[PickupType.Cow]
+  inventory[PickupType.Cow] = count +1;
+}else{
+   Debug.Log("No Cows")
+   inventory.Add( PickupType.Cow, 1); //added
+}
+
+//TryGetValue
+int count = 0;
+if( inventory.TryGetValue( PickupType.Gem,out count){
+  inventory[PickupType.Gem] = count + 1;
+  } 
+  else{
+    inventory.Add(PickupType.Gem ,1);
+  }
 
 ```
-public Dictionary<PickupType, int> inventory = new Dictionary<PickupType, int>();
-```
-
 
 
