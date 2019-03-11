@@ -47,6 +47,7 @@ public class DialogManager : MonoBehaviour {
 >Scriptable Objects are amazing data containers. They don't need to be attached to a GameObject in a scene. They can be saved as assets in our project. Most often, they are used as assets which are only meant to store data, but can also be used to help serialize objects and can be instantiated in our scenes.  [Adam Buckner - Official Unity Tutorial](/Adam Buckner)
 
 [Scriptable Objects - Unity Manual, Scripting API](https://docs.unity3d.com/Manual/class-ScriptableObject.html?_ga=2.21799608.2060655022.1537129337-1484586345.1534795685)
+
 ScriptableObject is a class that allows you to store large quantities of shared data independent from script instances. 
 
 A class you can derive from if you want to create objects that don't need to be attached to game objects.  This is most useful for assets which are only meant to store data.
@@ -96,8 +97,6 @@ public class DialogManager : MonoBehaviour {
 ### Create a Conversation Asset
 
 To create an instance of a Conversation asset, we right click in the project panel, or right click on the assets folder and select the bottom-most menu option: create -&gt; ScriptableObject, where our custom asset: Conversation, now shows up as an option at the bottom of the menu.  After clicking on Conversation, we now have a new item in our Assets panel, we should give it a unique name so we can reference it in our code.  I've named the example one: `ConversationList_CatScene1`.
-
-![](/assets/Screen Shot 2018-09-16 at 3.48.36 PM.png)
 
 ![](/assets/Screen Shot 2018-09-16 at 3.50.41 PM.png)
 
