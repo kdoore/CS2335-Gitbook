@@ -23,5 +23,6 @@ Unity does not show Dictionary elements in the inspector.
 **using System.Collections.Generic;**
 
 ### GameData Inventory - Score Pickup-Item count
+
 public Dictionary<PickupType, int> inventory = new Dictionary<PickupType, int>();
 
