@@ -6,9 +6,6 @@ Also see [Hide_Show_Panel Script ](/conversation-scriptable-objects/dialogmanage
 
 The images below show the Inspector panel configuration for the DialogPanel and Decision panels.  **Note that the DialogPanel has had the Image(Script) component removed.**  If the Image(Script) isn't removed from the DialogPanel, then the character images will show up in the panel background instead of in the CharacterImage gameObject, this is because we are displaying the CharacterImage in the first child of the DecisionPanel, and it finds it's own Panel image as the first child if that image component isn't removed.
 
-![](/assets/Screen Shot 2018-10-27 at 5.57.09 AM.png)
-![](/assets/Screen Shot 2018-10-27 at 6.26.21 AM.png)
-![](/assets/Screen Shot 2018-10-27 at 6.24.47 AM.png)
 
 
 ###NextPanelToOpen
@@ -44,39 +41,41 @@ using UnityEngine.UI;
 /// </summary>
 public class DialogManager : MonoBehaviour {
 
-    public ConversationList convList; //attach scriptable object in Inspector
     public CanvasGroup nextPanelToOpenCG;  //next panel to open, set in Inspector
     public Button openDialogBtn; //Button that will open Dialog
     public bool showOnStart = false;
 
-    private Button nextDialogBtn;
+    private Button nextBtn;
     private CanvasGroup dialogPanelCG;
     private Text dialogText, speakerName; //speakerName;
     private Image speakerImage;
-    private int conversationIndex;
+  
 
+    public ConversationList convList; //attach scriptable object in Inspector
+    private Queue<ConversationEntry> conversationsQueue = new Queue<ConversationEntry>();
+   
     // Use this for initialization
     void Start () {
 
-        conversationIndex = 0;
-
+      
         dialogPanelCG = GetComponent<CanvasGroup>(); //used to show/hide panel
        
-        Text[] childTextElements = GetComponentsInChildren<Text>();
+        Text[] textChildren = GetComponentsInChildren<Text>();
+        Image[] imageChildren = GetComponentsInChildren<Image>();
 
-        speakerName = childTextElements[0]; //first child of Panel
-        speakerImage = GetComponentInChildren<Image>();
+        dialogText = textChildren[0];
+        speakerName = textChildren[2];
+        speakerImage = imageChildren[4]; //fifth child image - in SpeakerPanel
 
         if (openDialogBtn != null ) //if opening dialog with a Button, Populate OpenDialogButton in the Inspector 
         {
-            openDialogBtn.onClick.AddListener(OpenDialog);
+            openDialogBtn.onClick.AddListener(ShowDialogPanel);
         }
 
-        nextDialogBtn = GetComponentInChildren<Button>();
-        nextDialogBtn.onClick.AddListener(GetNextDialog);
+        nextBtn = GetComponentInChildren<Button>();
+        nextBtn.onClick.AddListener(GetNextDialog);
 
-        dialogText = childTextElements[1]; //2nd child text element
-
+        InitializeDialog();
         //checkbox that can be set in inspector, if checked, then this is not exected
         if (!showOnStart)
         {
@@ -84,27 +83,17 @@ public class DialogManager : MonoBehaviour {
         }
         else{ //if showing on scene load, get first Dialog 
             Utility.ShowCG(dialogPanelCG);
-            NextDialog();
         }
     }
 
-    /// <summary>
-    /// Gets the next dialog.
-    /// If no more dialog, close the dialog panel
-    /// open the nextPanelToOpen
-    /// </summary>
-    void GetNextDialog()
+
+    void InitializeDialog()
     {
-        bool moreDialog = NextDialog();
-        if (!moreDialog)
+        foreach (ConversationEntry item in convList.Conversation)
         {
-            Utility.HideCG(dialogPanelCG); // close panel
-            CloseDialog();
-            if (nextPanelToOpenCG != null) //check to see if valid gameObject was set in inspector
-            {
-                Utility.ShowCG(nextPanelToOpenCG);
-            }
+            conversationsQueue.Enqueue(item); //put each string -item in the queue
         }
+        GetNextDialog();  //get first item
     }
 
 
@@ -114,48 +103,38 @@ public class DialogManager : MonoBehaviour {
     /// openDialog button set in the Inspector
     /// otherwise, select checkbox showOnStart 
     /// </summary>
-    public void OpenDialog()
+    public void ShowDialogPanel()
     {
         Utility.ShowCG(dialogPanelCG);
-        NextDialog();
         openDialogBtn.gameObject.SetActive(false);
     }
 
-    /// <summary>
-    /// Closes the dialog.
-    /// </summary>
-    public void CloseDialog()
-    {
-        Utility.HideCG(dialogPanelCG);
-        Debug.Log("Closing Dialog");
-        //check if there is a panel (CG) to diplay when dialog is done
-        if(nextPanelToOpenCG != null){
-            Utility.ShowCG(nextPanelToOpenCG);
-        }
-    }
 
     /// <summary>
     /// Nexts the dialog.
     /// Sets UI elements: speakerName, speakerImage, dialogText
     /// </summary>
     /// <returns><c>true</c>, if dialog there is more dialog, <c>false</c> otherwise.</returns>
-    public bool NextDialog()
+    public void GetNextDialog()
     {   
-        if (conversationIndex < convList.Conversation.Count)
-        {   speakerName.text = convList.Conversation[conversationIndex].speakerName;
-            speakerImage.sprite = convList.Conversation[conversationIndex].speakerImg;
+        if (conversationsQueue.Count >0)
+        {   ConversationEntry item = conversationsQueue.Dequeue();
+            speakerName.text = item.speakerName;
+            speakerImage.sprite = item.speakerImg;
+
             StopAllCoroutines();
-            string curSentence = convList.Conversation[conversationIndex].dialogTxt;
+            string curSentence = item.dialogTxt;
             StartCoroutine(TypeSentence(curSentence));
         }
-        else
+        else //no more conversations
         {
-            conversationIndex = 0;
-           return false;  //if no more list elements return false
+            Utility.HideCG(dialogPanelCG); // close panel
+            if (nextPanelToOpenCG != null) //check to see if valid gameObject was set in inspector
+            {
+                Utility.ShowCG(nextPanelToOpenCG);
+            } 
         }
-
-        conversationIndex++; //increment index for next conversation item
-        return true;
+    
     }
 
     //this allows single characters to be added to look like typed text
@@ -168,7 +147,7 @@ public class DialogManager : MonoBehaviour {
             yield return new WaitForSeconds(0.05f); ;
         }
     }
-}
+} // end class
 
 ```
 
