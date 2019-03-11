@@ -19,3 +19,9 @@ Dictionaries provide a data-structure for storing data that has 2 associated par
 
 Unity does not show Dictionary elements in the inspector.
 
+**Include as a directive at top of script:**
+**using System.Collections.Generic;**
+
+### GameData Inventory - Score Pickup-Item count
+public Dictionary<PickupType, int> inventory = new Dictionary<PickupType, int>();
+
