@@ -1,9 +1,8 @@
 #DialogManager for ConversationList
 
-Also see [Hide_Show_Panel Script ](/conversation-scriptable-objects/dialogmanagerconvlist/hideshow-panel-script.md)
+See - [Conversation ScriptableObjects](/conversation-scriptable-objects.md)
 
 ###Inspector Images
-
 The images below show the Inspector panel configuration for the DialogPanel and Decision panels. ** Note that the SpeakerImg is the 5th child image which has index [4]**, because all panels and buttons also have an image component.
  
 ![](/assets/Screen Shot 2019-03-11 at 2.13.59 PM.png)
