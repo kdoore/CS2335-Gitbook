@@ -102,7 +102,13 @@ Lior Tal has created a Unity package that makes it easy to create scriptable obj
 [http://www.tallior.com/unity-scriptableobject-factory/](http://www.tallior.com/unity-scriptableobject-factory/)
 
 
+**Resource Links: **
+[Scriptableobject-factory - Unity Package](http://www.tallior.com/unity-scriptableobject-factory/)
 
+
+
+
+[Scriptable Object Article](http://ivanozanchetta.com/gamedev/unity3d/unity-serialization-behind-scriptableobject/)
 
 
 
