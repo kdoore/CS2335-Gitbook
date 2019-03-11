@@ -23,9 +23,12 @@ There are several steps required when creating a new type of scriptable object. 
 
 [Package Download Link](https://www.dropbox.com/s/vdvf5si4go3jnb5/ScriptableObjectFactory.unitypackage)
 
-The image below shows that the Scriptable Object Factory places a new folder: Editor, with 2 scripts: ScriptableObjectFactory.cs, ScriptableObjectWindow.cs.  
 
 Any class, that inherits from ScriptableObject will now show up as an option in the Project Assets Menu: 
+
+![](/assets/Screen Shot 2019-03-11 at 3.39.21 PM.png)
+
+The image below shows that the Scriptable Object Factory places a new folder: Editor, with 2 scripts: ScriptableObjectFactory.cs, ScriptableObjectWindow.cs.  
 
 ![](/assets/Screen Shot 2019-03-11 at 2.20.16 PM.png)
 
