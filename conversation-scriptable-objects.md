@@ -14,12 +14,14 @@ There are several steps required when creating a new type of scriptable object. 
         - `public class ConversationList : ScriptableObject`
 
 
--  Define a collection data-structure, within this class the  to hold a collection of the above defined composite elements. 
+-  Define a collection data-structure, within this class the  to hold a collection of the above defined composite elements. This is code within ConversationList class. 
         - `public List<ConversationEntry> Conversation`
 
 ### Install the Scriptable Object Factory - Unity Package  
 
-[Scriptable Object Factory - Download Link - Tal Lior](http://www.tallior.com/unity-scriptableobject-factory/)
+[Scriptable Object Factory - Article - Tal Lior](http://www.li0rtal.com/unity-scriptableobject-factory/)
+
+[Package Download Link](https://www.dropbox.com/s/vdvf5si4go3jnb5/ScriptableObjectFactory.unitypackage)
 
 The image below shows that the Scriptable Object Factory places a new folder: Editor, with 2 scripts: ScriptableObjectFactory.cs, ScriptableObjectWindow.cs.  
 
