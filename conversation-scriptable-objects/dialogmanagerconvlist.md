@@ -4,9 +4,10 @@ Also see [Hide_Show_Panel Script ](/conversation-scriptable-objects/dialogmanage
 
 ###Inspector Images
 
-The images below show the Inspector panel configuration for the DialogPanel and Decision panels.  **Note that the DialogPanel has had the Image(Script) component removed.**  If the Image(Script) isn't removed from the DialogPanel, then the character images will show up in the panel background instead of in the CharacterImage gameObject, this is because we are displaying the CharacterImage in the first child of the DecisionPanel, and it finds it's own Panel image as the first child if that image component isn't removed.
-
-
+The images below show the Inspector panel configuration for the DialogPanel and Decision panels. ** Note that the SpeakerImg is the 5th child image which has index [4]**, because all panels and buttons also have an image component.
+ 
+![](/assets/Screen Shot 2019-03-11 at 2.13.59 PM.png)
+![](/assets/Screen Shot 2019-03-11 at 2.14.38 PM.png)
 
 ###NextPanelToOpen
 The DialogManager script has a public reference variable that can be set in the Inspector allows for the nextPanelToOpen to be populated. After all of the dialog entries has been displayed, the dialogPanel is closed, and then the nextPanelToOpen will be opened.  If not  populated, no error will occur because the code first checks to see if that variable contains a valid object reference (memory address). 
