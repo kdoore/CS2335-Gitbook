@@ -1,6 +1,8 @@
 # Conversation Scriptable Objects
 Scriptable Objects provide an easy way to create and populate custom data elements. In this course, will use scriptable objects to store dialog data and inventory items.
 
+![](/assets/Screen Shot 2019-03-11 at 2.19.08 PM.png)
+
 There are several steps required when creating a new type of scriptable object. Detailed example provided below using our Dialog Manager example: 
     -  Define a custom class (or struct) that has variables for each of the items you'll have associated with each  scriptable object.  This class must be defined using the `[System.Serializable] `attribute:  See details in full code below.
         - `Class ConversationEntry `
@@ -14,7 +16,14 @@ There are several steps required when creating a new type of scriptable object. 
         - `public List<ConversationEntry> Conversation`
 
 ### Install the Scriptable Object Factory - Unity Package  
+
 [Scriptable Object Factory - Download Link - Tal Lior](http://www.tallior.com/unity-scriptableobject-factory/)
+
+The image below shows that the Scriptable Object Factory places a new folder: Editor, with 2 scripts: ScriptableObjectFactory.cs, ScriptableObjectWindow.cs.  
+
+Any class, that inherits from ScriptableObject will now show up as an option in the Project Assets Menu: 
+
+![](/assets/Screen Shot 2019-03-11 at 2.20.16 PM.png)
 
 - Add a public instance of the Scriptable Object to a custom script that will be attached to a gameObject in a scene.  In our case this is the DialogManager.cs script.
   
