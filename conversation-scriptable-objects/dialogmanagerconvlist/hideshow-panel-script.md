@@ -16,46 +16,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-/// <summary>
-/// Hide show panel.
-/// Checkbox controls whether panel is shown on scene start
-/// Can call ShowPanel from some other script or button
-/// Panel must have a CanvasGroup
-/// If the Buttons are empty, the script still works to hide a script 
-/// </summary>
 public class Hide_Show_Panel : MonoBehaviour {
 
     CanvasGroup panelCG;
-    public bool showOnStart=false;
+    public bool showOnStart = false;
     public Button closeButton; //clicking will hide
     public Button openButton; //clicking will show
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         panelCG = GetComponent<CanvasGroup>();
-        if( !showOnStart){
+        if (!showOnStart)
+        {
             HidePanel();
         }
-        if(closeButton != null)
+        if (closeButton != null)
         {
             closeButton.onClick.AddListener(HidePanel);
         }
         if (openButton != null)
         {
-            openButton.onClick.AddListener(ShowPanel);
+            closeButton.onClick.AddListener(ShowPanel);
         }
 
     }
-	
-    public void ShowPanel(){
-        Utility.HideCG(panelCG);
+
+    public void ShowPanel()
+    {
+        Utility.ShowCG(panelCG);
     }
 
-    public void HidePanel(){
+    public void HidePanel()
+    {
         Utility.HideCG(panelCG);
     }
-	
 }
 
 
