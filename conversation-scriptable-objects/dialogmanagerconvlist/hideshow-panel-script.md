@@ -8,6 +8,9 @@ This script can be used on the DecisionPanel which controls buttons for changing
 
 When working with [SimpleDialog](/simple-dialog-prefab.md), or [DialogManager](/conversation-scriptable-objects/dialogmanagerconvlist.md), this DecisionPanel should be set as the Next Panel To Open in the SimpleDialog or DialogManager script.
 
+_Updated 3/12/2019
+Fixed mistake in ShowPanel( ) method,
+Added logic to make ShowPanel at start if showAtStart is selected._
 
 ```java
 
@@ -32,7 +35,7 @@ public class Hide_Show_Panel : MonoBehaviour {
         {
             HidePanel(); //hide at start
         }
-        else{
+        else{ 
             ShowPanel(); //show at start
         }
         //if buttons are set in inspector, configure to open/close panel 
