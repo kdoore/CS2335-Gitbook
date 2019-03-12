@@ -15,7 +15,7 @@ You will make a new DialogPrefab, which includes an image, and uses the DialogMa
 ![](/assets/Screen Shot 2019-03-12 at 2.58.19 PM.png)
 ![](/assets/Screen Shot 2019-03-11 at 2.13.59 PM.png)
 
-- **Adjust the Rect-Transform Component** of this new image gameObject, to set the anchors so the Image is aligned to the left-side of the panel.  Either Middle or Bottom is fine.  The image below shows middle-left anchor set.
+- **Adjust the Rect-Transform Component** of this new image gameObject, to set the anchors so the Image is aligned to the left-side of the panel.  Either Middle or Bottom is fine.  The image below shows middle-left anchor set.(see image below)
 - **Adjust the Image **(Script) component so that PreserveAspect checkbox is selected as true.
 - **Select an Image from Assets **(Script) by selecting an image from your assets folder that is sized to match your speaker images, speaker images should have similar aspect ration and scaling.  Adjust the image as necessary, larger, smaller, etc.
 
