@@ -39,7 +39,7 @@
 * [PickUp - SelfDestruct](project1-enhancements/pickup-selfdestruct.md)
 * [Spawn from Arrays](project1-enhancements/spawn-from-arrays.md)
 
-## Project 2 - StateManager and Dialog
+## Project 2 - StateManager
 
 * [Project 2 - Learning Objectives](project-2-learning-objectives.md)
 * [Project 2 - Starter Assets](project2-starter-assets.md)
