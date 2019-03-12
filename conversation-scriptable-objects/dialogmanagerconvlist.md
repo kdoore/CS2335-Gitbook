@@ -9,20 +9,20 @@ You will make a new DialogPrefab, which includes an image, and uses the DialogMa
  - Give the **new prefab a unique name:** examples: DialogPrefabConvList, or DialogPrefab_wImg.  
  - **Disable the GameObject** or Delete the original DialogPrefab gameObject in the hierarchy panel. (so you don't get confused)
  - **Remove the SimpleDialog.cs **script component, this will be replaced by the DialogManager.cs script component once the script has been created.
- - Use the RectTransform tool to resize the DialogPanel, DialogText, NextButton as necessary to make room for your speakerImage.
+ - Use the **RectTransform tool to resize** the DialogPanel, DialogText, NextButton as necessary to make room for your speakerImage.
  ![](/assets/Screen Shot 2019-03-12 at 2.56.38 PM.png)
- - Select the top-level, parent-panel, and add a UI-Image as a child.  The image below shows that the SpeakerImg is the bottom gameObject for the prefab, it is a sibbling to the other 2 Panels:  DialogPanel, SpeakerPanel. ** Note that the SpeakerImg is the 5th child image which has index [4]**, because all panels and buttons also have an image component.
+ - Select the top-level, parent-panel, and **add a UI-Image as a child.**  The image below shows that the SpeakerImg is the bottom gameObject for the prefab, it is a sibbling to the other 2 Panels:  DialogPanel, SpeakerPanel. ** Note that the SpeakerImg is the 5th child image which has index [4]**, because all panels and buttons also have an image component.
 ![](/assets/Screen Shot 2019-03-12 at 2.58.19 PM.png)
 ![](/assets/Screen Shot 2019-03-11 at 2.13.59 PM.png)
 
-- Adjust the Rect-Transform Component to set the anchors so the Image is aligned to the left-side of the panel.  Either Middle or Bottom is fine.  The image below shows middle-left anchor set.
-- Adjust the Image (Script) component so that PreserveAspect checkbox is selected as true.
-- Select the Image (Script) by selecting an image from your assets folder that is sized to match your speaker images, speaker images should have similar aspect ration and scaling.  Adjust the image as necessary, larger, smaller, etc.
+- **Adjust the Rect-Transform Component** of this new image gameObject, to set the anchors so the Image is aligned to the left-side of the panel.  Either Middle or Bottom is fine.  The image below shows middle-left anchor set.
+- **Adjust the Image **(Script) component so that PreserveAspect checkbox is selected as true.
+- **Select an Image from Assets **(Script) by selecting an image from your assets folder that is sized to match your speaker images, speaker images should have similar aspect ration and scaling.  Adjust the image as necessary, larger, smaller, etc.
 
 ![](/assets/Screen Shot 2019-03-12 at 2.50.09 PM.png)
 
-- Create the DialogManager.cs script and attach to the DialogPrefab_wImg gameObject.
-- Drag to Resources folder to create a new Prefab for this newly configured GameObject.
+- **Create the DialogManager.cs** script [[see below]](https://kdoore.gitbooks.io/cs-2335/content/conversation-scriptable-objects/dialogmanagerconvlist.html#dialogmanager---without-custom-unity-event-full-code) and attach to the DialogPrefab_wImg gameObject.
+- **Drag to Resources folder** to create a new Prefab for this newly configured GameObject.
 - Save Project and Scene
 
 ###Inspector Images
