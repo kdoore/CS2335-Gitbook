@@ -280,10 +280,13 @@ public class SimpleDialog : MonoBehaviour
 ![](/assets/Screen Shot 2019-03-06 at 2.26.55 PM.png)
 
 
-**TitlePanel:**  This is a UI-Panel with children: UI-Text: TitleText
-UI_Button: StartDialogBtn
+**TitlePanel:**  This is a UI-Panel with children: 
+- **Children:**
+ - UI-Text: TitleText
+ - UI_Button: StartDialogBtn
 
-**Attach CanavasGroup and Hide_Show_Panel.cs **
+- **Attach CanavasGroup **
+- **Attach Hide_Show_Panel.cs **
 The Hide_Show_Panel script will make sure the panel shows at start, and is hidden when the StartDialogBtn is clicked. 
 
  - Configuration for **Hide_Show_Panel.cs on TitlePanel: **
