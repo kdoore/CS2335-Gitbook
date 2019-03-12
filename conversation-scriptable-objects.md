@@ -9,7 +9,7 @@ There are several steps required when creating a new type of scriptable object. 
     -  **Define a custom class** (or struct) that has variables for each of the items you'll have associated with each  scriptable object.  This class must be defined using the `[System.Serializable] `attribute:  See details in full code below.
         - `Class ConversationEntry ` [[See code below]](https://kdoore.gitbooks.io/cs-2335/content/conversation-scriptable-objects.html#class-conversationentry)
         
--  Create a custom class that inherits from the Scriptable Object class. See details in full code below.
+-  Define a custom class that inherits from the Scriptable Object class. See details in full code below.
 
         - `public class ConversationList : ScriptableObject` [[See code below]](https://kdoore.gitbooks.io/cs-2335/content/conversation-scriptable-objects.html#class-conversationlist)
 
@@ -80,8 +80,8 @@ public class ConversationList : ScriptableObject
     public List<ConversationEntry> Conversation;
 }
 ```
-### Edit the ConversationList
 
+# Using the ConversationList
 
 ###Use in DialogManager Class
 Use as a public object-reference variable in a custom class, like DialogManager, that inherits from MonoBehaviour: The scriptable object instance will be connected in the inspector panel. 
@@ -94,7 +94,7 @@ public class DialogManager : MonoBehaviour {
      //more class definition code below
 ```
 
-### Create a Conversation Asset
+### Create a ConversationList Asset
 
 To create an instance of a Conversation asset, we right click in the project panel, or right click on the assets folder and select the bottom-most menu option: create -&gt; ScriptableObject, where our custom asset: Conversation, now shows up as an option at the bottom of the menu.  After clicking on Conversation, we now have a new item in our Assets panel, we should give it a unique name so we can reference it in our code.  I've named the example one: `ConversationList_CatScene1`.
 
@@ -119,8 +119,6 @@ Lior Tal has created a Unity package that makes it easy to create scriptable obj
 
 **Resource Links: **
 [Scriptableobject-factory - Unity Package](http://www.tallior.com/unity-scriptableobject-factory/)
-
-
 
 
 [Scriptable Object Article](http://ivanozanchetta.com/gamedev/unity3d/unity-serialization-behind-scriptableobject/)
