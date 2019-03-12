@@ -46,6 +46,7 @@ ButtonOption2: Right Edges of parent (vertically aligned to center)
 - ShowOnStart not checked - default is false
 - CloseButton: empty
 - OpenButton: empty
+
 **Once Configured: Create a prefab** so this can be reused in other scenes.
 
 
