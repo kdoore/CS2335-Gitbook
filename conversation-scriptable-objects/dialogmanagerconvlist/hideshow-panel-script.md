@@ -18,19 +18,23 @@ using UnityEngine.UI;
 
 public class Hide_Show_Panel : MonoBehaviour {
 
-    CanvasGroup panelCG;
-    public bool showOnStart = false;
+    CanvasGroup panelCG; //must be on same gameObject as this script
+    
+    public bool showOnStart = false; //default is hidden
     public Button closeButton; //clicking will hide
     public Button openButton; //clicking will show
 
     // Use this for initialization
     void Start()
     {
-        panelCG = GetComponent<CanvasGroup>();
+        panelCG = GetComponent<CanvasGroup>(); //must have CanvasGroup component
         if (!showOnStart)
         {
-            HidePanel();
+            HidePanel(); //hide at start
+        }else{
+            ShowPanel(); //show at start
         }
+        //if buttons are set in inspector, configure to open/close panel 
         if (closeButton != null)
         {
             closeButton.onClick.AddListener(HidePanel);
