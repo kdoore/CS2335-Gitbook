@@ -31,7 +31,8 @@ public class Hide_Show_Panel : MonoBehaviour {
         if (!showOnStart)
         {
             HidePanel(); //hide at start
-        }else{
+        }
+        else{
             ShowPanel(); //show at start
         }
         //if buttons are set in inspector, configure to open/close panel 
