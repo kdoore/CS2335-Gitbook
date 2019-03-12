@@ -4,9 +4,11 @@ This page provides configuration details for other GameObjects used with Dialog 
 
 For any UI-Panel that you'd like to show/hide, you must add a CanvasGroup, and the Hide_Show_Panel script as shown in the image below.
 
+The Hide_Show_Panel.cs script component's public fields: **ShowOnStart, CloseButton, OpenButton** will be configured according to desired behavior for each situation.  The examples below show a few possible configurations.
+
 ###Hide_Show_Panel, CanvasGroup
 ![](/assets/Screen Shot 2019-03-06 at 3.25.54 PM.png)
-
+Example Configuration for TitlePanel shown above
 
 ###TitlePanel - Prefab
 The image below shows the hierarchy panel for a TitlePanel that has a UI text, and a UI-Button that can be used to open a dialog prefab.
