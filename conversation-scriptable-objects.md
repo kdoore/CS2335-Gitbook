@@ -6,12 +6,12 @@ In the image below, we've created a ConversationList scriptableObject, to perman
 ![](/assets/Screen Shot 2019-03-11 at 2.19.08 PM.png)
 
 There are several steps required when creating a new type of scriptable object. Detailed example provided below using our Dialog Manager example: 
-    -  Define a custom class (or struct) that has variables for each of the items you'll have associated with each  scriptable object.  This class must be defined using the `[System.Serializable] `attribute:  See details in full code below.
-        - `Class ConversationEntry `
+    -  **Define a custom class** (or struct) that has variables for each of the items you'll have associated with each  scriptable object.  This class must be defined using the `[System.Serializable] `attribute:  See details in full code below.
+        - `Class ConversationEntry ` [[See code below]](https://kdoore.gitbooks.io/cs-2335/content/conversation-scriptable-objects.html#class-conversationentry)
         
 -  Create a custom class that inherits from the Scriptable Object class. See details in full code below.
 
-        - `public class ConversationList : ScriptableObject`
+        - `public class ConversationList : ScriptableObject` [[See code below]](https://kdoore.gitbooks.io/cs-2335/content/conversation-scriptable-objects.html#class-conversationlist)
 
 
 -  Define a collection data-structure, within this class the  to hold a collection of the above defined composite elements. This is code within ConversationList class. 
@@ -21,7 +21,7 @@ There are several steps required when creating a new type of scriptable object. 
 
 [Scriptable Object Factory - Article - Tal Lior](http://www.li0rtal.com/unity-scriptableobject-factory/)
 
-[Package Download Link](https://www.dropbox.com/s/vdvf5si4go3jnb5/ScriptableObjectFactory.unitypackage)
+[**ScriptableObjectFactory** Unity Package Download Link](https://www.dropbox.com/s/vdvf5si4go3jnb5/ScriptableObjectFactory.unitypackage)
 
 
 Any class, that inherits from ScriptableObject will now show up as an option in the Project Assets Menu: 
