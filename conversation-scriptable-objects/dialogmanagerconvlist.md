@@ -101,7 +101,7 @@ public class DialogManager : MonoBehaviour {
             conversationsQueue.Enqueue(item); //put each string -item in the queue
         }
         GetNextDialog();  //get first item
-    }
+    } //end method
 
 
     /// <summary>
@@ -114,7 +114,7 @@ public class DialogManager : MonoBehaviour {
     {
         Utility.ShowCG(dialogPanelCG);
         openDialogBtn.gameObject.SetActive(false);
-    }
+    } //end method
 
 
     /// <summary>
@@ -142,7 +142,7 @@ public class DialogManager : MonoBehaviour {
             } 
         }
     
-    }
+    } //end GetNextDialog method
 
     //this allows single characters to be added to look like typed text
     IEnumerator TypeSentence(string sentence)
@@ -153,7 +153,8 @@ public class DialogManager : MonoBehaviour {
             dialogText.text += letter;
             yield return new WaitForSeconds(0.05f); ;
         }
-    }
+    }//end TypeSentence method
+    
 } // end class
 
 ```
