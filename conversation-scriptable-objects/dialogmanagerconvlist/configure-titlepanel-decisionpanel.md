@@ -47,7 +47,7 @@ ButtonOption2: Right Edges of parent (vertically aligned to center)
 - CloseButton: empty
 - OpenButton: empty
 
-**Once Configured: Create a prefab** so this can be reused in other scenes.
+**Once Configured: Create prefabs** for reuse in other scenes.
 
 
 
