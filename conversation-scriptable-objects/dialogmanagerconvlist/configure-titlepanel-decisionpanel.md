@@ -1,6 +1,6 @@
-#Configure TitlePanel, DecisionPanel
+#Configure: TitlePanel, DecisionPanel
 
-Configure other GameObjects used with Dialog Prefabs
+This page provides configuration details for other GameObjects used with Dialog Prefabs.
 
 For any UI-Panel that you'd like to show/hide, you must add a CanvasGroup, and the Hide_Show_Panel script as shown in the image below.
 
