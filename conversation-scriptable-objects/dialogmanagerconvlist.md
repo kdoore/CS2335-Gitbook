@@ -2,6 +2,8 @@
 
 See - [Conversation ScriptableObjects](/conversation-scriptable-objects.md)
 
+You will make a new DialogPrefab, which includes an image, and uses the DialogManager.cs script component, which uses a ConversationList scriptable object.
+
 ###Inspector Images
 The images below show the Inspector panel configuration for the DialogPanel and Decision panels. ** Note that the SpeakerImg is the 5th child image which has index [4]**, because all panels and buttons also have an image component.
  
@@ -77,7 +79,7 @@ public class DialogManager : MonoBehaviour {
         nextBtn = GetComponentInChildren<Button>();
         nextBtn.onClick.AddListener(GetNextDialog);
 
-        InitializeDialog();
+        InitializeDialog(); //call once in Start
         //checkbox that can be set in inspector, if checked, then this is not exected
         if (!showOnStart)
         {
@@ -86,9 +88,12 @@ public class DialogManager : MonoBehaviour {
         else{ //if showing on scene load, get first Dialog 
             Utility.ShowCG(dialogPanelCG);
         }
-    }
+    } //end of Start
 
 
+//Populates the Queue with ConversationEntries 
+//from the ConvList scriptableObject's Conversation variable.
+//Also calls GetNextDialog to populate initial conversation data for first conversation
     void InitializeDialog()
     {
         foreach (ConversationEntry item in convList.Conversation)
