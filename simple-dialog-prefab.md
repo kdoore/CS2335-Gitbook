@@ -9,7 +9,11 @@ We should try to make something that will work as a prefab, so we can use it in 
     - A custom script component- attached to the UI-Panel
     will have logic for the dialog system.
       -Script must use a public List of strings that can be populated in the inspector, with new dialog each time the panel-prefab is used. 
-      
+
+ 
+Prefab Link Added March 12 Spring19      
+[Link to UnityPackage with Prefab panels](https://utdallas.box.com/v/simple-dialog-prefab-S19)
+You must add the SimpleDialog script to the Prefab, it is not included with this package.
 
  ###Prefab GameObject: Hierarchy     
  The image below shows the Hierarchy panel structure of these gameObjects.  The **SimpleDialog.cs** script is attached to the top-level panel object: **DialogPrefab**.  The panel must also have a **CanvasGroup **component attached. To add a CanvasGroup component, in the Inspector panel: Add Component>Layout > CanvasGroup
