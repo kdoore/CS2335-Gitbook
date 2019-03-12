@@ -1,12 +1,16 @@
 #Configure TitlePanel, DecisionPanel
 
-##Configure Other Items Used for Simple Dialog
+Configure other GameObjects used with Dialog Prefabs
+
+For any UI-Panel that you'd like to show/hide, you must add a CanvasGroup, and the Hide_Show_Panel script as shown in the image below.
 
 ###Hide_Show_Panel, CanvasGroup
 ![](/assets/Screen Shot 2019-03-06 at 3.25.54 PM.png)
 
 
 ###TitlePanel - Prefab
+The image below shows the hierarchy panel for a TitlePanel that has a UI text, and a UI-Button that can be used to open a dialog prefab.
+
 ![](/assets/Screen Shot 2019-03-06 at 2.26.55 PM.png)
 
 
@@ -25,6 +29,8 @@ The Hide_Show_Panel script will make sure the panel shows at start, and is hidde
 - OpenButton: empty
 
 ###DecisionPanel - Prefab
+This prefab is a UI panel that contains 2 buttons that can be used for scene change logic in all scenes.  It should start as hidden, then it's opened by the DialogPanel's script, when there's no dialog left to display.  It is configured as the "NextPanelToOpen" for the SimpleDialog and DialogManager scripts.
+
 ![](/assets/Screen Shot 2019-03-06 at 2.27.05 PM.png)
 
 **DecisionPanel:**This is a UI-Panel with 2 child-objects that are UI-Buttons.
