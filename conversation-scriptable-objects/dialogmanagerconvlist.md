@@ -2,10 +2,10 @@
 
 See - [Conversation ScriptableObjects](/conversation-scriptable-objects.md)
 
-You will make a new DialogPrefab, which includes an image, and uses the DialogManager.cs script component, which uses a ConversationList scriptable object.
+**Goal: ** You will create a new DialogPrefab_wImg, which includes an image, and uses the DialogManager.cs script component, which uses a ConversationList scriptable object. Follow steps detailed below:
 
-###Prefab Details:
- -  Create a duplicate GameObject in the hierarchy, this is created from the the original [DialogPrefab.](/simple-dialog-prefab.md)
+###Create DialogPrefab with Image and DialogManager.cs:
+ -  **Create a duplicate GameObject** in the hierarchy, this is created from the the original [DialogPrefab.](/simple-dialog-prefab.md)
  - Give the **new prefab a unique name:** examples: DialogPrefabConvList, or DialogPrefab_wImg.  
  - **Disable the GameObject** or Delete the original DialogPrefab gameObject in the hierarchy panel. (so you don't get confused)
  - **Remove the SimpleDialog.cs **script component, this will be replaced by the DialogManager.cs script component once the script has been created.
