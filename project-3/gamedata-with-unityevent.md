@@ -15,149 +15,105 @@ This example uses a simple UnityEvent: `onPlayerDataUpdate,` to notify any Liste
 **GameObject:**  GameData should be added to the GameManager, empty gameObject, in the BeginScene, and in the MiniGame scene for easy testing of the game.
 
 ```java  
-//updated 4/12/18 11:00 am
+//updated 3/25/19 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-//Class to create a singleton object
-//this will be attached to the GameManager in BeginScene and
-//persisted throughout the game
-//This object will maintain the important data about the gameplay experience
-public class GameData : MonoBehaviour
-{
-    public static GameData instanceRef;  //singleton reference variable
+//Singleton - one and only 1 ever in existance
+//global variable to allow easy access
+public class GameData : MonoBehaviour {
 
-    public UnityEvent onPlayerDataUpdate;   //custom Unity Event
+
+    /// static means it belongs to the Class, and not to an object instance of the class
+
+    public static GameData instanceRef;  ///Global variable 
+    private int score;
+    private int health;
 
     public Dictionary<PickupType, int> inventory = new Dictionary<PickupType, int>();
 
-    private int health;
-    private int totalScore;
-    private int levelScore;
-    private int lives;
 
-    /// <summary>
-    /// property
-    /// </summary>
-    /// <value>The total score.</value>
-    public int TotalScore
-    {  //read only
-        get { return totalScore; }
-    }
+    //Properties - Support Encapsulation - protect inner workings of our class
+    public int Score{
+        get{ return score;    }   //read only access
+      }
 
-    /// <summary>
-    ///  read-only property
-    /// </summary>
-    /// <value>The health.</value>
     public int Health
     {
-        get { return health; }
+        get { return health; }   //read only access
+    }
+
+    private void Awake()
+    {
+        health = 100; //initialize
+        score = 0;
+
+        if(instanceRef == null){
+            instanceRef = this; //point to itself
+            DontDestroyOnLoad(this.gameObject);  //this will never be destroyed
+        }else{
+            Destroy(this.gameObject);
+            Debug.Log("Duplicate GameData is Destroyed");
+        }
+    }
+
+
+    /// <summary>
+    /// Add the specified item.
+    /// Overloaded method
+    /// takes the full PickUp item as input parameter
+    /// </summary>
+    /// <param name="item">Item.</param>
+    public void Add( PickUp item)
+    {
+        score += item.value;
+        Debug.Log("Item added " + item.type);
+        ///THE INVENTORY DICTIONARY
+        ///Add item to dictionary - based on it's PickupType value.
+        ///The PickupType is used to determine which item to display in the InventoryDisplay script.
+        int count = 0; //variable to hold out parameter value, if the Dictionary already has the item.type key.
+        if (inventory.TryGetValue(item.type, out count))
+        {
+            count++; //item already in dictionary, add one to count
+            inventory[item.type] = count; ///update the dictionary's value
+        }
+        else
+        {
+            inventory.Add(item.type, 1); //add a new entry to the dictionary
+        }
+
     }
 
     /// <summary>
-    /// Gets or sets the level score.
+    /// Add the specified value.
+    /// Overloaded method
+    /// takes the PickUp item's value as input parameter
     /// </summary>
-    /// <value>The level score.</value>
-    public int LevelScore{
-        get { return levelScore; }
-        set { levelScore = value; }
-    }
-    
-    public int Lives
-    { //read only
-        get { return lives; }
-    }
-
-    void Awake()
-    {  
-       
-        //create singleton
-        if (instanceRef == null)
-        {
-            instanceRef = this;
-            DontDestroyOnLoad(gameObject);  //the gameObject this is attached to 
-        }
-        else
-        {   //
-            DestroyImmediate(gameObject);
-            Debug.Log("Destroy Imposter GameObject");
-        }
-
-        //initialize these instance variables
-        health = 100;
-        totalScore = 0;
-        levelScore = 0;
-        lives = 3;
-
-        /////////Initialize Custom EVENT
-        if (onPlayerDataUpdate == null)//test to see if it has been initialized
-        {
-            onPlayerDataUpdate = new UnityEvent();
-        }
-
-    }
-    // Use this for initialization
-    void Start()
+    /// <param name="value">Value.</param>
+    public void Add(int value)
     {
-        //MOVED initialization to Awake( )
+        score += value;
+        Debug.Log("Score is updated " + score);
 
     }
 
-    ////Called in Player controller when the player collides with a pickup    
-    public void Add(PickUp item)
+
+
+
+
+    public void TakeDamage( int value){
+        health -= value;
+        Debug.Log("Health is updated " + health);
+    }
+
+    public void ResetGameData()
     {
-        totalScore += item.value;  // update totalScore by the value of this current item
-        levelScore += item.value;
-        Debug.Log("Adding item value to totalScore, totalScore =  " + totalScore);
-       
-       
-   ///THE INVENTORY DICTIONARY 
-   ///Add item to dictionary - based on it's PickupType value.
-   ///The PickupType is used to determine which item to display in the InventoryDisplay script.
-   
-        int count = 0; //variable to hold out parameter value, if the Dictionary already has the item.type key.
-        if( inventory.TryGetValue(item.type, out count)){
-            count++;  //item already in dictionary, add one to count
-            inventory[item.type] = count; ///update the dictionary's value
-        }else{
-            inventory.Add(item.type, 1);  //add a new entry to the dictionary
-        }
-        
-        ///THE EVENT - MAKE SURE THIS IS THE LAST CODE IN ADD( )
-        if(onPlayerDataUpdate != null){ /////Are there any objects registered as listeners
-            onPlayerDataUpdate.Invoke(); ///Invoke the event
-        }
-
-    }// end Add()
-
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-        if (health <= 0)
-        {
-            lives -= 1;  //subtract one life
-            Debug.Log("GameOver due to low health");
-        }
-
-        if (onPlayerDataUpdate != null)
-        {   /////Are there any objects registered as listeners
-            onPlayerDataUpdate.Invoke();  ///Invoke the event
-        }
+        health = 100; //initialize
+        score = 0;
     }
 
-    //can be called when health == 0 or when is scene is reloaded
-    public void ResetGameData(){
-        health = 100;
-        levelScore = 0;
-        totalScore = 0;
-        
-        //should inventory dictionary be cleared out?
-        //inventory.Clear();
-        //should lives be reset?
-
-    }
 } //end class
+
 ```
 
