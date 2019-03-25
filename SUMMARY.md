@@ -73,7 +73,6 @@
   * [Canvas: Screen-Space Render-Mode](screen-space_canvas.md)
   * [UI-Buttons To Change Scene](ui-buttons_to_change_Scene.md)
   * [Text Input](text_input.md)
-  * [HidePanel Script](project-1-score-and-ui-elements/hidepanel-script.md)
 
 ## Project2 Resources
 

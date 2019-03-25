@@ -1,6 +1,8 @@
-#Hide_Show_Panel Script
+#Hide_Show_Panel Script 
 
-The following script can be put on any panel to control whether the panel is hidden when the scene starts.
+###Panel must have CanvasGroup Component.
+
+The following script can be put on any panel to control whether the panel is hidden when the scene starts.  By default, any panel with this attached script will be hidden when the scene is initially loaded. 
 
 This script can be used on the DecisionPanel which controls buttons for changing scenes. A checkbox in the inspector provides an option to have the panel start in open state when the scene loads.
 
