@@ -64,6 +64,8 @@
 
 * [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
   * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
+  * [GameData - With Inventory, UnityEvent](project-3/gamedata-with-unityevent.md)
+  * [Updated PickUp Script](project-2-dictionaries-to-store-data/dictionary-data-structure/updated-pickup-script.md)
 
 ## UI Components
 
@@ -95,7 +97,6 @@
 * [Project 4 - Code](project-3-code.md)
   * [PlayerController](project-3/playercontroller.md)
   * [PickUp](project-3/pickup.md)
-  * [GameData - With Inventory, UnityEvent](project-3/gamedata-with-unityevent.md)
   * [Simple Spawner](project-3/simple-spawner.md)
   * [Spawner with UnityEvent](project-3/spawner-with-unityevent.md)
   * [LevelManager](project-3/levelmanager.md)
