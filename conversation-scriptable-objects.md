@@ -74,6 +74,7 @@ This class
 ```java
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ConversationList : ScriptableObject
 {
