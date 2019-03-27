@@ -9,3 +9,5 @@
 [Saving Data Tutorial using PlayerPrefs - AppGuruz](http://www.theappguruz.com/blog/unity-serialization-and-game-data)
 
 [How to Use Arrays, Lists, Dictionaries in Unity](https://hub.packtpub.com/arrays-lists-dictionaries-unity-3d-game-development/)
+
+[Inventory Tutorial](https://www.mvcode.com/lessons/unity-rpg-inventory-system-jamie)
