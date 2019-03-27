@@ -60,12 +60,7 @@
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
 * [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
 
-## Project 2 - Dictionaries to Store Data
 
-* [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
-  * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
-  * [GameData - With Inventory, UnityEvent](project-3/gamedata-with-unityevent.md)
-  * [Updated PickUp Script](project-2-dictionaries-to-store-data/dictionary-data-structure/updated-pickup-script.md)
 
 ## UI Components
 
@@ -82,7 +77,15 @@
 
 ## Project 3
 
-## Mini-Game
+## Project 3 - Dictionaries to Store Data
+
+* [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
+  * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
+  * [GameData - With Inventory, UnityEvent](project-3/gamedata-with-unityevent.md)
+  * [Updated PickUp Script](project-2-dictionaries-to-store-data/dictionary-data-structure/updated-pickup-script.md)
+
+
+## Mini-Game - Old Content
 
 * [Game Scene](game_scene.md)
 * [MiniGame - Scene/State](minigame_-_view.md)
