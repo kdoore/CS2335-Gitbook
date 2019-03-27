@@ -2,6 +2,10 @@
 
 See - [Conversation ScriptableObjects](/conversation-scriptable-objects.md)
 
+Link:  [Unity Package with Prefab for using with DialogManager](https://utdallas.box.com/s/0gexny5vurmtlr49f7l6ij7evmwsrsh8)
+
+To use the prefab linked above, you'll need to add the DialogManager script to the top-level panel, and you'll need to populate with a scriptable object: ConversationList.
+
 **Goal: ** You will create a new DialogPrefab_wImg, which includes an image, and uses the DialogManager.cs script component, which uses a ConversationList scriptable object. Follow steps detailed below:
 
 ###Create DialogPrefab with Image and DialogManager.cs:
