@@ -2,12 +2,6 @@
 
 Use the following code for the Inventory Display functionality
 
-Inventory Display - Unity Package
-[Inventory Display, Unity Package](https://utdallas.box.com/v/inventory-display-package)
-
-The code below is included in the package file.
-
-The package file includes a prefab that is composed of UI panels, a button, text, and images.  To use the prefab, it must be dragged onto the word 'Canvas' in the Hierarchy Panel.  This will make it a child of the Canvas.  The script: InventoryDisplay.cs is a script component on the top-level gameObject: InventoryDisplay
 
 The code below shows the parts of this code that you will need to customize, to match with the PickupType enums that you've defined in your PickUp script.  You need to make sure you have 3 different types of good prefabs in your game, these will be displayed in this inventory display.
 
@@ -76,6 +70,7 @@ public class InventoryDisplay : MonoBehaviour {
             case PickupType.star:
                 if (starActive == false) { 
                 Utility.ShowCG(starPanelCG);
+                starActive=true;
                 }
                 itemText = starPanelCG.gameObject.GetComponentInChildren<Text>();
                 itemText.text = value.ToString();
@@ -84,6 +79,7 @@ public class InventoryDisplay : MonoBehaviour {
             case PickupType.crystal:
                 if(crystalActive==false){
                     Utility.ShowCG(crystalPanelCG);
+                    crystalAtive=true;
                 }
 
                 itemText = crystalPanelCG.gameObject.GetComponentInChildren<Text>();
@@ -93,6 +89,7 @@ public class InventoryDisplay : MonoBehaviour {
             case PickupType.gem:
                 if(gemActive==false){
                     Utility.ShowCG(gemPanelCG);
+                    gemActive=true;
                 }
                
                 itemText = gemPanelCG.gameObject.GetComponentInChildren<Text>();
