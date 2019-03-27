@@ -60,8 +60,6 @@
 * [Conversation Scriptable Objects](conversation-scriptable-objects.md)
 * [DialogManager\_ConvList](conversation-scriptable-objects/dialogmanagerconvlist.md)
 
-
-
 ## UI Components
 
 * [Finding Game Objects](finding_game_objects.md)
@@ -83,7 +81,7 @@
   * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
   * [GameData - With Inventory, UnityEvent](project-3/gamedata-with-unityevent.md)
   * [Updated PickUp Script](project-2-dictionaries-to-store-data/dictionary-data-structure/updated-pickup-script.md)
-
+  * [Inventory Items](project-2-dictionaries-to-store-data/inventory-items.md)
 
 ## Mini-Game - Old Content
 
