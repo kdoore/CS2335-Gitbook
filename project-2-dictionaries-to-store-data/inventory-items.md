@@ -1,6 +1,12 @@
 #Inventory Items
 
-To introduce working with inventory-type items, we'll start with a simple UI-Button that allows a user to select an item to be added to the inventory system.
+To introduce the topic of working with inventory-type items, we'll start with a simple UI-Button that allows a user to select an item to be added to the inventory system.
+
+###PickUp Items
+
+
+
+###UI-Button to add PickUp to Inventory
 
 ![](/assets/Screen Shot 2019-03-27 at 7.22.47 AM.png)
 
