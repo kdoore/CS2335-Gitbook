@@ -83,6 +83,7 @@
   * [Updated PickUp Script](project-2-dictionaries-to-store-data/dictionary-data-structure/updated-pickup-script.md)
   * [Inventory Items](project-2-dictionaries-to-store-data/inventory-items.md)
   * [Saving Data](project-2-dictionaries-to-store-data/dictionary-data-structure/saving-data.md)
+  * [Data-Structures Resources](project-2-dictionaries-to-store-data/dictionary-data-structure/data-structures-resources.md)
 
 ## Mini-Game - Old Content
 
