@@ -40,7 +40,7 @@ The link below gives more detailed information for Gitbook: [Create new scene, s
      * `StateManager.instanceRef.SwitchState (new EndState ());` 
 
 
-##Troubleshooting Issues when trying to change scenes
+##Troubleshooting Issues - Scene Change
 
 **1. StartGame in BeginScene**
 The most important thing to check is that you're always starting your game in the BeginScene.  Otherwise, the StateManager will have incorrect code executing, because we hard-coded the starting state in StateManager to be the BeginState.  
@@ -90,7 +90,6 @@ matches the SwitchState( new StateName(  ));
         StateManager.instanceRef.SwitchState(new Scene2State());  //create new state, pass to StateManager
     }
 ```
-
    - **Button Initialization Logic Error: **  
 In the code below, there's a mistake because all logic is being added to the btnOption1.onClick method.  Look for these types of errors.
 
