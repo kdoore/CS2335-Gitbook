@@ -1,5 +1,7 @@
 #Dictionary Data-Structure
 
+
+
 Links:  
 [MSDN: Dictionary](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?redirectedfrom=MSDN&view=netframework-4.7.2)
 
