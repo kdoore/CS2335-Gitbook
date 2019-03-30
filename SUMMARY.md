@@ -94,10 +94,7 @@
     * [Player Data - EventArgs](player-data-eventargs.md)
 * [Level Manager-Events](level-manager-in-class.md)
 * [Inventory Display](inventory_store_-_scriptable_objects.md)
-
-## ScriptableObjects - Resources
-
-* ScriptableObjects Resources
+* [ScriptableObjects](scriptableobjects.md)
 
 ## Project 4
 
