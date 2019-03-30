@@ -95,6 +95,10 @@
 * [Level Manager-Events](level-manager-in-class.md)
 * [Inventory Display](inventory_store_-_scriptable_objects.md)
 
+## ScriptableObjects - Resources
+
+* ScriptableObjects Resources
+
 ## Project 4
 
 * [Project 4 - Code](project-3-code.md)
