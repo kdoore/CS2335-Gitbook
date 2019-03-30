@@ -84,6 +84,7 @@
   * [Inventory Items](project-2-dictionaries-to-store-data/inventory-items.md)
   * [Saving Data](project-2-dictionaries-to-store-data/dictionary-data-structure/saving-data.md)
   * [Data-Structures Resources](project-2-dictionaries-to-store-data/dictionary-data-structure/data-structures-resources.md)
+* [Inventory-ScriptableObject](project-2-dictionaries-to-store-data/inventory-scriptableobject.md)
 
 ## Mini-Game - Old Content
 
