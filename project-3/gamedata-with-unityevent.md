@@ -65,9 +65,8 @@ public class GameData : MonoBehaviour {
     /// takes the full PickUp item as input parameter
     /// </summary>
     /// <param name="item">Item.</param>
-    public void Add( PickUp item)
+    public void AddItem( PickUp item)
     {
-        score += item.value;
         Debug.Log("Item added " + item.type);
         ///THE INVENTORY DICTIONARY
         ///Add item to dictionary - based on it's PickupType value.
@@ -97,10 +96,6 @@ public class GameData : MonoBehaviour {
         Debug.Log("Score is updated " + score);
 
     }
-
-
-
-
 
     public void TakeDamage( int value){
         health -= value;

@@ -17,7 +17,7 @@ public class PickUp : MonoBehaviour {
 
     public void AddItem( )
     {
-        GameData.instanceRef.Add(this);
+        GameData.instanceRef.AddItem(this);
     }
 }
 
