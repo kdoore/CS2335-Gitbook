@@ -33,7 +33,6 @@ public class GameData : MonoBehaviour {
 
     public Dictionary<PickupType, int> inventory = new Dictionary<PickupType, int>();
 
-
     //Properties - Support Encapsulation - protect inner workings of our class
     public int Score{
         get{ return score;    }   //read only access
@@ -57,7 +56,6 @@ public class GameData : MonoBehaviour {
             Debug.Log("Duplicate GameData is Destroyed");
         }
     }
-
 
     /// <summary>
     /// Add the specified item.
