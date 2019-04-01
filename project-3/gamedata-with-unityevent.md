@@ -9,7 +9,7 @@ This version also contains:
     - lives variable, Lives Property
 
 
-**UnityEvent**
+**UnityEvent - not included in code below**
 This example uses a simple UnityEvent: `onPlayerDataUpdate,` to notify any Listeners that the playerData has been updated.  Potential Listener objects include the LevelManager script, the PlayerStatsDisplay, and the InventoryDisplay.  Make sure to add:  using `UnityEngine.Events;`, to the top of your script
 
 **GameObject:**  GameData should be added to the GameManager, empty gameObject, in the BeginScene, and in the MiniGame scene for easy testing of the game.
