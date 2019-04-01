@@ -1,7 +1,5 @@
 # Inventory Display
 
-[Inventory Display, Unity Package](https://utdallas.box.com/v/inventory-display-package)
-
 In this section, we create a set of gameObject panels that we can use to show the inventory of items that the player has collected during the game.
 
 The first step to creating an inventory display is to create a single UI panel that can function as the template for displaying your inventory items.  This can be used to create a prefab that can be customized to display each type of collectable object.
