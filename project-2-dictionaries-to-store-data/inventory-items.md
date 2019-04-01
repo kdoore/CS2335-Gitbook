@@ -1,5 +1,6 @@
 #Inventory Items
 
+#Introductory Ideas
 To introduce the topic of working with inventory-type items, we'll start with a simple UI-Button that allows a user to select an item to be added to the inventory system.
 
 Types of inventory items we might imagine collecting and using in a game:
