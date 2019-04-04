@@ -86,6 +86,8 @@
   * [Data-Structures Resources](project-2-dictionaries-to-store-data/dictionary-data-structure/data-structures-resources.md)
 * [Inventory-ScriptableObject](project-2-dictionaries-to-store-data/inventory-scriptableobject.md)
 
+## Custom UnityEvents
+
 ## Mini-Game - Old Content
 
 * [Game Scene](game_scene.md)
