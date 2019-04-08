@@ -4,11 +4,13 @@ The backbone of this Inventory are several classes that inherit from SciptableOb
 
 
 
-##Item Class, ItemInstance Class
-The Item Class is an **abstract class**, this means that no Item objects can be created directly of the Item type.  Instead, we must write **concrete classes** that inherit from the Item Class, such as Gem, Potion.  
+##Item Class - Abstract Class, ItemInstance Class
+The **Item Class** is an **abstract class**, this means that no Item objects can be created directly of the Item type.  Instead, we must write **concrete classes** that inherit from the Item Class, such as Gem, Potion.  
 
+##Methods:  abstract, virtual, override:
+The Item class introduces new types of methods, where we want to insure we can call the method `Use( )`, on all object instances ( of child classes )
 
-##class Item
+##class Item, ItemInstance
 ```java
 
 using System.Collections;
