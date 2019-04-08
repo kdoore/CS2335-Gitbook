@@ -75,8 +75,6 @@
 
 ## Project 3
 
-* MiniGame 
-
 ## Project 3 - Dictionaries to Store Data
 
 * [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
