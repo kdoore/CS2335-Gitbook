@@ -95,7 +95,6 @@
 
 ## Mini-Game\_Proj3
 
-* [Game Scene](game_scene.md)
 * [MiniGame-Overview-Proj3](minigame_-_view.md)
 * [GameData - Simple](gamedata-simple.md)
 * [Level Manager-Events](level-manager-in-class.md)
