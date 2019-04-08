@@ -89,6 +89,7 @@
   * [Inventory: Item Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-item-class.md)
   * [Inventory Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-class.md)
   * [Inventory Display, Slot](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md)
+  * [PickUp, GameData Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods.md)
 
 ## Custom UnityEvents
 
