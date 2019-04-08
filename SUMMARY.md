@@ -85,6 +85,7 @@
   * [Saving Data](project-2-dictionaries-to-store-data/dictionary-data-structure/saving-data.md)
   * [Data-Structures Resources](project-2-dictionaries-to-store-data/dictionary-data-structure/data-structures-resources.md)
 * [Inventory-ScriptableObject](project-2-dictionaries-to-store-data/inventory-scriptableobject.md)
+  * [Inventory: Item Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-item-class.md)
 
 ## Custom UnityEvents
 
