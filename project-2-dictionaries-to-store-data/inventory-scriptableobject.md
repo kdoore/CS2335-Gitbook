@@ -6,6 +6,23 @@ Below are links to several tutorials about custom Unity Inventory-Systems using 
 
 - [RPG Inventory-System:](https://www.mvcode.com/lessons/unity-rpg-inventory-system-jamie) - by Jamie at MVCode Clubs 
 
+The Inventory System uses the following Classes:
+
+**ScriptableObject Classes - Data-Model**
+- abstract class **Item**: ScriptableObject
+- class **ItemInstance:** ScriptableObject
+- class **Inventory**: ScriptableObject
+- classes for custom items:
+    - class Gem: Item
+    - class Potion: Item
+
+**MonoBehaviour Classes: Display - UI - View**
+
+- class **InventoryDisplay**: MonoBehaviour
+- class **Slot**: MonoBehaviour, IPointerClickHandler
+
+
+
 
 
 
