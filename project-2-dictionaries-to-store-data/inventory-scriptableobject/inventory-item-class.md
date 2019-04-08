@@ -3,9 +3,8 @@
 The backbone of this Inventory are several classes that inherit from SciptableObject
 
 
-Item Class, ItemInstance Class
 
-
+##Item Class, ItemInstance Class
 
 ```java
 
@@ -71,5 +70,65 @@ public class ItemInstance
         count++;
     }  
 }
+
 ```
+
+###Class Gem
+
+```java
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public enum GemType { Ruby, Diamond, Sapphire, Emerald }
+
+
+[System.Serializable]
+public class Gem : Item {
+
+    public GemType gemType;
+
+    public Gem()
+    {
+        itemType = ItemType.Gem;
+    }
+
+    public override void Use()
+    {
+        Debug.Log("Using Gem");
+
+    }
+}
+
+```
+
+##Class Potion
+
+
+
+```java
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public enum PotionType { Energy, Wisdom, Truth, Health }
+
+public class Potion : Item {
+
+    public PotionType potionType;
+
+    public Potion()
+    {
+        itemType = ItemType.Potion;
+    }
+
+    public override void Use()
+    {
+        Debug.Log("Using Potion " + this.potionType);
+    }
+
+}
+```
+
+
 
