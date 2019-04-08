@@ -82,7 +82,6 @@ using UnityEngine;
 
 public enum GemType { Ruby, Diamond, Sapphire, Emerald }
 
-
 [System.Serializable]
 public class Gem : Item {
 
@@ -96,7 +95,6 @@ public class Gem : Item {
     public override void Use()
     {
         Debug.Log("Using Gem");
-
     }
 }
 
