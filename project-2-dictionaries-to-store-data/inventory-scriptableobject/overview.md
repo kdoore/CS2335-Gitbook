@@ -12,3 +12,6 @@
 ![](/assets/Screen Shot 2019-04-08 at 3.01.00 PM.png)
 
 
+###Resources:
+[Inventory Icons by VespaWarrior, on Unity AssetStore](http://www.vespawarrior.com/portfolio/)
+[zip file](https://utdallas.box.com/v/TinyAssets-Inventory)
