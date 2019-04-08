@@ -91,7 +91,7 @@
 ## Mini-Game\_Proj3
 
 * [Game Scene](game_scene.md)
-* [MiniGame - Scene/State](minigame_-_view.md)
+* [MiniGame-Overview-Proj3](minigame_-_view.md)
 * [GameData - Simple](gamedata-simple.md)
 * [Level Manager-Events](level-manager-in-class.md)
 * [Inventory Display](inventory_store_-_scriptable_objects.md)

@@ -1,5 +1,7 @@
 # MiniGame
 
+[Spring 2019 - UnityPackage with Simplified MiniGameScene](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset)
+
 ### Dynamic Interaction with Goals and Consequences
 
 The MiniGame is the portion of the Project where the player can dynamically interact with a player sprite, with some objective or goal that will result in some game-data generated that will have consequential impact on the player experience in subsequent scenes in the game.
