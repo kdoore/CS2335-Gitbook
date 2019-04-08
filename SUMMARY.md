@@ -88,7 +88,7 @@
 
 ## Custom UnityEvents
 
-## Mini-Game - Old Content
+## Mini-Game\_Proj3
 
 * [Game Scene](game_scene.md)
 * [MiniGame - Scene/State](minigame_-_view.md)

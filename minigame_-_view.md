@@ -32,7 +32,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 
-public class MiniGameState : IStateBase{
+public class MiniGState : IStateBase{
 
 // Use this for initialization
 
@@ -44,7 +44,7 @@ public class MiniGameState : IStateBase{
     }
 
     //constructor  // add comments
-    public MiniGameState ()
+    public MiniGState ()
     {
         scene = GameScene.MiniGame;
     }
