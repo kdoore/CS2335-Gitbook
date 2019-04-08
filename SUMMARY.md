@@ -87,6 +87,7 @@
 * [Inventory-ScriptableObject](project-2-dictionaries-to-store-data/inventory-scriptableobject.md)
   * [Inventory: Item Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-item-class.md)
   * [Inventory Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-class.md)
+  * [Inventory Display, Slot](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md)
 
 ## Custom UnityEvents
 
