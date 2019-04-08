@@ -1,8 +1,12 @@
 #Inventory Display and Slot Classes
 
 
-Hierarchy: 
+##Hierarchy and Inspector Panel 
+###Images for Slot and Inventory Display
+
 ![](/assets/Screen Shot 2019-04-08 at 3.14.31 PM.png)
+Slot Inspector - Slot Script
+![](/assets/Screen Shot 2019-04-08 at 3.28.00 PM.png)
 
 ##Add GridLayout Component, Configure as below
 ![](/assets/Screen Shot 2019-04-08 at 3.23.49 PM.png)
@@ -10,6 +14,9 @@ Hierarchy:
 Test Buttons - Button with PickUp-Item as a child
 ![](/assets/Screen Shot 2019-04-08 at 3.23.05 PM.png)
 
+
+Configure Button OnClick to execute PickUp method:  AddItem( )
+![](/assets/Screen Shot 2019-04-08 at 3.26.05 PM.png)
 
 ##Class Slot
 
