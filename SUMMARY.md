@@ -93,27 +93,24 @@
 * [Game Scene](game_scene.md)
 * [MiniGame - Scene/State](minigame_-_view.md)
 * [GameData - Simple](gamedata-simple.md)
-  * [Game-Data - C\# Events - Complex Version](game-data_model.md)
-    * [Player Data - EventArgs](player-data-eventargs.md)
 * [Level Manager-Events](level-manager-in-class.md)
 * [Inventory Display](inventory_store_-_scriptable_objects.md)
 * [ScriptableObjects](scriptableobjects.md)
 * [Event Publishing Patterns](observer_pattern.md)
 * [Custom Event Messaging](custom_event_messaging.md)
-* [Delegates](delegates.md)
 
 ## Project 4
 
 * [Project 4 - Code](project-3-code.md)
-  * [PlayerController](project-3/playercontroller.md)
+  * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
   * [PickUp](project-3/pickup.md)
+  * [PlayerController](project-3/playercontroller.md)
   * [Simple Spawner](project-3/simple-spawner.md)
   * [Spawner with UnityEvent](project-3/spawner-with-unityevent.md)
   * [LevelManager](project-3/levelmanager.md)
   * [PlayerStatsDisplay](project-3/playerstatsdisplay.md)
   * [InventoryDisplay](project-3/inventorydisplay.md)
   * [EndScene / EndState ](project-3/endscene-endstate.md)
-  * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
 * [Class-Code Examples](class-code-examples.md)
 
 ## Optional, Supplemental Content
@@ -126,7 +123,6 @@
   * [Saving Data - Serialization](saving_data_-_serialization.md)
   * [Adding Audio](adding-audio.md)
   * [Parallax Scrolling](additional-options/parallax-scrolling.md)
-  * [Sprite Animation Tutorial](additional-options/sprite-animation-tutorial.md)
   * [Change Sprites](change-sprites.md)
 
 ## C\# Language
@@ -148,6 +144,7 @@
   * [Static](static_classes.md)
   * [Ternary Operator: ?](ternary_operator.md)
   * [this](this.md)
+  * [Delegates](delegates.md)
 * [Diagrams](diagrams.md)
   * [Flow-Chart](flow-chart_example.md)
   * [Finite State Machine](finite_state_machine.md)

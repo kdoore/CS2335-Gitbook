@@ -1,6 +1,4 @@
-#Class Code - Examples - Project 3
-
-###Week of March 19-23
+#Class Code - Examples - Project 3 - fall 2018
 
 The link below is the starter-project code for Project 3.  
 

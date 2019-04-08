@@ -25,7 +25,7 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
   - **Animator Component** (if you choose to animate your player)
   
   - Set the GameObject: Layer to `Player`
-  - Set the Sprite-Renderer Sorting Layer to `Player` (create a new sorting layer if necessary)
+  - Set the Sprite-Renderer **Sorting Layer** to `Player` (create a new sorting layer if necessary)
   - Make sure the Transform.Position.Z value is 0
   
  4.  Customize the `PlayerController.cs` script as needed.  The Script has 4 main functional sections:
@@ -36,6 +36,7 @@ You need a **Player GameObject**, where movement is controlled by keyboard input
 
   - **OnTriggerEnter2D( )**  You will add code for logic that should be exectued when the player collides with other GameObjects, depending on the Tags:  Collectible, or Hazard.
   5. If you will use your Player in multiple scenes, save your Player as a prefab, then save your project.
+  
   
  - **Floor**
  Create an emtpy GameObject, name it Floor, move to the bottom of the screen. Attach a BoxCollider2D, and edit the collider so it creates a wide rectangle across the bottom of the screen.
