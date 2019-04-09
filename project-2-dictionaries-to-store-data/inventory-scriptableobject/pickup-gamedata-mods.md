@@ -105,7 +105,7 @@ public class GameData : MonoBehaviour {
 
     //Adds an item to the inventory - list
     //remove this and use the method below
-    //inventory publishes the onInventoryUpdated event
+    //inventory invokes the onInventoryUpdated event
     public void Add(ItemInstance item)    
     {
     inventory.InsertItem(item);
