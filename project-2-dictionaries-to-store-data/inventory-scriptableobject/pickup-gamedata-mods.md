@@ -1,8 +1,8 @@
-#PickUp, GameData Mods
+#PickUp, GameData, PlayerController Mods
 
+The following scripts contain updated code required for integrating the new GameData Inventory inventory, from the new Inventory System.  
 
 ###Class Pickup
-
 
 
 ```java
@@ -23,7 +23,7 @@ public class PickUp : MonoBehaviour {
     /// </summary>
     public void AddItem( ) //can be called onClick for a button
     {
-        GameData.instanceRef.Add(this.itemInstance);
+        GameData.instanceRef.AddItem(this.itemInstance);
     }
 }
 ```
@@ -36,13 +36,13 @@ See changes in code below:
 //New Variable: 
 public Inventory inventory;
 //New Method:  
-public void Add( ItemInstance){     }
+public void AddItem( ItemInstance){     }
+
 ```
 
-##Class GameData with Inventory, Add(ItemInstance)
+##Updated Class GameData with Inventory, Add(ItemInstance)
 
 ```java
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -51,13 +51,18 @@ using UnityEngine.Events;
 //global variable to allow easy access
 public class GameData : MonoBehaviour {
 
+
     /// static means it belongs to the Class, and not to an object instance of the class
+    public Inventory inventory; ///Set in the inspector in BeginScene
 
     public static GameData instanceRef;  ///Global variable 
+
+    public UnityEvent onPlayerDataUpdate = new UnityEvent();//calling constructor for our UnityEvent object
+
     private int score;
     private int health;
-    public Inventory inventory;
 
+   
     //Properties - Support Encapsulation - protect inner workings of our class
     public int Score{
         get{ return score;    }   //read only access
@@ -72,42 +77,32 @@ public class GameData : MonoBehaviour {
     {
         health = 100; //initialize
         score = 0;
-         if(instanceRef == null){
+
+        if(instanceRef == null){
             instanceRef = this; //point to itself
             DontDestroyOnLoad(this.gameObject);  //this will never be destroyed
         }else{
             Destroy(this.gameObject);
             Debug.Log("Duplicate GameData is Destroyed");
         }
-
-
     }
 
-
-    /// <summary>
-    /// Add the specified item.
-    /// Overloaded method
-    /// takes the full PickUp item as input parameter
-    /// </summary>
-    /// <param name="item">Item.</param>
-    public void Add( ItemInstance itemInstance)
-    {
-        //score += itemInstance.value;
-        inventory.InsertItem(itemInstance);
-       
-    }
-
-    /// <summary>
-    /// Add the specified value.
-    /// Overloaded method
-    /// takes the PickUp item's value as input parameter
-    /// </summary>
-    /// <param name="value">Value.</param>
-    public void Add(int value)
-    {
+    public void Add( int value){
         score += value;
         Debug.Log("Score is updated " + score);
+        //Score has changed
+        if(onPlayerDataUpdate != null)// there are no listeners, the list is empty
+        {
+            onPlayerDataUpdate.Invoke(); //Broadcast the event ( execute the listener methods)
+         //Invoke here means execute all methods on the listner list.
+        }
+    }
 
+    //Adds an item to the inventory - list
+    public void AddItem(ItemInstance item)
+    {
+        inventory.InsertItem(item);
+        Debug.Log("Add an item to the inventory " + item.item.itemName);
     }
 
 
@@ -122,8 +117,7 @@ public class GameData : MonoBehaviour {
         score = 0;
     }
 
-}
-
+} //end class
 ```
 
-
+#Updated code for PlayerController 
