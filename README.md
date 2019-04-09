@@ -16,7 +16,7 @@ Recommended References:
 >**Rule: "Start making games" **  "Don't wait to get to college, just start making games. Now, notice there's no adjective there -- **it doesn't have to be a good game.** It could be a terrible game, in fact it can be an abysmal failure."
 
 
-#Program a 'Simple Adventure Game. 
+#Program a simple Adventure-Game. 
 ##Learn C# and the Unity Game Engine to learn:  system-modeling (game-systems), programming patterns, UML modeling language. 
 
 This course aims to enhance your ability to **Communicate Game-Experience Ideas, Concepts** with programmers and others.   This course teaches **Computational Systems and Patterns** used in programming games by taking a deep dive into the fundamental building blocks of the concepts of game-systems.  **Game are Event-Driven Systems**. The art/science of **Designing Computational-Systems** falls within the domain of '**Modeling and Simulation**', which is a core of Computer Science. This course introduces **Computational Languages, Programming Patterns, System-Modeling, and UML**, a Visual Language to convey these concepts.  This course teaches how to program a **Simple Adventure Game**, using **C#** and Unity Game Engine.   
