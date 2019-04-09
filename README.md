@@ -29,11 +29,6 @@ This course aims to enhance your ability to **Communicate Game-Experience Ideas,
 This course aims to teach **Computational Languages** used to create games. These languages include **C# OOP-programming, State-Machines, Programming Patterns, and the 'Unified Modeling Language' (UML)** _which is a visual language._  In this course, 'Computing Languages' are used to design and implement **Game-System Concepts**. Each Student creates a **Branching-Narrative Adventure Game** where **'designed-interactions'** determine the player's path through the game. 
 Students build **Finite-State Machines (FSM)**, to control scene-transitions, animate the player-character, etc. Students will learn the **Component Pattern**(used by Unity) and the **Singleton Pattern** for various game-control systems.  Custom GameObject-Behaviors and game-systems (Dialog, Inventory, Animation) and  are programmed using C#. The **Observer Pattern (Publish / Subscribe)** is used when coding custom **Events** for decoupled object-messaging. Code for an **Inventory-system** uses **Abstract, Static Classes and Methods, Virtual,Override Methods, Interfaces, Enums, C# Generics, Data-structures:** `List<T>`, and `Dictionary <TKey,TValue>.  
 
-
-
-##Excellent article for Game Designers:
-[Brenda Romero's guide to becoming a game designerBrenda Romero's guide to becoming a game designer](https://www.gamesindustry.biz/articles/2019-04-09-brenda-romeros-guide-to-becoming-a-game-designer)  
-
 ###**C#**
 
 [MSDN C# Programming Guide:](https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx)
