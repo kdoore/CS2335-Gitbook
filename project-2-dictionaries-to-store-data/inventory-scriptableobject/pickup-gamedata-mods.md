@@ -21,9 +21,14 @@ public class PickUp : MonoBehaviour {
     /// Can be executed by button.onClick
     /// when added as a listener
     /// </summary>
-    public void AddItem( ) //can be called onClick for a button
+    public void AddItem( ) //can be called onClick for a button to add an item to inventory
     {
+        //updated preferred method 
         GameData.instanceRef.AddItem(this.itemInstance);
+        
+        //removed 
+        //GameData.instanceRef.Add(this.itemInstance);
+
     }
 }
 ```
@@ -99,6 +104,14 @@ public class GameData : MonoBehaviour {
     }
 
     //Adds an item to the inventory - list
+    //remove this and use the method below
+    public void Add(ItemInstance item)    
+    {
+    inventory.InsertItem(item);
+    Debug.Log("Add an item to the inventory " +         item.item.itemName);
+    }
+
+    //Preferred - Adds an item to the inventory - list
     public void AddItem(ItemInstance item)
     {
         inventory.InsertItem(item);
