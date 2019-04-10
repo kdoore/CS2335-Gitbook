@@ -85,6 +85,8 @@
   * [Inventory: Item Classes](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-item-class.md)
   * [Inventory Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-class.md)
   * [InventoryDisplay, Slot Classes](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md)
+    * [InventoryDisplay Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/inventorydisplay-class.md)
+    * [Slot Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/slot-class.md)
   * Updated Code:
   * [PickUp, GameData Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods.md)
     * [PlayerController Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontroller.md)

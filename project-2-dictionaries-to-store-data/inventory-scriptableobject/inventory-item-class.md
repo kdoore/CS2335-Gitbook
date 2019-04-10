@@ -98,14 +98,14 @@ public class Gem : Item {
 
     public override void Use()
     {
-        Debug.Log("Using Gem");
+        Debug.Log("Using Gem " + this.gemType);
+        //TODO what does a gem do?
     }
-}
+} //end class Gem
 
 ```
 
 ##Class Potion
-
 
 
 ```java
@@ -127,9 +127,24 @@ public class Potion : Item {
     public override void Use()
     {
         Debug.Log("Using Potion " + this.potionType);
+        switch (this.potionType)
+        {
+            case PotionType.Health:
+                GameData.instanceRef.BoostHealth(this.value);
+                break;
+            case PotionType.Energy:
+               // GameData.instanceRef.BoostEnergy(this.value);
+                break;
+            case PotionType.Wisdom:
+            case PotionType.Truth:
+                //GameData.instanceRef.BoostExperience(this.value);
+                break;
+        }
+        GameData.instanceRef.BoostHealth(this.value);
     }
 
-}
+} //end class Potion
+
 ```
 
 
