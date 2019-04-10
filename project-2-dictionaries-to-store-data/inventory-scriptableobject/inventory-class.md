@@ -15,11 +15,12 @@ using UnityEngine.Events;
 [System.Serializable]
 public class Inventory : ScriptableObject
 {
+    //custom event - invoked when item added to Inventory
     public UnityEvent onInventoryUpdate = new UnityEvent();
 
-    /* Inventory START */
     public List<ItemInstance> inventory;  // - initialized in inspector
 
+    //Unity Event, initializes or clears the List<>
     public void OnEnable()
     {
         if (inventory == null)
@@ -51,7 +52,6 @@ public class Inventory : ScriptableObject
     // Insert an item, return the index where it was inserted.  -1 if error.
     public void InsertItem(ItemInstance item)
     {
-
         Debug.Log("item added to inventory " + item.item.name);
         inventory.Add(item); //add to list 
 

@@ -40,7 +40,7 @@ public abstract class Item : ScriptableObject {
 
 
     /// <summary>
-    /// virtual means that this class can be overridden in a child-class, but it is not required
+    /// virtual method, means that this class can be overridden in a child-class, but it is not required
     /// in which case no code would be executed since this default version of the method 
     /// happens to have no code.
     /// </summary>
@@ -49,12 +49,9 @@ public abstract class Item : ScriptableObject {
        //no code in this case, so nothing will be executed
     }
 
-    ///other option which requires Use to be overridden in child classes
-    /// 
-    /*public abstract void Use()
-    {
-        //no code in this case, so nothing will be executed
-    }
+    //other option: abstract method, REQUIRES Use() to be overridden in child classes, similar to Interface
+    /*
+    public abstract void Use();
     */
 }
 
@@ -66,14 +63,12 @@ public class ItemInstance
     public Item item; //should be a child class item
     // Object-specific data.
     public int value;
-    public static int count;
-
+ 
     public ItemInstance(Item item, int value ) 
     {
         this.item = item;
         this.value = value;
-        count++;
-    }  
+   }  
 }
 
 ```
