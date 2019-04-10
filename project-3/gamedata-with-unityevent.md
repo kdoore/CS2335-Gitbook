@@ -1,15 +1,9 @@
-#GameData with Inventory and Custom UnityEvent
+#GameData with Custom UnityEvent
 
 This version of the GameData script uses a custom UnityEvent to notify listeners that some change happened to the player's data.
 
-This version also contains:
-    - Inventory: Dictionary< PickupType, int> inventory
-    - levelScore variable, LevelScore Property
-    - health variable, Health Property
-    - lives variable, Lives Property
 
-
-**UnityEvent - not included in code below**
+**UnityEvent **
 This example uses a simple UnityEvent: `onPlayerDataUpdate,` to notify any Listeners that the playerData has been updated.  Potential Listener objects include the LevelManager script, the PlayerStatsDisplay, and the InventoryDisplay.  Make sure to add:  using `UnityEngine.Events;`, to the top of your script
 
 **GameObject:**  GameData should be added to the GameManager, empty gameObject, in the BeginScene, and in the MiniGame scene for easy testing of the game.
@@ -19,19 +13,21 @@ This example uses a simple UnityEvent: `onPlayerDataUpdate,` to notify any Liste
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-//Singleton - one and only 1 ever in existance
+//Singleton - One (and only one) ever in existence
 //global variable to allow easy access
 public class GameData : MonoBehaviour {
 
-
     /// static means it belongs to the Class, and not to an object instance of the class
-
+   
+     ///ADD CODE-LINE BELOW TO DECLARE,INITIALIZE EVENT
+   public UnityEvent onPlayerDataUpdate = new UnityEvent();
+    
     public static GameData instanceRef;  ///Global variable 
     private int score;
     private int health;
 
-    public Dictionary<PickupType, int> inventory = new Dictionary<PickupType, int>();
 
     //Properties - Support Encapsulation - protect inner workings of our class
     public int Score{
@@ -57,30 +53,7 @@ public class GameData : MonoBehaviour {
         }
     }
 
-    /// <summary>
-    /// Add the specified item.
-    /// Overloaded method
-    /// takes the full PickUp item as input parameter
-    /// </summary>
-    /// <param name="item">Item.</param>
-    public void AddItem( PickUp item)
-    {
-        Debug.Log("Item added " + item.type);
-        ///THE INVENTORY DICTIONARY
-        ///Add item to dictionary - based on it's PickupType value.
-        ///The PickupType is used to determine which item to display in the InventoryDisplay script.
-        int count = 0; //variable to hold out parameter value, if the Dictionary already has the item.type key.
-        if (inventory.TryGetValue(item.type, out count))
-        {
-            count++; //item already in dictionary, add one to count
-            inventory[item.type] = count; ///update the dictionary's value
-        }
-        else
-        {
-            inventory.Add(item.type, 1); //add a new entry to the dictionary
-        }
-
-    }
+   
 
     /// <summary>
     /// Add the specified value.
@@ -92,12 +65,18 @@ public class GameData : MonoBehaviour {
     {
         score += value;
         Debug.Log("Score is updated " + score);
-
+        if( onPlayerDataUpdate != null){
+            onPlayerDataUpdate.Invoke();
+        }
     }
 
     public void TakeDamage( int value){
         health -= value;
         Debug.Log("Health is updated " + health);
+        if( onPlayerDataUpdate != null){
+            onPlayerDataUpdate.Invoke();
+        }
+
     }
 
     public void ResetGameData()

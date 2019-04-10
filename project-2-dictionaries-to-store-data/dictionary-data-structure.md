@@ -1,7 +1,5 @@
 #Dictionary Data-Structure
 
-
-
 Links:  
 [MSDN: Dictionary](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?redirectedfrom=MSDN&view=netframework-4.7.2)
 
@@ -31,32 +29,32 @@ Dictionary - you specify the data-type of the key: Tkey, and value: TValue.
 
 Unity does not show Dictionary elements in the inspector.
 
-### Example: GameData Inventory 
+### Example: Inventory_v1 
 Stores: Pickup-Item count
 
 ```java
-public Dictionary<PickupType, int> inventory = new Dictionary<PickupType, int>(); //initialize
+public Dictionary<PickupType, int> inventory_v1 = new Dictionary<PickupType, int>(); //initialize
 
-inventory.Add(PickupType.Gem, 1); //add an item
-int gems = inventory[PickupType.Gem]; //get value associated with key
+inventory_v1.Add(PickupType.Gem, 1); //add an item
+int gems = inventory_v1[PickupType.Gem]; //get value associated with key
 
-inventory[PickupType.Gem] = 2; //change an item
+inventory_v1[PickupType.Gem] = 2; //change an item
 
-if( inventory.ContainsKey( PickupType.Cow ){
-  int count = inventory[PickupType.Cow]
-  inventory[PickupType.Cow] = count +1;
+if( inventory_v1.ContainsKey( PickupType.Cow ){
+  int count = inventory_v1[PickupType.Cow]
+  inventory_v1[PickupType.Cow] = count +1;
 }else{
    Debug.Log("No Cows")
-   inventory.Add( PickupType.Cow, 1); //added
+   inventory_v1.Add( PickupType.Cow, 1); //added
 }
 
 //TryGetValue
 int count = 0;
-if( inventory.TryGetValue( PickupType.Gem,out count){
-  inventory[PickupType.Gem] = count + 1;
+if( inventory_v1.TryGetValue( PickupType.Gem,out count){
+  inventory_v1[PickupType.Gem] = count + 1;
   } 
   else{
-    inventory.Add(PickupType.Gem ,1);
+    inventory_v1.Add(PickupType.Gem ,1);
   }
 
 ```
