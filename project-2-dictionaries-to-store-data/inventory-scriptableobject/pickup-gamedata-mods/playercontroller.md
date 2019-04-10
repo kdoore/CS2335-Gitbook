@@ -104,7 +104,7 @@ if (collision.CompareTag("Collectible"))
 PickUp item = collision.GetComponent<PickUp>();
 
 //update score
-GameData.instanceRef.Add(item.itemInstance.value); //points for each specific item's value
+GameData.instanceRef.Add(item.Value); //points for each specific item's value
 
 //add to inventory
 GameData.instanceRef.AddItem(item.itemInstance);
@@ -116,7 +116,7 @@ else if (collision.CompareTag("Hazard"))
 {
 //decrease health
 PickUp item = collision.GetComponent<PickUp>();
-GameData.instanceRef.TakeDamage(item.itemInstance.value);
+GameData.instanceRef.TakeDamage(item.Value);
 
 Debug.Log("Hit Hazard: value is " + item.itemInstance.value);
 Destroy(collision.gameObject);
