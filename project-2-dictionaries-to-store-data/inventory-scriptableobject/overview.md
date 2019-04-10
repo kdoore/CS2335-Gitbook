@@ -26,7 +26,10 @@
 [Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code)
 
 **IMPORTANT: **_Importing this package will overwrite all of your existing files listed below.
-
+You may choose not to import the following items, and instead, paste the updated code into your scripts:  
+    - GameData.cs, 
+    - PlayerController.cs 
+    - PickUp.cs
 
 
 Included Files: 
