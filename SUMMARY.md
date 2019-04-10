@@ -82,9 +82,9 @@
   * [GameData - With Unity Event](project-3/gamedata-with-unityevent.md)
 * [Inventory-ScriptableObject](project-2-dictionaries-to-store-data/inventory-scriptableobject.md)
   * [Overview- updates Apr 10](project-2-dictionaries-to-store-data/inventory-scriptableobject/overview.md)
-  * [Inventory: Item Classes](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-item-class.md)
+  * [Item, Gem, Potion Classes](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-item-class.md)
   * [Inventory Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-class.md)
-  * [InventoryDisplay, Slot Classes](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md)
+  * [InventoryDisplay, Slot UI](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md)
     * [InventoryDisplay Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/inventorydisplay-class.md)
     * [Slot Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/slot-class.md)
   * Updated Code:

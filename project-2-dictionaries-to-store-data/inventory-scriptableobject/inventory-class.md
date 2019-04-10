@@ -1,7 +1,6 @@
 #Inventory Class
 
-
-
+**updated Apr 10, 2019**
 
 ```java
 using System.Collections;
@@ -11,6 +10,8 @@ using UnityEngine.Events;
 
 //modified from
 ////https://github.com/Toqozz/blog/blob/master/inventory
+//updated Apr 10, 2019
+
 
 [System.Serializable]
 public class Inventory : ScriptableObject

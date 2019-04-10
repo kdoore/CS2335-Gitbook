@@ -10,7 +10,7 @@ The **Item Class** is an **abstract class**, this means that no Item objects can
 ##Methods:  abstract, virtual, override:
 The Item class introduces new types of methods, where we want to insure we can call the method `Use( )`, on all object instances ( of child classes )
 
-**Last Updated: April 10, 2019**
+**Updated: April 10, 2019**
 ##class Item, ItemInstance
 ```java
 
@@ -18,9 +18,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//https://github.com/Toqozz/blog/blob/master/inventory
-
-//https://answers.unity.com/questions/1415831/inheritance-from-a-scriptableobject.html
+//modified from
+////https://github.com/Toqozz/blog/blob/master/inventory
+//updated Apr 10, 2019
 
 public enum ItemType
 {
@@ -84,6 +84,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//modified from
+////https://github.com/Toqozz/blog/blob/master/inventory
+//updated Apr 10, 2019
+
 public enum GemType { Ruby, Diamond, Sapphire, Emerald }
 
 [System.Serializable]
@@ -112,6 +116,11 @@ public class Gem : Item {
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+//modified from
+////https://github.com/Toqozz/blog/blob/master/inventory
+//updated Apr 10, 2019
+
 
 public enum PotionType { Energy, Wisdom, Truth, Health }
 
