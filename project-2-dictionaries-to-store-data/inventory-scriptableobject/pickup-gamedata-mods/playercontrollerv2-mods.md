@@ -2,7 +2,7 @@
 
 Below is the updated code, so that it works with the new GameData Inventory for the simplified PlayerController_v2 script included with the simplified MiniGame provided here: 
 
-
+THIS IS CODE FOR PlayerController_v2, don't use this if you have PlayerController.cs, because this version does not include the animator logic.
 
 ```java
 

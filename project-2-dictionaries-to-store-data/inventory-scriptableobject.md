@@ -13,8 +13,8 @@ The Inventory System uses the following Classes:
 - class **ItemInstance:** ScriptableObject
 - class **Inventory**: ScriptableObject
 - classes for custom items:
-    - class Gem: Item
-    - class Potion: Item
+    - class **Gem**: Item
+    - class **Potion**: Item
 
 **MonoBehaviour Classes: Display - UI - View**
 

@@ -10,6 +10,7 @@ The **Item Class** is an **abstract class**, this means that no Item objects can
 ##Methods:  abstract, virtual, override:
 The Item class introduces new types of methods, where we want to insure we can call the method `Use( )`, on all object instances ( of child classes )
 
+**Last Updated: April 10, 2019**
 ##class Item, ItemInstance
 ```java
 
@@ -33,7 +34,7 @@ public enum ItemType
 public abstract class Item : ScriptableObject {
 
     public string itemName;
-    public int stackLimit;
+    public int value;
     public Sprite sprite;
 
     protected ItemType itemType;
