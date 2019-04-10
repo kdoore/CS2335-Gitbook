@@ -77,9 +77,9 @@ public class PlayerController_v2 : MonoBehaviour {
             PickUp item = collision.GetComponent<PickUp>();
 
             //updating the score
-            GameData.instanceRef.Add(item.itemInstance.value); //points for each specific item's value
+            GameData.instanceRef.Add(item.Value); //points for each specific item's value
             //add to inventory
-            GameData.instanceRef.Add(item.itemInstance);
+            GameData.instanceRef.AddItem(item.itemInstance);
 
             Debug.Log("Hit collectible");
             Destroy(collision.gameObject);
@@ -88,7 +88,7 @@ public class PlayerController_v2 : MonoBehaviour {
         {
             //decrease health
             PickUp item = collision.GetComponent<PickUp>();
-            GameData.instanceRef.TakeDamage(item.itemInstance.value);
+            GameData.instanceRef.TakeDamage(item.Value);
 
             Debug.Log("Hit Hazard: value is " + item.itemInstance.value);
             Destroy(collision.gameObject);
