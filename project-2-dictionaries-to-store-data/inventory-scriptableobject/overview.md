@@ -16,7 +16,7 @@
 [Inventory Icons by VespaWarrior, on Unity AssetStore](http://www.vespawarrior.com/portfolio/)
 **Important:** _Only import assets used in your project_
 
-    - [zip file](https://utdallas.box.com/v/TinyAssets-Inventory)
+     [zip file](https://utdallas.box.com/v/TinyAssets-Inventory)
     
 
 ###Unity Package with Updated Code files:
