@@ -87,11 +87,11 @@
   * [InventoryDisplay, Slot UI](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md)
     * [InventoryDisplay Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/inventorydisplay-class.md)
     * [Slot Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/slot-class.md)
+    * [Hazard Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/hazard-class.md)
   * Updated Code:
   * [PickUp, GameData Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods.md)
     * [PlayerController Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontroller.md)
     * [PlayerController\_v2 Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontrollerv2-mods.md)
-    * [Hazard Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/hazard-class.md)
   * [Resources: Data Structures](project-2-dictionaries-to-store-data/dictionary-data-structure/saving-data.md)
 
 ## Custom UnityEvents
