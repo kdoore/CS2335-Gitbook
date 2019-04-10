@@ -19,11 +19,15 @@
     - [zip file](https://utdallas.box.com/v/TinyAssets-Inventory)
     
 
-###Unity Package with Updated Script files:
+###Unity Package with Updated Code files:
+
+**Updated Apr 10, 2019**
+
+[Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code)
 
 **IMPORTANT: **_Importing this package will overwrite all of your existing files listed below.
 
-**Updated Apr 10.**
+
 
 Included Files: 
     - GameData.cs
