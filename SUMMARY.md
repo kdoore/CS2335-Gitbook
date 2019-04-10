@@ -75,7 +75,7 @@
 
 ## Project 3
 
-## Project 3 - Dictionaries to Store Data
+## Project 3 - Inventory System
 
 * [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
   * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
@@ -85,6 +85,7 @@
   * [Inventory: Item Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-item-class.md)
   * [Inventory Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-class.md)
   * [Inventory Display, Slot](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md)
+  * Updated Code
   * [PickUp, GameData Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods.md)
     * [PlayerController\_v2 Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontrollerv2-mods.md)
   * [Resources: Data Structures](project-2-dictionaries-to-store-data/dictionary-data-structure/saving-data.md)
