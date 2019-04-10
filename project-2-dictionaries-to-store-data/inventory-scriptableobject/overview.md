@@ -39,3 +39,4 @@ Included Files:
     - Inventory.cs
     - InventoryDisplay.cs
     - Slot.cs
+    - Hazard.cs
