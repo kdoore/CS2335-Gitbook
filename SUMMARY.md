@@ -81,7 +81,7 @@
   * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
   * [GameData - With Unity Event](project-3/gamedata-with-unityevent.md)
 * [Inventory-ScriptableObject](project-2-dictionaries-to-store-data/inventory-scriptableobject.md)
-  * [Overview- updates Apr 10](project-2-dictionaries-to-store-data/inventory-scriptableobject/overview.md)
+  * [Overview-Diagrams](project-2-dictionaries-to-store-data/inventory-scriptableobject/overview.md)
   * [Item, Gem, Potion Classes](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-item-class.md)
   * [Inventory Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-class.md)
   * [InventoryDisplay, Slot UI](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md)
