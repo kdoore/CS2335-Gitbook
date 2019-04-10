@@ -5,7 +5,7 @@ The code below has been updated in onTriggerEnter.
 
 We needed to change the code that accessed the value field of each PickUp, since the PickUp class now has an ItemInstance object that contains that value data.
 
-- `Add(item.value)` is changed to `Add(item.itemInstance.value)`
+- `Add(item.value)` is changed to `Add(item.Value)`, we use the PickUP property: Value to simplify access to the item's value field.
 
 We also added the gameData method: `AddItem( item.itemInstance )`, so that we add the item to the GameData inventory.
 ###Code - PlayerController

@@ -41,7 +41,7 @@ public abstract class Item : ScriptableObject {
 
 
     /// <summary>
-    /// virtual method, means that this class can be overridden in a child-class, but it is not required
+    /// virtual means that this class can be overridden in a child-class, but it is not required
     /// in which case no code would be executed since this default version of the method 
     /// happens to have no code.
     /// </summary>
@@ -50,11 +50,14 @@ public abstract class Item : ScriptableObject {
        //no code in this case, so nothing will be executed
     }
 
-    //other option: abstract method, REQUIRES Use() to be overridden in child classes, similar to Interface
-    /*
-    public abstract void Use();
+    ///other option which requires Use to be overridden in child classes
+    /// 
+    /*public abstract void Use()
+    {
+        //no code in this case, so nothing will be executed
+    }
     */
-}
+} //end Item class
 
 
 [System.Serializable]
@@ -62,15 +65,15 @@ public class ItemInstance
 {
     // Reference to scriptable object "template".
     public Item item; //should be a child class item
-    // Object-specific data.
-    public int value;
- 
-    public ItemInstance(Item item, int value ) 
+
+
+    public ItemInstance(Item item,int value ) 
     {
         this.item = item;
-        this.value = value;
-   }  
-}
+        item.value = value;
+    }
+}//end ItemInstance class
+
 
 ```
 
