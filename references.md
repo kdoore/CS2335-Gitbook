@@ -16,6 +16,10 @@
 
 [InventorySystem - Updated Code Files: Apr 10,2019](https://utdallas.box.com/v/InventorySystem-Code)
 
+[Simplified MiniGame - Project3](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset)
+
+Todo: InventoryDisplay - Prefab
+
 
 
 ### Unity 2D Game Design Tutorials:
