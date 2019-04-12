@@ -19,14 +19,14 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
 ** Configure as shown below:**
 ![](/assets/Screen Shot 2019-04-08 at 3.23.49 PM.png)
 
-- **Slot: UI-Image GameObject with 2-Child GameObjects:**   
+###Slot Prefab
+- **Slot: UI-Image GameObject**
     - Top Level ++UI-Image*, //sets slot's background color   
+    
 
-
-    - **UI-Image: SlotImage** 
+  - **2-Child GameObjects:**   
+   - **UI-Image: SlotImage** 
         - Populate with test image, set color to Clear (transparent) 
-
-
     - **  UI-Text: CountText**
         - Shows number of items.  
 
