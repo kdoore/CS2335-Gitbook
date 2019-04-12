@@ -56,13 +56,10 @@
 ###BtnAddDiamond Prefab:  
 
 **UI-Button Prefab to Add Items to Inventory**
- - You will need to create additional, BtnAdd-Item prefabs to match your game's theme.
-
-
 
  - **Included with InventoryDisplay Package** [Linked at top of this document](/[UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19))
  
- - Create additional **BtnAdd - Items** by creating a duplicate of the BtnAddDiamond prefab in the hierarchy. 
+ - Create additional **BtnAdd - Items** by creating a duplicate of the BtnAddDiamond prefab in the hierarchy to match your game's theme. 
  
  - Note the Configuration of the Button (script)'s OnClick() to execute PickUp method:  AddItem( ) as displayed in the inspector below.
  
