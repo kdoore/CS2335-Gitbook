@@ -4,9 +4,9 @@
 **Unity Package file with Prefab of UI Display GameObjects**
 Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
-##InventoryDisplay Prefab GameObject:
+##InventoryDisplay and Slot Prefab GameObjects:
 
-###Inventory Display and Slot Prefabs
+###Inventory Display Prefab
 ![](/assets/Screen Shot 2019-04-08 at 3.14.31 PM.png)
 
 - **PhysicalInventory** is a  UI-Panel GameObject 
@@ -20,6 +20,7 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
 ![](/assets/Screen Shot 2019-04-08 at 3.23.49 PM.png)
 
 ###Slot Prefab
+![](/assets/Screen Shot 2019-04-12 at 1.34.30 PM.png)
 - **Slot: UI-Image GameObject**
     - Top Level ++UI-Image*, //sets slot's background color   
     
@@ -30,20 +31,38 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
     - **  UI-Text: CountText**
         - Shows number of items.  
 
-
-###Slot Inspector - Slot Script
+###Slot: Inspector Panel
+**Configure as Below:**
 ![](/assets/Screen Shot 2019-04-08 at 3.28.00 PM.png)
 
 
+#Store-UI-SelectItems: 
+**Create a UI Panel - with Children:**
+- UI-Text - StoreTitle
+- BtnAddDiamond 
+ Buttons to Select PickUp-Items
+ 
+![](/assets/Screen Shot 2019-04-12 at 2.22.09 PM.png)
+![](/assets/Screen Shot 2019-04-12 at 2.28.03 PM.png)
+![](/assets/Screen Shot 2019-04-12 at 2.49.28 PM.png)
+
+
+###UI-Button Prefab to Add Items to Inventory
 
 ###BtnAddDiamond Prefab:
  - Included with InventoryDisplay Package
- The PickUp-Item, which is a child of the 
-
-Test Buttons - Button with PickUp-Item as a child
-![](/assets/Screen Shot 2019-04-08 at 3.23.05 PM.png)
-
 
 Configure Button OnClick to execute PickUp method:  AddItem( )
 ![](/assets/Screen Shot 2019-04-08 at 3.26.05 PM.png)
+
+
+###PickUp-Item: UI-Image
+Child of the BtnAddDiamond, 
+Configured as shown below: with a **PickUp Script component,**  where the **ItemInstance: item** has been populated with a ScriptableObject of an Item child-class: (Gem, Potion ScriptableObjects included with [InventorySystem scripts](https://kdoore.gitbooks.io/cs-2335/content/project-2-dictionaries-to-store-data/inventory-scriptableobject/overview.html#unity-package-with-updated-code-files))
+
+![](/assets/Screen Shot 2019-04-12 at 2.55.35 PM.png)
+
+
+
+
 
