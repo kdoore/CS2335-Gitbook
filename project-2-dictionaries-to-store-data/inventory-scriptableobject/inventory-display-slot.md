@@ -1,10 +1,10 @@
-#Prefabs: Inventory Display and Slot 
-##Inventory Front-End:
+#Prefabs: Inventory Display, Slot, Store, BtnAdd-Item 
+**Front-End Interaction UI for Inventory**
 
-**Unity Package file with Prefab of UI Display GameObjects**
-Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
+**Download: Unity Package file** with Prefab of UI Inventory Display GameObjects
+**Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
-##InventoryDisplay and Slot Prefab GameObjects:
+###InventoryDisplay and Slot Prefab GameObjects:
 
 ###Inventory Display Prefab
 ![](/assets/Screen Shot 2019-04-08 at 3.14.31 PM.png)
