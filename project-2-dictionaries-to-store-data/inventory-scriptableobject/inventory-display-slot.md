@@ -53,9 +53,13 @@
 - UI-Text: StoreTitle
 - BtnAddDiamond - PreFab, to Select PickUp-Items (see details below)
 
-###BtnAddDiamond Prefab:
-**UI-Button Prefab to Add Items to Inventory
-**
+###BtnAddDiamond Prefab:  
+
+**UI-Button Prefab to Add Items to Inventory**
+ - You will need to create additional, BtnAdd-Item prefabs to match your game's theme.
+
+
+
  - **Included with InventoryDisplay Package** [Linked at top of this document](/[UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19))
  
  - Create additional **BtnAdd - Items** by creating a duplicate of the BtnAddDiamond prefab in the hierarchy. 
