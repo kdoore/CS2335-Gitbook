@@ -1,5 +1,7 @@
 #Inventory Display and Slot Classes
 
+**Unity Package file with Prefab of UI Display GameObjects**
+Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
 ##Hierarchy and Inspector Panel 
 ###Images for Slot and Inventory Display
