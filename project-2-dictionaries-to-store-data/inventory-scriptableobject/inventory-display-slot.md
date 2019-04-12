@@ -3,11 +3,19 @@
 **Unity Package file with Prefab of UI Display GameObjects**
 Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
-##Hierarchy and Inspector Panel 
-###Images for Slot and Inventory Display
+##InventoryDisplay Prefab GameObject:
 
-- Physical Inventory is a UI Panel GameObject
-- Slot GameObject has 3 elements:  2 UI-Images, 1 UI-Text
+###Images Inventory Display and Slot Prefabs
+
+- **PhysicalInventory** is a  UI-Panel GameObject 
+- **Monobehaviour Components** on the PhysicalInventory:  
+    - **Grid-Layout**
+    - **InventoryDisplay.cs**
+    - **Optional:  Animator Component** - For Animated UI
+    
+
+- **Slot: Image GameObject with 2-Child GameObjects:**   
+ - UI-Image: SlotImage, UI-Text: CountText.
     - Slot(0) :UI-Image - Top Level, is SlotBackground  
         - SlotImage: UI-Image - Populate with test image, set color to Clear (transparent) 
         -CountText: UI-Text, shows number of items.  
@@ -18,6 +26,10 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
 
 ##Add GridLayout Component, Configure as below
 ![](/assets/Screen Shot 2019-04-08 at 3.23.49 PM.png)
+
+###BtnAddDiamond Prefab:
+ - Included with InventoryDisplay Package
+ The PickUp-Item, which is a child of the 
 
 Test Buttons - Button with PickUp-Item as a child
 ![](/assets/Screen Shot 2019-04-08 at 3.23.05 PM.png)
