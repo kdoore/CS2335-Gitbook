@@ -4,9 +4,9 @@
 **Download: Unity Package file** with Prefab of UI Inventory Display GameObjects
 **Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
-###InventoryDisplay and Slot Prefab GameObjects:
+##InventoryDisplay and Slot Prefab GameObjects:
 
-###Inventory Display Prefab
+###Inventory Display Prefab - PhysicalInventory:
 ![](/assets/Screen Shot 2019-04-08 at 3.14.31 PM.png)
 
 - **PhysicalInventory** is a  UI-Panel GameObject 
@@ -16,7 +16,7 @@
         - **Optional:  Animator Component** - For Animated UI
 - **4- Slot Prefabs as Children**
     
-** Configure GridLayout as shown below:**
+** Configure GridLayout Component as shown below:**
 ![](/assets/Screen Shot 2019-04-08 at 3.23.49 PM.png)
 
 ###Slot Prefab Details:
@@ -39,26 +39,28 @@
 
 
 #Store-UI-SelectItems: 
-**Create a UI Panel - with Children:**
- - Horizontal LayoutGroup Component
+![](/assets/Screen Shot 2019-04-12 at 2.22.09 PM.png)
+
+![](/assets/Screen Shot 2019-04-12 at 2.42.24 PM.png)
+
+**Create a UI Panel:** Store-UI-SelectItems (with Children)
+ - Component: Horizontal LayoutGroup (see image below to configure)
+ 
+ 
+![](/assets/Screen Shot 2019-04-12 at 2.49.28 PM.png)
 
 **Child GameObjects:**
 - UI-Text: StoreTitle
 - BtnAddDiamond - PreFab, to Select PickUp-Items (see details below)
- 
-![](/assets/Screen Shot 2019-04-12 at 2.22.09 PM.png)
-
-![](/assets/Screen Shot 2019-04-12 at 2.42.24 PM.png)
-![](/assets/Screen Shot 2019-04-12 at 2.49.28 PM.png)
-
-
-###UI-Button Prefab to Add Items to Inventory
 
 ###BtnAddDiamond Prefab:
- - Included with InventoryDisplay Package
- - Create additional BtnAdd - Items by creating a duplicate of the BtnAddDiamond prefab in the hierarchy and 
-
-Configure Button OnClick to execute PickUp method:  AddItem( )
+**UI-Button Prefab to Add Items to Inventory
+**
+ - **Included with InventoryDisplay Package** [Linked at top of this document](/[UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19))
+ 
+ - Create additional **BtnAdd - Items** by creating a duplicate of the BtnAddDiamond prefab in the hierarchy. 
+ 
+ - Note the Configuration of the Button (script)'s OnClick to execute PickUp method:  AddItem( )
 ![](/assets/Screen Shot 2019-04-08 at 3.26.05 PM.png)
 
 
