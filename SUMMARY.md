@@ -77,7 +77,7 @@
 
 ## Project 3
 
-## Project 3 - Inventory System
+### Project 3 - Inventory System
 
 * [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
   * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
