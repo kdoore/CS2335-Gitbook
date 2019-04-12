@@ -1,4 +1,5 @@
-#Inventory Display and Slot Classes
+#Prefabs: Inventory Display and Slot 
+##Inventory Front-End:
 
 **Unity Package file with Prefab of UI Display GameObjects**
 Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
@@ -15,14 +16,20 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
     
 
 - **Slot: Image GameObject with 2-Child GameObjects:**   
- - UI-Image: SlotImage, UI-Text: CountText.
-    - Slot(0) :UI-Image - Top Level, is SlotBackground  
-        - SlotImage: UI-Image - Populate with test image, set color to Clear (transparent) 
-        -CountText: UI-Text, shows number of items.  
+    - Top Level ++UI-Image*, //sets slot's background color   
+
+
+- **UI-Image: SlotImage** 
+    - Populate with test image, set color to Clear (transparent) 
+
+
+- **  UI-Text: CountText**
+    - Shows number of items.  
 
 ![](/assets/Screen Shot 2019-04-08 at 3.14.31 PM.png)
 ###Slot Inspector - Slot Script
 ![](/assets/Screen Shot 2019-04-08 at 3.28.00 PM.png)
+
 
 ##Add GridLayout Component, Configure as below
 ![](/assets/Screen Shot 2019-04-08 at 3.23.49 PM.png)
