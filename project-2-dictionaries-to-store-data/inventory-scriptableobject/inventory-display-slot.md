@@ -14,7 +14,10 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
         - **Grid-Layout**
         - **InventoryDisplay.cs**
         - **Optional:  Animator Component** - For Animated UI
+- **4- Slot Prefabs as Children**
     
+** Configure as shown below:**
+![](/assets/Screen Shot 2019-04-08 at 3.23.49 PM.png)
 
 - **Slot: UI-Image GameObject with 2-Child GameObjects:**   
     - Top Level ++UI-Image*, //sets slot's background color   
@@ -32,8 +35,6 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
 ![](/assets/Screen Shot 2019-04-08 at 3.28.00 PM.png)
 
 
-##Add GridLayout Component, Configure as below
-![](/assets/Screen Shot 2019-04-08 at 3.23.49 PM.png)
 
 ###BtnAddDiamond Prefab:
  - Included with InventoryDisplay Package
