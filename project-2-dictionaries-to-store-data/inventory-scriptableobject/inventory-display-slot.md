@@ -16,16 +16,16 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
         - **Optional:  Animator Component** - For Animated UI
     
 
-- **Slot: Image GameObject with 2-Child GameObjects:**   
+- **Slot: UI-Image GameObject with 2-Child GameObjects:**   
     - Top Level ++UI-Image*, //sets slot's background color   
 
 
-- **UI-Image: SlotImage** 
-    - Populate with test image, set color to Clear (transparent) 
+    - **UI-Image: SlotImage** 
+        - Populate with test image, set color to Clear (transparent) 
 
 
-- **  UI-Text: CountText**
-    - Shows number of items.  
+    - **  UI-Text: CountText**
+        - Shows number of items.  
 
 
 ###Slot Inspector - Slot Script
