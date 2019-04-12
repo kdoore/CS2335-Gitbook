@@ -40,12 +40,15 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
 
 #Store-UI-SelectItems: 
 **Create a UI Panel - with Children:**
-- UI-Text - StoreTitle
-- BtnAddDiamond 
- Buttons to Select PickUp-Items
+ - Horizontal LayoutGroup Component
+
+**Child GameObjects:**
+- UI-Text: StoreTitle
+- BtnAddDiamond - PreFab, to Select PickUp-Items (see details below)
  
 ![](/assets/Screen Shot 2019-04-12 at 2.22.09 PM.png)
-![](/assets/Screen Shot 2019-04-12 at 2.28.03 PM.png)
+
+![](/assets/Screen Shot 2019-04-12 at 2.42.24 PM.png)
 ![](/assets/Screen Shot 2019-04-12 at 2.49.28 PM.png)
 
 
@@ -53,6 +56,7 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
 
 ###BtnAddDiamond Prefab:
  - Included with InventoryDisplay Package
+ - Create additional BtnAdd - Items by creating a duplicate of the BtnAddDiamond prefab in the hierarchy and 
 
 Configure Button OnClick to execute PickUp method:  AddItem( )
 ![](/assets/Screen Shot 2019-04-08 at 3.26.05 PM.png)
