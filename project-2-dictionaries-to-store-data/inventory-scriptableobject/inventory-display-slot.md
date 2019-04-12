@@ -60,13 +60,15 @@
  
  - Create additional **BtnAdd - Items** by creating a duplicate of the BtnAddDiamond prefab in the hierarchy. 
  
- - Note the Configuration of the Button (script)'s OnClick to execute PickUp method:  AddItem( )
+ - Note the Configuration of the Button (script)'s OnClick() to execute PickUp method:  AddItem( ) as displayed in the inspector below.
  
 ![](/assets/Screen Shot 2019-04-08 at 3.26.05 PM.png)
 
 
 ###PickUp-Item: UI-Image
-Child of the BtnAddDiamond, 
+
+Child of the BtnAddDiamond 
+
 Configured as shown below: with a **PickUp Script component,**  where the **ItemInstance: item** has been populated with a ScriptableObject of an Item child-class: (Gem, Potion ScriptableObjects included with [InventorySystem scripts](https://kdoore.gitbooks.io/cs-2335/content/project-2-dictionaries-to-store-data/inventory-scriptableobject/overview.html#unity-package-with-updated-code-files))
 
 ![](/assets/Screen Shot 2019-04-12 at 2.55.35 PM.png)
