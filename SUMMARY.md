@@ -75,9 +75,12 @@
 
 ## MiniGame\_v2 - Simplified Version
 
+* [Simplified Mini-Game](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/simplified-mini-game.md)
+* [PlayerController\_v2 Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontrollerv2-mods.md)
+
 ## Project 3
 
-### Project 3 - Inventory System
+## Project 3 - Inventory System
 
 * [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
   * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
@@ -93,7 +96,6 @@
   * Updated Code:
   * [PickUp, GameData Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods.md)
     * [PlayerController Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontroller.md)
-    * [PlayerController\_v2 Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontrollerv2-mods.md)
   * [Resources: Data Structures](project-2-dictionaries-to-store-data/dictionary-data-structure/saving-data.md)
 
 ## Custom UnityEvents
