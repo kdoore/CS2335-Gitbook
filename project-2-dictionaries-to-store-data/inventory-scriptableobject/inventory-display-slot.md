@@ -16,13 +16,14 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
         - **Optional:  Animator Component** - For Animated UI
 - **4- Slot Prefabs as Children**
     
-** Configure as shown below:**
+** Configure GridLayout as shown below:**
 ![](/assets/Screen Shot 2019-04-08 at 3.23.49 PM.png)
 
-###Slot Prefab
+###Slot Prefab Details:
 ![](/assets/Screen Shot 2019-04-12 at 1.34.30 PM.png)
 - **Slot: UI-Image GameObject**
-    - Top Level ++UI-Image*, //sets slot's background color   
+    - Top Level: UI-Image, //sets slot's background color
+        - Has Slot.cs script-component   
     
 
   - **2-Child GameObjects:**   
@@ -31,8 +32,9 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
     - **  UI-Text: CountText**
         - Shows number of items.  
 
-###Slot: Inspector Panel
-**Configure as Below:**
+###Slot: Inspector-panel Details
+**Configure Slot GameObject, with Slot script-component** as shown below:
+
 ![](/assets/Screen Shot 2019-04-08 at 3.28.00 PM.png)
 
 
