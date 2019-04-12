@@ -6,13 +6,14 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
 
 ##InventoryDisplay Prefab GameObject:
 
-###Images Inventory Display and Slot Prefabs
+###Inventory Display and Slot Prefabs
+![](/assets/Screen Shot 2019-04-08 at 3.14.31 PM.png)
 
 - **PhysicalInventory** is a  UI-Panel GameObject 
-- **Monobehaviour Components** on the PhysicalInventory:  
-    - **Grid-Layout**
-    - **InventoryDisplay.cs**
-    - **Optional:  Animator Component** - For Animated UI
+    - **Monobehaviour Components** on the **PhysicalInventory:**  
+        - **Grid-Layout**
+        - **InventoryDisplay.cs**
+        - **Optional:  Animator Component** - For Animated UI
     
 
 - **Slot: Image GameObject with 2-Child GameObjects:**   
@@ -26,7 +27,7 @@ Link: [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisp
 - **  UI-Text: CountText**
     - Shows number of items.  
 
-![](/assets/Screen Shot 2019-04-08 at 3.14.31 PM.png)
+
 ###Slot Inspector - Slot Script
 ![](/assets/Screen Shot 2019-04-08 at 3.28.00 PM.png)
 
