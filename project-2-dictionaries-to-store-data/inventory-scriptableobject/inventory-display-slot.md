@@ -61,6 +61,7 @@
  - Create additional **BtnAdd - Items** by creating a duplicate of the BtnAddDiamond prefab in the hierarchy. 
  
  - Note the Configuration of the Button (script)'s OnClick to execute PickUp method:  AddItem( )
+ 
 ![](/assets/Screen Shot 2019-04-08 at 3.26.05 PM.png)
 
 
