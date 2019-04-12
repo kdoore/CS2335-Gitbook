@@ -21,8 +21,6 @@
 
 Todo: InventoryDisplay - Prefab
 
-
-
 ### Unity 2D Game Design Tutorials:
 
 [David Arcila - Game Design Resources](https://game-development.zeef.com/david.arcila)
