@@ -9,9 +9,7 @@ After downloading and installing all **InventorySystem** class files in the prev
 ##InventoryDisplay, Slot Prefabs: Installation Details:
 
 ###Inventory Display Prefab - PhysicalInventory:
-The image below shows the hierarchy panel after the Inventory
-
-![](/assets/Screen Shot 2019-04-11 at 5.41.04 PM.png)
+The image below shows the hierarchy, inspector panels after the ISimpleInventory Prefab is added to the Canvas.
 
 - **ISimpleInventory** is a  UI-Panel GameObject 
     - **Monobehaviour Components** on the **PhysicalInventory:**  
@@ -20,7 +18,7 @@ The image below shows the hierarchy panel after the Inventory
         - **Optional:  Animator Component** - For Animated UI
 - **4- Slot Prefabs as Children**
     
-** GridLayout Component, configureation shown below:**
+** GridLayout Component, configuration shown below:**
 
 ![](/assets/Screen Shot 2019-04-13 at 11.43.15 AM.png)
 
