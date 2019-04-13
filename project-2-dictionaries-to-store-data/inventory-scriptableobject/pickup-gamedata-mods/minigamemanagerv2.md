@@ -10,7 +10,6 @@ public enum MiniGame_v2State { idle, active, win, lose }
 
 public class MiniGameManager_v2 : MonoBehaviour
 {
-
     public MiniGame_v2State curGameState = MiniGame_v2State.idle;
     public Button startButton; //set in inspector
     public int winScore = 30;
