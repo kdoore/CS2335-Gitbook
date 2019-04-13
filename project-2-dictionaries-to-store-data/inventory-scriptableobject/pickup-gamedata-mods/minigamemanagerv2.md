@@ -1,5 +1,5 @@
 #MiniGameManager_v2
-This code is used with the simplified MiniGame_v2, provided to students who didn't complete a working version of the MiniGame in Project 1.  
+This code is used with the simplified MiniGame_v2, provided to students who didn't complete a working version of the MiniGame in Project 1, so they can complete a working version of Project 3. 
 
 
 ```java
