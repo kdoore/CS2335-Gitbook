@@ -15,6 +15,9 @@
 - **Resolve all errors** before downloading, installing the MiniGame_v2 Package.
 
 - **Step 4:  Download and install: [Simplified Minigame_v2: UnityPackage](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset) **
+  - **Package Contents:** 
+   - MiniGame_v2 Scene with configured GameObjects 
+   - Custom Scripts:  PlayerController_v2, MiniGameManager_v2
 
 - **Step 5:** Attach **GameData.cs** to empty gameObject: GameManager gameObject in MiniGame_v2.   
 
@@ -22,12 +25,11 @@
 
 - **Step 7**  In MiniGame_v2 Scene:  **Sorting Layers** must be set for all objects with Image/SpriteRenderer Component:  If a gameObject is not visible, set the sorting-layer for that object. 
 
-**Finally:** Try to **play the MiniGame_v2**, verify that the StartButton starts the game, pickUp prefabs are visible, player gameObject can be moved using arrow keys, jump with spacebar.  Verify score and health change when hitting PickUp objects. 
+- **Finally:** Try to **play the MiniGame_v2**. 
 
-**Package Contents:** 
+- **Verify Functionality:** StartButton starts the game, pickUp prefabs are visible, player gameObject can be moved using arrow keys, jump with spacebar.  Verify score and health change when hitting PickUp objects. 
 
- - MiniGame_v2 Scene with configured GameObjects 
- - Custom Scripts:  PlayerController_v2, MiniGameManager_v2
+
  
 
 
