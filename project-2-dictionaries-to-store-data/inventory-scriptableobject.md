@@ -35,8 +35,8 @@ Other MonoBehaviour Required Files:
 
 - **Step 1: BeginScene - GameData issues:**  
     - In BeginScene, make sure the GameManager gameObject has no errors on the GameData.cs script component. (fix: Remove component, re-add)
-    - Create an Inventory ScriptableObject: GameInventory. ( no additional configuration needed for GameInventory )
-    - Add GameInventory to the GameData.cs component on GameManager.
+    - Create an Inventory ScriptableObject: named: GameInventory. ( no additional configuration needed for GameInventory scriptableObject )
+    - Add GameInventory scriptableObject to the GameData.cs component on GameManager.
     
     
 - **Step 2: MiniGameScene - PlayerController issues**
