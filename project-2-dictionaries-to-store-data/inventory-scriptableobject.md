@@ -47,7 +47,9 @@ Other MonoBehaviour Required Files:
     
 - **Step 3: MiniGame-Prefab Asset: PickUp issues:**
     - To edit the PickUp prefabs, drag an instance of each type of prefab into the hierarchy panel so it can be edited. (Unity 2018 - edits can be done in the directly in prefab editor)
-    - For Prefabs with 'Collectible Tag':  make sure the PickUp script component shows no errors. (fix: Remove component, re-add )
+    - For Prefabs with 'Collectible Tag':  make sure the PickUp script component shows no errors. (fix: Remove component, re-add ).
+    - An ItemInstance scriptableObject must be added to the PickUp script.
+        - Create a scriptableObject from the Gem or Potion class and set all values, sprites.
 
 
 ##Inventory Display: Slot, Store, BtnAdd-Item 
