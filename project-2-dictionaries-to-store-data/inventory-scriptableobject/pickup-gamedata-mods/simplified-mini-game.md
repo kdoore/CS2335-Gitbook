@@ -4,14 +4,19 @@ Follow these steps to add required functionality to a backup version of your Pro
 
 **Required Configuration Details:**
 
-- Download and install: [Inventory-System Class Files UnityPackage](https://utdallas.box.com/v/InventorySystem-Code).
+- **Step 1: Download and install**: [Inventory-System Class Files UnityPackage](https://utdallas.box.com/v/InventorySystem-Code).
 
-After downloading and installing the Inventory-System Code, following the instructions on
+After downloading, installing, the Inventory-System Code, you must reconfigure the GameManager gameObject in BeginScene to insure that GameData.cs script component is correctly configured.  
 
-- Download and install: [Simplified Minigame_v2: UnityPackage](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset) 
+- **Step 2:** Create a Inventory ScriptableObject, and attach to GameData in BeginScene.
 
-**Contents:** 
+- **Resolve all errors** before downloading, installing the MiniGame_v2 Package.
 
-Scene with configured GameObjects: MiniGame_v2
-Scripts:  PlayerController_v2, MiniGameManager_v2
+
+- **Step3:**  Download and install: [Simplified Minigame_v2: UnityPackage](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset) 
+
+**Package Contents:** 
+
+ - MiniGame_v2 Scene with configured GameObjects 
+ - Custom Scripts:  PlayerController_v2, MiniGameManager_v2
 
