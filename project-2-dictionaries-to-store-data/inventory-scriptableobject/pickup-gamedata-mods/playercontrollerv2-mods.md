@@ -69,17 +69,16 @@ public class PlayerController_v2 : MonoBehaviour {
     /// </summary>
     /// <param name="collision">Collision.</param>
     //Customize to your game needs
-    private void OnTriggerEnter2D(Collider2D collision)
+  private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Collectible"))
         {
             //update score
             PickUp item = collision.GetComponent<PickUp>();
-
-            //updating the score
             GameData.instanceRef.Add(item.Value); //points for each specific item's value
+
             //add to inventory
-            GameData.instanceRef.AddItem(item.itemInstance);
+            GameData.instanceRef.AddItem(item.itemInstance); //points for each specific item's value
 
             Debug.Log("Hit collectible");
             Destroy(collision.gameObject);
@@ -87,10 +86,20 @@ public class PlayerController_v2 : MonoBehaviour {
         else if (collision.CompareTag("Hazard"))
         {
             //decrease health
-            PickUp item = collision.GetComponent<PickUp>();
-            GameData.instanceRef.TakeDamage(item.Value);
+            //what type of object has tag "Hazard"
+            Hazard hazardItem = collision.GetComponent<Hazard>();
 
-            Debug.Log("Hit Hazard: value is " + item.itemInstance.value);
+            if (hazardItem != null)
+            {
+                GameData.instanceRef.TakeDamage(hazardItem.Value);
+            }
+            else
+            {
+                Debug.Log("Collided with a different type Hazard");
+                //TODO add code for Hazard-type items
+                PickUp item = collision.GetComponent<PickUp>();
+                GameData.instanceRef.TakeDamage(item.Value);
+            }
             Destroy(collision.gameObject);
         }
         else
