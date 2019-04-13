@@ -82,7 +82,7 @@ The Store is a UI-Panel gameObject that has children gameObjects that are BtnAdd
 
 Configured as shown below: with a **PickUp Script-component,**  
 
-The **ItemInstance: item ** has been populated with a ScriptableObject of an Item child-class: (Gem, Potion ScriptableObjects included with [InventorySystem scripts](https://kdoore.gitbooks.io/cs-2335/content/project-2-dictionaries-to-store-data/inventory-scriptableobject/overview.html#unity-package-with-updated-code-files))
+The **ItemInstance: item ** has been populated with a ScriptableObject of an Item child-class: (Gem, Potion ScriptableObjects included with ( [InventorySystem scripts](https://kdoore.gitbooks.io/cs-2335/content/project-2-dictionaries-to-store-data/inventory-scriptableobject/overview.html#unity-package-with-updated-code-files))
 
 ![](/assets/Screen Shot 2019-04-12 at 2.55.35 PM.png)
 
