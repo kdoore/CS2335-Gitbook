@@ -15,13 +15,13 @@ After downloading, installing, the Inventory-System Code, you must reconfigure t
 
 - **Resolve all errors** before downloading, installing the MiniGame_v2 Package.
 
-- **Step 3:**  Download and install: [Simplified Minigame_v2: UnityPackage](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset) 
+- **Step 3:  Download and install: [Simplified Minigame_v2: UnityPackage](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset) **
 
-- **Step 4:** Attach GameData.cs to empty gameObject: GameManager gameObject in MiniGame_v2.   
+- **Step 4:** Attach **GameData.cs** to empty gameObject: GameManager gameObject in MiniGame_v2.   
 
-- **Step 5:** Attach Inventory ScriptableObject (created in step 2) to the GameData component in the MiniGame_v2.
+- **Step 5:** Attach **Inventory ScriptableObject** (created in step 2) to the GameData component in the MiniGame_v2.
 
-- **Step 6**  In MiniGame_v2 Scene:  Sorting Layers must be set for all objects with Image/SpriteRenderer Component:  If a gameObject is not visible, set the sorting-layer for that object. 
+- **Step 6**  In MiniGame_v2 Scene:  **Sorting Layers** must be set for all objects with Image/SpriteRenderer Component:  If a gameObject is not visible, set the sorting-layer for that object. 
 
 
 **Package Contents:** 
