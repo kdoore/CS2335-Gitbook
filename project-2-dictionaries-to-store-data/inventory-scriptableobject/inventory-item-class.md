@@ -2,8 +2,6 @@
 
 The backbone of this Inventory are several classes that inherit from SciptableObject.
 
-
-
 ##Item Class - Abstract Class, ItemInstance Class
 The **Item Class** is an **abstract class**, this means that no Item objects can be created directly of the Item type.  Instead, we must write **concrete classes** that inherit from the Item Class, such as Gem, Potion.  
 

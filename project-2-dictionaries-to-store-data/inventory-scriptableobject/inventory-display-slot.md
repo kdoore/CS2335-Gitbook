@@ -1,5 +1,7 @@
 #Prefabs: Inventory Display, Slot, Store, BtnAdd-Item 
-**Front-End Interaction UI for Inventory**
+The User-Interface uses several Prefabs included in the link below.  Additional configuration steps are required to complete the InventoryDisplay functionality.
+
+After downloading and installing all **InventorySystem** class files in the previous section, and fixing all errors caused by changes to over-written files, then download the following UnityPackage file.
 
 **Download: Unity Package file** with Prefab of UI Inventory Display GameObjects
 **Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
