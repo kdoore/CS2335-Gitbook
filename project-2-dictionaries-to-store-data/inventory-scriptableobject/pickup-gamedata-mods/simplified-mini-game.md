@@ -1,4 +1,4 @@
-#Simplified MiniGame
+#Simplified MiniGame - Starter Code
 
 If you did not submit a working MiniGame for Project 1, then follow these steps to add required functionality to a **backup version of your Project 2 Unity project.**  You will modify this simplified MiniGame, to complete Project 3. 
 
