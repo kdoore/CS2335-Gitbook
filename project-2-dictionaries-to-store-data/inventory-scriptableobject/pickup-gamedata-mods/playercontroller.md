@@ -21,13 +21,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PlayerController : MonoBehaviour {
 public enum HeroState { idle, walk, jump, dead }
 private Rigidbody2D rb2D; //declare the variable
 public float forceX = 50f; //this is probably too small
 private bool facingRight;
-
 
 public bool grounded; //tracks if player is touching ground
 private bool jump; //has jump key (spacebar been pressed - last)
@@ -35,7 +33,6 @@ public Transform groundCheck; //set in inspector, (add child to player - empty g
 public LayerMask groundLayer; //set in inspector
 public float groundCheckRadius = 0.2f; //modify as needed
 public float jumpForce = 8f; //modify as needed
-
 
 private Animator animator;
 
