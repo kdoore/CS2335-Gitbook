@@ -95,7 +95,7 @@
   * [Resources: Data Structures](project-2-dictionaries-to-store-data/dictionary-data-structure/saving-data.md)
   * [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
     * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
-  * [ScriptableObjects](scriptableobjects.md)
+    * [ScriptableObjects](scriptableobjects.md)
 
 ## Custom UnityEvents
 
