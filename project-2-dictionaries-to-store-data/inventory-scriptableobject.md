@@ -1,4 +1,4 @@
-#Inventory System using ScriptableObjects
+****#Inventory System using ScriptableObjects
 
 **Download:** The code for these classes is included in the Inventory System Code package. [Download Link: Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code)
  _Updated Apr 10, 2019_
@@ -56,15 +56,16 @@ Other MonoBehaviour Required Files:
 ![](/assets/Screen Shot 2019-04-13 at 3.53.50 PM.png)
 
 ##Inventory Display: Slot, Store, BtnAdd-Item 
-After completing install, and configuration of InventorySystem files from the UnityPackage listed above, then you can download and install the UnityPackage that includes the UI elements.
 
-**Do not install the package below until you have completed reconfiguration for Inventory-System, detailed above. **
+See details for downloading and installing InventoryDisplay Unity Package. **[Configuration Details for the InventoryDisplay Package](https://kdoore.gitbooks.io/cs-2335/content/project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.html)**
+
+After completing install and configuration of InventorySystem files from the UnityPackage listed above, then you can download and install the UnityPackage that includes the UI elements.
+
+**Do not install the package, linked below, until you have completed reconfiguration for Inventory-System, detailed above. **
 
 **Download: Unity Package file** with Prefab of UI Inventory Display GameObjects
 
 **Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
-
-[Configuration Details for the InventoryDisplay](https://kdoore.gitbooks.io/cs-2335/content/project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.html)
 
 ###Inventory System: Reference Tutorials
 
