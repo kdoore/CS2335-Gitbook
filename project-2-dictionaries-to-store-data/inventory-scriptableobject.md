@@ -43,10 +43,13 @@ _Updated Apr 10, 2019_
 - PlayerController.cs
 - PickUp.cs
 
-**InventorySystem Included Files:**
+**InventorySystem Package Included Files:**
+**Overwrite of Existing Files**
 - GameData.cs
 - PlayerController.cs
 - PickUp.cs
+
+**New files: InventorySystem**
 - Item.cs
 - Gem.cs
 - Potion.cs
