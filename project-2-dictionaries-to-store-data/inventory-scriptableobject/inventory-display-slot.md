@@ -6,7 +6,7 @@ After downloading and installing all **InventorySystem** class files in the prev
 **Download: Unity Package file** with Prefab of UI Inventory Display GameObjects
 **Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
-##InventoryDisplay and Slot Prefab GameObjects:
+##InventoryDisplay and Slot Prefab GameObjects Installation Details:
 
 ###Inventory Display Prefab - PhysicalInventory:
 ![](/assets/Screen Shot 2019-04-08 at 3.14.31 PM.png)
