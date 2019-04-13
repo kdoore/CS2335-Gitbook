@@ -1,4 +1,4 @@
-#PickUp, GameData, PlayerController Mods
+#PickUp, GameData Modifications
 
 The following scripts contain updated code required for integrating the new GameData Inventory inventory, from the new Inventory System.  
 
