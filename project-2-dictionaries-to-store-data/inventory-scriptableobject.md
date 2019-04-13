@@ -28,9 +28,16 @@ Other MonoBehaviour Required Files:
 - **PickUp**: MonoBehaviour
 
 
-**IMPORTANT:** Importing this package will overwrite all of the existing files listed directly above. 
+**IMPORTANT:** Importing this package will overwrite all of the existing files listed directly above, you will need to fix some minor issues detailed in the next section.
 
-**Changes are required to reconfigure GameObjects in BeginScene, MiniGameScene, and Asset Prefabs: PickUp.**  Due to changes in GameData.cs, PlayerController.cs, and PickUp.cs.  
+###Fix Unity Errors due to changes in GameData, PlayerController, PickUp classes.
+**Important: several changes are required to reconfigure GameObjects in BeginScene, MiniGameScene, and Asset Prefabs: PickUp.**  
+    - **Step 1: BeginScene - GameData issues**
+    
+    
+    - **Step 2: MiniGameScene - PlayerController issues**
+    
+    - **Step 3: PickUp Prefab issues:**
 
 
 ##Inventory Display: Slot, Store, BtnAdd-Item 
