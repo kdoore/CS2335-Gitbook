@@ -8,19 +8,19 @@
 
 - **Step 1: Download and install Inventory-System Code: [Inventory-System Class Files UnityPackage](https://utdallas.box.com/v/InventorySystem-Code). **
 
-After downloading, installing, the Inventory-System Code, you must reconfigure the GameManager gameObject in BeginScene to insure that GameData.cs script component is attached. correctly configured.  
+- **Step 2: **After downloading, installing, the Inventory-System Code, you must reconfigure the GameManager gameObject in BeginScene to insure that GameData.cs script component is attached. correctly configured.  
 
-- **Step 2:** Create a **Inventory ScriptableObject**, and attach to GameData in BeginScene. (See additional details)
+- **Step 3:** Create a **Inventory ScriptableObject**, and **Attach to GameData in BeginScene**. (See additional details)
 
 - **Resolve all errors** before downloading, installing the MiniGame_v2 Package.
 
-- **Step 3:  Download and install: [Simplified Minigame_v2: UnityPackage](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset) **
+- **Step 4:  Download and install: [Simplified Minigame_v2: UnityPackage](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset) **
 
-- **Step 4:** Attach **GameData.cs** to empty gameObject: GameManager gameObject in MiniGame_v2.   
+- **Step 5:** Attach **GameData.cs** to empty gameObject: GameManager gameObject in MiniGame_v2.   
 
-- **Step 5:** Attach **Inventory ScriptableObject** (created in step 2) to the GameData component in the MiniGame_v2.
+- **Step 6:** Attach **Inventory ScriptableObject** (created in step 2) to the GameData component in the MiniGame_v2.
 
-- **Step 6**  In MiniGame_v2 Scene:  **Sorting Layers** must be set for all objects with Image/SpriteRenderer Component:  If a gameObject is not visible, set the sorting-layer for that object. 
+- **Step 7**  In MiniGame_v2 Scene:  **Sorting Layers** must be set for all objects with Image/SpriteRenderer Component:  If a gameObject is not visible, set the sorting-layer for that object. 
 
 **Finally:** Try to **play the MiniGame_v2**, verify that the StartButton starts the game, pickUp prefabs are visible, player gameObject can be moved using arrow keys, jump with spacebar.  Verify score and health change when hitting PickUp objects. 
 
