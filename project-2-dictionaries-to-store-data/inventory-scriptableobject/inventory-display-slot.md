@@ -10,7 +10,7 @@ After downloading and installing all **[InventorySystem](/project-2-dictionaries
 
 ##InventoryDisplay, Slot Prefabs: Installation Details:
 
-###Inventory Display Prefab - PhysicalInventory:
+###Inventory Display Prefab - ISimpleInventory:
 The image below shows the hierarchy, inspector panels after the ISimpleInventory Prefab is added to the Canvas.
 
 - **ISimpleInventory** is a  UI-Panel GameObject 
@@ -30,7 +30,6 @@ The image below shows the hierarchy, inspector panels after the ISimpleInventory
     - Top Level: UI-Image, //sets slot's background color
         - Has Slot.cs script-component   
     
-
   - **2-Child GameObjects:**   
    - **UI-Image: SlotImage** 
         - Populate with test image, set color to Clear (transparent) 
@@ -38,17 +37,22 @@ The image below shows the hierarchy, inspector panels after the ISimpleInventory
         - Shows number of items.  
 
 ###Slot: Inspector-panel Details
-**Configure Slot GameObject, with Slot script-component** as shown below:
+**Slot GameObject, with Slot script-component configuration** as shown below: 
 
 ![](/assets/Screen Shot 2019-04-08 at 3.28.00 PM.png)
 
 
-#Store-UI-SelectItems: 
+#Store-UI-SelectItems:
+The Store-UI-SelectItems Prefab must be created by each student.  The images below show details of the GameObject hierarchy and inspector panel of the top-level UI-Panel.
+
+The Store is a UI-Panel gameObject that has children gameObjects that are BtnAdd-Item objects.  The BtnAddDiamond prefab was included in the package file.  
+
+
 ![](/assets/Screen Shot 2019-04-12 at 2.22.09 PM.png)
 
 ![](/assets/Screen Shot 2019-04-12 at 2.42.24 PM.png)
 
-**Create a UI Panel:** Store-UI-SelectItems (with Children)
+- **Step 1: Create a UI Panel:** Store-UI-SelectItems (with Children). Adjust: Rect-Transform to determine size, anchors to fit your project. 
  - Component: Horizontal LayoutGroup (see image below to configure)
  
  
