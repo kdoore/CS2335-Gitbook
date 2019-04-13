@@ -80,14 +80,14 @@
 
 ## Project 3
 
-## Project 3 - Inventory System
+## Inventory System
 
-* [Inventory-ScriptableObject](project-2-dictionaries-to-store-data/inventory-scriptableobject.md)
+* [Inventory-System](project-2-dictionaries-to-store-data/inventory-scriptableobject.md)
   * [Overview-Diagrams](project-2-dictionaries-to-store-data/inventory-scriptableobject/overview.md)
-  * [Item, Gem, Potion Classes](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-item-class.md)
-  * [Inventory Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-class.md)
+   * [Item, Gem, Potion Classes](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-item-class.md)
+   * [Inventory Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-class.md)
   * [InventoryDisplay, Slot UI](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md)
-    * [InventoryDisplay Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/inventorydisplay-class.md)
+   * [InventoryDisplay Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/inventorydisplay-class.md)
     * [Slot Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/slot-class.md)
     * [Hazard Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/hazard-class.md)
   * [Modifications to GameData, PickUp, PlayerController](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods.md)
