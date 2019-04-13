@@ -60,7 +60,7 @@ The Store is a UI-Panel gameObject that has children gameObjects that are BtnAdd
 
 **Child GameObjects:**
 - UI-Text: StoreTitle
-- BtnAddDiamond - PreFab, to Select PickUp-Items (see details below)
+- BtnAddDiamond - PreFab provides button-click event to select PickUp-Items, to be added to the Inventory-System. (see details below)
 
 ###BtnAddDiamond Prefab:  
 
@@ -75,7 +75,7 @@ The Store is a UI-Panel gameObject that has children gameObjects that are BtnAdd
 ![](/assets/Screen Shot 2019-04-08 at 3.26.05 PM.png)
 
 
-###PickUp-Item: UI-Image
+###PickUp-Item:  UI-Image with PickUp script.
 
 - Child of the BtnAddDiamond
 - Component: PickUp Script 
