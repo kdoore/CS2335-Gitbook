@@ -57,20 +57,20 @@ bool jumpPressed = Input.GetButtonDown("Jump"); //spacebar was last key pressed
 
 if (jumpPressed)
 {
-jump = true;
+    jump = true;
 }
 else
 {
-jump = false;
+    jump = false;
 }
 
 if ( isWalking){
 
 if( inputX > 0 && !facingRight){
-Flip();
+    Flip();
 }
 else if(inputX < 0 && facingRight){
-Flip();
+    Flip();
 }
 rb2D.velocity = new Vector2(0, rb2D.velocity.y);
 rb2D.AddForce(new Vector2(inputX * forceX , 0));
@@ -98,41 +98,40 @@ rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse); //add force as i
 //Customize to your game needs
 private void OnTriggerEnter2D(Collider2D collision)
 {
-if (collision.CompareTag("Collectible"))
-{
-//update score
-PickUp item = collision.GetComponent<PickUp>();
+    if (collision.CompareTag("Collectible"))
+    {
+    //update score
+    PickUp item = collision.GetComponent<PickUp>();
 
-//update score
-GameData.instanceRef.Add(item.Value); //points for each specific item's value
+    //update score
+    GameData.instanceRef.Add(item.Value); //points for each     specific item's value
 
-//add to inventory
-GameData.instanceRef.AddItem(item.itemInstance);
+    //add to inventory
+    GameData.instanceRef.AddItem(item.itemInstance);
 
-Debug.Log("Hit collectible");
-Destroy(collision.gameObject);
-}
-else if (collision.CompareTag("Hazard"))
-{
-//decrease health
-PickUp item = collision.GetComponent<PickUp>();
-GameData.instanceRef.TakeDamage(item.Value);
+    Debug.Log("Hit collectible");
+    Destroy(collision.gameObject);
+    }
+    else if (collision.CompareTag("Hazard"))
+    {
+    //decrease health
+    PickUp item = collision.GetComponent<PickUp>();
+    GameData.instanceRef.TakeDamage(item.Value);
 
-Debug.Log("Hit Hazard: value is " + item.itemInstance.value);
-Destroy(collision.gameObject);
-}
-else
-{
-Debug.Log("Hit Something Else");
-}
+    Debug.Log("Hit Hazard: value is " + item.itemInstance.value);
+    Destroy(collision.gameObject);
+    }
+    else
+    {
+    Debug.Log("Hit Something Else");
+    }
 } //end function
 
 private void Flip(){
-facingRight = !facingRight; //toggle this value
-Vector3 theScale = transform.localScale;
-theScale.x *= -1; //we have changed the value
-transform.localScale = theScale;
-
+    facingRight = !facingRight; //toggle this value
+    Vector3 theScale = transform.localScale;
+    theScale.x *= -1; //we have changed the value
+    transform.localScale = theScale;
 }
 
 } //end Class
