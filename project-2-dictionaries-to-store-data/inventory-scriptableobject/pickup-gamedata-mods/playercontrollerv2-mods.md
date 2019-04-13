@@ -1,6 +1,6 @@
 #PlayerController_v2 Mods
 
-Below is the updated code, so that it works with the new GameData Inventory for the simplified PlayerController_v2 script included with the simplified MiniGame provided here: 
+Below is the updated code designed to work with new versions of GameData that includes logic for the Inventory System for the simplified PlayerController_v2 script included with the simplified MiniGame provided here: 
 
 THIS IS CODE FOR PlayerController_v2, don't use this if you have PlayerController.cs, because this version does not include the animator logic.
 
