@@ -1,6 +1,9 @@
 #Inventory System using ScriptableObjects
 
+###Download, Install Inventory-System Code in Unity Package
 **Download:** The code for these classes is included in the Inventory System Code package. [Download Link: Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code)
+
+**IMPORTANT:** Importing this package will overwrite all of the existing files listed below, you will need to fix some minor issues detailed in the section below.
  
  _Updated Apr 10, 2019_
 
@@ -28,8 +31,6 @@ Other MonoBehaviour Required Files:
 - **PlayerController**: MonoBehaviour
 - **PickUp**: MonoBehaviour
 
-
-**IMPORTANT:** Importing this package will overwrite all of the existing files listed directly above, you will need to fix some minor issues detailed in the next section.
 
 ###Fix Unity Errors due to changes in GameData, PlayerController, PickUp classes.
 **Important: several changes are required to re-configure GameObjects in BeginScene, MiniGameScene, and Asset Prefabs: PickUp.**  
