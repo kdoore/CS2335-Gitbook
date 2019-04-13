@@ -50,7 +50,10 @@ Other MonoBehaviour Required Files:
     - For Prefabs with 'Collectible Tag':  make sure the PickUp script component shows no errors. (fix: Remove component, re-add ).
     - An ItemInstance scriptableObject must be added to the PickUp script.
         - Create a scriptableObject from the Gem or Potion class and set all values, sprites.
-
+        - Add the scriptableObject to the PickUp's Item field as shown in images below.
+         
+![](/assets/Screen Shot 2019-04-13 at 3.54.56 PM.png)
+![](/assets/Screen Shot 2019-04-13 at 3.53.50 PM.png)
 
 ##Inventory Display: Slot, Store, BtnAdd-Item 
 After completing install, and configuration of InventorySystem files from the UnityPackage listed above, then you can download and install the UnityPackage that includes the UI elements.
