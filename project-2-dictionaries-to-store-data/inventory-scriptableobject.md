@@ -41,9 +41,10 @@ Other MonoBehaviour Required Files:
     
 - **Step 2: MiniGameScene - PlayerController issues**
     - In the MiniGame, Select the Player gameObject, make sure the PlayerController script has no errors. (fix: Remove component, re-add)
-    - Reconfigure PlayerController script - Add 
+    - Reconfigure PlayerController script - Reset GroundCheck by selecting the GroundCheck empty gameObject.
+    - Reconfigure PlayerController script LayerMask: Ground
     
-- **Step 3: PickUp Prefab issues:**
+- **Step 3: MiniGame: PickUp Prefab issues:**
 
 
 ##Inventory Display: Slot, Store, BtnAdd-Item 
