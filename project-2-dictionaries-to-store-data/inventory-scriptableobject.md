@@ -24,9 +24,7 @@ Other Required Files:
 
 Modified files:
 - **GameData**: MonoBehaviour
-
 - **PlayerController**: MonoBehaviour
-
 - **PickUp**: MonoBehaviour
 
 ###Download Unity Package with Updated Code files:
@@ -59,7 +57,7 @@ _Updated Apr 10, 2019_
 - Hazard.cs
 
 ###Prefabs: Inventory Display, Slot, Store, BtnAdd-Item 
-After completing install of InventorySystem files from the UnityPackage listed above, then you can download and install the UnityPackage that includes the UI elements.
+After completing install, and configuration of InventorySystem files from the UnityPackage listed above, then you can download and install the UnityPackage that includes the UI elements.
 
 **Do not install the package below until you have completed reconfiguration for Inventory-System, detailed above. **
 
