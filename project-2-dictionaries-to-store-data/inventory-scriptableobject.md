@@ -34,12 +34,7 @@ _Updated Apr 10, 2019_
 
 **IMPORTANT:** Importing this package will overwrite all of your existing files listed below. 
 
-**Changes will be required to reconfigure gameObjects in BeginScene, and MiniGameScene, and MiniGame PickUp Prefabs which use GameData.cs, PlayerController.cs, and PickUp.cs.  **
-
-**You may choose not to import the following items, and instead, paste the updated code into your scripts:**
-- GameData.cs,
-- PlayerController.cs
-- PickUp.cs
+**Changes are required to reconfigure GameObjects in BeginScene, MiniGameScene, and Asset Prefabs: PickUp.**  Due to changes in GameData.cs, PlayerController.cs, and PickUp.cs.  
 
 **InventorySystem Package Included Files:**
 **Overwrite of Existing Files**
@@ -62,6 +57,7 @@ After completing install, and configuration of InventorySystem files from the Un
 **Do not install the package below until you have completed reconfiguration for Inventory-System, detailed above. **
 
 **Download: Unity Package file** with Prefab of UI Inventory Display GameObjects
+
 **Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
 [Configuration Details for the InventoryDisplay](https://kdoore.gitbooks.io/cs-2335/content/project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.html)
