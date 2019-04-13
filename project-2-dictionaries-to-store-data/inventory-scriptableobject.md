@@ -32,8 +32,8 @@ Other MonoBehaviour Required Files:
 
 ###Fix Unity Errors due to changes in GameData, PlayerController, PickUp classes.
 **Important: several changes are required to reconfigure GameObjects in BeginScene, MiniGameScene, and Asset Prefabs: PickUp.**  
+
     - **Step 1: BeginScene - GameData issues**
-    
     
     - **Step 2: MiniGameScene - PlayerController issues**
     
