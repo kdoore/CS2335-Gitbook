@@ -18,11 +18,11 @@ The code for these classes is included in the Inventory System Code package. [Do
 - class **InventoryDisplay**: MonoBehaviour
 - class **Slot**: MonoBehaviour, IPointerClickHandler
 
-Other Required Files:
+Other MonoBehaviour Required Files:
 - class **Hazard**: MonoBehaviour
 
 
-Modified files:
+**Modified, Existing files:**
 - **GameData**: MonoBehaviour
 - **PlayerController**: MonoBehaviour
 - **PickUp**: MonoBehaviour
