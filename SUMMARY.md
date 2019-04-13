@@ -82,9 +82,6 @@
 
 ## Project 3 - Inventory System
 
-* [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
-  * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
-  * [GameData - With Unity Event](project-3/gamedata-with-unityevent.md)
 * [Inventory-ScriptableObject](project-2-dictionaries-to-store-data/inventory-scriptableobject.md)
   * [Overview-Diagrams](project-2-dictionaries-to-store-data/inventory-scriptableobject/overview.md)
   * [Item, Gem, Potion Classes](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-item-class.md)
@@ -97,6 +94,8 @@
   * [PickUp, GameData Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods.md)
     * [PlayerController Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontroller.md)
   * [Resources: Data Structures](project-2-dictionaries-to-store-data/dictionary-data-structure/saving-data.md)
+  * [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
+    * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
 
 ## Custom UnityEvents
 
