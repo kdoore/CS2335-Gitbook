@@ -1,6 +1,6 @@
 #Simplified MiniGame - Starter Code 
 
- If you did not submit a working MiniGame for Project 1, then you can follow these steps to add required functionality of simplified minigame for Project 3.   
+ If you did not submit a working MiniGame for Project 1, then you can follow these steps to add required functionality of simplified minigame for Project 3.   This version of the MiniGame does not have Spawner, ResultsPanel, or animation logic for the Player 
 
 **Required Configuration Steps, Details:**
 
