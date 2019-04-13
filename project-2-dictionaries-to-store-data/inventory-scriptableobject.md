@@ -2,8 +2,7 @@
 
 The **Inventory System** uses the following Classes:
 
-The code for these classes is included in the Inventory System Code package. [Download Link: Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code)
-
+The code for these classes is included in the Inventory System Code package. [Download Link: Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code) _Updated Apr 10, 2019_
 
 **ScriptableObject Classes - Data-Model**
 - **abstract class Item**: ScriptableObject
@@ -27,31 +26,13 @@ Other MonoBehaviour Required Files:
 - **PlayerController**: MonoBehaviour
 - **PickUp**: MonoBehaviour
 
-###Download Unity Package with Updated Code files:
-_Updated Apr 10, 2019_
 
-[Download Link: Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code)
-
-**IMPORTANT:** Importing this package will overwrite all of your existing files listed below. 
+**IMPORTANT:** Importing this package will overwrite all of the existing files listed directly above. 
 
 **Changes are required to reconfigure GameObjects in BeginScene, MiniGameScene, and Asset Prefabs: PickUp.**  Due to changes in GameData.cs, PlayerController.cs, and PickUp.cs.  
 
-**InventorySystem Package Included Files:**
-**Overwrite of Existing Files**
-- GameData.cs
-- PlayerController.cs
-- PickUp.cs
 
-**New files: InventorySystem**
-- Item.cs
-- Gem.cs
-- Potion.cs
-- Inventory.cs
-- InventoryDisplay.cs
-- Slot.cs
-- Hazard.cs
-
-###Prefabs: Inventory Display, Slot, Store, BtnAdd-Item 
+##Inventory Display: Slot, Store, BtnAdd-Item 
 After completing install, and configuration of InventorySystem files from the UnityPackage listed above, then you can download and install the UnityPackage that includes the UI elements.
 
 **Do not install the package below until you have completed reconfiguration for Inventory-System, detailed above. **
