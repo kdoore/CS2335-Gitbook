@@ -1,8 +1,9 @@
 #Inventory System using ScriptableObjects
 
-The **Inventory System** uses the following Classes:
+**Download:** The code for these classes is included in the Inventory System Code package. [Download Link: Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code)
+ _Updated Apr 10, 2019_
 
-The code for these classes is included in the Inventory System Code package. [Download Link: Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code) _Updated Apr 10, 2019_
+The **Inventory System** uses the following Classes:
 
 **ScriptableObject Classes - Data-Model**
 - **abstract class Item**: ScriptableObject
