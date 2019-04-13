@@ -1,4 +1,5 @@
 #MiniGameManager_v2
+This code is used with the simplified MiniGame_v2, provided to students who didn't complete a working version of the MiniGame in Project 1.  
 
 
 ```java
@@ -6,7 +7,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum MiniGame_v2State { idle, active, win, lose }
-
 
 public class MiniGameManager_v2 : MonoBehaviour
 {
@@ -52,7 +52,6 @@ public class MiniGameManager_v2 : MonoBehaviour
     {
         startButton.gameObject.SetActive(true); //set gameObject with Button Component to active
     }
-
 
     /// <summary>
     /// starts game.
