@@ -1,9 +1,9 @@
 #Inventory Display Prefabs 
 The Inventory-System's user-interface uses several prefab UI gameObjects that are included in the download link below.  Additional configuration steps are required to complete the InventoryDisplay functionality, instructions are provided along with images below.
 
- - **Step 1: Important, Make sure that the Inventory-System code has been installed prior to installing the InventoryDisplay**, because the InventoryDisplay requires class code in the InventorySystem code files.
+ - **Step 1: Important, Make sure that the Inventory-System code has been installed prior to installing the InventoryDisplay**, because the InventoryDisplay requires class code in the InventorySystem code files. 
 
-After downloading and installing all **[InventorySystem](/project-2-dictionaries-to-store-data/inventory-scriptableobject.md)** class files. Fix any errors / issues caused by downloading the InventorySystem files. Then proceed with download / install of the InventoryDisplay UnityPackage file.
+After downloading and installing all **[InventorySystem](/project-2-dictionaries-to-store-data/inventory-scriptableobject.md)** class files. Fix any errors / issues caused by downloading the InventorySystem files. Then proceed with download / install of the InventoryDisplay UnityPackage file.  Follow steps in **[InventorySystem](/project-2-dictionaries-to-store-data/inventory-scriptableobject.md)**  gitbook page to resolve issues. 
 
 -  **Step 2: Download Unity Package file with Prefabs** of UI Inventory Display GameObjects
 **Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
