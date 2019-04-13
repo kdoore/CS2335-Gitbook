@@ -6,21 +6,23 @@ After downloading and installing all **InventorySystem** class files in the prev
 **Download: Unity Package file** with Prefab of UI Inventory Display GameObjects
 **Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
-##InventoryDisplay and Slot Prefab GameObjects Installation Details:
+##InventoryDisplay, Slot Prefabs: Installation Details:
 
 ###Inventory Display Prefab - PhysicalInventory:
-![](/assets/Screen Shot 2019-04-08 at 3.14.31 PM.png)
+The image below shows the hierarchy panel after the Inventory
 
-- **PhysicalInventory** is a  UI-Panel GameObject 
+![](/assets/Screen Shot 2019-04-11 at 5.41.04 PM.png)
+
+- **ISimpleInventory** is a  UI-Panel GameObject 
     - **Monobehaviour Components** on the **PhysicalInventory:**  
         - **Grid-Layout**
         - **InventoryDisplay.cs**
         - **Optional:  Animator Component** - For Animated UI
 - **4- Slot Prefabs as Children**
     
-** Configure GridLayout Component as shown below:**
+** GridLayout Component, configureation shown below:**
 
-![](/assets/Screen Shot 2019-04-08 at 3.23.49 PM.png)
+![](/assets/Screen Shot 2019-04-13 at 11.43.15 AM.png)
 
 ###Slot Prefab Details:
 ![](/assets/Screen Shot 2019-04-12 at 1.34.30 PM.png)
