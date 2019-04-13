@@ -31,7 +31,7 @@ Other MonoBehaviour Required Files:
 **IMPORTANT:** Importing this package will overwrite all of the existing files listed directly above, you will need to fix some minor issues detailed in the next section.
 
 ###Fix Unity Errors due to changes in GameData, PlayerController, PickUp classes.
-**Important: several changes are required to reconfigure GameObjects in BeginScene, MiniGameScene, and Asset Prefabs: PickUp.**  
+**Important: several changes are required to re-configure GameObjects in BeginScene, MiniGameScene, and Asset Prefabs: PickUp.**  
 
 - **Step 1: BeginScene - GameData issues:**  
     - In BeginScene, make sure the GameManager gameObject has no errors on the GameData.cs script component. (fix: Remove component, re-add)
@@ -44,7 +44,10 @@ Other MonoBehaviour Required Files:
     - Reconfigure PlayerController script - Reset GroundCheck by selecting the GroundCheck empty gameObject.
     - Reconfigure PlayerController script LayerMask: Ground
     
-- **Step 3: MiniGame: PickUp Prefab issues:**
+    
+- **Step 3: MiniGame-Prefab Asset: PickUp issues:**
+    - To edit the PickUp prefabs, drag an instance of each type of prefab into the hierarchy panel so it can be edited. (Unity 2018 - edits can be done in the directly in prefab editor)
+    - For Prefabs with 'Collectible Tag':  make sure the PickUp script component shows no errors. (fix: Remove component, re-add )
 
 
 ##Inventory Display: Slot, Store, BtnAdd-Item 
