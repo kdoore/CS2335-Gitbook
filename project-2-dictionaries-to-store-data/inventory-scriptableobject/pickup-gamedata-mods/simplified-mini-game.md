@@ -22,7 +22,7 @@ After downloading, installing, the Inventory-System Code, you must reconfigure t
 
 - **Step 6**  In MiniGame_v2 Scene:  **Sorting Layers** must be set for all objects with Image/SpriteRenderer Component:  If a gameObject is not visible, set the sorting-layer for that object. 
 
-Try to play the MiniGame_v2, verify that the StartButton starts the game, pickUp prefabs are visible, player gameObject can be moved using arrow keys, jump with spacebar.  Verify score and health change when hitting PickUp objects
+**Finally:** Try to **play the MiniGame_v2**, verify that the StartButton starts the game, pickUp prefabs are visible, player gameObject can be moved using arrow keys, jump with spacebar.  Verify score and health change when hitting PickUp objects. 
 
 **Package Contents:** 
 
