@@ -1,8 +1,8 @@
-#Simplified MiniGame - Starter Code
+#Simplified MiniGame - Starter Code 
 
-If you did not submit a working MiniGame for Project 1, then follow these steps to add required functionality of simplified minigame for Project 3.  
+**If you did not submit a working MiniGame for Project 1, then you can follow these steps to add required functionality of simplified minigame for Project 3.  **
 
-**Required Configuration Details:**
+**Required Configuration Steps, Details:**
 
 - **Start:** Create a **backup version of your Project 2 Unity project.**  You will modify this simplified MiniGame, to complete Project 3. 
 
@@ -10,7 +10,7 @@ If you did not submit a working MiniGame for Project 1, then follow these steps 
 
 After downloading, installing, the Inventory-System Code, you must reconfigure the GameManager gameObject in BeginScene to insure that GameData.cs script component is attached. correctly configured.  
 
-- **Step 2:** Create a **Inventory ScriptableObject**, and attach to GameData in BeginScene.
+- **Step 2:** Create a **Inventory ScriptableObject**, and attach to GameData in BeginScene. (See additional details)
 
 - **Resolve all errors** before downloading, installing the MiniGame_v2 Package.
 
