@@ -97,35 +97,43 @@ void FixedUpdate () {
 /// <param name="collision">Collision.</param>
 //Customize to your game needs
 private void OnTriggerEnter2D(Collider2D collision)
-{
-    if (collision.CompareTag("Collectible"))
     {
-        
-        PickUp item = collision.GetComponent<PickUp>();
+        if (collision.CompareTag("Collectible"))
+        {
+            //update score
+            PickUp item = collision.GetComponent<PickUp>();
+            GameData.instanceRef.Add(item.Value); //points for each specific item's value
 
-        //update score
-        GameData.instanceRef.Add(item.Value); //points for each     specific item's value
+            //add to inventory
+            GameData.instanceRef.AddItem(item.itemInstance); //points for each specific item's value
 
-        //add to inventory
-        GameData.instanceRef.AddItem(item.itemInstance);
-
-        Debug.Log("Hit collectible");
-        Destroy(collision.gameObject);
+            Debug.Log("Hit collectible");
+            Destroy(collision.gameObject);
         }
-    else if (collision.CompareTag("Hazard"))
-    {
-        //decrease health
-        PickUp item = collision.GetComponent<PickUp>();
-        GameData.instanceRef.TakeDamage(item.Value);
+        else if (collision.CompareTag("Hazard"))
+        {
+            //decrease health
+            //what type of object has tag "Hazard"
+            Hazard hazardItem = collision.GetComponent<Hazard>();
 
-        Debug.Log("Hit Hazard: value is " + item.itemInstance.value);
-        Destroy(collision.gameObject);
+            if (hazardItem != null)
+            {
+            GameData.instanceRef.TakeDamage(hazardItem.Value);
+            }
+            else
+            {
+                Debug.Log("Collided with a different type Hazard");
+                //TODO add code for Hazard-type items
+                PickUp item = collision.GetComponent<PickUp>();
+                GameData.instanceRef.TakeDamage(item.Value);
+            }
+            Destroy(collision.gameObject);
         }
         else
         {
-        Debug.Log("Hit Something Else");
+            Debug.Log("Hit Something Else");
         }
-} //end function
+    } //end function
 
 private void Flip(){
     facingRight = !facingRight; //toggle this value
