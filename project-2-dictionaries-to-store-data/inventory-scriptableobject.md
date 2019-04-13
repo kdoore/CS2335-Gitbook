@@ -33,11 +33,17 @@ Other MonoBehaviour Required Files:
 ###Fix Unity Errors due to changes in GameData, PlayerController, PickUp classes.
 **Important: several changes are required to reconfigure GameObjects in BeginScene, MiniGameScene, and Asset Prefabs: PickUp.**  
 
-    - **Step 1: BeginScene - GameData issues**
+- **Step 1: BeginScene - GameData issues:**  
+    - In BeginScene, make sure the GameManager gameObject has no errors on the GameData.cs script component. (fix: Remove component, re-add)
+    - Create an Inventory ScriptableObject: GameInventory. ( no additional configuration needed for GameInventory )
+    - Add GameInventory to the GameData.cs component on GameManager.
     
-    - **Step 2: MiniGameScene - PlayerController issues**
     
-    - **Step 3: PickUp Prefab issues:**
+- **Step 2: MiniGameScene - PlayerController issues**
+    - In the MiniGame, Select the Player gameObject, make sure the PlayerController script has no errors. (fix: Remove component, re-add)
+    - Reconfigure PlayerController script - Add 
+    
+- **Step 3: PickUp Prefab issues:**
 
 
 ##Inventory Display: Slot, Store, BtnAdd-Item 
