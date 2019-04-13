@@ -23,10 +23,7 @@ using UnityEngine;
 
 
 public class PlayerController : MonoBehaviour {
-
 public enum HeroState { idle, walk, jump, dead }
-
-
 private Rigidbody2D rb2D; //declare the variable
 public float forceX = 50f; //this is probably too small
 private bool facingRight;
