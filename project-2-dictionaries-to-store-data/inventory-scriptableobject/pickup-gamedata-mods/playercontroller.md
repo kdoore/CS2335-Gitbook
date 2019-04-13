@@ -12,7 +12,7 @@ Added: `GameData.InstanceRef.AddItem( item.itemInstance )`, so that we add the i
 
 Modified:  Code when gameObject has tag 'Hazard'
 
-###Code - PlayerController
+###Code - PlayerController.cs
 
 **Updated Apr 13, 2019**
 
