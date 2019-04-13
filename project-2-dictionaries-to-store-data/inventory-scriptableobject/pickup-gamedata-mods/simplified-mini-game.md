@@ -17,7 +17,18 @@ After downloading, installing, the Inventory-System Code, you must reconfigure t
 
 - **Step 4:** Attach GameData.cs to GameManager gameObject in MiniGame_v2.   
 
-- **Step 5**  
+- **Step 5**  In MiniGame_v2 Scene:  Sorting Layers must be set for all objects with Image/SpriteRenderer Component:  If a gameObject is not visible, set the sorting-layer for that object. 
+
+- **Step 6** In MiniGameStateManager_v2.cs:  Modify the code in Start() so that it matches the code below.
+
+
+```java
+//MiniGameStateManager_v2, Replace Start() with Code below.
+
+void Start()    {        startButton.onClick.AddListener(StartGame);        StartGame(); //calls method with StartGame Logic        //StartGame() disables startButton, so enable it at start        startButton.gameObject.SetActive(true); //displays the StartButton     }
+
+```
+
 
 **Package Contents:** 
 
