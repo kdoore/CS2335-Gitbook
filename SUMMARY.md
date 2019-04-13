@@ -98,27 +98,21 @@
     * [ScriptableObjects](scriptableobjects.md)
 
 ## Custom UnityEvents
+* [Event Publishing Patterns](observer_pattern.md)
+* [Custom Event Messaging](custom_event_messaging.md)
+
 
 ## Mini-Game\_Proj3
 
 * [MiniGame-Overview-Proj3](minigame_-_view.md)
 * [Level Manager-Events](level-manager-in-class.md)
-* [Event Publishing Patterns](observer_pattern.md)
-* [Custom Event Messaging](custom_event_messaging.md)
+
 
 ## Project 4
 
 * [Project 4 - Code](project-3-code.md)
   * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
-  * [PickUp](project-3/pickup.md)
-  * [PlayerController](project-3/playercontroller.md)
-  * [Simple Spawner](project-3/simple-spawner.md)
-  * [Spawner with UnityEvent](project-3/spawner-with-unityevent.md)
-  * [LevelManager](project-3/levelmanager.md)
-  * [PlayerStatsDisplay](project-3/playerstatsdisplay.md)
-  * [InventoryDisplay](project-3/inventorydisplay.md)
-  * [EndScene / EndState ](project-3/endscene-endstate.md)
-* [Class-Code Examples](class-code-examples.md)
+  * [Class-Code Examples](class-code-examples.md)
 
 ## Optional, Supplemental Content
 
