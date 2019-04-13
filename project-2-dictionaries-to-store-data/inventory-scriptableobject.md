@@ -29,7 +29,7 @@ Modified files:
 
 - **PickUp**: MonoBehaviour
 
-###Unity Package with Updated Code files:
+###Download Unity Package with Updated Code files:
 _Updated Apr 10, 2019_
 
 [Download Link: Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code)
