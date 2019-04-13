@@ -10,7 +10,7 @@ We needed to change the code that accessed the value field of each PickUp, since
 We also added the gameData method: `AddItem( item.itemInstance )`, so that we add the item to the GameData inventory.
 ###Code - PlayerController
 
-**updated Apr 10, 2019**
+**Updated Apr 13, 2019**
 
 ```java
 using System.Collections;

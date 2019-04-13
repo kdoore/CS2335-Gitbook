@@ -2,7 +2,9 @@
 
 Below is the updated code designed to work with new versions of GameData that includes logic for the Inventory System for the simplified PlayerController_v2 script included with the simplified MiniGame provided here: 
 
-THIS IS CODE FOR PlayerController_v2, don't use this if you have PlayerController.cs, because this version does not include the animator logic.
+Note: Code for **PlayerController_v2**, don't use this if you have PlayerController.cs, because this version does not include the animator logic.
+
+**Updated Apr 13, 2019**
 
 ```java
 
@@ -96,9 +98,11 @@ public class PlayerController_v2 : MonoBehaviour {
             else
             {
                 Debug.Log("Collided with a different type Hazard");
-                //TODO add code for Hazard-type items
-                PickUp item = collision.GetComponent<PickUp>();
+               
+            PickUp item = collision.GetComponent<PickUp>();
+            if( item != null){
                 GameData.instanceRef.TakeDamage(item.Value);
+                }
             }
             Destroy(collision.gameObject);
         }
