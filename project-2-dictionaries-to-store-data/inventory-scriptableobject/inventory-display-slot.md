@@ -19,6 +19,7 @@ After downloading and installing all **InventorySystem** class files in the prev
 - **4- Slot Prefabs as Children**
     
 ** Configure GridLayout Component as shown below:**
+
 ![](/assets/Screen Shot 2019-04-08 at 3.23.49 PM.png)
 
 ###Slot Prefab Details:
