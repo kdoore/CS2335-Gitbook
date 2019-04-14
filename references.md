@@ -9,6 +9,10 @@
 
 [Visual Guide To Level Design - For Multiplayer Games: Bobby Ross](http://bobbyross.com/blog/2014/6/29/the-visual-guide-for-multiplayer-level-design)
 
+[Game Mechanics - Advanced Game Design: Dormans, Adams. 2012](https://learning.oreilly.com/library/view/advanced-game-design/9780134668185/)
+
+Advanced Game Design, Sellers, Michael
+
 ###Unity Package Files - Used in Course:
  Updated Apr. 12 2019 
 [ScriptableObject Factory - original link - Lior Tal](https://www.dropbox.com/s/vdvf5si4go3jnb5/ScriptableObjectFactory.unitypackage)
