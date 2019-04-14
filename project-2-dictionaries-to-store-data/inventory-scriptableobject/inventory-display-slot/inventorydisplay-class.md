@@ -1,5 +1,16 @@
 #InventoryDisplay Class
 
+
+###Optional: UI-Animation logic.
+The image below shows code logic in the InventoryDisplay.cs script for having the InventoryDisplay's visibility animated when the user presses the `Tab` key.
+
+If you choose not to implement the UI-Animation, then you'll
+want to disable or remove the code associated with the Animator component - othewise you will have errors when the the InventoryDisplay is included in a scene. 
+
+![](/assets/Screen Shot 2019-04-12 at 9.59.47 AM.png)
+
+
+
 **updated Apr 10, 2019**
 
 ```java
@@ -21,7 +32,7 @@ public class InventoryDisplay : MonoBehaviour
     public Dictionary<ItemInstance, int> itemCounts =  new Dictionary<ItemInstance, int>(); //dictionary
     public const int NumSlots = 4;
     public int displayedRowPointer=0; //
-    Animator visibilityAnimator;
+    Animator visibilityAnimator;  //disable if not using UI-animation
     public bool isVisible = false;
 
         // Use this for initialization
