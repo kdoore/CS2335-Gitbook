@@ -7,6 +7,8 @@
 4. Norton, Terry. [Learning C\# by Developing Games with Unity 3D Beginner's Guide, Terry Norton](http://www.amazon.com/Learning-Developing-Games-Unity-Beginners-ebook/dp/B00FFUL9LY).  PacktPub eBook Version
 5.  Unity Programming Patterns: [http://www.habrador.com/tutorials/programming-patterns/](http://www.habrador.com/tutorials/programming-patterns/)
 
+[Visual Guide To Level Design - For Multiplayer Games: Bobby Ross](http://bobbyross.com/blog/2014/6/29/the-visual-guide-for-multiplayer-level-design)
+
 ###Unity Package Files - Used in Course:
  Updated Apr. 12 2019 
 [ScriptableObject Factory - original link - Lior Tal](https://www.dropbox.com/s/vdvf5si4go3jnb5/ScriptableObjectFactory.unitypackage)
