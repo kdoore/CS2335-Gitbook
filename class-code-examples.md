@@ -1,6 +1,6 @@
 #Class Code - Examples - Project 3 
 
-Code for Project 3 includes logic for InventorySystem, Custom Unity Events.
+Link to Code for Project 3 includes logic for InventorySystem, Custom Unity Events.
 
 ###Player, GameData, PickUp
 
