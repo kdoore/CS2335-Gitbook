@@ -1,23 +1,18 @@
-#Inventory Display Prefabs 
+#Inventory Display Prefabs - Installation Details 
 The Inventory-System's user-interface uses several prefab UI gameObjects that are included in the download link below.  Additional configuration steps are required to complete the InventoryDisplay functionality, instructions are provided along with images below.
 
- - **Step 1: Important, Make sure that the Inventory-System code has been installed prior to installing the InventoryDisplay**, because the InventoryDisplay requires class code in the InventorySystem code files. 
+ - **Step 1: Important**, Make sure that the **Inventory-System** code has been installed **prior to installing the InventoryDisplay Prefabs**, because the InventoryDisplay requires code in the InventorySystem class files. 
 
 After downloading and installing all **[InventorySystem](/project-2-dictionaries-to-store-data/inventory-scriptableobject.md)** class files. Fix any errors / issues caused by downloading the InventorySystem files. Then proceed with download / install of the InventoryDisplay UnityPackage file.  Follow steps in **[InventorySystem](/project-2-dictionaries-to-store-data/inventory-scriptableobject.md)**  gitbook page to resolve issues. 
 
--  **Step 2: Download InvenetoryDisplay Unity Package**  with Prefabs UI Inventory Display GameObjects
+-  **Step 2: Download, Import custom package: InvenetoryDisplay Unity-Package**  with Prefabs UI Inventory Display GameObjects
 **Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
-- **Step 3: Drag InventoryDisplay prefab onto the Canvas** GameObject in the Hierarchy for a scene (the EndScene is a good scene to use ) 
+- **Step 3: Drag InventoryDisplay prefab onto the Canvas GameObject** in the Hierarchy in a scene (the EndScene is a good scene to use ) 
 
 - **Step 4: Add InventoryDisplay.cs script to Prefab** by adding and configuring the InventoryDisplay.cs script component. 
 
 - **Step 5: Configure or disable Animation** for the InventoryDisplay.
-
-
-
-
-
 
 ##InventoryDisplay, Slot Prefabs: Installation Details:
 

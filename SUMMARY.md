@@ -155,4 +155,5 @@
   * [UML Class Diagram](uml_class_diagram.md)
 * [Glossary](GLOSSARY.md)
 * [References and Resources](references.md)
+* [Random Thoughts](random-collections-of-thoughts.md)
 

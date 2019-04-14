@@ -1,8 +1,7 @@
 #InventoryDisplay Class
 
-
 ###UI-Animation logic - Configure or Disable.
-The image below shows code logic in the InventoryDisplay.cs script for having the InventoryDisplay's visibility animated when the user presses the `Tab` key.
+The image below shows code logic in the InventoryDisplay.cs script that animates visibility of the InventoryDisplay when the user presses the `Tab` key. You'll need to decide to configure the animation or you must delete the associated code, or you will have errors in scenes where you use the InventoryDisplay.
 
 **To Disable Animation**
 If you choose not to implement the UI-Animation, then you'll
@@ -38,7 +37,7 @@ public class InventoryDisplay : MonoBehaviour
     private Inventory inventory;
     public Dictionary<ItemInstance, int> itemCounts =  new Dictionary<ItemInstance, int>(); //dictionary
     public const int NumSlots = 4;
-    public int displayedRowPointer=0; //
+    public int displayedRowPointer=0; // not used, can be removed
     Animator visibilityAnimator;  //disable if not using UI-animation
     public bool isVisible = false;
 
