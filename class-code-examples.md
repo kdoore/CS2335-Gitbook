@@ -1,4 +1,4 @@
-#Class Code - Examples - Project 3 - Spring 2018
+#Class Code - Examples - Project 3 
 
 Code for Project 3 includes logic for InventorySystem, Custom Unity Events.
 
