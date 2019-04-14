@@ -1,15 +1,22 @@
 #InventoryDisplay Class
 
 
-###Optional: UI-Animation logic.
+###UI-Animation logic - Configure or Disable.
 The image below shows code logic in the InventoryDisplay.cs script for having the InventoryDisplay's visibility animated when the user presses the `Tab` key.
 
+**To Disable Animation**
 If you choose not to implement the UI-Animation, then you'll
 want to disable or remove the code associated with the Animator component - othewise you will have errors when the the InventoryDisplay is included in a scene. 
 
+Delete the Animator declaration line of code in order to identify and disable all code associated with Animator functionality
+
+```java 
+Animator visibilityAnimator; ////DELETE THIS LINE - To disable animator
+```
+
+**Delete or disable code with errors, shown highlighted in image below**
+
 ![](/assets/Screen Shot 2019-04-12 at 9.59.47 AM.png)
-
-
 
 **updated Apr 10, 2019**
 
