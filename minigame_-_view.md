@@ -1,18 +1,21 @@
-# MiniGame
+#Enhanced MiniGame Project 3
 
+**Optional Simplified MiniGame S19 - Unity Package**
+The link below provides a UnityPackage with a simplified MiniGame Scene and scripts for completing Project 3, for students that weren't able to have a workable project for Project 1.
 [Spring 2019 - UnityPackage with Simplified MiniGameScene](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset)
+
 
 ### Dynamic Interaction with Goals and Consequences
 
 The MiniGame is the portion of the Project where the player can dynamically interact with a player sprite, with some objective or goal that will result in some game-data generated that will have consequential impact on the player experience in subsequent scenes in the game.
 
-In order to design the logic of the mini-game, it will be good to take a high-level view of  several concepts that will impact our code design.  What are new script components that represent important concepts for the mini-game design.
+In order to enhance the logic of the mini-game, it will be good to take a high-level view of  several concepts that will impact our code design.  What are new script components that represent important concepts for the mini-game design.
 
 # Mini-Game Script Components
 
 1. **GameData** - what is the data generated in the game and how do we store the data so we can access it in subsequent game scenes.
 
-   * Some C# Data Structures:  
+   * Some C# Data Structures: ( Used in InventorySystem) 
      * List&lt; T &gt;  
      * Dictionary &lt; TKey, TValue &gt; 
 
@@ -24,7 +27,7 @@ In order to design the logic of the mini-game, it will be good to take a high-le
      * Spawner - when / what prefabs are spawned
      * BackgroundImage - modify sprite when level changes
 
-### MiniGame.cs
+### MiniGState.cs Implements IStateBase Interface
 
 Since we've been using our State.cs classes for implementing the logic for the game UI, for now we can say that the MiniGame.cs class, which Implements IStateBase and  represents the current activeState for our State-Machine Framework.
 

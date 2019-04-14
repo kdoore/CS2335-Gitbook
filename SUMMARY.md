@@ -106,7 +106,6 @@
 ## Mini-Game\_Proj3
 
 * [MiniGame-Overview-Proj3](minigame_-_view.md)
-* Spawner Options
 * [Level Manager-Events](level-manager-in-class.md)
   * [LevelManager Class](level-manager-in-class/levelmanager-class.md)
 
