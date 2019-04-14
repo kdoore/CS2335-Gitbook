@@ -8,10 +8,15 @@ After downloading and installing all **[InventorySystem](/project-2-dictionaries
 -  **Step 2: Download Unity Package file with Prefabs** of UI Inventory Display GameObjects
 **Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
+- **Step 3: Configure InventoryDisplay Prefab** by adding and configuring the InventoryDisplay.cs script component.
+
+- **Step 4:  **
+
+
 ##InventoryDisplay, Slot Prefabs: Installation Details:
 
 ###Inventory Display Prefab - ISimpleInventory:
-The image below shows the hierarchy, inspector panels after the ISimpleInventory Prefab is added to the Canvas.
+The image below shows the hierarchy, inspector panels after the ISimpleInventory Prefab has been dragged to the Canvas GameObject in the Hierarchy within a scene. 
 
 - **ISimpleInventory** is a  UI-Panel GameObject 
     - **Monobehaviour Components** on the **PhysicalInventory:**  
