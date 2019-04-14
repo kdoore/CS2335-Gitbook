@@ -12,7 +12,7 @@ After downloading and installing all **[InventorySystem](/project-2-dictionaries
 
 - **Step 4: Add InventoryDisplay.cs script to Prefab** by adding and configuring the InventoryDisplay.cs script component. 
 
-- **Step 5: Configure or disable Animation for the InventoryDisplay.**
+- **Step 5: Configure or disable Animation** for the InventoryDisplay.
 
 
 
