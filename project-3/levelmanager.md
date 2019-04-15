@@ -9,17 +9,13 @@ You will need to add some new code to GameData, this is specified in the LevelMa
 These are changes that should be incorporated into GameData prior to working with the Level Manager
     - levelScore variable
     - onPlayerDataUpdate, UnityEvent
-    - inventory - Dictionary<PickupType, int>
+    - inventory - Inventory scriptableObject
     - LevelScore, Health properties
     - Update Add( )
         - increment levelScore with points
         - invoke onPlayerDataUpdate
     - Update TakeDamage( )
         - invoke onPlayerDataUpdate
-
-
-[See updated version of GameData](/project-3/gamedata-with-unityevent.md)
-
 
 ###LevelManager Code 
 You will need to modify this code to match your game's logic
