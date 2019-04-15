@@ -22,7 +22,7 @@ You will need to modify this code to match your game's logic
 
 
 ```java
-//updated 4/12/18  3:35pm
+//last updated 4/12/18 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
