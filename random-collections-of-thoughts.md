@@ -6,7 +6,7 @@ Carl Jung
 
 Hero's Journey: Joseph Campbell
 
-Hero's Journey:  Will Craig
+Hero's Journey - Inner Journey:  Will Craig
 
 
 [Michael Sellers, Advanced Game Design](https://learning.oreilly.com/library/view/advanced-game-design/9780134668185/ch2.xhtml#ch2)
