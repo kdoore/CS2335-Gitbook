@@ -1,4 +1,6 @@
 #Timer
+The code below is an example of a simple countdown timer.  The code would need modified to be useful in the LevelManager.  
+
 
 //Code from:[https://www.noob-programmer.com/unity3d/countdown-timer/ ](https://www.noob-programmer.com/unity3d/countdown-timer/)
 
@@ -12,6 +14,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Threading;
 public class CountDown : MonoBehaviour {
+  
   public int timeLeft = 60; //Seconds Overall
   public Text countdown; //UI Text Object
   void Start () {
