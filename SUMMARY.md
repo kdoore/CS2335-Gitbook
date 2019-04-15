@@ -106,7 +106,7 @@
 ## Mini-Game\_Proj3
 
 * [MiniGame-Overview-Proj3](minigame_-_view.md)
-* [Level Manager-Events](level-manager-in-class.md)
+* [Level Manager-Overview](level-manager-in-class.md)
   * [LevelManager Class](level-manager-in-class/levelmanager-class.md)
 * [Timer](timer.md)
 

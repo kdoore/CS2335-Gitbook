@@ -47,7 +47,7 @@ public class LevelManager : MonoBehaviour {
 
     LevelState curLevel;   // FSM - 1 unit of memory
    
-    int maxLevelScore; //when to change levels
+    int maxLevelScore=30; //when to change levels, set in inspector
     
     //UI game Objects - LevelValue, StartGameButton, StartGamePanel
     Button startGameButton;
@@ -62,8 +62,7 @@ public class LevelManager : MonoBehaviour {
     void Start()
     {
         curLevel = LevelState.start;
-        maxLevelScore = 30;
-        
+   
         //comment out UI elements below if not using a start-screen / start-button
         startGameButton = GameObject.Find("StartGameButton").GetComponent<Button>();
         startGameButton.onClick.AddListener(NextLevel);
@@ -173,14 +172,8 @@ public class LevelManager : MonoBehaviour {
 
     void miniGameOver()
     {
-        //make sure to include: Using UnityEngine.SceneManagement at top of script
-        //this will change Scene/State
-        ///ADD Additional logic to determine which scene to go to 
-        /// based on win or lose condition
-        ///StateManager code will cause an error when not started from BeginScene, error can be ignored for testing
-        //
-        SceneManager.LoadScene("EndScene");  //actual scene name
-        StateManager.instanceRef.SwitchState(new EndState());  //create new state, pass to StateManager     
+    GameData.instanceRef.LevelScore = 0;
+          //invoke custom event to notify MiniGState where sceneChange logic an be executed.  
     }
 
 	
