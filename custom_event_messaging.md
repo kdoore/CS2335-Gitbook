@@ -4,34 +4,41 @@ In our game application, we have several situations where it will be beneficial 
 ##GameData Custom Events:
 Since our GameData object instance is persisted across all scenes, then we need to be careful not to create code dependencies between GameData and objects that are only in one specific scene.  The GameData object needs to communicate with other gameObjects, but the best way to have communication to reduce tight coupling between objects is to use custom events.  GameData will be an event publisher, objects within a scene can subscribe to GameData events, to recieve notification (and event data) when events have occurred.  
 
-onPlayerdataUpdate , onMiniGameEnd, onInventoryUpdate
+onPlayerdataUpdate,  onInventoryUpdate
 
 
 
 ###Use custom events to implement logic for the end of the MiniGame:
 
-
-What is the event that causes the mini-game to end?   Player’s score has changed?, or some player collision event? (for a positive or destructive object).  If that’s the case, then when that event happens we need to be able to check whether player-data has reached some threshold value which will cause the level to end, for example, maybe the player has died based on a collision with a destructive force.   
-
-So, for previous Scene/State changes, we know that it’s easy to execute: Application.LoadLevel(nextScene)….from anywhere in our code, but we said that we want to keep the logic for changing scenes in an organized structure - we want to have that change-scene logic associated with the StateManager object instance and probably with the current activeState: MiniGameState object instance.  
+What is the event that causes the mini-game to end?   Player’s score has changed?, or some player collision event? (for a positive or destructive object).  If that’s the case, then when that event happens we need to be able to check whether player-data has reached some threshold value which will cause the level to end, for example, maybe the player has died based on a collision with a destructive force.  If the miniGame ends due to a data-changing event, then the onPlayerDataUpdate event in GameData can be used by different objects as notification to check for the end of the miniGame. 
 
 The problem with the current activeState is that we don’t know how to execute a method on an instance of that object since we can’t easily access that object as a component of a gameObject.  
 
-So we have a few options - one option is to create a new method that is part of the StateManager class - because we can easily have a reference to the StateManager object instance, because it’s on the gameObject: gameManager - and it also has a public static instance that we can access independently of the gameObjects.  
 
-### Have MiniGState Subscribe to GameData Event
-MiniGState subscribe to a custom event from GameData - to notify the MiniGState when the MiniGame has ended, so it is time to switch scene /state.
+### Have MiniGState Subscribe to Custom Event onMiniGameEnd
+MiniGState subscribe to a custom event from some other class:  - to notify the MiniGState when the MiniGame has ended, so it is notified it is time to switch scene /state.
 
-We can assume that all information that we need, to determine which is the next state, is stored in GameData….and that we can get that data as part of the We'll assume that the MiniG State object can use gameData information to logically infer what is the next state/scene to go to) 
+We can assume that all information that we need, to determine which is the next state, is stored in GameData….and that we can get that data as part of the We'll assume that the MiniG State object can use gameData information to logically infer what is the next state/scene to go to.  
+
+PlayerController is the first gameObject that has an event that corresponds to the player dying due to a non-data event.  There are at least 2 situations to consider.  1: a data-event has occured, but the playerController must wait until the Animator controller has completed playing a dead animation clip.  2: a non-data event, such as steping into water can cause the player to die.  Because no data is generated, we can't rely on GameData onPlayerDataUpdate to notify other objects.  Instead, we can have the LevelManager subscribe to an onPlayerDied event published by the PlayerController.    
 
 
-###Custom event in GameData: 
+###Custom event in GameData: onPlayerDataUpdate
 ```
 public UnityEvent OnPlayerDataUpdated
 ```
-Then we need a method in gameData, that can be executed when LevelManager has determined the MiniGame has ended - 
 
+###Custom event in Player Controller: onPlayerDied
+```
+public UnityEvent OnPlayerDied
+```
+
+###Custom event in LevelManager:  onMiniGameEnd
 Call this method when the miniGame is over, then onMiniGameEnd event will be broadcast to send notification to subscribing objects.
+```
+public UnityEvent OnMiniGameEnd
+```
+
 
 ```
 //GameData method, will be executed by LevelManager or MiniGameManager code.
