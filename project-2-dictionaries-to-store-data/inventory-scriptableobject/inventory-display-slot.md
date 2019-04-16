@@ -8,7 +8,10 @@ After downloading and installing all **[InventorySystem](/project-2-dictionaries
 -  **Step 2: Download, Import custom package: InvenetoryDisplay Unity-Package**  with Prefabs UI Inventory Display GameObjects
 **Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
-- **Step 3: Drag InventoryDisplay prefab onto the Canvas GameObject** in the Hierarchy in a scene (the EndScene is a good scene to use ) 
+- **Step 3: Drag InventoryDisplay prefab directly onto the Canvas GameObject in the Hierarchy Panel** in the Hierarchy in a scene (the EndScene is a good scene to use ) 
+
+- Important: Make sure you have GameData in the scene.  If you are testing in a scene that isn't BeginScene, then create an empty gameObject: GameManager, add the GameData.cs script, then select the Inventory ScriptableObject to GameData, before testing the InventoryDisplay.
+
 
 - **Step 4: Add InventoryDisplay.cs script to Prefab** by adding and configuring the InventoryDisplay.cs script component. 
 
