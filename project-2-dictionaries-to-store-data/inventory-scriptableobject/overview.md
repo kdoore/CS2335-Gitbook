@@ -11,6 +11,9 @@
 ###Inventory Display, Slot: MonoBehaviour
 ![](/assets/Screen Shot 2019-04-08 at 3.01.00 PM.png)
 
+###ScriptableObject Factory
+[ScriptableObject Factory - box.com](https://utdallas.box.com/shared/static/tjdlm45kuo46dm5rsfcw641mdtpky33s.unitypackage)
+
 
 ##Resources:
 [Inventory Icons by VespaWarrior, on Unity AssetStore](http://www.vespawarrior.com/portfolio/)
