@@ -12,10 +12,11 @@ After downloading and installing all **[InventorySystem](/project-2-dictionaries
 
 - **Important:** Make sure you have **GameData** in the scene.  If you are testing in a scene that isn't BeginScene, then create an empty gameObject: GameManager, add the GameData.cs script, then select the Inventory ScriptableObject to GameData, before testing the InventoryDisplay. **Error will occur when trying to add an item to the Inventory.**
 
-
 - **Step 4: Add InventoryDisplay.cs script to Prefab** by adding and configuring the InventoryDisplay.cs script component. 
 
 - **Step 5: Configure or disable Animation** for the InventoryDisplay.
+
+- **Step 6: Testing: ** Drag BtnAddDiamond prefab directly onto the Canvas in the Hierarchy.  When the scene is played, you should be able to click the prefab to add an item to the inventory.  When the item in the Inventory slot is clicked, the count should go down, and the console should say you are 'Using' the item.  Add code to scripts for specific Use( ) behavior.
 
 ##InventoryDisplay, Slot Prefabs: Installation Details:
 
