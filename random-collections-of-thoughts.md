@@ -17,3 +17,5 @@ Image below from [Michael Sellers, Advanced Game Design](https://learning.oreill
 ![](/assets/Screen Shot 2019-04-14 at 3.31.42 PM.png)
 
 [Empathy, Tribalism, Millennials - NPR article](https://www.npr.org/2019/04/15/712249664/the-end-of-empathy)
+
+[Sophia Construction - Echo Flowers](https://www.echoflowers.org/) Design for Good:  To support families and victims of ME (chronic fatigue) syndrome
