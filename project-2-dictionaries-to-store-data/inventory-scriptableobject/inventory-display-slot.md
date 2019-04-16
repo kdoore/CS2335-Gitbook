@@ -10,7 +10,7 @@ After downloading and installing all **[InventorySystem](/project-2-dictionaries
 
 - **Step 3: Drag InventoryDisplay prefab directly onto the Canvas GameObject in the Hierarchy Panel** in the Hierarchy in a scene (the EndScene is a good scene to use ) 
 
-- Important: Make sure you have GameData in the scene.  If you are testing in a scene that isn't BeginScene, then create an empty gameObject: GameManager, add the GameData.cs script, then select the Inventory ScriptableObject to GameData, before testing the InventoryDisplay.
+- **Important:** Make sure you have **GameData** in the scene.  If you are testing in a scene that isn't BeginScene, then create an empty gameObject: GameManager, add the GameData.cs script, then select the Inventory ScriptableObject to GameData, before testing the InventoryDisplay. **Error will occur when trying to add an item to the Inventory.**
 
 
 - **Step 4: Add InventoryDisplay.cs script to Prefab** by adding and configuring the InventoryDisplay.cs script component. 
