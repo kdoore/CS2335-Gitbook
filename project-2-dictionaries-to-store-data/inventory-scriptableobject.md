@@ -4,6 +4,11 @@
 **Download:** The code for these classes is included in the Inventory System Code package. [Download Link: Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code)
 
 **IMPORTANT:** Importing this package will overwrite all of the existing files listed below, you will need to fix some minor issues detailed in the section below.
+
+You must have the **ScriptableObject Factory** Package Installed:
+[ScriptableObject Factory - box.com](https://utdallas.box.com/shared/static/tjdlm45kuo46dm5rsfcw641mdtpky33s.unitypackage)
+
+
  
  _Updated Apr 10, 2019_
 
