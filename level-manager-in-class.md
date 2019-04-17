@@ -8,10 +8,10 @@ In the code below, the Level Manager is responsible for controlling the Mini\_Ga
 
 Game objects that are inter-dependent with the LevelManager are:
 
-1. Splash Screen - UI Panel with StartMiniGame Button - is hidden when StartGameButton is clicked.
+1. Splash Screen (optional) - UI Panel with StartMiniGame Button - is hidden when StartGameButton is clicked.
 2. Background Image - changed with each level-change
-3. Spawner - start spawning when splash screen start-button is clicked
-4. Spawner - spawn different prefabs depending on the current level
+3. Spawner_L1 - start spawning when splash screen start-button is clicked
+4. Spawner_L2, Spawner_L3 - spawn different prefabs depending on the current level
 5. UI Elements - Level and Score UI displays must be updated to reflect the current Level and the current Score value.
 6. PlayerController - this GameObject will sense collisions with PickUps, this will change the score and the level
 7. GameData - create a new variable levelScore, and a new property: LevelScore, these are changed in GameData when the score is updated.
