@@ -14,4 +14,15 @@ The InventoryDisplay.cs script contains animation logic so the InventoryDisplay 
  
  - **Step 3: Create new Animation Clip** With the ISimple_Inventory gameObject selected in the Hierarchy, in the Animation window, select the button in the middle pane to create an animation clip for this gameObject.
  
- - **Step 4: Add Property** In the lower-left panel for the Animation window, hit the 
+ ![](/assets/Screen Shot 2019-04-17 at 2.03.55 PM.png)
+ 
+ Create First: 1 of 2 AnimationClips
+ ![](/assets/Screen Shot 2019-04-17 at 2.04.54 PM.png)
+ 
+ 
+ 
+ - **Step 4: Add Property** In the lower-left panel for the Animation window, select the Add Property Button, select the AnchoredPosition by selecting the gray-plus sign to the right of that option, see image below:
+ 
+ ![](/assets/Screen Shot 2019-04-17 at 2.09.28 PM.png)
+ 
+ 
