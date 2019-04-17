@@ -1,8 +1,5 @@
 #Level Manager
 
-
-See code in: [LevelManager-Events](/level-manager-in-class.md)
-
 ###GameData -- new code must be incorporated -
 You will need to add some new code to GameData, this is specified in the LevelManager-Events documentation.  It may be easier to simply replace all code in GameData with the code linked below.
 
@@ -25,6 +22,7 @@ You will need to modify this code to match your game's logic
 
 ```java
 //last updated 4/12/18 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

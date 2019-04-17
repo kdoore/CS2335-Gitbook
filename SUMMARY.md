@@ -108,6 +108,7 @@
 * [MiniGame-Overview-Proj3](minigame_-_view.md)
 * [Level Manager-Overview](level-manager-in-class.md)
   * [LevelManager Class](level-manager-in-class/levelmanager-class.md)
+  * [LevelManager](project-3/levelmanager.md)
 * [Timer](timer.md)
 
 ## Project 4
