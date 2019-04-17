@@ -91,6 +91,7 @@
     * [InventoryDisplay Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/inventorydisplay-class.md)
     * [Slot Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/slot-class.md)
     * [Hazard Class](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/hazard-class.md)
+    * [UI-Animation](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/ui-animation.md)
   * [Modifications to GameData, PickUp, PlayerController](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods.md)
     * [PlayerController Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontroller.md)
   * [Resources: Data Structures](project-2-dictionaries-to-store-data/dictionary-data-structure/saving-data.md)
