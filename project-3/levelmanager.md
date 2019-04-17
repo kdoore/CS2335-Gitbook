@@ -11,10 +11,12 @@ These are changes that should be incorporated into GameData prior to working wit
     - onPlayerDataUpdate, UnityEvent
     - inventory - Inventory scriptableObject
     - LevelScore, Health properties
-    - Update Add( )
+    - Event: Add( )
         - increment levelScore with points
         - invoke onPlayerDataUpdate
-    - Update TakeDamage( )
+    - Event: TakeDamage( )
+        - invoke onPlayerDataUpdate
+    - Event: AddItem( )
         - invoke onPlayerDataUpdate
 
 ###LevelManager Code 

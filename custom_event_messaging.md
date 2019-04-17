@@ -4,7 +4,9 @@ In our game application, we have several situations where it will be beneficial 
 ##GameData Custom Events:
 Since our GameData object instance is persisted across all scenes, then we need to be careful not to create code dependencies between GameData and objects that are only in one specific scene.  The GameData object needs to communicate with other gameObjects, but the best way to have communication to reduce tight coupling between objects is to use custom events.  GameData will be an event publisher, objects within a scene can subscribe to GameData events, to recieve notification (and event data) when events have occurred.  
 
-onPlayerdataUpdate,  onInventoryUpdate
+onPlayerDataUpdate,  onInventoryUpdate, OnPlayerDied, OnMiniGameOver
+
+For the events above, can you identify a likely publisher object.  Can you identify one or more likely subscribers for each message?
 
 
 
