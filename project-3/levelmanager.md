@@ -1,7 +1,7 @@
 #Level Manager
 
-###GameData -- new code must be incorporated -
-You will need to add some new code to GameData, this is specified in the LevelManager-Events documentation.  It may be easier to simply replace all code in GameData with the code linked below.
+###GameData - check for the following updates:
+You may need to add some new code to GameData, this is specified in the LevelManager-Events documentation.  
 
 These are changes that should be incorporated into GameData prior to working with the Level Manager
     - levelScore variable, LevelScore property.
