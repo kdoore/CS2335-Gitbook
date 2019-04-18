@@ -19,8 +19,6 @@ The InventoryDisplay.cs script contains animation logic so the InventoryDisplay 
  Create First: 1 of 2 AnimationClips
  ![](/assets/Screen Shot 2019-04-17 at 2.04.54 PM.png)
  
- 
- 
  - **Step 4: Add Property** In the lower-left panel for the Animation window, select the Add Property Button, select the AnchoredPosition by selecting the gray-plus sign to the right of that option, see image below:
  
  ![](/assets/Screen Shot 2019-04-17 at 2.09.28 PM.png)
