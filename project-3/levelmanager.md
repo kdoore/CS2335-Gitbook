@@ -158,6 +158,8 @@ public class LevelManager : MonoBehaviour
         levelText.text = "Level 3";
     }
 
+    //What happens when the MiniGame is over?  
+    //How does a player leave the MiniGameScene?
     void miniGameOver()
     {
         GameData.instanceRef.LevelScore = 0;
