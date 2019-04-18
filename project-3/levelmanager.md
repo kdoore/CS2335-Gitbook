@@ -4,10 +4,12 @@
 You will need to add some new code to GameData, this is specified in the LevelManager-Events documentation.  It may be easier to simply replace all code in GameData with the code linked below.
 
 These are changes that should be incorporated into GameData prior to working with the Level Manager
-    - levelScore variable
+    - levelScore variable, LevelScore property.
     - onPlayerDataUpdate, UnityEvent
     - inventory - Inventory scriptableObject
-    - LevelScore, Health properties
+    - lives, Lives properties?
+    
+- Data-Events: These trigger onPlayerDataUpdate
     - Event: Add( )
         - increment levelScore with points
         - invoke onPlayerDataUpdate
