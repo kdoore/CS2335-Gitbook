@@ -6,11 +6,11 @@ The InventoryDisplay.cs script contains animation logic so the InventoryDisplay 
 
 **Animation Steps:**
 
- - **Step 1: Add Animator Component** to the ISimple_Inventory prefab.: The script already has animation logic included.
+ - **Step 1: Add Animator Component** to the ISimple_Inventory prefab.: The script InventoryDisplay.cs script has animation logic included, so the script does not need to be modified.
  
  ![](/assets/Screen Shot 2019-04-17 at 1.52.58 PM.png)
  
- - **Step 2: Open Animation Window:** Menu>Window>Animation
+ - **Step 2: Open Animation Window:** Menu > Window > Animation (anchor the Animation tab as you desire. In these images, it has been anchored to the bottom panel)
  
  - **Step 3: Create new Animation Clip** With the ISimple_Inventory gameObject selected in the Hierarchy, in the Animation window, select the button in the middle pane to create an animation clip for this gameObject.
  
