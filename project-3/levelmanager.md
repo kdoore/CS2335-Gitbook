@@ -21,75 +21,67 @@ You will need to modify this code to match your game's logic
 
 
 ```java
-//last updated 4/12/18 
+//last updated 4/18/19 
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour {
+public class LevelManager : MonoBehaviour
+{
 
     public enum LevelState
     {
         start,
         level1,
         level2,
-        level3
-        //add more if desired
+        level3,
     }
 
     LevelState curLevel;   // FSM - 1 unit of memory
-   
-    int maxLevelScore=30; //when to change levels, set in inspector
-    
+
+    int maxLevelScore = 30; //when to change levels, set in inspector
+
     //UI game Objects - LevelValue, StartGameButton, StartGamePanel
-    Button startGameButton;
-    CanvasGroup cg;
-    Text levelText;
+    public Button startGameButton;
+    public CanvasGroup cg;
+    public Text levelText;
 
     //references to custom script components
-    Spawner spawner;  //add more spawners here
-    //to start the spawner from LevelManager
+    public Spawner spawner1, spawner2, spawner3;  //add more spawners here
+
+    //GameObject pickupParent1, pickupParent2, pickupParent3;
 
 
     void Start()
     {
         curLevel = LevelState.start;
-   
+
         //comment out UI elements below if not using a start-screen / start-button
-        startGameButton = GameObject.Find("StartGameButton").GetComponent<Button>();
-        startGameButton.onClick.AddListener(NextLevel);
+          startGameButton.onClick.AddListener(NextLevel);
 
-        //Shows Level
-        levelText = GameObject.Find("LevelText").GetComponent<Text>();
-
-        cg = GameObject.Find("StartGamePanel").GetComponent<CanvasGroup>();
+        //make sure Start Panel is showing at start of Scene.
         Utility.ShowCG(cg);
 
-        //initialize other spawners here
-        spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
-
-        ///Update Check to see if level is over when playerDataUpdate event happens
+         ///Update Check to see if level is over when playerDataUpdate event happens
         GameData.instanceRef.onPlayerDataUpdate.AddListener(CheckLevelEnd);
-        
+
         //NextLevel(); //uncomment and use this option if not using StartGamePanel and StartGameButton to start the gameplay.
     }
 
+    /// <summary>
+    /// Checks the level end.
+    /// Checks the data to see if the level has ended
+    /// </summary>
     public void CheckLevelEnd()
     {
         int levelScore = GameData.instanceRef.LevelScore;
-        //Debug.Log("Check if level is over" + levelScore);
+        Debug.Log("Check if level is over " + levelScore);
 
         //Add code here to see if health is <=0
-        
+
 
         //if health is ok, then check if level is over
         if (levelScore >= maxLevelScore)
         { ///level has changed
-          ///reset level value display
+          ///reset levelScore
             GameData.instanceRef.LevelScore = 0;   //reset GameData.LevelScore
             NextLevel();  //go to next level - call FSM
         }
@@ -98,6 +90,9 @@ public class LevelManager : MonoBehaviour {
 
     //This method implements the Finite State Machine to Manage Level Logic. 
     //You will modify this code to correspond to your game's logic
+    //This method is always called when an event has occured to end the level
+    //Event types:  data-centric: Score > LevelScore, health <= 0, Player falls, 
+   
     public void NextLevel()
     {
 
@@ -111,33 +106,32 @@ public class LevelManager : MonoBehaviour {
 
             case LevelState.level1:  //called when in Level1 from checkLevelEnd( ) 
                 curLevel = LevelState.level2; //change level
-
                 loadLevel2();
                 break;
+
             case LevelState.level2: //called when in Level2 from checkLevelEnd( ) 
                 curLevel = LevelState.level3; //change level
-
                 loadLevel3();
                 break;
+
             case LevelState.level3: //called when in Level3 from checkLevelEnd( ) 
-                //ADD logic to determine if it's a winning or losing ending
-                
                 miniGameOver();
                 break;
-            
+
             default:
                 Debug.Log("No match on curLevel");
                 break;
         }
     }
 
-////YOU WILL MODIFY THESE METHODS SO THEY CORRESPOND TO YOUR GAME"S LOGIC
+    ////YOU WILL MODIFY THESE METHODS SO THEY CORRESPOND TO YOUR GAME"S LOGIC
     void loadLevel1()
     {
         //STARTS Gameplay, Spawner, etc
 
         Utility.HideCG(cg); //hide the StartGamePanel and StartGameButton
-        spawner.StartSpawning();  //Make sure to remove this code from Start in the spawner script
+        spawner1.gameObject.SetActive(true);
+        spawner1.StartSpawning();  //Make sure to remove this code from Start in the spawner script
         levelText.text = "Level 1";
     }
 
@@ -145,8 +139,8 @@ public class LevelManager : MonoBehaviour {
     {
         ///change background image?
         ///stop spawning?
-        //spawner.activeSpawning = false;///stops spawning
-        //spawner.DestroyAllSpawnedObjects();
+        spawner1.activeSpawning = false;///stops spawning
+        spawner1.DestroyAllPickups();
         ///change objects getting spawned?
         ///spawner2.StartSpawning();    //start next spawner 
         levelText.text = "Level 2";
@@ -156,24 +150,21 @@ public class LevelManager : MonoBehaviour {
     {
         ///change background image?
         ///change objects getting spawned?
-        ///change background image?
         ///stop spawning?
         //spawner2.activeSpawning = false;///stops spawning
-        //spawner2.DestroyAllSpawnedObjects();
+        //spawner2.DestroyAllPickups();
         ///change objects getting spawned?
         ///spawner3.StartSpawning(); //start next spawner
         levelText.text = "Level 3";
-
     }
 
     void miniGameOver()
     {
-    GameData.instanceRef.LevelScore = 0;
-          //invoke custom event to notify MiniGState where sceneChange logic an be executed.  
+        GameData.instanceRef.LevelScore = 0;
+        //invoke custom event to notify MiniGState where sceneChange logic an be executed.  
     }
 
-	
-}
+}// end class
 
 ```
 
