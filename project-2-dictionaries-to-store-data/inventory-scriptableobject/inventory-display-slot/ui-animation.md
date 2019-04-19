@@ -1,4 +1,4 @@
-###UI-Animation:  InventoryDisplay Prefab
+###UI-Animation:  Create InventoryDisplay Animation
 
 The InventoryDisplay.cs script contains animation logic so the InventoryDisplay prefab: ISimple_Inventory is 'off-screen' when a scene starts, but when the Tab key is pressed, then the prefab moves to it's 'on-screen' position.  
 
