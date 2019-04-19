@@ -40,7 +40,7 @@ From each State node, right click to create a transition arrow to the other stat
  
  ![](/assets/Screen Shot 2019-04-19 at 7.11.36 AM.png)
  
- - **Step 9:  Create Parameter:  Bool IsVisible**
+ - **Step 9:  Create Parameter:  Bool: IsVisible**
  In the left panel of the Animator Controller, create a Parameter: Bool 'IsVisible'.  Then select each transition arrow and configure the following logic in the right side panel: 
  
  Un-check: HasExitTime 
