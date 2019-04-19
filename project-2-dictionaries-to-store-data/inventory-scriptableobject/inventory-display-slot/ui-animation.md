@@ -34,9 +34,24 @@ The InventoryDisplay.cs script contains animation logic so the InventoryDisplay 
 
 - **Step 7: Repeat steps 3-6** to create **HideInventory Animation Clip ** For the HideInventory Animation Clip, move the InventoryDisplay prefab to it's off-screen postion.x to set the keyframes at 0.0;
 
-- **Step 8: Configure Animator Controller.** Open the Animator Window.  After both animation clips have been created, the Animator Component now shows an Animator controller has been created: ISimple_Inventory, and set in the Animator Component.  See Image below.  The image below shows that InventoryHide should be the 'Layer Default State',it should be orange, with a connecting arrow from the Entry state. If this is not the case, right click on the InventoryHide state and select: Set as Layer Default State.
+- **Step 8: Configure Animator Controller.** Open the Animator Window.  After both animation clips have been created, the Animator Component now shows an Animator controller has been created: ISimple_Inventory, and set in the Animator Component.  See Image below.  The image below shows that InventoryHide should be the 'Layer Default State',it should be orange, with a connecting arrow from the Entry state. If this is not the case, right click on the InventoryHide state and select: **Set as Layer Default State**.
+
+From each State node, right click to create a transition arrow to the other state.  
  
  ![](/assets/Screen Shot 2019-04-19 at 7.11.36 AM.png)
+ 
+ - **Step 9:  Create Parameter:  Bool IsVisible**
+ In the left panel of the Animator Controller, create a Parameter: Bool 'IsVisible'.  Then select each transition arrow and configure the following logic in the right side panel: 
+ 
+ Un-check: HasExitTime 
+ InventoryHide -> InventoryShow if IsVisible is true
+ InventoryShow -> InventoryHide if IsVisible is false
+ 
+ - Step 10: Test: Play the Scene, Press the 'Tab' key to switch between showing / hiding the InventoryDisplay Prefab. 
+ 
+ Troubleshooting:  
+ 1. Make sure that the Parameter: IsVisible is spelled the same as within the InventoryDisplay.cs script.
+ 2. Make sure the InventoryDisplay.cs script has been added as a component to the ISimple_Inventory Prefab.
  
  
  
