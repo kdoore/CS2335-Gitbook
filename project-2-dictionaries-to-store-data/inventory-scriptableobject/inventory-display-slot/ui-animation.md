@@ -31,6 +31,12 @@ The InventoryDisplay.cs script contains animation logic so the InventoryDisplay 
  The image below shows that right-clicking on the blue highlighted keyframes at time: 1.00, gives the pop-up window option to delete the final keyframes for this animation. This insures that only the initial position of the InventoryDisplay is used for each animation clip.
  
 ![](/assets/Screen Shot 2019-04-18 at 7.06.35 AM.png)
+
+- **Step 7: Repeat steps 3-6** to create **HideInventory Animation Clip ** For the HideInventory Animation Clip, move the InventoryDisplay prefab to it's off-screen postion.x to set the keyframes at 0.0;
+
+- **Step 8: Configure Animator Controller.** Open the Animator Window.  After both animation clips have been created, the Animator Component now shows an Animator controller has been created: ISimple_Inventory, and set in the Animator Component.  See Image below.  The image below shows that InventoryHide should be the 'Layer Default State',it should be orange, with a connecting arrow from the Entry state. If this is not the case, right click on the InventoryHide state and select: Set as Layer Default State.
+ 
+ ![](/assets/Screen Shot 2019-04-19 at 7.11.36 AM.png)
  
  
  
