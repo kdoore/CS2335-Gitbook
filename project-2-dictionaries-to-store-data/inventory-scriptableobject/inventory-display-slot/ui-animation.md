@@ -47,11 +47,11 @@ From each State node, right click to create a transition arrow to the other stat
  InventoryHide -> InventoryShow if IsVisible is true
  InventoryShow -> InventoryHide if IsVisible is false
  
- - Step 10: Test: Play the Scene, Press the 'Tab' key to switch between showing / hiding the InventoryDisplay Prefab. 
+ - **Step 10: Test: Play the Scene, Press the 'Tab'** key to switch between showing / hiding the InventoryDisplay Prefab. 
  
- Troubleshooting:  
- 1. Make sure that the Parameter: IsVisible is spelled the same as within the InventoryDisplay.cs script.
- 2. Make sure the InventoryDisplay.cs script has been added as a component to the ISimple_Inventory Prefab.
+ **Troubleshooting: ** 
+ 1. Make sure that the Parameter: **IsVisible** is spelled correctly, it must match spelling / capitalization used within the InventoryDisplay.cs script.
+ 2. Make sure the **InventoryDisplay.cs** script has been added as a component to the ISimple_Inventory Prefab.
  
  
  
