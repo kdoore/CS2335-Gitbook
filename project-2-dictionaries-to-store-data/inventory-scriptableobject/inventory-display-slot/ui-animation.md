@@ -19,8 +19,19 @@ The InventoryDisplay.cs script contains animation logic so the InventoryDisplay 
  Create First: 1 of 2 AnimationClips
  ![](/assets/Screen Shot 2019-04-17 at 2.04.54 PM.png)
  
- - **Step 4: Add Property** In the lower-left panel for the Animation window, select the Add Property Button, select the AnchoredPosition by selecting the gray-plus sign to the right of that option, see image below:
+ - **Step 4: Add Property - Anchored Position** In the lower-left panel for the Animation window, select the Add Property Button, select the AnchoredPosition by selecting the gray-plus sign to the right of that option, see image below:
  
  ![](/assets/Screen Shot 2019-04-17 at 2.09.28 PM.png)
+ 
+ - **Step 5: Remove Property: Anchored Position.y ** Select the Anchored Position.y and right-click to select Remove Property, this will insure that only the horizontal position will be animated.  
+ 
+ ![](/assets/Screen Shot 2019-04-18 at 7.03.10 AM.png)
+ 
+ - **Step 6: Remove Keyframes at time: 1.00**
+ The image below shows that right-clicking on the blue highlighted keyframes at time: 1.00, gives the pop-up window option to delete the final keyframes for this animation. This insures that only the initial position of the InventoryDisplay is used for each animation clip.
+ 
+![](/assets/Screen Shot 2019-04-18 at 7.06.35 AM.png)
+ 
+ 
  
  
