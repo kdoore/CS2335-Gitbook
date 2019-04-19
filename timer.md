@@ -5,8 +5,6 @@ The code below is an example of a simple countdown timer.  The code would need m
 //modified ,based on Code from:[https://www.noob-programmer.com/unity3d/countdown-timer/ ](https://www.noob-programmer.com/unity3d/countdown-timer/)
 
 
-
-
 ```java
 using System.Collections;
 using UnityEngine;
