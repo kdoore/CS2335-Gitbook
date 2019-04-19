@@ -1,9 +1,9 @@
-# UML Class Diagram
+# UML Class Diagrams
 
 
-The diagram below shows the Unified Modeling Language model for the classes for the zombie project.  UML class diagrams provide a visual overview of the relationships between classes, interfaces, and the features: variables, properties and methods for each of these classes. 
+The diagrams below shows the Unified Modeling Language Class diagrams for major 'systems' used in the course.  UML class diagrams provide a visual overview of the relationships between classes, interfaces, and the features: variables, properties and methods for each of these classes. 
  
-###StateMachine Framework
+###State Manager: State-Machine Framework
 
 ![](/assets/Screen Shot 2018-02-12 at 3.43.41 PM.png)
 
