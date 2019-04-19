@@ -2,7 +2,7 @@
 
 The InventoryDisplay.cs script contains animation logic so the InventoryDisplay prefab: ISimple_Inventory is 'off-screen' when a scene starts, but when the Tab key is pressed, then the prefab moves to it's 'on-screen' position.  
 
-- **[InventoryDisplay: download, add to Scene, configure:](/project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md)** Once you have the ISimple_Inventory added to the Canvas in a scene, and you've added the InventoryDisplay.cs script to the prefab, and hit 'apply'.  Follow the Animation steps below. 
+- **[InventoryDisplay: download, add to Scene, configure:](/project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md)** Once you have the ISimple_Inventory added to the Canvas in a scene, and you've added the InventoryDisplay.cs script to the prefab, and hit 'apply' to update the prefab, then follow the Animation steps below. 
 
 **Animation Steps:**
 
