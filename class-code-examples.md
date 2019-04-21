@@ -8,7 +8,7 @@ Link to Code for Project 3 includes logic for InventorySystem, Custom Unity Even
 - [PlayerController.cs ](/class-code-examples/playercontrollerv3-mods.md)
 
 **PickUp - updated with InventorySystem**
- - PickUp.cs 
+ - [PickUp.cs ](/class-code-examples/pickup-final.md)
 
 **Hazard - updated with InventorySystem**
  - [Hazard.cs]
