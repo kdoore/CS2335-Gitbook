@@ -111,11 +111,11 @@
   * [LevelManager](project-3/levelmanager.md)
 * [Timer](timer.md)
 
-## Project 4
+## Project 3 - Code
 
-* [Project 4 - Code](project-3-code.md)
-  * [Project 3 - Step - by -Step Guide](project-3/project-3-step-by-step-guide.md)
+* [Project 3 - Code](project-3-code.md)
   * [Class-Code Examples](class-code-examples.md)
+    * [PlayerController\_v3 Mods](class-code-examples/playercontrollerv3-mods.md)
 
 ## Optional, Supplemental Content
 
