@@ -15,7 +15,6 @@ Advanced Game Design, Sellers, Michael
 
 ###Unity Package Files - Used in Course:
  Updated Apr. 12 2019 
-[ScriptableObject Factory - original link - Lior Tal](https://www.dropbox.com/s/vdvf5si4go3jnb5/ScriptableObjectFactory.unitypackage)
 
 [ScriptableObject Factory - box.com](https://utdallas.box.com/shared/static/tjdlm45kuo46dm5rsfcw641mdtpky33s.unitypackage)
 
@@ -23,9 +22,9 @@ Advanced Game Design, Sellers, Michael
 
 [InventorySystem - Updated Code Files: Apr 10,2019](https://utdallas.box.com/v/InventorySystem-Code)
 
-[Simplified MiniGame - Project3](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset)
+[InventoryDisplay Prefab Package S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
-Todo: InventoryDisplay - Prefab
+[Simplified MiniGame - Project3](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset)
 
 ### Unity 2D Game Design Tutorials:
 
