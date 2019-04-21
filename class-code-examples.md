@@ -5,10 +5,10 @@ Link to Code for Project 3 includes logic for InventorySystem, Custom Unity Even
 ###Player, GameData, PickUp
 
 **Player - Updated with InventorySystem and LevelManager - UnityEvents**
-- [PlayerController.cs] 
+- [PlayerController.cs ](/class-code-examples/playercontrollerv3-mods.md)
 
 **PickUp - updated with InventorySystem**
- - [PickUp.cs] 
+ - PickUp.cs 
 
 **Hazard - updated with InventorySystem**
  - [Hazard.cs]

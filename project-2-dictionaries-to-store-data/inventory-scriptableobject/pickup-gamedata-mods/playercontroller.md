@@ -1,8 +1,9 @@
-#Updated Player-Controller Class
+#Updated Player-Controller Class 
 
 **Code Updated Apr 13, 2019**
 
 ###Updated code for PlayerController
+See final modifications which include UnityEvents used in LevelManager and Collisions with Water, Exit, and AudioClips
 
 **Modified Content: in onTriggerEnter( )**
 

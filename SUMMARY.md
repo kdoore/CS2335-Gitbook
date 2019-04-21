@@ -111,7 +111,7 @@
   * [LevelManager](project-3/levelmanager.md)
 * [Timer](timer.md)
 
-## Project 3 - Code
+## Project 3 - Code Mods
 
 * [Project 3 - Code](project-3-code.md)
   * [Class-Code Examples](class-code-examples.md)
