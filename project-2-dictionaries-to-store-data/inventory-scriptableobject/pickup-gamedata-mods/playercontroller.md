@@ -3,7 +3,9 @@
 **Code Updated Apr 13, 2019**
 
 ###Updated code for PlayerController
-See final modifications which include UnityEvents used in LevelManager and Collisions with Water, Exit, and AudioClips
+
+- See final modifications which include UnityEvents used in LevelManager and Collisions with Water, Exit, and AudioClips
+ - [ Final PlayerController_v3](/class-code-examples/playercontrollerv3-mods.md)
 
 **Modified Content: in onTriggerEnter( )**
 
