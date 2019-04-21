@@ -1,13 +1,24 @@
 #PlayerController updated for Project 3
 
-Includes Updates for:  InventorySystem, LevelManager, with Audio clips played if colliding with Pickup with correct audioSource.  Includes logic for falling into water.
+Includes Updates for:  InventorySystem, LevelManager.
+
+OnTriggerEnter contains code to test for collisions with GameObjects with Collider2D set as 'Trigger' based on several different gameObject Tag types:
+ - Collectible
+     - Requires PickUp.cs
+ - Hazard
+     - Requires either PickUp.cs or Hazard.cs
+ - Water
+     - Invokes: onPlayerDied
+ - Exit
+     - Invokes: onReachedExit
+
+Audio clips played if colliding with Pickup with correct audioSource.  ( Collectible, Water )
+
 
 Contains custom Events, LevelManager is the subscriber object:  
 - onPlayerReachedExit
 - onPlayerDied 
  
- 
-OnTriggerEnter contains code to test for collisions based on several different gameObject Tag types:
 
 
 ```java
