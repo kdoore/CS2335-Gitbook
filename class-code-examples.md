@@ -4,19 +4,23 @@ Link to Code for Project 3 includes logic for InventorySystem, Custom Unity Even
 
 ###Player, GameData, PickUp
 
-**Player**
+**Player - Updated with InventorySystem and LevelManager - UnityEvents**
 - [PlayerController.cs] 
 
-**PickUp**
+**PickUp - updated with InventorySystem**
  - [PickUp.cs] 
 
-**GameData**
+**Hazard - updated with InventorySystem**
+ - [Hazard.cs]
+ 
+**GameData - Update with LevelManager**
   - [GameData - with Inventory, UnityEvent ]
 
 **Spawner**
    - [Simplest Spawner] 
-   - [Spawner with List of Prefabs] 
-   -  [Event Driven Spawner] 
    
 **Level Manager**
  - [LevelManager] 
+ 
+ **PlayerStats - must be updated for LevelManager**
+ - [PlayerStats] 
