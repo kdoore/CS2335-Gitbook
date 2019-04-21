@@ -117,6 +117,7 @@
   * [Class-Code Examples](class-code-examples.md)
     * [PlayerController\_v3 Mods](class-code-examples/playercontrollerv3-mods.md)
     * [PickUp, Hazard](class-code-examples/pickup-final.md)
+    * [GameData - Final](class-code-examples/gamedata-final.md)
 
 ## Optional, Supplemental Content
 

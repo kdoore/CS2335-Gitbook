@@ -11,7 +11,7 @@ Link to Code for Project 3 includes logic for InventorySystem, Custom Unity Even
  - [PickUp.cs ](/class-code-examples/pickup-final.md)
 
 **Hazard - updated with InventorySystem**
- - [Hazard.cs]
+ - [Hazard.cs](/class-code-examples/pickup-final.md)
  
 **GameData - Update with LevelManager**
   - [GameData - with Inventory, UnityEvent ]
