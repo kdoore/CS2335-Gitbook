@@ -1,6 +1,8 @@
 #GameData:
 
+Final version of GameData, customize as needed.
 
+_Updated 4/21/2019_
 
 ```java
 
