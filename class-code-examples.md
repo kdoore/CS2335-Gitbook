@@ -24,3 +24,9 @@ Link to Code for Project 3 includes logic for InventorySystem, Custom Unity Even
  
  **PlayerStats - must be updated for LevelManager**
  - [PlayerStats] 
+ 
+ - **CameraFollow Script**
+
+- **ScreenFader Script**
+
+
