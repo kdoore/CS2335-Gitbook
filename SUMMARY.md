@@ -121,7 +121,7 @@
     * [LevelManager - final](class-code-examples/levelmanager-final.md)
     * [Spawner - Final](class-code-examples/spawner-final.md)
     * [PlayerStats - final](class-code-examples/playerstats-final.md)
-    * CameraFollow
+    * [CameraFollow](class-code-examples/camerafollow.md)
     * ScreenFader
 
 ## Optional, Supplemental Content
