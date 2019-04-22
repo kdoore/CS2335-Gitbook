@@ -1,6 +1,7 @@
 #Spawner.cs - Final
 
 This code includes updated code to: **DestroyAllSpawnedObjects**
+Destroys objects with Component of type: PickUp, ScorePickUp, Hazard
 
 
 

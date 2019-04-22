@@ -2,8 +2,6 @@
 
 Includes code for LevelManager to determine max level score.
 
-
-
 ```java
 using UnityEngine;
 using UnityEngine.UI;
