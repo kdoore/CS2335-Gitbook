@@ -55,7 +55,7 @@ public class EndState : IStateBase
         }
         else
         {
-            resultsText.text = "Sorry that you didn't win the game";
+            resultsText.text = "Sorry that you didn't win the mini-game";
             inventoryCountText.text = "You have: " + count + " items";
         }
         startBtn = GameObject.Find("StartButton").GetComponent<Button>();
