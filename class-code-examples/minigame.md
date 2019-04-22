@@ -1,11 +1,9 @@
 #MiniGState
 
-Code has been updated to include the LevelManager event:  
- - onMiniGameEnd
+Code has been updated to include logic for listening for Event: 
+**LevelManager event: onMiniGameEnd**
  
- In this simple case, the event causes a scene-change to the EndScene.
-
-
+ In this simple case, the event causes a scene-change to the EndScene.  Logic in the EndState.cs script displays different content depending on whether GameData shows that Health is not less than or equal to 0.
 
 
 
