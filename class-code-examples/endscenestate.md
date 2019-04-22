@@ -1,7 +1,7 @@
 #EndState
 
 Your game details will determine the content of this script file.  You will want to add some UI-Text elements that can have the content modified based on the results of the MiniGame, and other data stored in GameData.  Below is an example.
-Checks GameData: miniGameWinner to determine if player won the miniGame.
+Checks **GameData: miniGameWinner** to determine if player won the miniGame.
 
 This code assumes you have 2 UI-Text elements
 - ResultsText

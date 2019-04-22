@@ -87,16 +87,18 @@ public class LevelManager : MonoBehaviour
     /// Checks the level end.
     /// Checks the data to see if the level has ended
     /// </summary>
-    public void CheckLevelEnd()
+       public void CheckLevelEnd()
     {
         int levelScore = GameData.instanceRef.LevelScore;
 
         Debug.Log("Check if level is over " + levelScore);
 
         //Add code here to see if health is <=0
-        if(GameData.instanceRef.Health <= 0)
+        if (GameData.instanceRef.Health <= 0)
         {
-            //what should happen here?
+            curLevel = LevelState.lose;
+            GameData.instanceRef.miniGameWinner = false;
+            MiniGameOver();
         }
         else if (levelScore >= maxLevelScore)
         { ///level has changed
@@ -105,9 +107,13 @@ public class LevelManager : MonoBehaviour
             NextLevel(); //go to next level - call FSM
         }
 
-    }
+    }//end CheckLevelEnd
 
-  public void NextLevel()
+  //This method implements the Finite State Machine to Manage Level Logic.
+    //You will modify this code to correspond to your game's logic
+    //This method is always called when an event has occured to end the level
+    //Event types: data-centric: Score > LevelScore, health <= 0, Player falls,
+    public void NextLevel()
     {
         switch (curLevel) //check the curLevel, find matching case below
         {
@@ -128,16 +134,17 @@ public class LevelManager : MonoBehaviour
                 break;
 
             case LevelState.level3: //called when in Level3 from checkLevelEnd( )
+                curLevel = LevelState.win;
                 MiniGameOver();
                 break;
 
             default:
                 Debug.Log("No match on curLevel");
                 break;
-        }
-    }
+        } //end switch-case
+        
+    }//end NextLevel
 
-  
     ////YOU WILL MODIFY THESE METHODS SO THEY CORRESPOND TO YOUR GAME"S LOGIC
     void StartLevel1()
     {
@@ -183,14 +190,25 @@ public class LevelManager : MonoBehaviour
 
     //What happens when the MiniGame is over due to winning?
     //How does a player leave the MiniGameScene?
+   //What happens when the MiniGame is over due to winning?
+    //How does a player leave the MiniGameScene: Win or Lose?
     void MiniGameOver()
     {
-        if(onMiniGameEnd != null)
+        if( curLevel == LevelState.win)
+        {
+            GameData.instanceRef.miniGameWinner = true;
+        }
+        else
+        {
+            GameData.instanceRef.miniGameWinner = false;
+        }
+        if (onMiniGameEnd != null) //some listener (MiniGState)
         {
             onMiniGameEnd.Invoke();
         }
         //invoke custom event to notify MiniGState where sceneChange logic an be executed.
-    }
+    } //end MiniGameOver
+
 
 
     /// <summary>
