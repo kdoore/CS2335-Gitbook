@@ -17,7 +17,7 @@ Assumes you are using:  (If you choose not to use these, remove any code associa
 - **Event Publisher** OnMiniGameEnd  - Listener: MiniGState
  
  You must add your custom code for Level3
- You must modify MiniGState, and EndState to show consequences for the miniGame.
+ You must modify MiniGState, and EndState to include logic for consequences for the miniGame.  
 
 ```java
 
