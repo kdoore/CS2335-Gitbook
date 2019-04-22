@@ -9,7 +9,10 @@ Assumes you are using:
 Includes:
 - timer methods
 - LevelgameObject[] - activate GameObjects for each level
-- 
+- Event Listeners:
+    - GameData: onPlayerDataUpdate  - Listener: CheckLevelEnd
+    - PlayerController: onPlayerDied - Listener: ReloadMiniGame
+    - PlayerController: onPlayerReachExit - Listener: NextLevel
 
 
 ```java
