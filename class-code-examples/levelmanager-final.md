@@ -36,7 +36,8 @@ public class LevelManager : MonoBehaviour
         level1,
         level2,
         level3,
-        miniGameOver
+        lose, 
+        win
     }
 
     public UnityEvent onMiniGameEnd = new UnityEvent();  //broadcast to MiniGState
