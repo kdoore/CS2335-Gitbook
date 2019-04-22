@@ -127,7 +127,7 @@
 ## Optional, Supplemental Content
 
 * Optional Content
-  * [InventoryItems - ScriptableObjects](inventoryitems_-_scriptableobjects.md)
+  * [ScriptableObjects](inventoryitems_-_scriptableobjects.md)
   * [Screen Fading and Reloading](simple-spawner/screen-fading-and-reloading.md)
   * [Disable Debug Logging](disable-debug-logging.md)
   * [Events and Actions](events_and_actions.md)
