@@ -7,7 +7,7 @@ Assumes you are using:  (If you choose not to use these, remove any code associa
 - ScreenFader Script
 
 **Includes:**
-- **timer** methods
+- **timer** method - reloadTimer( timeInSeconds )
 - **GameObject[] gameObjectLayers** - array of Level-specific Parent GameObjects for each level's features
 - **Event Listeners:**
     - **GameData: onPlayerDataUpdate**  - Listener: CheckLevelEnd( )
