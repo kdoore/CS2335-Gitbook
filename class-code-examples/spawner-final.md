@@ -70,7 +70,7 @@ public class Spawner : MonoBehaviour {
         }
 
         ScorePickUp[] scoreItems = FindObjectsOfType<ScorePickUp>();
-        foreach (ScoreItem scoreItem in scoreItems)
+        foreach (ScorePickUp scoreItem in scoreItems)
         {
             Destroy(scoreItem.gameObject);
         }
