@@ -84,7 +84,7 @@ public class Spawner : MonoBehaviour {
 
 
 
-    } //end DestroyAllSpawnedObjects
+    } //end DestroySpawnedObjects
 } //end of class  
 
 ```
