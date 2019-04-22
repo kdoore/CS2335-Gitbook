@@ -123,6 +123,7 @@
     * [PlayerStats - final](class-code-examples/playerstats-final.md)
     * [CameraFollow](class-code-examples/camerafollow.md)
     * [ScreenFader](class-code-examples/screenfader.md)
+    * [MiniGState](class-code-examples/minigame.md)
     * [EndState](class-code-examples/endscenestate.md)
 
 ## Optional, Supplemental Content
