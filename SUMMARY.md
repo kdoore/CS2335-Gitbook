@@ -122,7 +122,7 @@
     * [Spawner - Final](class-code-examples/spawner-final.md)
     * [PlayerStats - final](class-code-examples/playerstats-final.md)
     * [CameraFollow](class-code-examples/camerafollow.md)
-    * ScreenFader
+    * [ScreenFader](class-code-examples/screenfader.md)
 
 ## Optional, Supplemental Content
 
