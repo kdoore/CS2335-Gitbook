@@ -6,6 +6,11 @@ Assumes you are using:
 - CameraFollow Script
 - ScreenFader Script
 
+Includes:
+- timer methods
+- LevelgameObject[] - activate GameObjects for each level
+- 
+
 
 ```java
 
