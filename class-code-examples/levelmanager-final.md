@@ -2,17 +2,19 @@
 
 _updated 4/21/2019_
 
-Assumes you are using:  
+Assumes you are using:  (If you choose not to use these, remove any code associated with these script components)
 - CameraFollow Script
 - ScreenFader Script
 
-Includes:
-- timer methods
-- LevelgameObject[] - activate GameObjects for each level
-- Event Listeners:
+**Includes:**
+- **timer** methods
+- **GameObject[] gameObjectLayers** - array of Level-specific Parent GameObjects for each level's features
+- **Event Listeners:**
     - GameData: onPlayerDataUpdate  - Listener: CheckLevelEnd
     - PlayerController: onPlayerDied - Listener: ReloadMiniGame
     - PlayerController: onPlayerReachExit - Listener: NextLevel
+    
+- **Event Publisher** OnMiniGameEnd  - Listener: MiniGState
 
 
 ```java
