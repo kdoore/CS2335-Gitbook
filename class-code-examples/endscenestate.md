@@ -41,8 +41,6 @@ public class EndState : IStateBase
         scene = GameScene.End;
     }
 
-
-
     //add comments
     public void InitializeObjectRefs()
     {

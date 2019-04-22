@@ -38,7 +38,7 @@ public class LevelManager : MonoBehaviour
         miniGameOver
     }
 
-    UnityEvent onMiniGameEnd = new UnityEvent();  //broadcast to MiniGState
+    public UnityEvent onMiniGameEnd = new UnityEvent();  //broadcast to MiniGState
 
     LevelState curLevel; // FSM - 1 unit of memory
 
