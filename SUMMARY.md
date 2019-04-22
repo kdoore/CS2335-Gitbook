@@ -115,8 +115,9 @@
 
 * [Project 3 - Code](project-3-code.md)
   * [Class-Code Examples](class-code-examples.md)
-    * [PlayerController\_v3 Mods](class-code-examples/playercontrollerv3-mods.md)
-    * [PickUp, Hazard](class-code-examples/pickup-final.md)
+    * [PlayerController Mods](class-code-examples/playercontrollerv3-mods.md)
+      * PlayerController\_v2 Mods
+    * [PickUp, Hazard, ScorePickUp](class-code-examples/pickup-final.md)
     * [GameData - Final](class-code-examples/gamedata-final.md)
     * [LevelManager - final](class-code-examples/levelmanager-final.md)
     * [Spawner - Final](class-code-examples/spawner-final.md)

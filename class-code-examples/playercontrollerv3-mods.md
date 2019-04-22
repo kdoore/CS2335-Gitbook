@@ -2,14 +2,18 @@
 
 Includes Updates for:  InventorySystem, LevelManager.
 
-OnTriggerEnter contains code to test for collisions with GameObjects with Collider2D set as 'Trigger' based on several different gameObject Tag types:
- - Collectible
-     - Requires PickUp.cs
- - Hazard
+**OnTriggerEnter2D** contains code to test for collisions with GameObjects with Collider2D set as 'Trigger' based on several different gameObject tags
+** Tags used in PlayerController **:
+ - **Collectible**
+     - Requires either PickUp.cs or ScorePickUp.cs
+     - PickUp.cs requires ItemInstance - ScriptableObject - adds value to Score, adds ItemInstance to Inventory
+     - ScorePickUp.cs - adds value to score
+     
+ - **Hazard**
      - Requires either PickUp.cs or Hazard.cs
- - Water
+ - **Water**
      - Invokes: onPlayerDied
- - Exit
+ - **Exit**
      - Invokes: onReachedExit
 
 Audio clips played if colliding with Pickup with correct audioSource.  ( Collectible, Water )
@@ -116,12 +120,20 @@ public class PlayerController : MonoBehaviour {
         {
             //update score
             PickUp item = collision.GetComponent<PickUp>();
+            if (item != null)
+            {
+                GameData.instanceRef.Add(item.Value); //points for each specific item's value
 
-            GameData.instanceRef.Add(item.Value); //points for each specific item's value
-
-            //add to inventory
-            GameData.instanceRef.AddItem(item.itemInstance); //points for each specific item's value
-
+                //add to inventory
+                GameData.instanceRef.AddItem(item.itemInstance); //points for each specific item's value
+            }
+            else //is it a scoreItem
+            {
+                ScorePickUp scoreItem = collision.GetComponent<ScorePickUp>();
+                if (scoreItem != null) { 
+                    GameData.instanceRef.Add(item.Value); //points for each specific item's value
+                }
+            }
             AudioSource collectSound = collision.gameObject.GetComponent<AudioSource>();
             if (collectSound != null)
             {
@@ -140,7 +152,7 @@ public class PlayerController : MonoBehaviour {
             {
                 GameData.instanceRef.TakeDamage(hItem.value);
             }
-            else //PickUp
+            else //PickUp with Hazard, not added to Inventory here
             {
                 PickUp item = collision.GetComponent<PickUp>();
                 if (item != null)
@@ -161,7 +173,7 @@ public class PlayerController : MonoBehaviour {
                 //plays a clip at a point in worldspace, destroyed when done
                 AudioSource.PlayClipAtPoint(clip, new Vector3(5, 1, 2));
             }
-            if ( onPlayerDied != null)
+            if ( onPlayerDied != null) //there are listeners
             {
                 onPlayerDied.Invoke();
             }
@@ -187,6 +199,5 @@ public class PlayerController : MonoBehaviour {
     }
 
 } //end Class
-
 ```
 

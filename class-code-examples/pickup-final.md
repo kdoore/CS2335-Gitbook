@@ -54,4 +54,23 @@ public class Hazard : MonoBehaviour {
 }
 ```
 
+#ScorePickUp
+This simple class can be used to replace PickUp.cs script component for objects with Collectible Tag, if the item only impacts the score, with no inventory items added.
+
+```java
+
+using UnityEngine;
+
+/// <summary>
+/// Score pickup.
+/// Add to Prefab that will increase score when collision-trigger with Player
+/// </summary>
+public class ScorePickUp : MonoBehaviour {
+
+    //set in inspector
+    public int Value;
+}
+```
+
+
 
