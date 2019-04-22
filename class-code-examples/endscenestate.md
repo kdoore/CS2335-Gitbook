@@ -1,7 +1,7 @@
 #EndState
 
 Your game details will determine the content of this script file.  You will want to add some UI-Text elements that can have the content modified based on the results of the MiniGame, and other data stored in GameData.  Below is an example.
-
+Checks GameData: miniGameWinner to determine if player won the miniGame.
 
 This code assumes you have 2 UI-Text elements
 - ResultsText
@@ -14,15 +14,13 @@ This code assumes you have 2 UI-Text elements
 
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 using UnityEngine.SceneManagement; //add to all State Files
 
 public class EndState : IStateBase
 {
-    private bool winner = false;
     private Text resultsText;
     private Text inventoryCountText;
-    private int count = 0;
+    private int itemCount = 0;
 
     private GameScene scene;
    
@@ -41,20 +39,22 @@ public class EndState : IStateBase
         scene = GameScene.End;
     }
 
+
+
     //add comments
     public void InitializeObjectRefs()
     {
         resultsText = GameObject.Find("ResultsText").GetComponent<Text>();
         inventoryCountText = GameObject.Find("InventoryCountText").GetComponent<Text>();
-        if (winner)
+        if (checkGameStats()== true)
         {
             resultsText.text = "You are a winner";
-            inventoryCountText.text = "You have: " + count + " items";
+            inventoryCountText.text = "You have: " + itemCount + " items";
         }
         else
         {
-            resultsText.text = "Sorry that you didn't win the mini-game";
-            inventoryCountText.text = "You have: " + count + " items";
+            resultsText.text = "Sorry that you didn't win the game";
+            inventoryCountText.text = "You have: " + itemCount + " items";
         }
         startBtn = GameObject.Find("StartButton").GetComponent<Button>();
         startBtn.onClick.AddListener(LoadBeginScene);
@@ -67,13 +67,9 @@ public class EndState : IStateBase
         if( inventory.inventory.Count > 0)
         {
             Debug.Log("Inventory Has Items");
-            count = inventory.inventory.Count;
+            itemCount = inventory.inventory.Count;
         }
-        if( GameData.instanceRef.Health > 0)
-        {
-            winner = true;
-        }
-        return winner;
+        return GameData.instanceRef.miniGameWinner;
     }
 
     public void LoadBeginScene()
@@ -84,6 +80,5 @@ public class EndState : IStateBase
 
     }
 } //end class:  EndState
-
 ```
 

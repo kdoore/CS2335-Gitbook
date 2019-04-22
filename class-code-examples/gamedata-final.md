@@ -2,9 +2,10 @@
 
 Final version of GameData, customize as needed.
 
-_Updated 4/21/2019_
+_Updated 4/22/2019_
 
 ```java
+
 
 using UnityEngine;
 using UnityEngine.Events;
@@ -26,6 +27,7 @@ public class GameData : MonoBehaviour {
     private int experience;
     private int lives;
     private int maxExperience = 100;
+    public bool miniGameWinner = false;
 
     //Properties - Support Encapsulation - protect inner workings of our class
     public int Score{
@@ -127,14 +129,17 @@ public class GameData : MonoBehaviour {
         }
     }
 
+    //to restart entire game
     public void ResetGameData()
     {
         health = 100; //initialize
         score = 0;
         experience = 0;
         inventory.inventory.Clear();
+        miniGameWinner = false;
     }
 
+    //to restart miniGame
     public void ResetMiniGameData()
     {
         health = 100; //initialize
@@ -143,6 +148,7 @@ public class GameData : MonoBehaviour {
     }
 
 } //end class
+
 
 ```
 
