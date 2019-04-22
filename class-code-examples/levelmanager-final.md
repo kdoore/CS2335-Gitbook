@@ -75,13 +75,12 @@ public class LevelManager : MonoBehaviour
         gameObjectLayers[0].SetActive(true); //Level1 gameObjects, spawner, background, floor
         curLevel = LevelState.start;
 
-        //make sure Start Panel is showing at start of Scene.
+        //show Start Panel at start of Scene.
         if (cg != null)
         {
             Utility.ShowCG(cg);
         }
-        ///Update Check to see if level is over when playerDataUpdate event happens
-        //NextLevel(); //uncomment and use this option if not using StartGamePanel and StartGameButton to start the gameplay.
+       
     }
 
     /// <summary>
@@ -97,7 +96,7 @@ public class LevelManager : MonoBehaviour
         //Add code here to see if health is <=0
         if(GameData.instanceRef.Health <= 0)
         {
-            MiniGameOver();
+            //what should happen here?
         }
         else if (levelScore >= maxLevelScore)
         { ///level has changed
@@ -108,18 +107,14 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    //This method implements the Finite State Machine to Manage Level Logic.
-    //You will modify this code to correspond to your game's logic
-    //This method is always called when an event has occured to end the level
-    //Event types: data-centric: Score > LevelScore, health <= 0, Player falls,
-    public void NextLevel()
+  public void NextLevel()
     {
-    switch (curLevel) //check the curLevel, find matching case below
+        switch (curLevel) //check the curLevel, find matching case below
         {
 
             case LevelState.start: // called when StartPanel, StartGameButton is clicked
                 curLevel = LevelState.level1; //change level
-                LoadLevel1();
+                StartLevel1();
                 break;
 
             case LevelState.level1: //called when in Level1 from checkLevelEnd( )
@@ -142,8 +137,9 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+  
     ////YOU WILL MODIFY THESE METHODS SO THEY CORRESPOND TO YOUR GAME"S LOGIC
-    void LoadLevel1()
+    void StartLevel1()
     {
         startGameButton.gameObject.SetActive(false);
         gameObjectLayers[0].SetActive(true); //level1
