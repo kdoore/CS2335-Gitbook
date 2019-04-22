@@ -77,6 +77,7 @@
 
 * [Simplified Mini-Game](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/simplified-mini-game.md)
   * [PlayerController\_v2 Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontrollerv2-mods.md)
+    * [PlayerController\_v2\_final](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontrollerv2-mods/playercontrollerv2-final.md)
   * [MiniGameManager\_v2](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/minigamemanagerv2.md)
 
 ## Project 3
