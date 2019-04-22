@@ -7,12 +7,17 @@ Updated 4/21/2019
 
 **Player - Updated with InventorySystem and LevelManager - UnityEvents**
 - [PlayerController.cs ](/class-code-examples/playercontrollerv3-mods.md)
+- [PlayerController_v2.cs](/project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontrollerv2-mods/playercontrollerv2-final.md) - Use in Simplified MiniGame
 
 **PickUp - updated with InventorySystem**
  - [PickUp.cs ](/class-code-examples/pickup-final.md)
 
 **Hazard - updated with InventorySystem**
  - [Hazard.cs](/class-code-examples/pickup-final.md)
+ 
+** ScorePickUp**
+- [ScorePickUp](/class-code-examples/pickup-final.md)
+
  
 **GameData - Update with LevelManager**
   - [GameData - with Inventory, UnityEvent](/class-code-examples/gamedata-final.md) 
@@ -21,13 +26,15 @@ Updated 4/21/2019
    - [Spawner](/class-code-examples/spawner-final.md)
    
 **Level Manager**
- - [LevelManager] 
+ - [LevelManager ](/class-code-examples/levelmanager-final.md)
  
- **PlayerStats - must be updated for LevelManager**
- - [PlayerStats] 
+**PlayerStats - must be updated for LevelManager**
+ - [PlayerStats](/project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontrollerv2-mods/playercontrollerv2-final.md)
  
- - **CameraFollow Script**
+**CameraFollow Script**
+ - [CameraFollow](/class-code-examples/camerafollow.md)
 
-- **ScreenFader Script**
+**ScreenFader Script**
 
+ - [ScreenFader](/class-code-examples/screenfader.md)
 
