@@ -132,3 +132,33 @@ public class ScreenFader : MonoBehaviour
 }//end class
 ```
 
+###Example Usage
+This fade behavior can be called from PlayerController Script when the player has collided with an object that results in death. The image below shows the FadeImage UI-Image that's used to fade the scene, it should be the bottom item in the Canvas hierarchy so it hides all GameObjects. In the top image, we can see it's been added to populate the Fade Img box of the ScreenFader script component that's been added to the Main Camera. The second image shows that it's been dragged off screen. When the script is actively fading, then the image is enabled and resized to cover the Canvas, then its' alpha value is gradually changed.  
+
+
+```
+void OnTriggerEnter2D (Collider2D hitObject)
+{
+if (hitObject.CompareTag ("Collectable")) {
+Debug.Log ("Hit Collectable");
+Destroy (hitObject.gameObject);
+}
+if (hitObject.CompareTag ("Hazard")) {
+anim.SetInteger("HeroState", (int)heroState.dead);
+Debug.Log ("Hit Hazard event");
+Destroy (hitObject.gameObject);
+dead = true;
+ReloadScene();
+//Invoke(ReloadScene, 2f); //for more delay
+}
+}
+
+public void ReloadScene(){
+ScreenFader fader= FindObjectOfType<ScreenFader>();
+fader.EndScene((int)GameScene.MiniGame);
+}
+```
+![](/assets/Screen Shot 2018-03-28 at 2.45.27 PM.png)
+
+![](/assets/Screen Shot 2018-03-28 at 2.43.09 PM.png)
+
