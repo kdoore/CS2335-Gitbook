@@ -120,7 +120,7 @@
     * [GameData - Final](class-code-examples/gamedata-final.md)
     * [LevelManager - final](class-code-examples/levelmanager-final.md)
     * [Spawner - Final](class-code-examples/spawner-final.md)
-    * PlayerStats - final
+    * [PlayerStats - final](class-code-examples/playerstats-final.md)
     * CameraFollow
     * ScreenFader
 
