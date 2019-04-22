@@ -17,8 +17,8 @@ Updated 4/21/2019
 **GameData - Update with LevelManager**
   - [GameData - with Inventory, UnityEvent](/class-code-examples/gamedata-final.md) 
 
-**Spawner**
-   - [Simplest Spawner] 
+**Spawner - Update with Hazard, ScorePickUp**
+   - [Spawner](/class-code-examples/spawner-final.md)
    
 **Level Manager**
  - [LevelManager] 

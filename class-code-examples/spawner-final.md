@@ -69,11 +69,19 @@ public class Spawner : MonoBehaviour {
             Destroy(item.gameObject);
         }
 
+        ScorePickUp[] scoreItems = FindObjectsOfType<ScorePickUp>();
+        foreach (ScoreItem scoreItem in scoreItems)
+        {
+            Destroy(scoreItem.gameObject);
+        }
+        
         Hazard[] hazards = FindObjectsOfType<Hazard>();
         foreach (Hazard hazard in hazards)
         {
             Destroy(hazard.gameObject);
         }
+
+
 
     } //end DestroyAllSpawnedObjects
 } //end of class  
