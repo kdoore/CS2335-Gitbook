@@ -2,8 +2,7 @@
 
 This script can be attached to the mainCamera to have the camera follow the player if there are scrolling images.  
 
-
-
+![](/assets/Screen Shot 2019-04-22 at 6.30.24 AM.png)
 
 ```java
 using UnityEngine;
@@ -18,8 +17,8 @@ public class CameraFollow : MonoBehaviour
     public float yMargin = 1;
     public float xSmooth = 4;
     public float ySmooth = 4;
-    public Vector2 maxXAndY = 20;
-    public Vector2 minXAndY=0;
+    public Vector2 maxXAndY; //try values: 35, 15
+    public Vector2 minXAndY; //try values: -1,0
 
     private Transform player;
 
@@ -43,6 +42,7 @@ public class CameraFollow : MonoBehaviour
         TrackPlayer();
     }
 
+    //set camera to default position
     public void ResetPosition()
     {
         transform.position = new Vector3(0, 0, -10);
