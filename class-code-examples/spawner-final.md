@@ -76,7 +76,7 @@ public class Spawner : MonoBehaviour {
         }
 
     } //end DestroyAllSpawnedObjects
-} //end of class definition
+} //end of class  
 
 ```
 
