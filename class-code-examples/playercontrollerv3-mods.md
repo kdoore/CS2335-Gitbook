@@ -22,7 +22,7 @@ Audio Clips:
 
 
 Contains custom Events, LevelManager is the subscriber object:  
-- onPlayerReachedExit
+- onPlayerReachExit
 - onPlayerDied 
  
 
