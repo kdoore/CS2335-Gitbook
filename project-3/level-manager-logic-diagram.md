@@ -2,7 +2,7 @@
 
 ###Event-Logic Diagram
 - **Game-Events trigger execution of LevelManager methods: **
-- **NextLevel( ) **implements FiniteStateMachine based on variable: LevelState:  curLevel
+- **NextLevel( ) **implements FiniteStateMachine based on variable: `LevelState: curLevel`
   - GameData.onPlayerDataUpdate --> MiniGameOver( )
   - LevelManager: Timer complete --> ReloadMiniGame( ) 
   - PlayerController.onPlayerDied --> MiniGameOver( )
