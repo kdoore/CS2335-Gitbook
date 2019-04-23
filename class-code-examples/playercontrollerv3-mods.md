@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour {
             Hazard hItem = collision.GetComponent<Hazard>();
             if (hItem != null)
             {
-                GameData.instanceRef.TakeDamage(hItem.value);
+                GameData.instanceRef.TakeDamage(hItem.Value);
             }
             else //PickUp with Hazard, not added to Inventory here
             {
