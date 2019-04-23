@@ -39,14 +39,12 @@ public class EndState : IStateBase
         scene = GameScene.End;
     }
 
-
-
     //add comments
     public void InitializeObjectRefs()
     {
         resultsText = GameObject.Find("ResultsText").GetComponent<Text>();
         inventoryCountText = GameObject.Find("InventoryCountText").GetComponent<Text>();
-        if (checkGameStats()== true)
+        if (CheckGameStats()== true)
         {
             resultsText.text = "You are a winner";
             inventoryCountText.text = "You have: " + itemCount + " items";
@@ -61,7 +59,7 @@ public class EndState : IStateBase
         Debug.Log("Add Debug Info");
     }
 
-    bool checkGameStats()
+    bool CheckGameStats()
     {
         Inventory inventory = GameData.instanceRef.inventory;
         if( inventory.inventory.Count > 0)
