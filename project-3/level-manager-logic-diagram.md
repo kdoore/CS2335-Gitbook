@@ -18,4 +18,4 @@ Game Events trigger execution of LevelManager methods:
 
 NextLevel( ) implements FiniteStateMachine based on variable: LevelState:  curLevel
 
-![](/assets/Screen Shot 2019-04-23 at 10.37.27 AM.png)
+![](/assets/Screen Shot 2019-04-23 at 10.55.01 AM.png)
