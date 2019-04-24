@@ -80,7 +80,7 @@ You will need to do **Further configuration for LevelManager**, see below
 ```      
 ![](/assets/Screen Shot 2019-04-24 at 2.16.21 PM.png)
 ###Create CameraFollow.cs (optional) 
-- **CameraFollow (optional) : Player must have Tag: Player **  Create a new C# script, paste code for [CameraFollow.cs](/cameraFollow), attach to MainCamera in MiniGame.  This assumes you have a background image larger than the camera's viewport, play around with variables that restrict amount of camera movement, so it works with your backgrounds. Set and adjust MaxX and Y, MinX and Y, to constrain the camera's movement in X,Y directions.
+- **CameraFollow (optional) : Player must have Tag: Player **  Create a new C# script, paste code for [CameraFollow.cs](/cameraFollow), attach to MainCamera in MiniGame.  This assumes you have a background image larger than the camera's viewport, play around with variables that restrict amount of camera movement, so it works with your backgrounds. Set and adjust MaxX and Y, MinX and Y, to constrain the camera's movement in X,Y directions, see image above.
 
 
 
