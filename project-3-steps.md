@@ -19,6 +19,11 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 
 - **Step 2:  Update PlayerController Script**  Update the code for PlayerController. This includes 2 custom UnityEvents.  Create an Empty GameObject:  PlayerSpawnPoint, select an icon so it is visible in the scene.  Position this gameObject at the position that you want the player positioned at the start of each level.  Populate this on the PlayerController component in the inspector.
 
+- **Step 3:  Delete MiniGameManager, replace with LevelManager**
+Create empty gameObject: LevelManager.  Create or update code in LevelManager, add to LevelManager empty gameObject.  Look at the inspector fields for LevelManager.
+
+- **Step 4:  ScreenFader**   The LevelManager includes code for a ScreenFader functionality, either remove that code, or create a new C# script, paste code for [ScreenFader](/class-code-examples/screenfader.md).  Put the ScreenFader script on the MainCamera gameObject in any scene you want Fade-in during start.  Code must be modified in State scripts if you want Fade-out at the end of a scene.  For any scene that uses ScreenFader, you must create a UI-Image gameObject, move it out of the camera's view, set the color to black.  
+
 
 
 
