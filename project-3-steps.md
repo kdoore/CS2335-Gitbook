@@ -53,7 +53,20 @@ Delete MiniGameManager, and MiniGameManager.cs, replace with LevelManager
 
 You will need to do **Further configuration for LevelManager**, see below
 
-###Create ScreenFader.cs (optional) 
+###PlayerStats
+ [PlayerStats](/class-code-examples/playerstats-final.md) Code updated 4/24/2019
+ 
+- PlayerStats.cs script must be updated so it uses GameData UnityEvent and remove code using MiniGameManager in PlayerStats. 
+
+###PickUp, Hazard, ScorePickUp 
+- Create or update these scripts.  Note, the **value variable in Hazard** may be accessed using a Property, if not using the property, make value a public variable, fix capitalization in PlayerController OnTriggerEnter.
+
+###Update Spawner.cs
+- Updated code destroys all types of spawned objects. Some issue with method name:  Fix the method name to match your code in LevelManager.cs, you can delete MiniGameManager.cs:   
+ - DestroySpawnedObjects( )
+ - DestroyAllSpawnedObjects( )
+ 
+ ###Create ScreenFader.cs (optional) 
 
 - **ScreenFader (optional)**   The LevelManager includes code for a ScreenFader functionality, either remove that code, or create a new C# script, paste code for [ScreenFader.cs](/class-code-examples/screenfader.md).  Put the ScreenFader script on the MainCamera gameObject in any scene you want Fade-in during start.  Code must be modified in State scripts if you want Fade-out at the end of a scene.  For any scene that uses ScreenFader, you must create a UI-Image gameObject, move it out of the camera's view, set the color to black. 
 
@@ -69,18 +82,7 @@ You will need to do **Further configuration for LevelManager**, see below
 ###Create CameraFollow.cs (optional) 
 - **CameraFollow (optional) : Player must have Tag: Player **  Create a new C# script, paste code for [CameraFollow.cs](/cameraFollow), attach to MainCamera in MiniGame.  This assumes you have a background image larger than the camera's viewport, play around with variables that restrict amount of camera movement, so it works with your backgrounds.
 
-###PlayerStats
- [PlayerStats](/class-code-examples/playerstats-final.md) Code updated 4/24/2019
- 
-- PlayerStats.cs script must be updated so it uses GameData UnityEvent and remove code using MiniGameManager in PlayerStats. 
 
-###PickUp, Hazard, ScorePickUp 
-- Create or update these scripts.  Note, the **value variable in Hazard** may be accessed using a Property, if not using the property, make value a public variable, fix capitalization in PlayerController OnTriggerEnter.
-
-###Update Spawner.cs
-- Updated code destroys all types of spawned objects. Some issue with method name:  Fix the method name to match your code in LevelManager.cs, you can delete MiniGameManager.cs:   
- - DestroySpawnedObjects( )
- - DestroyAllSpawnedObjects( )
 
 ##MiniGame - New GameObjects
 
