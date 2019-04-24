@@ -17,6 +17,20 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 
 - **Step 1: Update GameData Script** Update the code for [GameData.](/class-code-examples/gamedata-final.md)  To play-test in the MiniGame Scene, add GameData script to an empty-gameObject: GameManager, make sure you have created a ScriptableObject - Inventory object, select that Inventory on the GameData script. 
 
+**Update TakeDamage: 4/24/19
+**
+
+```java
+        public void TakeDamage( int value){
+        health -= value;
+        if (health < 0) health = 0;  //makes sure health !< 0
+        Debug.Log("Health is updated " + health);
+        InvokePlayerDataUpdate();
+    }
+```
+
+
+
 - **Step 2 Player:  Update PlayerController Script**   This includes 2 custom UnityEvents.
   
  - **PlayerSpawnPoint:** Create an Empty GameObject:  PlayerSpawnPoint, select an icon so it is visible in the scene.  Position this gameObject at the position that you want the player positioned at the start of each level.  Populate this on the PlayerController, and LevelManager components in the inspector.
