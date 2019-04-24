@@ -45,6 +45,8 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 
 - **Step 6:  Create 3 Level-Specific: Parent GameObjects**, one for each Level, with children gameObjects: **background, spawner,** etc.  Add these to the LevelManager script.  Ordering in the Hierarchy and Inspector must match images below.
 
+![](/assets/Screen Shot 2019-04-24 at 1.11.38 PM.png)
+
 **UI Elements:**
 
 

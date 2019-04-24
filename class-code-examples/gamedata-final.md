@@ -2,7 +2,7 @@
 
 Final version of GameData, customize as needed.
 
-_Updated 4/22/2019_
+_Updated 4/24/2019_
 
 ```java
 
@@ -113,10 +113,10 @@ public class GameData : MonoBehaviour {
         InvokePlayerDataUpdate();
     }
 
-
-    public void TakeDamage( int value){
+//updated 
+     public void TakeDamage( int value){
         health -= value;
-        health = Mathf.Clamp(value, 0, 100);  //makes sure health !< 0
+        if (health < 0) health = 0;  //makes sure health !< 0
         Debug.Log("Health is updated " + health);
         InvokePlayerDataUpdate();
     }
