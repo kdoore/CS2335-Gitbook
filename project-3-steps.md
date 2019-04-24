@@ -42,13 +42,13 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
  - **Create empty gameObject: LevelManager** 
 Delete MiniGameManager, and MiniGameManager.cs, replace with LevelManager
 
-  - **Add script:LevelManager.cs to LevelManager in Scene**  Create or update code in LevelManager, add to LevelManager empty gameObject.  Look at the inspector fields for LevelManager.
+  - **Add script: [LevelManager.cs](/class-code-examples/levelmanager-final.md) to LevelManager in Scene**  Create or update code in LevelManager, add to LevelManager empty gameObject.  Look at the inspector fields for LevelManager.
 
 You will need to do further configuration for LevelManager, see below
 
 ###ScreenFader (optional) 
 
-- **ScreenFader (optional)**   The LevelManager includes code for a ScreenFader functionality, either remove that code, or create a new C# script, paste code for [ScreenFader](/class-code-examples/screenfader.md).  Put the ScreenFader script on the MainCamera gameObject in any scene you want Fade-in during start.  Code must be modified in State scripts if you want Fade-out at the end of a scene.  For any scene that uses ScreenFader, you must create a UI-Image gameObject, move it out of the camera's view, set the color to black. 
+- **ScreenFader (optional)**   The LevelManager includes code for a ScreenFader functionality, either remove that code, or create a new C# script, paste code for [ScreenFader.cs](/class-code-examples/screenfader.md).  Put the ScreenFader script on the MainCamera gameObject in any scene you want Fade-in during start.  Code must be modified in State scripts if you want Fade-out at the end of a scene.  For any scene that uses ScreenFader, you must create a UI-Image gameObject, move it out of the camera's view, set the color to black. 
 
 - **Important:** **If you don't use ScreenFader**, you must **change code in LevelManager: ReloadMiniGame() **
 
@@ -59,10 +59,12 @@ You will need to do further configuration for LevelManager, see below
 ```      
 
 ###CameraFollow (optional) 
-- **CameraFollow (optional) : Player must have Tag: Player **  Create a new C# script, paste code for [CameraFollow](/cameraFollow), attach to MainCamera in MiniGame.  This assumes you have a background image larger than the camera's viewport, play around with variables that restrict amount of camera movement, so it works with your backgrounds.
+- **CameraFollow (optional) : Player must have Tag: Player **  Create a new C# script, paste code for [CameraFollow.cs](/cameraFollow), attach to MainCamera in MiniGame.  This assumes you have a background image larger than the camera's viewport, play around with variables that restrict amount of camera movement, so it works with your backgrounds.
 
 ###PlayerStats
-- PlayerStats script must be updated so it uses code from LevelManager.  
+ [PlayerStats](/class-code-examples/playerstats-final.md) Code updated 4/24/2019
+ 
+- PlayerStats.cs script must be updated so it uses code from LevelManager.  
 
 ##MiniGame - New GameObjects
 
