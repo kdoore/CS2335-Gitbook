@@ -95,8 +95,9 @@ You will need to do **Further configuration for LevelManager**, see below
 - **Create 2 UI-Text fields:  LevelText, TimerText:** these will display the level number and the timer in seconds. Populate the LevelManager public fields in the Inspector panel using these gameObjects.
 
  - **Optional:  Create a LevelScore UI-Text**, showing the LevelScore and MaxLevel score for each level.  ( The PlayerStats score displays the total accumulated score)
+ 
 
-**Exit GameObject**  To win a level when triggering an exit event:
+- **Exit GameObject**  To win a level when triggering an exit event:
 Create a 2D sprite gameObject, Attach a Collider2D, select isTrigger is true, add Tag: 'Exit'.   When the player triggers the collider, PlayerController invokes the OnReachExit custom UnityEvent, with the LevelManager as a listener for the event. 
 
 
