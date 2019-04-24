@@ -109,7 +109,7 @@ Create a 2D sprite gameObject, Attach a Collider2D, select isTrigger is true, ad
 ![](/assets/Screen Shot 2019-04-24 at 2.42.16 PM.png)
 ![](/assets/Screen Shot 2019-04-24 at 2.42.39 PM.png)
 
-###MiniGame - Leave Scene, Consequences:
+###MiniGame - Leave Scene, Win - Lose Consequences:
 Examine updated code for  [MiniGState.cs](/class-code-examples/minigame.md) and [EndState.cs](/class-code-examples/endscenestate.md)
 
 - **MiniGState.cs:** When a player wins or loses the MiniGame, an event is invoked in LevelManager:  onMiniGameOver.  The MiniGState is a listener for that event.  This provides a way to have scene transition due to a game-event, instead of the normal Buttons used to change scenes.  Select code in the provided MiniGState.cs file for your desired logic.  Be Careful - if you use the provided code, to overwrite your existing MiniGState.cs file, you may remove existing scene-change button logic in your MiniGame Scene. 
