@@ -92,9 +92,9 @@ You will need to do **Further configuration for LevelManager**, see below
 
 ###UI Elements:
 
-Create 2 UI-Text fields:  LevelText, TimerText: these will display the level number and the timer in seconds. Populate the LevelManager public fields in the Inspector panel using these gameObjects.
+- **Create 2 UI-Text fields:  LevelText, TimerText:** these will display the level number and the timer in seconds. Populate the LevelManager public fields in the Inspector panel using these gameObjects.
 
-Optional:  Create a LevelScore UI-Text, showing the LevelScore and MaxLevel score for each level.  ( The PlayerStats score displays the total accumulated score)
+ - **Optional:  Create a LevelScore UI-Text**, showing the LevelScore and MaxLevel score for each level.  ( The PlayerStats score displays the total accumulated score)
 
 
 
