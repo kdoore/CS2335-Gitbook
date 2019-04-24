@@ -82,9 +82,7 @@ You will need to do **Further configuration for LevelManager**, see below
 ###Create CameraFollow.cs (optional) 
 - **CameraFollow (optional) : Player must have Tag: Player **  Create a new C# script, paste code for [CameraFollow.cs](/cameraFollow), attach to MainCamera in MiniGame.  This assumes you have a background image larger than the camera's viewport, play around with variables that restrict amount of camera movement, so it works with your backgrounds. Set and adjust MaxX and Y, MinX and Y, to constrain the camera's movement in X,Y directions, see image above.
 
-
-
-##MiniGame - New GameObjects
+##MiniGame Scene: GameObjects 
 
 ###LevelX_GameObjects
 - **Create 3 Level-Specific: Parent GameObjects**, one for each Level, with children gameObjects: **background, spawner,** etc.  Add these to the LevelManager script. ** Ordering in the Hierarchy and Inspector must match images below.**
@@ -92,9 +90,9 @@ You will need to do **Further configuration for LevelManager**, see below
 
 ![](/assets/Screen Shot 2019-04-24 at 1.11.38 PM.png)    ![](/assets/Screen Shot 2019-04-24 at 1.40.46 PM.png)
 
-- **UI Elements:**
+###UI Elements:
 
-
+Create 2 UI-Text fields:  LevelText, TimerText: these will display the level number and the timer in seconds. Populate the LevelManager public fields in the Inspector panel using these gameObjects.
 
 
 
