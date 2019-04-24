@@ -23,8 +23,20 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 Create empty gameObject: LevelManager.  Create or update code in LevelManager, add to LevelManager empty gameObject.  Look at the inspector fields for LevelManager.
 
 - **Step 4:  ScreenFader**   The LevelManager includes code for a ScreenFader functionality, either remove that code, or create a new C# script, paste code for [ScreenFader](/class-code-examples/screenfader.md).  Put the ScreenFader script on the MainCamera gameObject in any scene you want Fade-in during start.  Code must be modified in State scripts if you want Fade-out at the end of a scene.  For any scene that uses ScreenFader, you must create a UI-Image gameObject, move it out of the camera's view, set the color to black. 
+**Important:** If you don't use ScreenFader, you must add code in LevelManager: ReloadMiniGame()
 
-- **Step 5:  CameraFollow: Player must have Tag: Player **  Create a new C# script, paste code for [CameraFollow](/cameraFollow), attach to MainCamera in MiniGame.  This assumes you have a background image larger than the camera's viewport, play around with variables that restrict amount of camera movement, so it works with your backgrounds.
+
+```java
+
+ //fader.EndScene(curScene.buildIndex);
+  SceneManager.LoadScene(curScene.buildIndex); //add this if not using fader
+```
+
+
+      
+
+- **Step 5:  CameraFollow: Player must have Tag: Player (optional) **  Create a new C# script, paste code for [CameraFollow](/cameraFollow), attach to MainCamera in MiniGame.  This assumes you have a background image larger than the camera's viewport, play around with variables that restrict amount of camera movement, so it works with your backgrounds.
+
 
 - **Step 6:  Create 3 Level-Specific: Parent GameObjects**, one for each Level, with children gameObjects: background, spawner, etc.  Add these to the LevelManager script.  Ordering in the Hierarchy and Inspector must match images below.
 
