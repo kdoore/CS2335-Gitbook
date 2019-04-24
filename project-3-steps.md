@@ -13,11 +13,12 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 **
 **Enhanced Game-play:**The Minigame is modified to include enhanced concepts:  **timer, collect-use items, camera-follow, water-hazard, platforms, scene-fading, scene-reloading. **Consequences for win/lose mini-game must exist.
 
-###Project 3 - Enhanced MiniGame 
+##Project 3 - Enhanced MiniGame 
 
+###Update GameData
 - **Step 1: Update GameData Script** Update the code for [GameData.](/class-code-examples/gamedata-final.md)  To play-test in the MiniGame Scene, add GameData script to an empty-gameObject: GameManager, make sure you have created a ScriptableObject - Inventory object, select that Inventory on the GameData script. 
 
-**Updated GameData: TakeDamage: 4/24/19**
+ **Updated GameData: TakeDamage: 4/24/19**
 
 ```java
         public void TakeDamage( int value){
@@ -28,7 +29,7 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
     }
 ```
 
-
+###Player, PlayerController, PlayerController_v2
 
 - **Step 2 Player:  Update PlayerController Script**   This includes 2 custom UnityEvents.
   
@@ -37,9 +38,11 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
  - **PlayerController_v2: Possible Issue:** If using **PlayerController_v2**, you must update code in LevelManager that uses PlayerController, or rename your file to: PlayerController 
  - **Set Tag: 'Player'** for the Player gameObject for CameraFollow
 
+###LevelManager
+ - **Step 3: Create empty gameObject: LevelManager** 
+Delete MiniGameManager, and MiniGameManager.cs, replace with LevelManager
 
-- **Step 3:  Delete MiniGameManager, replace with LevelManager**
- - **Create empty gameObject: LevelManager.**  Create or update code in LevelManager, add to LevelManager empty gameObject.  Look at the inspector fields for LevelManager.
+  - **Add script:LevelManager.cs to LevelManager in Scene**  Create or update code in LevelManager, add to LevelManager empty gameObject.  Look at the inspector fields for LevelManager.
  
 
 - **Step 4:  ScreenFader (optional)**   The LevelManager includes code for a ScreenFader functionality, either remove that code, or create a new C# script, paste code for [ScreenFader](/class-code-examples/screenfader.md).  Put the ScreenFader script on the MainCamera gameObject in any scene you want Fade-in during start.  Code must be modified in State scripts if you want Fade-out at the end of a scene.  For any scene that uses ScreenFader, you must create a UI-Image gameObject, move it out of the camera's view, set the color to black. 
