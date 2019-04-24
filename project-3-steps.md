@@ -71,7 +71,8 @@ You will need to do further configuration for LevelManager, see below
 ###LevelX_GameObjects
 - **Create 3 Level-Specific: Parent GameObjects**, one for each Level, with children gameObjects: **background, spawner,** etc.  Add these to the LevelManager script.  Ordering in the Hierarchy and Inspector must match images below.
 
-![](/assets/Screen Shot 2019-04-24 at 1.11.38 PM.png)
+
+![](/assets/Screen Shot 2019-04-24 at 1.11.38 PM.png)    ![](/assets/Screen Shot 2019-04-24 at 1.40.46 PM.png)
 
 - **UI Elements:**
 
