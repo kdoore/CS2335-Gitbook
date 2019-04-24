@@ -95,12 +95,16 @@ You will need to do **Further configuration for LevelManager**, see below
 - **Create 2 UI-Text fields:  LevelText, TimerText:** these will display the level number and the timer in seconds. Populate the LevelManager public fields in the Inspector panel using these gameObjects.
 
  - **Optional:  Create a LevelScore UI-Text**, showing the LevelScore and MaxLevel score for each level.  ( The PlayerStats score displays the total accumulated score)
- 
 
 - **Exit GameObject**   Logic for a player can advance to next level when triggering an exit event.
 Create a 2D sprite gameObject, Attach a Collider2D, select isTrigger is true, add Tag: 'Exit'.   When the player triggers the collider, PlayerController invokes the OnReachExit custom UnityEvent, with the LevelManager as a listener for the event. 
 
 - **Spawned ItemInstance Objects**  Create at least 3 different types of 'Good' prefabs to be spawned during game-levels.  You must have 3 different types of ItemInstance objects, including your custom child-class of Item class.  Attach to spawned prefabs using the ItemInstance in the PickUp script.  There must be 3 different types of items that are collected in the inventory.
 
+- **Water GameObjects  **  Create one or more gameObjects to represent water.  Have a parent gameObject with a collider2D set as isTrigger is true.  Add tag: 'Water'.  If the player collides with the water, the onPlayerDied event is invoked in PlayerController with LevelManager as an event listener.
+
+![](/assets/Screen Shot 2019-04-24 at 2.42.29 PM.png)
+![](/assets/Screen Shot 2019-04-24 at 2.42.16 PM.png)
+![](/assets/Screen Shot 2019-04-24 at 2.42.39 PM.png)
 
 
