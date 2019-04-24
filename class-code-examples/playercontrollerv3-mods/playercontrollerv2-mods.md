@@ -1,5 +1,5 @@
 #PlayerController_v2 Final Code
-**Important:  This code is to be used with the Simplified MiniGame.  In LevelManager, the script PlayerController you must make a change to LevelManager, so it uses PlayerController_v2, or change the name of this file, and class to PlayerController.cs
+**Important:  This code is to be used with the Simplified MiniGame.  In LevelManager, the script PlayerController **you must make a change to LevelManager**, so it uses PlayerController_v2, or change the name of this file, and class to PlayerController.cs
 **
 
 Includes Updates for:  InventorySystem, LevelManager.
