@@ -21,7 +21,7 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 
  - **Create** an empty gameObject: **playerSpawnPoint**, position it where the player should start for each scene.  You'll use this in the LevelManager script.
 
- - **Possible Issue:** If using **PlayerController_v2**, you must update code in LevelManager that uses PlayerController, or rename your file to: PlayerController 
+ - **PlayerController_v2: Possible Issue:** If using **PlayerController_v2**, you must update code in LevelManager that uses PlayerController, or rename your file to: PlayerController 
 
 - **Step 3:  Delete MiniGameManager, replace with LevelManager**
  - **Create empty gameObject: LevelManager.**  Create or update code in LevelManager, add to LevelManager empty gameObject.  Look at the inspector fields for LevelManager.
