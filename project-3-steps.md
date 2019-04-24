@@ -32,7 +32,7 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 
 - **Step 2 Player:  Update PlayerController Script**   This includes 2 custom UnityEvents.
   
- - **PlayerSpawnPoint:** Create an Empty GameObject:  PlayerSpawnPoint, select an icon so it is visible in the scene.  Position this gameObject at the position that you want the player positioned at the start of each level.  Populate this on the PlayerController, and LevelManager components in the inspector.
+ - **PlayerSpawnPoint:** Create an Empty GameObject:  PlayerSpawnPoint, select an icon so it is visible in the scene.  Position this gameObject at the position that you want the player positioned at the start of each level.  Populate this on the PlayerController, and LevelManager components in the inspector. **Make sure the PlayerSpawnPoint has Transform.Position.Z = 0 (if Z= -10 you won't see the player)**
 
  - **PlayerController_v2: Possible Issue:** If using **PlayerController_v2**, you must update code in LevelManager that uses PlayerController, or rename your file to: PlayerController 
  - **Set Tag: 'Player'** for the Player gameObject for CameraFollow
