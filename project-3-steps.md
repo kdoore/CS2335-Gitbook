@@ -38,14 +38,14 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 
  //fader.EndScene(curScene.buildIndex);
   SceneManager.LoadScene(curScene.buildIndex); //add this if not using fader
-```
-      
+```      
 
 - **Step 5:  CameraFollow (optional) : Player must have Tag: Player **  Create a new C# script, paste code for [CameraFollow](/cameraFollow), attach to MainCamera in MiniGame.  This assumes you have a background image larger than the camera's viewport, play around with variables that restrict amount of camera movement, so it works with your backgrounds.
 
 
 - **Step 6:  Create 3 Level-Specific: Parent GameObjects**, one for each Level, with children gameObjects: **background, spawner,** etc.  Add these to the LevelManager script.  Ordering in the Hierarchy and Inspector must match images below.
 
+**UI Elements:**
 
 
 
