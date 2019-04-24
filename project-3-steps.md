@@ -46,10 +46,10 @@ Delete MiniGameManager, and MiniGameManager.cs, replace with LevelManager
 
 You will need to do further configuration for LevelManager, see below
 
-**Issue with ResultsPanel CanvasGroup:**  You must choose: 
+**Issue with ResultsPanel CanvasGroup:**  You must configure the LevelManager code to match your gameObject configuration.
 
 - **Remove the StartButton** from the ResultsPanel, so that the StartButton can be re-activated for starting each level (otherwise the StartButton is hidden when the ResultsPanel is hidden).  This is implemented in the provided LevelManager script.
- - **Otherwise: Add logic:** Utility.HideCG( cg ); Utility.ShowCG( cg ); when loading each level - similar to the current logic to activate, disable the StartGameButton in the code
+- **Otherwise: Add logic:** Utility.HideCG( cg ); Utility.ShowCG( cg ); when loading each level - similar to the current logic to activate, disable the StartGameButton in the code
 
 
 
