@@ -113,7 +113,7 @@ public class GameData : MonoBehaviour {
         InvokePlayerDataUpdate();
     }
 
-//updated 
+//updated TakeDamage: 4/24/19
      public void TakeDamage( int value){
         health -= value;
         if (health < 0) health = 0;  //makes sure health !< 0
