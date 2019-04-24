@@ -2,7 +2,7 @@
 
 Updated 4/24/2019
 
-Includes code for LevelManager to determine max level score.
+Removed LevelManager logic, added GameData Event: onPlayerDataUpdate
 
 ```java
 using UnityEngine;
