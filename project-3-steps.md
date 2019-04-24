@@ -53,7 +53,7 @@ Delete MiniGameManager, and MiniGameManager.cs, replace with LevelManager
 
 You will need to do **Further configuration for LevelManager**, see below
 
-###PlayerStats
+###Update PlayerStats.cs
  [PlayerStats](/class-code-examples/playerstats-final.md) Code updated 4/24/2019
  
 - PlayerStats.cs script must be updated so it uses GameData UnityEvent and remove code using MiniGameManager in PlayerStats. 
