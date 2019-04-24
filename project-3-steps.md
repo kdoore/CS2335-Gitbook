@@ -13,9 +13,10 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 **
 **Enhanced Game-play:**The Minigame is modified to include enhanced concepts:  **timer, collect-use items, camera-follow, water-hazard, platforms, scene-fading, scene-reloading. **Consequences for win/lose mini-game must exist.
 
-##Project 3 - Enhanced MiniGame 
+##Project 3 Steps: Enhanced MiniGame 
+**Start by updating, or creating Scripts following the steps below.**
 
-###Update GameData
+###Update GameData.cs
 - **Step 1: Update GameData Script** Update the code for [GameData.](/class-code-examples/gamedata-final.md)  To play-test in the MiniGame Scene, add GameData script to an empty-gameObject: GameManager, make sure you have created a ScriptableObject - Inventory object, select that Inventory on the GameData script. 
 
  **Updated GameData: TakeDamage: 4/24/19**
@@ -29,31 +30,32 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
     }
 ```
 
-###Player, PlayerController, PlayerController_v2
+###Update Player, PlayerController.cs, PlayerController_v2.cs
 
 - **Player:  Update PlayerController Script**   This includes 2 custom UnityEvents.
   
  - **PlayerSpawnPoint:** Create an Empty GameObject:  PlayerSpawnPoint, select an icon so it is visible in the scene.  Position this gameObject at the position that you want the player positioned at the start of each level.  Populate this on the PlayerController, and LevelManager components in the inspector. **Make sure the PlayerSpawnPoint has Transform.Position.Z = 0 (if Z= -10 you won't see the player)**
 
  - **PlayerController_v2: Possible Issue:** If using **PlayerController_v2**, you must update code in LevelManager that uses PlayerController, or rename your file to: PlayerController 
- - **Set Tag: 'Player'** for the Player gameObject for CameraFollow
+ - **Set Tag: 'Player'** for the Player gameObject if using CameraFollow
 
-###LevelManager GameObject 
+###Create LevelManager.cs, Create LevelManager GameObject 
  - **Create empty gameObject: LevelManager** 
 Delete MiniGameManager, and MiniGameManager.cs, replace with LevelManager
 
   - **Add script: [LevelManager.cs](/class-code-examples/levelmanager-final.md) to LevelManager in Scene**  Create or update code in LevelManager, add to LevelManager empty gameObject.  Look at the inspector fields for LevelManager.
 
-You will need to do further configuration for LevelManager, see below
+- **Issue with ResultsPanel CanvasGroup:**  You must configure the LevelManager code to match your gameObject configuration.
 
-**Issue with ResultsPanel CanvasGroup:**  You must configure the LevelManager code to match your gameObject configuration.
+ - **Move the StartButton in the Hierarchy** so it is **not a child of the ResultsPanel**, so that the StartButton can be re-activated for starting each level (otherwise the StartButton is hidden when the ResultsPanel is hidden).  This is how the code is implemented in the provided LevelManager script.
 
-- **Remove the StartButton** from the ResultsPanel, so that the StartButton can be re-activated for starting each level (otherwise the StartButton is hidden when the ResultsPanel is hidden).  This is implemented in the provided LevelManager script.
-- **Otherwise: Add logic:** Utility.HideCG( cg ); Utility.ShowCG( cg ); when loading each level - similar to the current logic to activate, disable the StartGameButton in the code
+ - **Otherwise: Add logic:** Utility.HideCG( cg ); Utility.ShowCG( cg ); when loading each level - similar to the current logic to activate, disable the StartGameButton in the code, to insure the StartButton for each level is visible.
+
+You will need to do **Further configuration for LevelManager**, see below
 
 
 
-###ScreenFader (optional) 
+###Create ScreenFader.cs (optional) 
 
 - **ScreenFader (optional)**   The LevelManager includes code for a ScreenFader functionality, either remove that code, or create a new C# script, paste code for [ScreenFader.cs](/class-code-examples/screenfader.md).  Put the ScreenFader script on the MainCamera gameObject in any scene you want Fade-in during start.  Code must be modified in State scripts if you want Fade-out at the end of a scene.  For any scene that uses ScreenFader, you must create a UI-Image gameObject, move it out of the camera's view, set the color to black. 
 
@@ -65,7 +67,7 @@ You will need to do further configuration for LevelManager, see below
   SceneManager.LoadScene(curScene.buildIndex); //add this if not using fader
 ```      
 
-###CameraFollow (optional) 
+###Create CameraFollow.cs (optional) 
 - **CameraFollow (optional) : Player must have Tag: Player **  Create a new C# script, paste code for [CameraFollow.cs](/cameraFollow), attach to MainCamera in MiniGame.  This assumes you have a background image larger than the camera's viewport, play around with variables that restrict amount of camera movement, so it works with your backgrounds.
 
 ###PlayerStats
