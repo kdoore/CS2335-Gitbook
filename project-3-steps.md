@@ -46,6 +46,13 @@ Delete MiniGameManager, and MiniGameManager.cs, replace with LevelManager
 
 You will need to do further configuration for LevelManager, see below
 
+**Issue with ResultsPanel CanvasGroup:**  You must choose: 
+
+- **Remove the StartButton** from the ResultsPanel, so that the StartButton can be re-activated for starting each level (otherwise the StartButton is hidden when the ResultsPanel is hidden).  This is implemented in the provided LevelManager script.
+ - **Otherwise: Add logic:** Utility.HideCG( cg ); Utility.ShowCG( cg ); when loading each level - similar to the current logic to activate, disable the StartGameButton in the code
+
+
+
 ###ScreenFader (optional) 
 
 - **ScreenFader (optional)**   The LevelManager includes code for a ScreenFader functionality, either remove that code, or create a new C# script, paste code for [ScreenFader.cs](/class-code-examples/screenfader.md).  Put the ScreenFader script on the MainCamera gameObject in any scene you want Fade-in during start.  Code must be modified in State scripts if you want Fade-out at the end of a scene.  For any scene that uses ScreenFader, you must create a UI-Image gameObject, move it out of the camera's view, set the color to black. 
