@@ -29,7 +29,7 @@ Updated 4/21/2019
  - [LevelManager ](/class-code-examples/levelmanager-final.md)
  
 **PlayerStats - must be updated for LevelManager**
- - [PlayerStats](/project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontrollerv2-mods/playercontrollerv2-final.md)
+ - [PlayerStats](/class-code-examples/playerstats-final.md)
  
 **CameraFollow Script**
  - [CameraFollow](/class-code-examples/camerafollow.md)
