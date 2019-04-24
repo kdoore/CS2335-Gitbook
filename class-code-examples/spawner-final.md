@@ -81,9 +81,6 @@ public class Spawner : MonoBehaviour {
         {
             Destroy(hazard.gameObject);
         }
-
-
-
     } //end DestroySpawnedObjects
 } //end of class  
 
