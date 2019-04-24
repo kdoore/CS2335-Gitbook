@@ -66,7 +66,7 @@ You will need to do **Further configuration for LevelManager**, see below
  - DestroySpawnedObjects( )
  - DestroyAllSpawnedObjects( )
  
- ###Create ScreenFader.cs (optional) 
+###Create ScreenFader.cs (optional) 
 
 - **ScreenFader (optional)**   The LevelManager includes code for a ScreenFader functionality, either remove that code, or create a new C# script, paste code for [ScreenFader.cs](/class-code-examples/screenfader.md).  Put the ScreenFader script on the MainCamera gameObject in any scene you want Fade-in during start.  Code must be modified in State scripts if you want Fade-out at the end of a scene.  For any scene that uses ScreenFader, you must create a UI-Image gameObject, move it out of the camera's view, set the color to black. 
 
