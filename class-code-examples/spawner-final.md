@@ -1,7 +1,7 @@
 #Spawner.cs - Final
 
 This code includes updated code to: **DestroyAllSpawnedObjects**
-Destroys objects with Component of type: PickUp, ScorePickUp, Hazard
+Destroys objects with Component of type: PickUp, ScorePickUp, Hazard, change to fix in your code so it is consistent. You may want to delete the MiniGameManager.cs script, otherwise fix the error caused there. 
 
 
 
