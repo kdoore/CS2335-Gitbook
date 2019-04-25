@@ -43,11 +43,12 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 
 ###Create LevelManager.cs, Create LevelManager GameObject 
  - **Create empty gameObject: LevelManager** 
-Delete MiniGameManager, and MiniGameManager.cs, replace with LevelManager
+
+- **Delete MiniGameManager, and MiniGameManager.cs, replace with LevelManager**
 
   - **Add script: [LevelManager.cs](/class-code-examples/levelmanager-final.md) to LevelManager in Scene**  Create or update code in LevelManager, add to LevelManager empty gameObject.  Look at the inspector fields for LevelManager.
 
-- **Issue with ResultsPanel CanvasGroup:**  You must configure the LevelManager code to match your gameObject configuration.
+- **Issue with ResultsPanel CanvasGroup:**  You must configure the LevelManager code to match your gameObject configuration. **If StartGameButton is a child of ResultsPanel, the StartLevel2 button will not appear.**
 
  - **Move the StartButton in the Hierarchy** so it is **not a child of the ResultsPanel**, so that the StartButton can be re-activated for starting each level (otherwise the StartButton is hidden when the ResultsPanel is hidden).  This is how the code is implemented in the provided LevelManager script.
 
