@@ -33,6 +33,8 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 ###Update PlayerController.cs, Player gameObject
 
 - **Player:  Update PlayerController Script**   This includes 2 custom UnityEvents.
+
+- **Create Tags: Exit, Water** These tags are used in OnTriggerEnter2D in PlayerController. If not using Exit or Water features, you can remove the associated code in OnTriggerEnter2D, then you won't need these new Tags, otherwise, you'll get an error if the Tags don't exist.
   
  - **PlayerSpawnPoint:** Create an Empty GameObject:  PlayerSpawnPoint, select an icon so it is visible in the scene.  Position this gameObject at the position that you want the player positioned at the start of each level.  Populate this on the PlayerController, and LevelManager components in the inspector. **Make sure the PlayerSpawnPoint has Transform.Position.Z = 0 (if Z= -10 you won't see the player)**
 
