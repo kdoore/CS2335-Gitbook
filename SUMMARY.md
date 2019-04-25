@@ -127,6 +127,7 @@
     * [ScreenFader](class-code-examples/screenfader.md)
     * [MiniGState](class-code-examples/minigame.md)
     * [EndState](class-code-examples/endscenestate.md)
+  * [MiniGameWin Logic](minigamewin-logic.md)
 * [Project 3 - Steps ](project-3-steps.md)
 
 ## Optional, Supplemental Content
