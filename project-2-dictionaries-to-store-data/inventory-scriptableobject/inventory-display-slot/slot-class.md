@@ -1,6 +1,6 @@
 #Slot Class
 
-**updated Apr 10, 2019**
+**updated Apr 26, 2019**
 
 
 ```java
@@ -10,9 +10,8 @@ using UnityEngine.EventSystems;
 
 //modified from
 ////https://github.com/Toqozz/blog/blob/master/inventory
-//updated Apr 10, 2019
 
-    public class Slot : MonoBehaviour, IPointerClickHandler
+public class Slot: MonoBehaviour, IPointerClickHandler
 {
     InventoryDisplay inventoryDisplay; 
     public int index = 0; //is auto-set within PhysicalInventory
@@ -31,7 +30,7 @@ using UnityEngine.EventSystems;
     //Detect if a click occurs
     public void OnPointerClick(PointerEventData pointerEventData)
     { //check to see if an item is in the slot!
-        if (itemInstance != null)
+        if (itemInstance != null && itemInstance.item != null)
         {
             itemInstance.item.Use();
             inventoryDisplay.RemoveItem(itemInstance, index);
@@ -61,6 +60,8 @@ using UnityEngine.EventSystems;
     {
         if (this.index == index) //check it is the slot's current index
         {
+           
+
             this.itemInstance = null;
             this.childImage.sprite = null;
             this.childImage.color = Color.clear;
@@ -68,6 +69,7 @@ using UnityEngine.EventSystems;
         }
     }
 } //end class Slot
+
 
 ```
 

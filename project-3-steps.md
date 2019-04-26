@@ -5,6 +5,8 @@ Project 3 is focuses on Understanding Event-Driven System-level code-structures.
 ###Inventory System
 The Inventory System uses Scriptable-objects to create custom objects that can represent items a player might collect during game-play.  The Inventory-System separates game-data storage-functionality from UI-interaction-display functionality. [Inventory-System ](/project-2-dictionaries-to-store-data/inventory-scriptableobject.md)Code, [InventoryDisplay](/project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md) Prefabs, and [Instructions](/project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot.md) are provided in these sections of the gitbook.
 
+For InventoryDisplay, an error may occur if you click into an empty slot.  
+
 ###Level-Manager for Enhanced MiniGame
 
 Once you have a working Inventory-System, proceed to completing the enhanced MiniGame by adding logic for multi-level game.  
