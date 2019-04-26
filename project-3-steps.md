@@ -115,6 +115,40 @@ You will need to do **Further configuration for LevelManager**, see below
 
 ![](/assets/Screen Shot 2019-04-24 at 1.11.38 PM.png)    ![](/assets/Screen Shot 2019-04-24 at 1.40.46 PM.png)
 
+###LevelManager Required Code Updates for activating Level3 gameObjects:  
+
+ **You'll need to write code for 2 methods:  LoadLevel3(), StartLevel3(). ** You'll modify code below.  **Each line with comment: //-UPDATE, needs to be modified for Level3 functionality.**  Note that the array indexes are different than the level number:
+ 
+ - index [0] corresponds to Level 1
+ - index [1] corresponds to Level 2
+ - index [2] corresponds to Level 3
+
+```java
+ void LoadLevel2()
+    {
+        StopSpawner(LevelState.level1);
+        StopAllCoroutines(); //stop timer
+        fader.FadeReset(); //fadeOut - fadeIn
+        gameObjectLayers[0].SetActive(false); //level 1 - UPDATE 
+        gameObjectLayers[1].SetActive(true); //level 2 - UPDATE
+        ResetPlayerPosition(); //move player to right edge
+        startGameButton.onClick.RemoveAllListeners();
+        startGameButton.onClick.AddListener(StartLevel2);// - UPDATE
+        btnText.text = "Start Level 2"; //- UPDATE
+        startGameButton.gameObject.SetActive(true);
+
+    }
+    public void StartLevel2()
+    {
+        StartSpawner(LevelState.level2);// -UPDATE
+        levelText.text = "Level 2";// - UPDATE
+        startGameButton.gameObject.SetActive(false);
+        StartCoroutine(reloadTimer(30));
+    } 
+```
+
+
+
 ###UI Elements:
 
 - **Create 2 UI-Text fields:  LevelText, TimerText:** these will display the level number and the timer in seconds. Populate the LevelManager public fields in the Inspector panel using these gameObjects.
