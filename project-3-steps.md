@@ -117,11 +117,11 @@ You will need to do **Further configuration for LevelManager**, see below
 
 ###LevelManager Required Code Updates for activating Level3 gameObjects:  
 
- **You need to write custom code for 2 methods:**  
+ **You need to write custom code for 2 methods to activate Level 3:**  
   - **LoadLevel3()**
   - **StartLevel3()**
  
- ** You can use modified logic (LoadLevel2 ) - by modifying code in the indicated 6 code statements below.  **Each line with comment: //-UPDATE, needs to be modified for Level3 functionality.**  Note that the array indexes are different than the level number:
+ ** You can use modified logic (similar to: LoadLevel2 ) by modifying code in the indicated 6 code statements below.  **Each line with comment: //-UPDATE, needs to be modified for Level3 functionality.**  Note that the array indexes are different than the level number:
  
  - index [0] corresponds to Level 1
  - index [1] corresponds to Level 2
