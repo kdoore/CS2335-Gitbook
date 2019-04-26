@@ -128,20 +128,27 @@ public class MiniGState : IStateBase {
     {
         if (GameData.instanceRef.miniGameWinner) //check GameData
         {
-            //LoadWinScene(); //we won
+            LoadWinScene(); //true: player won
         }
         else
         {
-            //LoadLoseScene();
+            LoadLoseScene(); //false: player lost
         }
 
     }
 
-    public void LoadEndScene()
+    public void LoadWinScene()
     {
-        SceneManager.LoadScene("EndScene");
-        StateManager.instanceRef.SwitchState(new EndState());
+        SceneManager.LoadScene("WinScene");
+        StateManager.instanceRef.SwitchState(new WinState());
     }
+    
+    public void LoadLoseScene()
+    {
+        SceneManager.LoadScene("LoseScene");
+        StateManager.instanceRef.SwitchState(new LoseState());
+    }
+
 }
 
 
