@@ -117,31 +117,35 @@ You will need to do **Further configuration for LevelManager**, see below
 
 ###LevelManager Required Code Updates for activating Level3 gameObjects:  
 
- **You'll need to write code for 2 methods:  LoadLevel3(), StartLevel3(). ** You'll modify code below.  **Each line with comment: //-UPDATE, needs to be modified for Level3 functionality.**  Note that the array indexes are different than the level number:
+ **You need to write custom code for 2 methods:**  
+  - **LoadLevel3()**
+  - **StartLevel3()**
+ 
+ ** You can use modified logic (LoadLevel2 ) - by modifying code in the indicated 6 code statements below.  **Each line with comment: //-UPDATE, needs to be modified for Level3 functionality.**  Note that the array indexes are different than the level number:
  
  - index [0] corresponds to Level 1
  - index [1] corresponds to Level 2
  - index [2] corresponds to Level 3
 
 ```java
- void LoadLevel2()
+ void LoadLevel2()      //LoadLevel3( ) is similar
     {
         StopSpawner(LevelState.level1);
         StopAllCoroutines(); //stop timer
         fader.FadeReset(); //fadeOut - fadeIn
-        gameObjectLayers[0].SetActive(false); //level 1 - UPDATE 
-        gameObjectLayers[1].SetActive(true); //level 2 - UPDATE
+        gameObjectLayers[0].SetActive(false); //level 1 - UPDATE 1
+        gameObjectLayers[1].SetActive(true); //level 2 - UPDATE 2
         ResetPlayerPosition(); //move player to right edge
         startGameButton.onClick.RemoveAllListeners();
-        startGameButton.onClick.AddListener(StartLevel2);// - UPDATE
-        btnText.text = "Start Level 2"; //- UPDATE
+        startGameButton.onClick.AddListener(StartLevel2);// - UPDATE 3
+        btnText.text = "Start Level 2"; //- UPDATE 4
         startGameButton.gameObject.SetActive(true);
 
     }
-    public void StartLevel2()
+    public void StartLevel2()     //StartLevel3( ) is similar
     {
-        StartSpawner(LevelState.level2);// -UPDATE
-        levelText.text = "Level 2";// - UPDATE
+        StartSpawner(LevelState.level2);// -UPDATE 5
+        levelText.text = "Level 2";// - UPDATE 6
         startGameButton.gameObject.SetActive(false);
         StartCoroutine(reloadTimer(30));
     } 
