@@ -1,6 +1,6 @@
 #LevelManager - Final
 
-_updated 4/21/2019_
+_updated 4/26/2019_
 
 Assumes you are using:  (If you choose not to use these, remove any code associated with these script components)
 - CameraFollow Script
@@ -150,36 +150,42 @@ public class LevelManager : MonoBehaviour
     }//end NextLevel
 
     ////YOU WILL MODIFY THESE METHODS SO THEY CORRESPOND TO YOUR GAME"S LOGIC
-    void StartLevel1()
+   void StartLevel1()
     {
         startGameButton.gameObject.SetActive(false);
+        Utility.HideCG(cg);
         gameObjectLayers[0].SetActive(true); //level1
         levelText.text = "Level 1";
-        StartCoroutine(reloadTimer(30));
         StartSpawner(LevelState.level1);
+        StartCoroutine(reloadTimer(30));
     }
 
+    //stop level1, prepare for starting level2
     void LoadLevel2()
     {
+        player.SetActive(false);
         StopSpawner(LevelState.level1);
         StopAllCoroutines(); //stop timer
         fader.FadeReset(); //fadeOut - fadeIn
-        gameObjectLayers[0].SetActive(false); //level1
-        gameObjectLayers[1].SetActive(true); //level2
-        ResetPlayerPosition(); //move player to right edge
         startGameButton.onClick.RemoveAllListeners();
         startGameButton.onClick.AddListener(StartLevel2);
         btnText.text = "Start Level 2";
         startGameButton.gameObject.SetActive(true);
-
     }
+
+    //When "Start Level 2" button is selected
     public void StartLevel2()
     {
+        gameObjectLayers[0].SetActive(false); //level1
+        gameObjectLayers[1].SetActive(true); //level2
+        ResetPlayerPosition(); //move player to right edge
+        player.SetActive(true);
         StartSpawner(LevelState.level2);
         levelText.text = "Level 2";
         startGameButton.gameObject.SetActive(false);
         StartCoroutine(reloadTimer(20));
     }
+
 
     void LoadLevel3()
     {
