@@ -1,6 +1,6 @@
 #LevelManager - Final
 
-_updated 4/26/2019_ 
+_updated 4/26/2019_ (Small changes to LoadLevel2, StartLevel2 to improve Level transition with ScreenFader.  Player is disabled, New Scene isn't loaded until Button is pressed 
 
 Assumes you are using:  (If you choose not to use these, remove any code associated with these script components)
 - CameraFollow Script
