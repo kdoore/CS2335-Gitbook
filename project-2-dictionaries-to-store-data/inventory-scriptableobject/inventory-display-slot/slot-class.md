@@ -2,6 +2,7 @@
 
 **updated Apr 26, 2019**
 
+Code updated to insure that clicking on an empty slot does not cause an error.  
 
 ```java
 using UnityEngine;
@@ -30,7 +31,7 @@ public class Slot: MonoBehaviour, IPointerClickHandler
     //Detect if a click occurs
     public void OnPointerClick(PointerEventData pointerEventData)
     { //check to see if an item is in the slot!
-        if (itemInstance != null && itemInstance.item != null)
+        if (itemInstance != null && itemInstance.item != null) ///fixed code, it's necessary to check that both of these are not null
         {
             itemInstance.item.Use();
             inventoryDisplay.RemoveItem(itemInstance, index);
