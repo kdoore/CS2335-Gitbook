@@ -1,7 +1,7 @@
 #MiniGame Win Lose Logic - Optional 
 There are 2 different versions of MiniGState below. Version 1 always loads the EndScene, Version 2 loads the next scene depending on consequences of winning or losing the MiniGame. 
 
-###VERSION 1
+###VERSION 1 - Always Executes: LoadEndScene( )
 When the onMiniGame Event occurs, it triggers loading of the EndScene.
 
 
@@ -74,7 +74,7 @@ public class MiniGState : IStateBase {
 ```
 
 
-###VERSION 2
+###VERSION 2 - Conditional Logic Determines next Scene to Load
 The code below shows how you can use the LevelManager custom UnityEvent: onMiniGameEnd.  In the example code below, when the event occurs, then the MiniGameOver method is executed, it checks GameData, to determine if the player won or lost the MiniGame, and it determines the next scene based on that logic.
 
 
