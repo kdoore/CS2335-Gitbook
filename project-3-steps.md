@@ -7,6 +7,8 @@ The Inventory System uses Scriptable-objects to create custom objects that can r
 
 For InventoryDisplay, an error may occur if you click into an empty slot.  
 
+To fix this error, update your code for Slot.cs
+
 ###Level-Manager for Enhanced MiniGame
 
 Once you have a working Inventory-System, proceed to completing the enhanced MiniGame by adding logic for multi-level game.  
