@@ -75,6 +75,8 @@ public class LevelManager : MonoBehaviour
         btnText = startGameButton.GetComponentInChildren<Text>();
 
         gameObjectLayers[0].SetActive(true); //Level1 gameObjects, spawner, background, floor
+        gameObjectLayers[1].SetActive(false); //Level1 gameObjects, spawner, background, floor
+        gameObjectLayers[2].SetActive(false); //Level1 gameObjects, spawner, background, floor
         curLevel = LevelState.start;
 
         //show Start Panel at start of Scene.
