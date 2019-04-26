@@ -11,6 +11,8 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 
 **Custom UnityEvents:** The LevelManager-System uses custom UnityEvents to manage decoupled object-communication. Scripts were modified to integrate additional logic for Publishing, Listening for custom UnityEvents across several classes: **GameData, PlayerController, LevelManager, MiniGState.
 **
+
+
 **Enhanced Game-play:**The Minigame is modified to include enhanced concepts:  **timer, collect-use items, camera-follow, water-hazard, platforms, scene-fading, scene-reloading. **Consequences for win/lose mini-game must exist.
 
 ##Project 3 Steps: Enhanced MiniGame 
@@ -47,6 +49,20 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 - **Delete MiniGameManager, and MiniGameManager.cs, replace with LevelManager**
 
   - **Add script: [LevelManager.cs](/class-code-examples/levelmanager-final.md) to LevelManager in Scene**  Create or update code in LevelManager, add to LevelManager empty gameObject.  Look at the inspector fields for LevelManager.
+  
+ 
+- Add Code in LevelManager Start( ), to disable gameObjectLayers, 2 and 3.  Put near bottom of Start,  
+
+```java
+//the code statement exists in LevelManager, Start()
+ gameObjectLayers[0].SetActive(true); //Level1 gameObjects, spawner, background, floor
+ 
+ //add this code to disable LayerObjects_levels 2, 3
+gameObjectLayers[1].SetActive(false); //disable Level2 gameObjects
+gameObjectLayers[2].SetActive(false); //disable Level3 gameObjects
+
+```
+
 
 ###ResultsPanel, StartGameButton Issue in MiniGame
 - **Issue with ResultsPanel CanvasGroup:**  You must configure the LevelManager code to match your gameObject configuration. **If StartGameButton is a child of ResultsPanel, the StartLevel2 button will not appear.**
@@ -54,6 +70,7 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
  - **Move the StartButton in the Hierarchy** so it is **not a child of the ResultsPanel**, so that the StartButton can be re-activated for starting each level (otherwise the StartButton is hidden when the ResultsPanel is hidden).  This is how the code is implemented in the provided LevelManager script.
 
  - **Otherwise: Add logic:** Utility.HideCG( cg ); Utility.ShowCG( cg ); when loading each level - similar to the current logic to activate, disable the StartGameButton in the code, to insure the StartButton for each level is visible.
+
 
 You will need to do **Further configuration for LevelManager**, see below
 
