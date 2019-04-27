@@ -6,7 +6,7 @@ This book will provide supplemental instructional resources for CS-2335: Compute
 ##WHY Learn about Programming for Modeling Systems with C# and Unity?  
 
 Read this article:
-[Brenda Romero's guide to becoming a game designerBrenda Romero's guide to becoming a game designer](https://www.gamesindustry.biz/articles/2019-04-09-brenda-romeros-guide-to-becoming-a-game-designer)  
+[Brenda Romero's guide to becoming a game designer](https://www.gamesindustry.biz/articles/2019-04-09-brenda-romeros-guide-to-becoming-a-game-designer)  
 
 
 >**Rule #1: "Be nice to programmers**," ... "Be very, very nice. Because at the end of the day, the programmer is going to be the one getting your feature in that you're really, really hoping will stay in. And they will remember all that currency you built up when you were irritated with them or anything else, **so always treat programmers with the utmost respect.** 
