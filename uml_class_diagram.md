@@ -14,9 +14,6 @@ The diagrams below shows the Unified Modeling Language Class diagrams for major 
 ###MiniGame UML - Main Classes
 
 ![](/assets/Screen Shot 2019-04-28 at 11.01.35 AM.png)
-###LevelManager Logic Diagram - MiniGame
-
-
 
 ###Example: Non-Player Character: NPCharacter
 
