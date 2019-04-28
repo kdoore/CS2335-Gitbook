@@ -5,11 +5,18 @@ The diagrams below shows the Unified Modeling Language Class diagrams for major 
  
 ###State Manager: State-Machine Framework
 
-![](/assets/Screen Shot 2018-02-12 at 3.43.41 PM.png)
+![](/assets/Screen Shot 2019-04-28 at 11.01.13 AM.png)
 
 ###UML Class Diagram for Inventory System
 
-![](/assets/Screen Shot 2019-04-19 at 5.33.27 PM.png)
+![](/assets/Screen Shot 2019-04-28 at 10.59.59 AM.png)
+
+###MiniGame UML - Main Classes
+
+![](/assets/Screen Shot 2019-04-28 at 11.01.35 AM.png)
+###LevelManager Logic Diagram - MiniGame
+
+
 
 ###Example: Non-Player Character: NPCharacter
 

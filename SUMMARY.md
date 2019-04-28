@@ -166,7 +166,7 @@
   * [Flow-Chart](flow-chart_example.md)
   * [Finite State Machine](finite_state_machine.md)
   * [State Machine Framework](state_machine_framework_diagram.md)
-  * [UML Class Diagram](uml_class_diagram.md)
+  * [UML Class Diagrams](uml_class_diagram.md)
 * [Glossary](GLOSSARY.md)
 * [References and Resources](references.md)
 * [Random Thoughts](random-collections-of-thoughts.md)

@@ -28,4 +28,9 @@ Event:
  
  State-Event Transitions: A logical structure specifies which events cause valid transitions for each CurrentState-Event-NextState transition relationship.
 
+###UML Class Diagrams: State-Manager System
+**State-Machine Framework**
+
+![](/assets/Screen Shot 2019-04-28 at 11.01.13 AM.png)
+
 
