@@ -1,10 +1,18 @@
 #Updated InventorySystem
 
+Updated: 4/30/2019
+
 If you update all scripts below, then your Inventory display all items correctly: 
 
 The initial version of InventorySystem had the InventoryDisplay use ItemInstance as the key for the dictionary of item Counts.  Instead, we want to use item as the dictionary key.  
 
 In the entire project, there is one item, and many itemInstances.  The ItemInstance is a wrapper class that will allow easy expansion to include additional attributes to our inventory items.  So, in that case, if we had good, better, best qualities, then we'd need to decide the best way to display those.
+
+**Required Code Changes - Code listed below**
+   - **Inventory.cs**
+   -  **InventoryDisplay.cs**
+   - **Slot.cs**
+
 
 #Inventory Class
 
