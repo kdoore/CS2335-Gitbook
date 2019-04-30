@@ -164,24 +164,31 @@ public class LevelManager : MonoBehaviour
     void LoadLevel2()
     {
         player.SetActive(false);
-        StopSpawner(LevelState.level1);
+        StopSpawner(LevelState.level1); //- needs changed for l3
+
         StopAllCoroutines(); //stop timer
         fader.FadeReset(); //fadeOut - fadeIn
         startGameButton.onClick.RemoveAllListeners();
-        startGameButton.onClick.AddListener(StartLevel2);
-        btnText.text = "Start Level 2";
+        
+        startGameButton.onClick.AddListener(StartLevel2); //- needs changed for l3
+
+        btnText.text = "Start Level 2"; //-- needs changed for l3
+
         startGameButton.gameObject.SetActive(true);
     }
 
     //When "Start Level 2" button is selected
     public void StartLevel2()
     {
-        gameObjectLayers[0].SetActive(false); //level1
-        gameObjectLayers[1].SetActive(true); //level2
+        gameObjectLayers[0].SetActive(false); //level1 - needs changed for l3
+        gameObjectLayers[1].SetActive(true); //level2 - needs changed for l3
+
         ResetPlayerPosition(); //move player to right edge
         player.SetActive(true);
-        StartSpawner(LevelState.level2);
-        levelText.text = "Level 2";
+        StartSpawner(LevelState.level2);// -- needs changed for l3
+
+        levelText.text = "Level 2"; //- needs changed for l3
+
         startGameButton.gameObject.SetActive(false);
         StartCoroutine(reloadTimer(20));
     }
