@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour {
             {
                 ScorePickUp scoreItem = collision.GetComponent<ScorePickUp>();
                 if (scoreItem != null) { 
-                    GameData.instanceRef.Add(item.Value); //points for each specific item's value
+                    GameData.instanceRef.Add(scoreItem.Value); //points for each specific item's value
                 }
             }
             AudioSource collectSound = collision.gameObject.GetComponent<AudioSource>();
