@@ -45,7 +45,7 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
 public void Add(int value)
     {
         score += value;
-        levelScore += value; ////MAJOR ISSUE SOLVED
+        levelScore += value; ////MAJOR ISSUE SOLVED - update the levelScore
 
         Debug.Log("Score is updated " + score);
         InvokePlayerDataUpdate();
