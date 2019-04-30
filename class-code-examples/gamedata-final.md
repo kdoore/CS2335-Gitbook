@@ -2,8 +2,9 @@
 
 Final version of GameData, customize as needed.
 
-_Updated 4/24/2019_
-
+_Updated 4/30/2019_
+**Fixed an issue:  LevelScore is now updated in Add( ) method
+**
 ```java
 
 
