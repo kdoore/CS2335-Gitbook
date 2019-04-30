@@ -25,7 +25,7 @@ Contains custom Events, LevelManager is the subscriber object:
 - onPlayerReachExit
 - onPlayerDied 
  
-
+//updated 4/30/2019 - Fixed an issue when colliding with ScorePickUp
 
 ```java
 
