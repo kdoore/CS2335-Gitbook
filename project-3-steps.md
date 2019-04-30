@@ -34,7 +34,26 @@ Once you have a working Inventory-System, proceed to completing the enhanced Min
         Debug.Log("Health is updated " + health);
         InvokePlayerDataUpdate();
     }
+    
+    
+    
 ```
+
+**Updated GameData: Add: 4/30/19**
+
+```java
+public void Add(int value)
+    {
+        score += value;
+        levelScore += value; ////MAJOR ISSUE SOLVED
+
+        Debug.Log("Score is updated " + score);
+        InvokePlayerDataUpdate();
+
+    }
+```
+
+
 
 ###Update PlayerController.cs, Player gameObject
 
