@@ -93,6 +93,7 @@ public class GameData : MonoBehaviour {
     public void Add(int value)
     {
         score += value;
+        levelScore += value;
         Debug.Log("Score is updated " + score);
         InvokePlayerDataUpdate();
     }
