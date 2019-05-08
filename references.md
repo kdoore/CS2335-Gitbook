@@ -162,6 +162,8 @@ Rules for Story-Telling: [Pixar, Emily Coats:](http://storyshots.tumblr.com/post
 
 [Standard Patterns in Choice-Based Games](https://heterogenoustasks.wordpress.com/2015/01/26/standard-patterns-in-choice-based-games/)
 
+[WebToons a New Form For Graphic Narrative](http://www.tcj.com/the-webtoon-a-new-form-for-graphic-narrative/)
+
 #Tutorials
 [2D Camera Tutorial](https://adventurecreator.org/tutorials/working-2d-cameras-unity-2d)
 
