@@ -3,6 +3,7 @@
 ## Introduction
 
 * [Introduction](README.md)
+  * [Game Design](game-design.md)
 * [Unity - Download](chapter1.md)
 * [Visual Studio - IDE](monodevelop.md)
 
