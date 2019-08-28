@@ -13,6 +13,9 @@
 * [Unity Editor Windows](unity-editor-windows.md)
 * [MonoBehavior - Base-Class](monobehaviour.md)
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
+
+## Getting Started
+
 * [UI-Elements](overview/ui-elements.md)
 * [Animator Controller](animation_controller.md)
   * [Animation Steps](animation_controller/animation-steps.md)
