@@ -19,8 +19,7 @@ The Unity Animator controller provides a visual programming language implementat
 [Link to Free - 2D GameArt - Sprites used here](http://www.gameart2d.com/freebies.html)
 
 **In Class Code Example:**
-[CS2335-In Class Code Example - Spring 18
-](https://utdallas.box.com/v/miniGameS18-v1)
+ TODO: add code for fall 19
 
 
 

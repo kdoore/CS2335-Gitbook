@@ -17,6 +17,9 @@
 ## Project 1 - Simple Game
 
 * [Overview](overview.md)
+  * UI-Elements
+* [Animator Controller](animation_controller.md)
+  * [Animation Steps](animation_controller/animation-steps.md)
 * [Getting Started](getting-started-v2.md)
   * [UML Class Diagram](getting-started-v2/uml-class-diagram.md)
 * [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
@@ -36,8 +39,6 @@
 
 * [PlayerController - jump](project1-enhancements/playercontroller-v2.md)
 * [PlayerController Animations](project1-enhancements/playercontroller-animations.md)
-* [Animator Controller](animation_controller.md)
-  * [Animation Steps](animation_controller/animation-steps.md)
 * [PickUp - SelfDestruct](project1-enhancements/pickup-selfdestruct.md)
 * [Spawn from Arrays](project1-enhancements/spawn-from-arrays.md)
 
