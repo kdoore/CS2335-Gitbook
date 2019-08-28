@@ -6,6 +6,7 @@
   * [Game Design](game-design.md)
 * [Unity - Download](chapter1.md)
 * [Visual Studio - IDE](monodevelop.md)
+* [Hero's Journey](heros-journey.md)
 
 ## Unity Basics
 
