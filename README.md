@@ -19,9 +19,11 @@ Read this article:
 
 
 
+##Course Overview: Program a simple Adventure-Game.
 
 
-##Course Overview: Program a simple Adventure-Game. 
+ [UTD Mercury Article: Choose your adventure: Spring 19:](https://utdmercury.com/choose-your-adventure/ ) 
+ 
 **Learn: C# OOP-Programming, Object-Oriented Design, System-Modeling (game-systems), Programming Patterns, UML Modeling Language, using Unity Game Engine. **
 
 This course aims to enhance your ability to **Communicate Game-Experience Ideas, Concepts** with programmers and others.   This course teaches **Computational Systems and Patterns** used in programming games by taking a deep dive into the fundamental building blocks of the concepts of game-systems.  **Game are Event-Driven Systems**. The art/science of **Designing Computational-Systems** falls within the domain of '**Modeling and Simulation**', which is a core of Computer Science. This course introduces **Computational Languages, Programming Patterns, System-Modeling, and UML**, a Visual Language to convey these concepts.  This course teaches how to program a **Simple Adventure Game**, using **C#** and Unity Game Engine.   
