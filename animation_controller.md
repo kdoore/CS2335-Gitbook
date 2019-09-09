@@ -57,143 +57,78 @@ In order to integrate an animation with a gameObject, we need a 2D gameObject th
 
 To control a animation associated with a gameObject, outside of the Animator Controller, such as user-input, then we'll need a custom C\# script that can manage the logic to determine what input events have occurred and whether the input should impact the animation controller state.  Our custom script will send input signals to the Animator Controller State Machine, where the animator controller state machine will consider the current animator state, the input signals, and the defined transition conditions to determine whether to switch to a new animation clip.
 
-Below is a simple example class: PlayerController.cs which checks for left-right arrow keyboard input, or the fire1 key which maps to the control key on a MAC.  In Fixed-Update, the code checks for input, then uses if-else statement blocks to determine what value to send to the Animator component that is attached to the gameObject. Below is the link to a set of free sprites including the cat sprites used in the starter code example animations.
+Below is a simple example class: PlayerController.cs which checks for left-right arrow keyboard input, or the jump key which maps to the spacebar on a MAC.  
+
+In Fixed-Update, the code checks for input, then uses if-else statement blocks to determine what value to send to the Animator component that is attached to the gameObject. Below is the link to a set of free sprites including the cat sprites used in the starter code example animations.
 
 [Link to Free - 2D GameArt - Cat Sprite Assets](http://www.gameart2d.com/freebies.html)
 
+###Simple PlayerController:
+Simple Script to connect key-input to Animator Parameter: "HeroState".
 
-```
+```java
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 public class PlayerController : MonoBehaviour
 {
+    //create custom data-type
+    public enum HeroState { idle = 0, walk = 1, jump = 2}
+    public HeroState curState;
 
-    private enum heroState
+    private bool facingRight = true; // initialize when declare (first way),  false by default
+
+    private Animator animator; //obj-reference variable to access the animator component on this gameObject
+
+    //inspector is the second way to initialize a value
+
+    // Start is called before the first frame update
+    private void Start()
     {
-        idle = 0,
-        walk = 1,
-        jump = 2,
-        dead = 3
-    };
-
-    private Rigidbody2D rb2D;
-    private Animator anim;
-    public float forceX;
-    public float jumpForce;
-    private bool jump;
-    private bool facingRight;
-    private bool dead;
-
-
-    // Use this for initialization
-    void Start()
-    {
-        forceX = 80;
-        jumpForce = 6;
-        rb2D = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        anim.SetInteger("HeroState", (int)heroState.idle);
-        facingRight = true;
-        jump = false;
-        dead = false;
+        facingRight = true; //final way to initialize, overrides all prior settings
+        animator = GetComponent<Animator>(); //<T>  //call a method - make connection to component on gameObject in Unity scene
+        animator.SetInteger( "HeroState",  (int) HeroState.idle      );
     }
 
-    //every frame, check to see if Jump button has been pressed
-    void Update()
+    //Fixed update used for physics, to give smooth motion, called at consistent time increments
+    void FixedUpdate()
     {
-        if (Input.GetButtonDown("Jump")) //spacebar
+        float inputX = Input.GetAxis("Horizontal"); // key input:  -1, 0, 1
+        bool isWalking = Mathf.Abs(inputX) > 0;
+
+        bool jumpPressed = Input.GetButtonDown("Jump");
+
+        if (isWalking)
         {
-            jump = true;
+            animator.SetInteger("HeroState", (int)HeroState.walk);
         }
         else
         {
-            jump = false;
+            animator.SetInteger("HeroState", (int)HeroState.idle);
         }
 
-    }
 
-    /// <summary>
-    /// //move the player
-    /// </summary>
-    void FixedUpdate()
-    {
-            float inputX = Input.GetAxis("Horizontal"); //arrows, a,d,
-            bool isWalking = Mathf.Abs(inputX) > 0; //we need to move the player
-
-            if (isWalking)
-            {
-                anim.SetInteger("HeroState", (int)heroState.walk);//1
-                if (inputX > 0 && !facingRight)
-                {
-                    flip();
-                    Debug.Log("Flipped to face Right");
-                }
-                if (inputX < 0 && facingRight)
-                {
-                    flip();
-                }
-                //set x velocity to 0, keep y velocity the same
-                rb2D.velocity = new Vector2(0, rb2D.velocity.y);
-
-                rb2D.AddForce(new Vector2(forceX * inputX, 0)); //add x force
-
-            }
-            else
-            {
-                anim.SetInteger("HeroState", (int)heroState.idle);
-            }
-
-            if (jump)
-            {
-                anim.SetInteger("HeroState", (int)heroState.jump);
-                //set y velocity to 0, maintain x velocity when jumping
-                rb2D.velocity = new Vector2(rb2D.velocity.x, 0);
-                rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse); //add force in Y direction
-            }
-    }
-
-    void OnTriggerEnter2D(Collider2D hitObject)
-    {
-        if (hitObject.CompareTag("Collectible"))
+        if (jumpPressed)
         {
-            PickUp item = hitObject.GetComponent<PickUp>();
-            if (item != null)
-            {
-              //  GameData.instanceRef.Add(item);
-                Debug.Log("Added item " + item.type);
-                item.DestroyMe(); //better way to have item destroy itself
-                //Destroy(hitObject.gameObject);     //one way to destroy object
-            }
-
+            animator.SetInteger("HeroState", (int)HeroState.jump);
         }
-        if (hitObject.CompareTag("Hazard"))
-        {
-            PickUp item = hitObject.GetComponent<PickUp>();
-            if (item != null)
-            {
-                //GameData.instanceRef.TakeDamage(item.value);
-                Debug.Log("TakeDamage " + item.value);
-                item.DestroyMe(); //have item destroy itself
 
-            }
-            //Destroy(hitObject.gameObject);
-           // dead = true;
-        }
     }
 
-    void flip()
+    private void Flip()
     {
-        facingRight = !facingRight;
+        facingRight = !facingRight; //change the polarity of the value
+
         Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
+        theScale.x *= -1; //change the x component, multiply by -1
         transform.localScale = theScale;
+
+
     }
 
-}
+}  //end class PlayerController
+
 
 ```
 
