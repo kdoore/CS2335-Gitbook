@@ -4,9 +4,7 @@ To create a 2D animated character, first you need to find a set of sprites that 
 
 [Link to Free - 2D GameArt - Sprites used here](http://www.gameart2d.com/freebies.html)
 
-After downloading the sprite set, determine which animation states your character will use.  In this case, we'll implement 4 animation states:  `idle, walk, jump, dead`
-
-
+After downloading the sprite set, determine which animation states your character will use.  In this case, we'll implement 4 animation states:  `idle, walk, jump, dead`  (_If desired, you can implement 3 states: idle, walk, jump_) 
 
   - **Import sprites **associated with desired animation states into your Unity project.  Put these in a folder: Sprites/PlayerSprites
 
