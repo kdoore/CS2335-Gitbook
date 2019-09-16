@@ -1,5 +1,7 @@
 # Getting Started - Project 1
 
+Below is an overview of the Game Objects used in 
+
 #### Create a new 2D project in Unity
 
 After downloading and installing the Unity Editor, Open the Unity application and create a new **2D** project.
