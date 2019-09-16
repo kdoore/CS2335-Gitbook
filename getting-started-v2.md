@@ -42,7 +42,7 @@ This component puts a gameObject's movement under control of the Physics2D engin
 ####Collider2D Components
 This component gives sprites a physical presence, it gives them a collision boundary, it allows for collision interactions with other gameObjects that also have Collider2D component.  GameObjects that will have any movement during gameplay should have an attached Rigidbody2D component which also manages movement of the object's Collider2D's.  Multiple colliders can be used on a single gameObject, if the boundaries overlap, they will act as a composite collider for the gameObject.  Sometimes you may also have a small collider nested within a larger collider, where the outer-collider can function as a trigger, but the inner collider will interact with the floor's collider to keep the object within the scene.
 
-* **IsTrigger** - when checking this checkbox: then this collider **will not display** collision interaction behavior, but it will cause the **OnTriggerEnter2D** event to be exectued. This is often used for sensing movement into zones, or for for objects that will be destroyed.   
+* **IsTrigger** - when checking this checkbox: then this collider **will not display collision interaction behavior**, but it will cause the **OnTriggerEnter2D** event to be exectued. This is often used for sensing movement into zones, or for for objects that will be destroyed.   
 
 ###Steps to Create and Configure 2D Sprite GameObjects:
 
