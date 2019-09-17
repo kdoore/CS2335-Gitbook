@@ -93,9 +93,11 @@ Add Script to an Empty GameObject:  **Spawner**
 
 ##Additional Links 
 
-###Player Controller Script - version 1
+###Player Controller Script - 
 
-See Link [PlayerController - Version1:](/player_gameobject.md)
+Version 1: Animatior: [Version1_F19](/overview/playercontrollerstep1.md)
+
+Version 2: Add Rigidbody2D, GroundCheck, ForceX [Version2](/getting-started-v2/player-gameobject/sept-16-playercontrollercs-fall19.md)
 
 ###GameData - Version1
 
