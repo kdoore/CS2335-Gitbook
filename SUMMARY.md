@@ -27,7 +27,7 @@
 * [Project 1 - Get Started](getting-started-v2.md)
   * [UML Class Diagram](getting-started-v2/uml-class-diagram.md)
   * [Player GameObject](getting-started-v2/player-gameobject.md)
-    * Sept 16 - PlayerController.cs Fall\_19
+    * [Sept 16 - PlayerController.cs Fall\_19](getting-started-v2/player-gameobject/sept-16-playercontrollercs-fall19.md)
 * [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
 * [Sorting Layers](background-image-add-sorting-layers.md)
 
