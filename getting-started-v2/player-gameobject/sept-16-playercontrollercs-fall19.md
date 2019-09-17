@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        facingRight = false; //final way to initialize, overrides all prior settings
+        facingRight = true; //final way to initialize, overrides all prior settings
         currentHeroState = HeroState.idle;
 
         //INitialize the animator variable - it's a component on THIS gameObject
