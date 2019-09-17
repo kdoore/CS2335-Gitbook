@@ -40,8 +40,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 8.0f; ///probably needs changed
     public bool grounded; //is the player currently touching a GObj w/ layer Ground
     private bool jump; //has jump key been pressed within the last frame
-    public Transform groundCheck; //need to initialize in the inspector!!!!!!!!!!!!!!
-    public LayerMask groundLayer; //need to initialize in the inspector
+    public Transform groundCheck; //need to initialize in the inspector!! (set to GroundCheck gameObject)
+    public LayerMask groundLayer; //need to initialize in the inspector!!  (Set as 'Ground' Layer)
     public float groundCheckRadius = 0.2f; //probably need to modify
 
 
