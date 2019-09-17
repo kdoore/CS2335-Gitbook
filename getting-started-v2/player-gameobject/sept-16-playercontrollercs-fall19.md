@@ -1,9 +1,22 @@
-#PlayerController.cs Sept 16
+#PlayerController.cs V2 Sept 16
+
+This version of PlayerController includes code for Animation, and Movement of the player game object.
+
+Required GameObjects:  
+    - **Player** with Animator Component, Rigidbody2D, Collider2D
+
+    - **GroundCheck:**  Empty GameObject placed as a **child of the Player**, transform positioned at the feet of the Player.
+
+    - **Floor**  Empty GameObject with BoxCollider2D, Layer: Ground
 
 
+![](/assets/Screen Shot 2019-09-17 at 12.53.27 PM.png)
 
+![](/assets/Screen Shot 2019-09-17 at 12.58.40 PM.png)
 
+![](/assets/Screen Shot 2019-09-17 at 1.00.03 PM.png)
 
+**CODE: PlayerController.cs**
 
 
 ```java

@@ -32,7 +32,7 @@ Select **GameObject** in the top menu, select: **GameObject &gt; 2D Object &gt; 
 
 ![](/assets/SelectSpriteImg.png)
 
-###Physics2D
+###Physics2D:  RigidBody2D, Collider2D
 The Physics2D Engine manages movement and collisions for 2D gameObjects.  We'll add Rigidbody2D for gameObjects that need to move in a scene.  We'll add Collider2D components to give gameObjects a physical boundary for collisions with other gameObjects.
 
 ![](/assets/Screen Shot 2019-01-17 at 2.47.49 PM.png)
@@ -54,11 +54,12 @@ This component gives sprites a physical presence, it gives them a collision boun
 
 2. **Player** Create a 2D Sprite GameObject
     * Select desired sprite from the Assets for the SpriteRenderer component's sprite field (as detailed above).
-    * Add **Physics2D &gt; RigidBody2D** Component - this is required for objects that will have **movement**, physics forces should be used to give movement to gameObjects.
+    * Add **Physics2D &gt; RigidBody2D** Component - this is required for objects that will have **movement**, physics forces should be used to give movement to gameObjects. 
+        - Set Constraints: Freeze Rotation Z-axis
     
     * Add **Physics2D &gt; Collider2D** Components - select 1 or more Colliders to fit your gameObject.  Select the Edit-collider button to change the size of the collider, manually change the x or y offset.
    
-   - Create C\# Script:  **PlayerController** - Simple Version \(script provided below
+   - Create C\# Script:  **PlayerController** - Simple Version \(script provided below)
    
   - Add PlayerController as a Script Component to Player GameObject  
 

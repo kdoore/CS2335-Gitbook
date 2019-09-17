@@ -52,8 +52,8 @@ The image below shows the general behaviors controlled by each component on the 
   
 **User-Input controls GameObject movement :** The PlayerController script controls how user-input events are used to control the Player gameObject's movement by interacting with the RigidBody2D component.  
 
-**Collision-Events - Mechanic to imlement Game-play Rules**
-The PlayerController script works with the Collider2D component to  determine what should game-play consequences should happen when the Player gameObject has a collision-event occur.  The PlayerController script implements _game-play rules_ caused by collision-event mechanics.  What are some options for concequences?, animation, particle effects, score, health, etc.  
+**Collision-Events - Mechanic to implement Game-play Rules**
+The PlayerController script works with the Collider2D component to  determine what should game-play consequences should happen when the Player gameObject has a collision-event occur.  The PlayerController script implements _game-play rules_ caused by collision-event mechanics.  What are some options for consequences?, animation, particle effects, score, health, etc.  
 
 ![](/assets/Screen Shot 2019-01-22 at 3.54.08 PM.png)
 
