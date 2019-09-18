@@ -35,6 +35,7 @@
 
 * [PickUp PreFabs](pickup_items.md)
 * [Player GameObject](player_gameobject.md)
+* [PlayerController - jump](project1-enhancements/playercontroller-v2.md)
 * [GameData Version1](gamedata.md)
 * [PlayerStats Version1](playerstatsdisplay-version1.md)
 * [MiniGameManager](minigamemanager.md)
@@ -43,7 +44,6 @@
 
 ## Project1 Enhancements
 
-* [PlayerController - jump](project1-enhancements/playercontroller-v2.md)
 * [PlayerController Animations](project1-enhancements/playercontroller-animations.md)
 * [PickUp - SelfDestruct](project1-enhancements/pickup-selfdestruct.md)
 * [Spawn from Arrays](project1-enhancements/spawn-from-arrays.md)
