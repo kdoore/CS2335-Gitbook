@@ -40,7 +40,7 @@ public class GameData : MonoBehaviour
     
     ///Properties
     public int  Score {  //read only
-        get{ return  totalScore; }
+        get{ return  score; }
     }
 
     public int Health {  //read only
