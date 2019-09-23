@@ -1,5 +1,9 @@
 #Sept 23 Code
-PlayerController
+
+PickUp - V2
+GameData - V1
+
+**PlayerController**
   - Updates for OnTriggerEnter2D for Collisions with collectibles and hazards.
   
   using System.Collections;
