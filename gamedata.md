@@ -78,12 +78,19 @@ public class GameData : MonoBehaviour
     }
     // end Add()
 
-    public void TakeDamage(int damage){
+    /// <summary>
+    /// Takes the damage. when player collides with Hazard
+    /// </summary>
+    /// <param name="damage">Damage.</param>
+    public void TakeDamage( int damage)
+    {
         health -= damage;
-        if(health < 0){
-            Debug.Log("GameOver due to low health");
+        Debug.Log("Health reduced " + health);
+        if ( health <= 0)
+        {
+            Debug.Log("Health less than 0, gameOver?");
         }
-    }
+    }//end TakeDamage
    
     //Add code for: ResetGameData, see below 
         

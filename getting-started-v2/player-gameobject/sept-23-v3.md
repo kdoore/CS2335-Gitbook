@@ -1,6 +1,6 @@
 #Sept 23 Code
 
-PickUp - V2
+[PickUp - V2](/pickup_items.html#version-2)
 GameData - V1
 
 **PlayerController**
