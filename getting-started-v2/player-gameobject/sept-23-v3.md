@@ -7,13 +7,12 @@ Links below for PickUp and GameData
 **PlayerController**
   - Updates for OnTriggerEnter2D for Collisions with collectibles and hazards.
   
-  using System.Collections;
+```java
+  
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-```java
 public class PlayerController : MonoBehaviour
 {
     //create custom data-type
