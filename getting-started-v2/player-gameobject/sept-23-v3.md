@@ -1,7 +1,8 @@
 #Sept 23 Code
 
+Links below for PickUp and GameData 
 [PickUp - V2](/pickup_items.html#version-2)
-GameData - V1
+[GameData - V1](/gamedata.md)
 
 **PlayerController**
   - Updates for OnTriggerEnter2D for Collisions with collectibles and hazards.
