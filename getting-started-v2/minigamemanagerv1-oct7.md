@@ -3,8 +3,7 @@
 This is the code covered Oct 7th.  See [link ](/minigamemanager.md)for screenshots of gameObject hierarchy required to use this script.
 
 This script is placed on the MiniGameManager(Empty GameObject)
-
-
+This script requires that you create a [Utility.cs script](/utility-class.md).
 
 ```
 using System.Collections;
