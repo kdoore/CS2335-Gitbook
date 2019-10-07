@@ -30,6 +30,7 @@
     * [Sept 16 - PlayerController.cs Fall\_19](getting-started-v2/player-gameobject/sept-16-playercontrollercs-fall19.md)
     * [Sept 18 - Code](getting-started-v2/player-gameobject/sept-18-code.md)
     * [Sept 23 - V3](getting-started-v2/player-gameobject/sept-23-v3.md)
+  * [MiniGameManager\_v1\_Oct7](getting-started-v2/minigamemanagerv1-oct7.md)
 * [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
 * [Sorting Layers](background-image-add-sorting-layers.md)
 
