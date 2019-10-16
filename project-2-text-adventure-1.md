@@ -5,11 +5,15 @@ For Project 2, we'll begin to create a framework for a branching-narrative adven
 ###Starter Code - Assets: 
 [See previous section: Project2 starter-assets](/project2-starter-assets.md):
 
-###2 Options
+###Project 2 Options:  Import Assets or Package
 To get started on Project 2, you have 2 options. You can  follow steps below to import contents of the Assets folder into a copy of Project1's Asset folder, or you can import these items as a Unity Package.
 
-###Option 2: Create New Project: Unity 2D 
- 
+#Option 1: Import as Custom Unity Package
+After saving a backup copy of Project1, open the Unity Project, Use menu options:  Assets >Import Package > Custom Package.  This will add 2 scenes and 4 custom scripts to your project as shown in the images below:
+![](/assets/Screen Shot 2019-10-16 at 6.25.31 AM.png)
+![](/assets/Screen Shot 2019-10-16 at 6.28.20 AM.png)
+
+#Option 2: Import Assets
 After creating a copy of Project1, unzip the starter-code zip file from the link above, then drag contents of each sub-folder into your project's assets panel.  
 
 If you're not able to drag your sub-folder content directly into the Project > Assets panel in Unity, then you can do the same process using your computer's file system browser.  To do this, first find your new project's asset folder by going to the Unity top menu: Assets > ShowInExplorer or RevealInFinder. Then, drag the sub-folder content directly into the Assets folder in the newly opened Assets folder.
