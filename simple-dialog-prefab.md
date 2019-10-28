@@ -11,8 +11,8 @@ We should try to make something that will work as a prefab, so we can use it in 
       -Script must use a public List of strings that can be populated in the inspector, with new dialog each time the panel-prefab is used. 
 
  
-_Prefab Link Added March 12 Spring19_      
-[**Link** to UnityPackage with Prefab panels](https://utdallas.box.com/v/simple-dialog-prefab-S19)
+_Prefab Link Added Oct 28 F19_      
+[**Link** to UnityPackage with Prefab panels](https://utdallas.box.com/s/ss2ky8f3cc6sakodocwfil460mgrpde5)
 You must add the SimpleDialog script to the Prefab, it is not included with this package.
 
  ###Prefab GameObject: Hierarchy     
