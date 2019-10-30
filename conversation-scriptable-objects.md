@@ -21,7 +21,9 @@ There are several steps required when creating a new type of scriptable object. 
 
 [Scriptable Object Factory - Article - Tal Lior](http://www.li0rtal.com/unity-scriptableobject-factory/)
 
-[**ScriptableObjectFactory** Unity Package Download Link](https://www.dropbox.com/s/vdvf5si4go3jnb5/ScriptableObjectFactory.unitypackage)
+[**ScriptableObjectFactory** Unity Package Download Link - Dropbox](https://www.dropbox.com/s/vdvf5si4go3jnb5/ScriptableObjectFactory.unitypackage)
+
+[**ScriptableObjectFactory** Link - Box.com](https://utdallas.box.com/s/tjdlm45kuo46dm5rsfcw641mdtpky33s)
 
 
 Any class that inherits from **ScriptableObject** will now show up as an option in the **Project Assets Menu**: 
