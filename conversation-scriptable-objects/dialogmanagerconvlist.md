@@ -2,7 +2,7 @@
 
 See - [Conversation ScriptableObjects](/conversation-scriptable-objects.md)
 
-Link:  [Unity Package with Prefab for using with DialogManager](https://utdallas.box.com/s/ss2ky8f3cc6sakodocwfil460mgrpde5)
+Link:  [Unity Package with SimpleDialog Prefab](https://utdallas.box.com/s/ss2ky8f3cc6sakodocwfil460mgrpde5)
 
 To use the prefab linked above, you'll need to add the DialogManager script to the top-level panel, and you'll need to populate with a scriptable object: ConversationList.
 
