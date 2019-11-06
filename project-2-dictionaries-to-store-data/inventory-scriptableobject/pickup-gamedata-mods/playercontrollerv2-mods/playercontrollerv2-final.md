@@ -1,5 +1,5 @@
 #Player Controller_v2 Final Code
-This code is to be used with the Simplified MiniGame.
+This code is to be used with the Simplified MiniGame.  It does not include Animation.
 
 
 Includes Updates for:  InventorySystem, LevelManager.

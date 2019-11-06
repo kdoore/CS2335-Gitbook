@@ -2,7 +2,7 @@
 
 Below is the updated code designed to work with new versions of GameData that includes logic for the **Inventory System** for the simplified PlayerController_v2 script included with the simplified MiniGame provided here: 
 
-Note: Code for **PlayerController_v2**, don't use this if you have PlayerController.cs, because this version does not include the animator logic.
+Note: Code for **PlayerController_v2**, **don't use this if you have PlayerController.cs, because this version does not include the animator logic.**
 
 
 **Updated Apr 13, 2019**
