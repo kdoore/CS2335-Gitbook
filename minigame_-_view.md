@@ -1,9 +1,5 @@
 #Enhanced MiniGame Project 3
 
-**Optional Simplified MiniGame S19 - Unity Package**
-The link below provides a UnityPackage with a simplified MiniGame Scene and scripts for completing Project 3, for students that weren't able to have a workable project for Project 1.
-[Spring 2019 - UnityPackage with Simplified MiniGameScene](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset)
-
 
 ### Dynamic Interaction with Goals and Consequences
 

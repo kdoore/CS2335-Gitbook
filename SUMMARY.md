@@ -107,11 +107,11 @@
     * [UI-Animation](project-2-dictionaries-to-store-data/inventory-scriptableobject/inventory-display-slot/ui-animation.md)
   * [Modifications to GameData, PickUp, PlayerController](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods.md)
     * [PlayerController Mods](project-2-dictionaries-to-store-data/inventory-scriptableobject/pickup-gamedata-mods/playercontroller.md)
-  * [Resources: Data Structures](project-2-dictionaries-to-store-data/dictionary-data-structure/saving-data.md)
   * [Dictionary Data-Structure](project-2-dictionaries-to-store-data/dictionary-data-structure.md)
     * [Unity PlayerPrefs Dictionary](project-2-dictionaries-to-store-data/dictionary-data-structure/unity-playerprefs-dictionary.md)
     * [ScriptableObjects](scriptableobjects.md)
   * [Updated InventorySystem](project-2-dictionaries-to-store-data/inventory-scriptableobject/updated-inventorysystem.md)
+  * [Resources: Data Structures](project-2-dictionaries-to-store-data/dictionary-data-structure/saving-data.md)
 
 ## Custom UnityEvents
 

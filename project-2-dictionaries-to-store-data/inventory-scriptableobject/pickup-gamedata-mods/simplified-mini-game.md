@@ -14,7 +14,7 @@
 
 - **Resolve all errors** before downloading, installing the MiniGame_v2 Package.
 
-- **Step 4:  Download and install: [Simplified Minigame_v2: UnityPackage](https://utdallas.box.com/v/miniGame-v2-Proj3-startAsset) **
+- **Step 4:  Download and install: [Simplified Minigame_v2: UnityPackage](https://utdallas.box.com/s/yt6o4b3ga4alxule2eybw0igpeufpkbl) **
   - **Package Contents:** 
    - MiniGame_v2 Scene with configured GameObjects 
    - Custom Scripts:  PlayerController_v2, MiniGameManager_v2
