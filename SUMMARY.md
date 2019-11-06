@@ -84,6 +84,8 @@
 ## Project2 Resources
 
 * [Visual Novel in Unity-Links](visual-novel-in-unity.md)
+* [Scriptable Object Factory](scriptable-object-factory.md)
+* [Dialog Prefab Packages](dialog-prefab-packages.md)
 
 ## MiniGame\_v2 - Simplified Version
 
