@@ -72,7 +72,7 @@ After completing install and configuration of InventorySystem files from the Uni
 
 **Download: Unity Package file** with Prefab of UI Inventory Display GameObjects
 
-**Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
+**Link:** [Inventory-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
 ###Inventory System: Reference Tutorials
 
