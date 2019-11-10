@@ -167,7 +167,7 @@ public class GameData : MonoBehaviour {
         }
     }
 
-    public void ResetGameData()
+    public void ResetGame()
     {
         health = 100; //initialize
         score = 0;
