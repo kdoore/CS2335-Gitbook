@@ -1,7 +1,7 @@
 #Inventory System using ScriptableObjects
 
 ###Download, Install Inventory-System Code in Unity Package
-**Download:** The code for these classes is included in the Inventory System Code package. [Download Link: Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code)
+**Download:** The code for these classes is included in the Inventory System Code package. [Download Link: Inventory System Code Unity Package](https://utdallas.box.com/s/3hj2cb6fssx9zwalxgoq0cu2wssnpves)
 
 **IMPORTANT:** Importing this package will overwrite all of the existing files listed below, you will need to fix some minor issues detailed in the section below.
 

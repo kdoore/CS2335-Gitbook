@@ -2,7 +2,6 @@
 
 This script can be attached to the mainCamera to have the camera follow the player if there are scrolling images.  
 
-![](/assets/Screen Shot 2019-04-22 at 6.30.24 AM.png)
 
 ```java
 using UnityEngine;

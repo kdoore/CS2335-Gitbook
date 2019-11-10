@@ -1,4 +1,4 @@
-#LevelManager - Final
+###LevelManager - Final
 
 _updated 4/26/2019_ _(Small changes to LoadLevel2, StartLevel2 to improve Level transition with ScreenFader.  Player is disabled, Level2Objects aren't loaded until Button is pressed )
 _
@@ -14,7 +14,7 @@ Assumes you are using:  (If you choose not to use these, remove any code associa
     - **PlayerController: onPlayerDied** - Listener: ReloadMiniGame( )
     - **PlayerController: onPlayerReachExit** - Listener: NextLevel( )
     
-- **Event Publisher** OnMiniGameEnd  - Listener: MiniGState
+- **Event Publisher** **OnMiniGameEnd**  - Listener: MiniGState
  
  You must add your custom code for Level3
  You must modify MiniGState, and EndState to include logic for consequences for the miniGame.  
