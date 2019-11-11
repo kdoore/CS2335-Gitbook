@@ -116,7 +116,7 @@ public class LevelManager : MonoBehaviour
   //This method implements the Finite State Machine to Manage Level Logic.
     //You will modify this code to correspond to your game's logic
     //This method is always called when an event has occured to end the level
-    //Event types: data-centric: Score > LevelScore, health <= 0, Player falls,
+    //Event types: Score > LevelScore, health <= 0, Player falls, Player reaches exit
     public void NextLevel()
     {
         switch (curLevel) //check the curLevel, find matching case below
@@ -292,6 +292,8 @@ public class LevelManager : MonoBehaviour
         if (StateManager.instanceRef != null)
         {
             StateManager.instanceRef.SwitchState(new MiniGState());  //must re-initialize
+        }else{
+        Debug.Log("Play Testing MiniGame - no StateManager so can't switch scene");
         }
     }
 
