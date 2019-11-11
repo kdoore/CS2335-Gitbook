@@ -6,7 +6,7 @@
 
 - **Start:** Create a **backup version of your Project 2 Unity project.**  You will add and modify this simplified MiniGame, to create Project 3. 
 
-- **Step 1: Download and install Inventory-System Code: [Inventory-System Class Files UnityPackage](https://utdallas.box.com/v/InventorySystem-Code). **
+- **Step 1: Download and install Inventory-System Code: [Inventory-System Class Files UnityPackage](https://utdallas.box.com/s/3hj2cb6fssx9zwalxgoq0cu2wssnpves). **
 
 - **Step 2: **After downloading, installing, the Inventory-System Code, you must reconfigure the GameManager gameObject in BeginScene to insure that GameData.cs script component is attached. correctly configured.  
 
@@ -21,7 +21,7 @@
 
 - **Step 5:** Attach **GameData.cs** to empty gameObject: GameManager gameObject in MiniGame_v2.   
 
-- **Step 6:** Attach **Inventory ScriptableObject** (created in step 2) to the GameData component in the MiniGame_v2.
+- **Step 6:** Attach **Inventory ScriptableObject** (created in Step 3) to the GameData component in the MiniGame_v2.
 
 - **Step 7**  In MiniGame_v2 Scene:  **Sorting Layers** must be set for all objects with Image/SpriteRenderer Component:  If a gameObject is not visible, set the sorting-layer for that object. 
 
