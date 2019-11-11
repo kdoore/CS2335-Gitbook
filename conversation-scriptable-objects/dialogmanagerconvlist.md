@@ -2,13 +2,17 @@
 
 See - [Conversation ScriptableObjects](/conversation-scriptable-objects.md)
 
+Required:  [Import: ScriptableObject Factory Package](/scriptable-object-factory.md)
+
 Link:  [Unity Package with SimpleDialog Prefab](https://utdallas.box.com/s/ss2ky8f3cc6sakodocwfil460mgrpde5)
 
-To use the prefab linked above, you'll need to add the DialogManager script to the top-level panel, and you'll need to populate with a scriptable object: ConversationList.
+Link:  [Unity Package with Prefab_Dialog_wImage Links, Instructions](/dialog-prefab-packages.md)
+
+To use the prefabs linked above, you'll need to add the DialogManager.cs script to the top-level panel, and you'll need to populate the script-component in the inspector with a scriptable object: ConversationList.
 
 **Goal: ** You will create a new DialogPrefab_wImg, which includes an image, and uses the DialogManager.cs script component, which uses a ConversationList scriptable object. Follow steps detailed below:
 
-###Create DialogPrefab with Image and DialogManager.cs:
+###To Create DialogPrefab with Image and DialogManager.cs:
  -  **Create a duplicate GameObject** in the hierarchy, this is created from the the original [DialogPrefab.](/simple-dialog-prefab.md)
  - Give the **new prefab a unique name:** examples: DialogPrefabConvList, or DialogPrefab_wImg.  
  - **Disable the GameObject** or Delete the original DialogPrefab gameObject in the hierarchy panel. (so you don't get confused)
