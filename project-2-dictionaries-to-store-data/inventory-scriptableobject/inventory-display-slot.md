@@ -3,10 +3,10 @@ The Inventory-System's user-interface uses several prefab UI gameObjects that ar
 
  - **Step 1: Important**, Make sure that the **Inventory-System** code has been installed **prior to installing the InventoryDisplay Prefabs**, because the InventoryDisplay requires code in the InventorySystem class files. 
 
-After downloading and installing all **[InventorySystem](/project-2-dictionaries-to-store-data/inventory-scriptableobject.md)** class files. Fix any errors / issues caused by downloading the InventorySystem files. Then proceed with download / install of the InventoryDisplay UnityPackage file.  Follow steps in **[InventorySystem](/project-2-dictionaries-to-store-data/inventory-scriptableobject.md)**  gitbook page to resolve issues. 
+After downloading and installing all **[InventorySystem Package](https://utdallas.box.com/s/3hj2cb6fssx9zwalxgoq0cu2wssnpves)** class files. Fix any errors / issues caused by downloading the InventorySystem files. Then proceed with download / install of the InventoryDisplay UnityPackage file.  Follow steps in **[Gitbook: InventorySystem](/project-2-dictionaries-to-store-data/inventory-scriptableobject.md)**  gitbook page to resolve issues. 
 
 -  **Step 2: Download, Import custom package: InventoryDisplay Unity-Package**  with Prefabs UI Inventory Display GameObjects
-**Link:** [UI-DisplayPrefab_Package-S19](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
+**Link:** [Inventory-DisplayPrefab_Package](https://utdallas.box.com/v/UI-InventoryDisplay-S19)
 
 - **Step 3: Drag InventoryDisplay prefab directly onto the Canvas GameObject in the Hierarchy Panel** in the Hierarchy in a scene (the EndScene is a good scene to use ) 
 

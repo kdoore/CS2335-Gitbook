@@ -16,7 +16,9 @@ The InventoryDisplay.cs script contains animation logic so the InventoryDisplay 
  
  ![](/assets/Screen Shot 2019-04-17 at 2.03.55 PM.png)
  
- Create First: 1 of 2 AnimationClips
+ **Create First:** 1 of 2 AnimationClips.  
+  1. **HideInventory Animation: **Position Inventory Panel in it's off-screen position.
+  
  ![](/assets/Screen Shot 2019-04-17 at 2.04.54 PM.png)
  
  - **Step 4: Add Property - Anchored Position** In the lower-left panel for the Animation window, select the Add Property Button, select the AnchoredPosition by selecting the gray-plus sign to the right of that option, see image below:
@@ -32,9 +34,9 @@ The InventoryDisplay.cs script contains animation logic so the InventoryDisplay 
  
 ![](/assets/Screen Shot 2019-04-18 at 7.06.35 AM.png)
 
-- **Step 7: Repeat steps 3-6** to create **HideInventory Animation Clip ** For the HideInventory Animation Clip, move the InventoryDisplay prefab to it's off-screen postion.x to set the keyframes at 0.0;
+- **Step 7: Repeat steps 3-6** to create **ShowInventory Animation Clip ** For the ShowInventory Animation Clip, move the InventoryDisplay prefab to it's on-screen postion.x to set the keyframes at 0.0;
 
-- **Step 8: Configure Animator Controller.** Open the Animator Window.  After both animation clips have been created, the Animator Component now shows an Animator controller has been created: ISimple_Inventory, and set in the Animator Component.  See Image below.  The image below shows that InventoryHide should be the 'Layer Default State',it should be orange, with a connecting arrow from the Entry state. If this is not the case, right click on the InventoryHide state and select: **Set as Layer Default State**.
+- **Step 8: Configure Animator Controller.** Open the Animator Window.  After both animation clips have been created, the Animator Component now shows an Animator controller has been created: ISimple_Inventory, and set in the Animator Component.  See Image below.  The image below shows that InventoryHide should be the 'Animator Controller's Default State',it should be orange, with a connecting arrow from the Entry state. If this is not the case, right click on the InventoryHide state and select: **Set as Layer Default State**.
 
 From each State node, right click to create a transition arrow to the other state.  
  

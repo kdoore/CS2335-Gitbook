@@ -12,18 +12,20 @@
 [Inventory Icons by VespaWarrior, on Unity AssetStore](http://www.vespawarrior.com/portfolio/)
 **Important:** _Only import assets used in your project_
 
-     [zip file](https://utdallas.box.com/v/TinyAssets-Inventory)
+ [Icons zip file](https://utdallas.box.com/shared/static/o2msqncxn57f85iqoay3e3qlr8sme1zs.zip)
     
 
 ###Unity Package with Updated Code files:
 
 **Updated Apr 10, 2019**
 
-[Inventory System Code Unity Package](https://utdallas.box.com/v/InventorySystem-Code)
+[Inventory System Code Unity Package](https://utdallas.box.com/s/3hj2cb6fssx9zwalxgoq0cu2wssnpves)
 
-**IMPORTANT: **_Importing this package will overwrite all of your existing files listed below.
-You may choose not to import the following items, and instead, paste the updated code into your scripts:  
-    - GameData.cs, 
+**IMPORTANT: **_Importing this package should overwrite all of your existing files listed below.
+You may choose not to import the following items, and instead, paste the updated code into your scripts: 
+
+**IMPORTANT: Delete The Following Scripts in your project, prior to importing the InventorySystem Code Package ** So these files can be updated.
+    - GameData.cs 
     - PlayerController.cs 
     - PickUp.cs
 

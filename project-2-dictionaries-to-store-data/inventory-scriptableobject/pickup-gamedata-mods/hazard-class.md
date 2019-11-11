@@ -8,9 +8,16 @@ using UnityEngine;
 
 public class Hazard : MonoBehaviour {
 
-    public int value;
-	
+    [SerializeField]
+    private int value;
+
+    public int Value
+    {
+        get { return value; }
+    }
+
 }
+
 ```
 
 #PlayerController using Hazard Code
