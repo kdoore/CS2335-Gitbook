@@ -132,6 +132,7 @@ public class GameData : MonoBehaviour {
     public void Add(int value)
     {
         score += value;
+        //levelScore += value; //uncomment once levelScore has been added to GameData
         Debug.Log("Score is updated " + score);
         InvokePlayerDataUpdate();
     }
