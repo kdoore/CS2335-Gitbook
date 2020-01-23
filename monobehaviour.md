@@ -30,8 +30,6 @@ We'll discuss interfaces later in the course.  For now it's important to note th
 
 >  "Interfaced-based design provides loose coupling, true component-based programming, easier maintainability and it makes code reuse much more accessible because implementation is separated from the interface."   [Matthew Cochran](https://www.c-sharpcorner.com/article/C-Sharp-interface-based-development/)
 
-What's an Interface?
-
 ```
 
 public class myClass : BaseClass, ISomeInterface, ISomeOtherInterface{  //single level of inheritance, unlimited interface implementation, a comma separated list.
