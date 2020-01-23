@@ -27,10 +27,10 @@
 * [Project 1 - Get Started](getting-started-v2.md)
   * [UML Class Diagram](getting-started-v2/uml-class-diagram.md)
   * [Player GameObject](getting-started-v2/player-gameobject.md)
-    * [Sept 16 - PlayerController.cs Fall\_19](getting-started-v2/player-gameobject/sept-16-playercontrollercs-fall19.md)
-    * [Sept 18 - Code](getting-started-v2/player-gameobject/sept-18-code.md)
-    * [Sept 23 - V3](getting-started-v2/player-gameobject/sept-23-v3.md)
+    * [PlayerController.cs V2](getting-started-v2/player-gameobject/sept-16-playercontrollercs-fall19.md)
+    * [PlayerController.cs V3](getting-started-v2/player-gameobject/sept-18-code.md)
   * [MiniGameManager\_v1\_Oct7](getting-started-v2/minigamemanagerv1-oct7.md)
+  * [Sept 23 - V3](getting-started-v2/player-gameobject/sept-23-v3.md)
 * [Create 2D Sprite Prefab: Rock](create-2d-sprite-prefab-rock.md)
 * [Sorting Layers](background-image-add-sorting-layers.md)
 

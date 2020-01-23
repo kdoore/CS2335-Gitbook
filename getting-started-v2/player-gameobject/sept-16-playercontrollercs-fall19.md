@@ -1,4 +1,4 @@
-#PlayerController.cs V2 Sept 16
+#PlayerController.cs Version 2
 
 This version of PlayerController includes code for Animation, and Movement of the player game object.
 
