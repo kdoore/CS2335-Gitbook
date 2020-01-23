@@ -28,7 +28,7 @@ public class Example: MonoBehaviour {
 C# Interfaces are similar to Class Inheritance in C#. C# Interfaces can be implemented to provide similar behavior across different C# classes.  
 We'll discuss interfaces later in the course.  For now it's important to note that in C#, a class can only inherit from a single base class, but a class can implement multiple interfaces. Unity's Component-Oriented architecture benefits from using Interfaces for reasons listed in the article quoted below.
 
->  "Interfaced-based design provides loose coupling, true component-based programming, easier maintainability and it makes code reuse much more accessible because implementation is separated from the interface."   [Matthew Cochran](https://www.c-sharpcorner.com/article/C-Sharp-interface-based-development/)
+>  "Interfaced-based design **provides loose coupling, true component-based programming, easier maintainability and it makes code reuse much more accessible** because implementation is separated from the interface."   [Matthew Cochran](https://www.c-sharpcorner.com/article/C-Sharp-interface-based-development/)
 
 ```
 
