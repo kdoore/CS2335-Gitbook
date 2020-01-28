@@ -14,12 +14,12 @@
 * [MonoBehavior - Base-Class](monobehaviour.md)
 * [Unity Engine - Event Functions](unity_engine_-_event_functions.md)
 
-## Getting Started Fall 2019
+## Getting Started
 
 * [UI-Elements](overview/ui-elements.md)
 * [Animator Controller](animation_controller.md)
   * [Animation Steps](animation_controller/animation-steps.md)
-* [PlayerController\_v1\_F19](overview/playercontrollerstep1.md)
+* [PlayerController V1](overview/playercontrollerstep1.md)
 
 ## Project 1 - Simple Game
 
