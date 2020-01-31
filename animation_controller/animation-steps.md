@@ -98,9 +98,10 @@ State Configuration:
 | hero_walk | _hero_walk animation_ | hero_walk -> hero_idle |
 | hero_walk | _hero_walk animation_ | hero_walk -> hero_jump |
 | hero_jump | _hero_jump animation_ | hero_jump -> hero_idle |
-| hero-dead | _hero_dead animation_ | Any State -> hero_dead |
+| hero_jump | _hero_jump animation_ | hero_jump -> hero_walk |
+| hero-dead* | _hero_dead animation_ | Any State -> hero_dead |
 
-
+*hero-dead is optional 
 
 ###State-Event Transition Table
 The following table shows the details for logic that is used to configure the transition arrows between states
