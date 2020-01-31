@@ -106,8 +106,17 @@ State Configuration:
 The following table shows the details for logic that is used to configure the transition arrows between states
 Each line of the table represents logic for an arrow between the CurState and NextState nodes. 
 
+###Has Exit Time 
+The images below show the **configuration for arrows **between the hero_idle and the hero_jump states. The checkbox Has Exit Time is unchecked for the transition arrow that goes from idle to jump, this means that the **jump event can interrupt **display of the idle animation clip.  When leaving the hero-jump state, the jump animation should not be interrupted, so it can to completion.  **It is necessary Has Exit Time is not checked** for event transitions as listed in the table below. This is necessary so that the **keypress-event for triggering the transition into the jump-state** to run the jump animation clip.
 
-**State - Event Transition Table**
+###Idle -> Jump Transition: Has Exit Time - Not Selected
+![](/assets/Screen Shot 2020-01-31 at 2.48.51 PM.png)
+
+###Jump - > Idle Transition: Has Exit Time - Selected
+![](/assets/Screen Shot 2020-01-31 at 2.38.54 PM.png)
+
+
+###State - Event Transition Table
 
 | Current State | Event Condition | Next State | HasExitTime |
 |-----------|-------|-----------|-------------|
@@ -116,13 +125,14 @@ Each line of the table represents logic for an arrow between the CurState and Ne
 | hero_walk | HeroState == 0 | hero_idle | False |
 | hero_walk | HeroState == 2 | hero_jump | False |
 | hero_jump | HeroState == 0 | hero_idle | True |
-| Any State | HeroState == 3 | hero_dead | False |
+|hero_jump |  HeroState == 1 | hero_walk | True |
 
-The diagram below shows that 6 transition arrows have been created in the Animator Controller, using the configuration information listed in the table above.
 
-![](/assets/Screen Shot 2018-11-08 at 8.55.16 AM.png)
+The diagram below shows that **6 transition** arrows have been created in the Animator Controller, using the configuration information listed in the table above.
+![](/assets/Screen Shot 2020-01-31 at 2.38.40 PM.png)
 
-###Configure Loop-time for the hero_dead animation clip
+## Optional: hero_dead animation clip  
+### Configure loop-time
 
 Since we don't want the hero_dead animation clip to loop continuously, we need to set that configuration as part of the hero-dead animation clip asset. In the project assets panel, find and select the hero-dead animation clip.  Once the animation-clip is selected, in the inspector panel, uncheck the Loop Time checkbox.  Loop-time will remain checked for all other animation clips.
 
