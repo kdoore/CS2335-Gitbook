@@ -88,3 +88,42 @@ public class PlayerController : MonoBehaviour
 
 ```
 
+###PlayerController version1 Summary:  
+
+**Goal:** Configure device input events to correspond with Animator Component 
+		- Input Manager: horizontal-axis, key, 
+		- enums, logic, 
+		- goal: modify Animator HeroState parameter value
+		- generate valid state-transition events
+
+
+- **Animator Controller:** Integer Parameter: HeroState
+	- Edit in Animator Window, with Player GameObject selected in Hierarchy
+	
+	- **Animator states**:  state-node 
+		 - each state-node corresponds to Animation Clip (motion)
+	
+	- **Event transitions**:  transition arrows: 
+		- each  transition arrow corresponds to a valid state transition-event
+		- HeroState Conditions:
+		- HeroState == 0:  idle state-transition
+		- HeroState == 1:  walk state-transition
+		- HeroState == 2:  jump state-transition
+
+- **Animation Clip** - additional configuration using Animation Widnow
+
+
+**Flip( ) **- modify left/right sprite orientation by modifying Transform.Scale.X of Player sprite.
+
+**Next Versions of Player Controller to add: **
+
+**Rigidbody** -  physics motion ex. gravity
+
+Collider2D
+
+Floor - empty gameObject with 
+
+Sorting Layers - determine render ordering of sprites, etc
+
+Physics Layers:  Determine physics interactions: 
+- example: Custom Layer: Ground
