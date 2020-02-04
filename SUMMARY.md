@@ -21,6 +21,7 @@
   * [Animation Steps](animation_controller/animation-steps.md)
 * [PlayerController V1](overview/playercontrollerstep1.md)
   * [PlayerController - V1 - S20](overview/playercontrollerstep1/playercontroller-v1-s20.md)
+  * [PlayerController Flow Chart](overview/playercontrollerstep1/playercontroller-flow-chart.md)
 
 ## Project 1 - Simple Game
 
