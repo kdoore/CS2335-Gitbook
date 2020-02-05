@@ -2,7 +2,7 @@
 
 ### Enumeration
 
-The **enum** keyword is used to declare an enumeration-type, which creates a distinct type that consists of a set of named constants called the enumerator list. Since ``enums`` are constant values, once they have been defined, they can't be modified within code. The underlying data-type for ``enums`` is ``int``. To use an enum, first define a varialble of the enum-type, then use dot notation to assign a particular enum value to the variable: [Enum: MSDN Reference](https://msdn.microsoft.com/en-us/library/cc138362.aspx)
+The **enum** keyword is used to declare an enumeration-type, which creates a distinct type that consists of a set of **named constants** called the enumerator list. Since ``enums`` are **constant values**, once they have been defined, they can't be modified within code. The underlying data-type for ``enums`` is ``int``. To use an enum, first define a varialble of the enum-type, then use dot notation to assign a particular enum value to the variable: [Enum: MSDN Reference](https://msdn.microsoft.com/en-us/library/cc138362.aspx)
 
 ```
 //define an enum
