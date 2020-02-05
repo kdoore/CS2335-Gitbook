@@ -4,7 +4,7 @@
 
 The **enum** keyword is used to declare an enumeration-type, which creates a distinct type that consists of a set of **named constants** called the enumerator list. Since ``enums`` are **constant values**, once they have been defined, they can't be modified within code. The underlying data-type for ``enums`` is ``int``. To use an enum, first define a varialble of the enum-type, then use dot notation to assign a particular enum value to the variable: [Enum: MSDN Reference](https://msdn.microsoft.com/en-us/library/cc138362.aspx)
 
-```
+```java
 //define an enum
 enum Days { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };  
 
@@ -25,6 +25,14 @@ In C#, a child class can inherit from a parent / base class.  The syntax uses a 
 ### Generic Types
 Generics introduce the concept of type parameters to the .NET Framework, which make it possible to design classes and methods that defer the specification of one or more types until the class or method is declared and instantiated by client code.
 [MSDN Reference](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/)
+
+Unity Example: **GetComponent < T >(  )**
+
+```java
+private Animator animator;
+animator = GetComponent<Animator>();  //GetComponent< T >( ) Generics: Placeholder T
+
+```
 
 ### Object Constructors
 
