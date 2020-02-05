@@ -34,7 +34,20 @@ animator = GetComponent<Animator>();  //GetComponent< T >( ) Generics: Placehold
 
 ```
 
-### Object Constructors
+### C# Static
+The keyword `static`, when applied to a property, variable,  method, means that the element belongs to the class itself, and not an object instance of the class.
+
+Example: **Class: Mathf, method: Abs(  float val )**
+
+```java
+
+ float inputX = Input.GetAxis("Horizontal");  // -1, 0 , 1 
+ bool isWalking = Mathf.Abs(inputX) > 0;
+
+```
+
+
+
 
 ###SerializeField Attribute
 SerializeField attribute allows you to have private script variables that will be visible in the Inspector. This allows setting values in the editor without giving access to the variable from within other scripts.
