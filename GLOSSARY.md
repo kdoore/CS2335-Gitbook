@@ -22,7 +22,7 @@ In C#, a child class can inherit from a parent / base class.  The syntax uses a 
 
 ``class MyChildClass: ParentClass {  // class definition code  } ``  
 
-### Generic Types
+### C# Generic Types  < T >
 Generics introduce the concept of type parameters to the .NET Framework, which make it possible to design classes and methods that defer the specification of one or more types until the class or method is declared and instantiated by client code.
 [MSDN Reference](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/)
 
