@@ -1,6 +1,8 @@
 #Unity Editor Windows / Panels
 The Unity Editor has several windows which can be arranged in a variety of layouts.   The image below shows the default window-panel layout, with description provided for each panel in the sections below. 
 
+See Tutorial on [www.raywenderlich.com](https://www.raywenderlich.com/7514-introduction-to-unity-getting-started-part-1-2) for Keyboard Shortcuts, etc.
+
 ![](/assets/Screen Shot 2019-01-15 at 4.20.18 PM.png)
 
 1.  **Hierarchy Panel** - this panel contains all gameObjects for the currently viewed scene.  Nested objects have parent-child relationship with respect to transforms. Parent-child relationships can be used to access gameObjects in scripts / code. 
