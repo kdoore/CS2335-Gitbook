@@ -27,3 +27,5 @@ Q - pan, W - move, E - Rotate, R - Scale, T- Rect Tool (resize)**
 
 [Unity Hot Keys MacOS PDF](https://docs.unity3d.com/uploads/Main/Unity_HotKeys_Mac.pdf)
 
+See Tutorial on [www.raywenderlich.com](https://www.raywenderlich.com/7514-introduction-to-unity-getting-started-part-1-2) for Keyboard Shortcuts, etc.
+
