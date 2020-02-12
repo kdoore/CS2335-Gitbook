@@ -6,7 +6,7 @@ This book will provide supplemental instructional resources for CS-2335: Compute
 
 ##WHY Learn about Programming for Modeling Systems with C# and Unity?  
 
-Read this article:
+Read  article:
 [Brenda Romero's guide to becoming a game designer](https://www.gamesindustry.biz/articles/2019-04-09-brenda-romeros-guide-to-becoming-a-game-designer)  
 
 
