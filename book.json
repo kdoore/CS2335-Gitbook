@@ -1,9 +1,3 @@
 {
-    "plugins": [
-         
- 
-        "anchors",
-        "-highlight"
-    ],
-    "pluginsConfig": {}
+
 }
