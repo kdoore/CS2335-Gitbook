@@ -101,14 +101,14 @@ public class PlayerController : MonoBehaviour {
         {
             Debug.Log("Hit Collectible");
             PickUp item = hitObject.GetComponent<PickUp>();
-            GameData.instanceRef.Add(item.value);
+            GameData.instanceRef.Add(item.Value);
             Destroy(hitObject.gameObject);
         }
         else if (hitObject.CompareTag("Hazard"))
         {
             Debug.Log("Hit Hazard");
             PickUp item = hitObject.GetComponent<PickUp>();
-            GameData.instanceRef.TakeDamage(item.value);
+            GameData.instanceRef.TakeDamage(item.Value);
             Destroy(hitObject.gameObject);
         }
         else

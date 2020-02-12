@@ -1,11 +1,21 @@
-### GameData - Version 1
+## GameData - Version 1
+
 
 In the game we'll need an object that is persisted throughout the gameplay session so that we can keep track of score, lives, health, etc.
 
 Below is a simple class definition for GameData, we'll add more to this as we progress.
 
+###Singleton Pattern
+
 This script will be attached to the GameManager in the first game Scene and will be persisted throughout the game since it uses the singleton design pattern.
 
+The Singleton Pattern accomplishes 2 things:
+    
+    1. Insures only **one instance of an object exists** at anytime during the application's lifetime.  Any duplicate objects are destroyed in the Awake( ) method.
+    
+    2. A **static variable provides global access** to the Singleton object instance. 
+
+###GameManager Singleton GameObject
 **Add GameData script to an Empty GameObject:** named: **GameManager** in your starting scene, so it will be executed as a singleton and shows up as 'DontDestroyOnLoad' in the Hierarchy when the game is played.
 
 **DontDestroyOnLoad - in Play-mode**
