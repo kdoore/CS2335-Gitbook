@@ -27,7 +27,7 @@ using UnityEngine;
 [DisallowMultipleComponent] //only one of these scripts allowed on a gameObject
 public class PlayerController : MonoBehaviour {
 
-    private Rigidbody2D rb2D;
+    private Rigidbody2D myRBody2D;
     public float forceX=80f;
     private bool facingRight; 
    
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour {
 
     void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>();
+        myRBody2D = GetComponent<Rigidbody2D>();
         facingRight = true;
 
     }
@@ -81,14 +81,14 @@ public class PlayerController : MonoBehaviour {
                 flip();
                 Debug.Log("flip left");
             }
-            rb2D.velocity = new Vector2(0, rb2D.velocity.y); //zero out velocity.x, maintain velocity.y
+            myRBody2D.velocity = new Vector2(0, myRBody2D.velocity.y); //zero out velocity.x, maintain velocity.y
             // reset velocity to 0
-            rb2D.AddForce(new Vector2(forceX * inputX, 0));
+            myRBody2D.AddForce(new Vector2(forceX * inputX, 0));
         } // end if (isWalking)
         if (jump && grounded)//must also be grounded in order to jump
         {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, 0); //zero out velocity.y, maintain velocity.x
-            rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse); //add force as impulse
+            myRBody2D.velocity = new Vector2(myRBody2D.velocity.x, 0); //zero out velocity.y, maintain velocity.x
+            myRBody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse); //add force as impulse
         } // end if (jump)
 
     }
